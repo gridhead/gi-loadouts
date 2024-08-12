@@ -1,0 +1,114 @@
+from gi_loadouts.wind.wind import Ui_mainwind
+from PySide6.QtWidgets import QMainWindow
+from gi_loadouts.type.char import CharName
+from gi_loadouts.type.char.cons import Cons
+from gi_loadouts.type.rare import Rare
+from gi_loadouts.type.levl import Level
+from gi_loadouts.data.char import __charmaps__
+from gi_loadouts.data.arti import ArtiList
+from gi_loadouts.type.arti import ArtiLevl
+from gi_loadouts.wind.util import truncate_text
+from gi_loadouts.type.arti.base import MainStatType_FWOL, MainStatType_PMOD, MainStatType_SDOE, MainStatType_GBOE, MainStatType_CCOL
+from gi_loadouts.type import arti
+from gi_loadouts.type.weap import WeaponType, WeaponStatType
+from gi_loadouts.data.weap import Family
+from gi_loadouts.type.arti import Collection
+
+
+class Rule(QMainWindow, Ui_mainwind):
+    def __init__(self):
+        super().__init__()
+        self.collection = Collection()
+
+    def populate_dropdown(self):
+        self.head_char_name.addItems([item.value for item in CharName])
+        self.head_char_cons.addItems([item.value.name for item in Cons])
+        self.head_char_levl.addItems([item.value.name for item in Level])
+        self.arti_fwol_main_name.addItems([item.value.value for item in MainStatType_FWOL if item != MainStatType_FWOL.none])
+        self.arti_pmod_main_name.addItems([item.value.value for item in MainStatType_PMOD if item != MainStatType_PMOD.none])
+        self.arti_sdoe_main_name.addItems([item.value.value for item in MainStatType_SDOE if item != MainStatType_SDOE.none])
+        self.arti_gboe_main_name.addItems([item.value.value for item in MainStatType_GBOE if item != MainStatType_GBOE.none])
+        self.arti_ccol_main_name.addItems([item.value.value for item in MainStatType_CCOL if item != MainStatType_CCOL.none])
+        self.weap_area_type.addItems([item.value for item in WeaponType if item != WeaponType.none])
+        for item in [self.arti_fwol_type, self.arti_pmod_type, self.arti_sdoe_type, self.arti_gboe_type, self.arti_ccol_type]:
+            item.addItems([item.value.name for item in ArtiList])
+
+    def handle_char_data(self, _):
+        if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
+            char = __charmaps__[self.head_char_name.currentText()]()
+            char.levl = getattr(Level, self.head_char_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
+            self.head_char_data_vson.setText(char.vision.value)
+            self.head_char_data_attk.setText(f"{round(char.attack)}")
+            self.head_char_data_dfns.setText(f"{round(char.defense)}")
+            self.head_char_data_hlpt.setText(f"{round(char.health_points)}")
+            self.head_char_icon_subs.setToolTip(f"{char.seco.stat_name.value}")
+            self.head_char_data_subs.setText(f"{round(char.seco.stat_data, 1)}")
+            self.weap_area_type.clear()
+            self.weap_area_type.addItem(f"{char.weapon.value}")
+
+    def convey_weapon_type_change(self, _):
+        if self.weap_area_type.currentText().strip() != "":
+            self.weap_area_name.clear()
+            self.weap_area_name.addItems([item for item in Family[self.weap_area_type.currentText()]])
+
+    def convey_weapon_name_change(self, _):
+        if self.weap_area_name.currentText().strip() != "" and self.weap_area_type.currentText().strip() != "":
+            kind = self.weap_area_type.currentText().strip()
+            name = self.weap_area_name.currentText()
+            self.weap_area_levl.clear()
+            self.weap_area_refn.clear()
+            self.weap_area_info.setText("No refinements available.")
+            self.weap_area_stat.setText("No substats.")
+            weap = Family[kind][name]
+            self.weap_area_levl.addItems([item.value.name for item in weap.levl_bind])
+            self.weap_area_refn.addItems([f"Refinement {indx + 1}" for indx in range(len(weap.refi_list))])
+
+    def convey_weapon_levl_change(self, _):
+        if self.weap_area_type.currentText().strip() != "" and self.weap_area_name.currentText().strip() != "" and self.weap_area_levl.currentText().strip() != "":
+            name = self.weap_area_name.currentText()
+            kind = self.weap_area_type.currentText().strip()
+            weap = Family[kind][name]
+            weap.levl = getattr(Level, self.weap_area_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
+            print(weap.main_stat)
+            self.weap_area_batk.setText(f"<b>ATK</b> {round(weap.main_stat.stat_data)}")
+            if weap.seco_stat.stat_name != WeaponStatType.none:
+                self.weap_area_stat.setText(f"<b>{weap.seco_stat_calc.stat_name.value.value}</b> {round(weap.seco_stat_calc.stat_data, 1)}")
+
+    def convey_refinement_change(self, _):
+        if self.weap_area_type.currentText().strip() != "" and self.weap_area_name.currentText().strip() != "" and self.weap_area_refn.currentText().strip() != "":
+            name = self.weap_area_name.currentText()
+            kind = self.weap_area_type.currentText().strip()
+            weap = Family[kind][name]
+            refn = self.weap_area_refn.currentIndex()
+            self.weap_area_info.setText(f"<b>{weap.refi_name}</b><br/><br/>{weap.refi_list[refn]}")
+
+    def change_rarity_by_changing_type(self, droptype, droprare, artiname, part):
+        if droptype.currentText().strip() != "":
+            type = getattr(ArtiList, droptype.currentText().replace(" ", "_").replace("'", "").replace("-", "_"))
+            item = getattr(type.value, part)
+            setattr(self.collection, part, item)
+            droprare.clear()
+            droprare.addItems([f"Star {item.value}" for item in type.value.rare])
+            artiname.setText(truncate_text(getattr(type.value, part).__name__))
+            print(self.collection)
+            if self.collection.pair != []:
+                pass
+            if self.collection.quad != "":
+                pass
+
+    def change_levels_by_changing_rarity(self, droprare, droplevl):
+        if droprare.currentText().strip() != "":
+            rare = getattr(Rare, droprare.currentText().replace(" ", "_"))
+            droplevl.clear()
+            droplevl.addItems([item.value.name for item in ArtiLevl if rare in item.value.rare])
+
+    def change_data_by_changing_level_or_stat(self, droplevl, droptype, droprare, dropstat, statdata, part):
+        if droplevl.currentText().strip() != "" and droptype.currentText().strip() != "" and droprare.currentText().strip() != "" and dropstat.currentText().strip() != "":
+            levl = getattr(ArtiLevl, droplevl.currentText().replace(" ", "_"))
+            team = getattr(ArtiList, droptype.currentText().replace(" ", "_").replace("'", "").replace("-", "_"))
+            rare = getattr(Rare, droprare.currentText().replace(" ", "_"))
+            stat = getattr(arti, f"revmap_{part}")[dropstat.currentText()]
+            item = getattr(team.value, part)
+            item.levl, item.rare, item.stat_name = levl.value.levl, rare.value, stat
+            statdata.setText(f"{round(item.stat_data, 1)}")
+            print(levl, team, item.levl, item.rare, levl.value.levl, item.stat_name, item.stat_data)
