@@ -1,0 +1,19 @@
+from typing import List
+
+from gi_loadouts.type.rare import Rare
+from gi_loadouts.type.weap import Bow, WeaponStat, WeaponStatType
+from gi_loadouts.type.weap.base.tier import Tier
+
+
+class SharpshootersOath(Bow):
+    name: str = "Sharpshooter's Oath"
+    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_damage, stat_data=10.2)
+    tier: Tier = Tier.Tier_2
+    rare: Rare = Rare.Star_3
+    refi_list: List[str] = [
+            "Increases DMG against weak spots by 24%.",
+            "Increases DMG against weak spots by 30%.",
+            "Increases DMG against weak spots by 36%.",
+            "Increases DMG against weak spots by 42%.",
+            "Increases DMG against weak spots by 48%.",
+        ]
