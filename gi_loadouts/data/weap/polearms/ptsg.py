@@ -1,0 +1,19 @@
+from typing import List
+
+from gi_loadouts.type.rare import Rare
+from gi_loadouts.type.weap import Polearm, WeaponStat, WeaponStatType
+from gi_loadouts.type.weap.base.tier import Tier
+
+
+class PrototypeStarglitter(Polearm):
+    name: str = "Prototype Starglitter"
+    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.energy_recharge_perc, stat_data=10.0)
+    tier: Tier = Tier.Tier_2
+    rare: Rare = Rare.Star_4
+    refi_list: List[str] = [
+        "After using an Elemental Skill, increases Normal and Charged Attack DMG by 8% for 12s. Max 2 stacks.",
+        "After using an Elemental Skill, increases Normal and Charged Attack DMG by 10% for 12s. Max 2 stacks.",
+        "After using an Elemental Skill, increases Normal and Charged Attack DMG by 12% for 12s. Max 2 stacks.",
+        "After using an Elemental Skill, increases Normal and Charged Attack DMG by 14% for 12s. Max 2 stacks.",
+        "After using an Elemental Skill, increases Normal and Charged Attack DMG by 16% for 12s. Max 2 stacks.",
+    ]
