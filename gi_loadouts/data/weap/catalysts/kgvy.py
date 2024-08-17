@@ -7,7 +7,7 @@ from gi_loadouts.type.weap.base.tier import Tier
 
 class KagurasVerity(Catalyst):
     name: str = "Kagura's Verity"
-    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_damage, stat_data=14.4)
+    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_damage_perc, stat_data=14.4)
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_5
     refi_list: List[str] = [

@@ -18,9 +18,9 @@ class SkywardBlade(Sword):
         "CRIT Rate increased by 8%. Gains Skypiercing Might upon using an Elemental Burst: Increases Movement SPD by 10%, increases ATK SPD by 10%, and Normal and Charged hits deal additional DMG equal to 40% of ATK. Skypiercing Might lasts for 12s.",
     ]
     refi_stat: List[WeaponStat] = [
-        [WeaponStat(stat_name=WeaponStatType.critical_rate, stat_data=4.0)],
-        [WeaponStat(stat_name=WeaponStatType.critical_rate, stat_data=5.0)],
-        [WeaponStat(stat_name=WeaponStatType.critical_rate, stat_data=6.0)],
-        [WeaponStat(stat_name=WeaponStatType.critical_rate, stat_data=7.0)],
-        [WeaponStat(stat_name=WeaponStatType.critical_rate, stat_data=8.0)],
+        [WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=4.0)],
+        [WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=5.0)],
+        [WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=6.0)],
+        [WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=7.0)],
+        [WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=8.0)],
     ]

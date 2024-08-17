@@ -7,7 +7,7 @@ from gi_loadouts.type.weap.base.tier import Tier
 
 class WhiteTassel(Polearm):
     name: str = "White Tassel"
-    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_rate, stat_data=5.1)
+    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=5.1)
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_3
     refi_list: List[str] = [

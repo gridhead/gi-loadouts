@@ -7,7 +7,7 @@ from gi_loadouts.type.weap.base.tier import Tier
 
 class SacrificialJade(Catalyst):
     name: str = "Sacrificial Jade"
-    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_rate, stat_data=8.0)
+    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=8.0)
     tier: Tier = Tier.Tier_1
     rare: Rare = Rare.Star_4
     refi_list: List[str] = [

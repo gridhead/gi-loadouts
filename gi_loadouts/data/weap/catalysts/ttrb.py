@@ -7,7 +7,7 @@ from gi_loadouts.type.weap.base.tier import Tier
 
 class TulaytullahsRemembrance(Catalyst):
     name: str = "Tulaytullah's Remembrance"
-    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_damage, stat_data=9.6)
+    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_damage_perc, stat_data=9.6)
     tier: Tier = Tier.Tier_3
     rare: Rare = Rare.Star_5
     refi_list: List[str] = [

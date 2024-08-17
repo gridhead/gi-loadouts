@@ -7,7 +7,7 @@ from gi_loadouts.type.weap.base.tier import Tier
 
 class HaranGeppakuFutsu(Sword):
     name: str = "Haran Geppaku Futsu"
-    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_rate, stat_data=7.2)
+    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=7.2)
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_5
     refi_list: List[str] = [

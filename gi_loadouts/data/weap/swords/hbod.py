@@ -7,7 +7,7 @@ from gi_loadouts.type.weap.base.tier import Tier
 
 class HarbingerofDawn(Sword):
     name: str = "Harbinger of Dawn"
-    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_damage, stat_data=10.2)
+    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_damage_perc, stat_data=10.2)
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_3
     refi_list: List[str] = [

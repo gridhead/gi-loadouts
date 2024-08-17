@@ -7,7 +7,7 @@ from gi_loadouts.type.weap.base.tier import Tier
 
 class PrimordialJadeCutter(Sword):
     name: str = "Primordial Jade Cutter"
-    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_rate, stat_data=9.6)
+    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=9.6)
     tier: Tier = Tier.Tier_1
     rare: Rare = Rare.Star_5
     refi_list: List[str] = [

@@ -7,7 +7,7 @@ from gi_loadouts.type.weap.base.tier import Tier
 
 class Messenger(Bow):
     name: str = "Messenger"
-    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_damage, stat_data=6.8)
+    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_damage_perc, stat_data=6.8)
     tier: Tier = Tier.Tier_1
     rare: Rare = Rare.Star_3
     refi_list: List[str] = [

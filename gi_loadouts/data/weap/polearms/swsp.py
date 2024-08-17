@@ -18,9 +18,9 @@ class SkywardSpine(Polearm):
         "Increases CRIT Rate by 16% and increases Normal ATK SPD by 12%. Additionally, Normal and Charged Attacks hits on opponents have a 50% chance to trigger a vacuum blade that deals 100% of ATK as DMG in a small AoE. This effect can occur no more than once every 2s.",
     ]
     refi_stat: List[WeaponStat] = [
-        [WeaponStat(stat_name=WeaponStatType.critical_rate, stat_data=8.0)],
-        [WeaponStat(stat_name=WeaponStatType.critical_rate, stat_data=10.0)],
-        [WeaponStat(stat_name=WeaponStatType.critical_rate, stat_data=12.0)],
-        [WeaponStat(stat_name=WeaponStatType.critical_rate, stat_data=14.0)],
-        [WeaponStat(stat_name=WeaponStatType.critical_rate, stat_data=16.0)],
+        [WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=8.0)],
+        [WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=10.0)],
+        [WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=12.0)],
+        [WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=14.0)],
+        [WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=16.0)],
     ]

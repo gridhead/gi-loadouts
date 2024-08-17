@@ -7,7 +7,7 @@ from gi_loadouts.type.weap.base.tier import Tier
 
 class UrakuMisugiri(Sword):
     name: str = "Uraku Misugiri"
-    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_damage, stat_data=19.2)
+    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_damage_perc, stat_data=19.2)
     tier: Tier = Tier.Tier_1
     rare: Rare = Rare.Star_5
     refi_list: List[str] = [

@@ -7,7 +7,7 @@ from gi_loadouts.type.weap.base.tier import Tier
 
 class BlackcliffPole(Polearm):
     name: str = "Blackcliff Pole"
-    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_damage, stat_data=12.0)
+    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_damage_perc, stat_data=12.0)
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_4
     refi_list: List[str] = [
