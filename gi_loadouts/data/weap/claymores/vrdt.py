@@ -10,6 +10,7 @@ class Verdict(Claymore):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=4.8)
     tier: Tier = Tier.Tier_3
     rare: Rare = Rare.Star_5
+    refi_name: str = "Many Oaths of Dawn and Dusk"
     refi_list: List[str] = [
         "Increases ATK by 20%. When characters in your party obtain Elemental Shards from Crystallize reactions, the equipping character will gain 1 Seal, increasing Elemental Skill DMG by 18%. The Seal lasts for 15s, and the equipped may have up to 2 Seals at once. All of the equipper's Seals will disappear 0.2s after their Elemental Skill deals DMG.",
         "Increases ATK by 25%. When characters in your party obtain Elemental Shards from Crystallize reactions, the equipping character will gain 1 Seal, increasing Elemental Skill DMG by 22.5%. The Seal lasts for 15s, and the equipped may have up to 2 Seals at once. All of the equipper's Seals will disappear 0.2s after their Elemental Skill deals DMG.",

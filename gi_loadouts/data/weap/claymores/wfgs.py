@@ -10,6 +10,7 @@ class WolfsGravestone(Claymore):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=10.8)
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_5
+    refi_name: str = "Wolfish Tracker"
     refi_list: List[str] = [
         "Increases ATK by 20%. On hit, attacks against opponents with less than 30% HP increase all party members' ATK by 40% for 12s. Can only occur once every 30s.",
         "Increases ATK by 25%. On hit, attacks against opponents with less than 30% HP increase all party members' ATK by 50% for 12s. Can only occur once every 30s.",

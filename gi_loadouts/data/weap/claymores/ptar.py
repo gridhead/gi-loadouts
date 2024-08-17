@@ -10,6 +10,7 @@ class PrototypeArchaic(Claymore):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=6.0)
     tier: Tier = Tier.Tier_3
     rare: Rare = Rare.Star_4
+    refi_name: str = "Crush"
     refi_list: List[str] = [
         "On hit, Normal or Charged Attacks have a 50% chance to deal an additional 240% ATK DMG to opponents within a small AoE. Can only occur once every 15s.",
         "On hit, Normal or Charged Attacks have a 50% chance to deal an additional 300% ATK DMG to opponents within a small AoE. Can only occur once every 15s.",

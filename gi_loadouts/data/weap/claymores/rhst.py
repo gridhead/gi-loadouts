@@ -10,6 +10,7 @@ class RedhornStonethresher(Claymore):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_damage_perc, stat_data=19.2)
     tier: Tier = Tier.Tier_1
     rare: Rare = Rare.Star_5
+    refi_name: str = "Gokadaiou Otogibanashi"
     refi_list: List[str] = [
         "DEF is increased by 28%. Normal and Charged Attack DMG is increased by 40% of DEF.",
         "DEF is increased by 35%. Normal and Charged Attack DMG is increased by 50% of DEF.",
