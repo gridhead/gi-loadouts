@@ -10,6 +10,7 @@ class SharpshootersOath(Bow):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_damage_perc, stat_data=10.2)
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_3
+    refi_name: str = "Precise"
     refi_list: List[str] = [
             "Increases DMG against weak spots by 24%.",
             "Increases DMG against weak spots by 30%.",

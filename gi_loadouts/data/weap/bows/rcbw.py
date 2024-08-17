@@ -10,6 +10,7 @@ class RecurveBow(Bow):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.health_points_perc, stat_data=10.2)
     tier: Tier = Tier.Tier_1
     rare: Rare = Rare.Star_3
+    refi_name: str = "Cull the Weak"
     refi_list: List[str] = [
             "Defeating an opponent restores 8% HP.",
             "Defeating an opponent restores 10% HP.",

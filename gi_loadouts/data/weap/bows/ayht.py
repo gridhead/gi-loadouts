@@ -10,6 +10,7 @@ class AlleyHunter(Bow):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=6.0)
     tier: Tier = Tier.Tier_3
     rare: Rare = Rare.Star_4
+    refi_name: str = "Oppidan Ambush"
     refi_list: List[str] = [
         "While the character equipped with this weapon is in the party but not on the field, their DMG increases by 2% every second up to a max of 20%. When the character is on the field for more than 4s, the aforementioned DMG buff decreases by 4% per second until it reaches 0%.",
         "While the character equipped with this weapon is in the party but not on the field, their DMG increases by 2.5% every second up to a max of 25%. When the character is on the field for more than 4s, the aforementioned DMG buff decreases by 5% per second until it reaches 0%.",

@@ -10,6 +10,7 @@ class FavoniusWarbow(Bow):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.energy_recharge_perc, stat_data=13.3)
     tier: Tier = Tier.Tier_1
     rare: Rare = Rare.Star_4
+    refi_name: str = "Windfall"
     refi_list: List[str] = [
         "CRIT hits have a 60% chance to generate a small amount of Elemental Particles, which will regenerate 6 Energy for the character. Can only occur once every 12s.",
         "CRIT hits have a 70% chance to generate a small amount of Elemental Particles, which will regenerate 6 Energy for the character. Can only occur once every 10.5s.",

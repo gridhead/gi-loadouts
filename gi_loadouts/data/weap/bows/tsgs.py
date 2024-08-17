@@ -10,6 +10,7 @@ class TheStringless(Bow):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.elemental_mastery, stat_data=36.0)
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_4
+    refi_name: str = "Arrowless Song"
     refi_list: List[str] = [
             "Increases Elemental Skill and Elemental Burst DMG by 24%.",
             "Increases Elemental Skill and Elemental Burst DMG by 30%.",

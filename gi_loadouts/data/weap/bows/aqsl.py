@@ -10,6 +10,7 @@ class AquaSimulacra(Bow):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_damage_perc, stat_data=19.2)
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_5
+    refi_name: str = "The Cleansing Form"
     refi_list: List[str] = [
         "HP is increased by 16%. When there are opponents nearby, the DMG dealt by the wielder of this weapon is increased by 20%. This will take effect whether the character is on-field or not.",
         "HP is increased by 20%. When there are opponents nearby, the DMG dealt by the wielder of this weapon is increased by 25%. This will take effect whether the character is on-field or not.",

@@ -10,6 +10,7 @@ class WindblumeOde(Bow):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.elemental_mastery, stat_data=36.0)
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_4
+    refi_name: str = "Windblume Wish"
     refi_list: List[str] = [
             "After using an Elemental Skill, receive a boon from the ancient wish of the Windblume, increasing ATK by 16% for 6s.",
             "After using an Elemental Skill, receive a boon from the ancient wish of the Windblume, increasing ATK by 20% for 6s.",

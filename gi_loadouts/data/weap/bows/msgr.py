@@ -10,6 +10,7 @@ class Messenger(Bow):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_damage_perc, stat_data=6.8)
     tier: Tier = Tier.Tier_1
     rare: Rare = Rare.Star_3
+    refi_name: str = "Archer's Message"
     refi_list: List[str] = [
         "Charged Attack hits on weak spots deal an additional 100% ATK DMG as CRIT DMG. Can only occur once every 10s.",
         "Charged Attack hits on weak spots deal an additional 125% ATK DMG as CRIT DMG. Can only occur once every 10s.",

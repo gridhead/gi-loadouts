@@ -10,6 +10,7 @@ class Rust(Bow):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=9.0)
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_4
+    refi_name: str = "Rapid Firing"
     refi_list: List[str] = [
             "Increases Normal Attack DMG by 40% but decreases Charged Attack DMG by 10%.",
             "Increases Normal Attack DMG by 50% but decreases Charged Attack DMG by 10%.",

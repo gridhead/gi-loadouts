@@ -10,6 +10,7 @@ class SkywardHarp(Bow):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=4.8)
     tier: Tier = Tier.Tier_3
     rare: Rare = Rare.Star_5
+    refi_name: str = "Echoing Ballad"
     refi_list: List[str] = [
         "Increases CRIT DMG by 20%. Hits have a 60% chance to inflict a small AoE attack, dealing 125% Physical ATK DMG. Can only occur once every 4s.",
         "Increases CRIT DMG by 25%. Hits have a 70% chance to inflict a small AoE attack, dealing 125% Physical ATK DMG. Can only occur once every 3.5s.",

@@ -10,6 +10,7 @@ class Hamayumi(Bow):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=12.0)
     tier: Tier = Tier.Tier_1
     rare: Rare = Rare.Star_4
+    refi_name: str = "Full Draw"
     refi_list: List[str] = [
         "Increases Normal Attack DMG by 16% and Charged Attack DMG by 12%. When the equipping character's Energy reaches 100%, this effect is increased by 100%.",
         "Increases Normal Attack DMG by 20% and Charged Attack DMG by 15%. When the equipping character's Energy reaches 100%, this effect is increased by 100%.",
