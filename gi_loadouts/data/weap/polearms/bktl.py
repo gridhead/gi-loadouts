@@ -10,6 +10,7 @@ class BlackTassel(Polearm):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=6.0)
     tier: Tier = Tier.Tier_1
     rare: Rare = Rare.Star_3
+    refi_name: str = "Bane of the Soft"
     refi_list: List[str] = [
         "Increases DMG against slimes by 40%.",
         "Increases DMG against slimes by 50%.",

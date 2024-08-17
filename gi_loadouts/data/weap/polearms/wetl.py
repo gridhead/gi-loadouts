@@ -10,10 +10,11 @@ class WhiteTassel(Polearm):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=5.1)
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_3
+    refi_name: str = "Sharp"
     refi_list: List[str] = [
-"Increases Normal Attack DMG by 24%.",
-"Increases Normal Attack DMG by 30%.",
-"Increases Normal Attack DMG by 36%.",
-"Increases Normal Attack DMG by 42%.",
-"Increases Normal Attack DMG by 48%.",
+        "Increases Normal Attack DMG by 24%.",
+        "Increases Normal Attack DMG by 30%.",
+        "Increases Normal Attack DMG by 36%.",
+        "Increases Normal Attack DMG by 42%.",
+        "Increases Normal Attack DMG by 48%.",
 ]

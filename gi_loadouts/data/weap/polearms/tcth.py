@@ -10,6 +10,7 @@ class TheCatch(Polearm):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.energy_recharge_perc, stat_data=10.0)
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_4
+    refi_name: str = "Shanty"
     refi_list: List[str] = [
         "Increases Elemental Burst DMG by 16% and Elemental Burst CRIT Rate by 6%.",
         "Increases Elemental Burst DMG by 20% and Elemental Burst CRIT Rate by 7.5%.",

@@ -10,6 +10,7 @@ class Halberd(Polearm):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=5.1)
     tier: Tier = Tier.Tier_3
     rare: Rare = Rare.Star_3
+    refi_name: str = "Heavy"
     refi_list: List[str] = [
         "Normal Attacks deal an additional 160% DMG. Can only occur once every 10s.",
         "Normal Attacks deal an additional 200% DMG. Can only occur once every 10s.",

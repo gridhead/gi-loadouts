@@ -10,6 +10,7 @@ class SkywardSpine(Polearm):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.energy_recharge_perc, stat_data=8.0)
     tier: Tier = Tier.Tier_3
     rare: Rare = Rare.Star_5
+    refi_name: str = "Black Wing"
     refi_list: List[str] = [
         "Increases CRIT Rate by 8% and increases Normal ATK SPD by 12%. Additionally, Normal and Charged Attacks hits on opponents have a 50% chance to trigger a vacuum blade that deals 40% of ATK as DMG in a small AoE. This effect can occur no more than once every 2s.",
         "Increases CRIT Rate by 10% and increases Normal ATK SPD by 12%. Additionally, Normal and Charged Attacks hits on opponents have a 50% chance to trigger a vacuum blade that deals 55% of ATK as DMG in a small AoE. This effect can occur no more than once every 2s.",

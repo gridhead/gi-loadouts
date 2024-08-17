@@ -9,26 +9,12 @@ Dynamic calculation not implemented
 """
 
 
-"""
-Dynamic calculation not implemented
-"""
-
-
-"""
-Dynamic calculation not implemented
-"""
-
-
-"""
-Dynamic calculation not implemented
-"""
-
-
 class StaffOfHoma(Polearm):
     name: str = "Staff of Homa"
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_damage_perc, stat_data=14.4)
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_5
+    refi_name: str = "Reckless Cinnabar"
     refi_list: List[str] = [
         "HP increased by 20%. Additionally, provides an ATK Bonus based on 0.8% of the wielder's Max HP. When the wielder's HP is less than 50%, this ATK bonus is increased by an additional 1% of Max HP.",
         "HP increased by 25%. Additionally, provides an ATK Bonus based on 1% of the wielder's Max HP. When the wielder's HP is less than 50%, this ATK bonus is increased by an additional 1.2% of Max HP.",

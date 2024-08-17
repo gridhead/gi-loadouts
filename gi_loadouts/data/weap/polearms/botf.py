@@ -11,6 +11,7 @@ class BalladoftheFjords(Polearm):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=6.0)
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_4
+    refi_name: str = "Tales of the Tundra"
     refi_list: List[str] = [
         "When there are at least 3 different Elemental Types in your party, Elemental Mastery will be increased by 120.",
         "When there are at least 3 different Elemental Types in your party, Elemental Mastery will be increased by 150.",

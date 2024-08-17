@@ -10,6 +10,7 @@ class MissiveWindspear(Polearm):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=9.0)
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_4
+    refi_name: str = "The Wind Unattained"
     refi_list: List[str] = [
         "Within 10s after an Elemental Reaction is triggered, ATK is increased by 12% and Elemental Mastery is increased by 48.",
         "Within 10s after an Elemental Reaction is triggered, ATK is increased by 15% and Elemental Mastery is increased by 60.",

@@ -10,6 +10,7 @@ class DragonsBane(Polearm):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.elemental_mastery, stat_data=48.0)
     tier: Tier = Tier.Tier_1
     rare: Rare = Rare.Star_4
+    refi_name: str = "Bane of Flame and Water"
     refi_list: List[str] = [
         "Increases DMG against opponents affected by Hydro or Pyro by 20%.",
         "Increases DMG against opponents affected by Hydro or Pyro by 24%.",

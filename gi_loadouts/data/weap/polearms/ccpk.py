@@ -10,6 +10,7 @@ class CrescentPike(Polearm):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.damage_bonus_physical_perc, stat_data=7.5)
     tier: Tier = Tier.Tier_3
     rare: Rare = Rare.Star_4
+    refi_name: str = "Infusion Needle"
     refi_list: List[str] = [
         "After picking up an Elemental Orb/Particle, Normal and Charged Attacks deal an additional 20% ATK as DMG for 5s.",
         "After picking up an Elemental Orb/Particle, Normal and Charged Attacks deal an additional 25% ATK as DMG for 5s.",
