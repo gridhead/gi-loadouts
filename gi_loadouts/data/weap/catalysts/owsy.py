@@ -10,6 +10,7 @@ class OtherworldlyStory(Catalyst):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.energy_recharge_perc, stat_data=8.5)
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_3
+    refi_name: str = "Energy Shower"
     refi_list: List[str] = [
         "Each Elemental Orb or Particle collected restores 1% HP.",
         "Each Elemental Orb or Particle collected restores 1.25% HP.",

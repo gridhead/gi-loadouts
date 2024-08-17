@@ -10,6 +10,7 @@ class FlowingPurity(Catalyst):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=6.0)
     tier: Tier = Tier.Tier_3
     rare: Rare = Rare.Star_4
+    refi_name: str = "Unfinished Masterpiece"
     refi_list: List[str] = [
             "When using an Elemental Skill, All Elemental DMG Bonus will be increased by 8% for 15s, and a Bond of Life worth 24% of Max HP will be granted. This effect can be triggered once every 10s. When the Bond Of Life is cleared, every 1,000 HP cleared in the process will provide 2% All Elemental DMG Bonus, up to a maximum of 12%. This effect lasts 15s.",
             "When using an Elemental Skill, All Elemental DMG Bonus will be increased by 10% for 15s, and a Bond of Life worth 24% of Max HP will be granted. This effect can be triggered once every 10s. When the Bond Of Life is cleared, every 1,000 HP cleared in the process will provide 2.5% All Elemental DMG Bonus, up to a maximum of 15%. This effect lasts 15s.",

@@ -10,6 +10,7 @@ class TwinNephrite(Catalyst):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=3.4)
     tier: Tier = Tier.Tier_3
     rare: Rare = Rare.Star_3
+    refi_name: str = "Guerilla Tactics"
     refi_list: List[str] = [
         "Defeating an opponent increases Movement SPD and ATK by 12% for 15s.",
         "Defeating an opponent increases Movement SPD and ATK by 14% for 15s.",

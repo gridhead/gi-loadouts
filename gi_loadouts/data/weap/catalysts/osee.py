@@ -10,6 +10,7 @@ class OathswornEye(Catalyst):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=6.0)
     tier: Tier = Tier.Tier_3
     rare: Rare = Rare.Star_4
+    refi_name: str = "People of the Faltering Light"
     refi_list: List[str] = [
         "Increases Energy Recharge by 24% for 10s after using an Elemental Skill.",
         "Increases Energy Recharge by 30% for 10s after using an Elemental Skill.",

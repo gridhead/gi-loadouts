@@ -10,6 +10,7 @@ class EyeofPerception(Catalyst):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=12.0)
     tier: Tier = Tier.Tier_1
     rare: Rare = Rare.Star_4
+    refi_name: str = "Echo"
     refi_list: List[str] = [
             "Normal and Charged Attacks have a 50% chance to fire a Bolt of Perception, dealing 240% ATK as DMG. This bolt can bounce between opponents a maximum of 4 times. This effect can occur once every 12s.",
             "Normal and Charged Attacks have a 50% chance to fire a Bolt of Perception, dealing 270% ATK as DMG. This bolt can bounce between opponents a maximum of 4 times. This effect can occur once every 11s.",

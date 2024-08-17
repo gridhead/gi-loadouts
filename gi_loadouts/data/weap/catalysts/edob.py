@@ -10,6 +10,7 @@ class EmeraldOrb(Catalyst):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.elemental_mastery, stat_data=20.0)
     tier: Tier = Tier.Tier_3
     rare: Rare = Rare.Star_3
+    refi_name: str = "Rapids"
     refi_list: List[str] = [
             "Upon causing a Vaporize, Electro-Charged, Frozen, Bloom, or a Hydro-infused Swirl reaction, increases ATK by 20% for 12s.",
             "Upon causing a Vaporize, Electro-Charged, Frozen, Bloom, or a Hydro-infused Swirl reaction, increases ATK by 25% for 12s.",

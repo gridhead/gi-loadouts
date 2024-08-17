@@ -33,8 +33,8 @@ from gi_loadouts.data.weap.catalysts import (
     ttds,
     ttrb,
     twnp,
-    wdes,
     twsh,
+    wdes,
     wnsg,
 )
 
