@@ -10,6 +10,7 @@ class IronSting(Sword):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.elemental_mastery, stat_data=36.0)
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_4
+    refi_name: str = "Infusion Stinger"
     refi_list: List[str] = [
         "Dealing Elemental DMG increases all DMG by 6% for 6s. Max 2 stacks. Can only occur once every 1s.",
         "Dealing Elemental DMG increases all DMG by 7.5% for 6s. Max 2 stacks. Can only occur once every 1s.",

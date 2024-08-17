@@ -10,6 +10,7 @@ class PrimordialJadeCutter(Sword):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=9.6)
     tier: Tier = Tier.Tier_1
     rare: Rare = Rare.Star_5
+    refi_name: str = "Protector's Virtue"
     refi_list: List[str] = [
             "HP increased by 20%. Additionally, provides an ATK Bonus based on 1.2% of the wielder's Max HP.",
             "HP increased by 25%. Additionally, provides an ATK Bonus based on 1.5% of the wielder's Max HP.",

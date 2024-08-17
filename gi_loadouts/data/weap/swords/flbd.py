@@ -10,6 +10,7 @@ class FilletBlade(Sword):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=7.7)
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_3
+    refi_name: str = "Gash"
     refi_list: List[str] = [
         "On hit, has 50% chance to deal 240% ATK DMG to a single enemy. Can only occur once every 15s.",
         "On hit, has 50% chance to deal 280% ATK DMG to a single enemy. Can only occur once every 14s.",

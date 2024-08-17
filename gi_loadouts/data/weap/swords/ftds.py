@@ -10,6 +10,7 @@ class FesteringDesire(Sword):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.energy_recharge_perc, stat_data=10.0)
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_4
+    refi_name: str = "Undying Admiration"
     refi_list: List[str] = [
         "Increases Elemental Skill DMG by 16% and Elemental Skill CRIT Rate by 6%.",
         "Increases Elemental Skill DMG by 20% and Elemental Skill CRIT Rate by 7.5%.",

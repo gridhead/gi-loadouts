@@ -10,6 +10,7 @@ class CoolSteel(Sword):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=7.7)
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_3
+    refi_name: str = "Bane of Water and Ice"
     refi_list: List[str] = [
         "Increases DMG against opponents affected by Hydro or Cryo by 12%.",
         "Increases DMG against opponents affected by Hydro or Cryo by 15%.",

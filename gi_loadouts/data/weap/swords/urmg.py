@@ -10,6 +10,7 @@ class UrakuMisugiri(Sword):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_damage_perc, stat_data=19.2)
     tier: Tier = Tier.Tier_1
     rare: Rare = Rare.Star_5
+    refi_name: str = "Brocade Bloom, Shrine Sword"
     refi_list: List[str] = [
             "Normal Attack DMG is increased by 16% and Elemental Skill DMG is increased by 24%. After a nearby active character deals Geo DMG, the aforementioned effects increase by 100% for 15s. Additionally, the wielder's DEF is increased by 20%.",
             "Normal Attack DMG is increased by 20% and Elemental Skill DMG is increased by 30%. After a nearby active character deals Geo DMG, the aforementioned effects increase by 100% for 15s. Additionally, the wielder's DEF is increased by 25%.",

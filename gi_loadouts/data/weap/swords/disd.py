@@ -10,6 +10,7 @@ class DarkIronSword(Sword):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.elemental_mastery, stat_data=31)
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_3
+    refi_name: str = "Overloaded"
     refi_list: List[str] = [
         "Upon causing an Overloaded, Superconduct, Electro-Charged, Quicken, Aggravate, Hyperbloom, or Electro-infused Swirl reaction, ATK is increased by 20% for 12s.",
         "Upon causing an Overloaded, Superconduct, Electro-Charged, Quicken, Aggravate, Hyperbloom, or Electro-infused Swirl reaction, ATK is increased by 25% for 12s.",

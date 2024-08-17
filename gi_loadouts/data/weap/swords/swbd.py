@@ -10,6 +10,7 @@ class SkywardBlade(Sword):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.energy_recharge_perc, stat_data=12.0)
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_5
+    refi_name: str = "Sky-Piercing Fang"
     refi_list: List[str] = [
         "CRIT Rate increased by 4%. Gains Skypiercing Might upon using an Elemental Burst: Increases Movement SPD by 10%, increases ATK SPD by 10%, and Normal and Charged hits deal additional DMG equal to 20% of ATK. Skypiercing Might lasts for 12s.",
         "CRIT Rate increased by 5%. Gains Skypiercing Might upon using an Elemental Burst: Increases Movement SPD by 10%, increases ATK SPD by 10%, and Normal and Charged hits deal additional DMG equal to 25% of ATK. Skypiercing Might lasts for 12s.",

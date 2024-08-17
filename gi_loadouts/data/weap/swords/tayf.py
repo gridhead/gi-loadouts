@@ -10,6 +10,7 @@ class TheAlleyFlash(Sword):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.elemental_mastery, stat_data=12.0)
     tier: Tier = Tier.Tier_4
     rare: Rare = Rare.Star_4
+    refi_name: str = "Itinerant Hero"
     refi_list: List[str] = [
             "Increases DMG dealt by the character equipping this weapon by 12%. Taking DMG disables this effect for 5s.",
             "Increases DMG dealt by the character equipping this weapon by 15%. Taking DMG disables this effect for 5s.",

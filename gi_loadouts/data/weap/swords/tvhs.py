@@ -10,6 +10,7 @@ class TravelersHandySword(Sword):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.defense_perc, stat_data=6.4)
     tier: Tier = Tier.Tier_3
     rare: Rare = Rare.Star_3
+    refi_name: str = "Journey"
     refi_list: List[str] = [
             "Each Elemental Orb or Particle collected restores 1% HP.",
             "Each Elemental Orb or Particle collected restores 1.25% HP.",

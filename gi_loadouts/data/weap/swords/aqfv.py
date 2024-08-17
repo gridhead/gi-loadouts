@@ -10,6 +10,7 @@ class AquilaFavonia(Sword):
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.damage_bonus_physical_perc, stat_data=9.0)
     tier: Tier = Tier.Tier_3
     rare: Rare = Rare.Star_5
+    refi_name: str = "Falcon's Defiance"
     refi_list: List[str] = [
         "ATK is increased by 20%. Triggers on taking DMG: the soul of the Falcon of the West awakens, holding the banner of the resistance aloft, regenerating HP equal to 100% of ATK and dealing 200% of ATK as DMG to surrounding opponents. This effect can only occur once every 15s.",
         "ATK is increased by 25%. Triggers on taking DMG: the soul of the Falcon of the West awakens, holding the banner of the resistance aloft, regenerating HP equal to 115% of ATK and dealing 230% of ATK as DMG to surrounding opponents. This effect can only occur once every 15s.",
