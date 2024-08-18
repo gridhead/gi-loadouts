@@ -25,6 +25,7 @@ class MainWindow(Rule):
             (self.arti_ccol_type, self.arti_ccol_rare, self.arti_ccol_type_name, "ccol"),
         ]:
             self.change_rarity_by_changing_type(quad[0], quad[1], quad[2], quad[3])
+            self.change_artifact_team_by_changing_type(quad[0], quad[3])
         for pair in [
             (self.arti_fwol_rare, self.arti_fwol_levl),
             (self.arti_pmod_rare, self.arti_pmod_levl),
@@ -57,6 +58,7 @@ class MainWindow(Rule):
             (self.arti_ccol_type, self.arti_ccol_rare, self.arti_ccol_type_name, "ccol"),
         ]:
             quad[0].currentIndexChanged.connect(lambda _, a_type=quad[0], a_rare=quad[1], a_name=quad[2], a_id=quad[3]: self.change_rarity_by_changing_type(a_type, a_rare, a_name, a_id))
+            quad[0].currentIndexChanged.connect(lambda _, a_type=quad[0], a_rare=quad[1], a_id=quad[3]: self.change_artifact_team_by_changing_type(a_type, a_id))
         for pair in [
             (self.arti_fwol_rare, self.arti_fwol_levl),
             (self.arti_pmod_rare, self.arti_pmod_levl),

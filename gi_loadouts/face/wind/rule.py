@@ -63,7 +63,8 @@ class Rule(QMainWindow, Ui_mainwind):
             name = self.weap_area_name.currentText()
             self.weap_area_levl.clear()
             self.weap_area_refn.clear()
-            self.weap_area_info.setText("No refinements available.")
+            self.weap_area_refn_head.setText("No refinements available.")
+            self.weap_area_refn_body.setText("No refinements available.")
             self.weap_area_stat.setText("No substats.")
             weap = Family[kind][name]
             self.weap_area_levl.addItems([item.value.name for item in weap.levl_bind])
@@ -75,9 +76,9 @@ class Rule(QMainWindow, Ui_mainwind):
             kind = self.weap_area_type.currentText().strip()
             weap = Family[kind][name]
             weap.levl = getattr(Level, self.weap_area_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
-            self.weap_area_batk.setText(f"<b>ATK</b> {round(weap.main_stat.stat_data)}")
+            self.weap_area_batk.setText(f"ATK {round(weap.main_stat.stat_data)}")
             if weap.seco_stat.stat_name != WeaponStatType.none:
-                self.weap_area_stat.setText(f"<b>{weap.seco_stat_calc.stat_name.value.value}</b> {round(weap.seco_stat_calc.stat_data, 1)}")
+                self.weap_area_stat.setText(f"{weap.seco_stat_calc.stat_name.value.value} {round(weap.seco_stat_calc.stat_data, 1)}")
 
     def convey_refinement_change(self, _):
         if self.weap_area_type.currentText().strip() != "" and self.weap_area_name.currentText().strip() != "" and self.weap_area_refn.currentText().strip() != "":
@@ -85,20 +86,15 @@ class Rule(QMainWindow, Ui_mainwind):
             kind = self.weap_area_type.currentText().strip()
             weap = Family[kind][name]
             refn = self.weap_area_refn.currentIndex()
-            self.weap_area_info.setText(f"<b>{weap.refi_name}</b><br/><br/>{weap.refi_list[refn]}")
+            self.weap_area_refn_head.setText(f"<b>{weap.refi_name}</b>")
+            self.weap_area_refn_body.setText(f"{weap.refi_list[refn]}")
 
     def change_rarity_by_changing_type(self, droptype, droprare, artiname, part):
         if droptype.currentText().strip() != "":
-            type = getattr(ArtiList, droptype.currentText().replace(" ", "_").replace("'", "").replace("-", "_"))
-            item = getattr(type.value, part)
-            setattr(self.collection, part, item)
+            kind = getattr(ArtiList, droptype.currentText().replace(" ", "_").replace("'", "").replace("-", "_"))
             droprare.clear()
-            droprare.addItems([f"Star {item.value}" for item in type.value.rare])
-            artiname.setText(truncate_text(getattr(type.value, part).__name__))
-            if self.collection.quad != "":
-                print("QUAD", self.collection.quad)
-            if self.collection.pair != []:
-                print("PAIR", self.collection.pair)
+            droprare.addItems([f"Star {indx.value}" for indx in kind.value.rare])
+            artiname.setText(truncate_text(getattr(kind.value, part).__name__))
 
     def change_levels_by_changing_rarity(self, droprare, droplevl):
         if droprare.currentText().strip() != "":
@@ -115,3 +111,31 @@ class Rule(QMainWindow, Ui_mainwind):
             item = getattr(team.value, part)
             item.levl, item.rare, item.stat_name = levl.value.levl, rare.value, stat
             statdata.setText(f"{round(item.stat_data, 1)}")
+
+    def change_artifact_team_by_changing_type(self, droptype, part):
+        if droptype.currentText().strip() != "":
+            kind = getattr(ArtiList, droptype.currentText().replace(" ", "_").replace("'", "").replace("-", "_"))
+            item = getattr(kind.value, part)
+            setattr(self.collection, part, item)
+            _ = [indx.setText("No artifact set.") for indx in [self.pair_area_head, self.quad_area_head]]
+            _ = [indx.setText("No artifact set bonus.") for indx in [self.pair_area_desc, self.quad_area_desc]]
+            if self.collection.quad != "":
+                print("QUAD", self.collection.quad)
+                pack = getattr(ArtiList, self.collection.quad.replace(" ", "_").replace("'", "").replace("-", "_"))
+                self.pair_area_head.setText(f"<b>{truncate_text(pack.value.name, 32)}</b> (2)")
+                self.pair_area_desc.setText(f"{pack.value.pairtext}")
+                self.quad_area_head.setText(f"<b>{truncate_text(pack.value.name, 32)}</b> (4)")
+                self.quad_area_desc.setText(f"{pack.value.quadtext}")
+            elif self.collection.pair != []:
+                print("PAIR", self.collection.pair)
+                if len(self.collection.pair) == 1:
+                    pair_a = getattr(ArtiList, self.collection.pair[0].replace(" ", "_").replace("'", "").replace("-", "_"))
+                    self.pair_area_head.setText(f"<b>{truncate_text(pair_a.value.name, 32)}</b> (2)")
+                    self.pair_area_desc.setText(f"{pair_a.value.pairtext}")
+                elif len(self.collection.pair) == 2:
+                    pair_a = getattr(ArtiList, self.collection.pair[0].replace(" ", "_").replace("'", "").replace("-", "_"))
+                    self.pair_area_head.setText(f"<b>{truncate_text(pair_a.value.name, 32)}</b> (2)")
+                    self.pair_area_desc.setText(f"{pair_a.value.pairtext}")
+                    pair_b = getattr(ArtiList, self.collection.pair[1].replace(" ", "_").replace("'", "").replace("-", "_"))
+                    self.quad_area_head.setText(f"<b>{truncate_text(pair_b.value.name, 32)}</b> (2)")
+                    self.quad_area_desc.setText(f"{pair_b.value.pairtext}")
