@@ -3,6 +3,7 @@ from PySide6.QtWidgets import QMainWindow
 from gi_loadouts.data.arti import ArtiList
 from gi_loadouts.data.char import __charmaps__
 from gi_loadouts.data.weap import Family
+from gi_loadouts.face.otpt.main import OtptWindow
 from gi_loadouts.face.util import truncate_text
 from gi_loadouts.face.wind.wind import Ui_mainwind
 from gi_loadouts.type import arti
@@ -13,13 +14,13 @@ from gi_loadouts.type.arti.base import (
     MainStatType_GBOE,
     MainStatType_PMOD,
     MainStatType_SDOE,
+    SecoStatType,
 )
 from gi_loadouts.type.char import CharName
 from gi_loadouts.type.char.cons import Cons
 from gi_loadouts.type.levl import Level
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import WeaponStatType, WeaponType
-from gi_loadouts.face.otpt.main import OtptWindow
 
 
 class Rule(QMainWindow, Ui_mainwind):
@@ -141,6 +142,13 @@ class Rule(QMainWindow, Ui_mainwind):
                     pair_b = getattr(ArtiList, self.collection.pair[1].replace(" ", "_").replace("'", "").replace("-", "_"))
                     self.quad_area_head.setText(f"<b>{truncate_text(pair_b.value.name, 32)}</b> (2)")
                     self.quad_area_desc.setText(f"{pair_b.value.pairtext}")
+
+    def change_artifact_substats_by_changing_mainstat(self, dropstat, part):
+        if dropstat.currentText().strip() != "":
+            for indx in ["a", "b", "c", "d"]:
+                print(f"arti_{part}_name_{indx}", type(getattr(self, f"arti_{part}_name_{indx}")))
+                getattr(self, f"arti_{part}_name_{indx}").clear()
+                getattr(self, f"arti_{part}_name_{indx}").addItems([item.value.value for item in SecoStatType if item.value.value != dropstat.currentText().strip()])
 
     def show_output_window(self):
         if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":

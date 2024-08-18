@@ -42,6 +42,7 @@ class MainWindow(Rule):
             (self.arti_ccol_levl, self.arti_ccol_type, self.arti_ccol_rare, self.arti_ccol_main_name, self.arti_ccol_main_data, "ccol"),
         ]:
             self.change_data_by_changing_level_or_stat(item[0], item[1], item[2], item[3], item[4], item[5])
+            self.change_artifact_substats_by_changing_mainstat(item[3], item[5])
 
     def initialize_events(self):
         self.head_scan.clicked.connect(self.show_output_window)
@@ -77,3 +78,4 @@ class MainWindow(Rule):
         ]:
             item[0].currentIndexChanged.connect(lambda _, a_levl=item[0], a_type=item[1], a_rare=item[2], a_name=item[3], a_data=item[4], a_id=item[5]: self.change_data_by_changing_level_or_stat(a_levl, a_type, a_rare, a_name, a_data, a_id))
             item[3].currentIndexChanged.connect(lambda _, a_levl=item[0], a_type=item[1], a_rare=item[2], a_name=item[3], a_data=item[4], a_id=item[5]: self.change_data_by_changing_level_or_stat(a_levl, a_type, a_rare, a_name, a_data, a_id))
+            item[3].currentIndexChanged.connect(lambda _, a_name=item[3], a_id=item[5]: self.change_artifact_substats_by_changing_mainstat(a_name, a_id))
