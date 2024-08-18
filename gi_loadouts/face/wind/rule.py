@@ -200,3 +200,10 @@ class Rule(QMainWindow, Ui_mainwind):
         if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
             self.otptobjc = OtptWindow(self.head_char_name.currentText())
             self.otptobjc.show()
+
+    def validate_lineedit_userdata(self, text):
+        try:
+            data = float(text)
+            self.statarea.clearMessage()
+        except ValueError:
+            self.statarea.showMessage("Please enter a valid input (eg. 69, 42.0 etc.)")

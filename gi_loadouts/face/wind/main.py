@@ -5,10 +5,11 @@ class MainWindow(Rule):
     def __init__(self):
         super().__init__()
         self.headtext = "Loadouts for Genshin Impact"
-        self.setupUi(self)
         self.setWindowTitle(self.headtext)
+        self.setupUi(self)
         self.initialize_elements()
         self.initialize_events()
+        self.statarea.showMessage("Ready.")
 
     def initialize_elements(self):
         self.populate_dropdown()
@@ -88,3 +89,7 @@ class MainWindow(Rule):
             for alfa in ["a", "b", "c", "d"]:
                 drop, text = getattr(self, f"arti_{part}_name_{alfa}"), getattr(self, f"arti_{part}_data_{alfa}")
                 drop.currentIndexChanged.connect(lambda _, a_drop=drop, a_text=text: self.render_lineedit_readonly_when_none(a_drop, a_text))
+        for part in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
+            for alfa in ["a", "b", "c", "d"]:
+                text = getattr(self, f"arti_{part}_data_{alfa}")
+                text.textChanged.connect(self.validate_lineedit_userdata)
