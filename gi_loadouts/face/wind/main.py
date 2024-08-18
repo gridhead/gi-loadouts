@@ -1,10 +1,10 @@
-from gi_loadouts.wind.rule import Rule
+from gi_loadouts.face.wind.rule import Rule
 
 
 class MainWindow(Rule):
     def __init__(self):
         super().__init__()
-        self.headtext = f"Loadouts for Genshin Impact"
+        self.headtext = "Loadouts for Genshin Impact"
         self.setupUi(self)
         self.setWindowTitle(self.headtext)
         self.initialize_elements()

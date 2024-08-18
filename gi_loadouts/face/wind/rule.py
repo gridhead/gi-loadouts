@@ -1,18 +1,24 @@
-from gi_loadouts.wind.wind import Ui_mainwind
 from PySide6.QtWidgets import QMainWindow
+
+from gi_loadouts.data.arti import ArtiList
+from gi_loadouts.data.char import __charmaps__
+from gi_loadouts.data.weap import Family
+from gi_loadouts.face.util import truncate_text
+from gi_loadouts.face.wind.wind import Ui_mainwind
+from gi_loadouts.type import arti
+from gi_loadouts.type.arti import ArtiLevl, Collection
+from gi_loadouts.type.arti.base import (
+    MainStatType_CCOL,
+    MainStatType_FWOL,
+    MainStatType_GBOE,
+    MainStatType_PMOD,
+    MainStatType_SDOE,
+)
 from gi_loadouts.type.char import CharName
 from gi_loadouts.type.char.cons import Cons
-from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.levl import Level
-from gi_loadouts.data.char import __charmaps__
-from gi_loadouts.data.arti import ArtiList
-from gi_loadouts.type.arti import ArtiLevl
-from gi_loadouts.wind.util import truncate_text
-from gi_loadouts.type.arti.base import MainStatType_FWOL, MainStatType_PMOD, MainStatType_SDOE, MainStatType_GBOE, MainStatType_CCOL
-from gi_loadouts.type import arti
-from gi_loadouts.type.weap import WeaponType, WeaponStatType
-from gi_loadouts.data.weap import Family
-from gi_loadouts.type.arti import Collection
+from gi_loadouts.type.rare import Rare
+from gi_loadouts.type.weap import WeaponStatType, WeaponType
 
 
 class Rule(QMainWindow, Ui_mainwind):
@@ -69,7 +75,6 @@ class Rule(QMainWindow, Ui_mainwind):
             kind = self.weap_area_type.currentText().strip()
             weap = Family[kind][name]
             weap.levl = getattr(Level, self.weap_area_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
-            print(weap.main_stat)
             self.weap_area_batk.setText(f"<b>ATK</b> {round(weap.main_stat.stat_data)}")
             if weap.seco_stat.stat_name != WeaponStatType.none:
                 self.weap_area_stat.setText(f"<b>{weap.seco_stat_calc.stat_name.value.value}</b> {round(weap.seco_stat_calc.stat_data, 1)}")
@@ -90,11 +95,10 @@ class Rule(QMainWindow, Ui_mainwind):
             droprare.clear()
             droprare.addItems([f"Star {item.value}" for item in type.value.rare])
             artiname.setText(truncate_text(getattr(type.value, part).__name__))
-            print(self.collection)
-            if self.collection.pair != []:
-                pass
             if self.collection.quad != "":
-                pass
+                print("QUAD", self.collection.quad)
+            if self.collection.pair != []:
+                print("PAIR", self.collection.pair)
 
     def change_levels_by_changing_rarity(self, droprare, droplevl):
         if droprare.currentText().strip() != "":
@@ -111,4 +115,3 @@ class Rule(QMainWindow, Ui_mainwind):
             item = getattr(team.value, part)
             item.levl, item.rare, item.stat_name = levl.value.levl, rare.value, stat
             statdata.setText(f"{round(item.stat_data, 1)}")
-            print(levl, team, item.levl, item.rare, levl.value.levl, item.stat_name, item.stat_data)

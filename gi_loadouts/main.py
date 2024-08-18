@@ -4,8 +4,8 @@ import sys
 from PySide6.QtGui import QFontDatabase
 from PySide6.QtWidgets import QApplication
 
-from gi_loadouts.wind import rsrc  # noqa
-from gi_loadouts.wind.main import MainWindow
+from gi_loadouts.face import rsrc  # noqa
+from gi_loadouts.face.wind.main import MainWindow
 
 
 def load_custom_font():
