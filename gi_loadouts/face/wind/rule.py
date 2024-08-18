@@ -1,9 +1,8 @@
-from PySide6.QtWidgets import QComboBox, QLabel, QLineEdit, QMainWindow
+from PySide6.QtWidgets import QComboBox, QLabel, QLineEdit, QMainWindow, QMessageBox
 
 from gi_loadouts.data.arti import ArtiList
 from gi_loadouts.data.char import __charmaps__
 from gi_loadouts.data.weap import Family
-from gi_loadouts.face.otpt.main import OtptWindow
 from gi_loadouts.face.util import truncate_text
 from gi_loadouts.face.wind.wind import Ui_mainwind
 from gi_loadouts.type import arti
@@ -16,11 +15,14 @@ from gi_loadouts.type.arti.base import (
     MainStatType_SDOE,
     SecoStatType,
 )
+from gi_loadouts.type.calc import CHAR, TEAM, WEAP
 from gi_loadouts.type.char import CharName
 from gi_loadouts.type.char.cons import Cons
 from gi_loadouts.type.levl import Level
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import WeaponStatType, WeaponType
+from gi_loadouts.type.calc import CHAR, TEAM, WEAP
+from gi_loadouts.type.stat import ATTR, STAT, __revmap__
 
 
 class Rule(QMainWindow, Ui_mainwind):
@@ -28,16 +30,21 @@ class Rule(QMainWindow, Ui_mainwind):
         super().__init__()
         self.collection = Collection()
         self.otptobjc = None
+        self.c_team = TEAM()
+        self.c_char = CHAR()
+        self.c_weap = WEAP()
+        self.c_tyvt = CHAR()
+        self.dialog = None
 
     def populate_dropdown(self):
         self.head_char_name.addItems([item.value for item in CharName])
         self.head_char_cons.addItems([item.value.name for item in Cons])
         self.head_char_levl.addItems([item.value.name for item in Level])
-        self.arti_fwol_main_name.addItems([item.value.value for item in MainStatType_FWOL if item != MainStatType_FWOL.none])
-        self.arti_pmod_main_name.addItems([item.value.value for item in MainStatType_PMOD if item != MainStatType_PMOD.none])
-        self.arti_sdoe_main_name.addItems([item.value.value for item in MainStatType_SDOE if item != MainStatType_SDOE.none])
-        self.arti_gboe_main_name.addItems([item.value.value for item in MainStatType_GBOE if item != MainStatType_GBOE.none])
-        self.arti_ccol_main_name.addItems([item.value.value for item in MainStatType_CCOL if item != MainStatType_CCOL.none])
+        self.arti_fwol_name_main.addItems([item.value.value for item in MainStatType_FWOL if item != MainStatType_FWOL.none])
+        self.arti_pmod_name_main.addItems([item.value.value for item in MainStatType_PMOD if item != MainStatType_PMOD.none])
+        self.arti_sdoe_name_main.addItems([item.value.value for item in MainStatType_SDOE if item != MainStatType_SDOE.none])
+        self.arti_gboe_name_main.addItems([item.value.value for item in MainStatType_GBOE if item != MainStatType_GBOE.none])
+        self.arti_ccol_name_main.addItems([item.value.value for item in MainStatType_CCOL if item != MainStatType_CCOL.none])
         self.weap_area_type.addItems([item.value for item in WeaponType if item != WeaponType.none])
         for item in [self.arti_fwol_type, self.arti_pmod_type, self.arti_sdoe_type, self.arti_gboe_type, self.arti_ccol_type]:
             item.addItems([item.value.name for item in ArtiList])
@@ -105,7 +112,7 @@ class Rule(QMainWindow, Ui_mainwind):
             droplevl.clear()
             droplevl.addItems([item.value.name for item in ArtiLevl if rare in item.value.rare])
             for _ in __artistat__[rare.value]["active"]:
-                stat = getattr(self, f"arti_{part}_main_name")
+                stat = getattr(self, f"arti_{part}_name_main")
                 self.change_artifact_substats_by_changing_mainstat(stat, part)
             for alfa in __artistat__[rare.value]["inactive"]:
                 getattr(self, f"arti_{part}_name_{alfa}").clear()
@@ -154,33 +161,31 @@ class Rule(QMainWindow, Ui_mainwind):
     def remove_artifact(self, droptype: QComboBox, part: str) -> None:
         if droptype.currentText().strip() != "":
             if droptype.currentText().strip() == "None":
-                getattr(self, f"arti_{part}_main_name").clear()
-                getattr(self, f"arti_{part}_main_name").addItems(["None"])
-                getattr(self, f"arti_{part}_main_data").clear()
-                getattr(self, f"arti_{part}_main_name").setDisabled(True)
-                getattr(self, f"arti_{part}_rare").clear()
-                getattr(self, f"arti_{part}_rare").addItems(["Star 0"])
+                getattr(self, f"arti_{part}_name_main").clear()
+                getattr(self, f"arti_{part}_name_main").addItems(["None"])
+                getattr(self, f"arti_{part}_data_main").clear()
+                getattr(self, f"arti_{part}_name_main").setDisabled(True)
                 for indx in ["a", "b", "c", "d"]:
                     getattr(self, f"arti_{part}_name_{indx}").clear()
                     getattr(self, f"arti_{part}_name_{indx}").addItems(["None"])
             else:
-                getattr(self, f"arti_{part}_main_data").clear()
-                getattr(self, f"arti_{part}_main_name").setDisabled(False)
+                getattr(self, f"arti_{part}_data_main").clear()
+                getattr(self, f"arti_{part}_name_main").setDisabled(False)
                 if part == "fwol":
-                    self.arti_fwol_main_name.clear()
-                    self.arti_fwol_main_name.addItems([item.value.value for item in MainStatType_FWOL if item != MainStatType_FWOL.none])
+                    self.arti_fwol_name_main.clear()
+                    self.arti_fwol_name_main.addItems([item.value.value for item in MainStatType_FWOL if item != MainStatType_FWOL.none])
                 elif part == "pmod":
-                    self.arti_pmod_main_name.clear()
-                    self.arti_pmod_main_name.addItems([item.value.value for item in MainStatType_PMOD if item != MainStatType_PMOD.none])
+                    self.arti_pmod_name_main.clear()
+                    self.arti_pmod_name_main.addItems([item.value.value for item in MainStatType_PMOD if item != MainStatType_PMOD.none])
                 elif part == "sdoe":
-                    self.arti_sdoe_main_name.clear()
-                    self.arti_sdoe_main_name.addItems([item.value.value for item in MainStatType_SDOE if item != MainStatType_SDOE.none])
+                    self.arti_sdoe_name_main.clear()
+                    self.arti_sdoe_name_main.addItems([item.value.value for item in MainStatType_SDOE if item != MainStatType_SDOE.none])
                 elif part == "gboe":
-                    self.arti_gboe_main_name.clear()
-                    self.arti_gboe_main_name.addItems([item.value.value for item in MainStatType_GBOE if item != MainStatType_GBOE.none])
+                    self.arti_gboe_name_main.clear()
+                    self.arti_gboe_name_main.addItems([item.value.value for item in MainStatType_GBOE if item != MainStatType_GBOE.none])
                 elif part == "ccol":
-                    self.arti_ccol_main_name.clear()
-                    self.arti_ccol_main_name.addItems([item.value.value for item in MainStatType_CCOL if item != MainStatType_CCOL.none])
+                    self.arti_ccol_name_main.clear()
+                    self.arti_ccol_name_main.addItems([item.value.value for item in MainStatType_CCOL if item != MainStatType_CCOL.none])
 
     def change_artifact_substats_by_changing_mainstat(self, dropstat: QComboBox, part: str) -> None:
         if dropstat.currentText().strip() != "" and dropstat.currentText().strip != "None":
@@ -197,9 +202,60 @@ class Rule(QMainWindow, Ui_mainwind):
             lineedit.setDisabled(False)
 
     def show_output_window(self):
+        """
+        TODO: Make into a separate function
+        """
         if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
-            self.otptobjc = OtptWindow(self.head_char_name.currentText())
-            self.otptobjc.show()
+            #self.otptobjc = OtptWindow(self.head_char_name.currentText())
+            #self.otptobjc.show()
+            char = __charmaps__[self.head_char_name.currentText()]()
+            char.levl = getattr(Level, self.head_char_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
+            self.c_char.attack = char.attack
+            self.c_char.defense = char.defense
+            self.c_char.health_points = char.health_points
+            setattr(self.c_char, self.c_char.revmap[char.seco.stat_name], ATTR(stat_name=char.seco.stat_name, stat_data=char.seco.stat_data))
+        """
+        TODO: Make into a separate function
+        """
+        if self.weap_area_type.currentText().strip() != "" and self.weap_area_name.currentText().strip() != "" and self.weap_area_refn.currentText().strip() != "" and self.weap_area_levl.currentText().strip() != "":
+            kind = self.weap_area_type.currentText().strip()
+            name = self.weap_area_name.currentText()
+            weap = Family[kind][name]
+            refn = self.weap_area_refn.currentIndex()
+            weap.levl = getattr(Level, self.weap_area_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
+            self.c_weap.base = ATTR(stat_name=WeaponStatType.attack.value, stat_data=weap.main_stat.stat_data)
+            if weap.seco_stat.stat_name != WeaponStatType.none:
+                self.c_weap.seco = ATTR(stat_name=weap.seco_stat_calc.stat_name.value, stat_data=weap.seco_stat_calc.stat_data)
+            self.c_weap.refn = weap.refi_stat[refn]
+        """
+        TODO: Make into a separate function
+        """
+        for part in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
+            if getattr(self, f"arti_{part}_type").currentText().strip() != "":
+                for indx in ["main", "a", "b", "c", "d"]:
+                    if getattr(self, f"arti_{part}_name_{indx}").currentText().strip() != "":
+                        if getattr(self, f"arti_{part}_name_{indx}").currentText().strip() == "None":
+                            setattr(self.c_team, f"{part}_{indx}", ATTR(stat_name=STAT.none, stat_data=0.0))
+                        else:
+                            try:
+                                setattr(self.c_team, f"{part}_{indx}", ATTR(stat_name=__revmap__[getattr(self, f"arti_{part}_name_{indx}").currentText().strip()], stat_data=float(getattr(self, f"arti_{part}_data_{indx}").text().strip())))
+                            except ValueError:
+                                self.show_dialog(QMessageBox.Information, "Invalid input detected", "Please enter a valid input (eg. 69, 42.0 etc.)")
+        if self.collection.quad != "":
+            pack = getattr(ArtiList, self.collection.quad.replace(" ", "_").replace("'", "").replace("-", "_"))
+            self.c_team.pairdata_a = pack.value.pairdata
+            self.c_team.quaddata = pack.value.quaddata
+        elif self.collection.pair != []:
+            if len(self.collection.pair) == 1:
+                pack_a = getattr(ArtiList, self.collection.pair[0].replace(" ", "_").replace("'", "").replace("-", "_"))
+                self.c_team.pairdata_a = pack_a.value.pairdata
+            elif len(self.collection.pair) == 2:
+                pack_a = getattr(ArtiList, self.collection.pair[0].replace(" ", "_").replace("'", "").replace("-", "_"))
+                self.c_team.pairdata_a = pack_a.value.pairdata
+                pack_b = getattr(ArtiList, self.collection.pair[1].replace(" ", "_").replace("'", "").replace("-", "_"))
+                self.c_team.pairdata_b = pack_b.value.pairdata
+        print(self.c_team)
+
 
     def validate_lineedit_userdata(self, text):
         try:
@@ -207,3 +263,14 @@ class Rule(QMainWindow, Ui_mainwind):
             self.statarea.clearMessage()
         except ValueError:
             self.statarea.showMessage("Please enter a valid input (eg. 69, 42.0 etc.)")
+
+    def show_dialog(self, icon, head, text):
+        if self.dialog is None:
+            self.dialog = QMessageBox(parent=self)
+            self.dialog.setIcon(icon)
+            self.dialog.setWindowTitle(f"{self.headtext} - {head}")
+            self.dialog.setText(text)
+            self.dialog.setFont("IBM Plex Sans")
+            self.dialog.show()
+        else:
+            self.dialog.show()

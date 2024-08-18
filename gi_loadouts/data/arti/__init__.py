@@ -388,7 +388,7 @@ __artilist__ = {
         fwol=none.fwol(), pmod=none.pmod(), sdoe=none.sdoe(), gboe=none.gboe(), ccol=none.ccol(),
         pairdata=none.team.__pairdata__, pairtext=none.team.__pairtext__,
         quaddata=none.team.__quaddata__, quadtext=none.team.__quadtext__,
-        rare=[Rare.Star_1, Rare.Star_2, Rare.Star_3, Rare.Star_4, Rare.Star_5],
+        rare=[Rare.Star_0],
     ),
 }
 

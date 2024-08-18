@@ -7,3 +7,6 @@ class OtptWindow(Rule):
         self.headtext = f"Loadouts for Genshin Impact - {charname}"
         self.setupUi(self)
         self.setWindowTitle(self.headtext)
+
+    def calc(self):
+        pass
