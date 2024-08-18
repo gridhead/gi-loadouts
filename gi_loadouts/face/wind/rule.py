@@ -150,6 +150,14 @@ class Rule(QMainWindow, Ui_mainwind):
                 getattr(self, f"arti_{part}_name_{indx}").clear()
                 getattr(self, f"arti_{part}_name_{indx}").addItems([item.value.value for item in SecoStatType if item.value.value != dropstat.currentText().strip()])
 
+    def render_lineedit_readonly_when_none(self, dropstat, lineedit):
+        if dropstat.currentText().strip() == "None":
+            lineedit.clear()
+            lineedit.setDisabled(True)
+        else:
+            lineedit.clear()
+            lineedit.setDisabled(False)
+
     def show_output_window(self):
         if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
             self.otptobjc = OtptWindow(self.head_char_name.currentText())

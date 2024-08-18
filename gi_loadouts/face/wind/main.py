@@ -79,3 +79,7 @@ class MainWindow(Rule):
             item[0].currentIndexChanged.connect(lambda _, a_levl=item[0], a_type=item[1], a_rare=item[2], a_name=item[3], a_data=item[4], a_id=item[5]: self.change_data_by_changing_level_or_stat(a_levl, a_type, a_rare, a_name, a_data, a_id))
             item[3].currentIndexChanged.connect(lambda _, a_levl=item[0], a_type=item[1], a_rare=item[2], a_name=item[3], a_data=item[4], a_id=item[5]: self.change_data_by_changing_level_or_stat(a_levl, a_type, a_rare, a_name, a_data, a_id))
             item[3].currentIndexChanged.connect(lambda _, a_name=item[3], a_id=item[5]: self.change_artifact_substats_by_changing_mainstat(a_name, a_id))
+        for part in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
+            for alfa in ["a", "b", "c", "d"]:
+                drop, text = getattr(self, f"arti_{part}_name_{alfa}"), getattr(self, f"arti_{part}_data_{alfa}")
+                drop.currentIndexChanged.connect(lambda _, a_drop=drop, a_text=text: self.render_lineedit_readonly_when_none(a_drop, a_text))
