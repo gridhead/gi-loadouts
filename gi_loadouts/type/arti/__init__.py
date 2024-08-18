@@ -11,7 +11,7 @@ from enum import Enum
 
 
 class ArtifactTeam(BaseModel):
-    name: str
+    name: str = "None"
     fwol: FWOL = FWOL()
     pmod: PMOD = PMOD()
     sdoe: SDOE = SDOE()
@@ -19,39 +19,40 @@ class ArtifactTeam(BaseModel):
     ccol: CCOL = CCOL()
     pairdata: list = []
     quaddata: list = []
-    pairtext: str
-    quadtext: str
+    pairtext: str = ""
+    quadtext: str = ""
     rare: List[Rare] = []
 
 
-class ArtiLevl(BaseModel):
+class ArtiLevlType(BaseModel):
     levl: int = 0
     name: str = "Level 00"
     rare: List[Rare] = [Rare.Star_1]
 
 
 __artilevl__ = {
-    "Level 00": ArtiLevl(levl=0, name="Level 00", rare=[Rare.Star_1, Rare.Star_2, Rare.Star_3, Rare.Star_4, Rare.Star_5]),
-    "Level 01": ArtiLevl(levl=1, name="Level 01", rare=[Rare.Star_1, Rare.Star_2, Rare.Star_3, Rare.Star_4, Rare.Star_5]),
-    "Level 02": ArtiLevl(levl=2, name="Level 02", rare=[Rare.Star_1, Rare.Star_2, Rare.Star_3, Rare.Star_4, Rare.Star_5]),
-    "Level 03": ArtiLevl(levl=3, name="Level 03", rare=[Rare.Star_1, Rare.Star_2, Rare.Star_3, Rare.Star_4, Rare.Star_5]),
-    "Level 04": ArtiLevl(levl=4, name="Level 04", rare=[Rare.Star_1, Rare.Star_2, Rare.Star_3, Rare.Star_4, Rare.Star_5]),
-    "Level 05": ArtiLevl(levl=5, name="Level 05", rare=[Rare.Star_3, Rare.Star_4, Rare.Star_5]),
-    "Level 06": ArtiLevl(levl=6, name="Level 06", rare=[Rare.Star_3, Rare.Star_4, Rare.Star_5]),
-    "Level 07": ArtiLevl(levl=7, name="Level 07", rare=[Rare.Star_3, Rare.Star_4, Rare.Star_5]),
-    "Level 08": ArtiLevl(levl=8, name="Level 08", rare=[Rare.Star_3, Rare.Star_4, Rare.Star_5]),
-    "Level 09": ArtiLevl(levl=9, name="Level 09", rare=[Rare.Star_3, Rare.Star_4, Rare.Star_5]),
-    "Level 10": ArtiLevl(levl=10, name="Level 10", rare=[Rare.Star_3, Rare.Star_4, Rare.Star_5]),
-    "Level 11": ArtiLevl(levl=11, name="Level 11", rare=[Rare.Star_3, Rare.Star_4, Rare.Star_5]),
-    "Level 12": ArtiLevl(levl=12, name="Level 12", rare=[Rare.Star_3, Rare.Star_4, Rare.Star_5]),
-    "Level 13": ArtiLevl(levl=13, name="Level 13", rare=[Rare.Star_4, Rare.Star_5]),
-    "Level 14": ArtiLevl(levl=14, name="Level 14", rare=[Rare.Star_4, Rare.Star_5]),
-    "Level 15": ArtiLevl(levl=15, name="Level 15", rare=[Rare.Star_4, Rare.Star_5]),
-    "Level 16": ArtiLevl(levl=16, name="Level 16", rare=[Rare.Star_4, Rare.Star_5]),
-    "Level 17": ArtiLevl(levl=17, name="Level 17", rare=[Rare.Star_5]),
-    "Level 18": ArtiLevl(levl=18, name="Level 18", rare=[Rare.Star_5]),
-    "Level 19": ArtiLevl(levl=19, name="Level 19", rare=[Rare.Star_5]),
-    "Level 20": ArtiLevl(levl=20, name="Level 20", rare=[Rare.Star_5])
+    "None": ArtiLevlType(levl=-1, name="None", rare=[Rare.Star_0]),
+    "Level 00": ArtiLevlType(levl=0, name="Level 00", rare=[Rare.Star_1, Rare.Star_2, Rare.Star_3, Rare.Star_4, Rare.Star_5]),
+    "Level 01": ArtiLevlType(levl=1, name="Level 01", rare=[Rare.Star_1, Rare.Star_2, Rare.Star_3, Rare.Star_4, Rare.Star_5]),
+    "Level 02": ArtiLevlType(levl=2, name="Level 02", rare=[Rare.Star_1, Rare.Star_2, Rare.Star_3, Rare.Star_4, Rare.Star_5]),
+    "Level 03": ArtiLevlType(levl=3, name="Level 03", rare=[Rare.Star_1, Rare.Star_2, Rare.Star_3, Rare.Star_4, Rare.Star_5]),
+    "Level 04": ArtiLevlType(levl=4, name="Level 04", rare=[Rare.Star_1, Rare.Star_2, Rare.Star_3, Rare.Star_4, Rare.Star_5]),
+    "Level 05": ArtiLevlType(levl=5, name="Level 05", rare=[Rare.Star_3, Rare.Star_4, Rare.Star_5]),
+    "Level 06": ArtiLevlType(levl=6, name="Level 06", rare=[Rare.Star_3, Rare.Star_4, Rare.Star_5]),
+    "Level 07": ArtiLevlType(levl=7, name="Level 07", rare=[Rare.Star_3, Rare.Star_4, Rare.Star_5]),
+    "Level 08": ArtiLevlType(levl=8, name="Level 08", rare=[Rare.Star_3, Rare.Star_4, Rare.Star_5]),
+    "Level 09": ArtiLevlType(levl=9, name="Level 09", rare=[Rare.Star_3, Rare.Star_4, Rare.Star_5]),
+    "Level 10": ArtiLevlType(levl=10, name="Level 10", rare=[Rare.Star_3, Rare.Star_4, Rare.Star_5]),
+    "Level 11": ArtiLevlType(levl=11, name="Level 11", rare=[Rare.Star_3, Rare.Star_4, Rare.Star_5]),
+    "Level 12": ArtiLevlType(levl=12, name="Level 12", rare=[Rare.Star_3, Rare.Star_4, Rare.Star_5]),
+    "Level 13": ArtiLevlType(levl=13, name="Level 13", rare=[Rare.Star_4, Rare.Star_5]),
+    "Level 14": ArtiLevlType(levl=14, name="Level 14", rare=[Rare.Star_4, Rare.Star_5]),
+    "Level 15": ArtiLevlType(levl=15, name="Level 15", rare=[Rare.Star_4, Rare.Star_5]),
+    "Level 16": ArtiLevlType(levl=16, name="Level 16", rare=[Rare.Star_4, Rare.Star_5]),
+    "Level 17": ArtiLevlType(levl=17, name="Level 17", rare=[Rare.Star_5]),
+    "Level 18": ArtiLevlType(levl=18, name="Level 18", rare=[Rare.Star_5]),
+    "Level 19": ArtiLevlType(levl=19, name="Level 19", rare=[Rare.Star_5]),
+    "Level 20": ArtiLevlType(levl=20, name="Level 20", rare=[Rare.Star_5])
 }
 
 
@@ -84,7 +85,7 @@ class Collection(BaseModel):
     def pair(self):
         pair_list, seen_list = set(), set()
         for item in self.team_list:
-            if item.strip() != "":
+            if item.strip() != "" and item.strip() != "None":
                 if item in seen_list:
                     pair_list.add(item)
                 else:
@@ -97,10 +98,11 @@ class Collection(BaseModel):
     def quad(self):
         occurrence, team = dict(), ""
         for item in self.team_list:
-            if item in occurrence:
-                occurrence[item] += 1
-            else:
-                occurrence[item] = 1
+            if item.strip() != "" and item.strip() != "None":
+                if item in occurrence:
+                    occurrence[item] += 1
+                else:
+                    occurrence[item] = 1
         for item, qant in occurrence.items():
             if qant >= 4:
                 team = item
@@ -108,6 +110,10 @@ class Collection(BaseModel):
 
 
 __artistat__ = {
+    0: {
+        "active": [],
+        "inactive": ["a", "b", "c", "d"]
+    },
     1: {
         "active": ["a"],
         "inactive": ["b", "c", "d"]

@@ -65,6 +65,7 @@ class MainWindow(Rule):
         ]:
             quad[0].currentIndexChanged.connect(lambda _, a_type=quad[0], a_rare=quad[1], a_name=quad[2], a_id=quad[3]: self.change_rarity_by_changing_type(a_type, a_rare, a_name, a_id))
             quad[0].currentIndexChanged.connect(lambda _, a_type=quad[0], a_rare=quad[1], a_id=quad[3]: self.change_artifact_team_by_changing_type(a_type, a_id))
+            quad[0].currentIndexChanged.connect(lambda _, a_type=quad[0], a_rare=quad[1], a_id=quad[3]: self.remove_artifact(a_type, a_id))
         for item in [
             (self.arti_fwol_rare, self.arti_fwol_levl, "fwol"),
             (self.arti_pmod_rare, self.arti_pmod_levl, "pmod"),

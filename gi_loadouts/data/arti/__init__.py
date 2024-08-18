@@ -1,55 +1,57 @@
-from gi_loadouts.data.arti import acpt
-from gi_loadouts.data.arti import advn
-from gi_loadouts.data.arti import bscv
-from gi_loadouts.data.arti import bskr
-from gi_loadouts.data.arti import bvht
-from gi_loadouts.data.arti import bzst
-from gi_loadouts.data.arti import cwof
-from gi_loadouts.data.arti import dfwl
-from gi_loadouts.data.arti import dspc
-from gi_loadouts.data.arti import dwmm
-from gi_loadouts.data.arti import eoao
-from gi_loadouts.data.arti import eosf
-from gi_loadouts.data.arti import fohw
-from gi_loadouts.data.arti import fopl
-from gi_loadouts.data.arti import gdfl
-from gi_loadouts.data.arti import gdtp
-from gi_loadouts.data.arti import gldr
-from gi_loadouts.data.arti import gmbr
-from gi_loadouts.data.arti import hodp
-from gi_loadouts.data.arti import hood
-from gi_loadouts.data.arti import istr
-from gi_loadouts.data.arti import lkdg
-from gi_loadouts.data.arti import lvwk
-from gi_loadouts.data.arti import mcht
-from gi_loadouts.data.arti import mdbv
-from gi_loadouts.data.arti import mtat
-from gi_loadouts.data.arti import nlob
-from gi_loadouts.data.arti import nmdr
-from gi_loadouts.data.arti import nwiw
-from gi_loadouts.data.arti import ochc
-from gi_loadouts.data.arti import plfm
-from gi_loadouts.data.arti import rcbl
-from gi_loadouts.data.arti import rosj
-from gi_loadouts.data.arti import sclr
-from gi_loadouts.data.arti import smrm
-from gi_loadouts.data.arti import sodp
-from gi_loadouts.data.arti import tdfr
-from gi_loadouts.data.arti import tdst
-from gi_loadouts.data.arti import texl
-from gi_loadouts.data.arti import totm
-from gi_loadouts.data.arti import tvdt
-from gi_loadouts.data.arti import tymc
-from gi_loadouts.data.arti import ufrv
-from gi_loadouts.data.arti import vdvn
-from gi_loadouts.data.arti import vkgw
-from gi_loadouts.data.arti import vmha
-from gi_loadouts.data.arti import wdtp
-
-from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.arti import ArtifactTeam
 from enum import Enum
 
+from gi_loadouts.data.arti import (
+    acpt,
+    advn,
+    bscv,
+    bskr,
+    bvht,
+    bzst,
+    cwof,
+    dfwl,
+    dspc,
+    dwmm,
+    eoao,
+    eosf,
+    fohw,
+    fopl,
+    gdfl,
+    gdtp,
+    gldr,
+    gmbr,
+    hodp,
+    hood,
+    istr,
+    lkdg,
+    lvwk,
+    mcht,
+    mdbv,
+    mtat,
+    nlob,
+    nmdr,
+    none,
+    nwiw,
+    ochc,
+    plfm,
+    rcbl,
+    rosj,
+    sclr,
+    smrm,
+    sodp,
+    tdfr,
+    tdst,
+    texl,
+    totm,
+    tvdt,
+    tymc,
+    ufrv,
+    vdvn,
+    vkgw,
+    vmha,
+    wdtp,
+)
+from gi_loadouts.type.arti import ArtifactTeam
+from gi_loadouts.type.rare import Rare
 
 __artilist__ = {
     advn.team.__teamname__: ArtifactTeam(
@@ -380,6 +382,13 @@ __artilist__ = {
         pairdata=wdtp.team.__pairdata__, pairtext=wdtp.team.__pairtext__,
         quaddata=wdtp.team.__quaddata__, quadtext=wdtp.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+    ),
+    none.team.__teamname__: ArtifactTeam(
+        name=none.team.__teamname__,
+        fwol=none.fwol(), pmod=none.pmod(), sdoe=none.sdoe(), gboe=none.gboe(), ccol=none.ccol(),
+        pairdata=none.team.__pairdata__, pairtext=none.team.__pairtext__,
+        quaddata=none.team.__quaddata__, quadtext=none.team.__quadtext__,
+        rare=[Rare.Star_1, Rare.Star_2, Rare.Star_3, Rare.Star_4, Rare.Star_5],
     ),
 }
 

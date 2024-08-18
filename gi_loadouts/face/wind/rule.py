@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QMainWindow
+from PySide6.QtWidgets import QComboBox, QLabel, QLineEdit, QMainWindow
 
 from gi_loadouts.data.arti import ArtiList
 from gi_loadouts.data.char import __charmaps__
@@ -92,36 +92,40 @@ class Rule(QMainWindow, Ui_mainwind):
             self.weap_area_refn_head.setText(f"<b>{weap.refi_name}</b>")
             self.weap_area_refn_body.setText(f"{weap.refi_list[refn]}")
 
-    def change_rarity_by_changing_type(self, droptype, droprare, artiname, part):
+    def change_rarity_by_changing_type(self, droptype: QComboBox, droprare: QComboBox, artiname: QLabel, part: str) -> None:
         if droptype.currentText().strip() != "":
             kind = getattr(ArtiList, droptype.currentText().replace(" ", "_").replace("'", "").replace("-", "_"))
             droprare.clear()
             droprare.addItems([f"Star {indx.value}" for indx in kind.value.rare])
             artiname.setText(truncate_text(getattr(kind.value, part).__name__))
 
-    def change_levels_substats_by_changing_rarity(self, droprare, droplevl, part):
+    def change_levels_substats_by_changing_rarity(self, droprare: QComboBox, droplevl: QComboBox, part: str) -> None:
         if droprare.currentText().strip() != "":
             rare = getattr(Rare, droprare.currentText().replace(" ", "_"))
             droplevl.clear()
             droplevl.addItems([item.value.name for item in ArtiLevl if rare in item.value.rare])
-            for alfa in __artistat__[rare.value]["active"]:
+            for _ in __artistat__[rare.value]["active"]:
                 stat = getattr(self, f"arti_{part}_main_name")
                 self.change_artifact_substats_by_changing_mainstat(stat, part)
             for alfa in __artistat__[rare.value]["inactive"]:
                 getattr(self, f"arti_{part}_name_{alfa}").clear()
                 getattr(self, f"arti_{part}_name_{alfa}").addItems(["None"])
 
-    def change_data_by_changing_level_or_stat(self, droplevl, droptype, droprare, dropstat, statdata, part):
+    def change_data_by_changing_level_or_stat(self, droplevl: QComboBox, droptype: QComboBox, droprare: QComboBox, dropstat: QComboBox, statdata: QLineEdit, part: str) -> None:
         if droplevl.currentText().strip() != "" and droptype.currentText().strip() != "" and droprare.currentText().strip() != "" and dropstat.currentText().strip() != "":
-            levl = getattr(ArtiLevl, droplevl.currentText().replace(" ", "_"))
-            team = getattr(ArtiList, droptype.currentText().replace(" ", "_").replace("'", "").replace("-", "_"))
-            rare = getattr(Rare, droprare.currentText().replace(" ", "_"))
-            stat = getattr(arti, f"revmap_{part}")[dropstat.currentText()]
-            item = getattr(team.value, part)
-            item.levl, item.rare, item.stat_name = levl.value.levl, rare.value, stat
-            statdata.setText(f"{round(item.stat_data, 1)}")
+            """
+            Checking if no artifact is selected
+            """
+            if droptype.currentText().strip() != "None" and dropstat.currentText().strip() != "None":
+                levl = getattr(ArtiLevl, droplevl.currentText().replace(" ", "_"))
+                team = getattr(ArtiList, droptype.currentText().replace(" ", "_").replace("'", "").replace("-", "_"))
+                rare = getattr(Rare, droprare.currentText().replace(" ", "_"))
+                stat = getattr(arti, f"revmap_{part}")[dropstat.currentText()]
+                item = getattr(team.value, part)
+                item.levl, item.rare, item.stat_name = levl.value.levl, rare.value, stat
+                statdata.setText(f"{round(item.stat_data, 1)}")
 
-    def change_artifact_team_by_changing_type(self, droptype, part):
+    def change_artifact_team_by_changing_type(self, droptype: QComboBox, part: str) -> None:
         if droptype.currentText().strip() != "":
             kind = getattr(ArtiList, droptype.currentText().replace(" ", "_").replace("'", "").replace("-", "_"))
             item = getattr(kind.value, part)
@@ -147,13 +151,44 @@ class Rule(QMainWindow, Ui_mainwind):
                     self.quad_area_head.setText(f"<b>{truncate_text(pair_b.value.name, 32)}</b> (2)")
                     self.quad_area_desc.setText(f"{pair_b.value.pairtext}")
 
-    def change_artifact_substats_by_changing_mainstat(self, dropstat, part):
-        if dropstat.currentText().strip() != "":
+    def remove_artifact(self, droptype: QComboBox, part: str) -> None:
+        if droptype.currentText().strip() != "":
+            if droptype.currentText().strip() == "None":
+                getattr(self, f"arti_{part}_main_name").clear()
+                getattr(self, f"arti_{part}_main_name").addItems(["None"])
+                getattr(self, f"arti_{part}_main_data").clear()
+                getattr(self, f"arti_{part}_main_name").setDisabled(True)
+                getattr(self, f"arti_{part}_rare").clear()
+                getattr(self, f"arti_{part}_rare").addItems(["Star 0"])
+                for indx in ["a", "b", "c", "d"]:
+                    getattr(self, f"arti_{part}_name_{indx}").clear()
+                    getattr(self, f"arti_{part}_name_{indx}").addItems(["None"])
+            else:
+                getattr(self, f"arti_{part}_main_data").clear()
+                getattr(self, f"arti_{part}_main_name").setDisabled(False)
+                if part == "fwol":
+                    self.arti_fwol_main_name.clear()
+                    self.arti_fwol_main_name.addItems([item.value.value for item in MainStatType_FWOL if item != MainStatType_FWOL.none])
+                elif part == "pmod":
+                    self.arti_pmod_main_name.clear()
+                    self.arti_pmod_main_name.addItems([item.value.value for item in MainStatType_PMOD if item != MainStatType_PMOD.none])
+                elif part == "sdoe":
+                    self.arti_sdoe_main_name.clear()
+                    self.arti_sdoe_main_name.addItems([item.value.value for item in MainStatType_SDOE if item != MainStatType_SDOE.none])
+                elif part == "gboe":
+                    self.arti_gboe_main_name.clear()
+                    self.arti_gboe_main_name.addItems([item.value.value for item in MainStatType_GBOE if item != MainStatType_GBOE.none])
+                elif part == "ccol":
+                    self.arti_ccol_main_name.clear()
+                    self.arti_ccol_main_name.addItems([item.value.value for item in MainStatType_CCOL if item != MainStatType_CCOL.none])
+
+    def change_artifact_substats_by_changing_mainstat(self, dropstat: QComboBox, part: str) -> None:
+        if dropstat.currentText().strip() != "" and dropstat.currentText().strip != "None":
             for indx in ["a", "b", "c", "d"]:
                 getattr(self, f"arti_{part}_name_{indx}").clear()
                 getattr(self, f"arti_{part}_name_{indx}").addItems([item.value.value for item in SecoStatType if item.value.value != dropstat.currentText().strip()])
 
-    def render_lineedit_readonly_when_none(self, dropstat, lineedit):
+    def render_lineedit_readonly_when_none(self, dropstat: QComboBox, lineedit: QLineEdit) -> None:
         if dropstat.currentText().strip() == "None":
             lineedit.clear()
             lineedit.setDisabled(True)

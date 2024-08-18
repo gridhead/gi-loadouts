@@ -1,6 +1,7 @@
 from enum import Enum
 
 __rare__ = {
+    "Star 0": 0,
     "Star 1": 1,
     "Star 2": 2,
     "Star 3": 3,
