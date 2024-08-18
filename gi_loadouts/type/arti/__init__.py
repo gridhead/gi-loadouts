@@ -36,10 +36,10 @@ __artilevl__ = {
     "Level 02": ArtiLevl(levl=2, name="Level 02", rare=[Rare.Star_1, Rare.Star_2, Rare.Star_3, Rare.Star_4, Rare.Star_5]),
     "Level 03": ArtiLevl(levl=3, name="Level 03", rare=[Rare.Star_1, Rare.Star_2, Rare.Star_3, Rare.Star_4, Rare.Star_5]),
     "Level 04": ArtiLevl(levl=4, name="Level 04", rare=[Rare.Star_1, Rare.Star_2, Rare.Star_3, Rare.Star_4, Rare.Star_5]),
-    "Level 05": ArtiLevl(levl=5, name="Level 05", rare=[Rare.Star_2, Rare.Star_3, Rare.Star_4, Rare.Star_5]),
-    "Level 06": ArtiLevl(levl=6, name="Level 06", rare=[Rare.Star_2, Rare.Star_3, Rare.Star_4, Rare.Star_5]),
-    "Level 07": ArtiLevl(levl=7, name="Level 07", rare=[Rare.Star_2, Rare.Star_3, Rare.Star_4, Rare.Star_5]),
-    "Level 08": ArtiLevl(levl=8, name="Level 08", rare=[Rare.Star_2, Rare.Star_3, Rare.Star_4, Rare.Star_5]),
+    "Level 05": ArtiLevl(levl=5, name="Level 05", rare=[Rare.Star_3, Rare.Star_4, Rare.Star_5]),
+    "Level 06": ArtiLevl(levl=6, name="Level 06", rare=[Rare.Star_3, Rare.Star_4, Rare.Star_5]),
+    "Level 07": ArtiLevl(levl=7, name="Level 07", rare=[Rare.Star_3, Rare.Star_4, Rare.Star_5]),
+    "Level 08": ArtiLevl(levl=8, name="Level 08", rare=[Rare.Star_3, Rare.Star_4, Rare.Star_5]),
     "Level 09": ArtiLevl(levl=9, name="Level 09", rare=[Rare.Star_3, Rare.Star_4, Rare.Star_5]),
     "Level 10": ArtiLevl(levl=10, name="Level 10", rare=[Rare.Star_3, Rare.Star_4, Rare.Star_5]),
     "Level 11": ArtiLevl(levl=11, name="Level 11", rare=[Rare.Star_3, Rare.Star_4, Rare.Star_5]),
@@ -105,3 +105,27 @@ class Collection(BaseModel):
             if qant >= 4:
                 team = item
         return team
+
+
+__artistat__ = {
+    1: {
+        "active": ["a"],
+        "inactive": ["b", "c", "d"]
+    },
+    2: {
+        "active": ["a", "b"],
+        "inactive": ["c", "d"]
+    },
+    3: {
+        "active": ["a", "b", "c", "d"],
+        "inactive": []
+    },
+    4: {
+        "active": ["a", "b", "c", "d"],
+        "inactive": []
+    },
+    5: {
+        "active": ["a", "b", "c", "d"],
+        "inactive": []
+    }
+}

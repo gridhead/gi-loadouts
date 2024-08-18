@@ -7,7 +7,7 @@ from gi_loadouts.face.otpt.main import OtptWindow
 from gi_loadouts.face.util import truncate_text
 from gi_loadouts.face.wind.wind import Ui_mainwind
 from gi_loadouts.type import arti
-from gi_loadouts.type.arti import ArtiLevl, Collection
+from gi_loadouts.type.arti import ArtiLevl, Collection, __artistat__
 from gi_loadouts.type.arti.base import (
     MainStatType_CCOL,
     MainStatType_FWOL,
@@ -99,11 +99,17 @@ class Rule(QMainWindow, Ui_mainwind):
             droprare.addItems([f"Star {indx.value}" for indx in kind.value.rare])
             artiname.setText(truncate_text(getattr(kind.value, part).__name__))
 
-    def change_levels_by_changing_rarity(self, droprare, droplevl):
+    def change_levels_substats_by_changing_rarity(self, droprare, droplevl, part):
         if droprare.currentText().strip() != "":
             rare = getattr(Rare, droprare.currentText().replace(" ", "_"))
             droplevl.clear()
             droplevl.addItems([item.value.name for item in ArtiLevl if rare in item.value.rare])
+            for alfa in __artistat__[rare.value]["active"]:
+                stat = getattr(self, f"arti_{part}_main_name")
+                self.change_artifact_substats_by_changing_mainstat(stat, part)
+            for alfa in __artistat__[rare.value]["inactive"]:
+                getattr(self, f"arti_{part}_name_{alfa}").clear()
+                getattr(self, f"arti_{part}_name_{alfa}").addItems(["None"])
 
     def change_data_by_changing_level_or_stat(self, droplevl, droptype, droprare, dropstat, statdata, part):
         if droplevl.currentText().strip() != "" and droptype.currentText().strip() != "" and droprare.currentText().strip() != "" and dropstat.currentText().strip() != "":
@@ -123,14 +129,12 @@ class Rule(QMainWindow, Ui_mainwind):
             _ = [indx.setText("No artifact set.") for indx in [self.pair_area_head, self.quad_area_head]]
             _ = [indx.setText("No artifact set bonus.") for indx in [self.pair_area_desc, self.quad_area_desc]]
             if self.collection.quad != "":
-                print("QUAD", self.collection.quad)
                 pack = getattr(ArtiList, self.collection.quad.replace(" ", "_").replace("'", "").replace("-", "_"))
                 self.pair_area_head.setText(f"<b>{truncate_text(pack.value.name, 32)}</b> (2)")
                 self.pair_area_desc.setText(f"{pack.value.pairtext}")
                 self.quad_area_head.setText(f"<b>{truncate_text(pack.value.name, 32)}</b> (4)")
                 self.quad_area_desc.setText(f"{pack.value.quadtext}")
             elif self.collection.pair != []:
-                print("PAIR", self.collection.pair)
                 if len(self.collection.pair) == 1:
                     pair_a = getattr(ArtiList, self.collection.pair[0].replace(" ", "_").replace("'", "").replace("-", "_"))
                     self.pair_area_head.setText(f"<b>{truncate_text(pair_a.value.name, 32)}</b> (2)")
@@ -146,7 +150,6 @@ class Rule(QMainWindow, Ui_mainwind):
     def change_artifact_substats_by_changing_mainstat(self, dropstat, part):
         if dropstat.currentText().strip() != "":
             for indx in ["a", "b", "c", "d"]:
-                print(f"arti_{part}_name_{indx}", type(getattr(self, f"arti_{part}_name_{indx}")))
                 getattr(self, f"arti_{part}_name_{indx}").clear()
                 getattr(self, f"arti_{part}_name_{indx}").addItems([item.value.value for item in SecoStatType if item.value.value != dropstat.currentText().strip()])
 

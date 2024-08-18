@@ -26,14 +26,6 @@ class MainWindow(Rule):
         ]:
             self.change_rarity_by_changing_type(quad[0], quad[1], quad[2], quad[3])
             self.change_artifact_team_by_changing_type(quad[0], quad[3])
-        for pair in [
-            (self.arti_fwol_rare, self.arti_fwol_levl),
-            (self.arti_pmod_rare, self.arti_pmod_levl),
-            (self.arti_sdoe_rare, self.arti_sdoe_levl),
-            (self.arti_gboe_rare, self.arti_gboe_levl),
-            (self.arti_ccol_rare, self.arti_ccol_levl),
-        ]:
-            self.change_levels_by_changing_rarity(pair[0], pair[1])
         for item in [
             (self.arti_fwol_levl, self.arti_fwol_type, self.arti_fwol_rare, self.arti_fwol_main_name, self.arti_fwol_main_data, "fwol"),
             (self.arti_pmod_levl, self.arti_pmod_type, self.arti_pmod_rare, self.arti_pmod_main_name, self.arti_pmod_main_data, "pmod"),
@@ -43,6 +35,18 @@ class MainWindow(Rule):
         ]:
             self.change_data_by_changing_level_or_stat(item[0], item[1], item[2], item[3], item[4], item[5])
             self.change_artifact_substats_by_changing_mainstat(item[3], item[5])
+        for pair in [
+            (self.arti_fwol_rare, self.arti_fwol_levl, "fwol"),
+            (self.arti_pmod_rare, self.arti_pmod_levl, "pmod"),
+            (self.arti_sdoe_rare, self.arti_sdoe_levl, "sdoe"),
+            (self.arti_gboe_rare, self.arti_gboe_levl, "gboe"),
+            (self.arti_ccol_rare, self.arti_ccol_levl, "ccol"),
+        ]:
+            self.change_levels_substats_by_changing_rarity(pair[0], pair[1], pair[2])
+        for part in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
+            for alfa in ["a", "b", "c", "d"]:
+                drop, text = getattr(self, f"arti_{part}_name_{alfa}"), getattr(self, f"arti_{part}_data_{alfa}")
+                self.render_lineedit_readonly_when_none(drop, text)
 
     def initialize_events(self):
         self.head_scan.clicked.connect(self.show_output_window)
@@ -61,14 +65,14 @@ class MainWindow(Rule):
         ]:
             quad[0].currentIndexChanged.connect(lambda _, a_type=quad[0], a_rare=quad[1], a_name=quad[2], a_id=quad[3]: self.change_rarity_by_changing_type(a_type, a_rare, a_name, a_id))
             quad[0].currentIndexChanged.connect(lambda _, a_type=quad[0], a_rare=quad[1], a_id=quad[3]: self.change_artifact_team_by_changing_type(a_type, a_id))
-        for pair in [
-            (self.arti_fwol_rare, self.arti_fwol_levl),
-            (self.arti_pmod_rare, self.arti_pmod_levl),
-            (self.arti_sdoe_rare, self.arti_sdoe_levl),
-            (self.arti_gboe_rare, self.arti_gboe_levl),
-            (self.arti_ccol_rare, self.arti_ccol_levl),
+        for item in [
+            (self.arti_fwol_rare, self.arti_fwol_levl, "fwol"),
+            (self.arti_pmod_rare, self.arti_pmod_levl, "pmod"),
+            (self.arti_sdoe_rare, self.arti_sdoe_levl, "sdoe"),
+            (self.arti_gboe_rare, self.arti_gboe_levl, "gboe"),
+            (self.arti_ccol_rare, self.arti_ccol_levl, "ccol"),
         ]:
-            pair[0].currentIndexChanged.connect(lambda _, a_rare=pair[0], a_levl=pair[1]: self.change_levels_by_changing_rarity(a_rare, a_levl))
+            item[0].currentIndexChanged.connect(lambda _, a_rare=item[0], a_levl=item[1], a_id=item[2]: self.change_levels_substats_by_changing_rarity(a_rare, a_levl, a_id))
         for item in [
             (self.arti_fwol_levl, self.arti_fwol_type, self.arti_fwol_rare, self.arti_fwol_main_name, self.arti_fwol_main_data, "fwol"),
             (self.arti_pmod_levl, self.arti_pmod_type, self.arti_pmod_rare, self.arti_pmod_main_name, self.arti_pmod_main_data, "pmod"),
