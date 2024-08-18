@@ -44,6 +44,7 @@ class MainWindow(Rule):
             self.change_data_by_changing_level_or_stat(item[0], item[1], item[2], item[3], item[4], item[5])
 
     def initialize_events(self):
+        self.head_scan.clicked.connect(self.show_output_window)
         self.head_char_name.currentIndexChanged.connect(self.handle_char_data)
         self.head_char_levl.currentIndexChanged.connect(self.handle_char_data)
         self.weap_area_type.currentIndexChanged.connect(self.convey_weapon_type_change)

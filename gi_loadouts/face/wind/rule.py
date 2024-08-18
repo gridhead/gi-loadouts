@@ -19,12 +19,14 @@ from gi_loadouts.type.char.cons import Cons
 from gi_loadouts.type.levl import Level
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import WeaponStatType, WeaponType
+from gi_loadouts.face.otpt.main import OtptWindow
 
 
 class Rule(QMainWindow, Ui_mainwind):
     def __init__(self):
         super().__init__()
         self.collection = Collection()
+        self.otptobjc = None
 
     def populate_dropdown(self):
         self.head_char_name.addItems([item.value for item in CharName])
@@ -139,3 +141,8 @@ class Rule(QMainWindow, Ui_mainwind):
                     pair_b = getattr(ArtiList, self.collection.pair[1].replace(" ", "_").replace("'", "").replace("-", "_"))
                     self.quad_area_head.setText(f"<b>{truncate_text(pair_b.value.name, 32)}</b> (2)")
                     self.quad_area_desc.setText(f"{pair_b.value.pairtext}")
+
+    def show_output_window(self):
+        if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
+            self.otptobjc = OtptWindow(self.head_char_name.currentText())
+            self.otptobjc.show()
