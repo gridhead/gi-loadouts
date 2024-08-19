@@ -106,18 +106,6 @@ class Rule(QMainWindow, Ui_mainwind):
             droprare.addItems([f"Star {indx.value}" for indx in kind.value.rare])
             artiname.setText(truncate_text(getattr(kind.value, part).__name__))
 
-    def change_levels_substats_by_changing_rarity(self, droprare: QComboBox, droplevl: QComboBox, part: str) -> None:
-        if droprare.currentText().strip() != "":
-            rare = getattr(Rare, droprare.currentText().replace(" ", "_"))
-            droplevl.clear()
-            droplevl.addItems([item.value.name for item in ArtiLevl if rare in item.value.rare])
-            for _ in __artistat__[rare.value]["active"]:
-                stat = getattr(self, f"arti_{part}_name_main")
-                self.change_artifact_substats_by_changing_mainstat(stat, part)
-            for alfa in __artistat__[rare.value]["inactive"]:
-                getattr(self, f"arti_{part}_name_{alfa}").clear()
-                getattr(self, f"arti_{part}_name_{alfa}").addItems(["None"])
-
     def change_data_by_changing_level_or_stat(self, droplevl: QComboBox, droptype: QComboBox, droprare: QComboBox, dropstat: QComboBox, statdata: QLineEdit, part: str) -> None:
         if droplevl.currentText().strip() != "" and droptype.currentText().strip() != "" and droprare.currentText().strip() != "" and dropstat.currentText().strip() != "":
             """
@@ -187,11 +175,24 @@ class Rule(QMainWindow, Ui_mainwind):
                     self.arti_ccol_name_main.clear()
                     self.arti_ccol_name_main.addItems([item.value.value for item in MainStatType_CCOL if item != MainStatType_CCOL.none])
 
-    def change_artifact_substats_by_changing_mainstat(self, dropstat: QComboBox, part: str) -> None:
-        if dropstat.currentText().strip() != "" and dropstat.currentText().strip != "None":
-            for indx in ["a", "b", "c", "d"]:
+    def change_artifact_substats_by_changing_rarity_or_mainstat(self, droplevl: QComboBox, droprare: QComboBox, dropstat: QComboBox, part: str) -> None:
+        if droprare.currentText().strip() != "" and dropstat.currentText().strip() != "":
+            rare = getattr(Rare, droprare.currentText().replace(" ", "_"))
+            stat = dropstat.currentText().strip()
+            droplevl.clear()
+            droplevl.addItems([item.value.name for item in ArtiLevl if rare in item.value.rare])
+            for indx in __artistat__[rare.value]["active"]:
                 getattr(self, f"arti_{part}_name_{indx}").clear()
-                getattr(self, f"arti_{part}_name_{indx}").addItems([item.value.value for item in SecoStatType if item.value.value != dropstat.currentText().strip()])
+                getattr(self, f"arti_{part}_name_{indx}").addItems([item.value.value for item in SecoStatType if item.value.value != stat])
+            for alfa in __artistat__[rare.value]["inactive"]:
+                getattr(self, f"arti_{part}_name_{alfa}").clear()
+                getattr(self, f"arti_{part}_name_{alfa}").addItems(["None"])
+
+    def change_levels_by_changing_rarity(self, droplevl: QComboBox, droprare: QComboBox) -> None:
+        if droprare.currentText().strip() != "":
+            rare = getattr(Rare, droprare.currentText().replace(" ", "_"))
+            droplevl.clear()
+            droplevl.addItems([item.value.name for item in ArtiLevl if rare in item.value.rare])
 
     def render_lineedit_readonly_when_none(self, dropstat: QComboBox, lineedit: QLineEdit) -> None:
         if dropstat.currentText().strip() == "None":
