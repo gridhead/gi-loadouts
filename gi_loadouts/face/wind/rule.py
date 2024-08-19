@@ -23,6 +23,7 @@ from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import WeaponStatType, WeaponType
 from gi_loadouts.type.calc import CHAR, TEAM, WEAP
 from gi_loadouts.type.stat import ATTR, STAT, __revmap__
+from gi_loadouts.type.vson import __visioncolour__
 
 
 class Rule(QMainWindow, Ui_mainwind):
@@ -59,6 +60,7 @@ class Rule(QMainWindow, Ui_mainwind):
             self.head_char_data_hlpt.setText(f"{round(char.health_points)}")
             self.head_char_icon_subs.setToolTip(f"{char.seco.stat_name.value}")
             self.head_char_data_subs.setText(f"{round(char.seco.stat_data, 1)}")
+            self.head_area.setStyleSheet(f"#head_area {{background-color: {__visioncolour__[char.vision]};}}")
             self.weap_area_type.clear()
             self.weap_area_type.addItem(f"{char.weapon.value}")
 
