@@ -4,6 +4,7 @@ from gi_loadouts.data.arti import ArtiList
 from gi_loadouts.data.char import __charmaps__
 from gi_loadouts.data.weap import Family
 from gi_loadouts.face.util import truncate_text
+from gi_loadouts.face.wind.file import FileHandling
 from gi_loadouts.face.wind.wind import Ui_mainwind
 from gi_loadouts.type import arti
 from gi_loadouts.type.arti import ArtiLevl, Collection, __artistat__
@@ -20,13 +21,12 @@ from gi_loadouts.type.char import CharName
 from gi_loadouts.type.char.cons import Cons
 from gi_loadouts.type.levl import Level
 from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.weap import WeaponStatType, WeaponType
-from gi_loadouts.type.calc import CHAR, TEAM, WEAP
 from gi_loadouts.type.stat import ATTR, STAT, __revmap__
 from gi_loadouts.type.vson import __visioncolour__
+from gi_loadouts.type.weap import WeaponStatType, WeaponType
 
 
-class Rule(QMainWindow, Ui_mainwind):
+class Rule(QMainWindow, Ui_mainwind, FileHandling):
     def __init__(self):
         super().__init__()
         self.collection = Collection()
@@ -35,7 +35,6 @@ class Rule(QMainWindow, Ui_mainwind):
         self.c_char = CHAR()
         self.c_weap = WEAP()
         self.c_tyvt = CHAR()
-        self.dialog = None
 
     def populate_dropdown(self):
         self.head_char_name.addItems([item.value for item in CharName])
@@ -177,12 +176,10 @@ class Rule(QMainWindow, Ui_mainwind):
                     self.arti_ccol_name_main.clear()
                     self.arti_ccol_name_main.addItems([item.value.value for item in MainStatType_CCOL if item != MainStatType_CCOL.none])
 
-    def change_artifact_substats_by_changing_rarity_or_mainstat(self, droplevl: QComboBox, droprare: QComboBox, dropstat: QComboBox, part: str) -> None:
+    def change_artifact_substats_by_changing_rarity_or_mainstat(self, droprare: QComboBox, dropstat: QComboBox, part: str) -> None:
         if droprare.currentText().strip() != "" and dropstat.currentText().strip() != "":
             rare = getattr(Rare, droprare.currentText().replace(" ", "_"))
             stat = dropstat.currentText().strip()
-            droplevl.clear()
-            droplevl.addItems([item.value.name for item in ArtiLevl if rare in item.value.rare])
             for indx in __artistat__[rare.value]["active"]:
                 getattr(self, f"arti_{part}_name_{indx}").clear()
                 getattr(self, f"arti_{part}_name_{indx}").addItems([item.value.value for item in SecoStatType if item.value.value != stat])
@@ -328,18 +325,7 @@ class Rule(QMainWindow, Ui_mainwind):
 
     def validate_lineedit_userdata(self, text):
         try:
-            data = float(text)
+            _ = float(text)
             self.statarea.clearMessage()
         except ValueError:
             self.statarea.showMessage("Please enter a valid input (eg. 69, 42.0 etc.)")
-
-    def show_dialog(self, icon, head, text):
-        if self.dialog is None:
-            self.dialog = QMessageBox(parent=self)
-            self.dialog.setIcon(icon)
-            self.dialog.setWindowTitle(f"{self.headtext} - {head}")
-            self.dialog.setText(text)
-            self.dialog.setFont("IBM Plex Sans")
-            self.dialog.show()
-        else:
-            self.dialog.show()

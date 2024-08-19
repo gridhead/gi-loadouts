@@ -1,3 +1,5 @@
+from PySide6.QtWidgets import QMessageBox
+
 from gi_loadouts.face.wind.rule import Rule
 
 
@@ -5,6 +7,7 @@ class MainWindow(Rule):
     def __init__(self):
         super().__init__()
         self.headtext = "Loadouts for Genshin Impact"
+        self.dialog = QMessageBox()
         self.setupUi(self)
         self.setWindowTitle(self.headtext)
         self.initialize_events()
@@ -28,7 +31,7 @@ class MainWindow(Rule):
             self.change_rarity_by_changing_type(item[1], item[2], item[6], item[5])
             self.change_artifact_team_by_changing_type(item[1], item[5])
             self.change_data_by_changing_level_or_stat(item[0], item[1], item[2], item[3], item[4], item[5])
-            self.change_artifact_substats_by_changing_rarity_or_mainstat(item[0], item[2], item[3], item[5])
+            self.change_artifact_substats_by_changing_rarity_or_mainstat(item[2], item[3], item[5])
             self.change_levels_by_changing_rarity(item[0], item[2])
 
     def initialize_events(self):
@@ -51,11 +54,15 @@ class MainWindow(Rule):
             item[1].currentIndexChanged.connect(lambda _, a_type=item[1], a_id=item[5]: self.remove_artifact(a_type, a_id))
             item[0].currentIndexChanged.connect(lambda _, a_levl=item[0], a_type=item[1], a_rare=item[2], a_name=item[3], a_data=item[4], a_id=item[5]: self.change_data_by_changing_level_or_stat(a_levl, a_type, a_rare, a_name, a_data, a_id))
             item[3].currentIndexChanged.connect(lambda _, a_levl=item[0], a_type=item[1], a_rare=item[2], a_name=item[3], a_data=item[4], a_id=item[5]: self.change_data_by_changing_level_or_stat(a_levl, a_type, a_rare, a_name, a_data, a_id))
-            item[2].currentIndexChanged.connect(lambda _, a_levl=item[0], a_rare=item[2], a_name=item[3], a_id=item[5]: self.change_artifact_substats_by_changing_rarity_or_mainstat(a_levl, a_rare, a_name, a_id))
-            item[3].currentIndexChanged.connect(lambda _, a_levl=item[0], a_rare=item[2], a_name=item[3], a_id=item[5]: self.change_artifact_substats_by_changing_rarity_or_mainstat(a_levl, a_rare, a_name, a_id))
+            item[2].currentIndexChanged.connect(lambda _, a_rare=item[2], a_name=item[3], a_id=item[5]: self.change_artifact_substats_by_changing_rarity_or_mainstat(a_rare, a_name, a_id))
+            item[3].currentIndexChanged.connect(lambda _, a_rare=item[2], a_name=item[3], a_id=item[5]: self.change_artifact_substats_by_changing_rarity_or_mainstat(a_rare, a_name, a_id))
             item[2].currentIndexChanged.connect(lambda _, a_levl=item[0], a_rare=item[2]: self.change_levels_by_changing_rarity(a_levl, a_rare))
         for part in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
             for alfa in ["a", "b", "c", "d"]:
                 drop, text = getattr(self, f"arti_{part}_name_{alfa}"), getattr(self, f"arti_{part}_data_{alfa}")
                 drop.currentIndexChanged.connect(lambda _, a_drop=drop, a_text=text: self.render_lineedit_readonly_when_none(a_drop, a_text))
                 text.textChanged.connect(self.validate_lineedit_userdata)
+        for part in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
+            getattr(self, f"arti_{part}_load").clicked.connect(lambda _, a_part=part: self.open_explorer_load(a_part))
+        for part in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
+            getattr(self, f"arti_{part}_save").clicked.connect(lambda _, a_part=part: self.open_explorer_save(a_part))
