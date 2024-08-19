@@ -10,14 +10,15 @@ class BaseStats(BaseModel):
     health_points: ATTR = ATTR(stat_name=STAT.health_points, stat_data=0.0)
     attack: ATTR = ATTR(stat_name=STAT.attack, stat_data=0.0)
     defense: ATTR = ATTR(stat_name=STAT.defense, stat_data=0.0)
+    elemental_mastery: ATTR = ATTR(stat_name=STAT.elemental_mastery, stat_data=0.0)
 
 
 class AdvancedStats(BaseModel):
-    critical_rate_perc: ATTR = ATTR(stat_name=STAT.critical_rate_perc, stat_data=0.0)
-    critical_damage_perc: ATTR = ATTR(stat_name=STAT.critical_damage_perc, stat_data=0.0)
+    critical_rate_perc: ATTR = ATTR(stat_name=STAT.critical_rate_perc, stat_data=5.0)
+    critical_damage_perc: ATTR = ATTR(stat_name=STAT.critical_damage_perc, stat_data=50.0)
     healing_bonus_perc: ATTR = ATTR(stat_name=STAT.healing_bonus_perc, stat_data=0.0)
     incoming_healing_bonus_perc: ATTR = ATTR(stat_name=STAT.incoming_healing_bonus_perc, stat_data=0.0)
-    energy_recharge_perc: ATTR = ATTR(stat_name=STAT.energy_recharge_perc, stat_data=0.0)
+    energy_recharge_perc: ATTR = ATTR(stat_name=STAT.energy_recharge_perc, stat_data=100.0)
     cooldown_reduction_perc: ATTR = ATTR(stat_name=STAT.cooldown_reduction_perc, stat_data=0.0)
     shield_strength_perc: ATTR = ATTR(stat_name=STAT.shield_strength_perc, stat_data=0.0)
 
@@ -41,14 +42,24 @@ class ElementalStats(BaseModel):
     resistance_physical_perc: ATTR = ATTR(stat_name=STAT.resistance_physical_perc, stat_data=0.0)
 
 
-class CHAR(BaseStats, AdvancedStats, ElementalStats):
+class Counting(BaseModel):
+    health_points_perc: ATTR = ATTR(stat_name=STAT.health_points_perc, stat_data=0.0)
+    attack_perc: ATTR = ATTR(stat_name=STAT.attack_perc, stat_data=0.0)
+    defense_perc: ATTR = ATTR(stat_name=STAT.defense_perc, stat_data=0.0)
+
+
+class CHAR(BaseStats, AdvancedStats, ElementalStats, Counting):
     name: CharName = ""
     levl: Level = Level.Level_01_20_Rank_0
     cons: Cons = Cons.Constellation_0
     revmap: dict = {
         STAT.health_points: "health_points",
+        STAT.health_points_perc: "health_points_perc",
         STAT.attack: "attack",
+        STAT.attack_perc: "attack_perc",
         STAT.defense: "defense",
+        STAT.defense_perc: "defense_perc",
+        STAT.elemental_mastery: "elemental_mastery",
         STAT.critical_rate_perc: "critical_rate_perc",
         STAT.critical_damage_perc: "critical_damage_perc",
         STAT.healing_bonus_perc: "healing_bonus_perc",

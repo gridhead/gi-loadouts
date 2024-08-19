@@ -213,10 +213,13 @@ class Rule(QMainWindow, Ui_mainwind):
             #self.otptobjc.show()
             char = __charmaps__[self.head_char_name.currentText()]()
             char.levl = getattr(Level, self.head_char_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
-            self.c_char.attack = char.attack
-            self.c_char.defense = char.defense
-            self.c_char.health_points = char.health_points
-            setattr(self.c_char, self.c_char.revmap[char.seco.stat_name], ATTR(stat_name=char.seco.stat_name, stat_data=char.seco.stat_data))
+            self.c_char.attack = ATTR(stat_name=STAT.attack, stat_data=char.attack)
+            self.c_char.defense = ATTR(stat_name=STAT.defense, stat_data=char.defense)
+            self.c_char.health_points = ATTR(stat_name=STAT.health_points, stat_data=char.health_points)
+            prev_stat_data = getattr(self.c_char, self.c_char.revmap[char.seco.stat_name]).stat_data
+            curt_stat_data = char.seco.stat_data
+            # 100 + 26.8
+            setattr(self.c_char, self.c_char.revmap[char.seco.stat_name], ATTR(stat_name=char.seco.stat_name, stat_data=prev_stat_data + curt_stat_data))
         """
         TODO: Make into a separate function
         """
@@ -229,7 +232,8 @@ class Rule(QMainWindow, Ui_mainwind):
             self.c_weap.base = ATTR(stat_name=WeaponStatType.attack.value, stat_data=weap.main_stat.stat_data)
             if weap.seco_stat.stat_name != WeaponStatType.none:
                 self.c_weap.seco = ATTR(stat_name=weap.seco_stat_calc.stat_name.value, stat_data=weap.seco_stat_calc.stat_data)
-            self.c_weap.refn = weap.refi_stat[refn]
+            if len(weap.refi_stat) != 0:
+                self.c_weap.refn = weap.refi_stat[refn]
         """
         TODO: Make into a separate function
         """
@@ -257,8 +261,70 @@ class Rule(QMainWindow, Ui_mainwind):
                 self.c_team.pairdata_a = pack_a.value.pairdata
                 pack_b = getattr(ArtiList, self.collection.pair[1].replace(" ", "_").replace("'", "").replace("-", "_"))
                 self.c_team.pairdata_b = pack_b.value.pairdata
-        print(self.c_team)
+        print(self.c_team, "\n\n\n")
+        """
+        TODO: Make into a separate function
+        """
+        """
+        self.c_tyvt.attack = 0
+        self.c_tyvt.defense = 0
+        self.c_tyvt.health_points = 0
+        """
+        """
+        ARTIFACT
+        """
+        char_substats_data = getattr(self.c_char, self.c_char.revmap[char.seco.stat_name]).stat_data
+        setattr(self.c_tyvt, self.c_tyvt.revmap[char.seco.stat_name], ATTR(stat_name=char.seco.stat_name, stat_data=char_substats_data))
+        # c_tyvt = 126.8
+        for item in self.c_tyvt.revmap:
+            for kind in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
+                for indx in ["main", "a", "b", "c", "d"]:
+                    if getattr(self.c_team, f"{kind}_{indx}").stat_name == item:
+                        prev = getattr(self.c_tyvt, self.c_tyvt.revmap[item]).stat_data
+                        curt = getattr(self.c_team, f"{kind}_{indx}").stat_data
+                        setattr(self.c_tyvt, self.c_tyvt.revmap[item], ATTR(stat_name=item, stat_data=prev+curt))
+        """
+        SET BONUSES
+        """
+        for item in self.c_tyvt.revmap:
+            for indx in ["pairdata_a", "pairdata_b", "quaddata"]:
+                lict = getattr(self.c_team, indx)
+                if len(indx) != 0:
+                    for advn in lict:
+                        if advn.stat_name == item:
+                            prev = getattr(self.c_tyvt, self.c_tyvt.revmap[item]).stat_data
+                            curt = advn.stat_data
+                            setattr(self.c_tyvt, self.c_tyvt.revmap[item], ATTR(stat_name=item, stat_data=prev + curt))
+        """
+        WEAPON SUBSTAT
+        """
+        prev = getattr(self.c_tyvt, self.c_tyvt.revmap[self.c_weap.seco.stat_name]).stat_data
+        curt = self.c_weap.seco.stat_data
+        setattr(self.c_tyvt, self.c_tyvt.revmap[self.c_weap.seco.stat_name], ATTR(stat_name=self.c_weap.seco.stat_name, stat_data=prev + curt))
+        """
+        WEAPON REFINEMENT BONUSES
+        """
+        for item in self.c_tyvt.revmap:
+            for indx in self.c_weap.refn:
+                if item == indx.stat_name.value:
+                    prev = getattr(self.c_tyvt, self.c_tyvt.revmap[item]).stat_data
+                    curt = indx.stat_data
+                    setattr(self.c_tyvt, self.c_tyvt.revmap[item], ATTR(stat_name=item, stat_data=prev + curt))
 
+        self.c_tyvt.attack = ATTR(
+            stat_name=STAT.attack,
+            stat_data=(self.c_char.attack.stat_data + self.c_weap.base.stat_data) * (100 + self.c_tyvt.attack_perc.stat_data) / 100.0 + self.c_tyvt.attack.stat_data
+        )
+        self.c_tyvt.health_points = ATTR(
+            stat_name=STAT.health_points,
+            stat_data=self.c_char.health_points.stat_data * (100 + self.c_tyvt.health_points_perc.stat_data) / 100.0 + self.c_tyvt.health_points.stat_data
+        )
+        self.c_tyvt.defense = ATTR(
+            stat_name=STAT.defense,
+            stat_data=self.c_char.defense.stat_data * (100 + self.c_tyvt.defense_perc.stat_data) / 100.0 + self.c_tyvt.defense.stat_data
+        )
+
+        print(self.c_tyvt)
 
     def validate_lineedit_userdata(self, text):
         try:
