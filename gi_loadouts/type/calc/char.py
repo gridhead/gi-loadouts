@@ -48,7 +48,16 @@ class Counting(BaseModel):
     defense_perc: ATTR = ATTR(stat_name=STAT.defense_perc, stat_data=0.0)
 
 
-class CHAR(BaseStats, AdvancedStats, ElementalStats, Counting):
+class Addendum(BaseModel):
+    addendum_base_health_points: ATTR = ATTR(stat_name=STAT.health_points, stat_data=0.0)
+    addendum_plus_health_points: ATTR = ATTR(stat_name=STAT.health_points, stat_data=0.0)
+    addendum_base_attack: ATTR = ATTR(stat_name=STAT.attack, stat_data=0.0)
+    addendum_plus_attack: ATTR = ATTR(stat_name=STAT.attack, stat_data=0.0)
+    addendum_base_defense: ATTR = ATTR(stat_name=STAT.defense, stat_data=0.0)
+    addendum_plus_defense: ATTR = ATTR(stat_name=STAT.defense, stat_data=0.0)
+
+
+class CHAR(BaseStats, AdvancedStats, ElementalStats, Counting, Addendum):
     name: CharName = ""
     levl: Level = Level.Level_01_20_Rank_0
     cons: Cons = Cons.Constellation_0

@@ -55,6 +55,14 @@ class Assess:
                 stat_data=self.c_char.defense.stat_data * (100 + self.c_tyvt.defense_perc.stat_data) / 100.0 + self.c_tyvt.defense.stat_data
             )
 
+            # ADDENDUM
+            self.c_tyvt.addendum_base_attack = ATTR(stat_name=STAT.attack, stat_data=self.c_char.attack.stat_data + self.c_weap.base.stat_data)
+            self.c_tyvt.addendum_plus_attack = ATTR(stat_name=STAT.attack, stat_data=self.c_tyvt.attack.stat_data - self.c_tyvt.addendum_base_attack.stat_data)
+            self.c_tyvt.addendum_base_health_points = ATTR(stat_name=STAT.health_points, stat_data=self.c_char.health_points.stat_data)
+            self.c_tyvt.addendum_plus_health_points = ATTR(stat_name=STAT.health_points, stat_data=self.c_tyvt.health_points.stat_data - self.c_tyvt.addendum_base_health_points.stat_data)
+            self.c_tyvt.addendum_base_defense = ATTR(stat_name=STAT.defense, stat_data=self.c_char.defense.stat_data)
+            self.c_tyvt.addendum_plus_defense = ATTR(stat_name=STAT.defense, stat_data=self.c_tyvt.defense.stat_data - self.c_tyvt.addendum_base_defense.stat_data)
+
             # SUBSTATS
             char = __charmaps__[self.head_char_name.currentText()]()
             char.levl = getattr(Level, self.head_char_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))

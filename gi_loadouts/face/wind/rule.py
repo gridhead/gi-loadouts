@@ -23,6 +23,7 @@ from gi_loadouts.type.levl import Level
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.vson import __visioncolour__
 from gi_loadouts.type.weap import WeaponStatType, WeaponType
+from gi_loadouts.face.otpt.main import OtptWindow
 
 
 class Rule(QMainWindow, Ui_mainwind, FileHandling, Assess):
@@ -204,11 +205,17 @@ class Rule(QMainWindow, Ui_mainwind, FileHandling, Assess):
         """
         TODO: Make into a separate function
         """
-        # self.otptobjc = OtptWindow(self.head_char_name.currentText())
-        # self.otptobjc.show()
         try:
-            self.calc_stat()
-            print(self.c_tyvt)
+            if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
+                char = __charmaps__[self.head_char_name.currentText()]()
+                self.calc_stat()
+                print(self.c_tyvt)
+                self.otptobjc = OtptWindow(
+                    self.head_char_name.currentText(),
+                    __visioncolour__[char.vision],
+                    self.c_tyvt
+                )
+                self.otptobjc.show()
         except Exception:
             self.show_dialog(
                 QMessageBox.Information,
