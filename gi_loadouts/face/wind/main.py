@@ -63,8 +63,10 @@ class MainWindow(Rule):
                 drop.currentIndexChanged.connect(lambda _, a_drop=drop, a_text=text: self.render_lineedit_readonly_when_none(a_drop, a_text))
                 text.textChanged.connect(self.validate_lineedit_userdata)
         for part in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
-            getattr(self, f"arti_{part}_load").clicked.connect(lambda _, a_part=part: self.open_explorer_load(a_part))
+            getattr(self, f"arti_{part}_load").clicked.connect(lambda _, a_part=part: self.arti_load(a_part))
         for part in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
-            getattr(self, f"arti_{part}_save").clicked.connect(lambda _, a_part=part: self.open_explorer_save(a_part))
+            getattr(self, f"arti_{part}_save").clicked.connect(lambda _, a_part=part: self.arti_save(a_part))
         for part in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
             getattr(self, f"arti_{part}_wipe").clicked.connect(lambda _, a_part=part: self.wipe_artifact(a_part))
+        self.head_load.clicked.connect(self.team_load)
+        self.head_save.clicked.connect(self.team_save)

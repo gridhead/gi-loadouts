@@ -1,9 +1,11 @@
-from pydantic import BaseModel
-from gi_loadouts.type.stat import ATTR, __revmap__
-from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.arti import ArtiLevl
-from gi_loadouts.data.arti import ArtiList
 from enum import Enum
+
+from pydantic import BaseModel
+
+from gi_loadouts.data.arti import ArtiList
+from gi_loadouts.type.arti import ArtiLevl
+from gi_loadouts.type.rare import Rare
+from gi_loadouts.type.stat import ATTR, __revmap__
 
 
 class ArtiArea(str, Enum):
@@ -16,7 +18,7 @@ class ArtiArea(str, Enum):
 
 class ArtiFile(BaseModel):
     name: str = ""
-    type: ArtiList = ArtiList.Adventurer
+    type: ArtiList = getattr(ArtiList, "None")
     area: Enum = ArtiArea.fwol
     rare: Rare = Rare.Star_1
     levl: ArtiLevl = ArtiLevl.Level_00
@@ -60,31 +62,6 @@ class ArtiFile(BaseModel):
         return data
 
 
-"""
-area: FWOL
-levl: Level 00
-name: Adventurer's Flower
-rare: 1
-stat:
-  a:
-    data: 0.0
-    name: ATK
-  b:
-    data: 0.0
-    name: None
-  c:
-    data: 0.0
-    name: None
-  d:
-    data: 0.0
-    name: None
-  main:
-    data: 129.0
-    name: HP
-type: Adventurer
-"""
-
-
 def make_artifile(objc: dict) -> ArtiFile:
     try:
         artiobjc = ArtiFile(
@@ -99,8 +76,6 @@ def make_artifile(objc: dict) -> ArtiFile:
             stat_c=ATTR(stat_name=__revmap__[objc["stat"]["c"]["name"]], stat_data=objc["stat"]["c"]["data"]),
             stat_d=ATTR(stat_name=__revmap__[objc["stat"]["d"]["name"]], stat_data=objc["stat"]["d"]["data"]),
         )
-    except Exception as expt:
-        print("0")
+    except Exception:
         raise
-    print("ARTIFACT COOKED", artiobjc)
     return artiobjc

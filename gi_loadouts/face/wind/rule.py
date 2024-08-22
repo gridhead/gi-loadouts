@@ -3,9 +3,10 @@ from PySide6.QtWidgets import QComboBox, QLabel, QLineEdit, QMainWindow, QMessag
 from gi_loadouts.data.arti import ArtiList
 from gi_loadouts.data.char import __charmaps__
 from gi_loadouts.data.weap import Family
+from gi_loadouts.face.otpt.main import OtptWindow
 from gi_loadouts.face.util import truncate_text
 from gi_loadouts.face.wind.calc import Assess
-from gi_loadouts.face.wind.file import FileHandling
+from gi_loadouts.face.wind.fclt import Facility
 from gi_loadouts.face.wind.wind import Ui_mainwind
 from gi_loadouts.type import arti
 from gi_loadouts.type.arti import ArtiLevl, Collection, __artistat__
@@ -23,10 +24,9 @@ from gi_loadouts.type.levl import Level
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.vson import __visioncolour__
 from gi_loadouts.type.weap import WeaponStatType, WeaponType
-from gi_loadouts.face.otpt.main import OtptWindow
 
 
-class Rule(QMainWindow, Ui_mainwind, FileHandling, Assess):
+class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
     def __init__(self):
         super().__init__()
         self.collection = Collection()
