@@ -66,3 +66,5 @@ class MainWindow(Rule):
             getattr(self, f"arti_{part}_load").clicked.connect(lambda _, a_part=part: self.open_explorer_load(a_part))
         for part in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
             getattr(self, f"arti_{part}_save").clicked.connect(lambda _, a_part=part: self.open_explorer_save(a_part))
+        for part in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
+            getattr(self, f"arti_{part}_wipe").clicked.connect(lambda _, a_part=part: self.wipe_artifact(a_part))

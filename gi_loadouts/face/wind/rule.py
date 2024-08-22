@@ -229,3 +229,7 @@ class Rule(QMainWindow, Ui_mainwind, FileHandling, Assess):
             self.statarea.clearMessage()
         except ValueError:
             self.statarea.showMessage("Please enter a valid input (eg. 69, 42.0 etc.)")
+
+    def wipe_artifact(self, part):
+        droptype = getattr(self, f"arti_{part}_type")
+        droptype.setCurrentText("None")
