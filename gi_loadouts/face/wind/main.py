@@ -71,3 +71,5 @@ class MainWindow(Rule):
         self.head_load.clicked.connect(self.team_load)
         self.head_save.clicked.connect(self.team_save)
         self.head_wipe.clicked.connect(self.wipe_team)
+        self.weap_head_load.clicked.connect(self.weap_load)
+        self.weap_head_save.clicked.connect(self.weap_save)
