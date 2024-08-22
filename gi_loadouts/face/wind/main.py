@@ -70,3 +70,4 @@ class MainWindow(Rule):
             getattr(self, f"arti_{part}_wipe").clicked.connect(lambda _, a_part=part: self.wipe_artifact(a_part))
         self.head_load.clicked.connect(self.team_load)
         self.head_save.clicked.connect(self.team_save)
+        self.head_wipe.clicked.connect(self.wipe_team)

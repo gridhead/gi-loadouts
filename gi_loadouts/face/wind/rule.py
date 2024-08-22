@@ -233,3 +233,8 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
     def wipe_artifact(self, part):
         droptype = getattr(self, f"arti_{part}_type")
         droptype.setCurrentText("None")
+
+    def wipe_team(self):
+        for item in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
+            droptype = getattr(self, f"arti_{item}_type")
+            droptype.setCurrentText("None")
