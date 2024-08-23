@@ -88,7 +88,7 @@
      </size>
     </property>
     <property name="styleSheet">
-     <string notr="true">#head_area {background-color: rgba(239, 122, 53, 192);}</string>
+     <string notr="true">#head_area {background-color: rgba(96, 96, 96, 128);}</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -814,7 +814,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">#arti_fwol_area {border: 1px solid rgba(128, 128, 128, 128); border-radius: 10px}</string>
+     <string notr="true">#arti_fwol_area {border: 1px solid rgba(128, 128, 128, 128);}</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -850,7 +850,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#arti_fwol_desc_area {background-color: rgba(192, 192, 192, 192);}</string>
+      <string notr="true">#arti_fwol_desc_area {background-color: rgba(128, 128, 128, 64);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -1100,7 +1100,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#arti_fwol_type_area {background-color: rgba(192, 192, 192, 192);}</string>
+      <string notr="true">#arti_fwol_type_area {background-color: rgba(128, 128, 128, 64);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -1443,7 +1443,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#arti_fwol_head {background-color: rgba(192, 192, 192, 192);}</string>
+      <string notr="true">#arti_fwol_head {background-color: rgba(128, 128, 128, 64);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -1688,7 +1688,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">#arti_pmod_area {border: 1px solid rgba(128, 128, 128, 128); border-radius: 10px}</string>
+     <string notr="true">#arti_pmod_area {border: 1px solid rgba(128, 128, 128, 128);}</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -1724,7 +1724,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#arti_pmod_desc_area {background-color: rgba(192, 192, 192, 192);}</string>
+      <string notr="true">#arti_pmod_desc_area {background-color: rgba(128, 128, 128, 64);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -1869,7 +1869,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#arti_pmod_type_area {background-color: rgba(192, 192, 192, 192);}</string>
+      <string notr="true">#arti_pmod_type_area {background-color: rgba(128, 128, 128, 64);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -2348,7 +2348,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#arti_pmod_head {background-color: rgba(192, 192, 192, 192);}</string>
+      <string notr="true">#arti_pmod_head {background-color: rgba(128, 128, 128, 64);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -2562,7 +2562,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">#arti_sdoe_area {border: 1px solid rgba(128, 128, 128, 128); border-radius: 10px}</string>
+     <string notr="true">#arti_sdoe_area {border: 1px solid rgba(128, 128, 128, 128);}</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -2598,7 +2598,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#arti_sdoe_desc_area {background-color: rgba(192, 192, 192, 192);}</string>
+      <string notr="true">#arti_sdoe_desc_area {background-color: rgba(128, 128, 128, 64);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -2879,7 +2879,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#arti_sdoe_type_area {background-color: rgba(192, 192, 192, 192);}</string>
+      <string notr="true">#arti_sdoe_type_area {background-color: rgba(128, 128, 128, 64);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -3222,7 +3222,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#arti_sdoe_head {background-color: rgba(192, 192, 192, 192);}</string>
+      <string notr="true">#arti_sdoe_head {background-color: rgba(128, 128, 128, 64);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -3436,7 +3436,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">#arti_gboe_area {border: 1px solid rgba(128, 128, 128, 128); border-radius: 10px}</string>
+     <string notr="true">#arti_gboe_area {border: 1px solid rgba(128, 128, 128, 128);}</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -3472,7 +3472,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#arti_gboe_desc_area {background-color: rgba(192, 192, 192, 192);}</string>
+      <string notr="true">#arti_gboe_desc_area {background-color: rgba(128, 128, 128, 64);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -3648,7 +3648,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#arti_gboe_type_area {background-color: rgba(192, 192, 192, 192);}</string>
+      <string notr="true">#arti_gboe_type_area {background-color: rgba(128, 128, 128, 64);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -4096,7 +4096,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#arti_gboe_head {background-color: rgba(192, 192, 192, 192);}</string>
+      <string notr="true">#arti_gboe_head {background-color: rgba(128, 128, 128, 64);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -4310,7 +4310,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">#arti_ccol_area {border: 1px solid rgba(128, 128, 128, 128); border-radius: 10px}</string>
+     <string notr="true">#arti_ccol_area {border: 1px solid rgba(128, 128, 128, 128);}</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -4346,7 +4346,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#arti_ccol_desc_area {background-color: rgba(192, 192, 192, 192);}</string>
+      <string notr="true">#arti_ccol_desc_area {background-color: rgba(128, 128, 128, 64);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -4627,7 +4627,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#arti_ccol_type_area {background-color: rgba(192, 192, 192, 192);}</string>
+      <string notr="true">#arti_ccol_type_area {background-color: rgba(128, 128, 128, 64);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -4970,7 +4970,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#arti_ccol_head {background-color: rgba(192, 192, 192, 192);}</string>
+      <string notr="true">#arti_ccol_head {background-color: rgba(128, 128, 128, 64);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -5175,7 +5175,7 @@
      </size>
     </property>
     <property name="styleSheet">
-     <string notr="true">#weap_area {border: 1px solid rgba(128, 128, 128, 128); border-radius: 10px}</string>
+     <string notr="true">#weap_area {border: 1px solid rgba(128, 128, 128, 128);}</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -5211,7 +5211,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#weap_desc_area {background-color: rgba(192, 192, 192, 192);}</string>
+      <string notr="true">#weap_desc_area {background-color: rgba(128, 128, 128, 64);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -5282,7 +5282,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#weap_head {background-color: rgba(192, 192, 192, 192);}</string>
+      <string notr="true">#weap_head {background-color: rgba(128, 128, 128, 64);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -5869,7 +5869,7 @@
      </size>
     </property>
     <property name="styleSheet">
-     <string notr="true">#pair_area {border: 1px solid rgba(128, 128, 128, 128); border-radius: 10px}</string>
+     <string notr="true">#pair_area {border: 1px solid rgba(128, 128, 128, 128);}</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -5905,7 +5905,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#pair_desc_area {background-color: rgba(192, 192, 192, 192);}</string>
+      <string notr="true">#pair_desc_area {background-color: rgba(128, 128, 128, 64);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -5976,7 +5976,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#pair_head {background-color: rgba(192, 192, 192, 192);}</string>
+      <string notr="true">#pair_head {background-color: rgba(128, 128, 128, 64);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -6140,7 +6140,7 @@
      </size>
     </property>
     <property name="styleSheet">
-     <string notr="true">#quad_area {border: 1px solid rgba(128, 128, 128, 128); border-radius: 10px}</string>
+     <string notr="true">#quad_area {border: 1px solid rgba(128, 128, 128, 128);}</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -6176,7 +6176,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#quad_desc_area {background-color: rgba(192, 192, 192, 192);}</string>
+      <string notr="true">#quad_desc_area {background-color: rgba(128, 128, 128, 64);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -6247,7 +6247,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#quad_head {background-color: rgba(192, 192, 192, 192);}</string>
+      <string notr="true">#quad_head {background-color: rgba(128, 128, 128, 64);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
