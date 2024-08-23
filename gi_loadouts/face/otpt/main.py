@@ -1,3 +1,5 @@
+from PySide6.QtCore import Qt
+
 from gi_loadouts.face.otpt.rule import Rule
 from gi_loadouts.type.calc.char import CHAR
 
@@ -8,6 +10,7 @@ class OtptWindow(Rule):
         self.headtext = f"Loadouts for Genshin Impact - {name}"
         self.setupUi(self)
         self.setWindowTitle(self.headtext)
+        self.setWindowModality(Qt.ApplicationModal)
         self.tyvt = tyvt
         self.tint = tint
         self.populate_blanks()
