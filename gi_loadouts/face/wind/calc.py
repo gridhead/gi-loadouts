@@ -41,6 +41,28 @@ class Assess:
 
     def char_stat(self):
         if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
+            # SUBSTATS
+            """
+            The SUBSTATS need to be calculated before the BASE due to implications of changes in BASE attributes
+            on characters that scale on ATK %, DEF % and HP %.
+
+            ATK % scaling = Amber, Charlotte, Chongyun, Collei, Faruzan, Fischl, Freminet, Gaming, Kujou Sara, Rosaria, Shenhe, Thoma, Traveler, Xianyun, Xingqiu, Xinyan,
+            DEF % scaling = Noelle,
+            HP  % scaling = Baizhu, Barbara, Candace, Chevreuse, Dehya, Dori, Kirara, Kuki Shinobu, Mika, Nilou, Yaoyao
+            """
+            char = __charmaps__[self.head_char_name.currentText()]()
+            char.levl = getattr(Level, self.head_char_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
+            char_substats_prev_data = getattr(self.c_tyvt, self.c_tyvt.revmap[char.seco.stat_name]).stat_data
+            char_substats_curt_data = getattr(self.c_char, self.c_char.revmap[char.seco.stat_name]).stat_data
+            setattr(
+                self.c_tyvt,
+                self.c_tyvt.revmap[char.seco.stat_name],
+                ATTR(
+                    stat_name=char.seco.stat_name,
+                    stat_data=char_substats_prev_data + char_substats_curt_data
+                )
+            )
+
             # BASE
             self.c_tyvt.attack = ATTR(
                 stat_name=STAT.attack,
@@ -62,20 +84,6 @@ class Assess:
             self.c_tyvt.addendum_plus_health_points = ATTR(stat_name=STAT.health_points, stat_data=self.c_tyvt.health_points.stat_data - self.c_tyvt.addendum_base_health_points.stat_data)
             self.c_tyvt.addendum_base_defense = ATTR(stat_name=STAT.defense, stat_data=self.c_char.defense.stat_data)
             self.c_tyvt.addendum_plus_defense = ATTR(stat_name=STAT.defense, stat_data=self.c_tyvt.defense.stat_data - self.c_tyvt.addendum_base_defense.stat_data)
-
-            # SUBSTATS
-            char = __charmaps__[self.head_char_name.currentText()]()
-            char.levl = getattr(Level, self.head_char_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
-            char_substats_prev_data = getattr(self.c_tyvt, self.c_tyvt.revmap[char.seco.stat_name]).stat_data
-            char_substats_curt_data = getattr(self.c_char, self.c_char.revmap[char.seco.stat_name]).stat_data
-            setattr(
-                self.c_tyvt,
-                self.c_tyvt.revmap[char.seco.stat_name],
-                ATTR(
-                    stat_name=char.seco.stat_name,
-                    stat_data=char_substats_prev_data + char_substats_curt_data
-                )
-            )
 
     def weap_keep(self):
         if (self.weap_area_type.currentText().strip() != "" and
