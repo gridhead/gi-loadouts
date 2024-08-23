@@ -27,6 +27,6 @@ def make_teamfile(objc: dict) -> TeamFile:
     for area in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
         try:
             setattr(teamobjc, area, make_artifile(objc[area]))
-        except Exception:
-            raise
+        except Exception as expt:
+            raise ValueError("Artifact team data cannot be parsed.") from expt
     return teamobjc

@@ -76,6 +76,6 @@ def make_artifile(objc: dict) -> ArtiFile:
             stat_c=ATTR(stat_name=__revmap__[objc["stat"]["c"]["name"]], stat_data=objc["stat"]["c"]["data"]),
             stat_d=ATTR(stat_name=__revmap__[objc["stat"]["d"]["name"]], stat_data=objc["stat"]["d"]["data"]),
         )
-    except Exception:
-        raise
+    except Exception as expt:
+        raise ValueError("Artifact unit data cannot be parsed.") from expt
     return artiobjc

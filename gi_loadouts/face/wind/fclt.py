@@ -9,7 +9,7 @@ from gi_loadouts.face.wind.file import file
 from gi_loadouts.face.wind.talk import Dialog
 from gi_loadouts.type.arti import ArtiLevl
 from gi_loadouts.type.file.arti import ArtiArea, ArtiFile, make_artifile
-from gi_loadouts.type.file.team import make_teamfile, TeamFile
+from gi_loadouts.type.file.team import TeamFile, make_teamfile
 from gi_loadouts.type.file.weap import WeapFile, make_weapfile
 from gi_loadouts.type.levl import Level
 from gi_loadouts.type.rare import Rare
@@ -24,7 +24,7 @@ class Facility(Dialog):
     def arti_save(self, part: str) -> None:
         try:
             if getattr(self, f"arti_{part}_type").currentText().strip() == "":
-                raise ValueError
+                raise ValueError("Artifact type cannot be identified.")
 
             objc = ArtiFile(
                 type=getattr(ArtiList, getattr(self, f"arti_{part}_type").currentText().strip().replace(" ", "_").replace("'", "").replace("-", "_")),
@@ -64,11 +64,11 @@ class Facility(Dialog):
             )
             self.statarea.showMessage("Artifact data has been successfully saved.")
 
-        except Exception:
+        except Exception as expt:
             self.show_dialog(
                 QMessageBox.Information,
                 "Save failed",
-                "Please confirm that the input is valid (eg. 69, 42.0 etc.) before saving the artifact data in a location that is accessible.",
+                f"Please confirm that the input is valid (eg. 69, 42.0 etc.) before saving the artifact data in a location that is accessible.\n\n{expt}",
             )
 
     def team_save(self) -> None:
@@ -77,7 +77,7 @@ class Facility(Dialog):
             arealist = ["fwol", "pmod", "sdoe", "gboe", "ccol"]
             for part in arealist:
                 if getattr(self, f"arti_{part}_type").currentText().strip() == "":
-                    raise ValueError
+                    raise ValueError("Artifact type cannot be identified.")
                 objc = ArtiFile(
                     type=getattr(ArtiList, getattr(self, f"arti_{part}_type").currentText().strip().replace(" ", "_").replace("'", "").replace("-", "_")),
                     levl=getattr(ArtiLevl, getattr(self, f"arti_{part}_levl").currentText().strip().replace(" ", "_")),
@@ -114,11 +114,11 @@ class Facility(Dialog):
                 text,
             )
             self.statarea.showMessage("Artifact team has been successfully saved.")
-        except Exception:
+        except Exception as expt:
             self.show_dialog(
                 QMessageBox.Information,
                 "Save failed",
-                "Please confirm that the input is valid (eg. 69, 42.0 etc.) before saving the artifact team in a location that is accessible.",
+                f"Please confirm that the input is valid (eg. 69, 42.0 etc.) before saving the artifact team in a location that is accessible.\n\n{expt}",
             )
 
     def weap_save(self) -> None:
@@ -138,11 +138,11 @@ class Facility(Dialog):
                     text,
                 )
                 self.statarea.showMessage("Weapon data has been successfully saved.")
-        except Exception:
+        except Exception as expt:
             self.show_dialog(
                 QMessageBox.Information,
                 "Save failed",
-                "Please confirm that the location that is accessible before saving the weapon data.",
+                f"Please confirm that the location that is accessible before saving the weapon data.\n\n{expt}",
             )
 
     def arti_load(self, part: str) -> None:
@@ -153,12 +153,12 @@ class Facility(Dialog):
             )
 
             if data.strip() == "":
-                raise ValueError
+                raise ValueError("Selected file cannot be read.")
 
             objc = yaml.safe_load(data)
             arti = make_artifile(objc)
             if arti.area.value != part.upper():
-                raise ValueError
+                raise ValueError("Artifact area cannot be identified.")
 
             droptype = getattr(self, f"arti_{part}_type")
             droptype.setCurrentText(arti.type.value.name)
@@ -175,15 +175,15 @@ class Facility(Dialog):
                     dropname.setCurrentText(getattr(arti, f"stat_{indx}").stat_name.value)
                     dropdata.setText(str(getattr(arti, f"stat_{indx}").stat_data))
                 else:
-                    raise ValueError
+                    raise ValueError("Artifact stat cannot be identified.")
 
             self.statarea.showMessage("Artifact data has been successfully loaded.")
 
-        except Exception:
+        except Exception as expt:
             self.show_dialog(
                 QMessageBox.Information,
                 "Load failed",
-                "Please confirm that the artifact data follows the valid format before loading it from a location that is accessible."
+                f"Please confirm that the artifact data follows the valid format before loading it from a location that is accessible.\n\n{expt}"
             )
 
     def team_load(self) -> None:
@@ -194,7 +194,7 @@ class Facility(Dialog):
             )
 
             if data.strip() == "":
-                raise ValueError
+                raise ValueError("Selected file cannot be read.")
 
             objc = yaml.safe_load(data)
             team = make_teamfile(objc)
@@ -202,7 +202,7 @@ class Facility(Dialog):
             for part in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
                 arti = getattr(team, part)
                 if arti.area.value != part.upper():
-                    raise ValueError
+                    raise ValueError("Artifact area cannot be identified.")
 
                 droptype = getattr(self, f"arti_{part}_type")
                 droptype.setCurrentText(arti.type.value.name)
@@ -219,14 +219,14 @@ class Facility(Dialog):
                         dropname.setCurrentText(getattr(arti, f"stat_{indx}").stat_name.value)
                         dropdata.setText(str(getattr(arti, f"stat_{indx}").stat_data))
                     else:
-                        raise ValueError
+                        raise ValueError("Artifact stat cannot be identified.")
 
             self.statarea.showMessage("Artifact team has been successfully loaded.")
-        except Exception:
+        except Exception as expt:
             self.show_dialog(
                 QMessageBox.Information,
                 "Load failed",
-                "Please confirm that the artifact team follows the valid format before loading it from a location that is accessible."
+                f"Please confirm that the artifact team follows the valid format before loading it from a location that is accessible.\n\n{expt}"
             )
 
     def weap_load(self) -> None:
@@ -238,35 +238,35 @@ class Facility(Dialog):
                 )
 
                 if data.strip() == "":
-                    raise ValueError
+                    raise ValueError("Selected file cannot be read.")
 
                 objc = yaml.safe_load(data)
                 weap = make_weapfile(objc)
 
                 typelist = [self.weap_area_type.itemText(indx) for indx in range(self.weap_area_type.count())]
                 if weap.type.value not in typelist:
-                    raise ValueError
+                    raise ValueError("Weapon type cannot be identified.")
                 self.weap_area_type.setCurrentText(weap.type.value)
 
                 weaplist = [self.weap_area_name.itemText(indx) for indx in range(self.weap_area_name.count())]
                 if weap.name not in weaplist:
-                    raise ValueError
+                    raise ValueError("Weapon name cannot be identified.")
                 self.weap_area_name.setCurrentText(weap.name)
 
                 levllist = [self.weap_area_levl.itemText(indx) for indx in range(self.weap_area_levl.count())]
                 if weap.levl.value.name not in levllist:
-                    raise ValueError
+                    raise ValueError("Weapon level cannot be parsed.")
                 self.weap_area_levl.setCurrentText(weap.levl.value.name)
 
                 refnlist = [self.weap_area_refn.itemText(indx) for indx in range(self.weap_area_refn.count())]
                 if weap.refn not in refnlist:
-                    raise ValueError
+                    raise ValueError("Weapon refinement cannot be parsed.")
                 self.weap_area_refn.setCurrentText(weap.refn)
 
                 self.statarea.showMessage("Weapon data has been successfully loaded.")
-        except Exception:
+        except Exception as expt:
             self.show_dialog(
                 QMessageBox.Information,
                 "Load failed",
-                "Please confirm that the location that is accessible before loading the weapon data.",
+                f"Please confirm that the location that is accessible before loading the weapon data.\n\n{expt}",
             )

@@ -216,11 +216,11 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
                     self.c_tyvt
                 )
                 self.otptobjc.show()
-        except Exception:
+        except Exception as expt:
             self.show_dialog(
                 QMessageBox.Information,
-                "Invalid input detected",
-                "Please enter a valid input (eg. 69, 42.0 etc.)"
+                "Inaccuracy detected",
+                f"Please consider checking your input.\n\n{expt}"
             )
 
     def validate_lineedit_userdata(self, text):

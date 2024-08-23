@@ -9,7 +9,7 @@ class FileHandling:
         explorer = QFileDialog()
         savefile = explorer.getSaveFileName(prnt, head, path, "YAML Files (*.yaml);;All Files (*)")[0]
         if savefile.strip() == "":
-            raise FileNotFoundError
+            raise FileNotFoundError("No file selected.")
         with open(savefile, "w") as fileobjc:
             fileobjc.write(data)
         return None
@@ -18,7 +18,7 @@ class FileHandling:
         explorer = QFileDialog()
         loadfile = explorer.getOpenFileName(prnt, head, "", "YAML Files (*.yaml);;All Files (*)")[0]
         if loadfile.strip() == "":
-            raise FileNotFoundError
+            raise FileNotFoundError("No file selected.")
         with open(loadfile) as fileobjc:
             data = fileobjc.read()
         return data

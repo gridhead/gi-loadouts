@@ -29,7 +29,6 @@ def make_weapfile(objc: dict) -> WeapFile:
             levl=getattr(Level, objc["levl"].replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_")),
             refn=objc["refn"],
         )
-    except Exception:
-        raise
-    print("WEAPON COOKED", weapobjc)
+    except Exception as expt:
+        raise ValueError("Weapon data cannot be parsed.") from expt
     return weapobjc
