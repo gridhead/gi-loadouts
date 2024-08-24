@@ -12,9 +12,9 @@ class TravelersHandySword(Sword):
     rare: Rare = Rare.Star_3
     refi_name: str = "Journey"
     refi_list: List[str] = [
-            "Each Elemental Orb or Particle collected restores 1% HP.",
-            "Each Elemental Orb or Particle collected restores 1.25% HP.",
-            "Each Elemental Orb or Particle collected restores 1.5% HP.",
-            "Each Elemental Orb or Particle collected restores 1.75% HP.",
-            "Each Elemental Orb or Particle collected restores 2% HP.",
-        ]
+        "Each Elemental Orb or Particle collected restores 1% HP.",
+        "Each Elemental Orb or Particle collected restores 1.25% HP.",
+        "Each Elemental Orb or Particle collected restores 1.5% HP.",
+        "Each Elemental Orb or Particle collected restores 1.75% HP.",
+        "Each Elemental Orb or Particle collected restores 2% HP.",
+    ]

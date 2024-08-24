@@ -12,9 +12,9 @@ class TheAlleyFlash(Sword):
     rare: Rare = Rare.Star_4
     refi_name: str = "Itinerant Hero"
     refi_list: List[str] = [
-            "Increases DMG dealt by the character equipping this weapon by 12%. Taking DMG disables this effect for 5s.",
-            "Increases DMG dealt by the character equipping this weapon by 15%. Taking DMG disables this effect for 5s.",
-            "Increases DMG dealt by the character equipping this weapon by 18%. Taking DMG disables this effect for 5s.",
-            "Increases DMG dealt by the character equipping this weapon by 21%. Taking DMG disables this effect for 5s.",
-            "Increases DMG dealt by the character equipping this weapon by 24%. Taking DMG disables this effect for 5s.",
-        ]
+        "Increases DMG dealt by the character equipping this weapon by 12%. Taking DMG disables this effect for 5s.",
+        "Increases DMG dealt by the character equipping this weapon by 15%. Taking DMG disables this effect for 5s.",
+        "Increases DMG dealt by the character equipping this weapon by 18%. Taking DMG disables this effect for 5s.",
+        "Increases DMG dealt by the character equipping this weapon by 21%. Taking DMG disables this effect for 5s.",
+        "Increases DMG dealt by the character equipping this weapon by 24%. Taking DMG disables this effect for 5s.",
+    ]

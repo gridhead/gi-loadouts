@@ -7,7 +7,7 @@ from gi_loadouts.type.weap.base.tier import Tier
 
 class DarkIronSword(Sword):
     name: str = "Dark Iron Sword"
-    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.elemental_mastery, stat_data=31)
+    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.elemental_mastery, stat_data=31.0)
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_3
     refi_name: str = "Overloaded"
