@@ -1,7 +1,7 @@
 from gi_loadouts.type.char import BaseStat, Char
 from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.stat import STAT
+from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.weap import WeaponType
 
 
@@ -14,3 +14,6 @@ class Fischl(Char):
     ascn: BaseStat = BaseStat(attack=73.27593, defense=178.1325, health_points=2756.704)
     weapon: WeaponType = WeaponType.bow
     vision: Vision = Vision.electro
+    cons_name: str = "Corvus"
+    afln: str = "Adventurers' Guild"
+    head: str = "Prinzessin der Verurteilung!"

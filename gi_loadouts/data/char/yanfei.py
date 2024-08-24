@@ -14,3 +14,6 @@ class Yanfei(Char):
     ascn: BaseStat = BaseStat(attack=72.001564, defense=176.085, health_points=2805.64)
     weapon: WeaponType = WeaponType.catalyst
     vision: Vision = Vision.pyro
+    cons_name: str = "Bestia Iustitia"
+    afln: str = "Yanfei Legal Consultancy"
+    head: str = "Wise Innocence"

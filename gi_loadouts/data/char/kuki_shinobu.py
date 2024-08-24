@@ -14,3 +14,6 @@ class KukiShinobu(Char):
     ascn: BaseStat = BaseStat(attack=63.7182, defense=225.225, health_points=3686.4802)
     weapon: WeaponType = WeaponType.sword
     vision: Vision = Vision.electro
+    cons_name: str = "Tribulatio Demptio"
+    afln: str = "Arataki Gang"
+    head: str = "Mender of Tribulations"

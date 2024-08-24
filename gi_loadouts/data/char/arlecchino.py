@@ -14,3 +14,6 @@ class Arlecchino(Char):
     ascn: BaseStat = BaseStat(attack=109.33523, defense=244.4715, health_points=4188.8867)
     weapon: WeaponType = WeaponType.polearm
     vision: Vision = Vision.pyro
+    cons_name: str = "Ignis Purgatorius"
+    afln: str = "Fatui"
+    head: str = "Dire Balemoon"

@@ -14,3 +14,6 @@ class Xiangling(Char):
     ascn: BaseStat = BaseStat(attack=67.54129, defense=200.655, health_points=3262.3718)
     weapon: WeaponType = WeaponType.polearm
     vision: Vision = Vision.pyro
+    cons_name: str = "Trulla"
+    afln: str = "Wanmin Restaurant"
+    head: str = "Exquisite Delicacy"

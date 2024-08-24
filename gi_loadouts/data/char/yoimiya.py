@@ -14,3 +14,6 @@ class Yoimiya(Char):
     ascn: BaseStat = BaseStat(attack=103.21857, defense=196.56, health_points=3249.3232)
     weapon: WeaponType = WeaponType.bow
     vision: Vision = Vision.pyro
+    cons_name: str = "Carassius Auratus"
+    afln: str = "Naganohara Fireworks"
+    head: str = "Frolicking Flames"

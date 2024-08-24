@@ -14,3 +14,6 @@ class Alhaitham(Char):
     ascn: BaseStat = BaseStat(attack=100.16024, defense=249.8769, health_points=4267.1836)
     weapon: WeaponType = WeaponType.sword
     vision: Vision = Vision.dendro
+    cons_name: str = "Vultur Volans"
+    afln: str = "Sumeru Akademiya"
+    head: str = "Admonishing Instruction"

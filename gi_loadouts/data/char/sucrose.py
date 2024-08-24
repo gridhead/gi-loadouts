@@ -14,3 +14,6 @@ class Sucrose(Char):
     ascn: BaseStat = BaseStat(attack=50.97456, defense=210.8925, health_points=2773.016)
     weapon: WeaponType = WeaponType.catalyst
     vision: Vision = Vision.anemo
+    cons_name: str = "Ampulla"
+    afln: str = "Knights of Favonius"
+    head: str = "Harmless Sweetie"

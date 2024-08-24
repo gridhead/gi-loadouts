@@ -14,3 +14,6 @@ class Neuvillette(Char):
     ascn: BaseStat = BaseStat(attack=66.595, defense=184.275, health_points=4697.8169)
     weapon: WeaponType = WeaponType.catalyst
     vision: Vision = Vision.hydro
+    cons_name: str = "Leviathan Judicator"
+    afln: str = "Court of Fontaine"
+    head: str = "Ordainer of Inexorable Judgment"

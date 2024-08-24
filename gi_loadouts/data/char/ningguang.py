@@ -14,3 +14,6 @@ class Ningguang(Char):
     ascn: BaseStat = BaseStat(attack=63.7182, defense=171.99, health_points=2936.1348)
     weapon: WeaponType = WeaponType.catalyst
     vision: Vision = Vision.geo
+    cons_name: str = "Opus Aequilibrium"
+    afln: str = "Liyue Qixing"
+    head: str = "Eclipsing Star"

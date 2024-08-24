@@ -1,7 +1,7 @@
 from gi_loadouts.type.char import BaseStat, Char
 from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.stat import STAT
+from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.weap import WeaponType
 
 
@@ -14,3 +14,6 @@ class Furina(Char):
     ascn: BaseStat = BaseStat(attack=77.987365722656, defense=222.35850524902, health_points=4893.5590820312)
     weapon: WeaponType = WeaponType.sword
     vision: Vision = Vision.hydro
+    cons_name: str = "Animula Choragi"
+    afln: str = "Court of Fontaine"
+    head: str = "Endless Solo of Solitude"

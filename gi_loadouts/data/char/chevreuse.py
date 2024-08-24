@@ -14,3 +14,6 @@ class Chevreuse(Char):
     ascn: BaseStat = BaseStat(attack=57.983562469482, defense=181.40849304199, health_points=3588.6091308594)
     weapon: WeaponType = WeaponType.polearm
     vision: Vision = Vision.pyro
+    cons_name: str = "Sclopetum Ensiferum"
+    afln: str = "Special Security and Surveillance Patrol"
+    head: str = "Executor of Justice"

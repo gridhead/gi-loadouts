@@ -14,3 +14,6 @@ class Qiqi(Char):
     ascn: BaseStat = BaseStat(attack=91.74984, defense=294.84, health_points=3953.9958)
     weapon: WeaponType = WeaponType.sword
     vision: Vision = Vision.cryo
+    cons_name: str = "Pristina Nola"
+    afln: str = "Bubu Pharmacy"
+    head: str = "Icy Resurrection"

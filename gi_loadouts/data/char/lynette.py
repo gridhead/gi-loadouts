@@ -14,3 +14,6 @@ class Lynette(Char):
     ascn: BaseStat = BaseStat(attack=69.452835083, defense=213.554245, health_points=3719.104)
     weapon: WeaponType = WeaponType.sword
     vision: Vision = Vision.anemo
+    cons_name: str = "Felis Alba"
+    afln: str = "Hotel Bouffes d'ete"
+    head: str = "Elegance in the Shadows"

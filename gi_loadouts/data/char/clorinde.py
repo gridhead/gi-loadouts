@@ -14,3 +14,6 @@ class Clorinde(Char):
     ascn: BaseStat = BaseStat(attack=107.80606, defense=250.614, health_points=4141.908)
     weapon: WeaponType = WeaponType.sword
     vision: Vision = Vision.electro
+    cons_name: str = "Rapperia"
+    afln: str = "Trial Court"
+    head: str = "Candlebearer, Shadowhunter"

@@ -1,7 +1,7 @@
 from gi_loadouts.type.char import BaseStat, Char
 from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.stat import STAT
+from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.weap import WeaponType
 
 
@@ -14,3 +14,6 @@ class Eula(Char):
     ascn: BaseStat = BaseStat(attack=109.33523, defense=240.0489, health_points=4228.035)
     weapon: WeaponType = WeaponType.claymore
     vision: Vision = Vision.cryo
+    cons_name: str = "Aphros Delos"
+    afln: str = "Knights of Favonius"
+    head: str = "Dance of the Shimmering Wave"

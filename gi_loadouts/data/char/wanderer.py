@@ -14,3 +14,5 @@ class Wanderer(Char):
     ascn: BaseStat = BaseStat(attack=104.747734, defense=194.103, health_points=3249.3232)
     weapon: WeaponType = WeaponType.catalyst
     vision: Vision = Vision.anemo
+    cons_name: str = "Peregrinus"
+    head: str = "Eons Adrift"

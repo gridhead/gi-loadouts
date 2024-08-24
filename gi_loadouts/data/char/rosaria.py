@@ -14,3 +14,6 @@ class Rosaria(Char):
     ascn: BaseStat = BaseStat(attack=72.001564, defense=212.94, health_points=3686.4802)
     weapon: WeaponType = WeaponType.polearm
     vision: Vision = Vision.cryo
+    cons_name: str = "Spinea Corona"
+    afln: str = "Church of Favonius"
+    head: str = "Thorny Benevolence"

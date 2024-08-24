@@ -14,3 +14,6 @@ class KaedeharaKazuha(Char):
     ascn: BaseStat = BaseStat(attack=94.80817, defense=257.985, health_points=4267.1836)
     weapon: WeaponType = WeaponType.sword
     vision: Vision = Vision.anemo
+    cons_name: str = "Acer Palmatum"
+    afln: str = "The Crux"
+    head: str = "Scarlet Leaves Pursue Wild Waves"

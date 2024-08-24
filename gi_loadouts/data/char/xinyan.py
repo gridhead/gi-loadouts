@@ -14,3 +14,6 @@ class Xinyan(Char):
     ascn: BaseStat = BaseStat(attack=74.55029, defense=239.5575, health_points=3360.243)
     weapon: WeaponType = WeaponType.claymore
     vision: Vision = Vision.pyro
+    cons_name: str = "Fila Ignium"
+    afln: str = "\"The Red Strings\""
+    head: str = "Blazing Riff"

@@ -14,3 +14,6 @@ class Razor(Char):
     ascn: BaseStat = BaseStat(attack=70.09002, defense=225.225, health_points=3588.6091)
     weapon: WeaponType = WeaponType.claymore
     vision: Vision = Vision.electro
+    cons_name: str = "Lupus Minor"
+    afln: str = "Wolvendom"
+    head: str = "Wolf Boy"

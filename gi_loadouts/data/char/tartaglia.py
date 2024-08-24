@@ -14,3 +14,6 @@ class Tartaglia(Char):
     ascn: BaseStat = BaseStat(attack=96.33733, defense=260.442, health_points=4188.8867)
     weapon: WeaponType = WeaponType.bow
     vision: Vision = Vision.hydro
+    cons_name: str = "Monoceros Caeli"
+    afln: str = "Fatui"
+    head: str = "Childe"

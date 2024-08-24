@@ -14,3 +14,6 @@ class Dori(Char):
     ascn: BaseStat = BaseStat(attack=66.90411, defense=217.035, health_points=3719.104)
     weapon: WeaponType = WeaponType.catalyst
     vision: Vision = Vision.electro
+    cons_name: str = "Magicae Lucerna"
+    afln: str = "The Palace of Alcazarzaray"
+    head: str = "Treasure of Dream Garden"

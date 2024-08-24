@@ -14,3 +14,6 @@ class Diona(Char):
     ascn: BaseStat = BaseStat(attack=63.7182, defense=180.18, health_points=2870.8872)
     weapon: WeaponType = WeaponType.bow
     vision: Vision = Vision.cryo
+    cons_name: str = "Feles"
+    afln: str = "The Cat's Tail"
+    head: str = "Kätzlein Cocktail"

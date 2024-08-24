@@ -14,3 +14,6 @@ class Xianyun(Char):
     ascn: BaseStat = BaseStat(attack=107.04148101807, defense=183.04649353027, health_points=3327.6201171875)
     weapon: WeaponType = WeaponType.catalyst
     vision: Vision = Vision.anemo
+    cons_name: str = "Grus Serena"
+    afln: str = "Mt. Aocang"
+    head: str = "Passerine Herald"

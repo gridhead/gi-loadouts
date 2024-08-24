@@ -14,3 +14,6 @@ class AratakiItto(Char):
     ascn: BaseStat = BaseStat(attack=72.63529, defense=306.6336, health_points=4110.59)
     weapon: WeaponType = WeaponType.claymore
     vision: Vision = Vision.geo
+    cons_name: str = "Taurus Iracundus"
+    afln: str = "Arataki Gang"
+    head: str = "Hanamizaka Heroics"

@@ -14,3 +14,6 @@ class Kaeya(Char):
     ascn: BaseStat = BaseStat(attack=66.90411, defense=237.51, health_points=3490.7378)
     weapon: WeaponType = WeaponType.sword
     vision: Vision = Vision.cryo
+    cons_name: str = "Pavo Ocellus"
+    afln: str = "Knights of Favonius"
+    head: str = "Frostwind Swordsman"

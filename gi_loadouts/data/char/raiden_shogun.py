@@ -14,3 +14,6 @@ class RaidenShogun(Char):
     ascn: BaseStat = BaseStat(attack=107.80606, defense=252.3339, health_points=4126.249)
     weapon: WeaponType = WeaponType.polearm
     vision: Vision = Vision.electro
+    cons_name: str = "Imperatrix Umbrosa"
+    afln: str = "Inazuma City"
+    head: str = "Plane of Euthymia"

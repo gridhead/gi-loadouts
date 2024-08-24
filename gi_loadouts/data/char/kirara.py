@@ -14,3 +14,6 @@ class Kirara(Char):
     ascn: BaseStat = BaseStat(attack=66.904113769531, defense=163.8, health_points=3653.8564453125)
     weapon: WeaponType = WeaponType.sword
     vision: Vision = Vision.dendro
+    cons_name: str = "Arcella"
+    afln: str = "Komaniya Express"
+    head: str = "Cat Upon the Eaves"

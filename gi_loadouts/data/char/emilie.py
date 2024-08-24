@@ -1,7 +1,7 @@
 from gi_loadouts.type.char import BaseStat, Char
 from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.stat import STAT
+from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.weap import WeaponType
 
 
@@ -14,3 +14,6 @@ class Emilie(Char):
     ascn: BaseStat = BaseStat(attack=107.04148, defense=233.415, health_points=4337.651)
     weapon: WeaponType = WeaponType.polearm
     vision: Vision = Vision.dendro
+    cons_name: str = "Pomum de Ambra"
+    afln: str = "Court of Fontaine"
+    head: str = "A Thousand Scents Traced"

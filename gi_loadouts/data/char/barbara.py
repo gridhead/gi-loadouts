@@ -14,3 +14,6 @@ class Barbara(Char):
     ascn: BaseStat = BaseStat(attack=47.78865, defense=200.655, health_points=2936.1348)
     weapon: WeaponType = WeaponType.catalyst
     vision: Vision = Vision.hydro
+    cons_name: str = "Crater"
+    afln: str = "Church of Favonius"
+    head: str = "Shining Idol"

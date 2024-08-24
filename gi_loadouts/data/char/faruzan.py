@@ -1,7 +1,7 @@
 from gi_loadouts.type.char import BaseStat, Char
 from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.stat import STAT
+from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.weap import WeaponType
 
 
@@ -14,3 +14,6 @@ class Faruzan(Char):
     ascn: BaseStat = BaseStat(attack=58.939335, defense=188.37, health_points=2870.8872)
     weapon: WeaponType = WeaponType.bow
     vision: Vision = Vision.anemo
+    cons_name: str = "Flosculi Implexi"
+    afln: str = "Haravatat"
+    head: str = "Enigmatic Machinist"

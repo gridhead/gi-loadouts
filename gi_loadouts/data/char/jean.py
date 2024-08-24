@@ -1,7 +1,7 @@
 from gi_loadouts.type.char import BaseStat, Char
 from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.stat import STAT
+from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.weap import WeaponType
 
 
@@ -14,3 +14,6 @@ class Jean(Char):
     ascn: BaseStat = BaseStat(attack=76.4582, defense=245.7, health_points=4697.817)
     weapon: WeaponType = WeaponType.sword
     vision: Vision = Vision.anemo
+    cons_name: str = "Leo Minor"
+    afln: str = "Knights of Favonius"
+    head: str = "Dandelion Knight"

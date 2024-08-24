@@ -14,3 +14,6 @@ class Sethos(Char):
     ascn: BaseStat = BaseStat(attack=68.178474, defense=167.895, health_points=2936.1348)
     weapon: WeaponType = WeaponType.bow
     vision: Vision = Vision.electro
+    cons_name: str = "Basileos Delta"
+    afln: str = "Temple of Silence"
+    head: str = "Wisdom's Measure"

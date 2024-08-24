@@ -1,7 +1,7 @@
 from gi_loadouts.type.char import BaseStat, Char
 from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.stat import STAT
+from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.weap import WeaponType
 
 
@@ -14,3 +14,6 @@ class Mika(Char):
     ascn: BaseStat = BaseStat(attack=66.90411, defense=213.96375, health_points=3751.7275)
     weapon: WeaponType = WeaponType.polearm
     vision: Vision = Vision.cryo
+    cons_name: str = "Palumbus"
+    afln: str = "Knights of Favonius"
+    head: str = "Coordinates of Clear Frost"

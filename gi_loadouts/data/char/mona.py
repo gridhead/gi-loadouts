@@ -1,7 +1,7 @@
 from gi_loadouts.type.char import BaseStat, Char
 from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.stat import STAT
+from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.weap import WeaponType
 
 
@@ -14,3 +14,6 @@ class Mona(Char):
     ascn: BaseStat = BaseStat(attack=91.74984, defense=208.845, health_points=3327.62)
     weapon: WeaponType = WeaponType.catalyst
     vision: Vision = Vision.hydro
+    cons_name: str = "Astrolabos"
+    afln: str = "Mondstadt"
+    head: str = "Astral Reflection"

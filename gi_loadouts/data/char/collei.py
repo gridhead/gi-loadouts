@@ -1,7 +1,7 @@
 from gi_loadouts.type.char import BaseStat, Char
 from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.stat import STAT
+from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.weap import WeaponType
 
 
@@ -14,3 +14,6 @@ class Collei(Char):
     ascn: BaseStat = BaseStat(attack=59.895107, defense=180.18, health_points=2936.1348)
     weapon: WeaponType = WeaponType.bow
     vision: Vision = Vision.dendro
+    cons_name: str = "Leptailurus Cervarius"
+    afln: str = "Gandharva Ville"
+    head: str = "Sprout of Rebirth"

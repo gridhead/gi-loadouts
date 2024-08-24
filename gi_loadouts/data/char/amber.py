@@ -14,3 +14,6 @@ class Amber(Char):
     ascn: BaseStat = BaseStat(attack=66.90411, defense=180.18, health_points=2838.2634)
     weapon: WeaponType = WeaponType.bow
     vision: Vision = Vision.pyro
+    cons_name: str = "Lepus"
+    afln: str = "Knights of Favonius"
+    head: str = "Gliding Champion"

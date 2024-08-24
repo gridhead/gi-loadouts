@@ -14,3 +14,6 @@ class Venti(Char):
     ascn: BaseStat = BaseStat(attack=84.10402, defense=213.759, health_points=3366.7688)
     weapon: WeaponType = WeaponType.bow
     vision: Vision = Vision.anemo
+    cons_name: str = "Carmen Dei"
+    afln: str = "Mondstadt"
+    head: str = "Windborne Bard"

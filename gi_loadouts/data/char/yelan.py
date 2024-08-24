@@ -14,3 +14,6 @@ class Yelan(Char):
     ascn: BaseStat = BaseStat(attack=77.987366, defense=175.1841, health_points=4619.52)
     weapon: WeaponType = WeaponType.bow
     vision: Vision = Vision.hydro
+    cons_name: str = "Umbrabilis Orchis"
+    afln: str = "Yanshang Teahouse"
+    head: str = "Valley Orchid"

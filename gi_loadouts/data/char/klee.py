@@ -14,3 +14,6 @@ class Klee(Char):
     ascn: BaseStat = BaseStat(attack=99.39566, defense=196.56, health_points=3288.4717)
     weapon: WeaponType = WeaponType.catalyst
     vision: Vision = Vision.pyro
+    cons_name: str = "Trifolium"
+    afln: str = "Knights of Favonius"
+    head: str = "Fleeing Sunlight"

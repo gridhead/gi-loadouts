@@ -14,3 +14,6 @@ class Xingqiu(Char):
     ascn: BaseStat = BaseStat(attack=60.53229, defense=227.2725, health_points=3066.6296)
     weapon: WeaponType = WeaponType.sword
     vision: Vision = Vision.hydro
+    cons_name: str = "Fabulae Textile"
+    afln: str = "Feiyun Commerce Guild"
+    head: str = "Juvenile Galant"

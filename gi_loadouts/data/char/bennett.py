@@ -14,3 +14,6 @@ class Bennett(Char):
     ascn: BaseStat = BaseStat(attack=57.34638, defense=231.3675, health_points=3719.104)
     weapon: WeaponType = WeaponType.sword
     vision: Vision = Vision.pyro
+    cons_name: str = "Rota Calamitas"
+    afln: str = "Adventurers' Guild"
+    head: str = "Trial by Fire"

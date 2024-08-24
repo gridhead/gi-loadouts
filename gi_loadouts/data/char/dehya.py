@@ -14,3 +14,6 @@ class Dehya(Char):
     ascn: BaseStat = BaseStat(attack=84.8686, defense=200.7369, health_points=5011.0044)
     weapon: WeaponType = WeaponType.claymore
     vision: Vision = Vision.pyro
+    cons_name: str = "Mantichora"
+    afln: str = "The Eremites"
+    head: str = "Flame-Mane"

@@ -14,3 +14,6 @@ class Tighnari(Char):
     ascn: BaseStat = BaseStat(attack=85.63319, defense=201.474, health_points=3468.5547)
     weapon: WeaponType = WeaponType.bow
     vision: Vision = Vision.dendro
+    cons_name: str = "Vulpes Zerda"
+    afln: str = "Gandharva Ville"
+    head: str = "Verdant Strider"

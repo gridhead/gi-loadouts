@@ -14,3 +14,6 @@ class KujouSara(Char):
     ascn: BaseStat = BaseStat(attack=58.620743, defense=188.37, health_points=2870.8872)
     weapon: WeaponType = WeaponType.bow
     vision: Vision = Vision.electro
+    cons_name: str = "Flabellum"
+    afln: str = "Tenryou Commission"
+    head: str = "Crowfeather Kaburaya"

@@ -14,3 +14,6 @@ class Noelle(Char):
     ascn: BaseStat = BaseStat(attack=57.34638, defense=239.5575, health_points=3621.2327)
     weapon: WeaponType = WeaponType.claymore
     vision: Vision = Vision.geo
+    cons_name: str = "Parma Cordis"
+    afln: str = "Knights of Favonius"
+    head: str = "Chivalric Blossom"

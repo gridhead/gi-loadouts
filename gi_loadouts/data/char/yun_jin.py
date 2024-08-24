@@ -14,3 +14,6 @@ class YunJin(Char):
     ascn: BaseStat = BaseStat(attack=57.34638, defense=220.311, health_points=3197.1245)
     weapon: WeaponType = WeaponType.polearm
     vision: Vision = Vision.geo
+    cons_name: str = "Opera Grandis"
+    afln: str = "Yun-Han Opera Troupe"
+    head: str = "Stage Lucida"

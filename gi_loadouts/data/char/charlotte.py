@@ -1,8 +1,8 @@
 from gi_loadouts.type.char import BaseStat, Char
 from gi_loadouts.type.rare import Rare
+from gi_loadouts.type.stat import STAT
 from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.weap import WeaponType
-from gi_loadouts.type.stat import STAT
 
 
 class Charlotte(Char):
@@ -14,3 +14,6 @@ class Charlotte(Char):
     ascn: BaseStat = BaseStat(attack=51.930332183838, defense=163.8, health_points=3229.748046875)
     weapon: WeaponType = WeaponType.catalyst
     vision: Vision = Vision.cryo
+    cons_name: str = "Hualina Veritas"
+    afln: str = "The Steambird"
+    head: str = "Lens of Verity"

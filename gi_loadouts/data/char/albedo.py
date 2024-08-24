@@ -14,3 +14,6 @@ class Albedo(Char):
     ascn: BaseStat = BaseStat(attack=80.28111, defense=280.098, health_points=4228.035)
     weapon: WeaponType = WeaponType.sword
     vision: Vision = Vision.geo
+    cons_name: str = "Princeps Cretaceus"
+    afln: str = "Knights of Favonius"
+    head: str = "Kreideprinz"

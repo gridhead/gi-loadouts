@@ -14,3 +14,6 @@ class Keqing(Char):
     ascn: BaseStat = BaseStat(attack=103.21857, defense=255.528, health_points=4188.8867)
     weapon: WeaponType = WeaponType.sword
     vision: Vision = Vision.electro
+    cons_name: str = "Trulla Cementarii"
+    afln: str = "Liyue Qixing"
+    head: str = "Driving Thunder"

@@ -14,3 +14,6 @@ class Thoma(Char):
     ascn: BaseStat = BaseStat(attack=60.53229, defense=225.225, health_points=3099.2532)
     weapon: WeaponType = WeaponType.polearm
     vision: Vision = Vision.pyro
+    cons_name: str = "Rubeum Scutum"
+    afln: str = "Yashiro Commission"
+    head: str = "Protector From Afar"

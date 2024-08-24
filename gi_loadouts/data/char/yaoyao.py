@@ -14,3 +14,6 @@ class Yaoyao(Char):
     ascn: BaseStat = BaseStat(attack=63.7182, defense=225.225, health_points=3686.4802)
     weapon: WeaponType = WeaponType.polearm
     vision: Vision = Vision.dendro
+    cons_name: str = "Osmanthus"
+    afln: str = "Streetward Rambler's Abode"
+    head: str = "Burgeoning Grace"

@@ -14,3 +14,6 @@ class Chiori(Char):
     ascn: BaseStat = BaseStat(attack=103.21856689453, defense=304.66799926758, health_points=3656.4672851562)
     weapon: WeaponType = WeaponType.sword
     vision: Vision = Vision.geo
+    cons_name: str = "Cisoria"
+    afln: str = "Court of Fontaine"
+    head: str = "The Thundering Seamstress"

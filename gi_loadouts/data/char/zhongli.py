@@ -14,3 +14,6 @@ class Zhongli(Char):
     ascn: BaseStat = BaseStat(attack=80.2811, defense=235.872, health_points=4697.817)
     weapon: WeaponType = WeaponType.polearm
     vision: Vision = Vision.geo
+    cons_name: str = "Lapis Dei"
+    afln: str = "Liyue Harbor"
+    head: str = "Vago Mundo"

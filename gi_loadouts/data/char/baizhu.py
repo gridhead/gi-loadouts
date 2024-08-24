@@ -14,3 +14,6 @@ class Baizhu(Char):
     ascn: BaseStat = BaseStat(attack=61.54885, defense=159.705, health_points=4267.1836)
     weapon: WeaponType = WeaponType.catalyst
     vision: Vision = Vision.dendro
+    cons_name: str = "Lagenaria"
+    afln: str = "Bubu Pharmacy"
+    head: str = "Beyond Mortality"

@@ -14,3 +14,6 @@ class Kaveh(Char):
     ascn: BaseStat = BaseStat(attack=70.09002, defense=225.225, health_points=3588.6091)
     weapon: WeaponType = WeaponType.claymore
     vision: Vision = Vision.dendro
+    cons_name: str = "Paradisaea"
+    afln: str = "Independent Design Studio"
+    head: str = "Empyrean Reflection"

@@ -14,3 +14,6 @@ class ShikanoinHeizou(Char):
     ascn: BaseStat = BaseStat(attack=67.54129, defense=205.1595, health_points=3197.1245)
     weapon: WeaponType = WeaponType.catalyst
     vision: Vision = Vision.anemo
+    cons_name: str = "Cervus Minor"
+    afln: str = "Tenryou Commission"
+    head: str = "Analytical Harmony"

@@ -1,7 +1,7 @@
 from gi_loadouts.type.char import BaseStat, Char
 from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.stat import STAT
+from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.weap import WeaponType
 
 
@@ -14,3 +14,6 @@ class Ganyu(Char):
     ascn: BaseStat = BaseStat(attack=107.04148, defense=201.474, health_points=3131.878)
     weapon: WeaponType = WeaponType.bow
     vision: Vision = Vision.cryo
+    cons_name: str = "Sinae Unicornis"
+    afln: str = "Yuehai Pavilion"
+    head: str = "Plenilune Gaze"

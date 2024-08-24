@@ -14,3 +14,6 @@ class SangonomiyaKokomi(Char):
     ascn: BaseStat = BaseStat(attack=74.92904, defense=210.0735, health_points=4306.332)
     weapon: WeaponType = WeaponType.catalyst
     vision: Vision = Vision.hydro
+    cons_name: str = "Dracaena Somnolenta"
+    afln: str = "Watatsumi Island"
+    head: str = "Pearl of Wisdom"

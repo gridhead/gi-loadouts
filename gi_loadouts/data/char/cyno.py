@@ -14,3 +14,6 @@ class Cyno(Char):
     ascn: BaseStat = BaseStat(attack=101.68941, defense=274.6926, health_points=3993.1443)
     weapon: WeaponType = WeaponType.polearm
     vision: Vision = Vision.electro
+    cons_name: str = "Lupus Aureus"
+    afln: str = "Temple of Silence"
+    head: str = "Judicator of Secrets"

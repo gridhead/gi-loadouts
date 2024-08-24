@@ -5,6 +5,7 @@ from gi_loadouts.data.char.amber import Amber
 from gi_loadouts.data.char.arataki_itto import AratakiItto
 from gi_loadouts.data.char.arlecchino import Arlecchino
 from gi_loadouts.data.char.baizhu import Baizhu
+from gi_loadouts.data.char.barbara import Barbara
 from gi_loadouts.data.char.beidou import Beidou
 from gi_loadouts.data.char.bennett import Bennett
 from gi_loadouts.data.char.candace import Candace
@@ -19,6 +20,7 @@ from gi_loadouts.data.char.dehya import Dehya
 from gi_loadouts.data.char.diluc import Diluc
 from gi_loadouts.data.char.diona import Diona
 from gi_loadouts.data.char.dori import Dori
+from gi_loadouts.data.char.emilie import Emilie
 from gi_loadouts.data.char.eula import Eula
 from gi_loadouts.data.char.faruzan import Faruzan
 from gi_loadouts.data.char.fischl import Fischl
@@ -31,6 +33,8 @@ from gi_loadouts.data.char.hu_tao import HuTao
 from gi_loadouts.data.char.jean import Jean
 from gi_loadouts.data.char.kaedehara_kazuha import KaedeharaKazuha
 from gi_loadouts.data.char.kaeya import Kaeya
+from gi_loadouts.data.char.kamisato_ayaka import KamisatoAyaka
+from gi_loadouts.data.char.kamisato_ayato import KamisatoAyato
 from gi_loadouts.data.char.kaveh import Kaveh
 from gi_loadouts.data.char.keqing import Keqing
 from gi_loadouts.data.char.kirara import Kirara
@@ -80,7 +84,6 @@ from gi_loadouts.data.char.yoimiya import Yoimiya
 from gi_loadouts.data.char.yun_jin import YunJin
 from gi_loadouts.data.char.zhongli import Zhongli
 
-
 __charmaps__ = {
     "Albedo": Albedo,
     "Alhaitham": Alhaitham,
@@ -89,6 +92,7 @@ __charmaps__ = {
     "Arataki Itto": AratakiItto,
     "Arlecchino": Arlecchino,
     "Baizhu": Baizhu,
+    "Barbara": Barbara,
     "Beidou": Beidou,
     "Bennett": Bennett,
     "Candace": Candace,
@@ -103,6 +107,7 @@ __charmaps__ = {
     "Diluc": Diluc,
     "Diona": Diona,
     "Dori": Dori,
+    "Emilie": Emilie,
     "Eula": Eula,
     "Faruzan": Faruzan,
     "Fischl": Fischl,
@@ -114,6 +119,8 @@ __charmaps__ = {
     "Hu Tao": HuTao,
     "Jean": Jean,
     "Kaedehara Kazuha": KaedeharaKazuha,
+    "Kamisato Ayaka": KamisatoAyaka,
+    "Kamisato Ayato": KamisatoAyato,
     "Kaeya": Kaeya,
     "Kaveh": Kaveh,
     "Keqing": Keqing,
@@ -158,7 +165,7 @@ __charmaps__ = {
     "Xinyan": Xinyan,
     "Yae Miko": YaeMiko,
     "Yanfei": Yanfei,
-    "YaoYao": Yaoyao,
+    "Yaoyao": Yaoyao,
     "Yelan": Yelan,
     "Yoimiya": Yoimiya,
     "Yun Jin": YunJin,

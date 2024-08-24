@@ -1,7 +1,7 @@
 from gi_loadouts.type.char import BaseStat, Char
 from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.stat import STAT
+from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.weap import WeaponType
 
 
@@ -14,3 +14,6 @@ class Nahida(Char):
     ascn: BaseStat = BaseStat(attack=95.57275, defense=201.474, health_points=3311.961)
     weapon: WeaponType = WeaponType.catalyst
     vision: Vision = Vision.dendro
+    cons_name: str = "Sapientia Oromasdis"
+    afln: str = "Sumeru City"
+    head: str = "Physic of Purity"

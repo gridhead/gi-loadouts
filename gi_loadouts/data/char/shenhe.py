@@ -14,3 +14,6 @@ class Shenhe(Char):
     ascn: BaseStat = BaseStat(attack=97.10191, defense=265.356, health_points=4153.653)
     weapon: WeaponType = WeaponType.polearm
     vision: Vision = Vision.cryo
+    cons_name: str = "Crista Doloris"
+    afln: str = "Cloud Retainer's Abode"
+    head: str = "Lonesome Transcendence"

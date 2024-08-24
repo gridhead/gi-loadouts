@@ -14,3 +14,6 @@ class Chongyun(Char):
     ascn: BaseStat = BaseStat(attack=66.90411, defense=194.5125, health_points=3294.9956)
     weapon: WeaponType = WeaponType.claymore
     vision: Vision = Vision.cryo
+    cons_name: str = "Nubis Caesor"
+    afln: str = "Tianheng Thaumaturges"
+    head: str = "Frozen Ardor"

@@ -1,13 +1,14 @@
-from pydantic import BaseModel
-from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.levl import Level
 from enum import Enum
+
+from pydantic import BaseModel
+
 from gi_loadouts.type.char.cons import Cons
 from gi_loadouts.type.char.mult import Mult, Secs
+from gi_loadouts.type.levl import Level
+from gi_loadouts.type.rare import Rare
+from gi_loadouts.type.stat import STAT
 from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.weap import WeaponType
-from gi_loadouts.type.stat import STAT
-from gi_loadouts.type.rank import Rank
 
 
 class CharName(str, Enum):
@@ -18,6 +19,7 @@ class CharName(str, Enum):
     arataki_itto = "Arataki Itto"
     arlecchino = "Arlecchino"
     baizhu = "Baizhu"
+    barbara = "Barbara"
     beidou = "Beidou"
     bennett = "Bennett"
     candace = "Candace"
@@ -32,6 +34,7 @@ class CharName(str, Enum):
     diluc = "Diluc"
     diona = "Diona"
     dori = "Dori"
+    emilie = "Emilie"
     eula = "Eula"
     faruzan = "Faruzan"
     fischl = "Fischl"
@@ -43,6 +46,8 @@ class CharName(str, Enum):
     hu_tao = "Hu Tao"
     jean = "Jean"
     kaedehara_kazuha = "Kaedehara Kazuha"
+    kamisato_ayaka = "Kamisato Ayaka"
+    kamisato_ayato = "Kamisato Ayato"
     kaeya = "Kaeya"
     kaveh = "Kaveh"
     keqing = "Keqing"
@@ -108,6 +113,9 @@ class Char(BaseModel):
     cons: Cons = Cons.Constellation_1
     vision: Vision = Vision.none
     weapon: WeaponType = WeaponType.none
+    cons_name: str = ""
+    afln: str = ""
+    head: str = ""
 
     @property
     def attack(self):

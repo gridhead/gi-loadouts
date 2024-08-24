@@ -1,8 +1,8 @@
 from gi_loadouts.type.char import BaseStat, Char
 from gi_loadouts.type.rare import Rare
+from gi_loadouts.type.stat import STAT
 from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.weap import WeaponType
-from gi_loadouts.type.stat import STAT
 
 
 class Candace(Char):
@@ -14,3 +14,6 @@ class Candace(Char):
     ascn: BaseStat = BaseStat(attack=63.7182, defense=204.75, health_points=3262.3718)
     weapon: WeaponType = WeaponType.polearm
     vision: Vision = Vision.hydro
+    cons_name: str = "Sagitta Scutum"
+    afln: str = "Aaru Village"
+    head: str = "Golden Vow"

@@ -14,3 +14,6 @@ class Lisa(Char):
     ascn: BaseStat = BaseStat(attack=69.452835, defense=171.99, health_points=2870.8872)
     weapon: WeaponType = WeaponType.catalyst
     vision: Vision = Vision.electro
+    cons_name: str = "Tempus Fugit"
+    afln: str = "Knights of Favonius"
+    head: str = "Witch of Purple Rose"

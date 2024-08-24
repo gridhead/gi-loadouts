@@ -14,3 +14,6 @@ class Sigewinne(Char):
     ascn: BaseStat = BaseStat(attack=61.54885, defense=159.705, health_points=4267.1836)
     weapon: WeaponType = WeaponType.bow
     vision: Vision = Vision.hydro
+    cons_name: str = "Nereides"
+    afln: str = "Fortress of Meropide"
+    head: str = "Wondrous Dragonheir"

@@ -1,7 +1,7 @@
 from gi_loadouts.type.char import BaseStat, Char
 from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.stat import STAT
+from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.weap import WeaponType
 
 
@@ -14,3 +14,6 @@ class Gaming(Char):
     ascn: BaseStat = BaseStat(attack=90.479843139648, defense=210.89250183105, health_points=3425.4904785156)
     weapon: WeaponType = WeaponType.claymore
     vision: Vision = Vision.pyro
+    cons_name: str = "Leo Expergiscens"
+    afln: str = "Sword and Strongbox Secure Transport Agency (Faction)"
+    head: str = "Leonine Vanguard"

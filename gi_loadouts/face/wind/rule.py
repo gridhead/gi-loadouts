@@ -109,7 +109,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             kind = getattr(ArtiList, droptype.currentText().replace(" ", "_").replace("'", "").replace("-", "_"))
             droprare.clear()
             droprare.addItems([f"Star {indx.value}" for indx in kind.value.rare])
-            artiname.setText(truncate_text(getattr(kind.value, part).__name__))
+            artiname.setText(truncate_text(getattr(kind.value, part).__name__, 30))
 
     def change_data_by_changing_level_or_stat(self, droplevl: QComboBox, droptype: QComboBox, droprare: QComboBox, dropstat: QComboBox, statdata: QLineEdit, part: str) -> None:
         if droplevl.currentText().strip() != "" and droptype.currentText().strip() != "" and droprare.currentText().strip() != "" and dropstat.currentText().strip() != "":
@@ -134,21 +134,21 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             _ = [indx.setText("No artifact set bonus.") for indx in [self.pair_area_desc, self.quad_area_desc]]
             if self.collection.quad != "":
                 pack = getattr(ArtiList, self.collection.quad.replace(" ", "_").replace("'", "").replace("-", "_"))
-                self.pair_area_head.setText(f"<b>{truncate_text(pack.value.name, 32)}</b> (2)")
+                self.pair_area_head.setText(f"<b>{truncate_text(pack.value.name, 30)}</b> (2)")
                 self.pair_area_desc.setText(f"{pack.value.pairtext}")
-                self.quad_area_head.setText(f"<b>{truncate_text(pack.value.name, 32)}</b> (4)")
+                self.quad_area_head.setText(f"<b>{truncate_text(pack.value.name, 30)}</b> (4)")
                 self.quad_area_desc.setText(f"{pack.value.quadtext}")
             elif self.collection.pair != []:
                 if len(self.collection.pair) == 1:
                     pair_a = getattr(ArtiList, self.collection.pair[0].replace(" ", "_").replace("'", "").replace("-", "_"))
-                    self.pair_area_head.setText(f"<b>{truncate_text(pair_a.value.name, 32)}</b> (2)")
+                    self.pair_area_head.setText(f"<b>{truncate_text(pair_a.value.name, 30)}</b> (2)")
                     self.pair_area_desc.setText(f"{pair_a.value.pairtext}")
                 elif len(self.collection.pair) == 2:
                     pair_a = getattr(ArtiList, self.collection.pair[0].replace(" ", "_").replace("'", "").replace("-", "_"))
-                    self.pair_area_head.setText(f"<b>{truncate_text(pair_a.value.name, 32)}</b> (2)")
+                    self.pair_area_head.setText(f"<b>{truncate_text(pair_a.value.name, 30)}</b> (2)")
                     self.pair_area_desc.setText(f"{pair_a.value.pairtext}")
                     pair_b = getattr(ArtiList, self.collection.pair[1].replace(" ", "_").replace("'", "").replace("-", "_"))
-                    self.quad_area_head.setText(f"<b>{truncate_text(pair_b.value.name, 32)}</b> (2)")
+                    self.quad_area_head.setText(f"<b>{truncate_text(pair_b.value.name, 30)}</b> (2)")
                     self.quad_area_desc.setText(f"{pair_b.value.pairtext}")
 
     def remove_artifact(self, droptype: QComboBox, part: str) -> None:

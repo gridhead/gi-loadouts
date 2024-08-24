@@ -14,3 +14,6 @@ class Navia(Char):
     ascn: BaseStat = BaseStat(attack=112.3935546875, defense=253.56239318848, health_points=4044.0373535156)
     weapon: WeaponType = WeaponType.claymore
     vision: Vision = Vision.geo
+    cons_name: str = "Rosa Multiflora"
+    afln: str = "Spina di Rosula"
+    head: str = "Helm of the Radiant Rose"

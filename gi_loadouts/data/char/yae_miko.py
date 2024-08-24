@@ -14,3 +14,6 @@ class YaeMiko(Char):
     ascn: BaseStat = BaseStat(attack=108.57064, defense=181.818, health_points=3315.8757)
     weapon: WeaponType = WeaponType.catalyst
     vision: Vision = Vision.electro
+    cons_name: str = "Divina Vulpes"
+    afln: str = "Grand Narukami Shrine"
+    head: str = "Astute Amusement"

@@ -14,3 +14,6 @@ class Aloy(Char):
     ascn: BaseStat = BaseStat(attack=74.77612, defense=216.216, health_points=3484.214)
     weapon: WeaponType = WeaponType.bow
     vision: Vision = Vision.cryo
+    cons_name: str = "Nora Fortis"
+    afln: str = "Wandering Heroine"
+    head: str = "Savior From Another World"

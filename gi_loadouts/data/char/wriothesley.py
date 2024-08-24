@@ -14,3 +14,6 @@ class Wriothesley(Char):
     ascn: BaseStat = BaseStat(attack=99.39566, defense=243.9801, health_points=4345.48)
     weapon: WeaponType = WeaponType.catalyst
     vision: Vision = Vision.cryo
+    cons_name: str = "Cerberus"
+    afln: str = "Fortress of Meropide"
+    head: str = "Emissary of Solitary Iniquity"

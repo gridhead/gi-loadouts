@@ -14,3 +14,6 @@ class KamisatoAyaka(Char):
     ascn: BaseStat = BaseStat(attack=109.33523, defense=250.614, health_points=4110.59)
     weapon: WeaponType = WeaponType.sword
     vision: Vision = Vision.cryo
+    cons_name: str = "Grus Nivis"
+    afln: str = "Yashiro Commission"
+    head: str = "Frostflake Heron"

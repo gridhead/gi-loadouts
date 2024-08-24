@@ -14,3 +14,6 @@ class KamisatoAyato(Char):
     ascn: BaseStat = BaseStat(attack=95.57275, defense=245.7, health_points=4384.629)
     weapon: WeaponType = WeaponType.sword
     vision: Vision = Vision.hydro
+    cons_name: str = "Cypressus Custos"
+    afln: str = "Yashiro Commission"
+    head: str = "Pillar of Fortitude"

@@ -1,7 +1,7 @@
 from gi_loadouts.type.char import BaseStat, Char
 from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.stat import STAT
+from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.weap import WeaponType
 
 
@@ -14,3 +14,6 @@ class Gorou(Char):
     ascn: BaseStat = BaseStat(attack=54.797653, defense=194.5125, health_points=2870.8872)
     weapon: WeaponType = WeaponType.bow
     vision: Vision = Vision.geo
+    cons_name: str = "Canis Bellatoris"
+    afln: str = "Watatsumi Island"
+    head: str = "Canine Warrior"

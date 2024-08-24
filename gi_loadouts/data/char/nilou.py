@@ -14,3 +14,6 @@ class Nilou(Char):
     ascn: BaseStat = BaseStat(attack=73.39987, defense=232.9236, health_points=4854.4106)
     weapon: WeaponType = WeaponType.sword
     vision: Vision = Vision.hydro
+    cons_name: str = "Lotos Somno"
+    afln: str = "Zubayr Theater"
+    head: str = "Dance of Lotuslight"

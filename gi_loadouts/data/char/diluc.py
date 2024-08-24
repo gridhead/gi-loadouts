@@ -14,3 +14,6 @@ class Diluc(Char):
     ascn: BaseStat = BaseStat(attack=107.04148, defense=250.614, health_points=4149.7383)
     weapon: WeaponType = WeaponType.claymore
     vision: Vision = Vision.pyro
+    cons_name: str = "Noctua"
+    afln: str = "Dawn Winery"
+    head: str = "The Dark Side of Dawn"

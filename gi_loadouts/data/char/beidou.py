@@ -14,3 +14,6 @@ class Beidou(Char):
     ascn: BaseStat = BaseStat(attack=67.54129, defense=194.5125, health_points=3914.8462)
     weapon: WeaponType = WeaponType.claymore
     vision: Vision = Vision.electro
+    cons_name: str = "Victor Mare"
+    afln: str = "The Crux"
+    head: str = "Uncrowned Lord of the Ocean"

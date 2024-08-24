@@ -1,7 +1,7 @@
 from gi_loadouts.type.char import BaseStat, Char
 from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.stat import STAT
+from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.weap import WeaponType
 
 
@@ -14,3 +14,6 @@ class Freminet(Char):
     ascn: BaseStat = BaseStat(attack=76.461837768555, defense=212.53050231934, health_points=3621.2326660156)
     weapon: WeaponType = WeaponType.claymore
     vision: Vision = Vision.cryo
+    cons_name: str = "Automaton"
+    afln: str = "Hotel Bouffes d'ete"
+    head: str = "Yearning for Unseen Depths"
