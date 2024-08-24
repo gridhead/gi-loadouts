@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="weap">
+    <file>imgs/weap/weap.png</file>
+  </qresource>
+</RCC>

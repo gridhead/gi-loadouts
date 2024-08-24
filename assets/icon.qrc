@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>font/icon/icon-bold.ttf</file>
+    <file>font/icon/icon-rlar.ttf</file>
+  </qresource>
+</RCC>
