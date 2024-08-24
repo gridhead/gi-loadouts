@@ -23,7 +23,7 @@ from gi_loadouts.type.char import CharName
 from gi_loadouts.type.char.cons import Cons
 from gi_loadouts.type.levl import Level
 from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.vson import __visioncolour__
+from gi_loadouts.type.vson import Vision, __visioncolour__
 from gi_loadouts.type.weap import WeaponStatType, WeaponType
 
 
@@ -50,6 +50,22 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         for item in [self.arti_fwol_type, self.arti_pmod_type, self.arti_sdoe_type, self.arti_gboe_type, self.arti_ccol_type]:
             item.addItems([item.value.name for item in ArtiList])
 
+    def manage_changing_appearence(self, colour):
+        self.head_main.setStyleSheet(f"#head_main {{background-color: {colour}; border-radius: 5px;}}")
+        self.head_area.setStyleSheet(f"#head_area {{border-top-right-radius: 47px; border-bottom-right-radius: 47px; border-top-left-radius: 5px; border-bottom-left-radius: 5px; background-color: {colour};}}")
+        self.bone_area_head_area.setStyleSheet(f"#bone_area_head_area {{border-top-left-radius: 5px; border-top-right-radius: 5px; background-color: {colour};}}")
+        self.bone_area.setStyleSheet(f"#bone_area {{border: 1px solid {colour}; border-radius: 5px;}}")
+        self.arti_area_head_area.setStyleSheet(f"#arti_area_head_area {{border-top-left-radius: 5px; border-top-right-radius: 5px; background-color: {colour};}}")
+        self.arti_area.setStyleSheet(f"#arti_area {{border: 1px solid {colour}; border-radius: 5px;}}")
+        self.weap_area_head_area.setStyleSheet(f"#weap_area_head_area {{border-top-left-radius: 5px; border-top-right-radius: 5px; background-color: {colour};}}")
+        self.weap_area.setStyleSheet(f"#weap_area {{border: 1px solid {colour}; border-radius: 5px;}}")
+        self.arti_fwol_type_area.setStyleSheet(f"#arti_fwol_type_area {{background-color: {colour};}}")
+        self.arti_pmod_type_area.setStyleSheet(f"#arti_pmod_type_area {{background-color: {colour};}}")
+        self.arti_sdoe_type_area.setStyleSheet(f"#arti_sdoe_type_area {{background-color: {colour};}}")
+        self.arti_gboe_type_area.setStyleSheet(f"#arti_gboe_type_area {{background-color: {colour};}}")
+        self.arti_ccol_type_area.setStyleSheet(f"#arti_ccol_type_area {{background-color: {colour};}}")
+        self.statarea.setStyleSheet(f"#statarea {{background-color: {colour};}}")
+
     def handle_char_data(self, _):
         if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
             char = __charmaps__[self.head_char_name.currentText()]()
@@ -62,8 +78,9 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.head_char_data_hlpt.setText(f"{round(char.health_points)}")
             self.head_char_icon_subs.setToolTip(f"{char.seco.stat_name.value}")
             self.head_char_data_subs.setText(f"{round(char.seco.stat_data, 1)}")
-            self.head_main.setStyleSheet(f"#head_main {{background-color: {__visioncolour__[char.vision]}; border-radius: 5px;}}")
-            self.head_area.setStyleSheet(f"#head_area {{border-top-right-radius: 47px; border-bottom-right-radius: 47px; border-top-left-radius: 5px; border-bottom-left-radius: 5px; background-color: {__visioncolour__[char.vision]};}}")
+            self.head_area_line_prim.setText(f"<b>{char.head}</b> - {char.cons_name}" + f" ({char.afln})" if char.afln != "" else f"<b>{char.head}</b> - {char.cons_name}")
+            self.head_area_line_seco.setText(f"<i>{char.name} is a {char.weapon.value.lower()}-wielding {char.vision.value if char.vision != Vision.none else ""} character of {char.rare.value}-star rarity.</i>")
+            self.manage_changing_appearence(__visioncolour__[char.vision])
             self.weap_area_type.clear()
             self.weap_area_type.addItem(f"{char.weapon.value}")
 

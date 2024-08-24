@@ -160,7 +160,7 @@
       <string>ATK</string>
      </property>
      <property name="styleSheet">
-      <string notr="true">#head_char_icon_attk {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
+      <string notr="true">#head_char_icon_attk {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;; color: rgb(192, 0, 0);}</string>
      </property>
      <property name="text">
       <string>skull</string>
@@ -277,7 +277,7 @@
       <string>DEF</string>
      </property>
      <property name="styleSheet">
-      <string notr="true">#head_char_icon_dfns {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
+      <string notr="true">#head_char_icon_dfns {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;; color: rgb(0, 0, 192);}</string>
      </property>
      <property name="text">
       <string>shield</string>
@@ -320,7 +320,7 @@
       <string>HP</string>
      </property>
      <property name="styleSheet">
-      <string notr="true">#head_char_icon_hlpt {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
+      <string notr="true">#head_char_icon_hlpt {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;; color: rgb(0, 192, 0);}</string>
      </property>
      <property name="text">
       <string>heart</string>
@@ -397,7 +397,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#head_char_icon_subs {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
+      <string notr="true">#head_char_icon_subs {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;; color: rgb(208, 208, 0);}</string>
      </property>
      <property name="text">
       <string>star</string>
@@ -485,7 +485,7 @@
       <rect>
        <x>5</x>
        <y>35</y>
-       <width>500</width>
+       <width>800</width>
        <height>25</height>
       </rect>
      </property>
@@ -497,15 +497,18 @@
      </property>
      <property name="minimumSize">
       <size>
-       <width>500</width>
+       <width>800</width>
        <height>25</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
-       <width>500</width>
+       <width>800</width>
        <height>25</height>
       </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
      </property>
      <property name="text">
       <string>Head area line SECO</string>
@@ -516,7 +519,7 @@
       <rect>
        <x>5</x>
        <y>5</y>
-       <width>500</width>
+       <width>800</width>
        <height>25</height>
       </rect>
      </property>
@@ -528,15 +531,18 @@
      </property>
      <property name="minimumSize">
       <size>
-       <width>500</width>
+       <width>800</width>
        <height>25</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
-       <width>500</width>
+       <width>800</width>
        <height>25</height>
       </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 75 15pt &quot;IBM Plex Sans&quot;;</string>
      </property>
      <property name="text">
       <string>Head area line PRIM</string>
@@ -623,9 +629,6 @@
      </property>
      <property name="text">
       <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap resource="face.qrc">:/face/imgs/char/face/lumine.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -6574,7 +6577,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">#weap_area_stat_icon {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
+       <string notr="true">#weap_area_stat_icon {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;; color: rgb(208, 208, 0);}</string>
       </property>
       <property name="text">
        <string>star</string>
@@ -6654,7 +6657,7 @@
        <string>ATK</string>
       </property>
       <property name="styleSheet">
-       <string notr="true">#weap_area_batk_icon {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
+       <string notr="true">#weap_area_batk_icon {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;; color: rgb(192, 0, 0);}</string>
       </property>
       <property name="text">
        <string>skull</string>
@@ -6728,7 +6731,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">#weap_area_refn_body {font: 10pt &quot;IBM Plex Sans&quot;; background-color: rgba(128, 128, 128, 64);}</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::NoFrame</enum>
