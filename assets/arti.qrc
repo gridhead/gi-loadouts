@@ -1,6 +1,7 @@
 <RCC>
   <qresource prefix="arti">
     <file>imgs/arti/ccol.png</file>
+    <file>imgs/arti/main.png</file>
     <file>imgs/arti/fwol.png</file>
     <file>imgs/arti/gboe.png</file>
     <file>imgs/arti/pmod.png</file>

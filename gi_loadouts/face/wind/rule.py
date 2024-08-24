@@ -1,3 +1,4 @@
+from PySide6.QtGui import QPixmap
 from PySide6.QtWidgets import QComboBox, QLabel, QLineEdit, QMainWindow, QMessageBox
 
 from gi_loadouts.data.arti import ArtiList
@@ -53,13 +54,16 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
             char = __charmaps__[self.head_char_name.currentText()]()
             char.levl = getattr(Level, self.head_char_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
-            self.head_char_data_vson.setText(char.vision.value)
+            self.head_vson.setPixmap(QPixmap(f":vson/imgs/vson/{char.vision.value.lower()}.png"))
+            self.head_area_back.setPixmap(QPixmap(f":name/imgs/char/name/{self.head_char_name.currentText().replace(" ", "_").lower()}.png"))
+            self.head_face_back.setPixmap(QPixmap(f":face/imgs/char/face/{self.head_char_name.currentText().replace(" ", "_").lower()}.png"))
             self.head_char_data_attk.setText(f"{round(char.attack)}")
             self.head_char_data_dfns.setText(f"{round(char.defense)}")
             self.head_char_data_hlpt.setText(f"{round(char.health_points)}")
             self.head_char_icon_subs.setToolTip(f"{char.seco.stat_name.value}")
             self.head_char_data_subs.setText(f"{round(char.seco.stat_data, 1)}")
-            self.head_area.setStyleSheet(f"#head_area {{background-color: {__visioncolour__[char.vision]};}}")
+            self.head_main.setStyleSheet(f"#head_main {{background-color: {__visioncolour__[char.vision]}; border-radius: 5px;}}")
+            self.head_area.setStyleSheet(f"#head_area {{border-top-right-radius: 47px; border-bottom-right-radius: 47px; border-top-left-radius: 5px; border-bottom-left-radius: 5px; background-color: {__visioncolour__[char.vision]};}}")
             self.weap_area_type.clear()
             self.weap_area_type.addItem(f"{char.weapon.value}")
 
