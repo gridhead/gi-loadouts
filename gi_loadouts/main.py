@@ -15,7 +15,6 @@ def load_custom_font():
         ":text/font/text/sans-bdit.ttf",
         ":text/font/text/sans-rlit.ttf",
         ":icon/font/icon/icon-bold.ttf",
-        ":icon/font/icon/icon-rlar.ttf",
     ]
     for indx in fontlist:
         QFontDatabase.addApplicationFont(indx)
