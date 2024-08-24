@@ -12,6 +12,7 @@ from gi_loadouts.type.weap import WeaponType
 
 
 class CharName(str, Enum):
+    aether = "Aether"
     albedo = "Albedo"
     alhaitham = "Alhaitham"
     aloy = "Aloy"
@@ -57,6 +58,7 @@ class CharName(str, Enum):
     kuki_shinobu = "Kuki Shinobu"
     layla = "Layla"
     lisa = "Lisa"
+    lumine = "Lumine"
     lynette = "Lynette"
     lyney = "Lyney"
     mika = "Mika"
@@ -81,7 +83,6 @@ class CharName(str, Enum):
     tartaglia = "Tartaglia"
     thoma = "Thoma"
     tighnari = "Tighnari"
-    traveler = "Traveler"
     venti = "Venti"
     wanderer = "Wanderer"
     wriothesley = "Wriothesley"
@@ -108,7 +109,7 @@ class Char(BaseModel):
     __statname__: STAT = STAT.none
     __statdata__: dict = {}
     rare: Rare = Rare.Star_4
-    name: CharName = CharName.traveler
+    name: CharName = CharName.lumine
     levl: Level = Level.Level_01_20_Rank_0
     cons: Cons = Cons.Constellation_1
     vision: Vision = Vision.none

@@ -1,3 +1,4 @@
+from gi_loadouts.data.char.aether import Aether
 from gi_loadouts.data.char.albedo import Albedo
 from gi_loadouts.data.char.alhaitham import Alhaitham
 from gi_loadouts.data.char.aloy import Aloy
@@ -43,6 +44,7 @@ from gi_loadouts.data.char.kujou_sara import KujouSara
 from gi_loadouts.data.char.kuki_shinobu import KukiShinobu
 from gi_loadouts.data.char.layla import Layla
 from gi_loadouts.data.char.lisa import Lisa
+from gi_loadouts.data.char.lumine import Lumine
 from gi_loadouts.data.char.lynette import Lynette
 from gi_loadouts.data.char.lyney import Lyney
 from gi_loadouts.data.char.mika import Mika
@@ -67,7 +69,6 @@ from gi_loadouts.data.char.sucrose import Sucrose
 from gi_loadouts.data.char.tartaglia import Tartaglia
 from gi_loadouts.data.char.thoma import Thoma
 from gi_loadouts.data.char.tighnari import Tighnari
-from gi_loadouts.data.char.traveler import Traveler
 from gi_loadouts.data.char.venti import Venti
 from gi_loadouts.data.char.wanderer import Wanderer
 from gi_loadouts.data.char.wriothesley import Wriothesley
@@ -84,7 +85,9 @@ from gi_loadouts.data.char.yoimiya import Yoimiya
 from gi_loadouts.data.char.yun_jin import YunJin
 from gi_loadouts.data.char.zhongli import Zhongli
 
+
 __charmaps__ = {
+    "Aether": Aether,
     "Albedo": Albedo,
     "Alhaitham": Alhaitham,
     "Aloy": Aloy,
@@ -130,6 +133,7 @@ __charmaps__ = {
     "Kuki Shinobu": KukiShinobu,
     "Layla": Layla,
     "Lisa": Lisa,
+    "Lumine": Lumine,
     "Lynette": Lynette,
     "Lyney": Lyney,
     "Mika": Mika,
@@ -154,7 +158,6 @@ __charmaps__ = {
     "Tartaglia": Tartaglia,
     "Thoma": Thoma,
     "Tighnari": Tighnari,
-    "Traveler": Traveler,
     "Venti": Venti,
     "Wanderer": Wanderer,
     "Wriothesley": Wriothesley,

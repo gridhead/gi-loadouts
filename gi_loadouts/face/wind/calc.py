@@ -46,7 +46,7 @@ class Assess:
             The SUBSTATS need to be calculated before the BASE due to implications of changes in BASE attributes
             on characters that scale on ATK %, DEF % and HP %.
 
-            ATK % scaling = Amber, Charlotte, Chongyun, Collei, Faruzan, Fischl, Freminet, Gaming, Kujou Sara, Rosaria, Shenhe, Thoma, Traveler, Xianyun, Xingqiu, Xinyan,
+            ATK % scaling = Aether, Amber, Charlotte, Chongyun, Collei, Faruzan, Fischl, Freminet, Gaming, Kujou Sara, Lumine, Rosaria, Shenhe, Thoma, Xianyun, Xingqiu, Xinyan,
             DEF % scaling = Noelle,
             HP  % scaling = Baizhu, Barbara, Candace, Chevreuse, Dehya, Dori, Kirara, Kuki Shinobu, Mika, Nilou, Yaoyao
             """
