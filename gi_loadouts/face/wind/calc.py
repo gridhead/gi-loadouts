@@ -182,10 +182,10 @@ class Assess:
                 for indx in ["pairdata_a", "pairdata_b", "quaddata"]:
                     lict = getattr(self.c_team, indx)
                     if len(indx) != 0:
-                        for advn in lict:
-                            if advn.stat_name == item:
+                        for jndx in lict:
+                            if jndx.stat_name == item:
                                 prev = getattr(self.c_tyvt, self.c_tyvt.revmap[item]).stat_data
-                                curt = advn.stat_data
+                                curt = jndx.stat_data
                                 setattr(self.c_tyvt, self.c_tyvt.revmap[item], ATTR(stat_name=item, stat_data=prev + curt))
 
     def calc_stat(self):

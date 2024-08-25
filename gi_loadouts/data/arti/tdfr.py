@@ -6,9 +6,9 @@ from gi_loadouts.type.stat import ATTR, STAT
 
 class team(BaseModel):
     __teamname__ = "Thundering Fury"
-    __pairdata__ = ATTR(stat_name=STAT.damage_bonus_electro_perc, stat_data=15)
+    __pairdata__ = [ATTR(stat_name=STAT.damage_bonus_electro_perc, stat_data=15)]
     __pairtext__ = "Electro DMG Bonus +15%"
-    __quaddata__ = ATTR()
+    __quaddata__ = []
     __quadtext__ = "Increases DMG caused by Overloaded, Electro-Charged, Superconduct, and Hyperbloom by 40%, and the DMG Bonus conferred by Aggravate is increased by 20%. When Quicken or the aforementioned Elemental Reactions are triggered, Elemental Skill CD is decreased by 1s. Can only occur once every 0.8s"
 
 
