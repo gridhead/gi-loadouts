@@ -81,6 +81,11 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.head_area_line_prim.setText(f"<b>{char.head}</b> - {char.cons_name}" + f" ({char.afln})" if char.afln != "" else f"<b>{char.head}</b> - {char.cons_name}")
             self.head_area_line_seco.setText(f"<i>{char.name} is a {char.weapon.value.lower()}-wielding {char.vision.value if char.vision != Vision.none else ""} character of {char.rare.value}-star rarity.</i>")
             self.manage_changing_appearence(__visioncolour__[char.vision])
+
+    def format_weapon_by_char_change(self, _):
+        if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
+            char = __charmaps__[self.head_char_name.currentText()]()
+            char.levl = getattr(Level, self.head_char_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
             self.weap_area_type.clear()
             self.weap_area_type.addItem(f"{char.weapon.value}")
 
