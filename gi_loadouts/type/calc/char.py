@@ -46,6 +46,7 @@ class Counting(BaseModel):
     health_points_perc: ATTR = ATTR(stat_name=STAT.health_points_perc, stat_data=0.0)
     attack_perc: ATTR = ATTR(stat_name=STAT.attack_perc, stat_data=0.0)
     defense_perc: ATTR = ATTR(stat_name=STAT.defense_perc, stat_data=0.0)
+    none: ATTR = ATTR(stat_name=STAT.none, stat_data=0.0)
 
 
 class Addendum(BaseModel):
@@ -92,4 +93,5 @@ class CHAR(BaseStats, AdvancedStats, ElementalStats, Counting, Addendum):
         STAT.resistance_geo_perc: "resistance_geo_perc",
         STAT.damage_bonus_physical_perc: "damage_bonus_physical_perc",
         STAT.resistance_physical_perc: "resistance_physical_perc",
+        STAT.none: "none"
     }
