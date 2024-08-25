@@ -22,17 +22,17 @@ class MainWindow(Rule):
         self.convey_weapon_levl_change(0)
         self.convey_refinement_change(0)
         for item in [
-            (self.arti_fwol_levl, self.arti_fwol_type, self.arti_fwol_rare, self.arti_fwol_name_main, self.arti_fwol_data_main, "fwol", self.arti_fwol_data_main, self.arti_fwol_type_name),
-            (self.arti_pmod_levl, self.arti_pmod_type, self.arti_pmod_rare, self.arti_pmod_name_main, self.arti_pmod_data_main, "pmod", self.arti_pmod_data_main, self.arti_pmod_type_name),
-            (self.arti_sdoe_levl, self.arti_sdoe_type, self.arti_sdoe_rare, self.arti_sdoe_name_main, self.arti_sdoe_data_main, "sdoe", self.arti_sdoe_data_main, self.arti_sdoe_type_name),
-            (self.arti_gboe_levl, self.arti_gboe_type, self.arti_gboe_rare, self.arti_gboe_name_main, self.arti_gboe_data_main, "gboe", self.arti_gboe_data_main, self.arti_gboe_type_name),
-            (self.arti_ccol_levl, self.arti_ccol_type, self.arti_ccol_rare, self.arti_ccol_name_main, self.arti_ccol_data_main, "ccol", self.arti_ccol_data_main, self.arti_ccol_type_name),
+            (self.arti_fwol_levl, self.arti_fwol_type, self.arti_fwol_rare, self.arti_fwol_name_main, self.arti_fwol_data_main, "fwol", self.arti_fwol_data_main, self.arti_fwol_type_name, self.arti_fwol_head_area),
+            (self.arti_pmod_levl, self.arti_pmod_type, self.arti_pmod_rare, self.arti_pmod_name_main, self.arti_pmod_data_main, "pmod", self.arti_pmod_data_main, self.arti_pmod_type_name, self.arti_pmod_head_area),
+            (self.arti_sdoe_levl, self.arti_sdoe_type, self.arti_sdoe_rare, self.arti_sdoe_name_main, self.arti_sdoe_data_main, "sdoe", self.arti_sdoe_data_main, self.arti_sdoe_type_name, self.arti_sdoe_head_area),
+            (self.arti_gboe_levl, self.arti_gboe_type, self.arti_gboe_rare, self.arti_gboe_name_main, self.arti_gboe_data_main, "gboe", self.arti_gboe_data_main, self.arti_gboe_type_name, self.arti_gboe_head_area),
+            (self.arti_ccol_levl, self.arti_ccol_type, self.arti_ccol_rare, self.arti_ccol_name_main, self.arti_ccol_data_main, "ccol", self.arti_ccol_data_main, self.arti_ccol_type_name, self.arti_ccol_head_area),
         ]:
             self.change_rarity_by_changing_type(item[1], item[2], item[6], item[5])
             self.change_artifact_team_by_changing_type(item[1], item[5])
             self.change_data_by_changing_level_or_stat(item[0], item[1], item[2], item[3], item[4], item[5])
             self.change_artifact_substats_by_changing_rarity_or_mainstat(item[2], item[3], item[5])
-            self.change_levels_by_changing_rarity(item[0], item[2])
+            self.change_levels_backdrop_by_changing_rarity(item[0], item[8], item[2])
 
     def initialize_events(self):
         self.head_scan.clicked.connect(self.show_output_window)
@@ -43,11 +43,11 @@ class MainWindow(Rule):
         self.weap_area_levl.currentIndexChanged.connect(self.convey_weapon_levl_change)
         self.weap_area_refn.currentIndexChanged.connect(self.convey_refinement_change)
         for item in [
-            (self.arti_fwol_levl, self.arti_fwol_type, self.arti_fwol_rare, self.arti_fwol_name_main, self.arti_fwol_data_main, "fwol", self.arti_fwol_type_name),
-            (self.arti_pmod_levl, self.arti_pmod_type, self.arti_pmod_rare, self.arti_pmod_name_main, self.arti_pmod_data_main, "pmod", self.arti_pmod_type_name),
-            (self.arti_sdoe_levl, self.arti_sdoe_type, self.arti_sdoe_rare, self.arti_sdoe_name_main, self.arti_sdoe_data_main, "sdoe", self.arti_sdoe_type_name),
-            (self.arti_gboe_levl, self.arti_gboe_type, self.arti_gboe_rare, self.arti_gboe_name_main, self.arti_gboe_data_main, "gboe", self.arti_gboe_type_name),
-            (self.arti_ccol_levl, self.arti_ccol_type, self.arti_ccol_rare, self.arti_ccol_name_main, self.arti_ccol_data_main, "ccol", self.arti_ccol_type_name),
+            (self.arti_fwol_levl, self.arti_fwol_type, self.arti_fwol_rare, self.arti_fwol_name_main, self.arti_fwol_data_main, "fwol", self.arti_fwol_type_name, self.arti_fwol_head_area),
+            (self.arti_pmod_levl, self.arti_pmod_type, self.arti_pmod_rare, self.arti_pmod_name_main, self.arti_pmod_data_main, "pmod", self.arti_pmod_type_name, self.arti_pmod_head_area),
+            (self.arti_sdoe_levl, self.arti_sdoe_type, self.arti_sdoe_rare, self.arti_sdoe_name_main, self.arti_sdoe_data_main, "sdoe", self.arti_sdoe_type_name, self.arti_sdoe_head_area),
+            (self.arti_gboe_levl, self.arti_gboe_type, self.arti_gboe_rare, self.arti_gboe_name_main, self.arti_gboe_data_main, "gboe", self.arti_gboe_type_name, self.arti_gboe_head_area),
+            (self.arti_ccol_levl, self.arti_ccol_type, self.arti_ccol_rare, self.arti_ccol_name_main, self.arti_ccol_data_main, "ccol", self.arti_ccol_type_name, self.arti_ccol_head_area),
         ]:
             item[1].currentIndexChanged.connect(lambda _, a_type=item[1], a_rare=item[2], a_name=item[6], a_id=item[5]: self.change_rarity_by_changing_type(a_type, a_rare, a_name, a_id))
             item[1].currentIndexChanged.connect(lambda _, a_type=item[1], a_id=item[5]: self.change_artifact_team_by_changing_type(a_type, a_id))
@@ -56,7 +56,7 @@ class MainWindow(Rule):
             item[3].currentIndexChanged.connect(lambda _, a_levl=item[0], a_type=item[1], a_rare=item[2], a_name=item[3], a_data=item[4], a_id=item[5]: self.change_data_by_changing_level_or_stat(a_levl, a_type, a_rare, a_name, a_data, a_id))
             item[2].currentIndexChanged.connect(lambda _, a_rare=item[2], a_name=item[3], a_id=item[5]: self.change_artifact_substats_by_changing_rarity_or_mainstat(a_rare, a_name, a_id))
             item[3].currentIndexChanged.connect(lambda _, a_rare=item[2], a_name=item[3], a_id=item[5]: self.change_artifact_substats_by_changing_rarity_or_mainstat(a_rare, a_name, a_id))
-            item[2].currentIndexChanged.connect(lambda _, a_levl=item[0], a_rare=item[2]: self.change_levels_by_changing_rarity(a_levl, a_rare))
+            item[2].currentIndexChanged.connect(lambda _, a_levl=item[0], a_back=item[7], a_rare=item[2]: self.change_levels_backdrop_by_changing_rarity(a_levl, a_back, a_rare))
         for part in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
             for alfa in ["a", "b", "c", "d"]:
                 drop, text = getattr(self, f"arti_{part}_name_{alfa}"), getattr(self, f"arti_{part}_data_{alfa}")

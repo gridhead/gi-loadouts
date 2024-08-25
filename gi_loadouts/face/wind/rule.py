@@ -22,7 +22,7 @@ from gi_loadouts.type.arti.base import (
 from gi_loadouts.type.char import CharName
 from gi_loadouts.type.char.cons import Cons
 from gi_loadouts.type.levl import Level
-from gi_loadouts.type.rare import Rare
+from gi_loadouts.type.rare import Rare, __rarecolour__
 from gi_loadouts.type.vson import Vision, __visioncolour__
 from gi_loadouts.type.weap import WeaponStatType, WeaponType
 
@@ -101,6 +101,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             weap = Family[kind][name]
             self.weap_area_levl.addItems([item.value.name for item in weap.levl_bind])
             self.weap_area_refn.addItems([f"Refinement {indx + 1}" for indx in range(len(weap.refi_list))])
+            self.weap_port_area.setPixmap(QPixmap(__rarecolour__[weap.rare]))
 
     def convey_weapon_levl_change(self, _):
         if self.weap_area_type.currentText().strip() != "" and self.weap_area_name.currentText().strip() != "" and self.weap_area_levl.currentText().strip() != "":
@@ -208,11 +209,13 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
                 getattr(self, f"arti_{part}_name_{alfa}").clear()
                 getattr(self, f"arti_{part}_name_{alfa}").addItems(["None"])
 
-    def change_levels_by_changing_rarity(self, droplevl: QComboBox, droprare: QComboBox) -> None:
+    def change_levels_backdrop_by_changing_rarity(self, droplevl: QComboBox, backdrop: QLabel, droprare: QComboBox) -> None:
         if droprare.currentText().strip() != "":
             rare = getattr(Rare, droprare.currentText().replace(" ", "_"))
             droplevl.clear()
             droplevl.addItems([item.value.name for item in ArtiLevl if rare in item.value.rare])
+            rare = getattr(Rare, droprare.currentText().replace(" ", "_"))
+            backdrop.setPixmap(QPixmap(__rarecolour__[rare]))
 
     def render_lineedit_readonly_when_none(self, dropstat: QComboBox, lineedit: QLineEdit) -> None:
         if dropstat.currentText().strip() == "None":

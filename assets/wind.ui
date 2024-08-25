@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1270</width>
-    <height>890</height>
+    <height>940</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -19,13 +19,13 @@
   <property name="minimumSize">
    <size>
     <width>1270</width>
-    <height>890</height>
+    <height>940</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>1270</width>
-    <height>890</height>
+    <height>940</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -44,13 +44,13 @@
    <property name="minimumSize">
     <size>
      <width>1270</width>
-     <height>870</height>
+     <height>915</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
      <width>1270</width>
-     <height>870</height>
+     <height>920</height>
     </size>
    </property>
    <widget class="QFrame" name="head_area">
@@ -743,7 +743,7 @@
       <x>260</x>
       <y>105</y>
       <width>1005</width>
-      <height>505</height>
+      <height>530</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -755,13 +755,13 @@
     <property name="minimumSize">
      <size>
       <width>1005</width>
-      <height>505</height>
+      <height>530</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
       <width>1005</width>
-      <height>505</height>
+      <height>530</height>
      </size>
     </property>
     <property name="styleSheet">
@@ -850,7 +850,7 @@
        <x>5</x>
        <y>35</y>
        <width>195</width>
-       <height>425</height>
+       <height>450</height>
       </rect>
      </property>
      <property name="sizePolicy">
@@ -862,13 +862,13 @@
      <property name="minimumSize">
       <size>
        <width>195</width>
-       <height>425</height>
+       <height>450</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
        <width>195</width>
-       <height>425</height>
+       <height>450</height>
       </size>
      </property>
      <property name="styleSheet">
@@ -884,7 +884,7 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>230</y>
+        <y>255</y>
         <width>195</width>
         <height>35</height>
        </rect>
@@ -955,7 +955,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>395</y>
+        <y>420</y>
         <width>130</width>
         <height>25</height>
        </rect>
@@ -986,7 +986,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>365</y>
+        <y>390</y>
         <width>130</width>
         <height>25</height>
        </rect>
@@ -1017,7 +1017,7 @@
       <property name="geometry">
        <rect>
         <x>140</x>
-        <y>335</y>
+        <y>360</y>
         <width>50</width>
         <height>25</height>
        </rect>
@@ -1057,7 +1057,7 @@
       <property name="geometry">
        <rect>
         <x>140</x>
-        <y>305</y>
+        <y>330</y>
         <width>50</width>
         <height>25</height>
        </rect>
@@ -1097,7 +1097,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>305</y>
+        <y>330</y>
         <width>130</width>
         <height>25</height>
        </rect>
@@ -1128,7 +1128,7 @@
       <property name="geometry">
        <rect>
         <x>140</x>
-        <y>365</y>
+        <y>390</y>
         <width>50</width>
         <height>25</height>
        </rect>
@@ -1168,7 +1168,7 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>265</y>
+        <y>290</y>
         <width>195</width>
         <height>35</height>
        </rect>
@@ -1276,7 +1276,7 @@
       <property name="geometry">
        <rect>
         <x>140</x>
-        <y>395</y>
+        <y>420</y>
         <width>50</width>
         <height>25</height>
        </rect>
@@ -1316,7 +1316,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>335</y>
+        <y>360</y>
         <width>130</width>
         <height>25</height>
        </rect>
@@ -1347,7 +1347,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>170</y>
+        <y>195</y>
         <width>185</width>
         <height>25</height>
        </rect>
@@ -1378,7 +1378,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>200</y>
+        <y>225</y>
         <width>90</width>
         <height>25</height>
        </rect>
@@ -1409,7 +1409,7 @@
       <property name="geometry">
        <rect>
         <x>100</x>
-        <y>200</y>
+        <y>225</y>
         <width>90</width>
         <height>25</height>
        </rect>
@@ -1436,13 +1436,13 @@
        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
       </property>
      </widget>
-     <widget class="QFrame" name="arti_fwol_head_area">
+     <widget class="QLabel" name="arti_fwol_head_area">
       <property name="geometry">
        <rect>
         <x>5</x>
         <y>5</y>
         <width>185</width>
-        <height>160</height>
+        <height>185</height>
        </rect>
       </property>
       <property name="sizePolicy">
@@ -1454,67 +1454,73 @@
       <property name="minimumSize">
        <size>
         <width>185</width>
-        <height>160</height>
+        <height>185</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
         <width>185</width>
-        <height>160</height>
+        <height>185</height>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">#arti_fwol_head_area {border-radius: 5px; background-color: rgba(128, 128, 128, 64);}</string>
+       <string notr="true"/>
       </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+      <property name="text">
+       <string/>
       </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+      <property name="pixmap">
+       <pixmap resource="rare.qrc">:/rare/imgs/rare/star_1.webp</pixmap>
       </property>
-      <widget class="QLabel" name="arti_fwol_head_icon">
-       <property name="geometry">
-        <rect>
-         <x>35</x>
-         <y>25</y>
-         <width>115</width>
-         <height>115</height>
-        </rect>
-       </property>
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>115</width>
-         <height>115</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>115</width>
-         <height>115</height>
-        </size>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap resource="arti.qrc">:/arti/imgs/arti/fwol.png</pixmap>
-       </property>
-       <property name="scaledContents">
-        <bool>true</bool>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-       <property name="margin">
-        <number>1</number>
-       </property>
-      </widget>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="arti_fwol_head_icon">
+      <property name="geometry">
+       <rect>
+        <x>35</x>
+        <y>35</y>
+        <width>125</width>
+        <height>125</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>125</width>
+        <height>125</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>125</width>
+        <height>125</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="arti.qrc">:/arti/imgs/arti/fwol.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="margin">
+       <number>1</number>
+      </property>
      </widget>
     </widget>
     <widget class="QFrame" name="arti_pmod_area">
@@ -1523,7 +1529,7 @@
        <x>205</x>
        <y>35</y>
        <width>195</width>
-       <height>425</height>
+       <height>450</height>
       </rect>
      </property>
      <property name="sizePolicy">
@@ -1535,13 +1541,13 @@
      <property name="minimumSize">
       <size>
        <width>195</width>
-       <height>425</height>
+       <height>450</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
        <width>195</width>
-       <height>425</height>
+       <height>450</height>
       </size>
      </property>
      <property name="styleSheet">
@@ -1557,7 +1563,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>335</y>
+        <y>360</y>
         <width>130</width>
         <height>25</height>
        </rect>
@@ -1588,7 +1594,7 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>265</y>
+        <y>290</y>
         <width>195</width>
         <height>35</height>
        </rect>
@@ -1696,7 +1702,7 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>230</y>
+        <y>255</y>
         <width>195</width>
         <height>35</height>
        </rect>
@@ -1767,7 +1773,7 @@
       <property name="geometry">
        <rect>
         <x>140</x>
-        <y>335</y>
+        <y>360</y>
         <width>50</width>
         <height>25</height>
        </rect>
@@ -1807,7 +1813,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>395</y>
+        <y>420</y>
         <width>130</width>
         <height>25</height>
        </rect>
@@ -1838,7 +1844,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>365</y>
+        <y>390</y>
         <width>130</width>
         <height>25</height>
        </rect>
@@ -1869,7 +1875,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>305</y>
+        <y>330</y>
         <width>130</width>
         <height>25</height>
        </rect>
@@ -1900,7 +1906,7 @@
       <property name="geometry">
        <rect>
         <x>140</x>
-        <y>305</y>
+        <y>330</y>
         <width>50</width>
         <height>25</height>
        </rect>
@@ -1940,7 +1946,7 @@
       <property name="geometry">
        <rect>
         <x>140</x>
-        <y>365</y>
+        <y>390</y>
         <width>50</width>
         <height>25</height>
        </rect>
@@ -1980,7 +1986,7 @@
       <property name="geometry">
        <rect>
         <x>140</x>
-        <y>395</y>
+        <y>420</y>
         <width>50</width>
         <height>25</height>
        </rect>
@@ -2020,7 +2026,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>200</y>
+        <y>225</y>
         <width>90</width>
         <height>25</height>
        </rect>
@@ -2051,7 +2057,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>170</y>
+        <y>195</y>
         <width>185</width>
         <height>25</height>
        </rect>
@@ -2082,7 +2088,7 @@
       <property name="geometry">
        <rect>
         <x>100</x>
-        <y>200</y>
+        <y>225</y>
         <width>90</width>
         <height>25</height>
        </rect>
@@ -2109,13 +2115,13 @@
        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
       </property>
      </widget>
-     <widget class="QFrame" name="arti_pmod_head_area">
+     <widget class="QLabel" name="arti_pmod_head_area">
       <property name="geometry">
        <rect>
         <x>5</x>
         <y>5</y>
         <width>185</width>
-        <height>160</height>
+        <height>185</height>
        </rect>
       </property>
       <property name="sizePolicy">
@@ -2127,67 +2133,73 @@
       <property name="minimumSize">
        <size>
         <width>185</width>
-        <height>160</height>
+        <height>185</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
         <width>185</width>
-        <height>160</height>
+        <height>185</height>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">#arti_pmod_head_area {border-radius: 5px; background-color: rgba(128, 128, 128, 64);}</string>
+       <string notr="true"/>
       </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+      <property name="text">
+       <string/>
       </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+      <property name="pixmap">
+       <pixmap resource="rare.qrc">:/rare/imgs/rare/star_1.webp</pixmap>
       </property>
-      <widget class="QLabel" name="arti_pmod_head_icon">
-       <property name="geometry">
-        <rect>
-         <x>35</x>
-         <y>25</y>
-         <width>115</width>
-         <height>115</height>
-        </rect>
-       </property>
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>115</width>
-         <height>115</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>115</width>
-         <height>115</height>
-        </size>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap resource="arti.qrc">:/arti/imgs/arti/pmod.png</pixmap>
-       </property>
-       <property name="scaledContents">
-        <bool>true</bool>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-       <property name="margin">
-        <number>1</number>
-       </property>
-      </widget>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="arti_pmod_head_icon">
+      <property name="geometry">
+       <rect>
+        <x>35</x>
+        <y>35</y>
+        <width>125</width>
+        <height>125</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>125</width>
+        <height>125</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>125</width>
+        <height>125</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="arti.qrc">:/arti/imgs/arti/pmod.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="margin">
+       <number>1</number>
+      </property>
      </widget>
     </widget>
     <widget class="QFrame" name="arti_sdoe_area">
@@ -2196,7 +2208,7 @@
        <x>405</x>
        <y>35</y>
        <width>195</width>
-       <height>425</height>
+       <height>450</height>
       </rect>
      </property>
      <property name="sizePolicy">
@@ -2208,13 +2220,13 @@
      <property name="minimumSize">
       <size>
        <width>195</width>
-       <height>425</height>
+       <height>450</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
        <width>195</width>
-       <height>425</height>
+       <height>450</height>
       </size>
      </property>
      <property name="styleSheet">
@@ -2230,7 +2242,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>365</y>
+        <y>390</y>
         <width>130</width>
         <height>25</height>
        </rect>
@@ -2261,7 +2273,7 @@
       <property name="geometry">
        <rect>
         <x>140</x>
-        <y>395</y>
+        <y>420</y>
         <width>50</width>
         <height>25</height>
        </rect>
@@ -2301,7 +2313,7 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>265</y>
+        <y>290</y>
         <width>195</width>
         <height>35</height>
        </rect>
@@ -2409,7 +2421,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>395</y>
+        <y>420</y>
         <width>130</width>
         <height>25</height>
        </rect>
@@ -2440,7 +2452,7 @@
       <property name="geometry">
        <rect>
         <x>140</x>
-        <y>335</y>
+        <y>360</y>
         <width>50</width>
         <height>25</height>
        </rect>
@@ -2480,7 +2492,7 @@
       <property name="geometry">
        <rect>
         <x>140</x>
-        <y>305</y>
+        <y>330</y>
         <width>50</width>
         <height>25</height>
        </rect>
@@ -2520,7 +2532,7 @@
       <property name="geometry">
        <rect>
         <x>140</x>
-        <y>365</y>
+        <y>390</y>
         <width>50</width>
         <height>25</height>
        </rect>
@@ -2560,7 +2572,7 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>230</y>
+        <y>255</y>
         <width>195</width>
         <height>35</height>
        </rect>
@@ -2631,7 +2643,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>305</y>
+        <y>330</y>
         <width>130</width>
         <height>25</height>
        </rect>
@@ -2662,7 +2674,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>335</y>
+        <y>360</y>
         <width>130</width>
         <height>25</height>
        </rect>
@@ -2693,7 +2705,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>200</y>
+        <y>225</y>
         <width>90</width>
         <height>25</height>
        </rect>
@@ -2724,7 +2736,7 @@
       <property name="geometry">
        <rect>
         <x>100</x>
-        <y>200</y>
+        <y>225</y>
         <width>90</width>
         <height>25</height>
        </rect>
@@ -2755,7 +2767,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>170</y>
+        <y>195</y>
         <width>185</width>
         <height>25</height>
        </rect>
@@ -2782,13 +2794,13 @@
        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
       </property>
      </widget>
-     <widget class="QFrame" name="arti_sdoe_head_area">
+     <widget class="QLabel" name="arti_sdoe_head_area">
       <property name="geometry">
        <rect>
         <x>5</x>
         <y>5</y>
         <width>185</width>
-        <height>160</height>
+        <height>185</height>
        </rect>
       </property>
       <property name="sizePolicy">
@@ -2800,67 +2812,73 @@
       <property name="minimumSize">
        <size>
         <width>185</width>
-        <height>160</height>
+        <height>185</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
         <width>185</width>
-        <height>160</height>
+        <height>185</height>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">#arti_sdoe_head_area {border-radius: 5px; background-color: rgba(128, 128, 128, 64);}</string>
+       <string notr="true"/>
       </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+      <property name="text">
+       <string/>
       </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+      <property name="pixmap">
+       <pixmap resource="rare.qrc">:/rare/imgs/rare/star_1.webp</pixmap>
       </property>
-      <widget class="QLabel" name="arti_sdoe_head_icon">
-       <property name="geometry">
-        <rect>
-         <x>35</x>
-         <y>25</y>
-         <width>115</width>
-         <height>115</height>
-        </rect>
-       </property>
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>115</width>
-         <height>115</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>115</width>
-         <height>115</height>
-        </size>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap resource="arti.qrc">:/arti/imgs/arti/sdoe.png</pixmap>
-       </property>
-       <property name="scaledContents">
-        <bool>true</bool>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-       <property name="margin">
-        <number>1</number>
-       </property>
-      </widget>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="arti_sdoe_head_icon">
+      <property name="geometry">
+       <rect>
+        <x>35</x>
+        <y>35</y>
+        <width>125</width>
+        <height>125</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>125</width>
+        <height>125</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>125</width>
+        <height>125</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="arti.qrc">:/arti/imgs/arti/sdoe.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="margin">
+       <number>1</number>
+      </property>
      </widget>
     </widget>
     <widget class="QFrame" name="arti_gboe_area">
@@ -2869,7 +2887,7 @@
        <x>605</x>
        <y>35</y>
        <width>195</width>
-       <height>425</height>
+       <height>450</height>
       </rect>
      </property>
      <property name="sizePolicy">
@@ -2881,13 +2899,13 @@
      <property name="minimumSize">
       <size>
        <width>195</width>
-       <height>425</height>
+       <height>450</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
        <width>195</width>
-       <height>425</height>
+       <height>450</height>
       </size>
      </property>
      <property name="styleSheet">
@@ -2903,7 +2921,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>395</y>
+        <y>420</y>
         <width>130</width>
         <height>25</height>
        </rect>
@@ -2934,7 +2952,7 @@
       <property name="geometry">
        <rect>
         <x>140</x>
-        <y>395</y>
+        <y>420</y>
         <width>50</width>
         <height>25</height>
        </rect>
@@ -2974,7 +2992,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>365</y>
+        <y>390</y>
         <width>130</width>
         <height>25</height>
        </rect>
@@ -3005,7 +3023,7 @@
       <property name="geometry">
        <rect>
         <x>140</x>
-        <y>365</y>
+        <y>390</y>
         <width>50</width>
         <height>25</height>
        </rect>
@@ -3045,7 +3063,7 @@
       <property name="geometry">
        <rect>
         <x>140</x>
-        <y>335</y>
+        <y>360</y>
         <width>50</width>
         <height>25</height>
        </rect>
@@ -3085,7 +3103,7 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>230</y>
+        <y>255</y>
         <width>195</width>
         <height>35</height>
        </rect>
@@ -3156,7 +3174,7 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>265</y>
+        <y>290</y>
         <width>195</width>
         <height>35</height>
        </rect>
@@ -3264,7 +3282,7 @@
       <property name="geometry">
        <rect>
         <x>140</x>
-        <y>305</y>
+        <y>330</y>
         <width>50</width>
         <height>25</height>
        </rect>
@@ -3304,7 +3322,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>305</y>
+        <y>330</y>
         <width>130</width>
         <height>25</height>
        </rect>
@@ -3335,7 +3353,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>335</y>
+        <y>360</y>
         <width>130</width>
         <height>25</height>
        </rect>
@@ -3366,7 +3384,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>200</y>
+        <y>225</y>
         <width>90</width>
         <height>25</height>
        </rect>
@@ -3397,7 +3415,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>170</y>
+        <y>195</y>
         <width>185</width>
         <height>25</height>
        </rect>
@@ -3428,7 +3446,7 @@
       <property name="geometry">
        <rect>
         <x>100</x>
-        <y>200</y>
+        <y>225</y>
         <width>90</width>
         <height>25</height>
        </rect>
@@ -3455,13 +3473,13 @@
        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
       </property>
      </widget>
-     <widget class="QFrame" name="arti_gboe_head_area">
+     <widget class="QLabel" name="arti_gboe_head_area">
       <property name="geometry">
        <rect>
         <x>5</x>
         <y>5</y>
         <width>185</width>
-        <height>160</height>
+        <height>185</height>
        </rect>
       </property>
       <property name="sizePolicy">
@@ -3473,67 +3491,73 @@
       <property name="minimumSize">
        <size>
         <width>185</width>
-        <height>160</height>
+        <height>185</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
         <width>185</width>
-        <height>160</height>
+        <height>185</height>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">#arti_gboe_head_area {border-radius: 5px; background-color: rgba(128, 128, 128, 64);}</string>
+       <string notr="true"/>
       </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+      <property name="text">
+       <string/>
       </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+      <property name="pixmap">
+       <pixmap resource="rare.qrc">:/rare/imgs/rare/star_1.webp</pixmap>
       </property>
-      <widget class="QLabel" name="arti_gboe_head_icon">
-       <property name="geometry">
-        <rect>
-         <x>35</x>
-         <y>25</y>
-         <width>115</width>
-         <height>115</height>
-        </rect>
-       </property>
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>115</width>
-         <height>115</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>115</width>
-         <height>115</height>
-        </size>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap resource="arti.qrc">:/arti/imgs/arti/gboe.png</pixmap>
-       </property>
-       <property name="scaledContents">
-        <bool>true</bool>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-       <property name="margin">
-        <number>1</number>
-       </property>
-      </widget>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="arti_gboe_head_icon">
+      <property name="geometry">
+       <rect>
+        <x>35</x>
+        <y>35</y>
+        <width>125</width>
+        <height>125</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>125</width>
+        <height>125</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>125</width>
+        <height>125</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="arti.qrc">:/arti/imgs/arti/gboe.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="margin">
+       <number>1</number>
+      </property>
      </widget>
     </widget>
     <widget class="QFrame" name="arti_ccol_area">
@@ -3542,7 +3566,7 @@
        <x>805</x>
        <y>35</y>
        <width>195</width>
-       <height>425</height>
+       <height>450</height>
       </rect>
      </property>
      <property name="sizePolicy">
@@ -3554,13 +3578,13 @@
      <property name="minimumSize">
       <size>
        <width>195</width>
-       <height>425</height>
+       <height>450</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
        <width>195</width>
-       <height>425</height>
+       <height>450</height>
       </size>
      </property>
      <property name="styleSheet">
@@ -3576,7 +3600,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>305</y>
+        <y>330</y>
         <width>130</width>
         <height>25</height>
        </rect>
@@ -3607,7 +3631,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>395</y>
+        <y>420</y>
         <width>130</width>
         <height>25</height>
        </rect>
@@ -3638,7 +3662,7 @@
       <property name="geometry">
        <rect>
         <x>140</x>
-        <y>395</y>
+        <y>420</y>
         <width>50</width>
         <height>25</height>
        </rect>
@@ -3681,7 +3705,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>335</y>
+        <y>360</y>
         <width>130</width>
         <height>25</height>
        </rect>
@@ -3712,7 +3736,7 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>265</y>
+        <y>290</y>
         <width>195</width>
         <height>35</height>
        </rect>
@@ -3823,7 +3847,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>365</y>
+        <y>390</y>
         <width>130</width>
         <height>25</height>
        </rect>
@@ -3854,7 +3878,7 @@
       <property name="geometry">
        <rect>
         <x>140</x>
-        <y>335</y>
+        <y>360</y>
         <width>50</width>
         <height>25</height>
        </rect>
@@ -3897,7 +3921,7 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>230</y>
+        <y>255</y>
         <width>195</width>
         <height>35</height>
        </rect>
@@ -3968,7 +3992,7 @@
       <property name="geometry">
        <rect>
         <x>140</x>
-        <y>305</y>
+        <y>330</y>
         <width>50</width>
         <height>25</height>
        </rect>
@@ -4011,7 +4035,7 @@
       <property name="geometry">
        <rect>
         <x>140</x>
-        <y>365</y>
+        <y>390</y>
         <width>50</width>
         <height>25</height>
        </rect>
@@ -4054,7 +4078,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>170</y>
+        <y>195</y>
         <width>185</width>
         <height>25</height>
        </rect>
@@ -4085,7 +4109,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>200</y>
+        <y>225</y>
         <width>90</width>
         <height>25</height>
        </rect>
@@ -4116,7 +4140,7 @@
       <property name="geometry">
        <rect>
         <x>100</x>
-        <y>200</y>
+        <y>225</y>
         <width>90</width>
         <height>25</height>
        </rect>
@@ -4143,13 +4167,13 @@
        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
       </property>
      </widget>
-     <widget class="QFrame" name="arti_ccol_head_area">
+     <widget class="QLabel" name="arti_ccol_head_area">
       <property name="geometry">
        <rect>
         <x>5</x>
         <y>5</y>
         <width>185</width>
-        <height>160</height>
+        <height>185</height>
        </rect>
       </property>
       <property name="sizePolicy">
@@ -4161,74 +4185,80 @@
       <property name="minimumSize">
        <size>
         <width>185</width>
-        <height>160</height>
+        <height>185</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
         <width>185</width>
-        <height>160</height>
+        <height>185</height>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">#arti_ccol_head_area {border-radius: 5px; background-color: rgba(128, 128, 128, 64);}</string>
+       <string notr="true"/>
       </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+      <property name="text">
+       <string/>
       </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+      <property name="pixmap">
+       <pixmap resource="rare.qrc">:/rare/imgs/rare/star_1.webp</pixmap>
       </property>
-      <widget class="QLabel" name="arti_ccol_head_icon">
-       <property name="geometry">
-        <rect>
-         <x>35</x>
-         <y>25</y>
-         <width>115</width>
-         <height>115</height>
-        </rect>
-       </property>
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>115</width>
-         <height>115</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>115</width>
-         <height>115</height>
-        </size>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap resource="arti.qrc">:/arti/imgs/arti/ccol.png</pixmap>
-       </property>
-       <property name="scaledContents">
-        <bool>true</bool>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-       <property name="margin">
-        <number>1</number>
-       </property>
-      </widget>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="arti_ccol_head_icon">
+      <property name="geometry">
+       <rect>
+        <x>35</x>
+        <y>35</y>
+        <width>125</width>
+        <height>125</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>125</width>
+        <height>125</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>125</width>
+        <height>125</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="arti.qrc">:/arti/imgs/arti/ccol.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="margin">
+       <number>1</number>
+      </property>
      </widget>
     </widget>
     <widget class="QFrame" name="arti_fwol_back_area">
      <property name="geometry">
       <rect>
        <x>5</x>
-       <y>460</y>
+       <y>485</y>
        <width>40</width>
        <height>40</height>
       </rect>
@@ -4308,7 +4338,7 @@
      <property name="geometry">
       <rect>
        <x>205</x>
-       <y>460</y>
+       <y>485</y>
        <width>40</width>
        <height>40</height>
       </rect>
@@ -4388,7 +4418,7 @@
      <property name="geometry">
       <rect>
        <x>405</x>
-       <y>460</y>
+       <y>485</y>
        <width>40</width>
        <height>40</height>
       </rect>
@@ -4468,7 +4498,7 @@
      <property name="geometry">
       <rect>
        <x>605</x>
-       <y>460</y>
+       <y>485</y>
        <width>40</width>
        <height>40</height>
       </rect>
@@ -4548,7 +4578,7 @@
      <property name="geometry">
       <rect>
        <x>805</x>
-       <y>460</y>
+       <y>485</y>
        <width>40</width>
        <height>40</height>
       </rect>
@@ -4628,7 +4658,7 @@
      <property name="geometry">
       <rect>
        <x>105</x>
-       <y>465</y>
+       <y>490</y>
        <width>95</width>
        <height>35</height>
       </rect>
@@ -4767,7 +4797,7 @@
      <property name="geometry">
       <rect>
        <x>905</x>
-       <y>465</y>
+       <y>490</y>
        <width>95</width>
        <height>35</height>
       </rect>
@@ -4906,7 +4936,7 @@
      <property name="geometry">
       <rect>
        <x>705</x>
-       <y>465</y>
+       <y>490</y>
        <width>95</width>
        <height>35</height>
       </rect>
@@ -5045,7 +5075,7 @@
      <property name="geometry">
       <rect>
        <x>505</x>
-       <y>465</y>
+       <y>490</y>
        <width>95</width>
        <height>35</height>
       </rect>
@@ -5184,7 +5214,7 @@
      <property name="geometry">
       <rect>
        <x>305</x>
-       <y>465</y>
+       <y>490</y>
        <width>95</width>
        <height>35</height>
       </rect>
@@ -5907,9 +5937,9 @@
     <property name="geometry">
      <rect>
       <x>5</x>
-      <y>615</y>
+      <y>640</y>
       <width>1260</width>
-      <height>250</height>
+      <height>275</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -5921,13 +5951,13 @@
     <property name="minimumSize">
      <size>
       <width>1260</width>
-      <height>250</height>
+      <height>275</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
       <width>1260</width>
-      <height>250</height>
+      <height>275</height>
      </size>
     </property>
     <property name="styleSheet">
@@ -6016,7 +6046,7 @@
        <x>5</x>
        <y>35</y>
        <width>250</width>
-       <height>95</height>
+       <height>125</height>
       </rect>
      </property>
      <property name="sizePolicy">
@@ -6028,17 +6058,18 @@
      <property name="minimumSize">
       <size>
        <width>250</width>
-       <height>95</height>
+       <height>125</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
        <width>250</width>
-       <height>95</height>
+       <height>125</height>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#weap_main {border-radius: 5px; background-color: rgba(128, 128, 128, 32);}</string>
+      <string notr="true">#weap_main {border-top-left-radius: 5px; border-top-right-radius: 5px; background-color: rgba(128, 128, 128, 32);}
+</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -6049,9 +6080,9 @@
      <widget class="QComboBox" name="weap_area_levl">
       <property name="geometry">
        <rect>
-        <x>130</x>
-        <y>65</y>
-        <width>115</width>
+        <x>5</x>
+        <y>95</y>
+        <width>240</width>
         <height>25</height>
        </rect>
       </property>
@@ -6063,13 +6094,13 @@
       </property>
       <property name="minimumSize">
        <size>
-        <width>115</width>
+        <width>240</width>
         <height>25</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
-        <width>115</width>
+        <width>240</width>
         <height>25</height>
        </size>
       </property>
@@ -6113,7 +6144,7 @@
        <rect>
         <x>5</x>
         <y>65</y>
-        <width>115</width>
+        <width>240</width>
         <height>25</height>
        </rect>
       </property>
@@ -6125,13 +6156,13 @@
       </property>
       <property name="minimumSize">
        <size>
-        <width>115</width>
+        <width>240</width>
         <height>25</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
-        <width>115</width>
+        <width>240</width>
         <height>25</height>
        </size>
       </property>
@@ -6175,7 +6206,7 @@
      <property name="geometry">
       <rect>
        <x>260</x>
-       <y>205</y>
+       <y>230</y>
        <width>40</width>
        <height>40</height>
       </rect>
@@ -6255,7 +6286,7 @@
      <property name="geometry">
       <rect>
        <x>1190</x>
-       <y>210</y>
+       <y>235</y>
        <width>65</width>
        <height>35</height>
       </rect>
@@ -6362,7 +6393,7 @@
        <x>260</x>
        <y>35</y>
        <width>195</width>
-       <height>170</height>
+       <height>195</height>
       </rect>
      </property>
      <property name="sizePolicy">
@@ -6374,13 +6405,13 @@
      <property name="minimumSize">
       <size>
        <width>195</width>
-       <height>170</height>
+       <height>195</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
        <width>195</width>
-       <height>170</height>
+       <height>195</height>
       </size>
      </property>
      <property name="styleSheet">
@@ -6392,13 +6423,13 @@
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <widget class="QFrame" name="weap_port_area">
+     <widget class="QLabel" name="weap_port_area">
       <property name="geometry">
        <rect>
         <x>5</x>
         <y>5</y>
         <width>185</width>
-        <height>160</height>
+        <height>185</height>
        </rect>
       </property>
       <property name="sizePolicy">
@@ -6410,74 +6441,206 @@
       <property name="minimumSize">
        <size>
         <width>185</width>
-        <height>160</height>
+        <height>185</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
         <width>185</width>
-        <height>160</height>
+        <height>185</height>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">#weap_port_area {border-radius: 5px; background-color: rgba(128, 128, 128, 64);}</string>
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="rare.qrc">:/rare/imgs/rare/star_1.webp</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="weap_port_icon">
+      <property name="geometry">
+       <rect>
+        <x>35</x>
+        <y>35</y>
+        <width>125</width>
+        <height>125</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>125</width>
+        <height>125</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>125</width>
+        <height>125</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="weap.qrc">:/weap/imgs/weap/weap.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="margin">
+       <number>1</number>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="weap_refn_area">
+     <property name="geometry">
+      <rect>
+       <x>460</x>
+       <y>35</y>
+       <width>795</width>
+       <height>195</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>795</width>
+       <height>195</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>795</width>
+       <height>195</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#weap_refn_area {border-radius: 5px; background-color: rgba(128, 128, 128, 32);}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QTextEdit" name="weap_area_refn_body">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>35</y>
+        <width>785</width>
+        <height>155</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>785</width>
+        <height>155</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>785</width>
+        <height>155</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#weap_area_refn_body {font: 10pt &quot;IBM Plex Sans&quot;; background-color: rgba(128, 128, 128, 64);}</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::Plain</enum>
       </property>
-      <widget class="QLabel" name="weap_port_icon">
-       <property name="geometry">
-        <rect>
-         <x>35</x>
-         <y>20</y>
-         <width>120</width>
-         <height>120</height>
-        </rect>
-       </property>
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>120</width>
-         <height>120</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>120</width>
-         <height>120</height>
-        </size>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap resource="weap.qrc">:/weap/imgs/weap/weap.png</pixmap>
-       </property>
-       <property name="scaledContents">
-        <bool>true</bool>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-       <property name="margin">
-        <number>1</number>
-       </property>
-      </widget>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOn</enum>
+      </property>
+      <property name="documentTitle">
+       <string>weap_area_refn_body</string>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="placeholderText">
+       <string>No refinements available.</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="weap_area_refn_head">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>5</y>
+        <width>785</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>785</width>
+        <height>25</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>785</width>
+        <height>25</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+      </property>
+      <property name="text">
+       <string>No refinements available.</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
      </widget>
     </widget>
     <widget class="QFrame" name="weap_atst">
      <property name="geometry">
       <rect>
        <x>5</x>
-       <y>135</y>
+       <y>160</y>
        <width>250</width>
        <height>65</height>
       </rect>
@@ -6501,7 +6664,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#weap_atst {border-radius: 5px; background-color: rgba(128, 128, 128, 32);}</string>
+      <string notr="true">#weap_atst {border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(96, 96, 96, 128);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -6667,132 +6830,6 @@
       </property>
      </widget>
     </widget>
-    <widget class="QFrame" name="weap_refn_area">
-     <property name="geometry">
-      <rect>
-       <x>460</x>
-       <y>35</y>
-       <width>795</width>
-       <height>170</height>
-      </rect>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>795</width>
-       <height>170</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>795</width>
-       <height>170</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">#weap_refn_area {border-radius: 5px; background-color: rgba(128, 128, 128, 32);}</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
-     </property>
-     <widget class="QTextEdit" name="weap_area_refn_body">
-      <property name="geometry">
-       <rect>
-        <x>5</x>
-        <y>35</y>
-        <width>785</width>
-        <height>130</height>
-       </rect>
-      </property>
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>785</width>
-        <height>130</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>785</width>
-        <height>130</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">#weap_area_refn_body {font: 10pt &quot;IBM Plex Sans&quot;; background-color: rgba(128, 128, 128, 64);}</string>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::NoFrame</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Plain</enum>
-      </property>
-      <property name="verticalScrollBarPolicy">
-       <enum>Qt::ScrollBarAlwaysOn</enum>
-      </property>
-      <property name="documentTitle">
-       <string>weap_area_refn_body</string>
-      </property>
-      <property name="readOnly">
-       <bool>true</bool>
-      </property>
-      <property name="placeholderText">
-       <string>No refinements available.</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="weap_area_refn_head">
-      <property name="geometry">
-       <rect>
-        <x>5</x>
-        <y>5</y>
-        <width>785</width>
-        <height>25</height>
-       </rect>
-      </property>
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>785</width>
-        <height>25</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>785</width>
-        <height>25</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
-      </property>
-      <property name="text">
-       <string>No refinements available.</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-      </property>
-      <property name="wordWrap">
-       <bool>true</bool>
-      </property>
-     </widget>
-    </widget>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statarea">
@@ -6821,6 +6858,7 @@
  </widget>
  <resources>
   <include location="name.qrc"/>
+  <include location="rare.qrc"/>
   <include location="side.qrc"/>
   <include location="text.qrc"/>
   <include location="face.qrc"/>
@@ -6828,6 +6866,9 @@
   <include location="vson.qrc"/>
   <include location="weap.qrc"/>
   <include location="arti.qrc"/>
+  <include location="../../Users/gridhead/Documents/loadouts/rare.qrc"/>
+  <include location="../../Users/gridhead/Documents/loadouts/arti.qrc"/>
+  <include location="../../Users/gridhead/Documents/loadouts/weap.qrc"/>
  </resources>
  <connections/>
 </ui>
