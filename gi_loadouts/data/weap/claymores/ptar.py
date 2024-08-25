@@ -18,3 +18,4 @@ class PrototypeArchaic(Claymore):
         "On hit, Normal or Charged Attacks have a 50% chance to deal an additional 420% ATK DMG to opponents within a small AoE. Can only occur once every 15s.",
         "On hit, Normal or Charged Attacks have a 50% chance to deal an additional 480% ATK DMG to opponents within a small AoE. Can only occur once every 15s.",
     ]
+    file: str = "ptar"

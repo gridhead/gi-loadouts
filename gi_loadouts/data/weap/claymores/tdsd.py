@@ -18,3 +18,4 @@ class TidalShadow(Claymore):
         "After the wielder is healed, ATK will be increased by 42% for 8s. This can be triggered even when the character is not on the field.",
         "After the wielder is healed, ATK will be increased by 48% for 8s. This can be triggered even when the character is not on the field.",
     ]
+    file: str = "tdsd"

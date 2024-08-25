@@ -18,3 +18,4 @@ class IronSting(Sword):
         "Dealing Elemental DMG increases all DMG by 10.5% for 6s. Max 2 stacks. Can only occur once every 1s.",
         "Dealing Elemental DMG increases all DMG by 12% for 6s. Max 2 stacks. Can only occur once every 1s.",
     ]
+    file: str = "insg"

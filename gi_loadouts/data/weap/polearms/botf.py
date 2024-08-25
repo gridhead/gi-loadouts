@@ -19,3 +19,4 @@ class BalladoftheFjords(Polearm):
         "When there are at least 3 different Elemental Types in your party, Elemental Mastery will be increased by 210.",
         "When there are at least 3 different Elemental Types in your party, Elemental Mastery will be increased by 240.",
     ]
+    file: str = "botf"

@@ -18,3 +18,4 @@ class LionsRoar(Sword):
         "Increases DMG against enemies affected by Pyro or Electro by 32%.",
         "Increases DMG against enemies affected by Pyro or Electro by 36%.",
     ]
+    file: str = "lnrr"

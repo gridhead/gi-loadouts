@@ -25,3 +25,4 @@ class EverlastingMoonglow(Catalyst):
         [WeaponStat(stat_name=WeaponStatType.healing_bonus_perc, stat_data=17.5)],
         [WeaponStat(stat_name=WeaponStatType.healing_bonus_perc, stat_data=20.0)],
     ]
+    file: str = "elmg"

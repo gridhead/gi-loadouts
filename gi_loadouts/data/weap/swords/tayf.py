@@ -18,3 +18,4 @@ class TheAlleyFlash(Sword):
         "Increases DMG dealt by the character equipping this weapon by 21%. Taking DMG disables this effect for 5s.",
         "Increases DMG dealt by the character equipping this weapon by 24%. Taking DMG disables this effect for 5s.",
     ]
+    file: str = "tayf"

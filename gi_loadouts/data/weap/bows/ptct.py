@@ -18,3 +18,4 @@ class PrototypeCrescent(Bow):
             "Charged Attack hits on weak points increase Movement SPD by 10% and ATK by 63% for 10s.",
             "Charged Attack hits on weak points increase Movement SPD by 10% and ATK by 72% for 10s.",
         ]
+    file: str = "ptct"

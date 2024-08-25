@@ -18,3 +18,4 @@ class Halberd(Polearm):
         "Normal Attacks deal an additional 280% DMG. Can only occur once every 10s.",
         "Normal Attacks deal an additional 320% DMG. Can only occur once every 10s.",
     ]
+    file: str = "hlbd"

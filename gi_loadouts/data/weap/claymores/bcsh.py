@@ -18,3 +18,4 @@ class BlackcliffSlasher(Claymore):
         "After defeating an opponent, ATK is increased by 21% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.",
         "After defeating an opponent, ATK is increased by 24% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.",
     ]
+    file: str = "bcsh"

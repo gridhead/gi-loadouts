@@ -18,3 +18,4 @@ class Rust(Bow):
             "Increases Normal Attack DMG by 70% but decreases Charged Attack DMG by 10%.",
             "Increases Normal Attack DMG by 80% but decreases Charged Attack DMG by 10%.",
         ]
+    file: str = "rust"

@@ -18,3 +18,4 @@ class FerrousShadow(Claymore):
         "When HP falls below 85%, increases Charged Attack DMG by 45%, and Charged Attacks become much harder to interrupt.",
         "When HP falls below 90%, increases Charged Attack DMG by 50%, and Charged Attacks become much harder to interrupt.",
     ]
+    file: str = "fosd"

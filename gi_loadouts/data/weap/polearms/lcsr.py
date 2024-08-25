@@ -18,3 +18,4 @@ class LithicSpear(Polearm):
         "For every character in the party who hails from Liyue, the character who equips this weapon gains 10% ATK increase and a 6% CRIT Rate increase. This effect stacks up to 4 times.",
         "For every character in the party who hails from Liyue, the character who equips this weapon gains 11% ATK increase and a 7% CRIT Rate increase. This effect stacks up to 4 times.",
     ]
+    file: str = "lcsr"

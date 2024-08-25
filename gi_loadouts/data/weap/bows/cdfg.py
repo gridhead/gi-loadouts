@@ -18,3 +18,4 @@ class Cloudforged(Bow):
         "After Elemental Energy is decreased, the equipping character's Elemental Mastery will increase by 70 for 18s. Max 2 stacks.",
         "After Elemental Energy is decreased, the equipping character's Elemental Mastery will increase by 80 for 18s. Max 2 stacks.",
     ]
+    file: str = "cdfg"

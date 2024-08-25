@@ -18,3 +18,4 @@ class RoyalLongsword(Sword):
         "Upon dealing damage to an opponent, increases CRIT Rate by 14%. Max 5 stacks. A CRIT hit removes all existing stacks.",
         "Upon dealing damage to an opponent, increases CRIT Rate by 16%. Max 5 stacks. A CRIT hit removes all existing stacks.",
     ]
+    file: str = "ryls"

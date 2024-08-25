@@ -25,3 +25,4 @@ class SongofBrokenPines(Claymore):
         [WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=28.0)],
         [WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=32.0)],
     ]
+    file: str = "sobp"

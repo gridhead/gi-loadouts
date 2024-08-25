@@ -18,3 +18,4 @@ class ThrillingTalesofDragonSlayers(Catalyst):
         "When switching characters, the new character taking the field has their ATK increased by 42% for 10s. This effect can only occur once every 20s.",
         "When switching characters, the new character taking the field has their ATK increased by 48% for 10s. This effect can only occur once every 20s.",
     ]
+    file: str = "ttds"

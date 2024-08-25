@@ -18,3 +18,4 @@ class TheCatch(Polearm):
         "Increases Elemental Burst DMG by 28% and Elemental Burst CRIT Rate by 10.5%.",
         "Increases Elemental Burst DMG by 32% and Elemental Burst CRIT Rate by 12%.",
     ]
+    file: str = "tcth"

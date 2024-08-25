@@ -25,3 +25,4 @@ class RedhornStonethresher(Claymore):
         [WeaponStat(stat_name=WeaponStatType.defense_perc, stat_data=49.0)],
         [WeaponStat(stat_name=WeaponStatType.defense_perc, stat_data=56.0)],
     ]
+    file: str = "rhst"

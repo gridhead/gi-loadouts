@@ -18,3 +18,4 @@ class FesteringDesire(Sword):
         "Increases Elemental Skill DMG by 28% and Elemental Skill CRIT Rate by 10.5%.",
         "Increases Elemental Skill DMG by 32% and Elemental Skill CRIT Rate by 12%.",
     ]
+    file: str = "ftds"

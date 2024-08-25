@@ -18,3 +18,4 @@ class AmosBow(Bow):
         "Increases Normal Attack and Charged Attack DMG by 21%. After a Normal or Charged Attack is fired, DMG dealt increases by a further 14% every 0.1 seconds the arrow is in the air for up to 5 times.",
         "Increases Normal Attack and Charged Attack DMG by 24%. After a Normal or Charged Attack is fired, DMG dealt increases by a further 16% every 0.1 seconds the arrow is in the air for up to 5 times.",
     ]
+    file: str = "asbw"

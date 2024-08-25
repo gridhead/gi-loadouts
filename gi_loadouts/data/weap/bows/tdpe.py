@@ -25,3 +25,4 @@ class ThunderingPulse(Bow):
         [WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=35.0)],
         [WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=40.0)],
     ]
+    file: str = "tdpe"

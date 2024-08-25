@@ -25,3 +25,4 @@ class LightofFoliarIncision(Sword):
         [WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=7.0)],
         [WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=8.0)],
     ]
+    file: str = "lofi"

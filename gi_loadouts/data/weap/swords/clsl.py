@@ -18,3 +18,4 @@ class CoolSteel(Sword):
         "Increases DMG against opponents affected by Hydro or Cryo by 21%.",
         "Increases DMG against opponents affected by Hydro or Cryo by 24%.",
     ]
+    file: str = "clsl"

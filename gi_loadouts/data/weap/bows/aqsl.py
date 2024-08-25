@@ -25,3 +25,4 @@ class AquaSimulacra(Bow):
         [WeaponStat(stat_name=WeaponStatType.health_points_perc, stat_data=28.0)],
         [WeaponStat(stat_name=WeaponStatType.health_points_perc, stat_data=32.0)],
     ]
+    file: str = "aqsl"

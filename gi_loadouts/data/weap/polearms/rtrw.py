@@ -18,3 +18,4 @@ class RightfulReward(Polearm):
         "When the wielder is healed, restore 14 Energy. This effect can triggered once every 10s, and can occur even when the character is not on the field.",
         "When the wielder is healed, restore 16 Energy. This effect can triggered once every 10s, and can occur even when the character is not on the field.",
     ]
+    file: str = "rtrw"

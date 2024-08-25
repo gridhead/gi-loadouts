@@ -18,3 +18,4 @@ class MissiveWindspear(Polearm):
         "Within 10s after an Elemental Reaction is triggered, ATK is increased by 21% and Elemental Mastery is increased by 84.",
         "Within 10s after an Elemental Reaction is triggered, ATK is increased by 24% and Elemental Mastery is increased by 96.",
     ]
+    file: str = "mswp"

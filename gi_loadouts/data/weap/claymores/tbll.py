@@ -18,3 +18,4 @@ class TheBell(Claymore):
         "Taking DMG generates a shield which absorbs DMG up to 29% of max HP. This shield lasts for 10s or until broken, and can only be triggered once every 45s. While protected by a shield, the character gains 21% increased DMG.",
         "Taking DMG generates a shield which absorbs DMG up to 32% of max HP. This shield lasts for 10s or until broken, and can only be triggered once every 45s. While protected by a shield, the character gains 24% increased DMG.",
     ]
+    file: str = "tbll"

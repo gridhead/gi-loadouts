@@ -18,3 +18,4 @@ class FleuveCendreFerryman(Sword):
         "Increases Elemental Skill CRIT Rate by 14%. Additionally, increases Energy Recharge by 28% for 5s after using an Elemental Skill.",
         "Increases Elemental Skill CRIT Rate by 16%. Additionally, increases Energy Recharge by 32% for 5s after using an Elemental Skill.",
     ]
+    file: str = "fcfm"

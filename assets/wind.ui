@@ -6269,7 +6269,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="weap.qrc">:/weap/imgs/weap/weap.png</pixmap>
+       <pixmap resource="weap.qrc">:/weap/imgs/weap/main/weap.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -6469,10 +6469,10 @@
      <widget class="QLabel" name="weap_port_icon">
       <property name="geometry">
        <rect>
-        <x>25</x>
-        <y>25</y>
-        <width>145</width>
-        <height>145</height>
+        <x>5</x>
+        <y>5</y>
+        <width>185</width>
+        <height>185</height>
        </rect>
       </property>
       <property name="sizePolicy">
@@ -6483,21 +6483,21 @@
       </property>
       <property name="minimumSize">
        <size>
-        <width>145</width>
-        <height>145</height>
+        <width>185</width>
+        <height>185</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
-        <width>145</width>
-        <height>145</height>
+        <width>185</width>
+        <height>185</height>
        </size>
       </property>
       <property name="text">
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="weap.qrc">:/weap/imgs/weap/weap.png</pixmap>
+       <pixmap resource="weap.qrc">:/weap/imgs/weap/main/weap.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>

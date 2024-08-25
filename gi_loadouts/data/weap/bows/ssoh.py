@@ -18,3 +18,4 @@ class SharpshootersOath(Bow):
             "Increases DMG against weak spots by 42%.",
             "Increases DMG against weak spots by 48%.",
         ]
+    file: str = "ssoh"

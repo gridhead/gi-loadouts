@@ -18,3 +18,4 @@ class WhiteIronGreatsword(Claymore):
         "Defeating an opponent restores 14% HP.",
         "Defeating an opponent restores 16% HP.",
     ]
+    file: str = "wigs"

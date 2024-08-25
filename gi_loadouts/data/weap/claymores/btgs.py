@@ -18,3 +18,4 @@ class BloodtaintedGreatsword(Claymore):
         "Increases DMG against opponents affected by Pyro or Electro by 21%.",
         "Increases DMG against opponents affected by Pyro or Electro by 24%.",
     ]
+    file: str = "btgs"

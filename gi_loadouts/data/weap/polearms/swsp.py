@@ -25,3 +25,4 @@ class SkywardSpine(Polearm):
         [WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=14.0)],
         [WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=16.0)],
     ]
+    file: str = "swsp"

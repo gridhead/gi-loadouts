@@ -11,3 +11,4 @@ class IronPoint(Polearm):
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_2
     refi_list: List[str] = []
+    file: str = "inpt"

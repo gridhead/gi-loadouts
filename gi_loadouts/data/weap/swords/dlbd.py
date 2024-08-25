@@ -11,3 +11,4 @@ class DullBlade(Sword):
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_1
     refi_list: List[str] = []
+    file: str = "dlbd"

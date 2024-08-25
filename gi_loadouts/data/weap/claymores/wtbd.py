@@ -18,3 +18,4 @@ class Whiteblind(Claymore):
         "On hit, Normal or Charged Attacks increase ATK and DEF by 10.5% for 6s. Max 4 stacks (42%  total). Can only occur once every 0.5s.",
         "On hit, Normal or Charged Attacks increase ATK and DEF by 12% for 6s. Max 4 stacks (48%  total). Can only occur once every 0.5s.",
     ]
+    file: str = "wtbd"

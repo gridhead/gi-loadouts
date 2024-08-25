@@ -18,3 +18,4 @@ class SongofStillness(Bow):
             "After the wielder is healed, they will deal 28% more DMG for 8s. This can be triggered even when the character is not on the field.",
             "After the wielder is healed, they will deal 32% more DMG for 8s. This can be triggered even when the character is not on the field.",
         ]
+    file: str = "sosn"

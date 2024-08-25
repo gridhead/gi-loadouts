@@ -18,3 +18,4 @@ class MappaMare(Catalyst):
         "Triggering an Elemental reaction grants a 14% Elemental DMG Bonus for 10s. Max 2 stacks.",
         "Triggering an Elemental reaction grants a 16% Elemental DMG Bonus for 10s. Max 2 stacks.",
     ]
+    file: str = "mama"

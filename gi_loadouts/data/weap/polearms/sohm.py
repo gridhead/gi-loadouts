@@ -29,3 +29,4 @@ class StaffOfHoma(Polearm):
         [WeaponStat(stat_name=WeaponStatType.health_points_perc, stat_data=35.0)],
         [WeaponStat(stat_name=WeaponStatType.health_points_perc, stat_data=40.0)],
     ]
+    file: str = "sohm"

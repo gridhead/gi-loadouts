@@ -18,3 +18,4 @@ class SkyriderGreatsword(Claymore):
         "On hit, Normal or Charged Attacks increase ATK by 9% for 6s. Max 4 stacks. Can only occur once every 0.5s.",
         "On hit, Normal or Charged Attacks increase ATK by 10% for 6s. Max 4 stacks. Can only occur once every 0.5s.",
     ]
+    file: str = "srgs"

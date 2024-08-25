@@ -18,3 +18,4 @@ class DialoguesoftheDesertSages(Polearm):
         "When the wielder performs healing, restore 14 Energy. This effect can be triggered once every 10s and can occur even when the character is not on the field.",
         "When the wielder performs healing, restore 16 Energy. This effect can be triggered once every 10s and can occur even when the character is not on the field.",
     ]
+    file: str = "dtds"

@@ -18,3 +18,4 @@ class DodocoTales(Catalyst):
         "Normal Attack hits on opponents increase Charged Attack DMG by 28% for 6s. Charged Attack hits on opponents increase ATK by 14% for 6s.",
         "Normal Attack hits on opponents increase Charged Attack DMG by 32% for 6s. Charged Attack hits on opponents increase ATK by 16% for 6s.",
     ]
+    file: str = "ddts"

@@ -18,3 +18,4 @@ class TravelersHandySword(Sword):
         "Each Elemental Orb or Particle collected restores 1.75% HP.",
         "Each Elemental Orb or Particle collected restores 2% HP.",
     ]
+    file: str = "tvhs"

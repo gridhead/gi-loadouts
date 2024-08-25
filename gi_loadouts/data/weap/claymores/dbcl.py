@@ -18,3 +18,4 @@ class DebateClub(Claymore):
         "After using an Elemental Skill, Normal or Charged Attacks, on hit, deal an additional 105% ATK DMG in a small area. Effect lasts 15s. DMG can only occur once every 3s.",
         "After using an Elemental Skill, Normal or Charged Attacks, on hit, deal an additional 120% ATK DMG in a small area. Effect lasts 15s. DMG can only occur once every 3s.",
     ]
+    file: str = "dbcl"

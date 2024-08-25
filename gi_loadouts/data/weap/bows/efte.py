@@ -25,3 +25,4 @@ class ElegyfortheEnd(Bow):
         [WeaponStat(stat_name=WeaponStatType.elemental_mastery, stat_data=105.0)],
         [WeaponStat(stat_name=WeaponStatType.elemental_mastery, stat_data=120.0)],
     ]
+    file: str = "efte"

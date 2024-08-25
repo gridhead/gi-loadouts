@@ -18,3 +18,4 @@ class TwinNephrite(Catalyst):
         "Defeating an opponent increases Movement SPD and ATK by 18% for 15s.",
         "Defeating an opponent increases Movement SPD and ATK by 20% for 15s.",
     ]
+    file: str = "twnp"

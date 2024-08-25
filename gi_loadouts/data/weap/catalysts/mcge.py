@@ -12,9 +12,10 @@ class MagicGuide(Catalyst):
     rare: Rare = Rare.Star_3
     refi_name: str = "Bane of Storm and Tide"
     refi_list: List[str] = [
-            "Increases DMG against opponents affected by Hydro or Electro by 12%.",
-            "Increases DMG against opponents affected by Hydro or Electro by 15%.",
-            "Increases DMG against opponents affected by Hydro or Electro by 18%.",
-            "Increases DMG against opponents affected by Hydro or Electro by 21%.",
-            "Increases DMG against opponents affected by Hydro or Electro by 24%.",
-        ]
+        "Increases DMG against opponents affected by Hydro or Electro by 12%.",
+        "Increases DMG against opponents affected by Hydro or Electro by 15%.",
+        "Increases DMG against opponents affected by Hydro or Electro by 18%.",
+        "Increases DMG against opponents affected by Hydro or Electro by 21%.",
+        "Increases DMG against opponents affected by Hydro or Electro by 24%.",
+    ]
+    file: str = "mcge"

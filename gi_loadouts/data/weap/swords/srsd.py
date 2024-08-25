@@ -18,3 +18,4 @@ class SkyriderSword(Sword):
         "Using an Elemental Burst grants a 21% increase in ATK and Movement SPD for 15s.",
         "Using an Elemental Burst grants a 24% increase in ATK and Movement SPD for 15s.",
     ]
+    file: str = "srsd"

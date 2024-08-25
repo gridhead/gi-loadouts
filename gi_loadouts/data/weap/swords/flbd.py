@@ -18,3 +18,4 @@ class FilletBlade(Sword):
         "On hit, has 50% chance to deal 360% ATK DMG to a single enemy. Can only occur once every 12s.",
         "On hit, has 50% chance to deal 400% ATK DMG to a single enemy. Can only occur once every 11s.",
     ]
+    file: str = "flbd"

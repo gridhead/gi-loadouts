@@ -14,3 +14,4 @@ class SwordOfDescension(Sword):
     refi_list: List[str] = [
         "Effective only on the following platform: 'PlayStation Network' Hitting enemies with Normal or Charged Attacks grants a 50% chance to deal 200% ATK as DMG in a small AoE. This effect can only occur once every 10s. Additionally, if the Traveler equips the Sword of Descension, their ATK is increased by 66."
     ]
+    file: str = "sods"

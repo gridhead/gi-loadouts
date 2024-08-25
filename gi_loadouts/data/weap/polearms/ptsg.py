@@ -18,3 +18,4 @@ class PrototypeStarglitter(Polearm):
         "After using an Elemental Skill, increases Normal and Charged Attack DMG by 14% for 12s. Max 2 stacks.",
         "After using an Elemental Skill, increases Normal and Charged Attack DMG by 16% for 12s. Max 2 stacks.",
     ]
+    file: str = "ptsg"

@@ -18,3 +18,4 @@ class SacrificialFragments(Catalyst):
         "After dealing damage to an opponent with an Elemental Skill, the skill has a 70% chance to end its own CD. Can only occur once every 19s.",
         "After dealing damage to an opponent with an Elemental Skill, the skill has a 80% chance to end its own CD. Can only occur once every 16s.",
     ]
+    file: str = "sffm"

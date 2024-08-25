@@ -18,3 +18,4 @@ class FadingTwilight(Bow):
         "Has three states, Evengleam, Afterglow, and Dawnblaze, which increase DMG dealt by 10.5%/17.5%/24.5% respectively. When attacks hit opponents, this weapon will switch to the next state. This weapon can change states once every 7s. The character equipping this weapon can still trigger the state switch while not on the field.",
         "Has three states, Evengleam, Afterglow, and Dawnblaze, which increase DMG dealt by 12%/20%/28% respectively. When attacks hit opponents, this weapon will switch to the next state. This weapon can change states once every 7s. The character equipping this weapon can still trigger the state switch while not on the field.",
     ]
+    file: str = "fdtl"

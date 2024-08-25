@@ -18,3 +18,4 @@ class CrescentPike(Polearm):
         "After picking up an Elemental Orb/Particle, Normal and Charged Attacks deal an additional 35% ATK as DMG for 5s.",
         "After picking up an Elemental Orb/Particle, Normal and Charged Attacks deal an additional 40% ATK as DMG for 5s.",
     ]
+    file: str = "ccpk"

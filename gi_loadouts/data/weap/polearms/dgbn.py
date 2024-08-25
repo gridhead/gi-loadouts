@@ -18,3 +18,4 @@ class DragonsBane(Polearm):
         "Increases DMG against opponents affected by Hydro or Pyro by 32%.",
         "Increases DMG against opponents affected by Hydro or Pyro by 36%.",
     ]
+    file: str = "dgbn"

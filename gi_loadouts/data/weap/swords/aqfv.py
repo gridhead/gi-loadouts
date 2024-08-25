@@ -25,3 +25,4 @@ class AquilaFavonia(Sword):
         [WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=35)],
         [WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=40)],
     ]
+    file: str = "aqfv"

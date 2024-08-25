@@ -25,3 +25,4 @@ class TheUnforged(Claymore):
         [WeaponStat(stat_name=WeaponStatType.shield_strength_perc, stat_data=35.0)],
         [WeaponStat(stat_name=WeaponStatType.shield_strength_perc, stat_data=40.0)],
     ]
+    file: str = "tufg"

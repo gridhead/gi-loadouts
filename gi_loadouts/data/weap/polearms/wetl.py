@@ -17,4 +17,5 @@ class WhiteTassel(Polearm):
         "Increases Normal Attack DMG by 36%.",
         "Increases Normal Attack DMG by 42%.",
         "Increases Normal Attack DMG by 48%.",
-]
+    ]
+    file: str = "wetl"

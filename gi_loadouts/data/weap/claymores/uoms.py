@@ -26,4 +26,5 @@ class UltimateOverlordsMegaMagicSword(Claymore):
         [WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=21.0)],
         [WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=24.0)],
     ]
+    file: str = "uoms"
 

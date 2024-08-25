@@ -18,3 +18,4 @@ class PrimordialJadeWingedSpear(Polearm):
         "On hit, increases ATK by 5.3% for 6s. Max 7 stacks. This effect can only occur once every 0.3s. While in possession of the maximum possible stacks, DMG dealt is increased by 21%.",
         "On hit, increases ATK by 6.0% for 6s. Max 7 stacks. This effect can only occur once every 0.3s. While in possession of the maximum possible stacks, DMG dealt is increased by 24%.",
     ]
+    file: str = "pjws"

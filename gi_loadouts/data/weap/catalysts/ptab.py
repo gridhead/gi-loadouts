@@ -18,3 +18,4 @@ class PrototypeAmber(Catalyst):
         "Using an Elemental Burst regenerates 5.5 Energy every 2s for 6s. All party members will regenerate 5.5% HP every 2s for this duration.",
         "Using an Elemental Burst regenerates 6 Energy every 2s for 6s. All party members will regenerate 6% HP every 2s for this duration.",
     ]
+    file: str = "ptab"

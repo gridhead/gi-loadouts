@@ -18,3 +18,4 @@ class SerpentSpine(Claymore):
         "Every 4s a character is on the field, they will deal 9% more DMG and take 2.2%  more DMG. This effect has a maximum of 5 stacks and will not be reset if the character leaves the field, but will be reduced by 1 stack when the character takes DMG.",
         "Every 4s a character is on the field, they will deal 10% more DMG and take 2%  more DMG. This effect has a maximum of 5 stacks and will not be reset if the character leaves the field, but will be reduced by 1 stack when the character takes DMG.",
     ]
+    file: str = "spsp"

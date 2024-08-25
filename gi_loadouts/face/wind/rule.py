@@ -110,6 +110,10 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             weap = Family[kind][name]
             weap.levl = getattr(Level, self.weap_area_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
             self.weap_area_batk.setText(f"ATK {round(weap.main_stat.stat_data)}")
+            if weap.levl.value.rank.value <= 1:
+                self.weap_port_icon.setPixmap(QPixmap(f":weap/imgs/weap/{kind.lower()}s/{weap.file}_a.webp"))
+            else:
+                self.weap_port_icon.setPixmap(QPixmap(f":weap/imgs/weap/{kind.lower()}s/{weap.file}_b.webp"))
             if weap.seco_stat.stat_name != WeaponStatType.none:
                 self.weap_area_stat.setText(f"{weap.seco_stat_calc.stat_name.value.value} {round(weap.seco_stat_calc.stat_data, 1)}")
 

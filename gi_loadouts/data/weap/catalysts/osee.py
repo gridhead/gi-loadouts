@@ -18,3 +18,4 @@ class OathswornEye(Catalyst):
         "Increases Energy Recharge by 42% for 10s after using an Elemental Skill.",
         "Increases Energy Recharge by 48% for 10s after using an Elemental Skill.",
     ]
+    file: str = "osee"

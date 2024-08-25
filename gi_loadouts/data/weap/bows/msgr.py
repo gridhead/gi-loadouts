@@ -18,3 +18,4 @@ class Messenger(Bow):
         "Charged Attack hits on weak spots deal an additional 175% ATK DMG as CRIT DMG. Can only occur once every 10s.",
         "Charged Attack hits on weak spots deal an additional 200% ATK DMG as CRIT DMG. Can only occur once every 10s.",
     ]
+    file: str = "msgr"

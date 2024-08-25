@@ -18,3 +18,4 @@ class RavenBow(Bow):
             "Increases DMG against opponents affected by Hydro or Pyro by 21%.",
             "Increases DMG against opponents affected by Hydro or Pyro by 24%.",
         ]
+    file: str = "rvbw"

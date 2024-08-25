@@ -18,3 +18,4 @@ class DragonspineSpear(Polearm):
         "Hitting an opponent with Normal and Charged Attacks has a 90% chance of forming and dropping an Everfrost Icicle above them, dealing 125% AoE ATK DMG. Opponents affected by Cryo are dealt 320% ATK DMG instead by the icicle. Can only occur once every 10s.",
         "Hitting an opponent with Normal and Charged Attacks has a 100% chance of forming and dropping an Everfrost Icicle above them, dealing 140% AoE ATK DMG. Opponents affected by Cryo are dealt 360% ATK DMG instead by the icicle. Can only occur once every 10s.",
     ]
+    file: str = "dssr"

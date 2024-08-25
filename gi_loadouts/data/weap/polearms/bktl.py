@@ -18,3 +18,4 @@ class BlackTassel(Polearm):
         "Increases DMG against slimes by 70%.",
         "Increases DMG against slimes by 80%.",
     ]
+    file: str = "bktl"

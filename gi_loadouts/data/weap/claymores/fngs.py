@@ -18,3 +18,4 @@ class FavoniusGreatsword(Claymore):
         "CRIT hits have a 90% chance to generate a small amount of Elemental Particles, which will regenerate 6 Energy for the character. Can only occur once every 7.5s.",
         "CRIT hits have a 100% chance to generate a small amount of Elemental Particles, which will regenerate 6 Energy for the character. Can only occur once every 6s.",
     ]
+    file: str = "fngs"

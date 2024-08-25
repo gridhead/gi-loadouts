@@ -18,3 +18,4 @@ class Rainslasher(Claymore):
         "Increases DMG against opponents affected by Hydro or Electro by 32%.",
         "Increases DMG against opponents affected by Hydro or Electro by 36%.",
     ]
+    file: str = "rnsh"

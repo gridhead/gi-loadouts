@@ -18,3 +18,4 @@ class TheStringless(Bow):
             "Increases Elemental Skill and Elemental Burst DMG by 42%.",
             "Increases Elemental Skill and Elemental Burst DMG by 48%.",
         ]
+    file: str = "tsgs"

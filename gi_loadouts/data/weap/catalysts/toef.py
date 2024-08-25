@@ -25,3 +25,4 @@ class TomeoftheEternalFlow(Catalyst):
         [WeaponStat(stat_name=WeaponStatType.health_points_perc, stat_data=28.5)],
         [WeaponStat(stat_name=WeaponStatType.health_points_perc, stat_data=32.0)],
     ]
+    file: str = "toef"

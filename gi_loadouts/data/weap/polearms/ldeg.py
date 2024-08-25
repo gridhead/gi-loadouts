@@ -25,3 +25,4 @@ class LumidouceElegy(Polearm):
         [WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=27.0)],
         [WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=31.0)],
     ]
+    file: str = "ldeg"

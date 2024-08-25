@@ -25,3 +25,4 @@ class SkywardHarp(Bow):
         [WeaponStat(stat_name=WeaponStatType.critical_damage_perc, stat_data=35.0)],
         [WeaponStat(stat_name=WeaponStatType.critical_damage_perc, stat_data=40.0)],
     ]
+    file: str = "swhp"
