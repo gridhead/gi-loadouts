@@ -1482,10 +1482,10 @@
      <widget class="QLabel" name="arti_fwol_head_icon">
       <property name="geometry">
        <rect>
-        <x>35</x>
-        <y>35</y>
-        <width>125</width>
-        <height>125</height>
+        <x>25</x>
+        <y>25</y>
+        <width>145</width>
+        <height>145</height>
        </rect>
       </property>
       <property name="sizePolicy">
@@ -1496,21 +1496,21 @@
       </property>
       <property name="minimumSize">
        <size>
-        <width>125</width>
-        <height>125</height>
+        <width>145</width>
+        <height>145</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
-        <width>125</width>
-        <height>125</height>
+        <width>145</width>
+        <height>145</height>
        </size>
       </property>
       <property name="text">
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="arti.qrc">:/arti/imgs/arti/fwol.png</pixmap>
+       <pixmap resource="arti.qrc">:/arti/imgs/arti/main/fwol.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -2161,10 +2161,10 @@
      <widget class="QLabel" name="arti_pmod_head_icon">
       <property name="geometry">
        <rect>
-        <x>35</x>
-        <y>35</y>
-        <width>125</width>
-        <height>125</height>
+        <x>25</x>
+        <y>25</y>
+        <width>145</width>
+        <height>145</height>
        </rect>
       </property>
       <property name="sizePolicy">
@@ -2175,21 +2175,21 @@
       </property>
       <property name="minimumSize">
        <size>
-        <width>125</width>
-        <height>125</height>
+        <width>145</width>
+        <height>145</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
-        <width>125</width>
-        <height>125</height>
+        <width>145</width>
+        <height>145</height>
        </size>
       </property>
       <property name="text">
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="arti.qrc">:/arti/imgs/arti/pmod.png</pixmap>
+       <pixmap resource="arti.qrc">:/arti/imgs/arti/main/pmod.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -2840,10 +2840,10 @@
      <widget class="QLabel" name="arti_sdoe_head_icon">
       <property name="geometry">
        <rect>
-        <x>35</x>
-        <y>35</y>
-        <width>125</width>
-        <height>125</height>
+        <x>25</x>
+        <y>25</y>
+        <width>145</width>
+        <height>145</height>
        </rect>
       </property>
       <property name="sizePolicy">
@@ -2854,21 +2854,21 @@
       </property>
       <property name="minimumSize">
        <size>
-        <width>125</width>
-        <height>125</height>
+        <width>145</width>
+        <height>145</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
-        <width>125</width>
-        <height>125</height>
+        <width>145</width>
+        <height>145</height>
        </size>
       </property>
       <property name="text">
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="arti.qrc">:/arti/imgs/arti/sdoe.png</pixmap>
+       <pixmap resource="arti.qrc">:/arti/imgs/arti/main/sdoe.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -3519,10 +3519,10 @@
      <widget class="QLabel" name="arti_gboe_head_icon">
       <property name="geometry">
        <rect>
-        <x>35</x>
-        <y>35</y>
-        <width>125</width>
-        <height>125</height>
+        <x>25</x>
+        <y>25</y>
+        <width>145</width>
+        <height>145</height>
        </rect>
       </property>
       <property name="sizePolicy">
@@ -3533,21 +3533,21 @@
       </property>
       <property name="minimumSize">
        <size>
-        <width>125</width>
-        <height>125</height>
+        <width>145</width>
+        <height>145</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
-        <width>125</width>
-        <height>125</height>
+        <width>145</width>
+        <height>145</height>
        </size>
       </property>
       <property name="text">
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="arti.qrc">:/arti/imgs/arti/gboe.png</pixmap>
+       <pixmap resource="arti.qrc">:/arti/imgs/arti/main/gboe.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -4213,10 +4213,10 @@
      <widget class="QLabel" name="arti_ccol_head_icon">
       <property name="geometry">
        <rect>
-        <x>35</x>
-        <y>35</y>
-        <width>125</width>
-        <height>125</height>
+        <x>25</x>
+        <y>25</y>
+        <width>145</width>
+        <height>145</height>
        </rect>
       </property>
       <property name="sizePolicy">
@@ -4227,21 +4227,21 @@
       </property>
       <property name="minimumSize">
        <size>
-        <width>125</width>
-        <height>125</height>
+        <width>145</width>
+        <height>145</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
-        <width>125</width>
-        <height>125</height>
+        <width>145</width>
+        <height>145</height>
        </size>
       </property>
       <property name="text">
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="arti.qrc">:/arti/imgs/arti/ccol.png</pixmap>
+       <pixmap resource="arti.qrc">:/arti/imgs/arti/main/ccol.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -4321,7 +4321,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="arti.qrc">:/arti/imgs/arti/fwol.png</pixmap>
+       <pixmap resource="arti.qrc">:/arti/imgs/arti/main/fwol.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -4401,7 +4401,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="arti.qrc">:/arti/imgs/arti/pmod.png</pixmap>
+       <pixmap resource="arti.qrc">:/arti/imgs/arti/main/pmod.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -4481,7 +4481,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="arti.qrc">:/arti/imgs/arti/sdoe.png</pixmap>
+       <pixmap resource="arti.qrc">:/arti/imgs/arti/main/sdoe.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -4561,7 +4561,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="arti.qrc">:/arti/imgs/arti/gboe.png</pixmap>
+       <pixmap resource="arti.qrc">:/arti/imgs/arti/main/gboe.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -4641,7 +4641,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="arti.qrc">:/arti/imgs/arti/ccol.png</pixmap>
+       <pixmap resource="arti.qrc">:/arti/imgs/arti/main/ccol.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -5356,7 +5356,7 @@
       <x>5</x>
       <y>105</y>
       <width>250</width>
-      <height>505</height>
+      <height>530</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -5368,13 +5368,13 @@
     <property name="minimumSize">
      <size>
       <width>0</width>
-      <height>505</height>
+      <height>530</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
       <width>16777215</width>
-      <height>505</height>
+      <height>530</height>
      </size>
     </property>
     <property name="styleSheet">
@@ -5463,7 +5463,7 @@
        <x>5</x>
        <y>35</y>
        <width>240</width>
-       <height>425</height>
+       <height>450</height>
       </rect>
      </property>
      <property name="sizePolicy">
@@ -5475,13 +5475,13 @@
      <property name="minimumSize">
       <size>
        <width>240</width>
-       <height>425</height>
+       <height>450</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
        <width>240</width>
-       <height>425</height>
+       <height>450</height>
       </size>
      </property>
      <property name="styleSheet">
@@ -5499,7 +5499,7 @@
         <x>5</x>
         <y>35</y>
         <width>230</width>
-        <height>175</height>
+        <height>185</height>
        </rect>
       </property>
       <property name="sizePolicy">
@@ -5511,13 +5511,13 @@
       <property name="minimumSize">
        <size>
         <width>230</width>
-        <height>175</height>
+        <height>185</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
         <width>230</width>
-        <height>175</height>
+        <height>185</height>
        </size>
       </property>
       <property name="styleSheet">
@@ -5589,7 +5589,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>215</y>
+        <y>225</y>
         <width>230</width>
         <height>25</height>
        </rect>
@@ -5629,9 +5629,9 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>245</y>
+        <y>255</y>
         <width>230</width>
-        <height>175</height>
+        <height>190</height>
        </rect>
       </property>
       <property name="sizePolicy">
@@ -5643,13 +5643,13 @@
       <property name="minimumSize">
        <size>
         <width>230</width>
-        <height>175</height>
+        <height>190</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
         <width>230</width>
-        <height>175</height>
+        <height>190</height>
        </size>
       </property>
       <property name="styleSheet">
@@ -5682,7 +5682,7 @@
      <property name="geometry">
       <rect>
        <x>5</x>
-       <y>460</y>
+       <y>485</y>
        <width>40</width>
        <height>40</height>
       </rect>
@@ -5745,7 +5745,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="arti.qrc">:/arti/imgs/arti/main.png</pixmap>
+       <pixmap resource="arti.qrc">:/arti/imgs/arti/main/main.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -5762,7 +5762,7 @@
      <property name="geometry">
       <rect>
        <x>120</x>
-       <y>465</y>
+       <y>490</y>
        <width>125</width>
        <height>35</height>
       </rect>
@@ -6469,10 +6469,10 @@
      <widget class="QLabel" name="weap_port_icon">
       <property name="geometry">
        <rect>
-        <x>35</x>
-        <y>35</y>
-        <width>125</width>
-        <height>125</height>
+        <x>25</x>
+        <y>25</y>
+        <width>145</width>
+        <height>145</height>
        </rect>
       </property>
       <property name="sizePolicy">
@@ -6483,14 +6483,14 @@
       </property>
       <property name="minimumSize">
        <size>
-        <width>125</width>
-        <height>125</height>
+        <width>145</width>
+        <height>145</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
-        <width>125</width>
-        <height>125</height>
+        <width>145</width>
+        <height>145</height>
        </size>
       </property>
       <property name="text">
@@ -6866,9 +6866,6 @@
   <include location="vson.qrc"/>
   <include location="weap.qrc"/>
   <include location="arti.qrc"/>
-  <include location="../../Users/gridhead/Documents/loadouts/rare.qrc"/>
-  <include location="../../Users/gridhead/Documents/loadouts/arti.qrc"/>
-  <include location="../../Users/gridhead/Documents/loadouts/weap.qrc"/>
  </resources>
  <connections/>
 </ui>

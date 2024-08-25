@@ -60,6 +60,7 @@ __artilist__ = {
         pairdata=advn.team.__pairdata__, pairtext=advn.team.__pairtext__,
         quaddata=advn.team.__quaddata__, quadtext=advn.team.__quadtext__,
         rare=[Rare.Star_1, Rare.Star_2, Rare.Star_3],
+        file=advn.__name__.split(".")[-1]
     ),
     acpt.team.__teamname__: ArtifactTeam(
         name=acpt.team.__teamname__,
@@ -67,6 +68,7 @@ __artilist__ = {
         pairdata=acpt.team.__pairdata__, pairtext=acpt.team.__pairtext__,
         quaddata=acpt.team.__quaddata__, quadtext=acpt.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=acpt.__name__.split(".")[-1]
     ),
     bskr.team.__teamname__: ArtifactTeam(
         name=bskr.team.__teamname__,
@@ -74,6 +76,7 @@ __artilist__ = {
         pairdata=bskr.team.__pairdata__, pairtext=bskr.team.__pairtext__,
         quaddata=bskr.team.__quaddata__, quadtext=bskr.team.__quadtext__,
         rare=[Rare.Star_3, Rare.Star_4],
+        file=bskr.__name__.split(".")[-1]
     ),
     bzst.team.__teamname__: ArtifactTeam(
         name=bzst.team.__teamname__,
@@ -81,6 +84,7 @@ __artilist__ = {
         pairdata=bzst.team.__pairdata__, pairtext=bzst.team.__pairtext__,
         quaddata=bzst.team.__quaddata__, quadtext=bzst.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=bzst.__name__.split(".")[-1]
     ),
     bscv.team.__teamname__: ArtifactTeam(
         name=bscv.team.__teamname__,
@@ -88,6 +92,7 @@ __artilist__ = {
         pairdata=bscv.team.__pairdata__, pairtext=bscv.team.__pairtext__,
         quaddata=bscv.team.__quaddata__, quadtext=bscv.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=bscv.__name__.split(".")[-1]
     ),
     bvht.team.__teamname__: ArtifactTeam(
         name=bvht.team.__teamname__,
@@ -95,6 +100,7 @@ __artilist__ = {
         pairdata=bvht.team.__pairdata__, pairtext=bvht.team.__pairtext__,
         quaddata=bvht.team.__quaddata__, quadtext=bvht.team.__quadtext__,
         rare=[Rare.Star_3, Rare.Star_4],
+        file=bvht.__name__.split(".")[-1]
     ),
     cwof.team.__teamname__: ArtifactTeam(
         name=cwof.team.__teamname__,
@@ -102,6 +108,7 @@ __artilist__ = {
         pairdata=cwof.team.__pairdata__, pairtext=cwof.team.__pairtext__,
         quaddata=cwof.team.__quaddata__, quadtext=cwof.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=cwof.__name__.split(".")[-1]
     ),
     dwmm.team.__teamname__: ArtifactTeam(
         name=dwmm.team.__teamname__,
@@ -109,6 +116,7 @@ __artilist__ = {
         pairdata=dwmm.team.__pairdata__, pairtext=dwmm.team.__pairtext__,
         quaddata=dwmm.team.__quaddata__, quadtext=dwmm.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=dwmm.__name__.split(".")[-1]
     ),
     dfwl.team.__teamname__: ArtifactTeam(
         name=dfwl.team.__teamname__,
@@ -116,6 +124,7 @@ __artilist__ = {
         pairdata=dfwl.team.__pairdata__, pairtext=dfwl.team.__pairtext__,
         quaddata=dfwl.team.__quaddata__, quadtext=dfwl.team.__quadtext__,
         rare=[Rare.Star_3, Rare.Star_4],
+        file=dfwl.__name__.split(".")[-1]
     ),
     dspc.team.__teamname__: ArtifactTeam(
         name=dspc.team.__teamname__,
@@ -123,6 +132,7 @@ __artilist__ = {
         pairdata=dspc.team.__pairdata__, pairtext=dspc.team.__pairtext__,
         quaddata=dspc.team.__quaddata__, quadtext=dspc.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=dspc.__name__.split(".")[-1]
     ),
     eoao.team.__teamname__: ArtifactTeam(
         name=eoao.team.__teamname__,
@@ -130,6 +140,7 @@ __artilist__ = {
         pairdata=eoao.team.__pairdata__, pairtext=eoao.team.__pairtext__,
         quaddata=eoao.team.__quaddata__, quadtext=eoao.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=eoao.__name__.split(".")[-1]
     ),
     eosf.team.__teamname__: ArtifactTeam(
         name=eosf.team.__teamname__,
@@ -137,6 +148,7 @@ __artilist__ = {
         pairdata=eosf.team.__pairdata__, pairtext=eosf.team.__pairtext__,
         quaddata=eosf.team.__quaddata__, quadtext=eosf.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=eosf.__name__.split(".")[-1]
     ),
     fopl.team.__teamname__: ArtifactTeam(
         name=fopl.team.__teamname__,
@@ -144,6 +156,7 @@ __artilist__ = {
         pairdata=fopl.team.__pairdata__, pairtext=fopl.team.__pairtext__,
         quaddata=fopl.team.__quaddata__, quadtext=fopl.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=fopl.__name__.split(".")[-1]
     ),
     fohw.team.__teamname__: ArtifactTeam(
         name=fohw.team.__teamname__,
@@ -151,6 +164,7 @@ __artilist__ = {
         pairdata=fohw.team.__pairdata__, pairtext=fohw.team.__pairtext__,
         quaddata=fohw.team.__quaddata__, quadtext=fohw.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=fohw.__name__.split(".")[-1]
     ),
     gmbr.team.__teamname__: ArtifactTeam(
         name=gmbr.team.__teamname__,
@@ -158,6 +172,7 @@ __artilist__ = {
         pairdata=gmbr.team.__pairdata__, pairtext=gmbr.team.__pairtext__,
         quaddata=gmbr.team.__quaddata__, quadtext=gmbr.team.__quadtext__,
         rare=[Rare.Star_3, Rare.Star_4],
+        file=gmbr.__name__.split(".")[-1]
     ),
     gldr.team.__teamname__: ArtifactTeam(
         name=gldr.team.__teamname__,
@@ -165,6 +180,7 @@ __artilist__ = {
         pairdata=gldr.team.__pairdata__, pairtext=gldr.team.__pairtext__,
         quaddata=gldr.team.__quaddata__, quadtext=gldr.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=gldr.__name__.split(".")[-1]
     ),
     gdfl.team.__teamname__: ArtifactTeam(
         name=gdfl.team.__teamname__,
@@ -172,6 +188,7 @@ __artilist__ = {
         pairdata=gdfl.team.__pairdata__, pairtext=gdfl.team.__pairtext__,
         quaddata=gdfl.team.__quaddata__, quadtext=gdfl.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=gdfl.__name__.split(".")[-1]
     ),
     gdtp.team.__teamname__: ArtifactTeam(
         name=gdtp.team.__teamname__,
@@ -179,6 +196,7 @@ __artilist__ = {
         pairdata=gdtp.team.__pairdata__, pairtext=gdtp.team.__pairtext__,
         quaddata=gdtp.team.__quaddata__, quadtext=gdtp.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=gdtp.__name__.split(".")[-1]
     ),
     hodp.team.__teamname__: ArtifactTeam(
         name=hodp.team.__teamname__,
@@ -186,6 +204,7 @@ __artilist__ = {
         pairdata=hodp.team.__pairdata__, pairtext=hodp.team.__pairtext__,
         quaddata=hodp.team.__quaddata__, quadtext=hodp.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=hodp.__name__.split(".")[-1]
     ),
     hood.team.__teamname__: ArtifactTeam(
         name=hood.team.__teamname__,
@@ -193,6 +212,7 @@ __artilist__ = {
         pairdata=hood.team.__pairdata__, pairtext=hood.team.__pairtext__,
         quaddata=hood.team.__quaddata__, quadtext=hood.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=hood.__name__.split(".")[-1]
     ),
     istr.team.__teamname__: ArtifactTeam(
         name=istr.team.__teamname__,
@@ -200,6 +220,7 @@ __artilist__ = {
         pairdata=istr.team.__pairdata__, pairtext=istr.team.__pairtext__,
         quaddata=istr.team.__quaddata__, quadtext=istr.team.__quadtext__,
         rare=[Rare.Star_3, Rare.Star_4],
+        file=istr.__name__.split(".")[-1]
     ),
     lvwk.team.__teamname__: ArtifactTeam(
         name=lvwk.team.__teamname__,
@@ -207,6 +228,7 @@ __artilist__ = {
         pairdata=lvwk.team.__pairdata__, pairtext=lvwk.team.__pairtext__,
         quaddata=lvwk.team.__quaddata__, quadtext=lvwk.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=lvwk.__name__.split(".")[-1]
     ),
     lkdg.team.__teamname__: ArtifactTeam(
         name=lkdg.team.__teamname__,
@@ -214,6 +236,7 @@ __artilist__ = {
         pairdata=lkdg.team.__pairdata__, pairtext=lkdg.team.__pairtext__,
         quaddata=lkdg.team.__quaddata__, quadtext=lkdg.team.__quadtext__,
         rare=[Rare.Star_1, Rare.Star_2, Rare.Star_3],
+        file=lkdg.__name__.split(".")[-1]
     ),
     mdbv.team.__teamname__: ArtifactTeam(
         name=mdbv.team.__teamname__,
@@ -221,6 +244,7 @@ __artilist__ = {
         pairdata=mdbv.team.__pairdata__, pairtext=mdbv.team.__pairtext__,
         quaddata=mdbv.team.__quaddata__, quadtext=mdbv.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=mdbv.__name__.split(".")[-1]
     ),
     mcht.team.__teamname__: ArtifactTeam(
         name=mcht.team.__teamname__,
@@ -228,6 +252,7 @@ __artilist__ = {
         pairdata=mcht.team.__pairdata__, pairtext=mcht.team.__pairtext__,
         quaddata=mcht.team.__quaddata__, quadtext=mcht.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=mcht.__name__.split(".")[-1]
     ),
     mtat.team.__teamname__: ArtifactTeam(
         name=mtat.team.__teamname__,
@@ -235,6 +260,7 @@ __artilist__ = {
         pairdata=mtat.team.__pairdata__, pairtext=mtat.team.__pairtext__,
         quaddata=mtat.team.__quaddata__, quadtext=mtat.team.__quadtext__,
         rare=[Rare.Star_3, Rare.Star_4],
+        file=mtat.__name__.split(".")[-1]
     ),
     nwiw.team.__teamname__: ArtifactTeam(
         name=nwiw.team.__teamname__,
@@ -242,6 +268,7 @@ __artilist__ = {
         pairdata=nwiw.team.__pairdata__, pairtext=nwiw.team.__pairtext__,
         quaddata=nwiw.team.__quaddata__, quadtext=nwiw.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=nwiw.__name__.split(".")[-1]
     ),
     nlob.team.__teamname__: ArtifactTeam(
         name=nlob.team.__teamname__,
@@ -249,6 +276,7 @@ __artilist__ = {
         pairdata=nlob.team.__pairdata__, pairtext=nlob.team.__pairtext__,
         quaddata=nlob.team.__quaddata__, quadtext=nlob.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=nlob.__name__.split(".")[-1]
     ),
     nmdr.team.__teamname__: ArtifactTeam(
         name=nmdr.team.__teamname__,
@@ -256,6 +284,7 @@ __artilist__ = {
         pairdata=nmdr.team.__pairdata__, pairtext=nmdr.team.__pairtext__,
         quaddata=nmdr.team.__quaddata__, quadtext=nmdr.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=nmdr.__name__.split(".")[-1]
     ),
     ochc.team.__teamname__: ArtifactTeam(
         name=ochc.team.__teamname__,
@@ -263,6 +292,7 @@ __artilist__ = {
         pairdata=ochc.team.__pairdata__, pairtext=ochc.team.__pairtext__,
         quaddata=ochc.team.__quaddata__, quadtext=ochc.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=ochc.__name__.split(".")[-1]
     ),
     plfm.team.__teamname__: ArtifactTeam(
         name=plfm.team.__teamname__,
@@ -270,6 +300,7 @@ __artilist__ = {
         pairdata=plfm.team.__pairdata__, pairtext=plfm.team.__pairtext__,
         quaddata=plfm.team.__quaddata__, quadtext=plfm.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=plfm.__name__.split(".")[-1]
     ),
     rosj.team.__teamname__: ArtifactTeam(
         name=rosj.team.__teamname__,
@@ -277,6 +308,7 @@ __artilist__ = {
         pairdata=rosj.team.__pairdata__, pairtext=rosj.team.__pairtext__,
         quaddata=rosj.team.__quaddata__, quadtext=rosj.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=rosj.__name__.split(".")[-1]
     ),
     rcbl.team.__teamname__: ArtifactTeam(
         name=rcbl.team.__teamname__,
@@ -284,6 +316,7 @@ __artilist__ = {
         pairdata=rcbl.team.__pairdata__, pairtext=rcbl.team.__pairtext__,
         quaddata=rcbl.team.__quaddata__, quadtext=rcbl.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=rcbl.__name__.split(".")[-1]
     ),
     sclr.team.__teamname__: ArtifactTeam(
         name=sclr.team.__teamname__,
@@ -291,6 +324,7 @@ __artilist__ = {
         pairdata=sclr.team.__pairdata__, pairtext=sclr.team.__pairtext__,
         quaddata=sclr.team.__quaddata__, quadtext=sclr.team.__quadtext__,
         rare=[Rare.Star_3, Rare.Star_4],
+        file=sclr.__name__.split(".")[-1]
     ),
     smrm.team.__teamname__: ArtifactTeam(
         name=smrm.team.__teamname__,
@@ -298,6 +332,7 @@ __artilist__ = {
         pairdata=smrm.team.__pairdata__, pairtext=smrm.team.__pairtext__,
         quaddata=smrm.team.__quaddata__, quadtext=smrm.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=smrm.__name__.split(".")[-1]
     ),
     sodp.team.__teamname__: ArtifactTeam(
         name=sodp.team.__teamname__,
@@ -305,6 +340,7 @@ __artilist__ = {
         pairdata=sodp.team.__pairdata__, pairtext=sodp.team.__pairtext__,
         quaddata=sodp.team.__quaddata__, quadtext=sodp.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=sodp.__name__.split(".")[-1]
     ),
     totm.team.__teamname__: ArtifactTeam(
         name=totm.team.__teamname__,
@@ -312,6 +348,7 @@ __artilist__ = {
         pairdata=totm.team.__pairdata__, pairtext=totm.team.__pairtext__,
         quaddata=totm.team.__quaddata__, quadtext=totm.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=totm.__name__.split(".")[-1]
     ),
     texl.team.__teamname__: ArtifactTeam(
         name=texl.team.__teamname__,
@@ -319,6 +356,7 @@ __artilist__ = {
         pairdata=texl.team.__pairdata__, pairtext=texl.team.__pairtext__,
         quaddata=texl.team.__quaddata__, quadtext=texl.team.__quadtext__,
         rare=[Rare.Star_3, Rare.Star_4],
+        file=texl.__name__.split(".")[-1]
     ),
     tdfr.team.__teamname__: ArtifactTeam(
         name=tdfr.team.__teamname__,
@@ -326,6 +364,7 @@ __artilist__ = {
         pairdata=tdfr.team.__pairdata__, pairtext=tdfr.team.__pairtext__,
         quaddata=tdfr.team.__quaddata__, quadtext=tdfr.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=tdfr.__name__.split(".")[-1]
     ),
     tdst.team.__teamname__: ArtifactTeam(
         name=tdst.team.__teamname__,
@@ -333,6 +372,7 @@ __artilist__ = {
         pairdata=tdst.team.__pairdata__, pairtext=tdst.team.__pairtext__,
         quaddata=tdst.team.__quaddata__, quadtext=tdst.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=tdst.__name__.split(".")[-1]
     ),
     tymc.team.__teamname__: ArtifactTeam(
         name=tymc.team.__teamname__,
@@ -340,6 +380,7 @@ __artilist__ = {
         pairdata=tymc.team.__pairdata__, pairtext=tymc.team.__pairtext__,
         quaddata=tymc.team.__quaddata__, quadtext=tymc.team.__quadtext__,
         rare=[Rare.Star_3, Rare.Star_4],
+        file=tymc.__name__.split(".")[-1]
     ),
     tvdt.team.__teamname__: ArtifactTeam(
         name=tvdt.team.__teamname__,
@@ -347,6 +388,7 @@ __artilist__ = {
         pairdata=tvdt.team.__pairdata__, pairtext=tvdt.team.__pairtext__,
         quaddata=tvdt.team.__quaddata__, quadtext=tvdt.team.__quadtext__,
         rare=[Rare.Star_1, Rare.Star_2, Rare.Star_3],
+        file=tvdt.__name__.split(".")[-1]
     ),
     ufrv.team.__teamname__: ArtifactTeam(
         name=ufrv.team.__teamname__,
@@ -354,6 +396,7 @@ __artilist__ = {
         pairdata=ufrv.team.__pairdata__, pairtext=ufrv.team.__pairtext__,
         quaddata=ufrv.team.__quaddata__, quadtext=ufrv.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=ufrv.__name__.split(".")[-1]
     ),
     vmha.team.__teamname__: ArtifactTeam(
         name=vmha.team.__teamname__,
@@ -361,6 +404,7 @@ __artilist__ = {
         pairdata=vmha.team.__pairdata__, pairtext=vmha.team.__pairtext__,
         quaddata=vmha.team.__quaddata__, quadtext=vmha.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=vmha.__name__.split(".")[-1]
     ),
     vdvn.team.__teamname__: ArtifactTeam(
         name=vdvn.team.__teamname__,
@@ -368,6 +412,7 @@ __artilist__ = {
         pairdata=vdvn.team.__pairdata__, pairtext=vdvn.team.__pairtext__,
         quaddata=vdvn.team.__quaddata__, quadtext=vdvn.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=vdvn.__name__.split(".")[-1]
     ),
     vkgw.team.__teamname__: ArtifactTeam(
         name=vkgw.team.__teamname__,
@@ -375,6 +420,7 @@ __artilist__ = {
         pairdata=vkgw.team.__pairdata__, pairtext=vkgw.team.__pairtext__,
         quaddata=vkgw.team.__quaddata__, quadtext=vkgw.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=vkgw.__name__.split(".")[-1]
     ),
     wdtp.team.__teamname__: ArtifactTeam(
         name=wdtp.team.__teamname__,
@@ -382,6 +428,7 @@ __artilist__ = {
         pairdata=wdtp.team.__pairdata__, pairtext=wdtp.team.__pairtext__,
         quaddata=wdtp.team.__quaddata__, quadtext=wdtp.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
+        file=wdtp.__name__.split(".")[-1]
     ),
     none.team.__teamname__: ArtifactTeam(
         name=none.team.__teamname__,
@@ -389,6 +436,7 @@ __artilist__ = {
         pairdata=none.team.__pairdata__, pairtext=none.team.__pairtext__,
         quaddata=none.team.__quaddata__, quadtext=none.team.__quadtext__,
         rare=[Rare.Star_0],
+        file=none.__name__.split(".")[-1]
     ),
 }
 

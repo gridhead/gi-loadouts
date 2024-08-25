@@ -122,12 +122,15 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.weap_area_refn_head.setText(f"<b>{weap.refi_name}</b>")
             self.weap_area_refn_body.setText(f"{weap.refi_list[refn]}")
 
-    def change_rarity_by_changing_type(self, droptype: QComboBox, droprare: QComboBox, artiname: QLabel, part: str) -> None:
+    def change_rarity_backdrop_by_changing_type(self, droptype: QComboBox, droprare: QComboBox, artiname: QLabel, headicon: QLabel, part: str) -> None:
         if droptype.currentText().strip() != "":
             kind = getattr(ArtiList, droptype.currentText().replace(" ", "_").replace("'", "").replace("-", "_"))
             droprare.clear()
             droprare.addItems([f"Star {indx.value}" for indx in kind.value.rare])
             artiname.setText(truncate_text(getattr(kind.value, part).__name__, 30))
+            headicon.setPixmap(QPixmap(f":arti/imgs/arti/{kind.value.file}/{part}.webp"))
+            if droptype.currentText().strip() == "None":
+                headicon.setPixmap(QPixmap(f":arti/imgs/arti/main/{part}.png"))
 
     def change_data_by_changing_level_or_stat(self, droplevl: QComboBox, droptype: QComboBox, droprare: QComboBox, dropstat: QComboBox, statdata: QLineEdit, part: str) -> None:
         if droplevl.currentText().strip() != "" and droptype.currentText().strip() != "" and droprare.currentText().strip() != "" and dropstat.currentText().strip() != "":

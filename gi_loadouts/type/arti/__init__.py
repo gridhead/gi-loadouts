@@ -22,6 +22,7 @@ class ArtifactTeam(BaseModel):
     pairtext: str = ""
     quadtext: str = ""
     rare: List[Rare] = []
+    file: str = ""
 
 
 class ArtiLevlType(BaseModel):
