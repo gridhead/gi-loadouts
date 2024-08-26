@@ -1,0 +1,28 @@
+from typing import List
+
+from gi_loadouts.type.rare import Rare
+from gi_loadouts.type.weap import Sword, WeaponStat, WeaponStatType
+from gi_loadouts.type.weap.base.tier import Tier
+
+
+class HaranGeppakuFutsu(Sword):
+    name: str = "Haran Geppaku Futsu"
+    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=7.2)
+    tier: Tier = Tier.Tier_2
+    rare: Rare = Rare.Star_5
+    refi_name: str = "Honed Flow"
+    refi_list: List[str] = [
+        "Obtain 12% All Elemental DMG Bonus. When other nearby party members use Elemental Skills, the character equipping this weapon will gain 1 Wavespike stack. Max 2 stacks. This effect can be triggered once every 0.3s. When the character equipping this weapon uses an Elemental Skill, all stacks of Wavespike will be consumed to gain Rippling Upheaval: each stack of Wavespike consumed will increase Normal Attack DMG by 20% for 8s.",
+        "Obtain 15% All Elemental DMG Bonus. When other nearby party members use Elemental Skills, the character equipping this weapon will gain 1 Wavespike stack. Max 2 stacks. This effect can be triggered once every 0.3s. When the character equipping this weapon uses an Elemental Skill, all stacks of Wavespike will be consumed to gain Rippling Upheaval: each stack of Wavespike consumed will increase Normal Attack DMG by 25% for 8s.",
+        "Obtain 18% All Elemental DMG Bonus. When other nearby party members use Elemental Skills, the character equipping this weapon will gain 1 Wavespike stack. Max 2 stacks. This effect can be triggered once every 0.3s. When the character equipping this weapon uses an Elemental Skill, all stacks of Wavespike will be consumed to gain Rippling Upheaval: each stack of Wavespike consumed will increase Normal Attack DMG by 30% for 8s.",
+        "Obtain 21% All Elemental DMG Bonus. When other nearby party members use Elemental Skills, the character equipping this weapon will gain 1 Wavespike stack. Max 2 stacks. This effect can be triggered once every 0.3s. When the character equipping this weapon uses an Elemental Skill, all stacks of Wavespike will be consumed to gain Rippling Upheaval: each stack of Wavespike consumed will increase Normal Attack DMG by 35% for 8s.",
+        "Obtain 24% All Elemental DMG Bonus. When other nearby party members use Elemental Skills, the character equipping this weapon will gain 1 Wavespike stack. Max 2 stacks. This effect can be triggered once every 0.3s. When the character equipping this weapon uses an Elemental Skill, all stacks of Wavespike will be consumed to gain Rippling Upheaval: each stack of Wavespike consumed will increase Normal Attack DMG by 40% for 8s.",
+    ]
+    refi_stat: List[WeaponStat] = [
+        [WeaponStat(stat_name=WeaponStatType.damage_bonus_anemo_perc, stat_data=12.0),WeaponStat(stat_name=WeaponStatType.damage_bonus_cryo_perc, stat_data=12.0),WeaponStat(stat_name=WeaponStatType.damage_bonus_dendro_perc, stat_data=12.0),WeaponStat(stat_name=WeaponStatType.damage_bonus_electro_perc, stat_data=12.0),WeaponStat(stat_name=WeaponStatType.damage_bonus_geo_perc, stat_data=12.0),WeaponStat(stat_name=WeaponStatType.damage_bonus_hydro_perc, stat_data=12.0),WeaponStat(stat_name=WeaponStatType.damage_bonus_pyro_perc, stat_data=12.0)],
+        [WeaponStat(stat_name=WeaponStatType.damage_bonus_anemo_perc, stat_data=15.0),WeaponStat(stat_name=WeaponStatType.damage_bonus_cryo_perc, stat_data=15.0),WeaponStat(stat_name=WeaponStatType.damage_bonus_dendro_perc, stat_data=15.0),WeaponStat(stat_name=WeaponStatType.damage_bonus_electro_perc, stat_data=15.0),WeaponStat(stat_name=WeaponStatType.damage_bonus_geo_perc, stat_data=15.0),WeaponStat(stat_name=WeaponStatType.damage_bonus_hydro_perc, stat_data=15.0),WeaponStat(stat_name=WeaponStatType.damage_bonus_pyro_perc, stat_data=15.0)],
+        [WeaponStat(stat_name=WeaponStatType.damage_bonus_anemo_perc, stat_data=18.0),WeaponStat(stat_name=WeaponStatType.damage_bonus_cryo_perc, stat_data=18.0),WeaponStat(stat_name=WeaponStatType.damage_bonus_dendro_perc, stat_data=18.0),WeaponStat(stat_name=WeaponStatType.damage_bonus_electro_perc, stat_data=18.0),WeaponStat(stat_name=WeaponStatType.damage_bonus_geo_perc, stat_data=18.0),WeaponStat(stat_name=WeaponStatType.damage_bonus_hydro_perc, stat_data=18.0),WeaponStat(stat_name=WeaponStatType.damage_bonus_pyro_perc, stat_data=18.0)],
+        [WeaponStat(stat_name=WeaponStatType.damage_bonus_anemo_perc, stat_data=21.0),WeaponStat(stat_name=WeaponStatType.damage_bonus_cryo_perc, stat_data=21.0),WeaponStat(stat_name=WeaponStatType.damage_bonus_dendro_perc, stat_data=21.0),WeaponStat(stat_name=WeaponStatType.damage_bonus_electro_perc, stat_data=21.0),WeaponStat(stat_name=WeaponStatType.damage_bonus_geo_perc, stat_data=21.0),WeaponStat(stat_name=WeaponStatType.damage_bonus_hydro_perc, stat_data=21.0),WeaponStat(stat_name=WeaponStatType.damage_bonus_pyro_perc, stat_data=21.0)],
+        [WeaponStat(stat_name=WeaponStatType.damage_bonus_anemo_perc, stat_data=24.0),WeaponStat(stat_name=WeaponStatType.damage_bonus_cryo_perc, stat_data=24.0),WeaponStat(stat_name=WeaponStatType.damage_bonus_dendro_perc, stat_data=24.0),WeaponStat(stat_name=WeaponStatType.damage_bonus_electro_perc, stat_data=24.0),WeaponStat(stat_name=WeaponStatType.damage_bonus_geo_perc, stat_data=24.0),WeaponStat(stat_name=WeaponStatType.damage_bonus_hydro_perc, stat_data=24.0),WeaponStat(stat_name=WeaponStatType.damage_bonus_pyro_perc, stat_data=24.0)],
+    ]
+    file: str = "hgft"

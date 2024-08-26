@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="rare">
+    <file>imgs/rare/star_1.webp</file>
+    <file>imgs/rare/star_2.webp</file>
+    <file>imgs/rare/star_3.webp</file>
+    <file>imgs/rare/star_4.webp</file>
+    <file>imgs/rare/star_5.webp</file>
+  </qresource>
+</RCC>

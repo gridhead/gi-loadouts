@@ -1,0 +1,54 @@
+[tool.poetry]
+name = "gi-loadouts"
+version = "0.1.0a1"
+description = "Loadouts for Genshin Impact"
+authors = ["Akashdeep Dhar <akashdeep.dhar@gmail.com>"]
+license = "GPL-3.0-or-later"
+maintainers = ["Akashdeep Dhar <akashdeep.dhar@gmail.com>"]
+readme = "README.md"
+homepage = "https://github.com/gridhead/gi-loadouts"
+repository = "https://github.com/gridhead/gi-loadouts"
+documentation = "https://github.com/gridhead/gi-loadouts/blob/main/README.md"
+keywords = []
+classifiers= [
+    "Development Status :: 4 - Beta",
+    "Environment :: X11 Applications :: Qt",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Topic :: Utilities"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+pyside6-essentials = "^6.7.2"
+pydantic = "^2.8.2"
+pyyaml = "^6.0.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.1.3 || ^8.0.0"
+pytest-cov = "^4.1.0 || ^5.0.0"
+ruff = "^0.2.0 || ^0.3.0"
+tox = "^4.0.0"
+
+[tool.ruff]
+line-length = 100
+fix = true
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "S", "B", "UP"]
+
+[tool.ruff.lint.per-file-ignores]
+"gi_loadouts/*" = ["E501"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+gi-loadouts = "gi_loadouts.main:main"

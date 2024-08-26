@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="vson">
+    <file>imgs/vson/cryo.png</file>
+    <file>imgs/vson/pyro.png</file>
+    <file>imgs/vson/hydro.png</file>
+    <file>imgs/vson/geo.png</file>
+    <file>imgs/vson/electro.png</file>
+    <file>imgs/vson/dendro.png</file>
+    <file>imgs/vson/anemo.png</file>
+  </qresource>
+</RCC>
