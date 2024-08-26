@@ -12,7 +12,7 @@ class FWOL(Artifact):
     secostat_d: Optional[SecoStat] = SecoStat()
 
     @property
-    def stat_data(self):
+    def stat_data(self) -> float:
         return health_points[self.rare]["init"] + sum(health_points[self.rare]["diff"][0:self.levl+1])  # noqa : E501
 
 __revmap__ = {

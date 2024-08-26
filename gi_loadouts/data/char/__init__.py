@@ -85,7 +85,6 @@ from gi_loadouts.data.char.yoimiya import Yoimiya
 from gi_loadouts.data.char.yun_jin import YunJin
 from gi_loadouts.data.char.zhongli import Zhongli
 
-
 __charmaps__ = {
     "Aether": Aether,
     "Albedo": Albedo,

@@ -119,24 +119,20 @@ class Char(BaseModel):
     head: str = ""
 
     @property
-    def attack(self):
-        calc = self.base.attack * Mult[self.levl.value.qant][self.rare] + Secs[self.levl.value.rank] * self.ascn.attack
-        return calc
+    def attack(self) -> float:
+        return self.base.attack * Mult[self.levl.value.qant][self.rare] + Secs[self.levl.value.rank] * self.ascn.attack
 
     @property
-    def defense(self):
-        calc = self.base.defense * Mult[self.levl.value.qant][self.rare] + Secs[self.levl.value.rank] * self.ascn.defense
-        return calc
+    def defense(self) -> float:
+        return self.base.defense * Mult[self.levl.value.qant][self.rare] + Secs[self.levl.value.rank] * self.ascn.defense
 
     @property
-    def health_points(self):
-        calc = self.base.health_points * Mult[self.levl.value.qant][self.rare] + Secs[self.levl.value.rank] * self.ascn.health_points
-        return calc
+    def health_points(self) -> float:
+        return self.base.health_points * Mult[self.levl.value.qant][self.rare] + Secs[self.levl.value.rank] * self.ascn.health_points
 
     @property
-    def seco(self):
-        calc = self.__statdata__[self.levl.value.rank.value]
-        return SecoStat(stat_name=self.__statname__, stat_data=calc)
+    def seco(self) -> SecoStat:
+        return SecoStat(stat_name=self.__statname__, stat_data=self.__statdata__[self.levl.value.rank.value])
 
 
 class BaseStat(BaseModel):

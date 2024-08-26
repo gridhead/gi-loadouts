@@ -18,8 +18,8 @@ class SDOE(Artifact):
     secostat_d: Optional[SecoStat] = SecoStat()
 
     @property
-    def stat_data(self):
-        calc = 0
+    def stat_data(self) -> float:
+        calc = 0.0
         if self.stat_name == MainStatType_SDOE.attack_perc:
             calc = attack_perc[self.rare]["init"] + sum(attack_perc[self.rare]["diff"][0:self.levl+1])  # noqa : E501
         elif self.stat_name == MainStatType_SDOE.defense_perc:

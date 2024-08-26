@@ -8,7 +8,7 @@ from gi_loadouts.face import rsrc  # noqa: F401
 from gi_loadouts.face.wind.main import MainWindow
 
 
-def load_custom_font():
+def load_custom_font() -> None:
     fontlist = [
         ":text/font/text/sans-bold.ttf",
         ":text/font/text/sans-rlar.ttf",
@@ -20,7 +20,7 @@ def load_custom_font():
         QFontDatabase.addApplicationFont(indx)
 
 
-def main():
+def main() -> None:
     os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
     QApplication.setStyle("Fusion")
     app = QApplication(sys.argv)

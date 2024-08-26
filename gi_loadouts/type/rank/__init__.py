@@ -1,6 +1,5 @@
 from enum import Enum
 
-
 __rank__ = {
     "Rank 0": 0,
     "Rank 1": 1,

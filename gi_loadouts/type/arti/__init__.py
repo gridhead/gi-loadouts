@@ -73,7 +73,7 @@ class Collection(BaseModel):
     ccol: CCOL = CCOL()
 
     @property
-    def team_list(self):
+    def team_list(self) -> list:
         return [
             self.fwol.__teamname__,
             self.pmod.__teamname__,
@@ -83,7 +83,7 @@ class Collection(BaseModel):
         ]
 
     @property
-    def pair(self):
+    def pair(self) -> list:
         pair_list, seen_list = set(), set()
         for item in self.team_list:
             if item.strip() != "" and item.strip() != "None":
@@ -96,7 +96,7 @@ class Collection(BaseModel):
         return pair_list
 
     @property
-    def quad(self):
+    def quad(self) -> str:
         occurrence, team = dict(), ""
         for item in self.team_list:
             if item.strip() != "" and item.strip() != "None":

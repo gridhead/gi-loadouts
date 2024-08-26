@@ -12,7 +12,7 @@ class PMOD(Artifact):
     secostat_d: Optional[SecoStat] = SecoStat()
 
     @property
-    def stat_data(self):
+    def stat_data(self) -> float:
         return attack[self.rare]["init"] + sum(attack[self.rare]["diff"][0:self.levl+1])  # noqa : E501
 
 

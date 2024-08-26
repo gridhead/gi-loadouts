@@ -28,7 +28,7 @@ from gi_loadouts.type.weap import WeaponStatType, WeaponType
 
 
 class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
         self.collection = Collection()
         self.otptobjc = None
@@ -37,7 +37,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         self.c_tyvt = None
         self.c_char = None
 
-    def populate_dropdown(self):
+    def populate_dropdown(self) -> None:
         self.head_char_name.addItems([item.value for item in CharName])
         self.head_char_cons.addItems([item.value.name for item in Cons])
         self.head_char_levl.addItems([item.value.name for item in Level])
@@ -50,7 +50,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         for item in [self.arti_fwol_type, self.arti_pmod_type, self.arti_sdoe_type, self.arti_gboe_type, self.arti_ccol_type]:
             item.addItems([item.value.name for item in ArtiList])
 
-    def manage_changing_appearence(self, colour):
+    def manage_changing_appearence(self, colour: str) -> None:
         self.head_main.setStyleSheet(f"#head_main {{background-color: {colour}; border-radius: 5px;}}")
         self.head_area.setStyleSheet(f"#head_area {{border-top-right-radius: 47px; border-bottom-right-radius: 47px; border-top-left-radius: 5px; border-bottom-left-radius: 5px; background-color: {colour};}}")
         self.bone_area_head_area.setStyleSheet(f"#bone_area_head_area {{border-top-left-radius: 5px; border-top-right-radius: 5px; background-color: {colour};}}")
@@ -66,7 +66,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         self.arti_ccol_type_area.setStyleSheet(f"#arti_ccol_type_area {{background-color: {colour};}}")
         self.statarea.setStyleSheet(f"#statarea {{background-color: {colour};}}")
 
-    def handle_char_data(self, _):
+    def handle_char_data(self, _: int) -> None:
         if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
             char = __charmaps__[self.head_char_name.currentText()]()
             char.levl = getattr(Level, self.head_char_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
@@ -82,19 +82,19 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.head_area_line_seco.setText(f"<i>{char.name} is a {char.weapon.value.lower()}-wielding {char.vision.value if char.vision != Vision.none else ""} character of {char.rare.value}-star rarity.</i>")
             self.manage_changing_appearence(__visioncolour__[char.vision])
 
-    def format_weapon_by_char_change(self, _):
+    def format_weapon_by_char_change(self, _: int) -> None:
         if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
             char = __charmaps__[self.head_char_name.currentText()]()
             char.levl = getattr(Level, self.head_char_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
             self.weap_area_type.clear()
             self.weap_area_type.addItem(f"{char.weapon.value}")
 
-    def convey_weapon_type_change(self, _):
+    def convey_weapon_type_change(self, _: int) -> None:
         if self.weap_area_type.currentText().strip() != "":
             self.weap_area_name.clear()
             self.weap_area_name.addItems([item for item in Family[self.weap_area_type.currentText()]])
 
-    def convey_weapon_name_change(self, _):
+    def convey_weapon_name_change(self, _: int) -> None:
         if self.weap_area_name.currentText().strip() != "" and self.weap_area_type.currentText().strip() != "":
             kind = self.weap_area_type.currentText().strip()
             name = self.weap_area_name.currentText()
@@ -108,7 +108,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.weap_area_refn.addItems([f"Refinement {indx + 1}" for indx in range(len(weap.refi_list))])
             self.weap_port_area.setPixmap(QPixmap(__rarecolour__[weap.rare]))
 
-    def convey_weapon_levl_change(self, _):
+    def convey_weapon_levl_change(self, _: int) -> None:
         if self.weap_area_type.currentText().strip() != "" and self.weap_area_name.currentText().strip() != "" and self.weap_area_levl.currentText().strip() != "":
             name = self.weap_area_name.currentText()
             kind = self.weap_area_type.currentText().strip()
@@ -122,7 +122,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             if weap.seco_stat.stat_name != WeaponStatType.none:
                 self.weap_area_stat.setText(f"{weap.seco_stat_calc.stat_name.value.value} {round(weap.seco_stat_calc.stat_data, 1)}")
 
-    def convey_refinement_change(self, _):
+    def convey_refinement_change(self, _: int) -> None:
         if self.weap_area_type.currentText().strip() != "" and self.weap_area_name.currentText().strip() != "" and self.weap_area_refn.currentText().strip() != "":
             name = self.weap_area_name.currentText()
             kind = self.weap_area_type.currentText().strip()
@@ -259,14 +259,14 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
                 f"Please consider checking your input.\n\n{expt}"
             )
 
-    def validate_lineedit_userdata(self, text):
+    def validate_lineedit_userdata(self, text: str) -> None:
         try:
             _ = float(text)
             self.statarea.clearMessage()
         except ValueError:
             self.statarea.showMessage("Please enter a valid input (eg. 69, 42.0 etc.)")
 
-    def wipe_artifact(self, part):
+    def wipe_artifact(self, part: str) -> None:
         droptype = getattr(self, f"arti_{part}_type")
         droptype.setCurrentText("None")
 

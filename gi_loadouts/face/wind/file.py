@@ -5,7 +5,7 @@ class FileHandling:
     def __init__(self):
         super().__init__()
 
-    def save(self, prnt, head, path, data) -> None:
+    def save(self, prnt, head: str, path: str, data: str) -> None:
         explorer = QFileDialog()
         savefile = explorer.getSaveFileName(prnt, head, path, "YAML Files (*.yaml);;All Files (*)")[0]
         if savefile.strip() == "":
@@ -14,7 +14,7 @@ class FileHandling:
             fileobjc.write(data)
         return None
 
-    def load(self, prnt, head) -> str:
+    def load(self, prnt, head: str) -> str:
         explorer = QFileDialog()
         loadfile = explorer.getOpenFileName(prnt, head, "", "YAML Files (*.yaml);;All Files (*)")[0]
         if loadfile.strip() == "":

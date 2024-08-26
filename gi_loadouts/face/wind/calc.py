@@ -9,14 +9,14 @@ from gi_loadouts.type.weap import WeaponStatType
 
 
 class Assess:
-    def __init__(self):
+    def __init__(self) -> None:
         self.collection = Collection()
         self.c_team = None
         self.c_weap = None
         self.c_tyvt = None
         self.c_char = None
 
-    def char_keep(self):
+    def char_keep(self) -> None:
         if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
             # MAIN
             char = __charmaps__[self.head_char_name.currentText()]()
@@ -39,7 +39,7 @@ class Assess:
                 )
             )
 
-    def char_stat(self):
+    def char_stat(self) -> None:
         if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
             # SUBSTATS
             """
@@ -85,7 +85,7 @@ class Assess:
             self.c_tyvt.addendum_base_defense = ATTR(stat_name=STAT.defense, stat_data=self.c_char.defense.stat_data)
             self.c_tyvt.addendum_plus_defense = ATTR(stat_name=STAT.defense, stat_data=self.c_tyvt.defense.stat_data - self.c_tyvt.addendum_base_defense.stat_data)
 
-    def weap_keep(self):
+    def weap_keep(self) -> None:
         if (self.weap_area_type.currentText().strip() != "" and
             self.weap_area_name.currentText().strip() != "" and
             self.weap_area_refn.currentText().strip() != "" and
@@ -105,7 +105,7 @@ class Assess:
             if len(weap.refi_stat) != 0:
                 self.c_weap.refn = weap.refi_stat[refn]
 
-    def weap_stat(self):
+    def weap_stat(self) -> None:
         # BASE
         # Base attack is calculated in self.char_stat()
 
@@ -126,7 +126,7 @@ class Assess:
                     curt = indx.stat_data
                     setattr(self.c_tyvt, self.c_tyvt.revmap[item], ATTR(stat_name=item, stat_data=prev + curt))
 
-    def arti_keep(self):
+    def arti_keep(self) -> None:
         # ARTIUNIT
         for part in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
             if getattr(self, f"arti_{part}_type").currentText().strip() != "":
@@ -166,7 +166,7 @@ class Assess:
                 pack_b = getattr(ArtiList, self.collection.pair[1].replace(" ", "_").replace("'", "").replace("-", "_"))
                 self.c_team.pairdata_b = pack_b.value.pairdata
 
-    def arti_stat(self):
+    def arti_stat(self) -> None:
         if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
             # ARTIUNIT
             for item in self.c_tyvt.revmap:
@@ -188,7 +188,7 @@ class Assess:
                                 curt = jndx.stat_data
                                 setattr(self.c_tyvt, self.c_tyvt.revmap[item], ATTR(stat_name=item, stat_data=prev + curt))
 
-    def calc_stat(self):
+    def calc_stat(self) -> None:
         self.c_weap = WEAP()
         self.c_team = TEAM()
         self.c_tyvt = CHAR()

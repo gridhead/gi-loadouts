@@ -61,7 +61,7 @@ class Weapon(BaseModel):
     file: str = ""
 
     @property
-    def main_stat(self):
+    def main_stat(self) -> WeaponStat:
         base = self.tier.value["rare"][self.rare.value]
 
         if self.rare in [Rare.Star_1, Rare.Star_2]:
@@ -74,7 +74,7 @@ class Weapon(BaseModel):
         return WeaponStat(stat_name=WeaponStatType.attack, stat_data=calc)
 
     @property
-    def levl_bind(self):
+    def levl_bind(self) -> list:
         bind = {
             Rare.Star_1: 74,
             Rare.Star_2: 74,
@@ -85,7 +85,7 @@ class Weapon(BaseModel):
         return [item for indx, item in enumerate(Level) if indx < bind[self.rare]]
 
     @property
-    def seco_stat_calc(self):
+    def seco_stat_calc(self) -> WeaponStat:
         stat_data = self.seco_stat.stat_data
         if self.seco_stat.stat_name != WeaponStatType.none:
             stat_data = stat_data * MultSeco[self.levl.value.qant - (self.levl.value.qant % 5)]

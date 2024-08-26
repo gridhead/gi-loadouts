@@ -4,7 +4,7 @@ from gi_loadouts.face.wind.rule import Rule
 
 
 class MainWindow(Rule):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
         self.headtext = "Loadouts for Genshin Impact"
         self.dialog = QMessageBox()
@@ -13,7 +13,7 @@ class MainWindow(Rule):
         self.initialize_events()
         self.initialize_elements()
 
-    def initialize_elements(self):
+    def initialize_elements(self) -> None:
         self.statarea.showMessage("Ready.")
         self.populate_dropdown()
         self.handle_char_data(0)
@@ -35,7 +35,7 @@ class MainWindow(Rule):
             self.change_artifact_substats_by_changing_rarity_or_mainstat(item[2], item[3], item[5])
             self.change_levels_backdrop_by_changing_rarity(item[0], item[8], item[2])
 
-    def initialize_events(self):
+    def initialize_events(self) -> None:
         self.head_scan.clicked.connect(self.show_output_window)
         self.head_char_name.currentIndexChanged.connect(self.handle_char_data)
         self.head_char_levl.currentIndexChanged.connect(self.handle_char_data)
@@ -66,9 +66,7 @@ class MainWindow(Rule):
                 text.textChanged.connect(self.validate_lineedit_userdata)
         for part in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
             getattr(self, f"arti_{part}_load").clicked.connect(lambda _, a_part=part: self.arti_load(a_part))
-        for part in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
             getattr(self, f"arti_{part}_save").clicked.connect(lambda _, a_part=part: self.arti_save(a_part))
-        for part in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
             getattr(self, f"arti_{part}_wipe").clicked.connect(lambda _, a_part=part: self.wipe_artifact(a_part))
         self.head_load.clicked.connect(self.team_load)
         self.head_save.clicked.connect(self.team_save)

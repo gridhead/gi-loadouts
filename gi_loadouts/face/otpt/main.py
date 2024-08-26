@@ -5,7 +5,7 @@ from gi_loadouts.type.calc.char import CHAR
 
 
 class OtptWindow(Rule):
-    def __init__(self, name: str, tint: str, tyvt: CHAR):
+    def __init__(self, name: str, tint: str, tyvt: CHAR) -> None:
         super().__init__()
         self.headtext = f"Loadouts for Genshin Impact - {name}"
         self.setupUi(self)
@@ -15,7 +15,7 @@ class OtptWindow(Rule):
         self.tint = tint
         self.populate_blanks()
 
-    def populate_blanks(self):
+    def populate_blanks(self) -> None:
         self.head_area.setStyleSheet(f"#head_area {{background-color: {self.tint};}}")
         assignment = {
             self.area_hlpt_data: str(round(self.tyvt.health_points.stat_data, 1)),

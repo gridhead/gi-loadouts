@@ -1,6 +1,5 @@
-from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.rank import Rank
-
+from gi_loadouts.type.rare import Rare
 
 Secs = {
     Rank.Rank_0: 0,

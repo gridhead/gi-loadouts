@@ -18,7 +18,7 @@ from gi_loadouts.type.weap import WeaponType
 
 
 class Facility(Dialog):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
 
     def arti_save(self, part: str) -> None:

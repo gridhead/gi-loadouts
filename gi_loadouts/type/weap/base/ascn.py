@@ -1,6 +1,7 @@
 from pydantic import BaseModel
-from gi_loadouts.type.rare import Rare
+
 from gi_loadouts.type.rank import Rank
+from gi_loadouts.type.rare import Rare
 
 
 class AscnType(BaseModel):
