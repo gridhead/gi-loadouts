@@ -5,6 +5,9 @@ from gi_loadouts.type.rare import Rare
 
 
 class AscnType(BaseModel):
+    """
+    Data class for mapping between quality and multiplier
+    """
     rare: Rare = Rare.Star_1
     data: dict
 

@@ -5,6 +5,9 @@ from gi_loadouts.type.weap.base.tier import Tier
 
 
 class MultTier(BaseModel):
+    """
+    Data class for mapping between multiplier and tier
+    """
     levl: int
     data: dict
 

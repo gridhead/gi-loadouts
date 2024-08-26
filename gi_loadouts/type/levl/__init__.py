@@ -6,6 +6,9 @@ from gi_loadouts.type.rank import Rank
 
 
 class LevelType(BaseModel):
+    """
+    Data class for level specification of weapons and characters
+    """
     name: str
     qant: int
     rank: Rank

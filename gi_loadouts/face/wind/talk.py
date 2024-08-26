@@ -6,6 +6,14 @@ class Dialog:
         self.dialog = QMessageBox(parent=self)
 
     def show_dialog(self, icon: QMessageBox.Icon, head: str, text: str) -> None:
+        """
+        Modify the dialog with the passed severity, title and content before exhibiting on the user interface
+
+        :param icon:
+        :param head:
+        :param text:
+        :return:
+        """
         self.dialog.setIcon(icon)
         self.dialog.setWindowTitle(f"{head}")
         self.dialog.setText(text)

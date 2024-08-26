@@ -17,6 +17,11 @@ class Assess:
         self.c_char = None
 
     def char_keep(self) -> None:
+        """
+        Store the data members associated with a character before calculating statistics
+
+        :return:
+        """
         if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
             # MAIN
             char = __charmaps__[self.head_char_name.currentText()]()
@@ -40,6 +45,11 @@ class Assess:
             )
 
     def char_stat(self) -> None:
+        """
+        Calculate the character statistics associated with a character after storing the data members
+
+        :return:
+        """
         if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
             # SUBSTATS
             """
@@ -86,6 +96,11 @@ class Assess:
             self.c_tyvt.addendum_plus_defense = ATTR(stat_name=STAT.defense, stat_data=self.c_tyvt.defense.stat_data - self.c_tyvt.addendum_base_defense.stat_data)
 
     def weap_keep(self) -> None:
+        """
+        Store the data members associated with a weapon before calculating statistics
+
+        :return:
+        """
         if (self.weap_area_type.currentText().strip() != "" and
             self.weap_area_name.currentText().strip() != "" and
             self.weap_area_refn.currentText().strip() != "" and
@@ -106,6 +121,11 @@ class Assess:
                 self.c_weap.refn = weap.refi_stat[refn]
 
     def weap_stat(self) -> None:
+        """
+        Calculate the weapon statistics associated with a character after storing the data members
+
+        :return:
+        """
         # BASE
         # Base attack is calculated in self.char_stat()
 
@@ -127,6 +147,11 @@ class Assess:
                     setattr(self.c_tyvt, self.c_tyvt.revmap[item], ATTR(stat_name=item, stat_data=prev + curt))
 
     def arti_keep(self) -> None:
+        """
+        Store the data members associated with the selected artifacts before calculating statistics
+
+        :return:
+        """
         # ARTIUNIT
         for part in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
             if getattr(self, f"arti_{part}_type").currentText().strip() != "":
@@ -167,6 +192,11 @@ class Assess:
                 self.c_team.pairdata_b = pack_b.value.pairdata
 
     def arti_stat(self) -> None:
+        """
+        Calculate the weapon statistics associated with the selected artifacts after storing the data members
+
+        :return:
+        """
         if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
             # ARTIUNIT
             for item in self.c_tyvt.revmap:
@@ -189,10 +219,14 @@ class Assess:
                                 setattr(self.c_tyvt, self.c_tyvt.revmap[item], ATTR(stat_name=item, stat_data=prev + curt))
 
     def calc_stat(self) -> None:
+        """
+        Render the final calculation of the sought loadout
+
+        :return:
+        """
         self.c_weap = WEAP()
         self.c_team = TEAM()
         self.c_tyvt = CHAR()
-        # CR 5%, CD 50%, ER 100% are accounts in self.c_tyvt
         self.c_char = CHAR(
             critical_rate_perc=ATTR(stat_name=STAT.critical_rate_perc, stat_data=0.0),
             critical_damage_perc=ATTR(stat_name=STAT.critical_damage_perc, stat_data=0.0),

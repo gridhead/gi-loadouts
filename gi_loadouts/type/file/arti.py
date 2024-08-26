@@ -9,6 +9,9 @@ from gi_loadouts.type.stat import ATTR, __revmap__
 
 
 class ArtiArea(str, Enum):
+    """
+    Set of possible artifact areas
+    """
     fwol = "FWOL"
     pmod = "PMOD"
     sdoe = "SDOE"
@@ -17,6 +20,9 @@ class ArtiArea(str, Enum):
 
 
 class ArtiFile(BaseModel):
+    """
+    Artifact storage primitive
+    """
     name: str = ""
     type: ArtiList = getattr(ArtiList, "None")
     area: Enum = ArtiArea.fwol
@@ -30,6 +36,11 @@ class ArtiFile(BaseModel):
 
     @property
     def easydict(self) -> dict:
+        """
+        Derive the information stored for consumption in file storage
+
+        :return: Dictionary consisting of associated artifact statistics
+        """
         data = {
             "name": self.name,
             "type": self.type.value.name,
@@ -63,6 +74,12 @@ class ArtiFile(BaseModel):
 
 
 def make_artifile(objc: dict) -> ArtiFile:
+    """
+    Parse the provided dictionary of artifact statistics to make a supported artifact object
+
+    :param objc: Dictionary consisting of associated artifact statistics
+    :return: Supported artifact object for processing
+    """
     try:
         artiobjc = ArtiFile(
             name=objc["name"],

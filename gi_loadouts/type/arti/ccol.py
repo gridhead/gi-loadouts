@@ -13,6 +13,9 @@ from gi_loadouts.type.arti.base.stat import (
 
 
 class CCOL(Artifact):
+    """
+    Artifact primitive for a "Circlet of Logos" artifact
+    """
     stat_name: Optional[MainStatType_CCOL] = MainStatType_CCOL.none
     secostat_a: Optional[SecoStat] = SecoStat()
     secostat_b: Optional[SecoStat] = SecoStat()
@@ -21,6 +24,11 @@ class CCOL(Artifact):
 
     @property
     def stat_data(self) -> float:
+        """
+        Calculate the statistics associated with the artifact mainstat based on the artifact quality and artifact level
+
+        :return:
+        """
         calc = 0.0
         if self.stat_name == MainStatType_CCOL.attack_perc:
             calc = attack_perc[self.rare]["init"] + sum(attack_perc[self.rare]["diff"][0:self.levl+1])  # noqa : E501

@@ -22,6 +22,12 @@ class Facility(Dialog):
         super().__init__()
 
     def arti_save(self, part: str) -> None:
+        """
+        Save an edited artifact from the user interface on the storage device
+
+        :param part:
+        :return:
+        """
         try:
             if getattr(self, f"arti_{part}_type").currentText().strip() == "":
                 raise ValueError("Artifact type cannot be identified.")
@@ -72,6 +78,11 @@ class Facility(Dialog):
             )
 
     def team_save(self) -> None:
+        """
+        Save an edited artifact collection from the user interface on the storage device
+
+        :return:
+        """
         try:
             data = TeamFile()
             arealist = ["fwol", "pmod", "sdoe", "gboe", "ccol"]
@@ -122,6 +133,11 @@ class Facility(Dialog):
             )
 
     def weap_save(self) -> None:
+        """
+        Save an edited weapon from the user interface on the storage device
+
+        :return:
+        """
         try:
             if self.weap_area_type.currentText() != "" and self.weap_area_name.currentText() != "" and self.weap_area_refn.currentText() != "" and self.weap_area_levl.currentText() != "":
                 objc = WeapFile(
@@ -146,6 +162,12 @@ class Facility(Dialog):
             )
 
     def arti_load(self, part: str) -> None:
+        """
+        Load an edited artifact from the storage device on the user interface
+
+        :param part:
+        :return:
+        """
         try:
             data = file.load(
                 self,
@@ -187,6 +209,11 @@ class Facility(Dialog):
             )
 
     def team_load(self) -> None:
+        """
+        Load an edited artifact collection from the storage device on the user interface
+
+        :return:
+        """
         try:
             data = file.load(
                 self,
@@ -230,6 +257,11 @@ class Facility(Dialog):
             )
 
     def weap_load(self) -> None:
+        """
+        Load an edited weapon from the storage device on the user interface
+
+        :return:
+        """
         try:
             if self.weap_area_type.currentText() != "" and self.weap_area_name.currentText() != "" and self.weap_area_refn.currentText() != "" and self.weap_area_levl.currentText() != "":
                 data = file.load(

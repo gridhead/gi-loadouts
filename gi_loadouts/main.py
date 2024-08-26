@@ -9,6 +9,11 @@ from gi_loadouts.face.wind.main import MainWindow
 
 
 def load_custom_font() -> None:
+    """
+    Register the collection of fonts from the available resources in the user interface
+
+    :return:
+    """
     fontlist = [
         ":text/font/text/sans-bold.ttf",
         ":text/font/text/sans-rlar.ttf",
@@ -21,6 +26,11 @@ def load_custom_font() -> None:
 
 
 def main() -> None:
+    """
+    Initialize the user interface before starting up
+
+    :return:
+    """
     os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
     QApplication.setStyle("Fusion")
     app = QApplication(sys.argv)

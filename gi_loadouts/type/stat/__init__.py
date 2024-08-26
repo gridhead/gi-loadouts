@@ -5,6 +5,9 @@ from pydantic import BaseModel
 
 
 class STAT(str, Enum):
+    """
+    Set of statistics possible
+    """
     attack = "ATK"
     attack_perc = "ATK %"
     defense = "DEF"
@@ -39,6 +42,9 @@ class STAT(str, Enum):
 
 
 class ATTR(BaseModel):
+    """
+    Attribute primitive
+    """
     stat_name: Optional[STAT] = STAT.none
     stat_data: Optional[float] = 0
 

@@ -16,6 +16,11 @@ class OtptWindow(Rule):
         self.populate_blanks()
 
     def populate_blanks(self) -> None:
+        """
+        Populate blanks on the output window
+
+        :return:
+        """
         self.head_area.setStyleSheet(f"#head_area {{background-color: {self.tint};}}")
         assignment = {
             self.area_hlpt_data: str(round(self.tyvt.health_points.stat_data, 1)),

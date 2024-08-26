@@ -14,6 +14,11 @@ class MainWindow(Rule):
         self.initialize_elements()
 
     def initialize_elements(self) -> None:
+        """
+        Initialize elements on the user interface
+
+        :return:
+        """
         self.statarea.showMessage("Ready.")
         self.populate_dropdown()
         self.handle_char_data(0)
@@ -36,6 +41,11 @@ class MainWindow(Rule):
             self.change_levels_backdrop_by_changing_rarity(item[0], item[8], item[2])
 
     def initialize_events(self) -> None:
+        """
+        Initialize events on the user interface
+
+        :return:
+        """
         self.head_scan.clicked.connect(self.show_output_window)
         self.head_char_name.currentIndexChanged.connect(self.handle_char_data)
         self.head_char_levl.currentIndexChanged.connect(self.handle_char_data)

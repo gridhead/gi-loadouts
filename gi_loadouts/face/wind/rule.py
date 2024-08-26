@@ -38,6 +38,11 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         self.c_char = None
 
     def populate_dropdown(self) -> None:
+        """
+        Populate the various comboboxes present on the user interface with the default collection of character names and artifact types
+
+        :return:
+        """
         self.head_char_name.addItems([item.value for item in CharName])
         self.head_char_cons.addItems([item.value.name for item in Cons])
         self.head_char_levl.addItems([item.value.name for item in Level])
@@ -50,7 +55,13 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         for item in [self.arti_fwol_type, self.arti_pmod_type, self.arti_sdoe_type, self.arti_gboe_type, self.arti_ccol_type]:
             item.addItems([item.value.name for item in ArtiList])
 
-    def manage_changing_appearence(self, colour: str) -> None:
+    def manage_changing_appearance(self, colour: str) -> None:
+        """
+        Theme the user interface elements based on the associated vision colour after a certain character is selected from the combobox
+
+        :param colour: Colour intended for theming associated with the character vision
+        :return:
+        """
         self.head_main.setStyleSheet(f"#head_main {{background-color: {colour}; border-radius: 5px;}}")
         self.head_area.setStyleSheet(f"#head_area {{border-top-right-radius: 47px; border-bottom-right-radius: 47px; border-top-left-radius: 5px; border-bottom-left-radius: 5px; background-color: {colour};}}")
         self.bone_area_head_area.setStyleSheet(f"#bone_area_head_area {{border-top-left-radius: 5px; border-top-right-radius: 5px; background-color: {colour};}}")
@@ -67,6 +78,12 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         self.statarea.setStyleSheet(f"#statarea {{background-color: {colour};}}")
 
     def handle_char_data(self, _: int) -> None:
+        """
+        Change the user interface elements and associated statistics after a certain character is selected from the combobox
+
+        :param _: Position of the element selected from the combobox to compute selected character
+        :return:
+        """
         if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
             char = __charmaps__[self.head_char_name.currentText()]()
             char.levl = getattr(Level, self.head_char_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
@@ -80,9 +97,15 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.head_char_data_subs.setText(f"{round(char.seco.stat_data, 1)}")
             self.head_area_line_prim.setText(f"<b>{char.head}</b> - {char.cons_name}" + f" ({char.afln})" if char.afln != "" else f"<b>{char.head}</b> - {char.cons_name}")
             self.head_area_line_seco.setText(f"<i>{char.name} is a {char.weapon.value.lower()}-wielding {char.vision.value if char.vision != Vision.none else ""} character of {char.rare.value}-star rarity.</i>")
-            self.manage_changing_appearence(__visioncolour__[char.vision])
+            self.manage_changing_appearance(__visioncolour__[char.vision])
 
     def format_weapon_by_char_change(self, _: int) -> None:
+        """
+        Change the combobox showing the supported weapon types based on the compatibility of the currently selected character
+
+        :param _: Position of the element selected from the combobox to compute selected character
+        :return:
+        """
         if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
             char = __charmaps__[self.head_char_name.currentText()]()
             char.levl = getattr(Level, self.head_char_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
@@ -90,11 +113,23 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.weap_area_type.addItem(f"{char.weapon.value}")
 
     def convey_weapon_type_change(self, _: int) -> None:
+        """
+        Change the user interface elements and associated statistics after a certain weapon type is selected from the combobox
+
+        :param _: Position of the element selected from the combobox to compute selected weapon type
+        :return:
+        """
         if self.weap_area_type.currentText().strip() != "":
             self.weap_area_name.clear()
             self.weap_area_name.addItems([item for item in Family[self.weap_area_type.currentText()]])
 
     def convey_weapon_name_change(self, _: int) -> None:
+        """
+        Change the user interface elements and associated statistics after a certain weapon is selected from the combobox
+
+        :param _: Position of the element selected from the combobox to compute selected weapon
+        :return:
+        """
         if self.weap_area_name.currentText().strip() != "" and self.weap_area_type.currentText().strip() != "":
             kind = self.weap_area_type.currentText().strip()
             name = self.weap_area_name.currentText()
@@ -109,6 +144,12 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.weap_port_area.setPixmap(QPixmap(__rarecolour__[weap.rare]))
 
     def convey_weapon_levl_change(self, _: int) -> None:
+        """
+        Change the user interface elements and associated statistics after a certain weapon level is selected from the combobox
+
+        :param _: Position of the element selected from the combobox to compute selected weapon level
+        :return:
+        """
         if self.weap_area_type.currentText().strip() != "" and self.weap_area_name.currentText().strip() != "" and self.weap_area_levl.currentText().strip() != "":
             name = self.weap_area_name.currentText()
             kind = self.weap_area_type.currentText().strip()
@@ -123,6 +164,12 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
                 self.weap_area_stat.setText(f"{weap.seco_stat_calc.stat_name.value.value} {round(weap.seco_stat_calc.stat_data, 1)}")
 
     def convey_refinement_change(self, _: int) -> None:
+        """
+        Change the user interface elements and associated statistics after a certain weapon refinement is selected from the combobox
+
+        :param _: Position of the element selected from the combobox to compute selected weapon refinement
+        :return:
+        """
         if self.weap_area_type.currentText().strip() != "" and self.weap_area_name.currentText().strip() != "" and self.weap_area_refn.currentText().strip() != "":
             name = self.weap_area_name.currentText()
             kind = self.weap_area_type.currentText().strip()
@@ -132,6 +179,16 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.weap_area_refn_body.setText(f"{weap.refi_list[refn]}")
 
     def change_rarity_backdrop_by_changing_type(self, droptype: QComboBox, droprare: QComboBox, artiname: QLabel, headicon: QLabel, part: str) -> None:
+        """
+        Change the artifact qualities and artifact icon based on the compatibility of the currently selected artifact type
+
+        :param droptype: Combobox used for selecting artifact types
+        :param droprare: Combobox used for selecting artifact qualities
+        :param artiname: Label used for displaying the artifact name
+        :param headicon: Label used for displaying the artifact icon as a pixmap
+        :param part: Kind of artifact fixtures (i.e. ``FWOL``, ``PMOD``, ``SDOE``, ``GBOE`` or ``CCOL``)
+        :return:
+        """
         if droptype.currentText().strip() != "":
             kind = getattr(ArtiList, droptype.currentText().replace(" ", "_").replace("'", "").replace("-", "_"))
             droprare.clear()
@@ -142,6 +199,17 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
                 headicon.setPixmap(QPixmap(f":arti/imgs/arti/main/{part}.png"))
 
     def change_data_by_changing_level_or_stat(self, droplevl: QComboBox, droptype: QComboBox, droprare: QComboBox, dropstat: QComboBox, statdata: QLineEdit, part: str) -> None:
+        """
+        Change the associated statistics of the mainstat after a certain artifact level or artifact mainstat is selected from the combobox
+
+        :param droplevl: Combobox used for selecting artifact levels
+        :param droptype: Combobox used for selecting artifact types
+        :param droprare: Combobox used for selecting artifact qualities
+        :param dropstat: Combobox used for selecting artifact mainstats
+        :param statdata: Lineedit used for displaying the statistics of the artifact mainstat
+        :param part: Kind of artifact fixtures (i.e. ``FWOL``, ``PMOD``, ``SDOE``, ``GBOE`` or ``CCOL``)
+        :return:
+        """
         if droplevl.currentText().strip() != "" and droptype.currentText().strip() != "" and droprare.currentText().strip() != "" and dropstat.currentText().strip() != "":
             """
             Checking if no artifact is selected
@@ -156,6 +224,13 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
                 statdata.setText(f"{round(item.stat_data, 1)}")
 
     def change_artifact_team_by_changing_type(self, droptype: QComboBox, part: str) -> None:
+        """
+        Compute and exhibit the artifact structures (pairs or quads) forming from changing artifact collections as a result of changing artifact types
+
+        :param droptype: Combobox used for selecting artifact types
+        :param part: Kind of artifact fixtures (i.e. ``FWOL``, ``PMOD``, ``SDOE``, ``GBOE`` or ``CCOL``)
+        :return:
+        """
         if droptype.currentText().strip() != "":
             kind = getattr(ArtiList, droptype.currentText().replace(" ", "_").replace("'", "").replace("-", "_"))
             item = getattr(kind.value, part)
@@ -182,6 +257,15 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
                     self.quad_area_desc.setText(f"{pair_b.value.pairtext}")
 
     def remove_artifact(self, droptype: QComboBox, part: str) -> None:
+        """
+        Exhibit removal of the selected artifact on the user interface from the loadout of the selected type
+
+        This handles both application and reversal of the removal action
+
+        :param droptype: Combobox used for selecting artifact types
+        :param part: Kind of artifact fixtures (i.e. ``FWOL``, ``PMOD``, ``SDOE``, ``GBOE`` or ``CCOL``)
+        :return:
+        """
         if droptype.currentText().strip() != "":
             if droptype.currentText().strip() == "None":
                 getattr(self, f"arti_{part}_name_main").clear()
@@ -211,6 +295,14 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
                     self.arti_ccol_name_main.addItems([item.value.value for item in MainStatType_CCOL if item != MainStatType_CCOL.none])
 
     def change_artifact_substats_by_changing_rarity_or_mainstat(self, droprare: QComboBox, dropstat: QComboBox, part: str) -> None:
+        """
+        Change the associates substats of the selected artifact after the artifact qualities or artifact mainstat is selected from the combobox
+
+        :param droprare: Combobox used for selecting artifact qualities
+        :param dropstat: Combobox used for selecting artifact mainstats
+        :param part: Kind of artifact fixtures (i.e. ``FWOL``, ``PMOD``, ``SDOE``, ``GBOE`` or ``CCOL``)
+        :return:
+        """
         if droprare.currentText().strip() != "" and dropstat.currentText().strip() != "":
             rare = getattr(Rare, droprare.currentText().replace(" ", "_"))
             stat = dropstat.currentText().strip()
@@ -222,6 +314,14 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
                 getattr(self, f"arti_{part}_name_{alfa}").addItems(["None"])
 
     def change_levels_backdrop_by_changing_rarity(self, droplevl: QComboBox, backdrop: QLabel, droprare: QComboBox) -> None:
+        """
+        Change the associated levels and qualities backdrop of the selected artifact after the artifact qualities is selected from the combobox
+
+        :param droplevl: Combobox used for selecting artifact levels
+        :param backdrop: Label used for displaying the qualities backdrop as a pixmap
+        :param droprare: Combobox used for selecting artifact qualities
+        :return:
+        """
         if droprare.currentText().strip() != "":
             rare = getattr(Rare, droprare.currentText().replace(" ", "_"))
             droplevl.clear()
@@ -230,6 +330,13 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             backdrop.setPixmap(QPixmap(__rarecolour__[rare]))
 
     def render_lineedit_readonly_when_none(self, dropstat: QComboBox, lineedit: QLineEdit) -> None:
+        """
+        Render the artifact statistics text field read-only when the associated artifact substats combobox has ``None`` selected
+
+        :param dropstat: Combobox used for selecting artifact substats
+        :param lineedit: Lineedit used for displaying the statistics of the artifact substats
+        :return:
+        """
         if dropstat.currentText().strip() == "None":
             lineedit.clear()
             lineedit.setDisabled(True)
@@ -239,13 +346,14 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
 
     def show_output_window(self):
         """
-        TODO: Make into a separate function
+        Facilitate the calculation of statistics from the gathered data and exhibit on the newly-spawned dedicated user interface
+
+        :return:
         """
         try:
             if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
                 char = __charmaps__[self.head_char_name.currentText()]()
                 self.calc_stat()
-                print(self.c_tyvt)
                 self.otptobjc = OtptWindow(
                     self.head_char_name.currentText(),
                     __visioncolour__[char.vision],
@@ -260,6 +368,12 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             )
 
     def validate_lineedit_userdata(self, text: str) -> None:
+        """
+        Confirm if the entry made in the field associated with the artifact substats can be converted to ``float``
+
+        :param text: Text derived from the lineedit used for displaying the statistics of the artifact substats
+        :return:
+        """
         try:
             _ = float(text)
             self.statarea.clearMessage()
@@ -267,10 +381,25 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.statarea.showMessage("Please enter a valid input (eg. 69, 42.0 etc.)")
 
     def wipe_artifact(self, part: str) -> None:
+        """
+        Exhibit removal of the selected artifact on the user interface from the loadout of the selected type
+
+        This handles the removal when the button associated with the wipe action is triggered
+
+        :param part: Kind of artifact fixtures (i.e. ``FWOL``, ``PMOD``, ``SDOE``, ``GBOE`` or ``CCOL``)
+        :return:
+        """
         droptype = getattr(self, f"arti_{part}_type")
         droptype.setCurrentText("None")
 
     def wipe_team(self):
+        """
+        Exhibit removal of the selected collection of artifact on the user interface from the loadout
+
+        This handles the removal when the button associated with the wipe action is triggered
+
+        :return:
+        """
         for item in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
             droptype = getattr(self, f"arti_{item}_type")
             droptype.setCurrentText("None")

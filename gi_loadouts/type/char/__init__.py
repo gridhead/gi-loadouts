@@ -12,6 +12,9 @@ from gi_loadouts.type.weap import WeaponType
 
 
 class CharName(str, Enum):
+    """
+    Set of characters possible
+    """
     aether = "Aether"
     albedo = "Albedo"
     alhaitham = "Alhaitham"
@@ -101,11 +104,17 @@ class CharName(str, Enum):
 
 
 class SecoStat(BaseModel):
+    """
+    Data class for secondary stat of a character
+    """
     stat_name: STAT = STAT.none
     stat_data: float = 0.0
 
 
 class Char(BaseModel):
+    """
+    Character primitive
+    """
     __statname__: STAT = STAT.none
     __statdata__: dict = {}
     rare: Rare = Rare.Star_4
@@ -120,22 +129,47 @@ class Char(BaseModel):
 
     @property
     def attack(self) -> float:
+        """
+        Calculate the statistics associated with the attack potential of a character based on their level, rank and ascension value
+
+        :return: Attack potential associated with the character
+        """
         return self.base.attack * Mult[self.levl.value.qant][self.rare] + Secs[self.levl.value.rank] * self.ascn.attack
 
     @property
     def defense(self) -> float:
+        """
+        Calculate the statistics associated with the defense potential of a character based on their level, rank and ascension value
+
+        :return: Defense potential associated with the character
+        """
         return self.base.defense * Mult[self.levl.value.qant][self.rare] + Secs[self.levl.value.rank] * self.ascn.defense
 
     @property
     def health_points(self) -> float:
+        """
+        Calculate the statistics associated with the health points potential of a character based on their level, rank and ascension value
+
+        :return: Health points potential associated with the character
+        """
         return self.base.health_points * Mult[self.levl.value.qant][self.rare] + Secs[self.levl.value.rank] * self.ascn.health_points
 
     @property
     def seco(self) -> SecoStat:
+        """
+        Calculate the statistics associated with the health points potential of a character based on their rank
+
+        :return: Secondary statistics associated with the character
+        """
         return SecoStat(stat_name=self.__statname__, stat_data=self.__statdata__[self.levl.value.rank.value])
 
 
 class BaseStat(BaseModel):
+    """
+    Base stats of a character
+
+    SUSPECTED TO BE RESIDUAL CODE
+    """
     attack: float = 0.0
     defense: float = 0.0
     health_points: float = 0.0
