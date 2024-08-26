@@ -389,7 +389,7 @@ Head area line SECO</string>
        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
       </property>
       <property name="text">
-       <string>ADVANCED STATS</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ADVANCED STATS&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
     </widget>
@@ -5210,7 +5210,7 @@ Head area line SECO</string>
        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
       </property>
       <property name="text">
-       <string>BASE STATS</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;BASE STATS&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
     </widget>
@@ -5710,7 +5710,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgb(0, 128, 128);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(32, 255, 32, 255);</string>
       </property>
       <property name="text">
        <string>+ 0.0</string>
@@ -5824,7 +5824,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgb(0, 128, 128);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(32, 255, 32, 255);</string>
       </property>
       <property name="text">
        <string>+ 0.0</string>
@@ -5938,7 +5938,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgb(0, 128, 128);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(32, 255, 32, 255);</string>
       </property>
       <property name="text">
        <string>+ 0.0</string>
