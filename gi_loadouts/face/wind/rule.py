@@ -356,7 +356,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
                 self.calc_stat()
                 self.otptobjc = OtptWindow(
                     self.head_char_name.currentText(),
-                    __visioncolour__[char.vision],
+                    char.vision,
                     self.c_tyvt
                 )
                 self.otptobjc.show()

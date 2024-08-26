@@ -1,18 +1,23 @@
 from PySide6.QtCore import Qt
+from PySide6.QtGui import QPixmap
 
 from gi_loadouts.face.otpt.rule import Rule
+from gi_loadouts.face.util import modify_graphics_resource
 from gi_loadouts.type.calc.char import CHAR
+from gi_loadouts.type.vson import Vision
 
 
 class OtptWindow(Rule):
-    def __init__(self, name: str, tint: str, tyvt: CHAR) -> None:
+    def __init__(self, name: str, vson: Vision, tyvt: CHAR) -> None:
         super().__init__()
         self.headtext = f"Loadouts for Genshin Impact - {name}"
         self.setupUi(self)
         self.setWindowTitle(self.headtext)
         self.setWindowModality(Qt.ApplicationModal)
+        self.name = name
         self.tyvt = tyvt
-        self.tint = tint
+        self.vson = vson
+        self.manage_assets()
         self.populate_blanks()
 
     def populate_blanks(self) -> None:
@@ -21,7 +26,6 @@ class OtptWindow(Rule):
 
         :return:
         """
-        self.head_area.setStyleSheet(f"#head_area {{background-color: {self.tint};}}")
         assignment = {
             self.area_hlpt_data: str(round(self.tyvt.health_points.stat_data, 1)),
             self.area_hlpt_calc: f"{round(self.tyvt.addendum_base_health_points.stat_data, 1)} + {round(self.tyvt.addendum_plus_health_points.stat_data, 1)}",
@@ -56,3 +60,8 @@ class OtptWindow(Rule):
         }
         for item in assignment:
             item.setText(assignment[item])
+
+    def manage_assets(self):
+        self.head_vson.setPixmap(QPixmap(modify_graphics_resource(f":vson/imgs/vson/{self.vson.value.lower()}.png")))
+        self.char_back.setPixmap(QPixmap(f":back/imgs/char/back/{self.name.lower().replace(" ", "_")}.webp"))
+        self.char_wish.setPixmap(QPixmap(f":wish/imgs/char/wish/{self.name.lower().replace(" ", "_")}.webp"))
