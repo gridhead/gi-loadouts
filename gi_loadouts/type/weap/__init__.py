@@ -82,11 +82,11 @@ class Weapon(BaseModel):
     @property
     def refinement(self) -> dict:
         refiobjc = dict()
-        for indx in range(len(self.refi_stat)):
+        for indx in range(len(self.refi_list)):
             refiobjc[f"Refinement {indx + 1}"] = Refinement(
                 qant=indx+1,
                 data=self.refi_list[indx],
-                stat=self.refi_stat[indx],
+                stat=self.refi_stat[indx] if len(self.refi_stat) > 0 else [],
             )
         return refiobjc
 
