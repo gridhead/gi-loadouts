@@ -132,7 +132,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         """
         if self.weap_area_name.currentText().strip() != "" and self.weap_area_type.currentText().strip() != "":
             kind = self.weap_area_type.currentText().strip()
-            name = self.weap_area_name.currentText()
+            name = self.weap_area_name.currentText().strip()
             self.weap_area_levl.clear()
             self.weap_area_refn.clear()
             self.weap_area_refn_head.setText("No refinements available.")
@@ -140,7 +140,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.weap_area_stat.setText("No substats.")
             weap = Family[kind][name]
             self.weap_area_levl.addItems([item.value.name for item in weap.levl_bind])
-            self.weap_area_refn.addItems([f"Refinement {indx + 1}" for indx in range(len(weap.refi_list))])
+            self.weap_area_refn.addItems(item for item in weap.refinement.keys())
             self.weap_port_area.setPixmap(QPixmap(__rarecolour__[weap.rare]))
 
     def convey_weapon_levl_change(self, _: int) -> None:
@@ -174,9 +174,8 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             name = self.weap_area_name.currentText()
             kind = self.weap_area_type.currentText().strip()
             weap = Family[kind][name]
-            refn = self.weap_area_refn.currentIndex()
             self.weap_area_refn_head.setText(f"<b>{weap.refi_name}</b>")
-            self.weap_area_refn_body.setText(f"{weap.refi_list[refn]}")
+            self.weap_area_refn_body.setText(f"{weap.refinement[self.weap_area_refn.currentText().strip()].data}")
 
     def change_rarity_backdrop_by_changing_type(self, droptype: QComboBox, droprare: QComboBox, artiname: QLabel, headicon: QLabel, part: str) -> None:
         """

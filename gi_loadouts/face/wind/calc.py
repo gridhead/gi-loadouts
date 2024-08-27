@@ -107,9 +107,9 @@ class Assess:
             self.weap_area_levl.currentText().strip() != ""):
             # MAIN
             kind = self.weap_area_type.currentText().strip()
-            name = self.weap_area_name.currentText()
+            name = self.weap_area_name.currentText().strip()
             weap = Family[kind][name]
-            refn = self.weap_area_refn.currentIndex()
+            refn = self.weap_area_refn.currentText().strip()
             weap.levl = getattr(Level, self.weap_area_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
             self.c_weap.base = ATTR(stat_name=WeaponStatType.attack.value, stat_data=weap.main_stat.stat_data)
             if weap.seco_stat.stat_name != WeaponStatType.none:
@@ -117,8 +117,8 @@ class Assess:
                     stat_name=weap.seco_stat_calc.stat_name.value,
                     stat_data=weap.seco_stat_calc.stat_data
                 )
-            if len(weap.refi_stat) != 0:
-                self.c_weap.refn = weap.refi_stat[refn]
+            if len(weap.refinement) != 0:
+                self.c_weap.refn = weap.refinement[refn].stat
 
     def weap_stat(self) -> None:
         """

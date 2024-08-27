@@ -56,21 +56,39 @@ class WeaponType(str, Enum):
     none = "none"
 
 
+class Refinement(BaseModel):
+    """
+    Refinement primitive
+    """
+    qant: int = 1
+    stat: List[WeaponStat] = []
+    data: str = ""
+
+
 class Weapon(BaseModel):
     """
     Weapon primitive
     """
-    name: str
+    name: str = ""
     type: Optional[WeaponType] = WeaponType.none
     levl: Optional[Level] = Level.Level_01_20_Rank_0
     tier: Optional[Tier] = Tier.Tier_1
     rare: Optional[Rare] = Rare.Star_1
-    refinement: Optional[int] = 1
     stat_list: List[WeaponStat] = []
     refi_list: List[str] = []
     refi_stat: List[WeaponStat] = []
-    refi_name: str = ""
     file: str = ""
+
+    @property
+    def refinement(self) -> dict:
+        refiobjc = dict()
+        for indx in range(len(self.refi_list)):
+            refiobjc[f"Refinement {indx + 1}"] = Refinement(
+                qant=indx+1,
+                data=self.refi_list[indx],
+                stat=self.refi_stat[indx] if len(self.refi_stat) > 0 else [],
+            )
+        return refiobjc
 
     @property
     def main_stat(self) -> WeaponStat:
