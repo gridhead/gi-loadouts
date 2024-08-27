@@ -96,7 +96,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.head_char_icon_subs.setToolTip(f"{char.seco.stat_name.value}")
             self.head_char_data_subs.setText(f"{round(char.seco.stat_data, 1)}")
             self.head_area_line_prim.setText(f"<b>{char.head}</b> - {char.cons_name}" + f" ({char.afln})" if char.afln != "" else f"<b>{char.head}</b> - {char.cons_name}")
-            self.head_area_line_seco.setText(f"<i>{char.name} is a {char.weapon.value.lower()}-wielding {char.vision.value if char.vision != Vision.none else ""} character of {char.rare.value}-star rarity.</i>")
+            self.head_area_line_seco.setText(f"<i>{char.name} is a {char.weapon.value.lower()}-wielding {char.vision.value if char.vision != Vision.none else ""} character of {char.rare.value}-star quality.</i>")
             self.manage_changing_appearance(__visioncolour__[char.vision])
 
     def format_weapon_by_char_change(self, _: int) -> None:
@@ -351,15 +351,25 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         :return:
         """
         try:
-            if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
-                char = __charmaps__[self.head_char_name.currentText()]()
-                self.calc_stat()
-                self.otptobjc = OtptWindow(
-                    self.head_char_name.currentText(),
-                    __visioncolour__[char.vision],
-                    self.c_tyvt
-                )
-                self.otptobjc.show()
+            self.calc_stat()
+            self.otptobjc = OtptWindow(
+                {
+                    "char": __charmaps__[self.head_char_name.currentText()](),
+                    "levl": self.head_char_levl.currentText().strip(),
+                    "cons": self.head_char_cons.currentText().strip(),
+                },
+                {
+                    "name": self.weap_area_name.currentText().strip(),
+                    "levl": self.weap_area_levl.currentText().strip(),
+                    "refn": self.weap_area_refn.currentText().strip(),
+                },
+                {
+                    "quad": self.collection.quad,
+                    "pair": self.collection.pair,
+                },
+                self.c_tyvt,
+            )
+            self.otptobjc.show()
         except Exception as expt:
             self.show_dialog(
                 QMessageBox.Information,
