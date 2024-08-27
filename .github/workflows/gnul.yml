@@ -1,0 +1,40 @@
+---
+name: Building the project binary for GNU/Linux OSes
+on: [push]
+jobs:
+  ci-make-gnul:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+
+    steps:
+      - name: Checkout the codebase in local working directory
+        uses: actions/checkout@v4
+
+      - name: Setup a functioning local Python 3 installation
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
+
+      - name: Install the base dependencies of the project
+        run: python3 -m pip install --upgrade poetry pyinstaller
+
+      - name: Disable using virtual environments with Poetry
+        run: poetry config virtualenvs.create false
+
+      - name: Install the runtime dependencies of the project
+        run: python3 -m poetry install
+
+      - name: Build the project binary for "Loadouts for Genshin Impact"
+        run: pyinstaller gi_loadouts/main.py --clean --onefile --name gi-loadouts-${GITHUB_HASH:0:8}
+        env:
+          GITHUB_HASH: ${{ github.sha }}
+
+      - name: Upload the project binaries for "Loadouts for Genshin Impact"
+        uses: actions/upload-artifact@v4
+        with:
+          name: gi-loadouts.gnul
+          path: dist/gi-loadouts-*
+          retention-days: 90
+          compression-level: 9
+          overwrite: true
