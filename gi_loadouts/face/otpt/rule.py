@@ -60,19 +60,15 @@ class Rule(QMainWindow, Ui_otptwind):
 
         :return:
         """
-        self.head_area_line_prim.setText(
-            f"<b>{self.char["char"].name}</b> - {self.char["levl"]} ({self.char["cons"]})"
-        )
-        secotext = f"<b>{self.weap["name"]}</b> - {self.weap["levl"]} ({self.weap["refn"]})" + "<br/>"
+        self.head_area_line_prim.setText(f"<b>{self.char["char"].name}</b> - {self.char["levl"]} ({self.char["cons"]})")
+        weaprefn = f"({self.weap["refn"]})" if self.weap["refn"] != "" else ""
         if self.arti["quad"] != "":
-            secotext += f"4 x <b>{self.arti["quad"]}</b>"
+            artiline = f"4 x <b>{self.arti["quad"]}</b>"
         elif len(self.arti["pair"]) >= 1:
-            if len(self.arti["pair"]) == 1:
-                secotext += f"2 x <b>{self.arti["pair"][0]}</b>"
-            elif len(self.arti["pair"]) == 2:
-                secotext += f"2 x <b>{self.arti["pair"][0]}</b>, 2 x <b>{self.arti["pair"][1]}</b>"
+            artiline = ", ".join([f"2 x <b>{item}</b>" for item in self.arti["pair"]])
         else:
-            secotext += "No artifact set bonus."
+            artiline = "No artifact set bonus."
+        secotext = f"<b>{self.weap["name"]}</b> - {self.weap["levl"]} {weaprefn}" + "<br/>" + f"{artiline}"
         self.head_area_line_seco.setText(secotext)
 
     def manage_assets(self) -> None:

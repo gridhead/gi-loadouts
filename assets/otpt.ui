@@ -63,7 +63,7 @@
      </size>
     </property>
     <property name="styleSheet">
-     <string notr="true">#head_area {border: 1px solid rgba(128, 128, 128, 128); border-radius: 5px; background-color: rgba(128, 128, 128, 128);}</string>
+     <string notr="true">#head_area {border: 1px solid rgba(128, 128, 128, 160); border-radius: 5px; background-color: rgba(128, 128, 128, 160);}</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -99,7 +99,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 75 15pt &quot;IBM Plex Sans&quot;;</string>
+      <string notr="true">font: 75 15pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
      </property>
      <property name="text">
       <string>Head area line PRIM</string>
@@ -133,7 +133,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+      <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
      </property>
      <property name="text">
       <string>Head area line SECO
@@ -206,7 +206,7 @@ Head area line SECO</string>
      </size>
     </property>
     <property name="styleSheet">
-     <string notr="true">#char_area {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128); border-radius: 5px;}</string>
+     <string notr="true">#char_area {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160); border-radius: 5px;}</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -242,7 +242,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#char_port_area {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#char_port_area {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="text">
       <string/>
@@ -314,7 +314,7 @@ Head area line SECO</string>
      </size>
     </property>
     <property name="styleSheet">
-     <string notr="true">#advc_area {border: 1px solid rgba(128, 128, 128, 128); border-radius: 5px;}</string>
+     <string notr="true">#advc_area {border: 1px solid rgba(128, 128, 128, 160); border-radius: 5px;}</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -350,7 +350,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#advc_desc_area {border: 1px solid rgba(128, 128, 128, 128); border-top-left-radius: 5px; border-top-right-radius: 5px; background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#advc_desc_area {border: 1px solid rgba(128, 128, 128, 160); border-top-left-radius: 5px; border-top-right-radius: 5px; background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -386,7 +386,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ADVANCED STATS&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -421,7 +421,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_crit_base {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_crit_base {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -457,7 +457,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Critical</string>
@@ -491,7 +491,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>star</string>
@@ -529,7 +529,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_crit_dmge_head {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_crit_dmge_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -565,7 +565,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Damage</string>
@@ -599,7 +599,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>location-crosshairs</string>
@@ -637,7 +637,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_crit_rate_head {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_crit_rate_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -673,7 +673,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Rate</string>
@@ -707,7 +707,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>dice-d6</string>
@@ -745,7 +745,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_heal_incm_head {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_heal_incm_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -781,7 +781,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Incoming</string>
@@ -815,7 +815,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>plus-circle</string>
@@ -853,7 +853,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_heal_perc_head {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_heal_perc_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -889,7 +889,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Current</string>
@@ -923,7 +923,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>circle-check</string>
@@ -961,7 +961,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_heal_base {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_heal_base {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -997,7 +997,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Healing</string>
@@ -1031,7 +1031,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>heart-pulse</string>
@@ -1069,7 +1069,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_enrc {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_enrc {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -1105,7 +1105,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>100.0%</string>
@@ -1140,7 +1140,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_cldn {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_cldn {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -1176,7 +1176,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -1211,7 +1211,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_sdsh {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_sdsh {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -1247,7 +1247,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -1282,7 +1282,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_crit_rate {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_crit_rate {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -1318,7 +1318,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>5.0%</string>
@@ -1353,7 +1353,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_crit_dmge {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_crit_dmge {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -1389,7 +1389,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>50.0%</string>
@@ -1424,7 +1424,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_heal_perc {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_heal_perc {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -1460,7 +1460,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -1495,7 +1495,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_heal_incm {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_heal_incm {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -1531,7 +1531,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -1566,7 +1566,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_enrc_head {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_enrc_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -1602,7 +1602,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Energy recharge</string>
@@ -1636,7 +1636,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>atom</string>
@@ -1674,7 +1674,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_cldn_head {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_cldn_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -1710,7 +1710,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Cooldown reduction</string>
@@ -1744,7 +1744,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>hourglass-half</string>
@@ -1782,7 +1782,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_sdsh_head {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_sdsh_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -1818,7 +1818,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Shield strength</string>
@@ -1852,7 +1852,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>shield-heart</string>
@@ -1891,7 +1891,7 @@ Head area line SECO</string>
      </size>
     </property>
     <property name="styleSheet">
-     <string notr="true">#elem_area {border: 1px solid rgba(128, 128, 128, 128); border-radius: 5px;}</string>
+     <string notr="true">#elem_area {border: 1px solid rgba(128, 128, 128, 160); border-radius: 5px;}</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -1927,7 +1927,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#elem_desc_area {border: 1px solid rgba(128, 128, 128, 128); border-top-left-radius: 5px; border-top-right-radius: 5px; background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#elem_desc_area {border: 1px solid rgba(128, 128, 128, 160); border-top-left-radius: 5px; border-top-right-radius: 5px; background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -1963,7 +1963,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>ELEMENTAL STATS</string>
@@ -1998,7 +1998,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_pyro_base {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_pyro_base {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -2034,7 +2034,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Pyro</string>
@@ -2068,7 +2068,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>fire</string>
@@ -2106,7 +2106,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_pyro_resi {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_pyro_resi {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -2142,7 +2142,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -2177,7 +2177,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_pyro_perc {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_pyro_perc {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -2213,7 +2213,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -2248,7 +2248,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_pyro_perc_head {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_pyro_perc_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -2284,7 +2284,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>DMG Bonus</string>
@@ -2319,7 +2319,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_pyro_resi_head {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_pyro_resi_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -2355,7 +2355,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Resistance</string>
@@ -2390,7 +2390,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_hydo_perc {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_hydo_perc {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -2426,7 +2426,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -2461,7 +2461,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_hydo_perc_head {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_hydo_perc_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -2497,7 +2497,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>DMG Bonus</string>
@@ -2532,7 +2532,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_hydo_resi_head {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_hydo_resi_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -2568,7 +2568,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Resistance</string>
@@ -2603,7 +2603,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_hydo_base {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_hydo_base {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -2639,7 +2639,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Hydro</string>
@@ -2673,7 +2673,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>droplet</string>
@@ -2711,7 +2711,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_hydo_resi {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_hydo_resi {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -2747,7 +2747,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -2782,7 +2782,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_dend_resi_head {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_dend_resi_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -2818,7 +2818,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Resistance</string>
@@ -2853,7 +2853,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_dend_resi {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_dend_resi {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -2889,7 +2889,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -2924,7 +2924,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_dend_base {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_dend_base {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -2960,7 +2960,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Dendro</string>
@@ -2994,7 +2994,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>leaf</string>
@@ -3032,7 +3032,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_dend_perc {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_dend_perc {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -3068,7 +3068,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -3103,7 +3103,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_dend_perc_head {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_dend_perc_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -3139,7 +3139,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>DMG Bonus</string>
@@ -3174,7 +3174,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_elec_resi_head {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_elec_resi_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -3210,7 +3210,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Resistance</string>
@@ -3245,7 +3245,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_elec_base {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_elec_base {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -3281,7 +3281,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Electro</string>
@@ -3315,7 +3315,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>bolt</string>
@@ -3353,7 +3353,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_elec_perc {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_elec_perc {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -3389,7 +3389,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -3424,7 +3424,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_elec_resi {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_elec_resi {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -3460,7 +3460,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -3495,7 +3495,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_elec_perc_head {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_elec_perc_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -3531,7 +3531,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>DMG Bonus</string>
@@ -3566,7 +3566,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_anem_resi {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_anem_resi {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -3602,7 +3602,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -3637,7 +3637,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_anem_base {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_anem_base {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -3673,7 +3673,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Anemo</string>
@@ -3707,7 +3707,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>wind</string>
@@ -3745,7 +3745,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_anem_resi_head {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_anem_resi_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -3781,7 +3781,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Resistance</string>
@@ -3816,7 +3816,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_anem_perc_head {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_anem_perc_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -3852,7 +3852,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>DMG Bonus</string>
@@ -3887,7 +3887,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_anem_perc {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_anem_perc {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -3923,7 +3923,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -3958,7 +3958,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_cryo_perc_head {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_cryo_perc_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -3994,7 +3994,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>DMG Bonus</string>
@@ -4029,7 +4029,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_cryo_resi_head {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_cryo_resi_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -4065,7 +4065,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Resistance</string>
@@ -4100,7 +4100,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_cryo_perc {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_cryo_perc {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -4136,7 +4136,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -4171,7 +4171,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_cryo_base {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_cryo_base {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -4207,7 +4207,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Cryo</string>
@@ -4241,7 +4241,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>snowflake</string>
@@ -4279,7 +4279,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_cryo_resi {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_cryo_resi {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -4315,7 +4315,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -4350,7 +4350,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_geox_perc {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_geox_perc {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -4386,7 +4386,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -4421,7 +4421,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_geox_resi_head {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_geox_resi_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -4457,7 +4457,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Resistance</string>
@@ -4492,7 +4492,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_geox_base {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_geox_base {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -4528,7 +4528,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Geo</string>
@@ -4562,7 +4562,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>gem</string>
@@ -4600,7 +4600,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_geox_perc_head {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_geox_perc_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -4636,7 +4636,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>DMG Bonus</string>
@@ -4671,7 +4671,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_geox_resi {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_geox_resi {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -4707,7 +4707,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -4742,7 +4742,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_phys_perc_head {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_phys_perc_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -4778,7 +4778,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>DMG Bonus</string>
@@ -4813,7 +4813,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_phys_resi {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_phys_resi {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -4849,7 +4849,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -4884,7 +4884,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_phys_perc {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_phys_perc {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -4920,7 +4920,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -4955,7 +4955,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_phys_resi_head {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_phys_resi_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -4991,7 +4991,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Resistance</string>
@@ -5026,7 +5026,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_phys_base {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_phys_base {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -5062,7 +5062,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Physical</string>
@@ -5096,7 +5096,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>hand-back-fist</string>
@@ -5135,7 +5135,7 @@ Head area line SECO</string>
      </size>
     </property>
     <property name="styleSheet">
-     <string notr="true">#base_area {border: 1px solid rgba(128, 128, 128, 128); border-radius: 5px;}</string>
+     <string notr="true">#base_area {border: 1px solid rgba(128, 128, 128, 160); border-radius: 5px;}</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -5171,7 +5171,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#base_desc_area {border: 1px solid rgba(128, 128, 128, 128); border-top-left-radius: 5px; border-top-right-radius: 5px; background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#base_desc_area {border: 1px solid rgba(128, 128, 128, 160); border-top-left-radius: 5px; border-top-right-radius: 5px; background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -5207,7 +5207,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;BASE STATS&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -5242,7 +5242,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_hlpt_head {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_hlpt_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -5278,7 +5278,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>HP</string>
@@ -5312,7 +5312,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>heart</string>
@@ -5350,7 +5350,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_attk_head {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_attk_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -5386,7 +5386,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>ATK</string>
@@ -5420,7 +5420,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>skull</string>
@@ -5458,7 +5458,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_dfns_head {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_dfns_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -5494,7 +5494,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>DEF</string>
@@ -5528,7 +5528,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>shield</string>
@@ -5566,7 +5566,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_elma_head {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_elma_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -5602,7 +5602,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>EM</string>
@@ -5636,7 +5636,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>flask</string>
@@ -5674,7 +5674,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_hlpt {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_hlpt {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -5753,7 +5753,7 @@ Head area line SECO</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 15pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 15pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0</string>
@@ -5788,7 +5788,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_attk {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_attk {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -5867,7 +5867,7 @@ Head area line SECO</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 15pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 15pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0</string>
@@ -5902,7 +5902,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_dfns {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_dfns {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -5981,7 +5981,7 @@ Head area line SECO</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 15pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 15pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0</string>
@@ -6016,7 +6016,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">#area_elma {border: 1px solid rgba(128, 128, 128, 128); background-color: rgba(128, 128, 128, 128);}</string>
+      <string notr="true">#area_elma {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -6052,7 +6052,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0</string>
