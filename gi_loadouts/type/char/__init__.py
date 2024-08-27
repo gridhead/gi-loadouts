@@ -6,7 +6,7 @@ from gi_loadouts.type.char.cons import Cons
 from gi_loadouts.type.char.mult import Mult, Secs
 from gi_loadouts.type.levl import Level
 from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.stat import STAT
+from gi_loadouts.type.stat import ATTR, STAT
 from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.weap import WeaponType
 
@@ -128,31 +128,40 @@ class Char(BaseModel):
     head: str = ""
 
     @property
-    def attack(self) -> float:
+    def attack(self) -> ATTR:
         """
         Calculate the statistics associated with the attack potential of a character based on their level, rank and ascension value
 
         :return: Attack potential associated with the character
         """
-        return self.base.attack * Mult[self.levl.value.qant][self.rare] + Secs[self.levl.value.rank] * self.ascn.attack
+        return ATTR(
+            stat_name=STAT.attack,
+            stat_data=self.base.attack * Mult[self.levl.value.qant][self.rare] + Secs[self.levl.value.rank] * self.ascn.attack
+        )
 
     @property
-    def defense(self) -> float:
+    def defense(self) -> ATTR:
         """
         Calculate the statistics associated with the defense potential of a character based on their level, rank and ascension value
 
         :return: Defense potential associated with the character
         """
-        return self.base.defense * Mult[self.levl.value.qant][self.rare] + Secs[self.levl.value.rank] * self.ascn.defense
+        return ATTR(
+            stat_name=STAT.defense,
+            stat_data=self.base.defense * Mult[self.levl.value.qant][self.rare] + Secs[self.levl.value.rank] * self.ascn.defense
+        )
 
     @property
-    def health_points(self) -> float:
+    def health_points(self) -> ATTR:
         """
         Calculate the statistics associated with the health points potential of a character based on their level, rank and ascension value
 
         :return: Health points potential associated with the character
         """
-        return self.base.health_points * Mult[self.levl.value.qant][self.rare] + Secs[self.levl.value.rank] * self.ascn.health_points
+        return ATTR(
+            stat_name=STAT.health_points,
+            stat_data=self.base.health_points * Mult[self.levl.value.qant][self.rare] + Secs[self.levl.value.rank] * self.ascn.health_points
+        )
 
     @property
     def seco(self) -> SecoStat:
@@ -161,7 +170,10 @@ class Char(BaseModel):
 
         :return: Secondary statistics associated with the character
         """
-        return SecoStat(stat_name=self.__statname__, stat_data=self.__statdata__[self.levl.value.rank.value])
+        return SecoStat(
+            stat_name=self.__statname__,
+            stat_data=self.__statdata__[self.levl.value.rank.value]
+        )
 
 
 class BaseStat(BaseModel):
