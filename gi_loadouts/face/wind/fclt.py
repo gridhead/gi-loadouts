@@ -185,7 +185,7 @@ class Facility(Dialog):
             droptype = getattr(self, f"arti_{part}_type")
             droptype.setCurrentText(arti.type.value.name)
             droprare = getattr(self, f"arti_{part}_rare")
-            droprare.setCurrentText(f"Star {arti.rare.value}")
+            droprare.setCurrentText(arti.rare.value.name)
             droplevl = getattr(self, f"arti_{part}_levl")
             droplevl.setCurrentText(arti.levl.value.name)
 
@@ -234,7 +234,7 @@ class Facility(Dialog):
                 droptype = getattr(self, f"arti_{part}_type")
                 droptype.setCurrentText(arti.type.value.name)
                 droprare = getattr(self, f"arti_{part}_rare")
-                droprare.setCurrentText(f"Star {arti.rare.value}")
+                droprare.setCurrentText(arti.rare.value.name)
                 droplevl = getattr(self, f"arti_{part}_levl")
                 droplevl.setCurrentText(arti.levl.value.name)
 

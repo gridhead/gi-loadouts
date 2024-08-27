@@ -45,7 +45,7 @@ class ArtiFile(BaseModel):
             "name": self.name,
             "type": self.type.value.name,
             "area": self.area.value,
-            "rare": self.rare.value,
+            "rare": self.rare.value.qant,
             "levl": self.levl.value.name,
             "stat": {
                 "main": {
