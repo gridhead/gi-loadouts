@@ -28,9 +28,9 @@ class Assess:
             char.levl = getattr(Level, self.head_char_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
 
             # BASE
-            self.c_char.attack = ATTR(stat_name=STAT.attack, stat_data=char.attack)
-            self.c_char.defense = ATTR(stat_name=STAT.defense, stat_data=char.defense)
-            self.c_char.health_points = ATTR(stat_name=STAT.health_points, stat_data=char.health_points)
+            self.c_char.attack = char.attack
+            self.c_char.defense = char.defense
+            self.c_char.health_points = char.health_points
 
             # SUBSTATS
             prev_stat_data = getattr(self.c_char, self.c_char.revmap[char.seco.stat_name]).stat_data
