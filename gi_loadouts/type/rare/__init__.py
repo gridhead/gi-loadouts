@@ -1,28 +1,18 @@
 from enum import Enum
 
-__rare__ = {
-    "Star 0": 0,
-    "Star 1": 1,
-    "Star 2": 2,
-    "Star 3": 3,
-    "Star 4": 4,
-    "Star 5": 5,
-}
+from pydantic import BaseModel
 
 
-Rare = Enum(
-    "Rare",
-    {
-        item.replace(" ", "_"): data for item, data in __rare__.items()
-    }
-)
+class RareType(BaseModel):
+    name: str = ""
+    qant: int = 0
+    back: str = ""
 
 
-__rarecolour__ = {
-    Rare.Star_0: ":rare/imgs/rare/star_1.webp",
-    Rare.Star_1: ":rare/imgs/rare/star_1.webp",
-    Rare.Star_2: ":rare/imgs/rare/star_2.webp",
-    Rare.Star_3: ":rare/imgs/rare/star_3.webp",
-    Rare.Star_4: ":rare/imgs/rare/star_4.webp",
-    Rare.Star_5: ":rare/imgs/rare/star_5.webp",
-}
+class Rare(Enum):
+    Star_0 = RareType(name="Star 0", qant=0, back=":rare/imgs/rare/star_1.webp")
+    Star_1 = RareType(name="Star 1", qant=1, back=":rare/imgs/rare/star_1.webp")
+    Star_2 = RareType(name="Star 2", qant=2, back=":rare/imgs/rare/star_2.webp")
+    Star_3 = RareType(name="Star 3", qant=3, back=":rare/imgs/rare/star_3.webp")
+    Star_4 = RareType(name="Star 4", qant=4, back=":rare/imgs/rare/star_4.webp")
+    Star_5 = RareType(name="Star 5", qant=5, back=":rare/imgs/rare/star_5.webp")

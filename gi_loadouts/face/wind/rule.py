@@ -22,7 +22,7 @@ from gi_loadouts.type.arti.base import (
 from gi_loadouts.type.char import CharName
 from gi_loadouts.type.char.cons import Cons
 from gi_loadouts.type.levl import Level
-from gi_loadouts.type.rare import Rare, __rarecolour__
+from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.weap import WeaponStatType, WeaponType
 
@@ -96,7 +96,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.head_char_icon_subs.setToolTip(f"{char.seco.stat_name.value}")
             self.head_char_data_subs.setText(f"{round(char.seco.stat_data, 1)}")
             self.head_area_line_prim.setText(f"<b>{char.head}</b> - {char.cons_name}" + f" ({char.afln})" if char.afln != "" else f"<b>{char.head}</b> - {char.cons_name}")
-            self.head_area_line_seco.setText(f"<i>{char.name} is a {char.weapon.value.lower()}-wielding {char.vision.value.name if char.vision != Vision.none else ""} character of {char.rare.value}-star quality.</i>")
+            self.head_area_line_seco.setText(f"<i>{char.name} is a {char.weapon.value.lower()}-wielding {char.vision.value.name if char.vision != Vision.none else ""} character of {char.rare.value.qant}-star quality.</i>")
             self.manage_changing_appearance(char.vision.value.colour)
 
     def format_weapon_by_char_change(self, _: int) -> None:
@@ -141,7 +141,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             weap = Family[kind][name]
             self.weap_area_levl.addItems([item.value.name for item in weap.levl_bind])
             self.weap_area_refn.addItems(item for item in weap.refinement.keys())
-            self.weap_port_area.setPixmap(QPixmap(__rarecolour__[weap.rare]))
+            self.weap_port_area.setPixmap(QPixmap(weap.rare.value.back))
 
     def convey_weapon_levl_change(self, _: int) -> None:
         """
@@ -191,7 +191,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         if droptype.currentText().strip() != "":
             kind = getattr(ArtiList, droptype.currentText().replace(" ", "_").replace("'", "").replace("-", "_"))
             droprare.clear()
-            droprare.addItems([f"Star {indx.value}" for indx in kind.value.rare])
+            droprare.addItems([indx.value.name for indx in kind.value.rare])
             artiname.setText(truncate_text(getattr(kind.value, part).__name__, 30))
             headicon.setPixmap(QPixmap(f":arti/imgs/arti/{kind.value.file}/{part}.webp"))
             if droptype.currentText().strip() == "None":
@@ -219,7 +219,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
                 rare = getattr(Rare, droprare.currentText().replace(" ", "_"))
                 stat = getattr(arti, f"revmap_{part}")[dropstat.currentText()]
                 item = getattr(team.value, part)
-                item.levl, item.rare, item.stat_name = levl.value.levl, rare.value, stat
+                item.levl, item.rare, item.stat_name = levl.value.levl, rare.value.qant, stat
                 statdata.setText(f"{round(item.stat_data, 1)}")
 
     def change_artifact_team_by_changing_type(self, droptype: QComboBox, part: str) -> None:
@@ -305,10 +305,10 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         if droprare.currentText().strip() != "" and dropstat.currentText().strip() != "":
             rare = getattr(Rare, droprare.currentText().replace(" ", "_"))
             stat = dropstat.currentText().strip()
-            for indx in __artistat__[rare.value]["active"]:
+            for indx in __artistat__[rare.value.qant]["active"]:
                 getattr(self, f"arti_{part}_name_{indx}").clear()
                 getattr(self, f"arti_{part}_name_{indx}").addItems([item.value.value for item in SecoStatType if item.value.value != stat])
-            for alfa in __artistat__[rare.value]["inactive"]:
+            for alfa in __artistat__[rare.value.qant]["inactive"]:
                 getattr(self, f"arti_{part}_name_{alfa}").clear()
                 getattr(self, f"arti_{part}_name_{alfa}").addItems(["None"])
 
@@ -325,8 +325,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             rare = getattr(Rare, droprare.currentText().replace(" ", "_"))
             droplevl.clear()
             droplevl.addItems([item.value.name for item in ArtiLevl if rare in item.value.rare])
-            rare = getattr(Rare, droprare.currentText().replace(" ", "_"))
-            backdrop.setPixmap(QPixmap(__rarecolour__[rare]))
+            backdrop.setPixmap(QPixmap(rare.value.back))
 
     def render_lineedit_readonly_when_none(self, dropstat: QComboBox, lineedit: QLineEdit) -> None:
         """

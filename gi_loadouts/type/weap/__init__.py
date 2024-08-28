@@ -97,7 +97,7 @@ class Weapon(BaseModel):
 
         :return: Statistics associated with the weapon
         """
-        base = self.tier.value["rare"][self.rare.value]
+        base = self.tier.value["rare"][self.rare.value.qant]
 
         if self.rare in [Rare.Star_1, Rare.Star_2]:
             mult = Mult[Rare.Star_3][self.levl.value.qant].data[self.tier]
