@@ -23,7 +23,7 @@ from gi_loadouts.type.char import CharName
 from gi_loadouts.type.char.cons import Cons
 from gi_loadouts.type.levl import Level
 from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.vson import Vision, __visioncolour__
+from gi_loadouts.type.vson import Vision
 from gi_loadouts.type.weap import WeaponStatType, WeaponType
 
 
@@ -87,7 +87,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
             char = __charmaps__[self.head_char_name.currentText()]()
             char.levl = getattr(Level, self.head_char_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
-            self.head_vson.setPixmap(QPixmap(f":vson/imgs/vson/{char.vision.value.lower()}.png"))
+            self.head_vson.setPixmap(QPixmap(f":vson/imgs/vson/{char.vision.value.name.lower()}.png"))
             self.head_area_back.setPixmap(QPixmap(f":name/imgs/char/name/{self.head_char_name.currentText().replace(" ", "_").lower()}.png"))
             self.head_face_back.setPixmap(QPixmap(f":face/imgs/char/face/{self.head_char_name.currentText().replace(" ", "_").lower()}.png"))
             self.head_char_data_attk.setText(f"{round(char.attack.stat_data)}")
@@ -96,8 +96,8 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.head_char_icon_subs.setToolTip(f"{char.seco.stat_name.value}")
             self.head_char_data_subs.setText(f"{round(char.seco.stat_data, 1)}")
             self.head_area_line_prim.setText(f"<b>{char.head}</b> - {char.cons_name}" + f" ({char.afln})" if char.afln != "" else f"<b>{char.head}</b> - {char.cons_name}")
-            self.head_area_line_seco.setText(f"<i>{char.name} is a {char.weapon.value.lower()}-wielding {char.vision.value if char.vision != Vision.none else ""} character of {char.rare.value.qant}-star quality.</i>")
-            self.manage_changing_appearance(__visioncolour__[char.vision])
+            self.head_area_line_seco.setText(f"<i>{char.name} is a {char.weapon.value.lower()}-wielding {char.vision.value.name if char.vision != Vision.none else ""} character of {char.rare.value.qant}-star quality.</i>")
+            self.manage_changing_appearance(char.vision.value.colour)
 
     def format_weapon_by_char_change(self, _: int) -> None:
         """
