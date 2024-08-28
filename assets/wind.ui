@@ -84,10 +84,10 @@
      <string notr="true">#head_area {border-top-right-radius: 47px; border-bottom-right-radius: 47px; border-top-left-radius: 5px; border-bottom-left-radius: 5px; background-color: rgba(128, 128, 128, 128);}</string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
+     <enum>QFrame::Shape::StyledPanel</enum>
     </property>
     <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
+     <enum>QFrame::Shadow::Raised</enum>
     </property>
     <widget class="QLabel" name="head_area_back">
      <property name="geometry">
@@ -200,7 +200,7 @@
       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
      </property>
      <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
      </property>
      <property name="readOnly">
       <bool>true</bool>
@@ -237,7 +237,7 @@
       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
      </property>
      <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
      </property>
      <property name="readOnly">
       <bool>true</bool>
@@ -360,7 +360,7 @@
       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
      </property>
      <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
      </property>
      <property name="readOnly">
       <bool>true</bool>
@@ -437,7 +437,7 @@
       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
      </property>
      <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
      </property>
      <property name="readOnly">
       <bool>true</bool>
@@ -477,7 +477,7 @@
       <bool>true</bool>
      </property>
      <property name="alignment">
-      <set>Qt::AlignCenter</set>
+      <set>Qt::AlignmentFlag::AlignCenter</set>
      </property>
     </widget>
     <widget class="QLabel" name="head_area_line_seco">
@@ -592,10 +592,10 @@
      <string notr="true">#head_main {background-color: rgba(128, 128, 128, 128); border-radius: 5px;}</string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
+     <enum>QFrame::Shape::StyledPanel</enum>
     </property>
     <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
+     <enum>QFrame::Shadow::Raised</enum>
     </property>
     <widget class="QLabel" name="head_face_back">
      <property name="geometry">
@@ -634,7 +634,7 @@
       <bool>true</bool>
      </property>
      <property name="alignment">
-      <set>Qt::AlignCenter</set>
+      <set>Qt::AlignmentFlag::AlignCenter</set>
      </property>
      <property name="wordWrap">
       <bool>false</bool>
@@ -768,10 +768,10 @@
      <string notr="true">#arti_area {border: 1px solid rgba(128, 128, 128, 128); border-radius: 5px;}</string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
+     <enum>QFrame::Shape::StyledPanel</enum>
     </property>
     <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
+     <enum>QFrame::Shadow::Raised</enum>
     </property>
     <widget class="QFrame" name="arti_area_head_area">
      <property name="geometry">
@@ -804,10 +804,10 @@
       <string notr="true">#arti_area_head_area {border-top-left-radius: 5px; border-top-right-radius: 5px; background-color: rgba(128, 128, 128, 128);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="arti_area_head_text">
       <property name="geometry">
@@ -875,10 +875,10 @@
       <string notr="true">#arti_fwol_area {border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 32);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QFrame" name="arti_fwol_type_area">
       <property name="geometry">
@@ -911,10 +911,10 @@
        <string notr="true">#arti_fwol_type_area {background-color: rgba(128, 128, 128, 64);}</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::Shape::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::Shadow::Raised</enum>
       </property>
       <widget class="QLabel" name="arti_fwol_type_name">
        <property name="geometry">
@@ -1044,7 +1044,7 @@
        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
       </property>
       <property name="readOnly">
        <bool>false</bool>
@@ -1084,7 +1084,7 @@
        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
       </property>
       <property name="readOnly">
        <bool>false</bool>
@@ -1155,7 +1155,7 @@
        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
       </property>
       <property name="readOnly">
        <bool>false</bool>
@@ -1195,10 +1195,10 @@
        <string notr="true">#arti_fwol_main {background-color: rgba(96, 96, 96, 128);}</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::Shape::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::Shadow::Raised</enum>
       </property>
       <widget class="QComboBox" name="arti_fwol_name_main">
        <property name="geometry">
@@ -1262,7 +1262,7 @@
         <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
        </property>
        <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
        </property>
        <property name="readOnly">
         <bool>true</bool>
@@ -1303,7 +1303,7 @@
        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
       </property>
       <property name="readOnly">
        <bool>false</bool>
@@ -1476,7 +1476,7 @@
        <bool>true</bool>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="arti_fwol_head_icon">
@@ -1516,7 +1516,7 @@
        <bool>true</bool>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
       <property name="margin">
        <number>1</number>
@@ -1554,10 +1554,10 @@
       <string notr="true">#arti_pmod_area {border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 32);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QComboBox" name="arti_pmod_name_b">
       <property name="geometry">
@@ -1621,10 +1621,10 @@
        <string notr="true">#arti_pmod_main {background-color: rgba(96, 96, 96, 128);}</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::Shape::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::Shadow::Raised</enum>
       </property>
       <widget class="QComboBox" name="arti_pmod_name_main">
        <property name="geometry">
@@ -1688,7 +1688,7 @@
         <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
        </property>
        <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
        </property>
        <property name="readOnly">
         <bool>true</bool>
@@ -1729,10 +1729,10 @@
        <string notr="true">#arti_pmod_type_area {background-color: rgba(128, 128, 128, 64);}</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::Shape::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::Shadow::Raised</enum>
       </property>
       <widget class="QLabel" name="arti_pmod_type_name">
        <property name="geometry">
@@ -1800,7 +1800,7 @@
        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
       </property>
       <property name="readOnly">
        <bool>false</bool>
@@ -1933,7 +1933,7 @@
        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
       </property>
       <property name="readOnly">
        <bool>false</bool>
@@ -1973,7 +1973,7 @@
        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
       </property>
       <property name="readOnly">
        <bool>false</bool>
@@ -2013,7 +2013,7 @@
        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
       </property>
       <property name="readOnly">
        <bool>false</bool>
@@ -2155,7 +2155,7 @@
        <bool>true</bool>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="arti_pmod_head_icon">
@@ -2195,7 +2195,7 @@
        <bool>true</bool>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
       <property name="margin">
        <number>1</number>
@@ -2233,10 +2233,10 @@
       <string notr="true">#arti_sdoe_area {border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 32);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QComboBox" name="arti_sdoe_name_c">
       <property name="geometry">
@@ -2300,7 +2300,7 @@
        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
       </property>
       <property name="readOnly">
        <bool>false</bool>
@@ -2340,10 +2340,10 @@
        <string notr="true">#arti_sdoe_main {background-color: rgba(96, 96, 96, 128);}</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::Shape::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::Shadow::Raised</enum>
       </property>
       <widget class="QComboBox" name="arti_sdoe_name_main">
        <property name="geometry">
@@ -2407,7 +2407,7 @@
         <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
        </property>
        <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
        </property>
        <property name="readOnly">
         <bool>true</bool>
@@ -2479,7 +2479,7 @@
        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
       </property>
       <property name="readOnly">
        <bool>false</bool>
@@ -2519,7 +2519,7 @@
        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
       </property>
       <property name="readOnly">
        <bool>false</bool>
@@ -2559,7 +2559,7 @@
        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
       </property>
       <property name="readOnly">
        <bool>false</bool>
@@ -2599,10 +2599,10 @@
        <string notr="true">#arti_sdoe_type_area {background-color: rgba(128, 128, 128, 64);}</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::Shape::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::Shadow::Raised</enum>
       </property>
       <widget class="QLabel" name="arti_sdoe_type_name">
        <property name="geometry">
@@ -2834,7 +2834,7 @@
        <bool>true</bool>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="arti_sdoe_head_icon">
@@ -2874,7 +2874,7 @@
        <bool>true</bool>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
       <property name="margin">
        <number>1</number>
@@ -2912,10 +2912,10 @@
       <string notr="true">#arti_gboe_area {border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 32);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QComboBox" name="arti_gboe_name_d">
       <property name="geometry">
@@ -2979,7 +2979,7 @@
        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
       </property>
       <property name="readOnly">
        <bool>false</bool>
@@ -3050,7 +3050,7 @@
        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
       </property>
       <property name="readOnly">
        <bool>false</bool>
@@ -3090,7 +3090,7 @@
        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
       </property>
       <property name="readOnly">
        <bool>false</bool>
@@ -3130,10 +3130,10 @@
        <string notr="true">#arti_gboe_type_area {background-color: rgba(128, 128, 128, 64);}</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::Shape::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::Shadow::Raised</enum>
       </property>
       <widget class="QLabel" name="arti_gboe_type_name">
        <property name="geometry">
@@ -3201,10 +3201,10 @@
        <string notr="true">#arti_gboe_main {background-color: rgba(96, 96, 96, 128);}</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::Shape::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::Shadow::Raised</enum>
       </property>
       <widget class="QComboBox" name="arti_gboe_name_main">
        <property name="geometry">
@@ -3268,7 +3268,7 @@
         <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
        </property>
        <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
        </property>
        <property name="readOnly">
         <bool>true</bool>
@@ -3309,7 +3309,7 @@
        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
       </property>
       <property name="readOnly">
        <bool>false</bool>
@@ -3513,7 +3513,7 @@
        <bool>true</bool>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="arti_gboe_head_icon">
@@ -3553,7 +3553,7 @@
        <bool>true</bool>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
       <property name="margin">
        <number>1</number>
@@ -3591,10 +3591,10 @@
       <string notr="true">#arti_ccol_area {border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 32);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QComboBox" name="arti_ccol_name_a">
       <property name="geometry">
@@ -3692,7 +3692,7 @@
        <bool>true</bool>
       </property>
       <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
       </property>
       <property name="readOnly">
        <bool>false</bool>
@@ -3763,10 +3763,10 @@
        <string notr="true">#arti_ccol_main {background-color: rgba(96, 96, 96, 128);}</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::Shape::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::Shadow::Raised</enum>
       </property>
       <widget class="QComboBox" name="arti_ccol_name_main">
        <property name="geometry">
@@ -3833,7 +3833,7 @@
         <bool>true</bool>
        </property>
        <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
        </property>
        <property name="readOnly">
         <bool>true</bool>
@@ -3908,7 +3908,7 @@
        <bool>true</bool>
       </property>
       <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
       </property>
       <property name="readOnly">
        <bool>false</bool>
@@ -3948,10 +3948,10 @@
        <string notr="true">#arti_ccol_type_area {background-color: rgba(128, 128, 128, 64);}</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::Shape::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::Shadow::Raised</enum>
       </property>
       <widget class="QLabel" name="arti_ccol_type_name">
        <property name="geometry">
@@ -4022,7 +4022,7 @@
        <bool>true</bool>
       </property>
       <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
       </property>
       <property name="readOnly">
        <bool>false</bool>
@@ -4065,7 +4065,7 @@
        <bool>true</bool>
       </property>
       <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
       </property>
       <property name="readOnly">
        <bool>false</bool>
@@ -4207,7 +4207,7 @@
        <bool>true</bool>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="arti_ccol_head_icon">
@@ -4247,7 +4247,7 @@
        <bool>true</bool>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
       <property name="margin">
        <number>1</number>
@@ -4285,10 +4285,10 @@
       <string notr="true">#arti_fwol_back_area {border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 32);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="arti_fwol_back_icon">
       <property name="geometry">
@@ -4317,6 +4317,9 @@
         <height>30</height>
        </size>
       </property>
+      <property name="toolTip">
+       <string>Flower of Life</string>
+      </property>
       <property name="text">
        <string/>
       </property>
@@ -4327,7 +4330,7 @@
        <bool>true</bool>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
       <property name="margin">
        <number>1</number>
@@ -4365,10 +4368,10 @@
       <string notr="true">#arti_pmod_back_area {border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 32);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="arti_pmod_back_icon">
       <property name="geometry">
@@ -4397,6 +4400,9 @@
         <height>30</height>
        </size>
       </property>
+      <property name="toolTip">
+       <string>Plume of Death</string>
+      </property>
       <property name="text">
        <string/>
       </property>
@@ -4407,7 +4413,7 @@
        <bool>true</bool>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
       <property name="margin">
        <number>1</number>
@@ -4445,10 +4451,10 @@
       <string notr="true">#arti_sdoe_back_area {border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 32);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="arti_sdoe_back_icon">
       <property name="geometry">
@@ -4477,6 +4483,9 @@
         <height>30</height>
        </size>
       </property>
+      <property name="toolTip">
+       <string>Sands of Eon</string>
+      </property>
       <property name="text">
        <string/>
       </property>
@@ -4487,7 +4496,7 @@
        <bool>true</bool>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
       <property name="margin">
        <number>1</number>
@@ -4525,10 +4534,10 @@
       <string notr="true">#arti_gboe_back_area {border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 32);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="arti_gboe_back_icon">
       <property name="geometry">
@@ -4557,6 +4566,9 @@
         <height>30</height>
        </size>
       </property>
+      <property name="toolTip">
+       <string>Goblet of Eonothem</string>
+      </property>
       <property name="text">
        <string/>
       </property>
@@ -4567,7 +4579,7 @@
        <bool>true</bool>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
       <property name="margin">
        <number>1</number>
@@ -4605,10 +4617,10 @@
       <string notr="true">#arti_ccol_back_area {border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 32);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="arti_ccol_back_icon">
       <property name="geometry">
@@ -4637,6 +4649,9 @@
         <height>30</height>
        </size>
       </property>
+      <property name="toolTip">
+       <string>Circlet of Logos</string>
+      </property>
       <property name="text">
        <string/>
       </property>
@@ -4647,7 +4662,7 @@
        <bool>true</bool>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
       <property name="margin">
        <number>1</number>
@@ -4685,10 +4700,10 @@
       <string notr="true">#arti_fwol_head {border-radius: 5px; background-color: rgba(128, 128, 128, 32);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QPushButton" name="arti_fwol_load">
       <property name="geometry">
@@ -4717,8 +4732,11 @@
         <height>25</height>
        </size>
       </property>
+      <property name="toolTip">
+       <string>Load</string>
+      </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">#arti_fwol_load {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
       </property>
       <property name="text">
        <string>folder-open</string>
@@ -4751,8 +4769,11 @@
         <height>25</height>
        </size>
       </property>
+      <property name="toolTip">
+       <string>Save</string>
+      </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">#arti_fwol_save {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
       </property>
       <property name="text">
        <string>floppy-disk</string>
@@ -4785,8 +4806,11 @@
         <height>25</height>
        </size>
       </property>
+      <property name="toolTip">
+       <string>Wipe</string>
+      </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">#arti_fwol_wipe {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
       </property>
       <property name="text">
        <string>trash</string>
@@ -4824,10 +4848,10 @@
       <string notr="true">#arti_ccol_head {border-radius: 5px; background-color: rgba(128, 128, 128, 32);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QPushButton" name="arti_ccol_load">
       <property name="geometry">
@@ -4856,8 +4880,11 @@
         <height>25</height>
        </size>
       </property>
+      <property name="toolTip">
+       <string>Load</string>
+      </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">#arti_ccol_load {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
       </property>
       <property name="text">
        <string>folder-open</string>
@@ -4890,8 +4917,11 @@
         <height>25</height>
        </size>
       </property>
+      <property name="toolTip">
+       <string>Save</string>
+      </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">#arti_ccol_save {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
       </property>
       <property name="text">
        <string>floppy-disk</string>
@@ -4924,8 +4954,11 @@
         <height>25</height>
        </size>
       </property>
+      <property name="toolTip">
+       <string>Wipe</string>
+      </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">#arti_ccol_wipe {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
       </property>
       <property name="text">
        <string>trash</string>
@@ -4963,10 +4996,10 @@
       <string notr="true">#arti_gboe_head {border-radius: 5px; background-color: rgba(128, 128, 128, 32);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QPushButton" name="arti_gboe_load">
       <property name="geometry">
@@ -4995,8 +5028,11 @@
         <height>25</height>
        </size>
       </property>
+      <property name="toolTip">
+       <string>Load</string>
+      </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">#arti_gboe_load {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
       </property>
       <property name="text">
        <string>folder-open</string>
@@ -5029,8 +5065,11 @@
         <height>25</height>
        </size>
       </property>
+      <property name="toolTip">
+       <string>Save</string>
+      </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">#arti_gboe_save {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
       </property>
       <property name="text">
        <string>floppy-disk</string>
@@ -5063,8 +5102,11 @@
         <height>25</height>
        </size>
       </property>
+      <property name="toolTip">
+       <string>Wipe</string>
+      </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">#arti_gboe_wipe {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
       </property>
       <property name="text">
        <string>trash</string>
@@ -5102,10 +5144,10 @@
       <string notr="true">#arti_sdoe_head {border-radius: 5px; background-color: rgba(128, 128, 128, 32);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QPushButton" name="arti_sdoe_load">
       <property name="geometry">
@@ -5134,8 +5176,11 @@
         <height>25</height>
        </size>
       </property>
+      <property name="toolTip">
+       <string>Load</string>
+      </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">#arti_sdoe_load {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
       </property>
       <property name="text">
        <string>folder-open</string>
@@ -5168,8 +5213,11 @@
         <height>25</height>
        </size>
       </property>
+      <property name="toolTip">
+       <string>Save</string>
+      </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">#arti_sdoe_save {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
       </property>
       <property name="text">
        <string>floppy-disk</string>
@@ -5202,8 +5250,11 @@
         <height>25</height>
        </size>
       </property>
+      <property name="toolTip">
+       <string>Wipe</string>
+      </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">#arti_sdoe_wipe {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
       </property>
       <property name="text">
        <string>trash</string>
@@ -5241,10 +5292,10 @@
       <string notr="true">#arti_pmod_head {border-radius: 5px; background-color: rgba(128, 128, 128, 32);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QPushButton" name="arti_pmod_load">
       <property name="geometry">
@@ -5273,8 +5324,11 @@
         <height>25</height>
        </size>
       </property>
+      <property name="toolTip">
+       <string>Load</string>
+      </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">#arti_pmod_load {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
       </property>
       <property name="text">
        <string>folder-open</string>
@@ -5307,8 +5361,11 @@
         <height>25</height>
        </size>
       </property>
+      <property name="toolTip">
+       <string>Save</string>
+      </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">#arti_pmod_save {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
       </property>
       <property name="text">
        <string>floppy-disk</string>
@@ -5341,8 +5398,11 @@
         <height>25</height>
        </size>
       </property>
+      <property name="toolTip">
+       <string>Wipe</string>
+      </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">#arti_pmod_wipe{ font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
       </property>
       <property name="text">
        <string>trash</string>
@@ -5381,10 +5441,10 @@
      <string notr="true">#bone_area {border: 1px solid rgba(128, 128, 128, 128); border-radius: 5px;}</string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
+     <enum>QFrame::Shape::StyledPanel</enum>
     </property>
     <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
+     <enum>QFrame::Shadow::Raised</enum>
     </property>
     <widget class="QFrame" name="bone_area_head_area">
      <property name="geometry">
@@ -5417,10 +5477,10 @@
       <string notr="true">#bone_area_head_area {border-top-left-radius: 5px; border-top-right-radius: 5px; background-color: rgba(128, 128, 128, 128);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="bone_area_head_text">
       <property name="geometry">
@@ -5488,10 +5548,10 @@
       <string notr="true">#bone_main_area {border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 32);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QTextEdit" name="pair_area_desc">
       <property name="geometry">
@@ -5524,16 +5584,16 @@
        <string notr="true">#pair_area_desc {font: 10pt &quot;IBM Plex Sans&quot;; background-color: rgba(128, 128, 128, 64);}</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::NoFrame</enum>
+       <enum>QFrame::Shape::NoFrame</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Plain</enum>
+       <enum>QFrame::Shadow::Plain</enum>
       </property>
       <property name="verticalScrollBarPolicy">
-       <enum>Qt::ScrollBarAlwaysOn</enum>
+       <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOn</enum>
       </property>
       <property name="horizontalScrollBarPolicy">
-       <enum>Qt::ScrollBarAlwaysOff</enum>
+       <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
       </property>
       <property name="documentTitle">
        <string>pair_area_desc</string>
@@ -5579,7 +5639,7 @@
        <string>No artifact set.</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -5619,7 +5679,7 @@
        <string>No artifact set.</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -5656,16 +5716,16 @@
        <string notr="true">#quad_area_desc {font: 10pt &quot;IBM Plex Sans&quot;; background-color: rgba(128, 128, 128, 64);}</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::NoFrame</enum>
+       <enum>QFrame::Shape::NoFrame</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Plain</enum>
+       <enum>QFrame::Shadow::Plain</enum>
       </property>
       <property name="verticalScrollBarPolicy">
-       <enum>Qt::ScrollBarAlwaysOn</enum>
+       <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOn</enum>
       </property>
       <property name="horizontalScrollBarPolicy">
-       <enum>Qt::ScrollBarAlwaysOff</enum>
+       <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
       </property>
       <property name="documentTitle">
        <string>quad_area_desc</string>
@@ -5709,10 +5769,10 @@
       <string notr="true">#bone_back_area {border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 32);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="bone_back_icon">
       <property name="geometry">
@@ -5741,6 +5801,9 @@
         <height>30</height>
        </size>
       </property>
+      <property name="toolTip">
+       <string>Artifact</string>
+      </property>
       <property name="text">
        <string/>
       </property>
@@ -5751,7 +5814,7 @@
        <bool>true</bool>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
       <property name="margin">
        <number>1</number>
@@ -5789,10 +5852,10 @@
       <string notr="true">#bone_head {border-radius: 5px; background-color: rgba(128, 128, 128, 32);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QPushButton" name="head_wipe">
       <property name="geometry">
@@ -5821,8 +5884,11 @@
         <height>25</height>
        </size>
       </property>
+      <property name="toolTip">
+       <string>Wipe</string>
+      </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;
+       <string notr="true">#head_wipe {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}
 </string>
       </property>
       <property name="text">
@@ -5856,8 +5922,11 @@
         <height>25</height>
        </size>
       </property>
+      <property name="toolTip">
+       <string>Save</string>
+      </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">#head_save {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
       </property>
       <property name="text">
        <string>floppy-disk</string>
@@ -5890,8 +5959,11 @@
         <height>25</height>
        </size>
       </property>
+      <property name="toolTip">
+       <string>Load</string>
+      </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">#head_load {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
       </property>
       <property name="text">
        <string>folder-open</string>
@@ -5924,8 +5996,11 @@
         <height>25</height>
        </size>
       </property>
+      <property name="toolTip">
+       <string>Generate</string>
+      </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">#head_scan {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
       </property>
       <property name="text">
        <string>circle-check</string>
@@ -5964,10 +6039,10 @@
      <string notr="true">#weap_area {border: 1px solid rgba(128, 128, 128, 128); border-radius: 5px;}</string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
+     <enum>QFrame::Shape::StyledPanel</enum>
     </property>
     <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
+     <enum>QFrame::Shadow::Raised</enum>
     </property>
     <widget class="QFrame" name="weap_area_head_area">
      <property name="geometry">
@@ -6000,10 +6075,10 @@
       <string notr="true">#weap_area_head_area {border-top-left-radius: 5px; border-top-right-radius: 5px; background-color: rgba(128, 128, 128, 128);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="weap_area_head_text">
       <property name="geometry">
@@ -6072,10 +6147,10 @@
 </string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QComboBox" name="weap_area_levl">
       <property name="geometry">
@@ -6233,10 +6308,10 @@
       <string notr="true">#weap_back_area {border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 32);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="weap_back_icon">
       <property name="geometry">
@@ -6265,6 +6340,9 @@
         <height>30</height>
        </size>
       </property>
+      <property name="toolTip">
+       <string>Weapon</string>
+      </property>
       <property name="text">
        <string/>
       </property>
@@ -6275,7 +6353,7 @@
        <bool>true</bool>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
       <property name="margin">
        <number>1</number>
@@ -6313,10 +6391,10 @@
       <string notr="true">#weap_head {border-radius: 5px; background-color: rgba(128, 128, 128, 32);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QPushButton" name="weap_head_load">
       <property name="geometry">
@@ -6345,8 +6423,11 @@
         <height>25</height>
        </size>
       </property>
+      <property name="toolTip">
+       <string>Load</string>
+      </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">#weap_head_load {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
       </property>
       <property name="text">
        <string>folder-open</string>
@@ -6379,8 +6460,11 @@
         <height>25</height>
        </size>
       </property>
+      <property name="toolTip">
+       <string>Save</string>
+      </property>
       <property name="styleSheet">
-       <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;</string>
+       <string notr="true">#weap_head_save {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
       </property>
       <property name="text">
        <string>floppy-disk</string>
@@ -6418,10 +6502,10 @@
       <string notr="true">#weap_inpt {border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 32);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="weap_port_area">
       <property name="geometry">
@@ -6463,7 +6547,7 @@
        <bool>true</bool>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="weap_port_icon">
@@ -6503,7 +6587,7 @@
        <bool>true</bool>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
       <property name="margin">
        <number>1</number>
@@ -6541,10 +6625,10 @@
       <string notr="true">#weap_refn_area {border-radius: 5px; background-color: rgba(128, 128, 128, 32);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QTextEdit" name="weap_area_refn_body">
       <property name="geometry">
@@ -6577,13 +6661,13 @@
        <string notr="true">#weap_area_refn_body {font: 10pt &quot;IBM Plex Sans&quot;; background-color: rgba(128, 128, 128, 64);}</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::NoFrame</enum>
+       <enum>QFrame::Shape::NoFrame</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Plain</enum>
+       <enum>QFrame::Shadow::Plain</enum>
       </property>
       <property name="verticalScrollBarPolicy">
-       <enum>Qt::ScrollBarAlwaysOn</enum>
+       <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOn</enum>
       </property>
       <property name="documentTitle">
        <string>weap_area_refn_body</string>
@@ -6629,7 +6713,7 @@
        <string>No refinements available.</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -6667,10 +6751,10 @@
       <string notr="true">#weap_atst {border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(96, 96, 96, 128);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLineEdit" name="weap_area_stat">
       <property name="geometry">
@@ -6703,7 +6787,7 @@
        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
       </property>
       <property name="readOnly">
        <bool>true</bool>
@@ -6780,7 +6864,7 @@
        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
       </property>
       <property name="readOnly">
        <bool>true</bool>
