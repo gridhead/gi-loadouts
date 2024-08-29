@@ -12,7 +12,7 @@ class Dori(Char):
     rare: Rare = Rare.Star_4
     base: BaseStat = BaseStat(attack=18.6984, defense=60.6585, health_points=1039.4418)
     ascn: BaseStat = BaseStat(attack=66.90411, defense=217.035, health_points=3719.104)
-    weapon: WeaponType = WeaponType.catalyst
+    weapon: WeaponType = WeaponType.claymore
     vision: Vision = Vision.electro
     cons_name: str = "Magicae Lucerna"
     afln: str = "The Palace of Alcazarzaray"
