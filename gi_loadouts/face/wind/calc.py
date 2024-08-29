@@ -103,7 +103,6 @@ class Assess:
         """
         if (self.weap_area_type.currentText().strip() != "" and
             self.weap_area_name.currentText().strip() != "" and
-            self.weap_area_refn.currentText().strip() != "" and
             self.weap_area_levl.currentText().strip() != ""):
             # MAIN
             kind = self.weap_area_type.currentText().strip()
