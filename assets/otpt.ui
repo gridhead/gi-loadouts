@@ -66,10 +66,10 @@
      <string notr="true">#head_area {border: 1px solid rgba(128, 128, 128, 160); border-radius: 5px; background-color: rgba(128, 128, 128, 160);}</string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
+     <enum>QFrame::Shape::StyledPanel</enum>
     </property>
     <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
+     <enum>QFrame::Shadow::Raised</enum>
     </property>
     <widget class="QLabel" name="head_area_line_prim">
      <property name="geometry">
@@ -174,7 +174,7 @@ Head area line SECO</string>
       <bool>true</bool>
      </property>
      <property name="alignment">
-      <set>Qt::AlignCenter</set>
+      <set>Qt::AlignmentFlag::AlignCenter</set>
      </property>
     </widget>
    </widget>
@@ -209,10 +209,10 @@ Head area line SECO</string>
      <string notr="true">#char_area {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160); border-radius: 5px;}</string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
+     <enum>QFrame::Shape::StyledPanel</enum>
     </property>
     <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
+     <enum>QFrame::Shadow::Raised</enum>
     </property>
     <widget class="QLabel" name="char_wish">
      <property name="geometry">
@@ -317,10 +317,10 @@ Head area line SECO</string>
      <string notr="true">#advc_area {border: 1px solid rgba(128, 128, 128, 160); border-radius: 5px;}</string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
+     <enum>QFrame::Shape::StyledPanel</enum>
     </property>
     <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
+     <enum>QFrame::Shadow::Raised</enum>
     </property>
     <widget class="QFrame" name="advc_desc_area">
      <property name="geometry">
@@ -353,10 +353,10 @@ Head area line SECO</string>
       <string notr="true">#advc_desc_area {border: 1px solid rgba(128, 128, 128, 160); border-top-left-radius: 5px; border-top-right-radius: 5px; background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="advc_desc_text">
       <property name="geometry">
@@ -424,10 +424,10 @@ Head area line SECO</string>
       <string notr="true">#area_crit_base {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_crit_base_text">
       <property name="geometry">
@@ -497,7 +497,7 @@ Head area line SECO</string>
        <string>star</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
     </widget>
@@ -532,10 +532,10 @@ Head area line SECO</string>
       <string notr="true">#area_crit_dmge_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_crit_dmge_text">
       <property name="geometry">
@@ -605,7 +605,7 @@ Head area line SECO</string>
        <string>location-crosshairs</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
     </widget>
@@ -640,10 +640,10 @@ Head area line SECO</string>
       <string notr="true">#area_crit_rate_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_crit_rate_text">
       <property name="geometry">
@@ -713,7 +713,7 @@ Head area line SECO</string>
        <string>dice-d6</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
     </widget>
@@ -748,10 +748,10 @@ Head area line SECO</string>
       <string notr="true">#area_heal_incm_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_heal_incm_text">
       <property name="geometry">
@@ -821,7 +821,7 @@ Head area line SECO</string>
        <string>plus-circle</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
     </widget>
@@ -856,10 +856,10 @@ Head area line SECO</string>
       <string notr="true">#area_heal_perc_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_heal_perc_text">
       <property name="geometry">
@@ -929,7 +929,7 @@ Head area line SECO</string>
        <string>circle-check</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
     </widget>
@@ -964,10 +964,10 @@ Head area line SECO</string>
       <string notr="true">#area_heal_base {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_heal_base_text">
       <property name="geometry">
@@ -1037,7 +1037,7 @@ Head area line SECO</string>
        <string>heart-pulse</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
     </widget>
@@ -1072,10 +1072,10 @@ Head area line SECO</string>
       <string notr="true">#area_enrc {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_enrc_data">
       <property name="geometry">
@@ -1143,10 +1143,10 @@ Head area line SECO</string>
       <string notr="true">#area_cldn {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_cldn_data">
       <property name="geometry">
@@ -1214,10 +1214,10 @@ Head area line SECO</string>
       <string notr="true">#area_sdsh {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_sdsh_data">
       <property name="geometry">
@@ -1285,10 +1285,10 @@ Head area line SECO</string>
       <string notr="true">#area_crit_rate {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_crit_rate_data">
       <property name="geometry">
@@ -1356,10 +1356,10 @@ Head area line SECO</string>
       <string notr="true">#area_crit_dmge {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_crit_dmge_data">
       <property name="geometry">
@@ -1427,10 +1427,10 @@ Head area line SECO</string>
       <string notr="true">#area_heal_perc {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_heal_perc_data">
       <property name="geometry">
@@ -1498,10 +1498,10 @@ Head area line SECO</string>
       <string notr="true">#area_heal_incm {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_heal_incm_data">
       <property name="geometry">
@@ -1569,10 +1569,10 @@ Head area line SECO</string>
       <string notr="true">#area_enrc_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_enrc_text">
       <property name="geometry">
@@ -1642,7 +1642,7 @@ Head area line SECO</string>
        <string>atom</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
     </widget>
@@ -1677,10 +1677,10 @@ Head area line SECO</string>
       <string notr="true">#area_cldn_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_cldn_text">
       <property name="geometry">
@@ -1750,7 +1750,7 @@ Head area line SECO</string>
        <string>hourglass-half</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
     </widget>
@@ -1785,10 +1785,10 @@ Head area line SECO</string>
       <string notr="true">#area_sdsh_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_sdsh_text">
       <property name="geometry">
@@ -1858,7 +1858,7 @@ Head area line SECO</string>
        <string>shield-heart</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
     </widget>
@@ -1894,10 +1894,10 @@ Head area line SECO</string>
      <string notr="true">#elem_area {border: 1px solid rgba(128, 128, 128, 160); border-radius: 5px;}</string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
+     <enum>QFrame::Shape::StyledPanel</enum>
     </property>
     <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
+     <enum>QFrame::Shadow::Raised</enum>
     </property>
     <widget class="QFrame" name="elem_desc_area">
      <property name="geometry">
@@ -1930,10 +1930,10 @@ Head area line SECO</string>
       <string notr="true">#elem_desc_area {border: 1px solid rgba(128, 128, 128, 160); border-top-left-radius: 5px; border-top-right-radius: 5px; background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="elem_desc_text">
       <property name="geometry">
@@ -2001,10 +2001,10 @@ Head area line SECO</string>
       <string notr="true">#area_pyro_base {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_pyro_text">
       <property name="geometry">
@@ -2074,7 +2074,7 @@ Head area line SECO</string>
        <string>fire</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
     </widget>
@@ -2109,10 +2109,10 @@ Head area line SECO</string>
       <string notr="true">#area_pyro_resi {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_pyro_resi_data">
       <property name="geometry">
@@ -2180,10 +2180,10 @@ Head area line SECO</string>
       <string notr="true">#area_pyro_perc {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_pyro_perc_data">
       <property name="geometry">
@@ -2251,10 +2251,10 @@ Head area line SECO</string>
       <string notr="true">#area_pyro_perc_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_pyro_perc_text">
       <property name="geometry">
@@ -2322,10 +2322,10 @@ Head area line SECO</string>
       <string notr="true">#area_pyro_resi_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_pyro_resi_text">
       <property name="geometry">
@@ -2393,10 +2393,10 @@ Head area line SECO</string>
       <string notr="true">#area_hydo_perc {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_hydo_perc_data">
       <property name="geometry">
@@ -2464,10 +2464,10 @@ Head area line SECO</string>
       <string notr="true">#area_hydo_perc_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_hydo_perc_text">
       <property name="geometry">
@@ -2535,10 +2535,10 @@ Head area line SECO</string>
       <string notr="true">#area_hydo_resi_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_hydo_resi_text">
       <property name="geometry">
@@ -2606,10 +2606,10 @@ Head area line SECO</string>
       <string notr="true">#area_hydo_base {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_hydo_text">
       <property name="geometry">
@@ -2679,7 +2679,7 @@ Head area line SECO</string>
        <string>droplet</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
     </widget>
@@ -2714,10 +2714,10 @@ Head area line SECO</string>
       <string notr="true">#area_hydo_resi {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_hydo_resi_data">
       <property name="geometry">
@@ -2785,10 +2785,10 @@ Head area line SECO</string>
       <string notr="true">#area_dend_resi_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_dend_resi_text">
       <property name="geometry">
@@ -2856,10 +2856,10 @@ Head area line SECO</string>
       <string notr="true">#area_dend_resi {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_dend_resi_data">
       <property name="geometry">
@@ -2927,10 +2927,10 @@ Head area line SECO</string>
       <string notr="true">#area_dend_base {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_dend_text">
       <property name="geometry">
@@ -3000,7 +3000,7 @@ Head area line SECO</string>
        <string>leaf</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
     </widget>
@@ -3035,10 +3035,10 @@ Head area line SECO</string>
       <string notr="true">#area_dend_perc {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_dend_perc_data">
       <property name="geometry">
@@ -3106,10 +3106,10 @@ Head area line SECO</string>
       <string notr="true">#area_dend_perc_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_dend_perc_text">
       <property name="geometry">
@@ -3177,10 +3177,10 @@ Head area line SECO</string>
       <string notr="true">#area_elec_resi_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_elec_resi_text">
       <property name="geometry">
@@ -3248,10 +3248,10 @@ Head area line SECO</string>
       <string notr="true">#area_elec_base {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_elec_text">
       <property name="geometry">
@@ -3321,7 +3321,7 @@ Head area line SECO</string>
        <string>bolt</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
     </widget>
@@ -3356,10 +3356,10 @@ Head area line SECO</string>
       <string notr="true">#area_elec_perc {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_elec_perc_data">
       <property name="geometry">
@@ -3427,10 +3427,10 @@ Head area line SECO</string>
       <string notr="true">#area_elec_resi {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_elec_resi_data">
       <property name="geometry">
@@ -3498,10 +3498,10 @@ Head area line SECO</string>
       <string notr="true">#area_elec_perc_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_elec_perc_text">
       <property name="geometry">
@@ -3569,10 +3569,10 @@ Head area line SECO</string>
       <string notr="true">#area_anem_resi {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_anem_resi_data">
       <property name="geometry">
@@ -3640,10 +3640,10 @@ Head area line SECO</string>
       <string notr="true">#area_anem_base {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_anem_text">
       <property name="geometry">
@@ -3713,7 +3713,7 @@ Head area line SECO</string>
        <string>wind</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
     </widget>
@@ -3748,10 +3748,10 @@ Head area line SECO</string>
       <string notr="true">#area_anem_resi_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_anem_resi_text">
       <property name="geometry">
@@ -3819,10 +3819,10 @@ Head area line SECO</string>
       <string notr="true">#area_anem_perc_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_anem_perc_text">
       <property name="geometry">
@@ -3890,10 +3890,10 @@ Head area line SECO</string>
       <string notr="true">#area_anem_perc {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_anem_perc_data">
       <property name="geometry">
@@ -3961,10 +3961,10 @@ Head area line SECO</string>
       <string notr="true">#area_cryo_perc_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_cryo_perc_text">
       <property name="geometry">
@@ -4032,10 +4032,10 @@ Head area line SECO</string>
       <string notr="true">#area_cryo_resi_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_cryo_resi_text">
       <property name="geometry">
@@ -4103,10 +4103,10 @@ Head area line SECO</string>
       <string notr="true">#area_cryo_perc {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_cryo_perc_data">
       <property name="geometry">
@@ -4174,10 +4174,10 @@ Head area line SECO</string>
       <string notr="true">#area_cryo_base {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_cryo_text">
       <property name="geometry">
@@ -4247,7 +4247,7 @@ Head area line SECO</string>
        <string>snowflake</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
     </widget>
@@ -4282,10 +4282,10 @@ Head area line SECO</string>
       <string notr="true">#area_cryo_resi {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_cryo_resi_data">
       <property name="geometry">
@@ -4353,10 +4353,10 @@ Head area line SECO</string>
       <string notr="true">#area_geox_perc {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_geox_perc_data">
       <property name="geometry">
@@ -4424,10 +4424,10 @@ Head area line SECO</string>
       <string notr="true">#area_geox_resi_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_geox_resi_text">
       <property name="geometry">
@@ -4495,10 +4495,10 @@ Head area line SECO</string>
       <string notr="true">#area_geox_base {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_geox_text">
       <property name="geometry">
@@ -4568,7 +4568,7 @@ Head area line SECO</string>
        <string>gem</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
     </widget>
@@ -4603,10 +4603,10 @@ Head area line SECO</string>
       <string notr="true">#area_geox_perc_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_geox_perc_text">
       <property name="geometry">
@@ -4674,10 +4674,10 @@ Head area line SECO</string>
       <string notr="true">#area_geox_resi {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_geox_resi_data">
       <property name="geometry">
@@ -4745,10 +4745,10 @@ Head area line SECO</string>
       <string notr="true">#area_phys_perc_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_phys_perc_text">
       <property name="geometry">
@@ -4816,10 +4816,10 @@ Head area line SECO</string>
       <string notr="true">#area_phys_resi {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_phys_resi_data">
       <property name="geometry">
@@ -4887,10 +4887,10 @@ Head area line SECO</string>
       <string notr="true">#area_phys_perc {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_phys_perc_data">
       <property name="geometry">
@@ -4958,10 +4958,10 @@ Head area line SECO</string>
       <string notr="true">#area_phys_resi_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_phys_resi_text">
       <property name="geometry">
@@ -5029,10 +5029,10 @@ Head area line SECO</string>
       <string notr="true">#area_phys_base {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_phys_text">
       <property name="geometry">
@@ -5102,7 +5102,7 @@ Head area line SECO</string>
        <string>hand-back-fist</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
     </widget>
@@ -5138,10 +5138,10 @@ Head area line SECO</string>
      <string notr="true">#base_area {border: 1px solid rgba(128, 128, 128, 160); border-radius: 5px;}</string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
+     <enum>QFrame::Shape::StyledPanel</enum>
     </property>
     <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
+     <enum>QFrame::Shadow::Raised</enum>
     </property>
     <widget class="QFrame" name="base_desc_area">
      <property name="geometry">
@@ -5174,10 +5174,10 @@ Head area line SECO</string>
       <string notr="true">#base_desc_area {border: 1px solid rgba(128, 128, 128, 160); border-top-left-radius: 5px; border-top-right-radius: 5px; background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="base_desc_text">
       <property name="geometry">
@@ -5245,10 +5245,10 @@ Head area line SECO</string>
       <string notr="true">#area_hlpt_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_hlpt_text">
       <property name="geometry">
@@ -5318,7 +5318,7 @@ Head area line SECO</string>
        <string>heart</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
     </widget>
@@ -5353,10 +5353,10 @@ Head area line SECO</string>
       <string notr="true">#area_attk_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_attk_text">
       <property name="geometry">
@@ -5426,7 +5426,7 @@ Head area line SECO</string>
        <string>skull</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
     </widget>
@@ -5461,10 +5461,10 @@ Head area line SECO</string>
       <string notr="true">#area_dfns_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_dfns_text">
       <property name="geometry">
@@ -5534,7 +5534,7 @@ Head area line SECO</string>
        <string>shield</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
     </widget>
@@ -5569,10 +5569,10 @@ Head area line SECO</string>
       <string notr="true">#area_elma_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_elma_text">
       <property name="geometry">
@@ -5642,7 +5642,7 @@ Head area line SECO</string>
        <string>flask</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
     </widget>
@@ -5677,10 +5677,10 @@ Head area line SECO</string>
       <string notr="true">#area_hlpt {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_hlpt_calc">
       <property name="geometry">
@@ -5747,7 +5747,6 @@ Head area line SECO</string>
        <font>
         <family>IBM Plex Sans</family>
         <pointsize>15</pointsize>
-        <weight>50</weight>
         <italic>false</italic>
         <bold>false</bold>
        </font>
@@ -5791,10 +5790,10 @@ Head area line SECO</string>
       <string notr="true">#area_attk {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_attk_calc">
       <property name="geometry">
@@ -5861,7 +5860,6 @@ Head area line SECO</string>
        <font>
         <family>IBM Plex Sans</family>
         <pointsize>15</pointsize>
-        <weight>50</weight>
         <italic>false</italic>
         <bold>false</bold>
        </font>
@@ -5905,10 +5903,10 @@ Head area line SECO</string>
       <string notr="true">#area_dfns {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_dfns_calc">
       <property name="geometry">
@@ -5975,7 +5973,6 @@ Head area line SECO</string>
        <font>
         <family>IBM Plex Sans</family>
         <pointsize>15</pointsize>
-        <weight>50</weight>
         <italic>false</italic>
         <bold>false</bold>
        </font>
@@ -6019,10 +6016,10 @@ Head area line SECO</string>
       <string notr="true">#area_elma {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Shape::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <widget class="QLabel" name="area_elma_data">
       <property name="geometry">
