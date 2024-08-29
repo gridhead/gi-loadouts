@@ -32,6 +32,7 @@ from gi_loadouts.data.char.ganyu import Ganyu
 from gi_loadouts.data.char.gorou import Gorou
 from gi_loadouts.data.char.hu_tao import HuTao
 from gi_loadouts.data.char.jean import Jean
+from gi_loadouts.data.char.kachina import Kachina
 from gi_loadouts.data.char.kaedehara_kazuha import KaedeharaKazuha
 from gi_loadouts.data.char.kaeya import Kaeya
 from gi_loadouts.data.char.kamisato_ayaka import KamisatoAyaka
@@ -49,6 +50,7 @@ from gi_loadouts.data.char.lynette import Lynette
 from gi_loadouts.data.char.lyney import Lyney
 from gi_loadouts.data.char.mika import Mika
 from gi_loadouts.data.char.mona import Mona
+from gi_loadouts.data.char.mualani import Mualani
 from gi_loadouts.data.char.nahida import Nahida
 from gi_loadouts.data.char.navia import Navia
 from gi_loadouts.data.char.neuvillette import Neuvillette
@@ -120,6 +122,7 @@ __charmaps__ = {
     "Gorou": Gorou,
     "Hu Tao": HuTao,
     "Jean": Jean,
+    "Kachina": Kachina,
     "Kaedehara Kazuha": KaedeharaKazuha,
     "Kamisato Ayaka": KamisatoAyaka,
     "Kamisato Ayato": KamisatoAyato,
@@ -137,6 +140,7 @@ __charmaps__ = {
     "Lyney": Lyney,
     "Mika": Mika,
     "Mona": Mona,
+    "Mualani": Mualani,
     "Nahida": Nahida,
     "Navia": Navia,
     "Neuvillette": Neuvillette,
