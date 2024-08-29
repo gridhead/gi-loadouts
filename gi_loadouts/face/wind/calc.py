@@ -89,11 +89,11 @@ class Assess:
 
             # ADDENDUM
             self.c_tyvt.addendum_base_attack = ATTR(stat_name=STAT.attack, stat_data=self.c_char.attack.stat_data + self.c_weap.base.stat_data)
-            self.c_tyvt.addendum_plus_attack = ATTR(stat_name=STAT.attack, stat_data=self.c_tyvt.attack.stat_data - self.c_tyvt.addendum_base_attack.stat_data)
+            self.c_tyvt.addendum_plus_attack = ATTR(stat_name=STAT.attack, stat_data=abs(self.c_tyvt.attack.stat_data - self.c_tyvt.addendum_base_attack.stat_data))
             self.c_tyvt.addendum_base_health_points = ATTR(stat_name=STAT.health_points, stat_data=self.c_char.health_points.stat_data)
-            self.c_tyvt.addendum_plus_health_points = ATTR(stat_name=STAT.health_points, stat_data=self.c_tyvt.health_points.stat_data - self.c_tyvt.addendum_base_health_points.stat_data)
+            self.c_tyvt.addendum_plus_health_points = ATTR(stat_name=STAT.health_points, stat_data=abs(self.c_tyvt.health_points.stat_data - self.c_tyvt.addendum_base_health_points.stat_data))
             self.c_tyvt.addendum_base_defense = ATTR(stat_name=STAT.defense, stat_data=self.c_char.defense.stat_data)
-            self.c_tyvt.addendum_plus_defense = ATTR(stat_name=STAT.defense, stat_data=self.c_tyvt.defense.stat_data - self.c_tyvt.addendum_base_defense.stat_data)
+            self.c_tyvt.addendum_plus_defense = ATTR(stat_name=STAT.defense, stat_data=abs(self.c_tyvt.defense.stat_data - self.c_tyvt.addendum_base_defense.stat_data))
 
     def weap_keep(self) -> None:
         """
