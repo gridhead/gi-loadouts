@@ -5,7 +5,7 @@ from gi_loadouts.data.arti import ArtiList
 from gi_loadouts.data.char import __charmaps__
 from gi_loadouts.data.weap import Family
 from gi_loadouts.face.otpt.main import OtptWindow
-from gi_loadouts.face.util import truncate_text
+from gi_loadouts.face.util import modify_graphics_resource, truncate_text
 from gi_loadouts.face.wind.calc import Assess
 from gi_loadouts.face.wind.fclt import Facility
 from gi_loadouts.face.wind.wind import Ui_mainwind
@@ -62,20 +62,13 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         :param colour: Colour intended for theming associated with the character vision
         :return:
         """
-        self.head_main.setStyleSheet(f"#head_main {{background-color: {colour}; border-radius: 5px;}}")
-        self.head_area.setStyleSheet(f"#head_area {{border-top-right-radius: 47px; border-bottom-right-radius: 47px; border-top-left-radius: 5px; border-bottom-left-radius: 5px; background-color: {colour};}}")
-        self.bone_area_head_area.setStyleSheet(f"#bone_area_head_area {{border-top-left-radius: 5px; border-top-right-radius: 5px; background-color: {colour};}}")
+        self.side_back.setStyleSheet(f"#side_back {{border: 1px solid {colour}; border-radius: 5px; background-color: rgba(128, 128, 128, 64);}}")
+        self.head_back.setStyleSheet(f"#head_back {{border: 1px solid {colour}; border-radius: 5px;}}")
+        self.head_area.setStyleSheet(f"#head_area {{border: 1px solid {colour}; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 110px; border-bottom-right-radius: 110px; background-color: rgba(128, 128, 128, 64);}}")
         self.bone_area.setStyleSheet(f"#bone_area {{border: 1px solid {colour}; border-radius: 5px;}}")
-        self.arti_area_head_area.setStyleSheet(f"#arti_area_head_area {{border-top-left-radius: 5px; border-top-right-radius: 5px; background-color: {colour};}}")
         self.arti_area.setStyleSheet(f"#arti_area {{border: 1px solid {colour}; border-radius: 5px;}}")
-        self.weap_area_head_area.setStyleSheet(f"#weap_area_head_area {{border-top-left-radius: 5px; border-top-right-radius: 5px; background-color: {colour};}}")
         self.weap_area.setStyleSheet(f"#weap_area {{border: 1px solid {colour}; border-radius: 5px;}}")
-        self.arti_fwol_type_area.setStyleSheet(f"#arti_fwol_type_area {{background-color: {colour};}}")
-        self.arti_pmod_type_area.setStyleSheet(f"#arti_pmod_type_area {{background-color: {colour};}}")
-        self.arti_sdoe_type_area.setStyleSheet(f"#arti_sdoe_type_area {{background-color: {colour};}}")
-        self.arti_gboe_type_area.setStyleSheet(f"#arti_gboe_type_area {{background-color: {colour};}}")
-        self.arti_ccol_type_area.setStyleSheet(f"#arti_ccol_type_area {{background-color: {colour};}}")
-        self.statarea.setStyleSheet(f"#statarea {{background-color: {colour};}}")
+        self.defn_area.setStyleSheet(f"#defn_area {{border: 1px solid {colour}; border-radius: 5px;}}")
 
     def handle_char_data(self, _: int) -> None:
         """
@@ -88,8 +81,8 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             char = __charmaps__[self.head_char_name.currentText()]()
             char.levl = getattr(Level, self.head_char_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
             self.head_vson.setPixmap(QPixmap(f":vson/imgs/vson/{char.vision.value.name.lower()}.png"))
-            self.head_area_back.setPixmap(QPixmap(f":name/imgs/char/name/{self.head_char_name.currentText().replace(" ", "_").lower()}.png"))
-            self.head_face_back.setPixmap(QPixmap(f":face/imgs/char/face/{self.head_char_name.currentText().replace(" ", "_").lower()}.png"))
+            self.head_area_back.setPixmap(modify_graphics_resource(f":name/imgs/char/name/{self.head_char_name.currentText().replace(" ", "_").lower()}.png", 1.0, 0.75))
+            self.char_inpt_icon.setPixmap(QPixmap(f":face/imgs/char/face/{self.head_char_name.currentText().replace(" ", "_").lower()}.png"))
             self.head_char_data_attk.setText(f"{round(char.attack.stat_data)}")
             self.head_char_data_dfns.setText(f"{round(char.defense.stat_data)}")
             self.head_char_data_hlpt.setText(f"{round(char.health_points.stat_data)}")
@@ -411,3 +404,11 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         for item in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
             droptype = getattr(self, f"arti_{item}_type")
             droptype.setCurrentText("None")
+
+    def select_char_from_dropdown(self, char: CharName) -> None:
+        """
+        Quickly select the male traveler (i.e. Aether) the character selector
+
+        :return:
+        """
+        self.head_char_name.setCurrentText(char.value)

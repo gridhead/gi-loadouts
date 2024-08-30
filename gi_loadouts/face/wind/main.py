@@ -1,6 +1,7 @@
 from PySide6.QtWidgets import QMessageBox
 
 from gi_loadouts.face.wind.rule import Rule
+from gi_loadouts.type.char import CharName
 
 
 class MainWindow(Rule):
@@ -83,3 +84,5 @@ class MainWindow(Rule):
         self.head_wipe.clicked.connect(self.wipe_team)
         self.weap_head_load.clicked.connect(self.weap_load)
         self.weap_head_save.clicked.connect(self.weap_save)
+        self.char_head_lumi.clicked.connect(lambda _, a_char=CharName.lumine: self.select_char_from_dropdown(a_char))
+        self.char_head_aeth.clicked.connect(lambda _, a_char=CharName.aether: self.select_char_from_dropdown(a_char))
