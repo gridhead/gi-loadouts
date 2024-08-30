@@ -4,6 +4,7 @@ from PySide6.QtWidgets import QComboBox, QLabel, QLineEdit, QMainWindow, QMessag
 from gi_loadouts.data.arti import ArtiList
 from gi_loadouts.data.char import __charmaps__
 from gi_loadouts.data.weap import Family
+from gi_loadouts.face.info.main import InfoDialog
 from gi_loadouts.face.otpt.main import OtptWindow
 from gi_loadouts.face.util import modify_graphics_resource, truncate_text
 from gi_loadouts.face.wind.calc import Assess
@@ -32,6 +33,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         super().__init__()
         self.collection = Collection()
         self.otptobjc = None
+        self.infoobjc = None
         self.c_team = None
         self.c_weap = None
         self.c_tyvt = None
@@ -407,8 +409,17 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
 
     def select_char_from_dropdown(self, char: CharName) -> None:
         """
-        Quickly select the male traveler (i.e. Aether) the character selector
+        Quickly select the male traveler or female traveler from the character selector
 
         :return:
         """
         self.head_char_name.setCurrentText(char.value)
+
+    def show_lcns_dialog(self):
+        """
+        Initialize and exhibit the license dialog
+
+        :return:
+        """
+        self.infoobjc = InfoDialog()
+        self.infoobjc.exec()
