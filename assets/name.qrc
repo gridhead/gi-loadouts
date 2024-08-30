@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="name">
+    <file>imgs/char/name/aether.png</file>
     <file>imgs/char/name/albedo.png</file>
     <file>imgs/char/name/alhaitham.png</file>
     <file>imgs/char/name/aloy.png</file>
@@ -46,6 +47,7 @@
     <file>imgs/char/name/kuki_shinobu.png</file>
     <file>imgs/char/name/layla.png</file>
     <file>imgs/char/name/lisa.png</file>
+    <file>imgs/char/name/lumine.png</file>
     <file>imgs/char/name/lynette.png</file>
     <file>imgs/char/name/lyney.png</file>
     <file>imgs/char/name/mika.png</file>
