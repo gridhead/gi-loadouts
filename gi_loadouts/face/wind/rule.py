@@ -87,6 +87,8 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.head_vson.setPixmap(QPixmap(f":vson/imgs/vson/{char.vision.value.name.lower()}.png"))
             self.head_area_back.setPixmap(modify_graphics_resource(f":name/imgs/char/name/{self.head_char_name.currentText().replace(" ", "_").lower()}.png", 1.0, 0.75))
             self.char_inpt_icon.setPixmap(QPixmap(f":face/imgs/char/face/{self.head_char_name.currentText().replace(" ", "_").lower()}.png"))
+            self.char_inpt_area.setPixmap(QPixmap(char.rare.value.back))
+            self.char_area_rare.setText(" ".join(["STAR"] * char.rare.value.qant))
             self.head_char_data_attk.setText(f"{round(char.attack.stat_data)}")
             self.head_char_data_dfns.setText(f"{round(char.defense.stat_data)}")
             self.head_char_data_hlpt.setText(f"{round(char.health_points.stat_data)}")
@@ -139,6 +141,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.weap_area_levl.addItems([item.value.name for item in weap.levl_bind])
             self.weap_area_refn.addItems(item for item in weap.refinement.keys())
             self.weap_port_area.setPixmap(QPixmap(weap.rare.value.back))
+            self.weap_area_rare.setText(" ".join(["STAR"] * weap.rare.value.qant))
 
     def convey_weapon_levl_change(self, _: int) -> None:
         """
