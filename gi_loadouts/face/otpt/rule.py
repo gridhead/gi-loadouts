@@ -50,6 +50,7 @@ class Rule(QMainWindow, Ui_otptwind):
             self.area_geox_resi_data: f"{str(round(self.tyvt.resistance_geo_perc.stat_data, 1))}%",
             self.area_phys_perc_data: f"{str(round(self.tyvt.damage_bonus_physical_perc.stat_data, 1))}%",
             self.area_phys_resi_data: f"{str(round(self.tyvt.resistance_physical_perc.stat_data, 1))}%",
+            self.area_crvl_data: f"{str(round(self.tyvt.critical_damage_perc.stat_data + 2*(self.tyvt.critical_rate_perc.stat_data), 1))}"
         }
         for item in assignment:
             item.setText(assignment[item])

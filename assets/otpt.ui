@@ -292,7 +292,7 @@ Head area line SECO</string>
       <x>490</x>
       <y>85</y>
       <width>380</width>
-      <height>240</height>
+      <height>270</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -304,13 +304,13 @@ Head area line SECO</string>
     <property name="minimumSize">
      <size>
       <width>380</width>
-      <height>240</height>
+      <height>270</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
-      <width>120</width>
-      <height>380</height>
+      <width>380</width>
+      <height>270</height>
      </size>
     </property>
     <property name="styleSheet">
@@ -6057,12 +6057,193 @@ Head area line SECO</string>
      </widget>
     </widget>
    </widget>
+   <widget class="QFrame" name="area_crvl">
+    <property name="geometry">
+     <rect>
+      <x>745</x>
+      <y>325</y>
+      <width>120</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>120</width>
+      <height>25</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>120</width>
+      <height>25</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#area_crvl {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Raised</enum>
+    </property>
+    <widget class="QLabel" name="area_crvl_data">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>5</y>
+       <width>110</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>15</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>110</width>
+       <height>15</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>60.0</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="area_crvl_head">
+    <property name="geometry">
+     <rect>
+      <x>495</x>
+      <y>325</y>
+      <width>245</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>245</width>
+      <height>25</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>245</width>
+      <height>25</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#area_crvl_head {border: 1px solid rgba(128, 128, 128, 160); background-color: rgba(128, 128, 128, 160);}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Raised</enum>
+    </property>
+    <widget class="QLabel" name="area_crvl_text">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>5</y>
+       <width>215</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>215</width>
+       <height>15</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>215</width>
+       <height>15</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Critical value</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="area_crvl_icon">
+     <property name="geometry">
+      <rect>
+       <x>225</x>
+       <y>5</y>
+       <width>15</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>15</width>
+       <height>15</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>15</width>
+       <height>15</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;; color: rgba(255, 255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>circle-radiation</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
    <zorder>char_back</zorder>
    <zorder>head_area</zorder>
    <zorder>char_area</zorder>
    <zorder>advc_area</zorder>
    <zorder>elem_area</zorder>
    <zorder>base_area</zorder>
+   <zorder>area_crvl</zorder>
+   <zorder>area_crvl_head</zorder>
   </widget>
  </widget>
  <resources>
