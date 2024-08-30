@@ -86,4 +86,5 @@ class MainWindow(Rule):
         self.weap_head_save.clicked.connect(self.weap_save)
         self.char_head_lumi.clicked.connect(lambda _, a_char=CharName.lumine: self.select_char_from_dropdown(a_char))
         self.char_head_aeth.clicked.connect(lambda _, a_char=CharName.aether: self.select_char_from_dropdown(a_char))
+        self.side_info.clicked.connect(self.show_info_dialog)
         self.side_lcns.clicked.connect(self.show_lcns_dialog)

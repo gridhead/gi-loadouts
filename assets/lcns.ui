@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>600</width>
-    <height>655</height>
+    <height>630</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -22,13 +22,13 @@
   <property name="minimumSize">
    <size>
     <width>600</width>
-    <height>655</height>
+    <height>630</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>600</width>
-    <height>655</height>
+    <height>630</height>
    </size>
   </property>
   <property name="font">
@@ -157,7 +157,7 @@
      <x>50</x>
      <y>350</y>
      <width>500</width>
-     <height>205</height>
+     <height>160</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -169,17 +169,17 @@
    <property name="minimumSize">
     <size>
      <width>500</width>
-     <height>205</height>
+     <height>160</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
      <width>500</width>
-     <height>205</height>
+     <height>160</height>
     </size>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;This program is free software: you can redistribute it and/or modify it under the terms of the &lt;span style=&quot; font-weight:700;&quot;&gt;GNU General Public License&lt;/span&gt; as published by the &lt;span style=&quot; font-weight:700;&quot;&gt;Free Software Foundation&lt;/span&gt;, either &lt;span style=&quot; font-weight:700;&quot;&gt;version 3&lt;/span&gt; of the License, or (at your option) any &lt;span style=&quot; font-weight:700;&quot;&gt;later version&lt;/span&gt;.&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;This program is distributed in the hope that it will be useful, but &lt;span style=&quot; font-weight:700;&quot;&gt;without any warranty&lt;/span&gt;; without even the implied warranty of &lt;span style=&quot; font-weight:700;&quot;&gt;merchantability&lt;/span&gt; or &lt;span style=&quot; font-weight:700;&quot;&gt;fitness for a particular purpose&lt;/span&gt;. See the &lt;span style=&quot; font-weight:700;&quot;&gt;GNU General Public License&lt;/span&gt; for more details.&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;You should have received a copy of the &lt;span style=&quot; font-weight:700;&quot;&gt;GNU General Public License&lt;/span&gt; along with this program. If not, see &amp;lt;https://www.gnu.org/licenses/&amp;gt;.&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;© All rights to &lt;span style=&quot; font-weight:700;&quot;&gt;Genshin Impact&lt;/span&gt; assets used in this project are reserved by &lt;span style=&quot; font-weight:700;&quot;&gt;miHoYo Ltd&lt;/span&gt;. and &lt;span style=&quot; font-weight:700;&quot;&gt;Cognosphere Pte&lt;/span&gt;., Ltd. Other properties belong to their respective owners.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;This program is free software: you can redistribute it and/or modify it under the terms of the &lt;span style=&quot; font-weight:700;&quot;&gt;GNU General Public License&lt;/span&gt; as published by the &lt;a href=&quot;https://www.fsf.org/&quot;&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline; color:#498058;&quot;&gt;Free Software Foundation&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;,&lt;/span&gt; either &lt;span style=&quot; font-weight:700;&quot;&gt;version 3&lt;/span&gt; of the License, or (at your option) any &lt;span style=&quot; font-weight:700;&quot;&gt;later version&lt;/span&gt;.&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;This program is distributed in the hope that it will be useful, but &lt;span style=&quot; font-weight:700;&quot;&gt;without any warranty&lt;/span&gt;; without even the implied warranty of &lt;span style=&quot; font-weight:700;&quot;&gt;merchantability&lt;/span&gt; or &lt;span style=&quot; font-weight:700;&quot;&gt;fitness for a particular purpose&lt;/span&gt;. See the &lt;a href=&quot;https://github.com/gridhead/gi-loadouts/blob/main/LICENSE&quot;&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline; color:#498058;&quot;&gt;GNU General Public License&lt;/span&gt;&lt;/a&gt; for more details.&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;© All rights to &lt;a href=&quot;https://genshin.hoyoverse.com/&quot;&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline; color:#498058;&quot;&gt;Genshin Impact&lt;/span&gt;&lt;/a&gt; assets used in this project are reserved by &lt;a href=&quot;https://www.mihoyo.com/&quot;&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline; color:#498058;&quot;&gt;miHoYo Ltd.&lt;/span&gt;&lt;/a&gt; and &lt;span style=&quot; font-weight:700;&quot;&gt;Cognosphere Pte&lt;/span&gt;., Ltd. Other properties belong to their respective owners.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
