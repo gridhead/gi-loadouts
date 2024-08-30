@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="back">
+    <file>imgs/char/back/aether.webp</file>
     <file>imgs/char/back/albedo.webp</file>
     <file>imgs/char/back/alhaitham.webp</file>
     <file>imgs/char/back/aloy.webp</file>
@@ -46,6 +47,7 @@
     <file>imgs/char/back/kuki_shinobu.webp</file>
     <file>imgs/char/back/layla.webp</file>
     <file>imgs/char/back/lisa.webp</file>
+    <file>imgs/char/back/lumine.webp</file>
     <file>imgs/char/back/lynette.webp</file>
     <file>imgs/char/back/lyney.webp</file>
     <file>imgs/char/back/mika.webp</file>
