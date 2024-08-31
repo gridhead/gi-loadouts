@@ -110,8 +110,11 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.head_char_data_hlpt.setText(f"{round(char.health_points.stat_data)}")
             self.head_char_icon_subs.setToolTip(f"{char.seco.stat_name.value}")
             self.head_char_data_subs.setText(f"{round(char.seco.stat_data, 1)}")
-            self.head_area_line_prim.setText(f"<b>{char.head}</b> - {char.cons_name}" + f" ({char.afln})" if char.afln != "" else f"<b>{char.head}</b> - {char.cons_name}")
-            self.head_area_line_seco.setText(f"<i>{char.name} is a {char.weapon.value.lower()}-wielding {char.vision.value.name if char.vision != Vision.none else ""} character of {char.rare.value.qant}-star quality.</i>")
+            self.head_area_line_prim.setText(f"{char.name}")
+            self.head_area_line_seco.setText(f"{char.cons_name}")
+            self.head_area_line_tert.setText(f"{char.weapon.value}")
+            self.head_area_line_quat.setText(f"<i>{char.name} is a {char.weapon.value.lower()}-wielding {char.vision.value.name if char.vision != Vision.none else ""} character of {char.rare.value.qant}-star quality.</i>")
+            self.head_area_line_quin.setText(f"<i>{char.name} is affiliated with {char.afln}.</i>" if char.afln != "" else f"<i>{char.name} is not affiliated with any association.</i>")
             self.manage_changing_appearance(char.vision.value.colour)
 
     def format_weapon_by_char_change(self, _: int) -> None:
