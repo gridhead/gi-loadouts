@@ -1,5 +1,6 @@
 from PySide6.QtWidgets import QMessageBox
 
+from gi_loadouts import __donation__, __homepage__, __versdata__
 from gi_loadouts.face.wind.rule import Rule
 from gi_loadouts.type.char import CharName
 
@@ -7,10 +8,9 @@ from gi_loadouts.type.char import CharName
 class MainWindow(Rule):
     def __init__(self) -> None:
         super().__init__()
-        self.headtext = "Loadouts for Genshin Impact"
         self.dialog = QMessageBox()
         self.setupUi(self)
-        self.setWindowTitle(self.headtext)
+        self.setWindowTitle(f"Loadouts for Genshin Impact v{__versdata__}")
         self.initialize_events()
         self.initialize_elements()
 
@@ -86,5 +86,7 @@ class MainWindow(Rule):
         self.weap_head_save.clicked.connect(self.weap_save)
         self.char_head_lumi.clicked.connect(lambda _, a_char=CharName.lumine: self.select_char_from_dropdown(a_char))
         self.char_head_aeth.clicked.connect(lambda _, a_char=CharName.aether: self.select_char_from_dropdown(a_char))
+        self.side_cash.clicked.connect(lambda _, a_link=__donation__: self.open_link(a_link))
+        self.side_head.clicked.connect(lambda _, a_link=__homepage__: self.open_link(a_link))
         self.side_info.clicked.connect(self.show_info_dialog)
         self.side_lcns.clicked.connect(self.show_lcns_dialog)

@@ -1,4 +1,5 @@
-from PySide6.QtGui import QPixmap
+from PySide6.QtCore import QUrl
+from PySide6.QtGui import QDesktopServices, QPixmap
 from PySide6.QtWidgets import QComboBox, QLabel, QLineEdit, QMainWindow, QMessageBox
 
 from gi_loadouts.data.arti import ArtiList
@@ -422,7 +423,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
 
     def show_info_dialog(self) -> None:
         """
-        Initialize and exhibit the information dialog
+        Initialize and exhibit the information dialog on a button click
 
         :return:
         """
@@ -431,9 +432,17 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
 
     def show_lcns_dialog(self) -> None:
         """
-        Initialize and exhibit the licensing dialog
+        Initialize and exhibit the licensing dialog on a button click
 
         :return:
         """
         self.lcnsobjc = LcnsDialog()
         self.lcnsobjc.exec()
+
+    def open_link(self, link: str) -> None:
+        """
+        Open link in the default browser on a button click
+
+        :return:
+        """
+        QDesktopServices.openUrl(QUrl(link))
