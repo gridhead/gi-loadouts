@@ -20,8 +20,8 @@ class MainWindow(Rule):
 
         :return:
         """
-        self.statarea.showMessage("Ready.")
         self.populate_dropdown()
+        self.handle_elem_data(0)
         self.handle_char_data(0)
         self.format_weapon_by_char_change(0)
         self.convey_weapon_type_change(0)
@@ -40,6 +40,7 @@ class MainWindow(Rule):
             self.change_data_by_changing_level_or_stat(item[0], item[1], item[2], item[3], item[4], item[5])
             self.change_artifact_substats_by_changing_rarity_or_mainstat(item[2], item[3], item[5])
             self.change_levels_backdrop_by_changing_rarity(item[0], item[8], item[2])
+        self.statarea.showMessage("Ready.")
 
     def initialize_events(self) -> None:
         """
@@ -48,6 +49,7 @@ class MainWindow(Rule):
         :return:
         """
         self.head_scan.clicked.connect(self.show_output_window)
+        self.head_char_elem.currentIndexChanged.connect(self.handle_elem_data)
         self.head_char_name.currentIndexChanged.connect(self.handle_char_data)
         self.head_char_levl.currentIndexChanged.connect(self.handle_char_data)
         self.head_char_name.currentIndexChanged.connect(self.format_weapon_by_char_change)

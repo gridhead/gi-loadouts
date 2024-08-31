@@ -48,6 +48,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
 
         :return:
         """
+        self.head_char_elem.addItems(["All"] + [item.value.name for item in Vision])
         self.head_char_name.addItems([item.value for item in CharName])
         self.head_char_cons.addItems([item.value.name for item in Cons])
         self.head_char_levl.addItems([item.value.name for item in Level])
@@ -59,6 +60,20 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         self.weap_area_type.addItems([item.value for item in WeaponType if item != WeaponType.none])
         for item in [self.arti_fwol_type, self.arti_pmod_type, self.arti_sdoe_type, self.arti_gboe_type, self.arti_ccol_type]:
             item.addItems([item.value.name for item in ArtiList])
+
+    def handle_elem_data(self, _: int) -> None:
+        """
+        Populate the characters belonging to the selected elemental vision class
+
+        :param _: Position of the element selected from the combobox to compute selected element
+        :return:
+        """
+        if self.head_char_elem.currentText().strip() != "":
+            self.head_char_name.clear()
+            if self.head_char_elem.currentText().strip() != "All":
+                self.head_char_name.addItems([item for item, data in __charmaps__.items() if data().vision.value.name == self.head_char_elem.currentText().strip()])
+            else:
+                self.head_char_name.addItems([item for item, data in __charmaps__.items()])
 
     def manage_changing_appearance(self, colour: str) -> None:
         """
@@ -419,6 +434,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
 
         :return:
         """
+        self.head_char_elem.setCurrentText(Vision.none.value.name)
         self.head_char_name.setCurrentText(char.value)
 
     def show_info_dialog(self) -> None:
