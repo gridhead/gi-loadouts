@@ -71,7 +71,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         if self.head_char_elem.currentText().strip() != "":
             self.head_char_name.clear()
             if self.head_char_elem.currentText().strip() != "All":
-                self.head_char_name.addItems([item for item, data in __charmaps__.items() if data().vision.value.name == self.head_char_elem.currentText().strip()])
+                self.head_char_name.addItems([item for item, data in __charmaps__.items() if data.vision.value.name == self.head_char_elem.currentText().strip()])
             else:
                 self.head_char_name.addItems([item for item, data in __charmaps__.items()])
 
@@ -98,7 +98,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         :return:
         """
         if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
-            char = __charmaps__[self.head_char_name.currentText()]()
+            char = __charmaps__[self.head_char_name.currentText()]
             char.levl = getattr(Level, self.head_char_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
             self.head_vson.setPixmap(QPixmap(f":vson/imgs/vson/{char.vision.value.name.lower()}.png"))
             self.head_area_back.setPixmap(modify_graphics_resource(f":name/imgs/char/name/{self.head_char_name.currentText().replace(" ", "_").lower()}.png", 1.0, 0.75))
@@ -122,7 +122,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         :return:
         """
         if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
-            char = __charmaps__[self.head_char_name.currentText()]()
+            char = __charmaps__[self.head_char_name.currentText()]
             char.levl = getattr(Level, self.head_char_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
             self.weap_area_type.clear()
             self.weap_area_type.addItem(f"{char.weapon.value}")
@@ -368,7 +368,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.calc_stat()
             self.otptobjc = OtptWindow(
                 {
-                    "char": __charmaps__[self.head_char_name.currentText()](),
+                    "char": __charmaps__[self.head_char_name.currentText()],
                     "levl": self.head_char_levl.currentText().strip(),
                     "cons": self.head_char_cons.currentText().strip(),
                 },
