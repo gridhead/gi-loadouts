@@ -18,10 +18,12 @@ def truncate_text(text: str = "", qant: int = 30) -> str:
     return text
 
 
-def modify_graphics_resource(path) -> QPixmap:
+def modify_graphics_resource(path: str, radius: float = 2.5, shadow: float = 0.5) -> QPixmap:
     """
     Modify graphics resource using Python Image Library before it is displayed on the user interface
 
+    :param shadow: Intensity of brightness effect to be applied on the image
+    :param radius: Width of Gaussian Blur effect to be applied on the image
     :param path: Path to the imported image file in the resource
     :return: Pixmap created on transformation for user interface
     """
@@ -29,8 +31,8 @@ def modify_graphics_resource(path) -> QPixmap:
         resource = QResource(path)
         data = resource.data()
         iobt = BytesIO(data)
-        proc = Image.open(iobt).convert("RGBA").filter(ImageFilter.GaussianBlur(radius=2.5))
-        proc = ImageEnhance.Brightness(proc).enhance(0.5)
+        proc = Image.open(iobt).convert("RGBA").filter(ImageFilter.GaussianBlur(radius=radius))
+        proc = ImageEnhance.Brightness(proc).enhance(shadow)
         qimg = QImage(proc.tobytes(), proc.width, proc.height, QImage.Format_RGBA8888)
         rtrn = QPixmap.fromImage(qimg)
     except UnidentifiedImageError:

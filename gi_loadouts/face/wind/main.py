@@ -1,15 +1,16 @@
 from PySide6.QtWidgets import QMessageBox
 
+from gi_loadouts import __donation__, __homepage__, __versdata__
 from gi_loadouts.face.wind.rule import Rule
+from gi_loadouts.type.char import CharName
 
 
 class MainWindow(Rule):
     def __init__(self) -> None:
         super().__init__()
-        self.headtext = "Loadouts for Genshin Impact"
         self.dialog = QMessageBox()
         self.setupUi(self)
-        self.setWindowTitle(self.headtext)
+        self.setWindowTitle(f"Loadouts for Genshin Impact v{__versdata__}")
         self.initialize_events()
         self.initialize_elements()
 
@@ -19,8 +20,8 @@ class MainWindow(Rule):
 
         :return:
         """
-        self.statarea.showMessage("Ready.")
         self.populate_dropdown()
+        self.handle_elem_data(0)
         self.handle_char_data(0)
         self.format_weapon_by_char_change(0)
         self.convey_weapon_type_change(0)
@@ -39,6 +40,7 @@ class MainWindow(Rule):
             self.change_data_by_changing_level_or_stat(item[0], item[1], item[2], item[3], item[4], item[5])
             self.change_artifact_substats_by_changing_rarity_or_mainstat(item[2], item[3], item[5])
             self.change_levels_backdrop_by_changing_rarity(item[0], item[8], item[2])
+        self.statarea.showMessage("Ready.")
 
     def initialize_events(self) -> None:
         """
@@ -47,6 +49,7 @@ class MainWindow(Rule):
         :return:
         """
         self.head_scan.clicked.connect(self.show_output_window)
+        self.head_char_elem.currentIndexChanged.connect(self.handle_elem_data)
         self.head_char_name.currentIndexChanged.connect(self.handle_char_data)
         self.head_char_levl.currentIndexChanged.connect(self.handle_char_data)
         self.head_char_name.currentIndexChanged.connect(self.format_weapon_by_char_change)
@@ -83,3 +86,9 @@ class MainWindow(Rule):
         self.head_wipe.clicked.connect(self.wipe_team)
         self.weap_head_load.clicked.connect(self.weap_load)
         self.weap_head_save.clicked.connect(self.weap_save)
+        self.char_head_lumi.clicked.connect(lambda _, a_char=CharName.lumine: self.select_char_from_dropdown(a_char))
+        self.char_head_aeth.clicked.connect(lambda _, a_char=CharName.aether: self.select_char_from_dropdown(a_char))
+        self.side_cash.clicked.connect(lambda _, a_link=__donation__: self.open_link(a_link))
+        self.side_head.clicked.connect(lambda _, a_link=__homepage__: self.open_link(a_link))
+        self.side_info.clicked.connect(self.show_info_dialog)
+        self.side_lcns.clicked.connect(self.show_lcns_dialog)

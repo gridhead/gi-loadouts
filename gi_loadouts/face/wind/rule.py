@@ -1,11 +1,14 @@
-from PySide6.QtGui import QPixmap
+from PySide6.QtCore import QUrl
+from PySide6.QtGui import QDesktopServices, QPixmap
 from PySide6.QtWidgets import QComboBox, QLabel, QLineEdit, QMainWindow, QMessageBox
 
 from gi_loadouts.data.arti import ArtiList
 from gi_loadouts.data.char import __charmaps__
 from gi_loadouts.data.weap import Family
+from gi_loadouts.face.info.main import InfoDialog
+from gi_loadouts.face.lcns.main import LcnsDialog
 from gi_loadouts.face.otpt.main import OtptWindow
-from gi_loadouts.face.util import truncate_text
+from gi_loadouts.face.util import modify_graphics_resource, truncate_text
 from gi_loadouts.face.wind.calc import Assess
 from gi_loadouts.face.wind.fclt import Facility
 from gi_loadouts.face.wind.wind import Ui_mainwind
@@ -32,6 +35,8 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         super().__init__()
         self.collection = Collection()
         self.otptobjc = None
+        self.infoobjc = None
+        self.lcnsobjc = None
         self.c_team = None
         self.c_weap = None
         self.c_tyvt = None
@@ -43,6 +48,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
 
         :return:
         """
+        self.head_char_elem.addItems(["All"] + [item.value.name for item in Vision])
         self.head_char_name.addItems([item.value for item in CharName])
         self.head_char_cons.addItems([item.value.name for item in Cons])
         self.head_char_levl.addItems([item.value.name for item in Level])
@@ -55,6 +61,20 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         for item in [self.arti_fwol_type, self.arti_pmod_type, self.arti_sdoe_type, self.arti_gboe_type, self.arti_ccol_type]:
             item.addItems([item.value.name for item in ArtiList])
 
+    def handle_elem_data(self, _: int) -> None:
+        """
+        Populate the characters belonging to the selected elemental vision class
+
+        :param _: Position of the element selected from the combobox to compute selected element
+        :return:
+        """
+        if self.head_char_elem.currentText().strip() != "":
+            self.head_char_name.clear()
+            if self.head_char_elem.currentText().strip() != "All":
+                self.head_char_name.addItems([item for item, data in __charmaps__.items() if data().vision.value.name == self.head_char_elem.currentText().strip()])
+            else:
+                self.head_char_name.addItems([item for item, data in __charmaps__.items()])
+
     def manage_changing_appearance(self, colour: str) -> None:
         """
         Theme the user interface elements based on the associated vision colour after a certain character is selected from the combobox
@@ -62,20 +82,13 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         :param colour: Colour intended for theming associated with the character vision
         :return:
         """
-        self.head_main.setStyleSheet(f"#head_main {{background-color: {colour}; border-radius: 5px;}}")
-        self.head_area.setStyleSheet(f"#head_area {{border-top-right-radius: 47px; border-bottom-right-radius: 47px; border-top-left-radius: 5px; border-bottom-left-radius: 5px; background-color: {colour};}}")
-        self.bone_area_head_area.setStyleSheet(f"#bone_area_head_area {{border-top-left-radius: 5px; border-top-right-radius: 5px; background-color: {colour};}}")
+        self.side_back.setStyleSheet(f"#side_back {{border: 1px solid {colour}; border-radius: 5px; background-color: rgba(128, 128, 128, 64);}}")
+        self.head_back.setStyleSheet(f"#head_back {{border: 1px solid {colour}; border-radius: 5px;}}")
+        self.head_area.setStyleSheet(f"#head_area {{border: 1px solid {colour}; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 110px; border-bottom-right-radius: 110px; background-color: rgba(128, 128, 128, 64);}}")
         self.bone_area.setStyleSheet(f"#bone_area {{border: 1px solid {colour}; border-radius: 5px;}}")
-        self.arti_area_head_area.setStyleSheet(f"#arti_area_head_area {{border-top-left-radius: 5px; border-top-right-radius: 5px; background-color: {colour};}}")
         self.arti_area.setStyleSheet(f"#arti_area {{border: 1px solid {colour}; border-radius: 5px;}}")
-        self.weap_area_head_area.setStyleSheet(f"#weap_area_head_area {{border-top-left-radius: 5px; border-top-right-radius: 5px; background-color: {colour};}}")
         self.weap_area.setStyleSheet(f"#weap_area {{border: 1px solid {colour}; border-radius: 5px;}}")
-        self.arti_fwol_type_area.setStyleSheet(f"#arti_fwol_type_area {{background-color: {colour};}}")
-        self.arti_pmod_type_area.setStyleSheet(f"#arti_pmod_type_area {{background-color: {colour};}}")
-        self.arti_sdoe_type_area.setStyleSheet(f"#arti_sdoe_type_area {{background-color: {colour};}}")
-        self.arti_gboe_type_area.setStyleSheet(f"#arti_gboe_type_area {{background-color: {colour};}}")
-        self.arti_ccol_type_area.setStyleSheet(f"#arti_ccol_type_area {{background-color: {colour};}}")
-        self.statarea.setStyleSheet(f"#statarea {{background-color: {colour};}}")
+        self.defn_area.setStyleSheet(f"#defn_area {{border: 1px solid {colour}; border-radius: 5px;}}")
 
     def handle_char_data(self, _: int) -> None:
         """
@@ -88,8 +101,10 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             char = __charmaps__[self.head_char_name.currentText()]()
             char.levl = getattr(Level, self.head_char_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
             self.head_vson.setPixmap(QPixmap(f":vson/imgs/vson/{char.vision.value.name.lower()}.png"))
-            self.head_area_back.setPixmap(QPixmap(f":name/imgs/char/name/{self.head_char_name.currentText().replace(" ", "_").lower()}.png"))
-            self.head_face_back.setPixmap(QPixmap(f":face/imgs/char/face/{self.head_char_name.currentText().replace(" ", "_").lower()}.png"))
+            self.head_area_back.setPixmap(modify_graphics_resource(f":name/imgs/char/name/{self.head_char_name.currentText().replace(" ", "_").lower()}.png", 1.0, 0.75))
+            self.char_inpt_icon.setPixmap(QPixmap(f":face/imgs/char/face/{self.head_char_name.currentText().replace(" ", "_").lower()}.png"))
+            self.char_inpt_area.setPixmap(QPixmap(char.rare.value.back))
+            self.char_area_rare.setText(" ".join(["STAR"] * char.rare.value.qant))
             self.head_char_data_attk.setText(f"{round(char.attack.stat_data)}")
             self.head_char_data_dfns.setText(f"{round(char.defense.stat_data)}")
             self.head_char_data_hlpt.setText(f"{round(char.health_points.stat_data)}")
@@ -142,6 +157,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.weap_area_levl.addItems([item.value.name for item in weap.levl_bind])
             self.weap_area_refn.addItems(item for item in weap.refinement.keys())
             self.weap_port_area.setPixmap(QPixmap(weap.rare.value.back))
+            self.weap_area_rare.setText(" ".join(["STAR"] * weap.rare.value.qant))
 
     def convey_weapon_levl_change(self, _: int) -> None:
         """
@@ -411,3 +427,38 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         for item in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
             droptype = getattr(self, f"arti_{item}_type")
             droptype.setCurrentText("None")
+
+    def select_char_from_dropdown(self, char: CharName) -> None:
+        """
+        Quickly select the male traveler or female traveler from the character selector
+
+        :return:
+        """
+        self.head_char_elem.setCurrentText(Vision.none.value.name)
+        self.head_char_name.setCurrentText(char.value)
+
+    def show_info_dialog(self) -> None:
+        """
+        Initialize and exhibit the information dialog on a button click
+
+        :return:
+        """
+        self.infoobjc = InfoDialog()
+        self.infoobjc.exec()
+
+    def show_lcns_dialog(self) -> None:
+        """
+        Initialize and exhibit the licensing dialog on a button click
+
+        :return:
+        """
+        self.lcnsobjc = LcnsDialog()
+        self.lcnsobjc.exec()
+
+    def open_link(self, link: str) -> None:
+        """
+        Open link in the default browser on a button click
+
+        :return:
+        """
+        QDesktopServices.openUrl(QUrl(link))
