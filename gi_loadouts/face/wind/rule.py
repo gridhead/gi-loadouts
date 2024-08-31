@@ -61,11 +61,11 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         for item in [self.arti_fwol_type, self.arti_pmod_type, self.arti_sdoe_type, self.arti_gboe_type, self.arti_ccol_type]:
             item.addItems([item.value.name for item in ArtiList])
 
-    def handle_elem_data(self, _: int) -> None:
+    def handle_elem_data(self, _: str) -> None:
         """
         Populate the characters belonging to the selected elemental vision class
 
-        :param _: Position of the element selected from the combobox to compute selected element
+        :param _: Element selected from the combobox to compute selected element
         :return:
         """
         if self.head_char_elem.currentText().strip() != "":
@@ -90,11 +90,11 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         self.weap_area.setStyleSheet(f"#weap_area {{border: 1px solid {colour}; border-radius: 5px;}}")
         self.defn_area.setStyleSheet(f"#defn_area {{border: 1px solid {colour}; border-radius: 5px;}}")
 
-    def handle_char_data(self, _: int) -> None:
+    def handle_char_data(self, _: str) -> None:
         """
         Change the user interface elements and associated statistics after a certain character is selected from the combobox
 
-        :param _: Position of the element selected from the combobox to compute selected character
+        :param _: Element selected from the combobox to compute selected character
         :return:
         """
         if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
@@ -114,11 +114,11 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.head_area_line_seco.setText(f"<i>{char.name} is a {char.weapon.value.lower()}-wielding {char.vision.value.name if char.vision != Vision.none else ""} character of {char.rare.value.qant}-star quality.</i>")
             self.manage_changing_appearance(char.vision.value.colour)
 
-    def format_weapon_by_char_change(self, _: int) -> None:
+    def format_weapon_by_char_change(self, _: str) -> None:
         """
         Change the combobox showing the supported weapon types based on the compatibility of the currently selected character
 
-        :param _: Position of the element selected from the combobox to compute selected character
+        :param _: Element selected from the combobox to compute selected character
         :return:
         """
         if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
@@ -127,22 +127,22 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.weap_area_type.clear()
             self.weap_area_type.addItem(f"{char.weapon.value}")
 
-    def convey_weapon_type_change(self, _: int) -> None:
+    def convey_weapon_type_change(self, _: str) -> None:
         """
         Change the user interface elements and associated statistics after a certain weapon type is selected from the combobox
 
-        :param _: Position of the element selected from the combobox to compute selected weapon type
+        :param _: Element selected from the combobox to compute selected weapon type
         :return:
         """
         if self.weap_area_type.currentText().strip() != "":
             self.weap_area_name.clear()
             self.weap_area_name.addItems([item for item in Family[self.weap_area_type.currentText()]])
 
-    def convey_weapon_name_change(self, _: int) -> None:
+    def convey_weapon_name_change(self, _: str) -> None:
         """
         Change the user interface elements and associated statistics after a certain weapon is selected from the combobox
 
-        :param _: Position of the element selected from the combobox to compute selected weapon
+        :param _: Element selected from the combobox to compute selected weapon
         :return:
         """
         if self.weap_area_name.currentText().strip() != "" and self.weap_area_type.currentText().strip() != "":
@@ -159,11 +159,11 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.weap_port_area.setPixmap(QPixmap(weap.rare.value.back))
             self.weap_area_rare.setText(" ".join(["STAR"] * weap.rare.value.qant))
 
-    def convey_weapon_levl_change(self, _: int) -> None:
+    def convey_weapon_levl_change(self, _: str) -> None:
         """
         Change the user interface elements and associated statistics after a certain weapon level is selected from the combobox
 
-        :param _: Position of the element selected from the combobox to compute selected weapon level
+        :param _: Element selected from the combobox to compute selected weapon level
         :return:
         """
         if self.weap_area_type.currentText().strip() != "" and self.weap_area_name.currentText().strip() != "" and self.weap_area_levl.currentText().strip() != "":
@@ -179,11 +179,11 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             if weap.seco_stat.stat_name != WeaponStatType.none:
                 self.weap_area_stat.setText(f"{weap.seco_stat_calc.stat_name.value.value} {round(weap.seco_stat_calc.stat_data, 1)}")
 
-    def convey_refinement_change(self, _: int) -> None:
+    def convey_refinement_change(self, _: str) -> None:
         """
         Change the user interface elements and associated statistics after a certain weapon refinement is selected from the combobox
 
-        :param _: Position of the element selected from the combobox to compute selected weapon refinement
+        :param _: Element selected from the combobox to compute selected weapon refinement
         :return:
         """
         if self.weap_area_type.currentText().strip() != "" and self.weap_area_name.currentText().strip() != "" and self.weap_area_refn.currentText().strip() != "":
