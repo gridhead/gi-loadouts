@@ -6976,9 +6976,6 @@
       <property name="text">
        <string/>
       </property>
-      <property name="pixmap">
-       <pixmap resource="face.qrc">:/face/imgs/char/face/faruzan.png</pixmap>
-      </property>
       <property name="scaledContents">
        <bool>true</bool>
       </property>
@@ -7018,9 +7015,6 @@
       </property>
       <property name="text">
        <string/>
-      </property>
-      <property name="pixmap">
-       <pixmap resource="vson.qrc">:/vson/imgs/vson/anemo.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -7063,19 +7057,16 @@
      <property name="text">
       <string/>
      </property>
-     <property name="pixmap">
-      <pixmap resource="name.qrc">:/name/imgs/char/name/faruzan.png</pixmap>
-     </property>
      <property name="scaledContents">
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="head_area_line_seco">
+    <widget class="QLabel" name="head_area_line_quin">
      <property name="geometry">
       <rect>
        <x>220</x>
-       <y>40</y>
-       <width>800</width>
+       <y>190</y>
+       <width>950</width>
        <height>25</height>
       </rect>
      </property>
@@ -7087,13 +7078,13 @@
      </property>
      <property name="minimumSize">
       <size>
-       <width>800</width>
+       <width>950</width>
        <height>25</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
-       <width>800</width>
+       <width>950</width>
        <height>25</height>
       </size>
      </property>
@@ -7101,7 +7092,7 @@
       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
      </property>
      <property name="text">
-      <string>Head area line SECO</string>
+      <string>Head area line QUAT</string>
      </property>
     </widget>
     <widget class="QLabel" name="head_area_line_prim">
@@ -7109,7 +7100,7 @@
       <rect>
        <x>220</x>
        <y>10</y>
-       <width>800</width>
+       <width>950</width>
        <height>25</height>
       </rect>
      </property>
@@ -7121,13 +7112,13 @@
      </property>
      <property name="minimumSize">
       <size>
-       <width>800</width>
+       <width>950</width>
        <height>25</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
-       <width>800</width>
+       <width>950</width>
        <height>25</height>
       </size>
      </property>
@@ -7138,10 +7129,115 @@
       <string>Head area line PRIM</string>
      </property>
     </widget>
+    <widget class="QLabel" name="head_area_line_seco">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>40</y>
+       <width>950</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>950</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>950</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 75 15pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Head area line PRIM</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="head_area_line_tert">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>70</y>
+       <width>950</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>950</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>950</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 75 15pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Head area line PRIM</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="head_area_line_quat">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>165</y>
+       <width>950</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>950</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>950</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Head area line QUAT</string>
+     </property>
+    </widget>
     <zorder>head_area_back</zorder>
     <zorder>char_inpt</zorder>
-    <zorder>head_area_line_seco</zorder>
     <zorder>head_area_line_prim</zorder>
+    <zorder>head_area_line_quin</zorder>
+    <zorder>head_area_line_seco</zorder>
+    <zorder>head_area_line_tert</zorder>
+    <zorder>head_area_line_quat</zorder>
    </widget>
    <widget class="QFrame" name="side_back">
     <property name="geometry">
