@@ -161,6 +161,11 @@
     <file>imgs/arti/ochc/gboe.webp</file>
     <file>imgs/arti/ochc/pmod.webp</file>
     <file>imgs/arti/ochc/sdoe.webp</file>
+    <file>imgs/arti/odcx/fwol.webp</file>
+    <file>imgs/arti/odcx/pmod.webp</file>
+    <file>imgs/arti/odcx/sdoe.webp</file>
+    <file>imgs/arti/odcx/gboe.webp</file>
+    <file>imgs/arti/odcx/ccol.webp</file>
     <file>imgs/arti/plfm/ccol.webp</file>
     <file>imgs/arti/plfm/fwol.webp</file>
     <file>imgs/arti/plfm/gboe.webp</file>
@@ -181,6 +186,11 @@
     <file>imgs/arti/sclr/gboe.webp</file>
     <file>imgs/arti/sclr/pmod.webp</file>
     <file>imgs/arti/sclr/sdoe.webp</file>
+    <file>imgs/arti/shcc/fwol.webp</file>
+    <file>imgs/arti/shcc/pmod.webp</file>
+    <file>imgs/arti/shcc/sdoe.webp</file>
+    <file>imgs/arti/shcc/gboe.webp</file>
+    <file>imgs/arti/shcc/ccol.webp</file>
     <file>imgs/arti/smrm/ccol.webp</file>
     <file>imgs/arti/smrm/fwol.webp</file>
     <file>imgs/arti/smrm/gboe.webp</file>

@@ -32,10 +32,12 @@ from gi_loadouts.data.arti import (
     none,
     nwiw,
     ochc,
+    odcx,
     plfm,
     rcbl,
     rosj,
     sclr,
+    shcc,
     smrm,
     sodp,
     tdfr,
@@ -286,6 +288,14 @@ __artilist__ = {
         rare=[Rare.Star_4, Rare.Star_5],
         file=nmdr.__name__.split(".")[-1]
     ),
+    odcx.team.__teamname__: ArtifactTeam(
+        name=odcx.team.__teamname__,
+        fwol=odcx.fwol(), pmod=odcx.pmod(), sdoe=odcx.sdoe(), gboe=odcx.gboe(), ccol=odcx.ccol(),
+        pairdata=odcx.team.__pairdata__, pairtext=odcx.team.__pairtext__,
+        quaddata=odcx.team.__quaddata__, quadtext=odcx.team.__quadtext__,
+        rare=[Rare.Star_4, Rare.Star_5],
+        file=odcx.__name__.split(".")[-1]
+    ),
     ochc.team.__teamname__: ArtifactTeam(
         name=ochc.team.__teamname__,
         fwol=ochc.fwol(), pmod=ochc.pmod(), sdoe=ochc.sdoe(), gboe=ochc.gboe(), ccol=ochc.ccol(),
@@ -325,6 +335,14 @@ __artilist__ = {
         quaddata=sclr.team.__quaddata__, quadtext=sclr.team.__quadtext__,
         rare=[Rare.Star_3, Rare.Star_4],
         file=sclr.__name__.split(".")[-1]
+    ),
+    shcc.team.__teamname__: ArtifactTeam(
+        name=shcc.team.__teamname__,
+        fwol=shcc.fwol(), pmod=shcc.pmod(), sdoe=shcc.sdoe(), gboe=shcc.gboe(), ccol=shcc.ccol(),
+        pairdata=shcc.team.__pairdata__, pairtext=shcc.team.__pairtext__,
+        quaddata=shcc.team.__quaddata__, quadtext=shcc.team.__quadtext__,
+        rare=[Rare.Star_4, Rare.Star_5],
+        file=shcc.__name__.split(".")[-1]
     ),
     smrm.team.__teamname__: ArtifactTeam(
         name=smrm.team.__teamname__,
