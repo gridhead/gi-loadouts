@@ -1,13 +1,21 @@
 ---
 name: Building the project binary for Microsoft Windows
-on: [push]
+
+on:
+  schedule:
+    - cron: 0 0 * * *
+
 jobs:
+
   ci-make-mswn:
+
     runs-on: windows-latest
+
     strategy:
       fail-fast: false
 
     steps:
+
       - name: Checkout the codebase in local working directory
         uses: actions/checkout@v4
 
@@ -26,13 +34,15 @@ jobs:
         run: python3 -m poetry install
 
       - name: Build the project binary for "Loadouts for Genshin Impact"
-        run: pyinstaller gi_loadouts/main.py --clean --onefile --name gi-loadouts-$("${{ github.sha }}".SubString(0, 8)) --windowed --icon assets/icon/icon.ico
+        run: pyinstaller gi_loadouts/main.py --clean --onefile --name gi-loadouts-$("$env:GITHUB_HASH".SubString(0, 8)) --windowed --icon assets/icon/icon.ico
+        env:
+          GITHUB_HASH: ${{ github.sha }}
 
       - name: Upload the project binaries for "Loadouts for Genshin Impact"
         uses: actions/upload-artifact@v4
         with:
           name: gi-loadouts.mswn
           path: dist/gi-loadouts-*.exe
-          retention-days: 90
+          retention-days: 2
           compression-level: 9
           overwrite: true
