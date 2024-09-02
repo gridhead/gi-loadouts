@@ -1,45 +1,52 @@
-# Loadouts for Genshin Impact
+<h1 align="center">Loadouts for Genshin Impact</h1>
 
-![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/imgs/pmon/8.png)
+<p align="center">
+    <img src="https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/imgs/pmon/8.png" alt="drawing" width="200"/>
+</p>
 
-This is a desktop application that allows travelers to manage their custom 
-equipment of artifacts and weapons for playable characters, and to make it 
-convenient for travelers to calculate the associated statistics based on their 
-equipment using the semantic understanding of how the gameplay works. 
-Travelers can create their bespoke loadouts consisting of characters, 
-artifacts and weapons and share them with their fellow travelers. Supported 
-file formats include a human-readable Yet Another Markup Language (YAML) 
-serialization format and in the near future, a JSON-based Genshin Open Object 
-Definition (GOOD) serialization format.
 
-This project is currently in its beta phase and we are committed to delivering 
-a quality experience with every release we make. If you are excited about the 
-direction of this project and want to contribute to the efforts, we would 
-greatly appreciate it if you help us boost the project visibility by starring 
-the project repository, address the fixing releases by reporting the 
-experienced errors, choose the project direction by proposing the intended 
-features, enhance the project usability by documenting the project repository, 
-improve the project codebase by opening the pull requests and finally, persist 
-our maintenance efforts by sponsoring the development members.
+<p align="center">
+    This is a desktop application that allows travelers to manage their custom 
+    equipment of artifacts and weapons for playable characters, and to make it 
+    convenient for travelers to calculate the associated statistics based on their 
+    equipment using the semantic understanding of how the gameplay works. 
+    Travelers can create their bespoke loadouts consisting of characters, 
+    artifacts and weapons and share them with their fellow travelers. Supported 
+    file formats include a human-readable Yet Another Markup Language (YAML) 
+    serialization format and in the near future, a JSON-based Genshin Open Object 
+    Definition (GOOD) serialization format.
+</p>
+
+<p align="center">
+    This project is currently in its beta phase and we are committed to delivering 
+    a quality experience with every release we make. If you are excited about the 
+    direction of this project and want to contribute to the efforts, we would 
+    greatly appreciate it if you help us boost the project visibility by starring 
+    the project repository, address the fixing releases by reporting the 
+    experienced errors, choose the project direction by proposing the intended 
+    features, enhance the project usability by documenting the project repository, 
+    improve the project codebase by opening the pull requests and finally, persist 
+    our maintenance efforts by sponsoring the development members.
+</p>
 
 ## Screenshots
 
--  Light mode - **Console (Arlecchino)**
+-  Light mode - **Console (Arlecchino)**  
    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/lite.png)
 
--  Dark mode - **Console (Xianyun)**
+-  Dark mode - **Console (Xianyun)**  
    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/dark.png)
 
--  Light mode - **Results (Arlecchino)**
+-  Light mode - **Results (Arlecchino)**  
    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/lite_rslt.png)
 
--  Dark mode - **Results (Xianyun)**
+-  Dark mode - **Results (Xianyun)**  
    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/dark_rslt.png)
 
--  **Help**
+-  **Help**  
    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/lcns.png)
 
--  **Info**
+-  **Info**  
    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/info.png)
 
 ## Download
