@@ -228,7 +228,7 @@
     [*info details*](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/info.png) 
     about the application by clicking on the **INFO** button from the user 
     interface.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_info.png)
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/info.png)
 
 29. View the [*homepage*](https://github.com/gridhead/gi-loadouts/) of the 
     project by clicking on the **FORK** button from the user interface.  
