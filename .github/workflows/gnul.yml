@@ -1,13 +1,21 @@
 ---
 name: Building the project binary for GNU/Linux OSes
-on: [push]
+
+on:
+  schedule:
+    - cron: 0 0 * * *
+
 jobs:
+
   ci-make-gnul:
+
     runs-on: ubuntu-latest
+
     strategy:
       fail-fast: false
 
     steps:
+
       - name: Checkout the codebase in local working directory
         uses: actions/checkout@v4
 
@@ -36,5 +44,5 @@ jobs:
           name: gi-loadouts.gnul
           path: dist/gi-loadouts-*
           retention-days: 90
-          compression-level: 9
+          compression-level: 2
           overwrite: true
