@@ -58,74 +58,73 @@ our maintenance efforts by sponsoring the development members.
     the dropdown menu to quickly locate the 
     [*character*](https://genshin-impact.fandom.com/wiki/Character) 
     that you wish to manage the equipment for.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_cv.png)
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_char_vson.png)
 
 2.  Select the [*character*](https://genshin-impact.fandom.com/wiki/Character) 
     from the dropdown menu aligned with the 
     [*element*](https://genshin-impact.fandom.com/wiki/Element) 
     that was selected previously.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_cn.png)
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_char_name.png)
 
 3.  Select the [*level*](https://genshin-impact.fandom.com/wiki/Character_EXP) 
     of the [*character*](https://genshin-impact.fandom.com/wiki/Character) 
-    experience from the dropdown menu and the associated statistics like ATK, 
-    DEF, HP and special stat of the character will be calculated automatically.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_cl.png)
+    experience from the dropdown menu and the statistics of the character 
+    will be calculated automatically.  
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_char_levl.png)
 
 4.  Select the [*level*](https://genshin-impact.fandom.com/wiki/Constellation) 
     of the [*character*](https://genshin-impact.fandom.com/wiki/Character) 
-    constellation from the dropdown menu and the associated statistics of the 
-    character will be calculated automatically.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_cc.png)
+    constellation from the dropdown menu and statistics of the character will 
+    be calculated automatically.  
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_char_cons.png)
 
 5.  Quickly switch over to either of the 
     [*travelers*](https://genshin-impact.fandom.com/wiki/Traveler), **Lumine** 
     or **Aether** from the 
     [*character*](https://genshin-impact.fandom.com/wiki/Character) menu using 
     the **VENUS** or **MARS** buttons respectively.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_full.png)
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_char_lumi.png)  
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_char_aeth.png)
 
 6.  Once the [*character*](https://genshin-impact.fandom.com/wiki/Character) 
     is selected from the dropdown menu, the compatible 
     [*weapon*](https://genshin-impact.fandom.com/wiki/Weapon) 
-    type is automatically selected from the dropdown menu.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_wt.png)
+    type is automatically selected.  
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_weap_type.png)
 
 7.  Select the [*weapon*](https://genshin-impact.fandom.com/wiki/Weapon) of 
-    your choice from the dropdown menu that you want to equip with the 
-    [*character*](https://genshin-impact.fandom.com/wiki/Character) that was 
-    selected previously.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_wn.png)
+    your choice from the dropdown menu that you want to equip.  
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_weap_name.png)
 
 8.  Select the [*level*](https://genshin-impact.fandom.com/wiki/Weapon_EXP) 
     of the [*weapon*](https://genshin-impact.fandom.com/wiki/Weapon) 
-    experience from the dropdown menu and the associated statistics of the 
-    weapon like ATK and special stat will be calculated automatically.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_wl.png)
+    experience from the dropdown menu and the statistics of the weapon like 
+    will be calculated automatically.  
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_weap_levl.png)
 
-9.  Select the [*level*](https://genshin-impact.fandom.com/wiki/Refinement_Rank)
+9.  Select the [*rank*](https://genshin-impact.fandom.com/wiki/Refinement_Rank)
     of the [*weapon*](https://genshin-impact.fandom.com/wiki/Weapon) 
-    refinement from the dropdown menu and the associated statistics of the 
-    weapon will be calculated automatically.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_wr.png)
+    refinement from the dropdown menu and the statistics of the weapon will 
+    be calculated automatically.  
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_weap_refn.png)
 
 10. Save the [*weapon*](https://genshin-impact.fandom.com/wiki/Weapon) 
     equipment to your local storage by using the **SAVE** button beside the 
     sections.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_full.png)
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_weap_save.png)
 
 11. Load the [*weapon*](https://genshin-impact.fandom.com/wiki/Weapon) 
     equipment from your local storage by using the **LOAD** button beside the 
     sections.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_full.png)
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_weap_load.png)
 
 12. Once the [*weapon*](https://genshin-impact.fandom.com/wiki/Weapon) has 
-    been configured, it is now time to configure the 
+    been configured, configure the 
     [*artifacts*](https://genshin-impact.fandom.com/wiki/Artifact) by 
     selecting the artifact 
     [*set*](https://genshin-impact.fandom.com/wiki/Artifact/Sets) 
     from the dropdown menu.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_at.png)
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_arti_type.png)
 
 13. Select the [*quality*](https://genshin-impact.fandom.com/wiki/Quality) 
     associated with the 
@@ -133,19 +132,19 @@ our maintenance efforts by sponsoring the development members.
     sought from the dropdown menu so that the possible 
     [*levels*](https://genshin-impact.fandom.com/wiki/Artifact_EXP) are 
     populated.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_ar.png)
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_arti_rare.png)
 
 14. Select the [*level*](https://genshin-impact.fandom.com/wiki/Artifact_EXP) 
     of the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) 
     experience from the dropdown menu.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_al.png)
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_arti_levl.png)
 
 15. Select the 
     [*primary stat*](https://genshin-impact.fandom.com/wiki/Artifact/Stats) of 
     the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) from the 
-    dropdown menu and the associated statistics of the artifact will be 
-    calculated automatically.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_am.png)
+    dropdown menu and the statistics of the artifact will be calculated 
+    automatically.  
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_arti_main.png)
 
 16. Select the 
     [*secondary stats*](https://genshin-impact.fandom.com/wiki/Artifact/Stats) 
@@ -153,7 +152,7 @@ our maintenance efforts by sponsoring the development members.
     the dropdown menu from each 
     [*distribution*](https://genshin-impact.fandom.com/wiki/Artifact/Distribution) 
     area.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_as.png)
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_arti_seco.png)
 
 17. Enter the value associated with the 
     [*secondary stats*](https://genshin-impact.fandom.com/wiki/Artifact/Stats) 
@@ -162,75 +161,75 @@ our maintenance efforts by sponsoring the development members.
     dropdown menu from each 
     [*distribution*](https://genshin-impact.fandom.com/wiki/Artifact/Distribution) 
     area.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_av.png)
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_arti_data.png)
 
 18. Save the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) 
     units to your local storage by using the **SAVE** buttons beside the 
     distribution areas.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_full.png)
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_arti_save.png)
 
 19. Load the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) 
     units from your local storage by using the **LOAD** buttons beside the 
     distribution areas.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_full.png)
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_arti_load.png)
 
 20. Wipe the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) 
     units from the configuration area by using the **WIPE** buttons beside the 
     distribution areas.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_full.png)
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_arti_wipe.png)
 
 21. Read the 
     [*artifact bonuses*](https://genshin-impact.fandom.com/wiki/Artifact/Sets) 
-    made available to the character with the use of two pieces or four-pieces 
-    of a certain [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) 
+    available to the character when using two pieces or four-pieces of a 
+    certain [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) 
     set.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_full.png)
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_team_bone.png)
 
 22. Save the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact)
     sets to your local storage by using the **SAVE** buttons beside the 
     distribution areas.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_full.png)
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_team_save.png)
 
 23. Load the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact)
     sets from your local storage by using the **LOAD** buttons beside the 
     distribution areas.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_full.png)
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_team_load.png)
 
 24. Wipe the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact)
     sets from the configuration area by using the **WIPE** buttons beside the 
     distribution areas.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_full.png)
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_team_wipe.png)
 
-25. Click on the **SCAN** button to check the final calculation of 
+25. Calculate the 
     [*character*](https://genshin-impact.fandom.com/wiki/Character) potential 
     with the equipped 
-    [artifact](https://genshin-impact.fandom.com/wiki/Artifact) 
-    units or sets and [weapon](https://genshin-impact.fandom.com/wiki/Weapon).  
+    [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) units or sets 
+    and [*weapon*](https://genshin-impact.fandom.com/wiki/Weapon).  
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_team_scan.png)
+
+26. View the calculations of the character potential on the newly created 
+    dialog box.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_calc.png)
 
-26. View the 
+27. View the 
     [*help details*](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/lcns.png) 
     about the application by clicking on the **HELP** button from the user 
     interface.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_full.png)
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/lcns.png)
 
-27. View the 
+28. View the 
     [*info details*](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/info.png) 
     about the application by clicking on the **INFO** button from the user 
     interface.  
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_info.png)
+
+29. View the [*homepage*](https://github.com/gridhead/gi-loadouts/) of the 
+    project by clicking on the **FORK** button from the user interface.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_full.png)
 
-28. View the [*homepage*](https://github.com/gridhead/gi-loadouts/) of the 
-    project by clicking on the **STAR** button from the user interface.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_full.png)
-
-29. Donate to the [*project*](https://github.com/sponsors/gridhead) by 
+30. Donate to the [*project*](https://github.com/sponsors/gridhead) by 
     clicking on the **HEART** button from the user interface.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_full.png)
-
-30. Switching to the dark mode or light mode on a system-wide appearance will 
-    have an effect on the user interface as the application does its best to 
-    comply with the system-wide theming.  
 
 ## Development
 
