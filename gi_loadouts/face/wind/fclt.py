@@ -36,7 +36,7 @@ class Facility(Dialog):
                 type=getattr(ArtiList, getattr(self, f"arti_{part}_type").currentText().strip().replace(" ", "_").replace("'", "").replace("-", "_")),
                 levl=getattr(ArtiLevl, getattr(self, f"arti_{part}_levl").currentText().strip().replace(" ", "_")),
                 area=getattr(ArtiArea, part),
-                name=getattr(self, f"arti_{part}_type_name").text().strip(),
+                name=getattr(getattr(ArtiList, getattr(self, f"arti_{part}_type").currentText().strip().replace(" ", "_").replace("'", "").replace("-", "_")).value, part).__name__,
                 rare=getattr(Rare, getattr(self, f"arti_{part}_rare").currentText().strip().replace(" ", "_")),
             )
 
@@ -93,7 +93,7 @@ class Facility(Dialog):
                     type=getattr(ArtiList, getattr(self, f"arti_{part}_type").currentText().strip().replace(" ", "_").replace("'", "").replace("-", "_")),
                     levl=getattr(ArtiLevl, getattr(self, f"arti_{part}_levl").currentText().strip().replace(" ", "_")),
                     area=getattr(ArtiArea, part),
-                    name=getattr(self, f"arti_{part}_type_name").text().strip(),
+                    name=getattr(getattr(ArtiList, getattr(self, f"arti_{part}_type").currentText().strip().replace(" ", "_").replace("'", "").replace("-", "_")).value, part).__name__,
                     rare=getattr(Rare, getattr(self, f"arti_{part}_rare").currentText().strip().replace(" ", "_")),
                 )
                 for indx in ["main", "a", "b", "c", "d"]:
