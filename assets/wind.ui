@@ -2809,9 +2809,9 @@
      <property name="geometry">
       <rect>
        <x>1240</x>
-       <y>375</y>
+       <y>345</y>
        <width>35</width>
-       <height>95</height>
+       <height>125</height>
       </rect>
      </property>
      <property name="sizePolicy">
@@ -2823,13 +2823,13 @@
      <property name="minimumSize">
       <size>
        <width>35</width>
-       <height>95</height>
+       <height>125</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
        <width>35</width>
-       <height>95</height>
+       <height>125</height>
       </size>
      </property>
      <property name="styleSheet">
@@ -2845,7 +2845,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>5</y>
+        <y>35</y>
         <width>25</width>
         <height>25</height>
        </rect>
@@ -2882,7 +2882,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>35</y>
+        <y>65</y>
         <width>25</width>
         <height>25</height>
        </rect>
@@ -2919,7 +2919,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>65</y>
+        <y>95</y>
         <width>25</width>
         <height>25</height>
        </rect>
@@ -2950,6 +2950,43 @@
       </property>
       <property name="text">
        <string>trash</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="arti_ccol_scan">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>5</y>
+        <width>25</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>Load</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#arti_ccol_scan {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
+      </property>
+      <property name="text">
+       <string>eye</string>
       </property>
      </widget>
     </widget>
@@ -3817,9 +3854,9 @@
      <property name="geometry">
       <rect>
        <x>985</x>
-       <y>375</y>
+       <y>345</y>
        <width>35</width>
-       <height>95</height>
+       <height>125</height>
       </rect>
      </property>
      <property name="sizePolicy">
@@ -3831,13 +3868,13 @@
      <property name="minimumSize">
       <size>
        <width>35</width>
-       <height>95</height>
+       <height>125</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
        <width>35</width>
-       <height>95</height>
+       <height>125</height>
       </size>
      </property>
      <property name="styleSheet">
@@ -3853,7 +3890,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>5</y>
+        <y>35</y>
         <width>25</width>
         <height>25</height>
        </rect>
@@ -3890,7 +3927,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>35</y>
+        <y>65</y>
         <width>25</width>
         <height>25</height>
        </rect>
@@ -3927,7 +3964,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>65</y>
+        <y>95</y>
         <width>25</width>
         <height>25</height>
        </rect>
@@ -3958,6 +3995,43 @@
       </property>
       <property name="text">
        <string>trash</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="arti_gboe_scan">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>5</y>
+        <width>25</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>Load</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#arti_gboe_scan {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
+      </property>
+      <property name="text">
+       <string>eye</string>
       </property>
      </widget>
     </widget>
@@ -4048,9 +4122,9 @@
      <property name="geometry">
       <rect>
        <x>730</x>
-       <y>375</y>
+       <y>345</y>
        <width>35</width>
-       <height>95</height>
+       <height>125</height>
       </rect>
      </property>
      <property name="sizePolicy">
@@ -4062,13 +4136,13 @@
      <property name="minimumSize">
       <size>
        <width>35</width>
-       <height>95</height>
+       <height>125</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
        <width>35</width>
-       <height>95</height>
+       <height>125</height>
       </size>
      </property>
      <property name="styleSheet">
@@ -4084,7 +4158,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>5</y>
+        <y>35</y>
         <width>25</width>
         <height>25</height>
        </rect>
@@ -4121,7 +4195,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>35</y>
+        <y>65</y>
         <width>25</width>
         <height>25</height>
        </rect>
@@ -4158,7 +4232,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>65</y>
+        <y>95</y>
         <width>25</width>
         <height>25</height>
        </rect>
@@ -4189,6 +4263,43 @@
       </property>
       <property name="text">
        <string>trash</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="arti_sdoe_scan">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>5</y>
+        <width>25</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>Load</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#arti_sdoe_scan {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
+      </property>
+      <property name="text">
+       <string>eye</string>
       </property>
      </widget>
     </widget>
@@ -4279,9 +4390,9 @@
      <property name="geometry">
       <rect>
        <x>475</x>
-       <y>375</y>
+       <y>345</y>
        <width>35</width>
-       <height>95</height>
+       <height>125</height>
       </rect>
      </property>
      <property name="sizePolicy">
@@ -4293,13 +4404,13 @@
      <property name="minimumSize">
       <size>
        <width>35</width>
-       <height>95</height>
+       <height>125</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
        <width>35</width>
-       <height>95</height>
+       <height>125</height>
       </size>
      </property>
      <property name="styleSheet">
@@ -4315,7 +4426,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>5</y>
+        <y>35</y>
         <width>25</width>
         <height>25</height>
        </rect>
@@ -4352,7 +4463,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>35</y>
+        <y>65</y>
         <width>25</width>
         <height>25</height>
        </rect>
@@ -4389,7 +4500,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>65</y>
+        <y>95</y>
         <width>25</width>
         <height>25</height>
        </rect>
@@ -4420,6 +4531,43 @@
       </property>
       <property name="text">
        <string>trash</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="arti_pmod_scan">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>5</y>
+        <width>25</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>Load</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#arti_pmod_scan {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
+      </property>
+      <property name="text">
+       <string>eye</string>
       </property>
      </widget>
     </widget>
@@ -4510,9 +4658,9 @@
      <property name="geometry">
       <rect>
        <x>220</x>
-       <y>375</y>
+       <y>345</y>
        <width>35</width>
-       <height>95</height>
+       <height>125</height>
       </rect>
      </property>
      <property name="sizePolicy">
@@ -4524,13 +4672,13 @@
      <property name="minimumSize">
       <size>
        <width>35</width>
-       <height>95</height>
+       <height>125</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
        <width>35</width>
-       <height>95</height>
+       <height>125</height>
       </size>
      </property>
      <property name="styleSheet">
@@ -4546,7 +4694,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>5</y>
+        <y>35</y>
         <width>25</width>
         <height>25</height>
        </rect>
@@ -4583,7 +4731,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>35</y>
+        <y>65</y>
         <width>25</width>
         <height>25</height>
        </rect>
@@ -4620,7 +4768,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>65</y>
+        <y>95</y>
         <width>25</width>
         <height>25</height>
        </rect>
@@ -4651,6 +4799,43 @@
       </property>
       <property name="text">
        <string>trash</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="arti_fwol_scan">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>5</y>
+        <width>25</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>Load</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#arti_fwol_scan {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
+      </property>
+      <property name="text">
+       <string>eye</string>
       </property>
      </widget>
     </widget>
@@ -6164,7 +6349,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>65</y>
+        <y>95</y>
         <width>200</width>
         <height>25</height>
        </rect>
@@ -6195,7 +6380,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>95</y>
+        <y>65</y>
         <width>200</width>
         <height>25</height>
        </rect>
@@ -7462,6 +7647,8 @@
   <include location="vson.qrc"/>
   <include location="weap.qrc"/>
   <include location="arti.qrc"/>
+  <include location="assets/arti.qrc"/>
+  <include location="assets/rare.qrc"/>
  </resources>
  <connections/>
 </ui>
