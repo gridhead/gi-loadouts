@@ -79,8 +79,8 @@ class SecoStatType(Enum):
     health_points_perc = STAT.health_points_perc
     elemental_mastery = STAT.elemental_mastery
     energy_recharge_perc = STAT.energy_recharge_perc
-    critical_rate = STAT.critical_rate_perc
-    critical_damage = STAT.critical_damage_perc
+    critical_rate_perc = STAT.critical_rate_perc
+    critical_damage_perc = STAT.critical_damage_perc
     none = STAT.none
 
 
