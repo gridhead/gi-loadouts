@@ -11,6 +11,8 @@
     <file>imgs/weap/bows/bcwb_b.webp</file>
     <file>imgs/weap/bows/cdfg_a.webp</file>
     <file>imgs/weap/bows/cdfg_b.webp</file>
+    <file>imgs/weap/bows/cnbr_a.webp</file>
+    <file>imgs/weap/bows/cnbr_b.webp</file>
     <file>imgs/weap/bows/cpbw_a.webp</file>
     <file>imgs/weap/bows/cpbw_b.webp</file>
     <file>imgs/weap/bows/efte_a.webp</file>
@@ -79,6 +81,8 @@
     <file>imgs/weap/bows/tvsh_b.webp</file>
     <file>imgs/weap/bows/wboe_a.webp</file>
     <file>imgs/weap/bows/wboe_b.webp</file>
+    <file>imgs/weap/catalysts/agdh_a.webp</file>
+    <file>imgs/weap/catalysts/agdh_b.webp</file>
     <file>imgs/weap/catalysts/aptn_a.webp</file>
     <file>imgs/weap/catalysts/aptn_b.webp</file>
     <file>imgs/weap/catalysts/atfd_a.webp</file>
@@ -129,12 +133,16 @@
     <file>imgs/weap/catalysts/pkgm_b.webp</file>
     <file>imgs/weap/catalysts/ptab_a.webp</file>
     <file>imgs/weap/catalysts/ptab_b.webp</file>
+    <file>imgs/weap/catalysts/roye_a.webp</file>
+    <file>imgs/weap/catalysts/roye_b.webp</file>
     <file>imgs/weap/catalysts/rygm_a.webp</file>
     <file>imgs/weap/catalysts/rygm_b.webp</file>
     <file>imgs/weap/catalysts/sffm_a.webp</file>
     <file>imgs/weap/catalysts/sffm_b.webp</file>
     <file>imgs/weap/catalysts/sfje_a.webp</file>
     <file>imgs/weap/catalysts/sfje_b.webp</file>
+    <file>imgs/weap/catalysts/sfup_a.webp</file>
+    <file>imgs/weap/catalysts/sfup_b.webp</file>
     <file>imgs/weap/catalysts/slpl_a.webp</file>
     <file>imgs/weap/catalysts/slpl_b.webp</file>
     <file>imgs/weap/catalysts/swas_a.webp</file>
@@ -163,6 +171,8 @@
     <file>imgs/weap/claymores/btgs_b.webp</file>
     <file>imgs/weap/claymores/dbcl_a.webp</file>
     <file>imgs/weap/claymores/dbcl_b.webp</file>
+    <file>imgs/weap/claymores/ehsr_a.webp</file>
+    <file>imgs/weap/claymores/ehsr_b.webp</file>
     <file>imgs/weap/claymores/fngs_a.webp</file>
     <file>imgs/weap/claymores/fngs_b.webp</file>
     <file>imgs/weap/claymores/fosd_a.webp</file>
@@ -249,6 +259,8 @@
     <file>imgs/weap/polearms/efln_b.webp</file>
     <file>imgs/weap/polearms/fnlc_a.webp</file>
     <file>imgs/weap/polearms/fnlc_b.webp</file>
+    <file>imgs/weap/polearms/fotr_a.webp</file>
+    <file>imgs/weap/polearms/fotr_b.webp</file>
     <file>imgs/weap/polearms/hlbd_a.webp</file>
     <file>imgs/weap/polearms/hlbd_b.webp</file>
     <file>imgs/weap/polearms/inpt_a.webp</file>
@@ -309,6 +321,8 @@
     <file>imgs/weap/swords/fdsn_b.webp</file>
     <file>imgs/weap/swords/flbd_a.webp</file>
     <file>imgs/weap/swords/flbd_b.webp</file>
+    <file>imgs/weap/swords/foel_a.webp</file>
+    <file>imgs/weap/swords/foel_b.webp</file>
     <file>imgs/weap/swords/fotd_a.webp</file>
     <file>imgs/weap/swords/fotd_b.webp</file>
     <file>imgs/weap/swords/ftds_a.webp</file>
