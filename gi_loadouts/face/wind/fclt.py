@@ -124,12 +124,12 @@ class Facility(Dialog):
                 f"{uuid4().hex[0:8].upper()}_{datetime.now().strftime("%Y%m%d_%H%M%S")}.yaml",
                 text,
             )
-            self.statarea.showMessage("Artifact team has been successfully saved.")
+            self.statarea.showMessage("Artifact set has been successfully saved.")
         except Exception as expt:
             self.show_dialog(
                 QMessageBox.Information,
                 "Save failed",
-                f"Please confirm that the input is valid (eg. 69, 42.0 etc.) before saving the artifact team in a location that is accessible.\n\n{expt}",
+                f"Please confirm that the input is valid (eg. 69, 42.0 etc.) before saving the artifact set in a location that is accessible.\n\n{expt}",
             )
 
     def weap_save(self) -> None:
@@ -217,7 +217,7 @@ class Facility(Dialog):
         try:
             data = file.load(
                 self,
-                "Select location to load artifact team"
+                "Select location to load artifact set"
             )
 
             if data.strip() == "":
@@ -248,12 +248,12 @@ class Facility(Dialog):
                     else:
                         raise ValueError("Artifact stat cannot be identified.")
 
-            self.statarea.showMessage("Artifact team has been successfully loaded.")
+            self.statarea.showMessage("Artifact set has been successfully loaded.")
         except Exception as expt:
             self.show_dialog(
                 QMessageBox.Information,
                 "Load failed",
-                f"Please confirm that the artifact team follows the valid format before loading it from a location that is accessible.\n\n{expt}"
+                f"Please confirm that the artifact set follows the valid format before loading it from a location that is accessible.\n\n{expt}"
             )
 
     def weap_load(self) -> None:
