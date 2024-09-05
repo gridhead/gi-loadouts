@@ -1,6 +1,7 @@
 from PySide6.QtWidgets import QMessageBox
 
 from gi_loadouts import __donation__, __homepage__, __versdata__
+from gi_loadouts.face.rsrc import kill_temp_file, make_temp_file
 from gi_loadouts.face.wind.rule import Rule
 from gi_loadouts.type.char import CharName
 
@@ -13,6 +14,10 @@ class MainWindow(Rule):
         self.setWindowTitle(f"Loadouts for Genshin Impact v{__versdata__}")
         self.initialize_events()
         self.initialize_elements()
+        make_temp_file()
+
+    def __del__(self) -> None:
+        kill_temp_file()
 
     def initialize_elements(self) -> None:
         """

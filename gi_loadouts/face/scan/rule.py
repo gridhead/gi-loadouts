@@ -5,7 +5,7 @@ from gi_loadouts import conf
 from gi_loadouts.data.arti import ArtiList
 from gi_loadouts.face.scan.file import file
 from gi_loadouts.face.scan.scan import Ui_scan
-from gi_loadouts.face.scan.util import scanworker
+from gi_loadouts.face.scan.util import scan_artifact
 from gi_loadouts.face.util import truncate_text
 from gi_loadouts.face.wind.talk import Dialog
 from gi_loadouts.type import arti
@@ -25,7 +25,7 @@ class Rule(QDialog, Ui_scan, Dialog):
     def __init__(self) -> None:
         super().__init__()
         self.shot = None
-        self.path = None
+        self.snap = None
         self.dialog = QMessageBox()
         self.dist = {
             "Flower of Life": {"list": MainStatType_FWOL, "part": "fwol"},
@@ -171,16 +171,32 @@ class Rule(QDialog, Ui_scan, Dialog):
         :return:
         """
         try:
-            self.shot, self.path = file.load_screenshot(self, "Select location to load artifact screenshot")
+            self.arti_text.setText("Inspecting screenshot...")
+            self.shot, self.snap = file.load_screenshot(self, "Select location to load artifact screenshot")
             self.arti_shot.setPixmap(self.shot)
-            area, main, seco, team, levl, rare, duration = scanworker.scan_artifact(self.path)
-            print(area, main, seco, team, levl, rare, duration)
+            area, main, seco, team, levl, rare, duration = scan_artifact(self.snap)
+            if area in [self.arti_dist.itemText(indx) for indx in range(self.arti_dist.count())]:
+                self.arti_dist.setCurrentText(area)
+            if team in [self.arti_type.itemText(indx) for indx in range(self.arti_type.count())]:
+                self.arti_type.setCurrentText(team)
+            if rare in [self.arti_rare.itemText(indx) for indx in range(self.arti_rare.count())]:
+                self.arti_rare.setCurrentText(rare)
+            if levl in [self.arti_levl.itemText(indx) for indx in range(self.arti_levl.count())]:
+                self.arti_levl.setCurrentText(levl)
+            if main.stat_name.value in [self.arti_name_main.itemText(indx) for indx in range(self.arti_name_main.count())]:
+                self.arti_name_main.setCurrentText(main.stat_name.value)
+            for alfa, item in seco.items():
+                if item.stat_name.value in [getattr(self, f"arti_name_{alfa}").itemText(indx) for indx in range(getattr(self, f"arti_name_{alfa}").count())]:
+                    getattr(self, f"arti_name_{alfa}").setCurrentText(item.stat_name.value)
+                    getattr(self, f"arti_data_{alfa}").setText(str(item.stat_data))
         except Exception as expt:
             self.show_dialog(
                 QMessageBox.Information,
                 "Faulty scanning",
                 f"Please consider checking your input after ensuring that the proper Tesseract OCR executable has been selected.\n\n{expt}"
             )
+        finally:
+            self.arti_text.setText("Browse your local storage to load a high quality screenshot of your artifact and the statistics will automatically be computed from there.")
 
     def load_tessexec(self) -> None:
         """
