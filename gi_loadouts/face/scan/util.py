@@ -10,17 +10,9 @@ from pytesseract import TesseractError, image_to_string, pytesseract
 from gi_loadouts import conf
 from gi_loadouts.data.arti import ArtiList
 from gi_loadouts.face.scan import areaiden, levliden, mainstat, substats, teamiden
-from gi_loadouts.type.arti import CCOL, FWOL, GBOE, PMOD, SDOE, ArtiLevl
+from gi_loadouts.type.arti import ArtiLevl
 from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.stat import ATTR, STAT
-
-__revmap__ = {
-    FWOL: "Flower of Life",
-    PMOD: "Plume of Death",
-    SDOE: "Sands of Eon",
-    GBOE: "Goblet of Eonothem",
-    CCOL: "Circlet of Logos"
-}
+from gi_loadouts.type.stat import ATTR
 
 
 def scan_artifact(snap: ImageFile) -> tuple:
@@ -48,10 +40,15 @@ def scan_artifact(snap: ImageFile) -> tuple:
             raise ValueError("Processing failed as either Tesseract OCR executable ceased to function or training data was tampered with.") from expt
 
     # DISTRIBUTION AREA
-    for ptrn, name in areaiden.items():
-        mtch = search(ptrn, text)
-        if mtch:
-            area = __revmap__[name]
+    areadict = {}
+    for item, coll in areaiden.items():
+        areadict[item] = 0
+        for sbst in coll.split(" "):
+            if sbst in text:
+                areadict[item] += 1
+
+    sortkeys = sorted(areadict, key=lambda item: areadict[item], reverse=True)
+    area = areaiden[sortkeys[0]]
 
     # TEAM IDENTITY
     teamdict = {}
@@ -106,7 +103,8 @@ def scan_artifact(snap: ImageFile) -> tuple:
         mtch = search(ptrn, text)
         if mtch and len(lict) < 4:
             text = text.replace(mtch.group(), "")
-            data = search(r"\b\d+(\.\d+)?\b", mtch.group()).group()
+            qant = search(r"\b\d+(\.\d+)?\b", mtch.group())
+            data = qant.group() if qant else "0.0"
             lict.append(ATTR(stat_name=name, stat_data=float(data)))
     for indx in range(len(lict)):
         seco[list(seco.keys())[indx]] = lict[indx]
@@ -136,3 +134,14 @@ def scan_artifact(snap: ImageFile) -> tuple:
     stoptime = time()
 
     return area, main, seco, team, levl, rare, (stoptime - strttime)
+
+
+def modify_datatype_to_transfer(text: str = ""):
+    if text.strip() == "":
+        rtrn = 0.0
+    else:
+        try:
+            rtrn = float(text)
+        except ValueError:
+            rtrn = 0.0
+    return rtrn

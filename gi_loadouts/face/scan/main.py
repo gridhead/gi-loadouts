@@ -3,8 +3,9 @@ from gi_loadouts.face.scan.rule import Rule
 
 
 class ScanDialog(Rule):
-    def __init__(self) -> None:
+    def __init__(self, part: str = "") -> None:
         super().__init__()
+        self.part = part
         self.setupUi(self)
         self.setWindowTitle(f"Loadouts for Genshin Impact v{__versdata__}")
         self.initialize_events()
@@ -39,3 +40,5 @@ class ScanDialog(Rule):
         self.arti_back_wipe.clicked.connect(self.wipe_artifact)
         self.arti_cnvs_load.clicked.connect(self.load_reader)
         self.arti_cnvs_conf.clicked.connect(self.load_tessexec)
+        self.arti_cnvs_wipe.clicked.connect(self.wipe_snapshot)
+        self.arti_back_done.clicked.connect(self.accept)

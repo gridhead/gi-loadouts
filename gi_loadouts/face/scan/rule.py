@@ -3,9 +3,10 @@ from PySide6.QtWidgets import QComboBox, QDialog, QLineEdit, QMessageBox
 
 from gi_loadouts import conf
 from gi_loadouts.data.arti import ArtiList
+from gi_loadouts.face.scan import areaiden
 from gi_loadouts.face.scan.file import file
 from gi_loadouts.face.scan.scan import Ui_scan
-from gi_loadouts.face.scan.util import scan_artifact
+from gi_loadouts.face.scan.util import modify_datatype_to_transfer, scan_artifact
 from gi_loadouts.face.util import truncate_text
 from gi_loadouts.face.wind.talk import Dialog
 from gi_loadouts.type import arti
@@ -19,6 +20,7 @@ from gi_loadouts.type.arti.base import (
     SecoStatType,
 )
 from gi_loadouts.type.rare import Rare
+from gi_loadouts.type.stat import ATTR, __revmap__
 
 
 class Rule(QDialog, Ui_scan, Dialog):
@@ -26,6 +28,7 @@ class Rule(QDialog, Ui_scan, Dialog):
         super().__init__()
         self.shot = None
         self.snap = None
+        self.part = ""
         self.dialog = QMessageBox()
         self.dist = {
             "Flower of Life": {"list": MainStatType_FWOL, "part": "fwol"},
@@ -42,6 +45,7 @@ class Rule(QDialog, Ui_scan, Dialog):
         :return:
         """
         self.arti_dist.addItems(self.dist.keys())
+        self.arti_dist.setCurrentText(areaiden[getattr(arti, self.part.upper())])
         self.arti_type.addItems([item.value.name for item in ArtiList])
 
     def change_mainstat_by_changing_artifact_area(self) -> None:
@@ -204,4 +208,57 @@ class Rule(QDialog, Ui_scan, Dialog):
 
         :return:
         """
-        conf.tessexec = file.load_tessexec(self, "Select location of the Tesseract OCR executable")
+        try:
+            conf.tessexec = file.load_tessexec(self, "Select location of the Tesseract OCR executable")
+        except Exception as expt:
+            self.show_dialog(
+                QMessageBox.Information,
+                "Faulty scanning",
+                f"Please consider checking your input after ensuring that the proper Tesseract OCR executable has been selected.\n\n{expt}"
+            )
+
+    def keep_info(self) -> dict:
+        """
+        Store information from the user interface to pass on to the main user interface
+
+        :return:
+        """
+        rtrn = {
+            "part": self.dist[self.arti_dist.currentText().strip()]["part"],
+            "team": self.arti_type.currentText().strip(),
+            "rare": self.arti_rare.currentText().strip(),
+            "levl": self.arti_levl.currentText().strip(),
+            "stat": {
+                "main": ATTR(
+                    stat_name=__revmap__[self.arti_name_main.currentText().strip()],
+                    stat_data=modify_datatype_to_transfer(self.arti_data_main.text())
+                ),
+                "seco": {
+                    "a": ATTR(
+                        stat_name=__revmap__[self.arti_name_a.currentText().strip()],
+                        stat_data=modify_datatype_to_transfer(self.arti_data_a.text())
+                    ),
+                    "b": ATTR(
+                        stat_name=__revmap__[self.arti_name_b.currentText().strip()],
+                        stat_data=modify_datatype_to_transfer(self.arti_data_b.text())
+                    ),
+                    "c": ATTR(
+                        stat_name=__revmap__[self.arti_name_c.currentText().strip()],
+                        stat_data=modify_datatype_to_transfer(self.arti_data_c.text())
+                    ),
+                    "d": ATTR(
+                        stat_name=__revmap__[self.arti_name_d.currentText().strip()],
+                        stat_data=modify_datatype_to_transfer(self.arti_data_d.text())
+                    )
+                }
+            }
+        }
+        return rtrn
+
+    def wipe_snapshot(self) -> None:
+        """
+        Reset the snapshot preview section to clear out the previously selected image
+
+        :return:
+        """
+        self.arti_shot.setText("YOUR ARTIFACT WILL SHOW HERE")

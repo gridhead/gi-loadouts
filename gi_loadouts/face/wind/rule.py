@@ -1,6 +1,6 @@
 from PySide6.QtCore import QUrl
 from PySide6.QtGui import QDesktopServices, QPixmap
-from PySide6.QtWidgets import QComboBox, QLabel, QLineEdit, QMainWindow, QMessageBox
+from PySide6.QtWidgets import QComboBox, QDialog, QLabel, QLineEdit, QMainWindow, QMessageBox
 
 from gi_loadouts.data.arti import ArtiList
 from gi_loadouts.data.char import __charmaps__
@@ -466,8 +466,34 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
 
         :return:
         """
-        self.scanobjc = ScanDialog()
-        self.scanobjc.exec()
+        self.scanobjc = ScanDialog(part)
+        if self.scanobjc.exec() == QDialog.Accepted:
+            info = self.scanobjc.keep_info()
+
+            droptype = getattr(self, f"arti_{info["part"]}_type")
+            if info["team"] in [droptype.itemText(indx) for indx in range(droptype.count())]:
+                droptype.setCurrentText(info["team"])
+
+            droprare = getattr(self, f"arti_{info["part"]}_rare")
+            if info["rare"] in [droprare.itemText(indx) for indx in range(droprare.count())]:
+                droprare.setCurrentText(info["rare"])
+
+            droplevl = getattr(self, f"arti_{info["part"]}_levl")
+            if info["levl"] in [droplevl.itemText(indx) for indx in range(droplevl.count())]:
+                droplevl.setCurrentText(info["levl"])
+
+            dropmain = getattr(self, f"arti_{info["part"]}_name_main")
+            datamain = getattr(self, f"arti_{info["part"]}_data_main")
+            if info["stat"]["main"].stat_name in [dropmain.itemText(indx) for indx in range(dropmain.count())]:
+                dropmain.setCurrentText(info["stat"]["main"].stat_name)
+                datamain.setText(str(info["stat"]["main"].stat_data))
+
+            for alfa, item in info["stat"]["seco"].items():
+                dropseco = getattr(self, f"arti_{info["part"]}_name_{alfa}")
+                dataseco = getattr(self, f"arti_{info["part"]}_data_{alfa}")
+                if item.stat_name in [dropseco.itemText(indx) for indx in range(dropseco.count())]:
+                    dropseco.setCurrentText(item.stat_name)
+                    dataseco.setText(str(item.stat_data))
 
     def open_link(self, link: str) -> None:
         """
