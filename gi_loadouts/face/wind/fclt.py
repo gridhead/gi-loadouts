@@ -139,7 +139,9 @@ class Facility(Dialog):
         :return:
         """
         try:
-            if self.weap_area_type.currentText() != "" and self.weap_area_name.currentText() != "" and self.weap_area_refn.currentText() != "" and self.weap_area_levl.currentText() != "":
+            if (self.weap_area_type.currentText() != "" and
+                self.weap_area_name.currentText() != "" and
+                self.weap_area_levl.currentText() != ""):
                 objc = WeapFile(
                     name=self.weap_area_name.currentText(),
                     type=getattr(WeaponType, self.weap_area_type.currentText().lower()),
@@ -263,7 +265,9 @@ class Facility(Dialog):
         :return:
         """
         try:
-            if self.weap_area_type.currentText() != "" and self.weap_area_name.currentText() != "" and self.weap_area_refn.currentText() != "" and self.weap_area_levl.currentText() != "":
+            if (self.weap_area_type.currentText() != "" and
+                self.weap_area_name.currentText() != "" and
+                self.weap_area_levl.currentText() != ""):
                 data = file.load(
                     self,
                     "Select location to load weapon data"
@@ -291,7 +295,7 @@ class Facility(Dialog):
                 self.weap_area_levl.setCurrentText(weap.levl.value.name)
 
                 refnlist = [self.weap_area_refn.itemText(indx) for indx in range(self.weap_area_refn.count())]
-                if weap.refn not in refnlist:
+                if weap.refn and weap.refn not in refnlist:
                     raise ValueError("Weapon refinement cannot be parsed.")
                 self.weap_area_refn.setCurrentText(weap.refn)
 
