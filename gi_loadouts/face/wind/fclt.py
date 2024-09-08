@@ -1,3 +1,4 @@
+import json
 from datetime import datetime
 from uuid import uuid4
 
@@ -8,7 +9,12 @@ from gi_loadouts.data.arti import ArtiList
 from gi_loadouts.face.wind.file import file
 from gi_loadouts.face.wind.talk import Dialog
 from gi_loadouts.type.arti import ArtiLevl
-from gi_loadouts.type.file.arti import ArtiArea, ArtiFile, make_artifile
+from gi_loadouts.type.file.arti import (
+    ArtiArea,
+    ArtiFile,
+    make_artifile_from_good,
+    make_artifile_from_yaml,
+)
 from gi_loadouts.type.file.team import TeamFile, make_teamfile
 from gi_loadouts.type.file.weap import WeapFile, make_weapfile
 from gi_loadouts.type.levl import Level
@@ -61,12 +67,11 @@ class Facility(Dialog):
                             )
                         )
 
-            text = yaml.dump(objc.easydict)
             file.save(
                 self,
                 "Select location to save artifact data",
-                f"{getattr(self, f"arti_{part}_type").currentText().strip().replace(" ", "").replace("'", "").replace("-", "")}_{uuid4().hex[0:8].upper()}_{datetime.now().strftime("%Y%m%d_%H%M%S")}.{part}.yaml",
-                text,
+                f"{getattr(self, f"arti_{part}_type").currentText().strip().replace(" ", "").replace("'", "").replace("-", "")}_{uuid4().hex[0:8].upper()}_{datetime.now().strftime("%Y%m%d_%H%M%S")}.{part}",
+                objc,
             )
             self.statarea.showMessage("Artifact data has been successfully saved.")
 
@@ -171,7 +176,7 @@ class Facility(Dialog):
         :return:
         """
         try:
-            data = file.load(
+            data, filetype = file.load(
                 self,
                 "Select location to load artifact data"
             )
@@ -179,8 +184,13 @@ class Facility(Dialog):
             if data.strip() == "":
                 raise ValueError("Selected file cannot be read.")
 
-            objc = yaml.safe_load(data)
-            arti = make_artifile(objc)
+            if filetype == "YAML Files (*.yaml)":
+                objc = yaml.safe_load(data)
+                arti = make_artifile_from_yaml(objc)
+            else:
+                objc = json.loads(data)
+                arti = make_artifile_from_good(objc)
+
             if arti.area.value != part.upper():
                 raise ValueError("Artifact area cannot be identified.")
 
@@ -197,7 +207,8 @@ class Facility(Dialog):
                 namelist = [dropname.itemText(roll) for roll in range(dropname.count())]
                 if getattr(arti, f"stat_{indx}").stat_name.value in namelist:
                     dropname.setCurrentText(getattr(arti, f"stat_{indx}").stat_name.value)
-                    dropdata.setText(str(getattr(arti, f"stat_{indx}").stat_data))
+                    if indx != "main":
+                        dropdata.setText(str(getattr(arti, f"stat_{indx}").stat_data))
                 else:
                     raise ValueError("Artifact stat cannot be identified.")
 

@@ -26,6 +26,10 @@ __stat_good__ = {
     STAT.none: "none"
 }
 
+__stat_good_revmap__ = {
+    data: item for item, data in __stat_good__.items()
+}
+
 __artiarea_good__ = {
     "FWOL": "flower",
     "PMOD": "plume",
@@ -34,8 +38,16 @@ __artiarea_good__ = {
     "CCOL": "circlet",
 }
 
+__artiarea_good_revmap__ = {
+    data: item for item, data in __artiarea_good__.items()
+}
+
 __artilist_good__ = {
     item.value.name: "".join([item.title() for item in item.value.name.replace("'", "").replace("-", " ").split(" ")]) for item in ArtiList
+}
+
+__artilist_good_revmap__ = {
+    data: item for item, data in __artilist_good__.items()
 }
 
 __artilevl_good__ = {
