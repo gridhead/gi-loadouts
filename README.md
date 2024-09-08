@@ -31,33 +31,79 @@
 
 ## Screenshots
 
--  Light mode - **Console (Arlecchino)**  
-   ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/lite.png)
+### On GNU/Linux distributions
 
--  Dark mode - **Console (Xianyun)**  
-   ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/dark.png)
+-  **Light mode** - Dash  
+   ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/gnul_lite.png)
 
--  Light mode - **Results (Arlecchino)**  
-   ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/lite_rslt.png)
+-  **Light mode** - Result  
+   ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/gnul_lite_rslt.png)
 
--  Dark mode - **Results (Xianyun)**  
-   ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/dark_rslt.png)
+-  **Dark mode** - Dash  
+   ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/gnul_dark.png)
 
--  **Help**  
-   ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/lcns.png)
+-  **Dark mode** - Result  
+   ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/gnul_dark_rslt.png)
 
--  **Info**  
-   ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/info.png)
+### On Microsoft Windows
+
+-  **Light mode** - Dash  
+   ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/mswn_lite.png)
+
+-  **Light mode** - Result  
+   ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/mswn_lite_rslt.png)
+
+-  **Dark mode** - Dash  
+   ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/mswn_dark.png)
+
+-  **Dark mode** - Result  
+   ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/mswn_dark_rslt.png)
 
 ## Download
 
-### Stable releases
+### Optical Character Recognition
+
+The project depends on the Tesseract OCR project to be able to scan in-game 
+screenshots using the Optical Character Recognition technology. As such, please
+ensure that the Tesseract OCR application is installed and configured properly.
+
+#### On GNU/Linux distributions 
+
+1. Install [Tesseract OCR](https://src.fedoraproject.org/rpms/tesseract) from your default package manager.
+   ```
+   $ sudo dnf install tesseract
+   ```
+
+2. Make note of the place where the Tesseract OCR executable binary is placed.
+   ```
+   /usr/bin/tesseract
+   ```
+
+#### On Microsoft Windows
+
+1. Install [Tesseract OCR](https://github.com/UB-Mannheim/tesseract/wiki) from the UB Mannheim GitHub namespace.
+   ```
+   https://github.com/UB-Mannheim/tesseract/wiki
+   ```
+
+2. Make note of the place where the Tesseract OCR executable binary is placed.
+   ```
+   C:\Program Files\Tesseract-OCR\tesseract.exe
+   ```
+
+### Releases
+
+#### Stable
 
 **Releases** for the _general usability purposes_ can be found [here](https://github.com/gridhead/gi-loadouts/releases).
 
-### Nightly releases
+#### Nightly
 
 **Releases** for the _testing debugging purposes_ can be found [here](https://github.com/gridhead/expedite/actions).
+
+#### Package
+
+**Releases** that _automatically update_ can be found [here](https://pypi.org/project/gi-loadouts/).
 
 ## Usage
 
@@ -115,15 +161,15 @@
     be calculated automatically.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_weap_refn.png)
 
-10. Save the [*weapon*](https://genshin-impact.fandom.com/wiki/Weapon) 
-    equipment to your local storage by using the **SAVE** button beside the 
-    sections.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_weap_save.png)
-
-11. Load the [*weapon*](https://genshin-impact.fandom.com/wiki/Weapon) 
+10. Load the [*weapon*](https://genshin-impact.fandom.com/wiki/Weapon) 
     equipment from your local storage by using the **LOAD** button beside the 
     sections.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_weap_load.png)
+
+11. Save the [*weapon*](https://genshin-impact.fandom.com/wiki/Weapon) 
+    equipment to your local storage by using the **SAVE** button beside the 
+    sections.  
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_weap_save.png)
 
 12. Once the [*weapon*](https://genshin-impact.fandom.com/wiki/Weapon) has 
     been configured, configure the 
@@ -170,133 +216,209 @@
     area.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_arti_data.png)
 
-18. Save the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) 
-    units to your local storage by using the **SAVE** buttons beside the 
+18. Alternatively, import the statistics from 
+    [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) 
+    units from in-game screenshots by using the **SCAN** buttons beside the 
     distribution areas.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_arti_save.png)
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_arti_scan.png)
 
-19. Load the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) 
+19. Load the in-game screenshot of the 
+    [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) units into 
+    interface using the **LOAD** button.  
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_scan_load.png)
+
+20. Confirm if the correct
+    [Tesseract OCR](https://github.com/UB-Mannheim/tesseract/wiki) executable 
+    is selected by using the **LOCATE** button.  
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_scan_conf.png)
+
+21. Wipe the in-game screenshot of the 
+    [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) unit from the
+    configuration area by using the **WIPE** button.  
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_scan_imwp.png)
+
+22. Import the statistics of the detected 
+    [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) unit by using
+    the **IMPORT** button.  
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_scan_impt.png)
+
+23. Wipe the statistics of the detected 
+    [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) unit by using
+    from the configuration area by using the **WIPE** button.  
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_scan_dtwp.png)
+
+24. Wait for the statistics to be read from the in-game screenshot of 
+    [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) using Optical
+    Character Recognition or OCR.  
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_scan_dgbx.png)
+
+25. Make corrections wherever the application was unable to correctly recognize
+    statistics of the 
+    [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) before 
+    importing them.  
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_scan_rslt.png)
+
+26. Alternatively, load the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) 
     units from your local storage by using the **LOAD** buttons beside the 
     distribution areas.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_arti_load.png)
 
-20. Wipe the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) 
+27. Save the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) 
+    units to your local storage by using the **SAVE** buttons beside the 
+    distribution areas.  
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_arti_save.png)
+
+28. Wipe the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) 
     units from the configuration area by using the **WIPE** buttons beside the 
     distribution areas.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_arti_wipe.png)
 
-21. Read the 
+29. Read the 
     [*artifact bonuses*](https://genshin-impact.fandom.com/wiki/Artifact/Sets) 
     available to the character when using two pieces or four-pieces of a 
     certain [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) 
     set.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_team_bone.png)
 
-22. Save the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact)
+30. Save the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact)
     sets to your local storage by using the **SAVE** buttons beside the 
     distribution areas.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_team_save.png)
 
-23. Load the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact)
+31. Load the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact)
     sets from your local storage by using the **LOAD** buttons beside the 
     distribution areas.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_team_load.png)
 
-24. Wipe the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact)
+32. Wipe the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact)
     sets from the configuration area by using the **WIPE** buttons beside the 
     distribution areas.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_team_wipe.png)
 
-25. Calculate the 
+33. Calculate the 
     [*character*](https://genshin-impact.fandom.com/wiki/Character) potential 
     with the equipped 
     [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) units or sets 
     and [*weapon*](https://genshin-impact.fandom.com/wiki/Weapon).  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_team_scan.png)
 
-26. View the calculations of the character potential on the newly created 
+34. View the calculations of the character potential on the newly created 
     dialog box.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_calc.png)
 
-27. View the 
+35. View the 
     [*help details*](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/lcns.png) 
     about the application by clicking on the **HELP** button from the user 
     interface.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/lcns.png)
 
-28. View the 
+36. View the 
     [*info details*](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/info.png) 
     about the application by clicking on the **INFO** button from the user 
     interface.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/info.png)
 
-29. View the [*homepage*](https://github.com/gridhead/gi-loadouts/) of the 
+37. View the [*homepage*](https://github.com/gridhead/gi-loadouts/) of the 
     project by clicking on the **FORK** button from the user interface.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_full.png)
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/fork.png)
 
-30. Donate to the [*project*](https://github.com/sponsors/gridhead) by 
+38. Donate to the [*project*](https://github.com/sponsors/gridhead) by 
     clicking on the **HEART** button from the user interface.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_full.png)
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/cash.png)
 
 ## Development
 
 ### On GNU/Linux distributions
 
-1.  Ensure that the necessary packages are available on the operating system installation.
+1.  Ensure that the necessary packages are available on the operating system 
+    installation.
     ```
-    $ sudo dnf install git
+    $ sudo dnf install git tesseract
+    ```
+    ```
     $ sudo dnf install python3 python3-pip python3-virtualenv poetry
     ```
-2.  Clone your fork to the local storage and make it your current working directory.
+2.  Clone your fork to the local storage and make it your current working 
+    directory.
     ```
     $ git clone https://github.com/gridhead/gi-loadouts.git
+    ```
+    ```
     $ cd gi-loadouts
     ```
-3.  Create a virtual environment and activate it for installing project dependencies.
+3.  Create a virtual environment and activate it for installing project 
+    dependencies.
     ```
     $ virtualenv venv
+    ```
+    ```
     $ source venv/bin/activate
     ```
-4.  Install the project dependencies after verifying the correctness of the configuration.
+4.  Install the project dependencies after verifying the correctness of the 
+    configuration.
     ```
     (venv) $ poetry check
+    ```
+    ```
     (venv) $ poetry install
     ```
-5.  Start the application after verifying that the dependencies have been installed.
+5.  Start the application after verifying that the dependencies have been 
+    installed.
     ```
     (venv) $ poetry show
+    ```
+    ```
     (venv) $ gi-loadouts
     ```
-6.  Once done with making changes in a separate branch, make a pull request to contribute.
+6.  Once done with making changes in a separate branch, make a pull request to 
+    contribute.
 
 ### On Microsoft Windows
 
-1.  Ensure that the necessary packages are available on the operating system installation.
+1.  Ensure that the necessary packages are available on the operating system 
+    installation.
     ```
     Git - https://git-scm.com/download/
-    Python 3 - https://www.python.org/downloads/
+    Tesseract - https://github.com/UB-Mannheim/tesseract/wiki
     ```
-2.  Clone your fork to the local storage and make it your current working directory.
+    ```
+    Python 3 - https://www.python.org/downloads/
+    Poetry - https://python-poetry.org/
+    ```
+2.  Clone your fork to the local storage and make it your current working 
+    directory.
     ```
     PS > git clone https://github.com/gridhead/gi-loadouts.git
+    ```
+    ```
     PS > cd gi-loadouts
     ```
-3.  Create a virtual environment and activate it for installing project dependencies.
+3.  Create a virtual environment and activate it for installing project 
+    dependencies.
     ```
     PS > py -m venv venv
+    ```
+    ```
     PS > .\venv\Scripts\activate
     ```
-4.  Install the project dependencies after installing the dependency management tools.
+4.  Install the project dependencies after installing the dependency management
+    tools.
     ```
     (venv) PS > py -m pip install poetry
+    ```
+    ```
     (venv) PS > poetry install
     ```
-5.  Start the application after verifying that the dependencies have been installed.
+5.  Start the application after verifying that the dependencies have been 
+    installed.
     ```
     (venv) PS > poetry show
+    ```
+    ```
     (venv) PS > gi-loadouts.cmd
     ```
-6.  Once done with making changes in a separate branch, make a pull request to contribute.
+6.  Once done with making changes in a separate branch, make a pull request to 
+    contribute.
 
 ## Contribution
 
