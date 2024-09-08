@@ -1,3 +1,46 @@
-from gi_loadouts.face.rsrc import arti, pmon, rare, vson, weap  # noqa: F401
+from os import path, remove
+from pathlib import Path
+from tempfile import NamedTemporaryFile
+
+from PySide6.QtCore import QFile, QIODevice
+
+from gi_loadouts import conf
+from gi_loadouts.face.rsrc import arti, data, pmon, rare, vson, weap  # noqa: F401
 from gi_loadouts.face.rsrc.char import back, cons, face, name, side, wish  # noqa: F401
 from gi_loadouts.face.rsrc.font import icon, text  # noqa: F401
+
+
+def make_temp_file() -> None:
+    """
+    Create temporary file with the Tesseract OCR training data during application initialization
+
+    :return:
+    """
+    file = QFile(":data/data/best.traineddata")
+
+    if not file.open(QIODevice.ReadOnly):
+        raise FileNotFoundError("Training data for Tesseract OCR could not be initialized.")
+
+    cont = file.readAll()
+    file.close()
+    """
+    When a file is marked for deletion on Windows, the file cannot be reliably opened. Therefore,
+    the context manager protocol for `NamedTemporaryFile` cannot be used here. The temporary file
+    have to be created and deleted manually. On UNIX based operating systems like GNU/Linux or
+    MacOS, files can be reliably opened even when they have been marked for deletion.
+    """
+    temp = NamedTemporaryFile(prefix="gi-loadouts-", suffix=".traineddata", delete=False, mode="w+b")
+    temp.write(cont)
+    temp.close()
+    conf.tempname = Path(temp.name).name.replace(".traineddata", "")
+    conf.temppath = temp.name
+
+
+def kill_temp_file() -> None:
+    """
+    Cleanup the temporary file created by the application when the process is decontextualized
+
+    :return:
+    """
+    if path.exists(conf.temppath):
+        remove(conf.temppath)

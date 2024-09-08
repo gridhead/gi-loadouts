@@ -1,6 +1,7 @@
 from PySide6.QtWidgets import QMessageBox
 
 from gi_loadouts import __donation__, __homepage__, __versdata__
+from gi_loadouts.face.rsrc import kill_temp_file, make_temp_file
 from gi_loadouts.face.wind.rule import Rule
 from gi_loadouts.type.char import CharName
 
@@ -13,6 +14,10 @@ class MainWindow(Rule):
         self.setWindowTitle(f"Loadouts for Genshin Impact v{__versdata__}")
         self.initialize_events()
         self.initialize_elements()
+        make_temp_file()
+
+    def __del__(self) -> None:
+        kill_temp_file()
 
     def initialize_elements(self) -> None:
         """
@@ -21,13 +26,13 @@ class MainWindow(Rule):
         :return:
         """
         self.populate_dropdown()
-        self.handle_elem_data(0)
-        self.handle_char_data(0)
-        self.format_weapon_by_char_change(0)
-        self.convey_weapon_type_change(0)
-        self.convey_weapon_name_change(0)
-        self.convey_weapon_levl_change(0)
-        self.convey_refinement_change(0)
+        self.handle_elem_data()
+        self.handle_char_data()
+        self.format_weapon_by_char_change()
+        self.convey_weapon_type_change()
+        self.convey_weapon_name_change()
+        self.convey_weapon_levl_change()
+        self.convey_refinement_change()
         for item in [
             (self.arti_fwol_levl, self.arti_fwol_type, self.arti_fwol_rare, self.arti_fwol_name_main, self.arti_fwol_data_main, "fwol", self.arti_fwol_data_main, self.arti_fwol_type_name, self.arti_fwol_head_area, self.arti_fwol_head_icon),
             (self.arti_pmod_levl, self.arti_pmod_type, self.arti_pmod_rare, self.arti_pmod_name_main, self.arti_pmod_data_main, "pmod", self.arti_pmod_data_main, self.arti_pmod_type_name, self.arti_pmod_head_area, self.arti_pmod_head_icon),
@@ -78,6 +83,7 @@ class MainWindow(Rule):
                 drop.currentTextChanged.connect(lambda _, a_drop=drop, a_text=text: self.render_lineedit_readonly_when_none(a_drop, a_text))
                 text.textChanged.connect(self.validate_lineedit_userdata)
         for part in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
+            getattr(self, f"arti_{part}_scan").clicked.connect(lambda _, a_part=part: self.show_scan_dialog(a_part))
             getattr(self, f"arti_{part}_load").clicked.connect(lambda _, a_part=part: self.arti_load(a_part))
             getattr(self, f"arti_{part}_save").clicked.connect(lambda _, a_part=part: self.arti_save(a_part))
             getattr(self, f"arti_{part}_wipe").clicked.connect(lambda _, a_part=part: self.wipe_artifact(a_part))

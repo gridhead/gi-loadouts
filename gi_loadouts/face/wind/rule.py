@@ -1,6 +1,6 @@
 from PySide6.QtCore import QUrl
 from PySide6.QtGui import QDesktopServices, QPixmap
-from PySide6.QtWidgets import QComboBox, QLabel, QLineEdit, QMainWindow, QMessageBox
+from PySide6.QtWidgets import QComboBox, QDialog, QLabel, QLineEdit, QMainWindow, QMessageBox
 
 from gi_loadouts.data.arti import ArtiList
 from gi_loadouts.data.char import __charmaps__
@@ -8,6 +8,7 @@ from gi_loadouts.data.weap import Family
 from gi_loadouts.face.info.main import InfoDialog
 from gi_loadouts.face.lcns.main import LcnsDialog
 from gi_loadouts.face.otpt.main import OtptWindow
+from gi_loadouts.face.scan.main import ScanDialog
 from gi_loadouts.face.util import modify_graphics_resource, truncate_text
 from gi_loadouts.face.wind.calc import Assess
 from gi_loadouts.face.wind.fclt import Facility
@@ -37,6 +38,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         self.otptobjc = None
         self.infoobjc = None
         self.lcnsobjc = None
+        self.scanobjc = None
         self.c_team = None
         self.c_weap = None
         self.c_tyvt = None
@@ -61,7 +63,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         for item in [self.arti_fwol_type, self.arti_pmod_type, self.arti_sdoe_type, self.arti_gboe_type, self.arti_ccol_type]:
             item.addItems([item.value.name for item in ArtiList])
 
-    def handle_elem_data(self, _: str) -> None:
+    def handle_elem_data(self, _: str = "") -> None:
         """
         Populate the characters belonging to the selected elemental vision class
 
@@ -90,7 +92,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         self.weap_area.setStyleSheet(f"#weap_area {{border: 1px solid {colour}; border-radius: 5px;}}")
         self.defn_area.setStyleSheet(f"#defn_area {{border: 1px solid {colour}; border-radius: 5px;}}")
 
-    def handle_char_data(self, _: str) -> None:
+    def handle_char_data(self, _: str = "") -> None:
         """
         Change the user interface elements and associated statistics after a certain character is selected from the combobox
 
@@ -117,7 +119,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.head_area_line_quin.setText(f"<i>{char.name} is affiliated with {char.afln}.</i>" if char.afln != "" else f"<i>{char.name} is not affiliated with any association.</i>")
             self.manage_changing_appearance(char.vision.value.colour)
 
-    def format_weapon_by_char_change(self, _: str) -> None:
+    def format_weapon_by_char_change(self, _: str = "") -> None:
         """
         Change the combobox showing the supported weapon types based on the compatibility of the currently selected character
 
@@ -130,7 +132,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.weap_area_type.clear()
             self.weap_area_type.addItem(f"{char.weapon.value}")
 
-    def convey_weapon_type_change(self, _: str) -> None:
+    def convey_weapon_type_change(self, _: str = "") -> None:
         """
         Change the user interface elements and associated statistics after a certain weapon type is selected from the combobox
 
@@ -141,7 +143,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.weap_area_name.clear()
             self.weap_area_name.addItems([item for item in Family[self.weap_area_type.currentText()]])
 
-    def convey_weapon_name_change(self, _: str) -> None:
+    def convey_weapon_name_change(self, _: str = "") -> None:
         """
         Change the user interface elements and associated statistics after a certain weapon is selected from the combobox
 
@@ -162,7 +164,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.weap_port_area.setPixmap(QPixmap(weap.rare.value.back))
             self.weap_area_rare.setText(" ".join(["STAR"] * weap.rare.value.qant))
 
-    def convey_weapon_levl_change(self, _: str) -> None:
+    def convey_weapon_levl_change(self, _: str = "") -> None:
         """
         Change the user interface elements and associated statistics after a certain weapon level is selected from the combobox
 
@@ -182,7 +184,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             if weap.seco_stat.stat_name != WeaponStatType.none:
                 self.weap_area_stat.setText(f"{weap.seco_stat_calc.stat_name.value.value} {round(weap.seco_stat_calc.stat_data, 1)}")
 
-    def convey_refinement_change(self, _: str) -> None:
+    def convey_refinement_change(self, _: str = "") -> None:
         """
         Change the user interface elements and associated statistics after a certain weapon refinement is selected from the combobox
 
@@ -198,7 +200,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
 
     def change_rarity_backdrop_by_changing_type(self, droptype: QComboBox, droprare: QComboBox, artiname: QLabel, headicon: QLabel, part: str) -> None:
         """
-        Change the artifact qualities and artifact icon based on the compatibility of the currently selected artifact type
+        Change the artifact qualities, artifact name, artifact icon based on the compatibility of the currently selected artifact type
 
         :param droptype: Combobox used for selecting artifact types
         :param droprare: Combobox used for selecting artifact qualities
@@ -236,7 +238,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
                 levl = getattr(ArtiLevl, droplevl.currentText().replace(" ", "_"))
                 team = getattr(ArtiList, droptype.currentText().replace(" ", "_").replace("'", "").replace("-", "_"))
                 rare = getattr(Rare, droprare.currentText().replace(" ", "_"))
-                stat = getattr(arti, f"revmap_{part}")[dropstat.currentText()]
+                stat = getattr(arti, f"revmap_{part}")[dropstat.currentText().strip()]
                 item = getattr(team.value, part)
                 item.levl, item.rare, item.stat_name = levl.value.levl, rare.value.qant, stat
                 statdata.setText(f"{round(item.stat_data, 1)}")
@@ -314,7 +316,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
 
     def change_artifact_substats_by_changing_rarity_or_mainstat(self, droprare: QComboBox, dropstat: QComboBox, part: str) -> None:
         """
-        Change the associates substats of the selected artifact after the artifact qualities or artifact mainstat is selected from the combobox
+        Change the associated substats of the selected artifact after the artifact qualities or artifact mainstat is selected from the combobox
 
         :param droprare: Combobox used for selecting artifact qualities
         :param dropstat: Combobox used for selecting artifact mainstats
@@ -457,6 +459,41 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         """
         self.lcnsobjc = LcnsDialog()
         self.lcnsobjc.exec()
+
+    def show_scan_dialog(self, part: str) -> None:
+        """
+        Initialize and exhibit the scanning dialog on a button click
+
+        :return:
+        """
+        self.scanobjc = ScanDialog(part)
+        if self.scanobjc.exec() == QDialog.Accepted:
+            info = self.scanobjc.keep_info()
+
+            droptype = getattr(self, f"arti_{info["part"]}_type")
+            if info["team"] in [droptype.itemText(indx) for indx in range(droptype.count())]:
+                droptype.setCurrentText(info["team"])
+
+            droprare = getattr(self, f"arti_{info["part"]}_rare")
+            if info["rare"] in [droprare.itemText(indx) for indx in range(droprare.count())]:
+                droprare.setCurrentText(info["rare"])
+
+            droplevl = getattr(self, f"arti_{info["part"]}_levl")
+            if info["levl"] in [droplevl.itemText(indx) for indx in range(droplevl.count())]:
+                droplevl.setCurrentText(info["levl"])
+
+            dropmain = getattr(self, f"arti_{info["part"]}_name_main")
+            datamain = getattr(self, f"arti_{info["part"]}_data_main")
+            if info["stat"]["main"].stat_name in [dropmain.itemText(indx) for indx in range(dropmain.count())]:
+                dropmain.setCurrentText(info["stat"]["main"].stat_name)
+                datamain.setText(str(info["stat"]["main"].stat_data))
+
+            for alfa, item in info["stat"]["seco"].items():
+                dropseco = getattr(self, f"arti_{info["part"]}_name_{alfa}")
+                dataseco = getattr(self, f"arti_{info["part"]}_data_{alfa}")
+                if item.stat_name in [dropseco.itemText(indx) for indx in range(dropseco.count())]:
+                    dropseco.setCurrentText(item.stat_name)
+                    dataseco.setText(str(item.stat_data))
 
     def open_link(self, link: str) -> None:
         """

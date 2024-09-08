@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="data">
+    <file>data/best.traineddata</file>
+  </qresource>
+</RCC>
