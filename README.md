@@ -256,73 +256,92 @@ ensure that the Tesseract OCR application is installed and configured properly.
     statistics of the 
     [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) before 
     importing them.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_scan_rslt.png)
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_scan_rslt_01.png)
 
-26. Alternatively, load the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) 
+26. Confirm if better scanning results are obtained for the statistics 
+    of the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) from 
+    the *details screen*.  
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_scan_rslt_02.png)
+
+27. Confirm if better scanning results are obtained for the statistics 
+    of the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) from 
+    the *inventory screen*.  
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_scan_rslt_03.png)
+
+28. Confirm if better scanning results are obtained for the statistics 
+    of the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) from 
+    the *enhancement screen*.  
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_scan_rslt_04.png)
+
+29. Alternatively, load the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) 
     units from your local storage by using the **LOAD** buttons beside the 
     distribution areas.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_arti_load.png)
 
-27. Save the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) 
+30. Save the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) 
     units to your local storage by using the **SAVE** buttons beside the 
     distribution areas.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_arti_save.png)
 
-28. Wipe the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) 
+31. Wipe the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) 
     units from the configuration area by using the **WIPE** buttons beside the 
     distribution areas.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_arti_wipe.png)
 
-29. Read the 
+32. Read the 
     [*artifact bonuses*](https://genshin-impact.fandom.com/wiki/Artifact/Sets) 
     available to the character when using two pieces or four-pieces of a 
     certain [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) 
     set.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_team_bone.png)
 
-30. Save the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact)
-    sets to your local storage by using the **SAVE** buttons beside the 
-    distribution areas.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_team_save.png)
-
-31. Load the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact)
+33. Load the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact)
     sets from your local storage by using the **LOAD** buttons beside the 
     distribution areas.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_team_load.png)
 
-32. Wipe the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact)
+34. Save the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact)
+    sets to your local storage by using the **SAVE** buttons beside the 
+    distribution areas.  
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_team_save.png)
+
+35. Wipe the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact)
     sets from the configuration area by using the **WIPE** buttons beside the 
     distribution areas.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_team_wipe.png)
 
-33. Calculate the 
+36. Calculate the 
     [*character*](https://genshin-impact.fandom.com/wiki/Character) potential 
     with the equipped 
     [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) units or sets 
     and [*weapon*](https://genshin-impact.fandom.com/wiki/Weapon).  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_team_scan.png)
 
-34. View the calculations of the character potential on the newly created 
+37. View the calculations of the character potential on the newly created 
     dialog box.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_calc.png)
 
-35. View the 
+38. View the 
     [*help details*](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/lcns.png) 
     about the application by clicking on the **HELP** button from the user 
     interface.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/lcns.png)
 
-36. View the 
+39. View the 
     [*info details*](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/info.png) 
     about the application by clicking on the **INFO** button from the user 
     interface.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/info.png)
 
-37. View the [*homepage*](https://github.com/gridhead/gi-loadouts/) of the 
+40. View the [*homepage*](https://github.com/gridhead/gi-loadouts/) of the 
     project by clicking on the **FORK** button from the user interface.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/fork.png)
 
-38. Donate to the [*project*](https://github.com/sponsors/gridhead) by 
+41. Report software errors or feature requests by clicking on the **REPORT** 
+    button from the user interface.  
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/tckt.png)
+
+42. Donate to the [*project*](https://github.com/sponsors/gridhead) by 
     clicking on the **HEART** button from the user interface.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/cash.png)
 
