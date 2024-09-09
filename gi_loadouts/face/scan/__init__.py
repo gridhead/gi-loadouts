@@ -35,7 +35,7 @@ For eg. `ATK+6.9%` can be seen as `ATK+6` (absolute unit) and `ATK+6.9%` (relati
 
 substats = {
     r".*Elemental\s*Mastery\+[0-9]+.*": STAT.elemental_mastery,
-    r".*Energy\s+Recharge\+[0-9]*\.[0-9]+%.*": STAT.energy_recharge_perc,
+    r".*Energy\s*Recharge\+[0-9]*\.[0-9]+%.*": STAT.energy_recharge_perc,
     r".*CRIT\s*Rate\+[0-9]*\.[0-9]+%.*": STAT.critical_rate_perc,
     r".*CRIT\s*DMG\+[0-9]*\.[0-9]+%.*": STAT.critical_damage_perc,
     r".*HP\+[0-9]*\.[0-9]+%.*": STAT.health_points_perc,
@@ -55,7 +55,7 @@ mainstat = {
     },
     "Sands of Eon": {
         r".*Elemental\s*Mastery.*": STAT.elemental_mastery,
-        r".*Energy\s+Recharge.*": STAT.energy_recharge_perc,
+        r".*Energy\s*Recharge.*": STAT.energy_recharge_perc,
         r".*HP.*": STAT.health_points_perc,
         r".*DEF.*": STAT.defense_perc,
         r".*ATK.*": STAT.attack_perc,
