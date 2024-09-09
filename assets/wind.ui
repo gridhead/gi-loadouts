@@ -7608,6 +7608,43 @@
       <string>code-fork</string>
      </property>
     </widget>
+    <widget class="QPushButton" name="side_tckt">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>805</y>
+       <width>25</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>25</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>25</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Report</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#side_tckt {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
+     </property>
+     <property name="text">
+      <string>bug</string>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statarea">
