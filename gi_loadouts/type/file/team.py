@@ -1,6 +1,12 @@
 from pydantic import BaseModel
 
-from gi_loadouts.type.file.arti import ArtiArea, ArtiFile, make_artifile
+from gi_loadouts.type.file import __artiarea_good_revmap__
+from gi_loadouts.type.file.arti import (
+    ArtiArea,
+    ArtiFile,
+    make_artifile_from_good,
+    make_artifile_from_yaml,
+)
 
 
 class TeamFile(BaseModel):
@@ -16,7 +22,7 @@ class TeamFile(BaseModel):
     @property
     def easydict(self) -> dict:
         """
-        Derive the information stored for consumption in file storage
+        Derive the information stored for consumption in file storage in the YAML format
 
         :return: Dictionary consisting of associated artifact collection statistics
         """
@@ -29,8 +35,24 @@ class TeamFile(BaseModel):
         }
         return data
 
+    @property
+    def to_good(self):
+        """
+        Derive the information stored for consumption in file storage in the GOOD format
 
-def make_teamfile(objc: dict) -> TeamFile:
+        :return: Dictionary consisting of associated artifact statistics
+        """
+        data = {
+            "flower": self.fwol.to_good,
+            "plume": self.pmod.to_good,
+            "sands": self.sdoe.to_good,
+            "goblet": self.gboe.to_good,
+            "circlet": self.ccol.to_good,
+        }
+        return data
+
+
+def make_teamfile_from_yaml(objc: dict) -> TeamFile:
     """
     Parse the provided dictionary of artifact statistics to make a supported artifact collection object
 
@@ -40,7 +62,23 @@ def make_teamfile(objc: dict) -> TeamFile:
     teamobjc = TeamFile()
     for area in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
         try:
-            setattr(teamobjc, area, make_artifile(objc[area]))
+            setattr(teamobjc, area, make_artifile_from_yaml(objc[area]))
+        except Exception as expt:
+            raise ValueError("Artifact set data cannot be parsed.") from expt
+    return teamobjc
+
+
+def make_teamfile_from_good(objc: dict) -> TeamFile:
+    """
+    Parse the provided dictionary of artifact statistics to make a supported artifact collection object
+
+    :param objc: Dictionary consisting of associated artifact collection statistics
+    :return: Supported artifact collection object for processing
+    """
+    teamobjc = TeamFile()
+    for gdst, ydst in __artiarea_good_revmap__.items():
+        try:
+            setattr(teamobjc, ydst.lower(), make_artifile_from_good(objc[gdst]))
         except Exception as expt:
             raise ValueError("Artifact set data cannot be parsed.") from expt
     return teamobjc

@@ -15,7 +15,7 @@ from gi_loadouts.type.file.arti import (
     make_artifile_from_good,
     make_artifile_from_yaml,
 )
-from gi_loadouts.type.file.team import TeamFile, make_teamfile
+from gi_loadouts.type.file.team import TeamFile, make_teamfile_from_good, make_teamfile_from_yaml
 from gi_loadouts.type.file.weap import WeapFile, make_weapfile
 from gi_loadouts.type.levl import Level
 from gi_loadouts.type.rare import Rare
@@ -89,12 +89,12 @@ class Facility(Dialog):
         :return:
         """
         try:
-            data = TeamFile()
+            objc = TeamFile()
             arealist = ["fwol", "pmod", "sdoe", "gboe", "ccol"]
             for part in arealist:
                 if getattr(self, f"arti_{part}_type").currentText().strip() == "":
                     raise ValueError("Artifact type cannot be identified.")
-                objc = ArtiFile(
+                unit = ArtiFile(
                     type=getattr(ArtiList, getattr(self, f"arti_{part}_type").currentText().strip().replace(" ", "_").replace("'", "").replace("-", "_")),
                     levl=getattr(ArtiLevl, getattr(self, f"arti_{part}_levl").currentText().strip().replace(" ", "_")),
                     area=getattr(ArtiArea, part),
@@ -104,30 +104,16 @@ class Facility(Dialog):
                 for indx in ["main", "a", "b", "c", "d"]:
                     if getattr(self, f"arti_{part}_name_{indx}").currentText().strip() != "":
                         if getattr(self, f"arti_{part}_name_{indx}").currentText().strip() == "None":
-                            setattr(
-                                objc,
-                                f"stat_{indx}",
-                                ATTR(
-                                    stat_name=STAT.none,
-                                    stat_data=0.0
-                                )
-                            )
+                            setattr(unit, f"stat_{indx}", ATTR(stat_name=STAT.none, stat_data=0.0))
                         else:
-                            setattr(
-                                objc,
-                                f"stat_{indx}",
-                                ATTR(
-                                    stat_name=__revmap__[getattr(self, f"arti_{part}_name_{indx}").currentText().strip()],
-                                    stat_data=float(getattr(self, f"arti_{part}_data_{indx}").text().strip())
-                                )
-                            )
-                setattr(data, part, objc)
-            text = yaml.dump(data.easydict)
+                            setattr(unit, f"stat_{indx}", ATTR(stat_name=__revmap__[getattr(self, f"arti_{part}_name_{indx}").currentText().strip()], stat_data=float(getattr(self, f"arti_{part}_data_{indx}").text().strip())))
+                setattr(objc, part, unit)
+
             file.save(
                 self,
                 "Select location to save artifact data",
-                f"{uuid4().hex[0:8].upper()}_{datetime.now().strftime("%Y%m%d_%H%M%S")}.yaml",
-                text,
+                f"{uuid4().hex[0:8].upper()}_{datetime.now().strftime("%Y%m%d_%H%M%S")}",
+                objc,
             )
             self.statarea.showMessage("Artifact set has been successfully saved.")
         except Exception as expt:
@@ -228,7 +214,7 @@ class Facility(Dialog):
         :return:
         """
         try:
-            data = file.load(
+            data, filetype = file.load(
                 self,
                 "Select location to load artifact set"
             )
@@ -236,8 +222,12 @@ class Facility(Dialog):
             if data.strip() == "":
                 raise ValueError("Selected file cannot be read.")
 
-            objc = yaml.safe_load(data)
-            team = make_teamfile(objc)
+            if filetype == "YAML Files (*.yaml)":
+                objc = yaml.safe_load(data)
+                team = make_teamfile_from_yaml(objc)
+            else:
+                objc = json.loads(data)
+                team = make_teamfile_from_good(objc)
 
             for part in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
                 arti = getattr(team, part)
@@ -257,11 +247,13 @@ class Facility(Dialog):
                     namelist = [dropname.itemText(roll) for roll in range(dropname.count())]
                     if getattr(arti, f"stat_{indx}").stat_name.value in namelist:
                         dropname.setCurrentText(getattr(arti, f"stat_{indx}").stat_name.value)
-                        dropdata.setText(str(getattr(arti, f"stat_{indx}").stat_data))
+                        if indx != "main":
+                            dropdata.setText(str(getattr(arti, f"stat_{indx}").stat_data))
                     else:
                         raise ValueError("Artifact stat cannot be identified.")
 
             self.statarea.showMessage("Artifact set has been successfully loaded.")
+
         except Exception as expt:
             self.show_dialog(
                 QMessageBox.Information,
