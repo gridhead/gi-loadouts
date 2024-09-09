@@ -77,6 +77,11 @@ def scan_artifact(snap: ImageFile) -> tuple:
     else:
         calcdict = {item: data for dinx in mainstat.values() for item, data in dinx.items()}
 
+    if "+" in text:
+        plus_indx = text.index("+")
+    else:
+        plus_indx = len(text)
+
     for ptrn, name in calcdict.items():
         """
         As the mainstats are always shown before the level indicator of the artifact, we can safely
@@ -84,7 +89,7 @@ def scan_artifact(snap: ImageFile) -> tuple:
         the `+` sign is the mainstat of the artifact. There, of course, are pitfalls for whenever
         the `+` sign cannot be reliably read but there is only so much that we can do here.
         """
-        mtch = search(ptrn, text[0:text.index("+")])
+        mtch = search(ptrn, text[0:plus_indx])
         if mtch:
             """
             It is possible for artifacts having absolute HP, DEF and ATK units as their mainstat to
@@ -92,7 +97,7 @@ def scan_artifact(snap: ImageFile) -> tuple:
             presence of HP, DEF, ATK, HP%, DEF% and ATK% units in the substats is accounted for
             when one of these is also in the mainstat, a localized replacement must be performed.
             """
-            text = text[0:text.index("+")].replace(mtch.group(), "") + text[text.index("+"):]
+            text = text[0:plus_indx].replace(mtch.group(), "") + text[plus_indx:]
             main = ATTR(stat_name=name, stat_data=0.0)
             break
 
