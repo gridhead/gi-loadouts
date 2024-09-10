@@ -16,7 +16,7 @@ from gi_loadouts.type.file.arti import (
     make_artifile_from_yaml,
 )
 from gi_loadouts.type.file.team import TeamFile, make_teamfile_from_good, make_teamfile_from_yaml
-from gi_loadouts.type.file.weap import WeapFile, make_weapfile
+from gi_loadouts.type.file.weap import WeapFile, make_weapfile_from_good, make_weapfile_from_yaml
 from gi_loadouts.type.levl import Level
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.stat import ATTR, STAT, __revmap__
@@ -116,6 +116,7 @@ class Facility(Dialog):
                 objc,
             )
             self.statarea.showMessage("Artifact set has been successfully saved.")
+
         except Exception as expt:
             self.show_dialog(
                 QMessageBox.Information,
@@ -139,14 +140,15 @@ class Facility(Dialog):
                     levl=getattr(Level, self.weap_area_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_")),
                     refn=self.weap_area_refn.currentText(),
                 )
-                text = yaml.dump(objc.easydict)
+
                 file.save(
                     self,
                     "Select location to save weapon data",
-                    f"{objc.name.strip().replace(" ", "").replace("\"", "").replace("-", "").replace("'", "")}_{uuid4().hex[0:8].upper()}_{datetime.now().strftime("%Y%m%d_%H%M%S")}.yaml",
-                    text,
+                    f"{objc.name.strip().replace(" ", "").replace("\"", "").replace("-", "").replace("'", "")}_{uuid4().hex[0:8].upper()}_{datetime.now().strftime("%Y%m%d_%H%M%S")}",
+                    objc,
                 )
                 self.statarea.showMessage("Weapon data has been successfully saved.")
+
         except Exception as expt:
             self.show_dialog(
                 QMessageBox.Information,
@@ -271,7 +273,7 @@ class Facility(Dialog):
             if (self.weap_area_type.currentText() != "" and
                 self.weap_area_name.currentText() != "" and
                 self.weap_area_levl.currentText() != ""):
-                data = file.load(
+                data, filetype = file.load(
                     self,
                     "Select location to load weapon data"
                 )
@@ -279,8 +281,12 @@ class Facility(Dialog):
                 if data.strip() == "":
                     raise ValueError("Selected file cannot be read.")
 
-                objc = yaml.safe_load(data)
-                weap = make_weapfile(objc)
+                if filetype == "YAML Files (*.yaml)":
+                    objc = yaml.safe_load(data)
+                    weap = make_weapfile_from_yaml(objc)
+                else:
+                    objc = json.loads(data)
+                    weap = make_weapfile_from_good(objc)
 
                 typelist = [self.weap_area_type.itemText(indx) for indx in range(self.weap_area_type.count())]
                 if weap.type.value not in typelist:
@@ -303,6 +309,7 @@ class Facility(Dialog):
                 self.weap_area_refn.setCurrentText(weap.refn)
 
                 self.statarea.showMessage("Weapon data has been successfully loaded.")
+
         except Exception as expt:
             self.show_dialog(
                 QMessageBox.Information,

@@ -57,3 +57,17 @@ __artilevl_good__ = {
 __weaplist_good__ = {
     item: "".join([word.title() for word in item.replace("'", "").replace("\"", "").replace("-", " ").split(" ")]) for weap in Family.values() for item in weap.keys()
 }
+
+__weaplist_good_revmap__ = {
+    data: item for item, data in __weaplist_good__.items()
+}
+
+__ascn_bond__ = {
+    0: 20,
+    1: 40,
+    2: 50,
+    3: 60,
+    4: 70,
+    5: 80,
+    6: 90,
+}
