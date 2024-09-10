@@ -46,7 +46,7 @@ class ATTR(BaseModel):
     Attribute primitive
     """
     stat_name: Optional[STAT] = STAT.none
-    stat_data: Optional[float] = 0
+    stat_data: Optional[float] = 0.0
 
 
 __revmap__ = {

@@ -164,10 +164,13 @@ class Facility(Dialog):
         :return:
         """
         try:
-            data, filetype = file.load(
+            status, data, filetype = file.load(
                 self,
                 "Select location to load artifact data"
             )
+
+            if not status:
+                return
 
             if data.strip() == "":
                 raise ValueError("Selected file cannot be read.")
@@ -216,10 +219,13 @@ class Facility(Dialog):
         :return:
         """
         try:
-            data, filetype = file.load(
+            status, data, filetype = file.load(
                 self,
                 "Select location to load artifact set"
             )
+
+            if not status:
+                return
 
             if data.strip() == "":
                 raise ValueError("Selected file cannot be read.")
@@ -270,45 +276,45 @@ class Facility(Dialog):
         :return:
         """
         try:
-            if (self.weap_area_type.currentText() != "" and
-                self.weap_area_name.currentText() != "" and
-                self.weap_area_levl.currentText() != ""):
-                data, filetype = file.load(
-                    self,
-                    "Select location to load weapon data"
-                )
+            status, data, filetype = file.load(
+                self,
+                "Select location to load weapon data"
+            )
 
-                if data.strip() == "":
-                    raise ValueError("Selected file cannot be read.")
+            if not status:
+                return
 
-                if filetype == "YAML Files (*.yaml)":
-                    objc = yaml.safe_load(data)
-                    weap = make_weapfile_from_yaml(objc)
-                else:
-                    objc = json.loads(data)
-                    weap = make_weapfile_from_good(objc)
+            if data.strip() == "":
+                raise ValueError("Selected file cannot be read.")
 
-                typelist = [self.weap_area_type.itemText(indx) for indx in range(self.weap_area_type.count())]
-                if weap.type.value not in typelist:
-                    raise ValueError("Weapon type cannot be identified.")
-                self.weap_area_type.setCurrentText(weap.type.value)
+            if filetype == "YAML Files (*.yaml)":
+                objc = yaml.safe_load(data)
+                weap = make_weapfile_from_yaml(objc)
+            else:
+                objc = json.loads(data)
+                weap = make_weapfile_from_good(objc)
 
-                weaplist = [self.weap_area_name.itemText(indx) for indx in range(self.weap_area_name.count())]
-                if weap.name not in weaplist:
-                    raise ValueError("Weapon name cannot be identified.")
-                self.weap_area_name.setCurrentText(weap.name)
+            typelist = [self.weap_area_type.itemText(indx) for indx in range(self.weap_area_type.count())]
+            if weap.type.value not in typelist:
+                raise ValueError("Weapon type cannot be identified.")
+            self.weap_area_type.setCurrentText(weap.type.value)
 
-                levllist = [self.weap_area_levl.itemText(indx) for indx in range(self.weap_area_levl.count())]
-                if weap.levl.value.name not in levllist:
-                    raise ValueError("Weapon level cannot be parsed.")
-                self.weap_area_levl.setCurrentText(weap.levl.value.name)
+            weaplist = [self.weap_area_name.itemText(indx) for indx in range(self.weap_area_name.count())]
+            if weap.name not in weaplist:
+                raise ValueError("Weapon name cannot be identified.")
+            self.weap_area_name.setCurrentText(weap.name)
 
-                refnlist = [self.weap_area_refn.itemText(indx) for indx in range(self.weap_area_refn.count())]
-                if weap.refn and weap.refn not in refnlist:
-                    raise ValueError("Weapon refinement cannot be parsed.")
-                self.weap_area_refn.setCurrentText(weap.refn)
+            levllist = [self.weap_area_levl.itemText(indx) for indx in range(self.weap_area_levl.count())]
+            if weap.levl.value.name not in levllist:
+                raise ValueError("Weapon level cannot be parsed.")
+            self.weap_area_levl.setCurrentText(weap.levl.value.name)
 
-                self.statarea.showMessage("Weapon data has been successfully loaded.")
+            refnlist = [self.weap_area_refn.itemText(indx) for indx in range(self.weap_area_refn.count())]
+            if weap.refn and weap.refn not in refnlist:
+                raise ValueError("Weapon refinement cannot be parsed.")
+            self.weap_area_refn.setCurrentText(weap.refn)
+
+            self.statarea.showMessage("Weapon data has been successfully loaded.")
 
         except Exception as expt:
             self.show_dialog(

@@ -10,7 +10,7 @@ class FileHandling:
     def __init__(self):
         super().__init__()
 
-    def save(self, prnt, head: str, path: str, data: ArtiFile) -> None:
+    def save(self, prnt, head: str, path: str, data: ArtiFile) -> bool:
         """
         Handle file operations involved in saving data to the storage device
 
@@ -20,21 +20,22 @@ class FileHandling:
         :param data: Data that is intended to be saved to the sought file
         :return:
         """
-        explorer = QFileDialog()
+        explorer, status = QFileDialog(), False
         savefile, filetype = explorer.getSaveFileName(prnt, head, path, "YAML Files (*.yaml);;GOOD Files (*.json)")
 
-        if savefile.strip() == "":
-            raise FileNotFoundError("No file selected.")
+        if savefile.strip() != "":
+            if filetype == "YAML Files (*.yaml)":
+                extn, text = ".yaml", yaml.dump(data.to_yaml)
+            else:
+                extn, text = ".json", json.dumps(data.to_good, indent=2)
+            if not savefile.endswith(extn):
+                savefile += extn
+            with open(savefile, "w") as fileobjc:
+                fileobjc.write(text)
+            status = True
 
-        if filetype == "YAML Files (*.yaml)":
-            text = yaml.dump(data.to_yaml)
-        else:
-            text = json.dumps(data.to_good, indent=2)
+        return status
 
-        with open(savefile, "w") as fileobjc:
-            fileobjc.write(text)
-
-        return None
 
     def load(self, prnt, head: str) -> tuple:
         """
@@ -44,16 +45,15 @@ class FileHandling:
         :param head: Title of the interaction dialog for file loading
         :return: Data that is intended to be loaded from the sought file
         """
-        explorer = QFileDialog()
+        explorer, status, data = QFileDialog(), False, ""
         loadfile, filetype = explorer.getOpenFileName(prnt, head, "", "YAML Files (*.yaml);;GOOD Files (*.json)")
 
-        if loadfile.strip() == "":
-            raise FileNotFoundError("No file selected.")
+        if loadfile.strip() != "":
+            with open(loadfile) as fileobjc:
+                data = fileobjc.read()
+            status = True
 
-        with open(loadfile) as fileobjc:
-            data = fileobjc.read()
-
-        return data, filetype
+        return status, data, filetype
 
 
 file = FileHandling()
