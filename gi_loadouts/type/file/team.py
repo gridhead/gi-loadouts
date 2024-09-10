@@ -20,18 +20,18 @@ class TeamFile(BaseModel):
     ccol: ArtiFile = ArtiFile(area=ArtiArea.ccol)
 
     @property
-    def easydict(self) -> dict:
+    def to_yaml(self) -> dict:
         """
         Derive the information stored for consumption in file storage in the YAML format
 
         :return: Dictionary consisting of associated artifact collection statistics
         """
         data = {
-            "fwol": self.fwol.easydict,
-            "pmod": self.pmod.easydict,
-            "sdoe": self.sdoe.easydict,
-            "gboe": self.gboe.easydict,
-            "ccol": self.ccol.easydict,
+            "fwol": self.fwol.to_yaml,
+            "pmod": self.pmod.to_yaml,
+            "sdoe": self.sdoe.to_yaml,
+            "gboe": self.gboe.to_yaml,
+            "ccol": self.ccol.to_yaml,
         }
         return data
 

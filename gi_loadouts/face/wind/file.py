@@ -27,7 +27,7 @@ class FileHandling:
             raise FileNotFoundError("No file selected.")
 
         if filetype == "YAML Files (*.yaml)":
-            text = yaml.dump(data.easydict)
+            text = yaml.dump(data.to_yaml)
         else:
             text = json.dumps(data.to_good, indent=2)
 

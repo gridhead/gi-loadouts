@@ -45,7 +45,7 @@ class ArtiFile(BaseModel):
     stat_d: ATTR = ATTR()
 
     @property
-    def easydict(self) -> dict:
+    def to_yaml(self) -> dict:
         """
         Derive the information stored for consumption in file storage in the YAML format
 
