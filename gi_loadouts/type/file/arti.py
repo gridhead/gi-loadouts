@@ -1,9 +1,19 @@
 from enum import Enum
+from uuid import uuid4
 
 from pydantic import BaseModel
 
 from gi_loadouts.data.arti import ArtiList
 from gi_loadouts.type.arti import ArtiLevl
+from gi_loadouts.type.file import (
+    __artiarea_good__,
+    __artiarea_good_revmap__,
+    __artilevl_good__,
+    __artilist_good__,
+    __artilist_good_revmap__,
+    __stat_good__,
+    __stat_good_revmap__,
+)
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.stat import ATTR, __revmap__
 
@@ -35,9 +45,9 @@ class ArtiFile(BaseModel):
     stat_d: ATTR = ATTR()
 
     @property
-    def easydict(self) -> dict:
+    def to_yaml(self) -> dict:
         """
-        Derive the information stored for consumption in file storage
+        Derive the information stored for consumption in file storage in the YAML format
 
         :return: Dictionary consisting of associated artifact statistics
         """
@@ -72,10 +82,35 @@ class ArtiFile(BaseModel):
         }
         return data
 
+    @property
+    def to_good(self) -> dict:
+        """
+        Derive the information stored for consumption in file storage in the GOOD format
 
-def make_artifile(objc: dict) -> ArtiFile:
+        :return: Dictionary consisting of associated artifact statistics
+        """
+        data = {
+            "id": uuid4().hex[0:8].upper(),
+            "location": "",
+            "lock": False,
+            "setKey": __artilist_good__[self.type.value.name],
+            "rarity": self.rare.value.qant,
+            "level": 0 if self.levl.value.levl == -1 else self.levl.value.levl,
+            "slotKey": __artiarea_good__[self.area.value],
+            "mainStatKey": __stat_good__[self.stat_main.stat_name],
+            "substats": [
+                {
+                    "key": __stat_good__[getattr(self, f"stat_{alfa}").stat_name],
+                    "value": getattr(self, f"stat_{alfa}").stat_data,
+                } for alfa in ["a", "b", "c", "d"] if getattr(self, f"stat_{alfa}") != ATTR()
+            ]
+        }
+        return data
+
+
+def make_artifile_from_yaml(objc: dict) -> ArtiFile:
     """
-    Parse the provided dictionary of artifact statistics to make a supported artifact object
+    Parse the provided dictionary of artifact statistics read from a YAML file to make a supported artifact object
 
     :param objc: Dictionary consisting of associated artifact statistics
     :return: Supported artifact object for processing
@@ -93,6 +128,37 @@ def make_artifile(objc: dict) -> ArtiFile:
             stat_c=ATTR(stat_name=__revmap__[objc["stat"]["c"]["name"]], stat_data=objc["stat"]["c"]["data"]),
             stat_d=ATTR(stat_name=__revmap__[objc["stat"]["d"]["name"]], stat_data=objc["stat"]["d"]["data"]),
         )
+    except Exception as expt:
+        raise ValueError("Artifact unit data cannot be parsed.") from expt
+    return artiobjc
+
+
+def make_artifile_from_good(objc: dict) -> ArtiFile:
+    """
+    Parse the provided dictionary of artifact statistics read from a GOOD file to make a supported artifact object
+
+    :param objc: Dictionary consisting of associated artifact statistics
+    :return: Supported artifact object for processing
+    """
+    try:
+        """
+        As `NoneType` is not supported as a datatype for level in the GOOD format, we use the
+        rarity of 0 (i.e. `Rare.Star_0`) to confirm the level. As artifacts belonging to `Star 0`,
+        can only have level `None` - the check satisfies and the contents is loaded.
+        """
+        artiobjc = ArtiFile(
+            name="",
+            type=getattr(ArtiList, __artilist_good_revmap__[objc["setKey"]].replace(" ", "_").replace("'", "").replace("-", "_")),
+            area=getattr(ArtiArea, __artiarea_good_revmap__[objc["slotKey"]].lower()),
+            rare=getattr(Rare, f"Star_{objc["rarity"]}"),
+            levl=getattr(ArtiLevl, "None") if objc["rarity"] == 0 else __artilevl_good__[objc["level"]],
+            stat_main=ATTR(stat_name=__stat_good_revmap__[objc["mainStatKey"]], stat_data=0.0),
+            stat_a=ATTR(), stat_b=ATTR(), stat_c=ATTR(), stat_d=ATTR()
+        )
+        alfalist = ["a", "b", "c", "d"]
+        for item in objc["substats"]:
+            setattr(artiobjc, f"stat_{alfalist[0]}", ATTR(stat_name=__stat_good_revmap__[item["key"]], stat_data=item["value"]))
+            alfalist.pop(0)
     except Exception as expt:
         raise ValueError("Artifact unit data cannot be parsed.") from expt
     return artiobjc

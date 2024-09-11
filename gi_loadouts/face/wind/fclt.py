@@ -1,3 +1,4 @@
+import json
 from datetime import datetime
 from uuid import uuid4
 
@@ -8,9 +9,14 @@ from gi_loadouts.data.arti import ArtiList
 from gi_loadouts.face.wind.file import file
 from gi_loadouts.face.wind.talk import Dialog
 from gi_loadouts.type.arti import ArtiLevl
-from gi_loadouts.type.file.arti import ArtiArea, ArtiFile, make_artifile
-from gi_loadouts.type.file.team import TeamFile, make_teamfile
-from gi_loadouts.type.file.weap import WeapFile, make_weapfile
+from gi_loadouts.type.file.arti import (
+    ArtiArea,
+    ArtiFile,
+    make_artifile_from_good,
+    make_artifile_from_yaml,
+)
+from gi_loadouts.type.file.team import TeamFile, make_teamfile_from_good, make_teamfile_from_yaml
+from gi_loadouts.type.file.weap import WeapFile, make_weapfile_from_good, make_weapfile_from_yaml
 from gi_loadouts.type.levl import Level
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.stat import ATTR, STAT, __revmap__
@@ -61,12 +67,11 @@ class Facility(Dialog):
                             )
                         )
 
-            text = yaml.dump(objc.easydict)
             file.save(
                 self,
                 "Select location to save artifact data",
-                f"{getattr(self, f"arti_{part}_type").currentText().strip().replace(" ", "").replace("'", "").replace("-", "")}_{uuid4().hex[0:8].upper()}_{datetime.now().strftime("%Y%m%d_%H%M%S")}.{part}.yaml",
-                text,
+                f"{getattr(self, f"arti_{part}_type").currentText().strip().replace(" ", "").replace("'", "").replace("-", "")}_{uuid4().hex[0:8].upper()}_{datetime.now().strftime("%Y%m%d_%H%M%S")}.{part}",
+                objc,
             )
             self.statarea.showMessage("Artifact data has been successfully saved.")
 
@@ -84,12 +89,12 @@ class Facility(Dialog):
         :return:
         """
         try:
-            data = TeamFile()
+            objc = TeamFile()
             arealist = ["fwol", "pmod", "sdoe", "gboe", "ccol"]
             for part in arealist:
                 if getattr(self, f"arti_{part}_type").currentText().strip() == "":
                     raise ValueError("Artifact type cannot be identified.")
-                objc = ArtiFile(
+                unit = ArtiFile(
                     type=getattr(ArtiList, getattr(self, f"arti_{part}_type").currentText().strip().replace(" ", "_").replace("'", "").replace("-", "_")),
                     levl=getattr(ArtiLevl, getattr(self, f"arti_{part}_levl").currentText().strip().replace(" ", "_")),
                     area=getattr(ArtiArea, part),
@@ -99,32 +104,19 @@ class Facility(Dialog):
                 for indx in ["main", "a", "b", "c", "d"]:
                     if getattr(self, f"arti_{part}_name_{indx}").currentText().strip() != "":
                         if getattr(self, f"arti_{part}_name_{indx}").currentText().strip() == "None":
-                            setattr(
-                                objc,
-                                f"stat_{indx}",
-                                ATTR(
-                                    stat_name=STAT.none,
-                                    stat_data=0.0
-                                )
-                            )
+                            setattr(unit, f"stat_{indx}", ATTR(stat_name=STAT.none, stat_data=0.0))
                         else:
-                            setattr(
-                                objc,
-                                f"stat_{indx}",
-                                ATTR(
-                                    stat_name=__revmap__[getattr(self, f"arti_{part}_name_{indx}").currentText().strip()],
-                                    stat_data=float(getattr(self, f"arti_{part}_data_{indx}").text().strip())
-                                )
-                            )
-                setattr(data, part, objc)
-            text = yaml.dump(data.easydict)
+                            setattr(unit, f"stat_{indx}", ATTR(stat_name=__revmap__[getattr(self, f"arti_{part}_name_{indx}").currentText().strip()], stat_data=float(getattr(self, f"arti_{part}_data_{indx}").text().strip())))
+                setattr(objc, part, unit)
+
             file.save(
                 self,
                 "Select location to save artifact data",
-                f"{uuid4().hex[0:8].upper()}_{datetime.now().strftime("%Y%m%d_%H%M%S")}.yaml",
-                text,
+                f"{uuid4().hex[0:8].upper()}_{datetime.now().strftime("%Y%m%d_%H%M%S")}",
+                objc,
             )
             self.statarea.showMessage("Artifact set has been successfully saved.")
+
         except Exception as expt:
             self.show_dialog(
                 QMessageBox.Information,
@@ -148,14 +140,15 @@ class Facility(Dialog):
                     levl=getattr(Level, self.weap_area_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_")),
                     refn=self.weap_area_refn.currentText(),
                 )
-                text = yaml.dump(objc.easydict)
+
                 file.save(
                     self,
                     "Select location to save weapon data",
-                    f"{objc.name.strip().replace(" ", "").replace("\"", "").replace("-", "").replace("'", "")}_{uuid4().hex[0:8].upper()}_{datetime.now().strftime("%Y%m%d_%H%M%S")}.yaml",
-                    text,
+                    f"{objc.name.strip().replace(" ", "").replace("\"", "").replace("-", "").replace("'", "")}_{uuid4().hex[0:8].upper()}_{datetime.now().strftime("%Y%m%d_%H%M%S")}",
+                    objc,
                 )
                 self.statarea.showMessage("Weapon data has been successfully saved.")
+
         except Exception as expt:
             self.show_dialog(
                 QMessageBox.Information,
@@ -171,16 +164,24 @@ class Facility(Dialog):
         :return:
         """
         try:
-            data = file.load(
+            status, data, filetype = file.load(
                 self,
                 "Select location to load artifact data"
             )
 
+            if not status:
+                return
+
             if data.strip() == "":
                 raise ValueError("Selected file cannot be read.")
 
-            objc = yaml.safe_load(data)
-            arti = make_artifile(objc)
+            if filetype == "YAML Files (*.yaml)":
+                objc = yaml.safe_load(data)
+                arti = make_artifile_from_yaml(objc)
+            else:
+                objc = json.loads(data)
+                arti = make_artifile_from_good(objc)
+
             if arti.area.value != part.upper():
                 raise ValueError("Artifact area cannot be identified.")
 
@@ -197,7 +198,8 @@ class Facility(Dialog):
                 namelist = [dropname.itemText(roll) for roll in range(dropname.count())]
                 if getattr(arti, f"stat_{indx}").stat_name.value in namelist:
                     dropname.setCurrentText(getattr(arti, f"stat_{indx}").stat_name.value)
-                    dropdata.setText(str(getattr(arti, f"stat_{indx}").stat_data))
+                    if indx != "main":
+                        dropdata.setText(str(getattr(arti, f"stat_{indx}").stat_data))
                 else:
                     raise ValueError("Artifact stat cannot be identified.")
 
@@ -217,16 +219,23 @@ class Facility(Dialog):
         :return:
         """
         try:
-            data = file.load(
+            status, data, filetype = file.load(
                 self,
                 "Select location to load artifact set"
             )
 
+            if not status:
+                return
+
             if data.strip() == "":
                 raise ValueError("Selected file cannot be read.")
 
-            objc = yaml.safe_load(data)
-            team = make_teamfile(objc)
+            if filetype == "YAML Files (*.yaml)":
+                objc = yaml.safe_load(data)
+                team = make_teamfile_from_yaml(objc)
+            else:
+                objc = json.loads(data)
+                team = make_teamfile_from_good(objc)
 
             for part in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
                 arti = getattr(team, part)
@@ -246,11 +255,13 @@ class Facility(Dialog):
                     namelist = [dropname.itemText(roll) for roll in range(dropname.count())]
                     if getattr(arti, f"stat_{indx}").stat_name.value in namelist:
                         dropname.setCurrentText(getattr(arti, f"stat_{indx}").stat_name.value)
-                        dropdata.setText(str(getattr(arti, f"stat_{indx}").stat_data))
+                        if indx != "main":
+                            dropdata.setText(str(getattr(arti, f"stat_{indx}").stat_data))
                     else:
                         raise ValueError("Artifact stat cannot be identified.")
 
             self.statarea.showMessage("Artifact set has been successfully loaded.")
+
         except Exception as expt:
             self.show_dialog(
                 QMessageBox.Information,
@@ -265,41 +276,46 @@ class Facility(Dialog):
         :return:
         """
         try:
-            if (self.weap_area_type.currentText() != "" and
-                self.weap_area_name.currentText() != "" and
-                self.weap_area_levl.currentText() != ""):
-                data = file.load(
-                    self,
-                    "Select location to load weapon data"
-                )
+            status, data, filetype = file.load(
+                self,
+                "Select location to load weapon data"
+            )
 
-                if data.strip() == "":
-                    raise ValueError("Selected file cannot be read.")
+            if not status:
+                return
 
+            if data.strip() == "":
+                raise ValueError("Selected file cannot be read.")
+
+            if filetype == "YAML Files (*.yaml)":
                 objc = yaml.safe_load(data)
-                weap = make_weapfile(objc)
+                weap = make_weapfile_from_yaml(objc)
+            else:
+                objc = json.loads(data)
+                weap = make_weapfile_from_good(objc)
 
-                typelist = [self.weap_area_type.itemText(indx) for indx in range(self.weap_area_type.count())]
-                if weap.type.value not in typelist:
-                    raise ValueError("Weapon type cannot be identified.")
-                self.weap_area_type.setCurrentText(weap.type.value)
+            typelist = [self.weap_area_type.itemText(indx) for indx in range(self.weap_area_type.count())]
+            if weap.type.value not in typelist:
+                raise ValueError("Weapon type cannot be identified.")
+            self.weap_area_type.setCurrentText(weap.type.value)
 
-                weaplist = [self.weap_area_name.itemText(indx) for indx in range(self.weap_area_name.count())]
-                if weap.name not in weaplist:
-                    raise ValueError("Weapon name cannot be identified.")
-                self.weap_area_name.setCurrentText(weap.name)
+            weaplist = [self.weap_area_name.itemText(indx) for indx in range(self.weap_area_name.count())]
+            if weap.name not in weaplist:
+                raise ValueError("Weapon name cannot be identified.")
+            self.weap_area_name.setCurrentText(weap.name)
 
-                levllist = [self.weap_area_levl.itemText(indx) for indx in range(self.weap_area_levl.count())]
-                if weap.levl.value.name not in levllist:
-                    raise ValueError("Weapon level cannot be parsed.")
-                self.weap_area_levl.setCurrentText(weap.levl.value.name)
+            levllist = [self.weap_area_levl.itemText(indx) for indx in range(self.weap_area_levl.count())]
+            if weap.levl.value.name not in levllist:
+                raise ValueError("Weapon level cannot be parsed.")
+            self.weap_area_levl.setCurrentText(weap.levl.value.name)
 
-                refnlist = [self.weap_area_refn.itemText(indx) for indx in range(self.weap_area_refn.count())]
-                if weap.refn and weap.refn not in refnlist:
-                    raise ValueError("Weapon refinement cannot be parsed.")
-                self.weap_area_refn.setCurrentText(weap.refn)
+            refnlist = [self.weap_area_refn.itemText(indx) for indx in range(self.weap_area_refn.count())]
+            if weap.refn and weap.refn not in refnlist:
+                raise ValueError("Weapon refinement cannot be parsed.")
+            self.weap_area_refn.setCurrentText(weap.refn)
 
-                self.statarea.showMessage("Weapon data has been successfully loaded.")
+            self.statarea.showMessage("Weapon data has been successfully loaded.")
+
         except Exception as expt:
             self.show_dialog(
                 QMessageBox.Information,
