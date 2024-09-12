@@ -4,6 +4,44 @@
     <img src="https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/imgs/pmon/8.png" alt="drawing" width="200"/>
 </p>
 
+<p align="center">
+    <a href="https://pypi.org/project/gi-loadouts/">
+        <img src="https://img.shields.io/pypi/v/gi-loadouts?style=flat&logo=python&logoColor=ffffff&color=008080" alt="PyPI - Version">
+        <img src="https://img.shields.io/pypi/status/gi-loadouts?style=flat&logo=python&logoColor=ffffff&color=008080" alt="PyPI - Status">
+        <img src="https://img.shields.io/pypi/pyversions/gi-loadouts?style=flat&logo=python&logoColor=ffffff&color=008080" alt="PyPI - Supported Python versions">
+        <img src="https://img.shields.io/pypi/dm/gi-loadouts?style=flat&logo=python&logoColor=ffffff&color=008080" alt="PyPI - Downloads">
+        <img src="https://img.shields.io/pypi/implementation/gi-loadouts?style=flat&logo=python&logoColor=ffffff&color=008080" alt="PyPI - Implementation">
+        <img src="https://img.shields.io/pypi/format/gi-loadouts?style=flat&logo=python&logoColor=ffffff&color=008080" alt="PyPI - Format">
+    </a>
+</p>
+
+<p align="center">
+    <img src="https://img.shields.io/github/watchers/gridhead/gi-loadouts?style=flat&logo=github&logoColor=ffffff&color=008080" alt="GitHub - Watchers">
+    <img src="https://img.shields.io/github/stars/gridhead/gi-loadouts?style=flat&logo=github&logoColor=ffffff&color=008080" alt="GitHub - Stars">
+    <img src="https://img.shields.io/github/forks/gridhead/gi-loadouts?style=flat&logo=github&logoColor=ffffff&color=008080" alt="GitHub - Forks">
+    <img src="https://img.shields.io/github/languages/top/gridhead/gi-loadouts?style=flat&logo=github&logoColor=ffffff&color=008080" alt="GitHub - Language">
+    <img src="https://img.shields.io/github/license/gridhead/gi-loadouts?style=flat&logo=github&logoColor=ffffff&color=008080" alt="GitHub - License">
+    <img src="https://img.shields.io/github/v/release/gridhead/gi-loadouts?style=flat&logo=github&logoColor=ffffff&color=008080" alt="GitHub - Release">
+    <img src="https://img.shields.io/github/repo-size/gridhead/gi-loadouts?style=flat&logo=github&logoColor=ffffff&color=008080" alt="GitHub - Size">
+    <img src="https://img.shields.io/github/commit-activity/m/gridhead/gi-loadouts?style=flat&logo=github&logoColor=ffffff&color=008080" alt="GitHub - Activity">
+    <img src="https://img.shields.io/github/contributors/gridhead/gi-loadouts?style=flat&logo=github&logoColor=ffffff&color=008080" alt="GitHub - Contributors">
+    <img src="https://img.shields.io/github/sponsors/gridhead?style=flat&logo=github&logoColor=ffffff&color=008080" alt="GitHub Sponsors - Akashdeep Dhar">
+</p>
+
+<p align="center">
+    <a href="https://github.com/gridhead/gi-loadouts/actions/workflows/qlty.yml">
+        <img src="https://img.shields.io/github/actions/workflow/status/gridhead/gi-loadouts/qlty.yml?style=flat&logo=git&logoColor=ffffff&color=008080&label=Checking%20code%20quality" alt="GitHub - gnul.yml">
+    </a>
+    <a href="https://github.com/gridhead/gi-loadouts/actions/workflows/gnul.yml">
+        <img src="https://img.shields.io/github/actions/workflow/status/gridhead/gi-loadouts/gnul.yml?style=flat&logo=git&logoColor=ffffff&color=008080&label=Builds%20for%20GNU%2FLinux%20distributions" alt="GitHub - gnul.yml">
+    </a>
+    <a href="https://github.com/gridhead/gi-loadouts/actions/workflows/mswn.yml">
+        <img src="https://img.shields.io/github/actions/workflow/status/gridhead/gi-loadouts/mswn.yml?style=flat&logo=git&logoColor=ffffff&color=008080&label=Builds%20for%20Microsoft%20Windows" alt="GitHub - gnul.yml">
+    </a>
+    <a href="https://github.com/gridhead/gi-loadouts/actions/workflows/wipe.yml">
+        <img src="https://img.shields.io/github/actions/workflow/status/gridhead/gi-loadouts/wipe.yml?style=flat&logo=git&logoColor=ffffff&color=008080&label=Periodic%20artifact%20cleanup" alt="GitHub - gnul.yml">
+    </a>
+</p>
 
 <p align="center">
     This is a desktop application that allows travelers to manage their custom 
