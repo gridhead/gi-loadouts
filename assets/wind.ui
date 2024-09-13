@@ -156,10 +156,13 @@
        <string notr="true">#arti_fwol_type_area {background-color: rgba(128, 128, 128, 64);}</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::Shape::NoFrame</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Shadow::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
       </property>
       <widget class="QLabel" name="arti_fwol_type_name">
        <property name="geometry">
@@ -440,10 +443,13 @@
        <string notr="true">#arti_fwol_main {background-color: rgba(96, 96, 96, 128);}</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::Shape::NoFrame</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Shadow::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
       </property>
       <widget class="QComboBox" name="arti_fwol_name_main">
        <property name="geometry">
@@ -866,10 +872,13 @@
        <string notr="true">#arti_pmod_main {background-color: rgba(96, 96, 96, 128);}</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::Shape::NoFrame</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Shadow::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
       </property>
       <widget class="QComboBox" name="arti_pmod_name_main">
        <property name="geometry">
@@ -974,10 +983,13 @@
        <string notr="true">#arti_pmod_type_area {background-color: rgba(128, 128, 128, 64);}</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::Shape::NoFrame</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Shadow::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
       </property>
       <widget class="QLabel" name="arti_pmod_type_name">
        <property name="geometry">
@@ -1585,10 +1597,13 @@
        <string notr="true">#arti_sdoe_main {background-color: rgba(96, 96, 96, 128);}</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::Shape::NoFrame</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Shadow::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
       </property>
       <widget class="QComboBox" name="arti_sdoe_name_main">
        <property name="geometry">
@@ -1844,10 +1859,13 @@
        <string notr="true">#arti_sdoe_type_area {background-color: rgba(128, 128, 128, 64);}</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::Shape::NoFrame</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Shadow::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
       </property>
       <widget class="QLabel" name="arti_sdoe_type_name">
        <property name="geometry">
@@ -2375,10 +2393,13 @@
        <string notr="true">#arti_gboe_type_area {background-color: rgba(128, 128, 128, 64);}</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::Shape::NoFrame</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Shadow::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
       </property>
       <widget class="QLabel" name="arti_gboe_type_name">
        <property name="geometry">
@@ -2446,10 +2467,13 @@
        <string notr="true">#arti_gboe_main {background-color: rgba(96, 96, 96, 128);}</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::Shape::NoFrame</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Shadow::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
       </property>
       <widget class="QComboBox" name="arti_gboe_name_main">
        <property name="geometry">
@@ -3193,10 +3217,13 @@
        <string notr="true">#arti_ccol_main {background-color: rgba(96, 96, 96, 128);}</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::Shape::NoFrame</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Shadow::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
       </property>
       <widget class="QComboBox" name="arti_ccol_name_main">
        <property name="geometry">
@@ -3378,10 +3405,13 @@
        <string notr="true">#arti_ccol_type_area {background-color: rgba(128, 128, 128, 64);}</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::Shape::NoFrame</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Shadow::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
       </property>
       <widget class="QLabel" name="arti_ccol_type_name">
        <property name="geometry">
