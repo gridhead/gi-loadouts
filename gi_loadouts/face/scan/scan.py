@@ -367,7 +367,7 @@ class Ui_scan:
         self.arti_back_icon.setToolTip(QCoreApplication.translate("scan", "Flower of Life", None))
 #endif // QT_CONFIG(tooltip)
         self.arti_back_icon.setText("")
-        self.arti_shot.setText(QCoreApplication.translate("scan", "YOUR ARTIFACT WILL SHOW HERE", None))
+        self.arti_shot.setText(QCoreApplication.translate("scan", "YOUR ARTIFACT SCREENSHOT WILL SHOW UP HERE", None))
 #if QT_CONFIG(tooltip)
         self.arti_cnvs_icon.setToolTip(QCoreApplication.translate("scan", "Flower of Life", None))
 #endif // QT_CONFIG(tooltip)
