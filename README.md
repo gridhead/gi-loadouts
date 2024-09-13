@@ -45,26 +45,26 @@
 
 <p align="center">
     This is a desktop application that allows travelers to manage their custom 
-    equipment of artifacts and weapons for playable characters, and to make it 
-    convenient for travelers to calculate the associated statistics based on their 
-    equipment using the semantic understanding of how the gameplay works. 
+    equipment of artifacts and weapons for playable characters and makes it 
+    convenient for travelers to calculate the associated statistics based on 
+    their equipment using the semantic understanding of how the gameplay works. 
     Travelers can create their bespoke loadouts consisting of characters, 
-    artifacts and weapons and share them with their fellow travelers. Supported 
+    artifacts and weapons and share them with their fellow travelers. Supported
     file formats include a human-readable Yet Another Markup Language (YAML) 
-    serialization format and in the near future, a JSON-based Genshin Open Object 
-    Definition (GOOD) serialization format.
+    serialization format and a JSON-based Genshin Open Object Definition (GOOD)
+    serialization format.
 </p>
 
 <p align="center">
-    This project is currently in its beta phase and we are committed to delivering 
-    a quality experience with every release we make. If you are excited about the 
-    direction of this project and want to contribute to the efforts, we would 
-    greatly appreciate it if you help us boost the project visibility by starring 
-    the project repository, address the fixing releases by reporting the 
-    experienced errors, choose the project direction by proposing the intended 
-    features, enhance the project usability by documenting the project repository, 
-    improve the project codebase by opening the pull requests and finally, persist 
-    our maintenance efforts by sponsoring the development members.
+    This project is currently in its beta phase and we are committed to 
+    delivering a quality experience with every release we make. If you are 
+    excited about the direction of this project and want to contribute to the 
+    efforts, we would greatly appreciate it if you help us boost the project 
+    visibility by starring the project repository, address the releases by 
+    reporting the experienced errors, choose the direction by proposing the 
+    intended features, enhance the usability by documenting the project 
+    repository, improve the codebase by opening the pull requests and finally, 
+    persist our efforts by sponsoring the development members.
 </p>
 
 ## Screenshots
