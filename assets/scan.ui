@@ -104,7 +104,10 @@
      <enum>QFrame::Shape::NoFrame</enum>
     </property>
     <property name="frameShadow">
-     <enum>QFrame::Shadow::Raised</enum>
+     <enum>QFrame::Shadow::Plain</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
     </property>
     <widget class="QLabel" name="arti_type_name">
      <property name="geometry">
@@ -388,7 +391,10 @@
      <enum>QFrame::Shape::NoFrame</enum>
     </property>
     <property name="frameShadow">
-     <enum>QFrame::Shadow::Raised</enum>
+     <enum>QFrame::Shadow::Plain</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
     </property>
     <widget class="QComboBox" name="arti_name_main">
      <property name="geometry">
@@ -807,9 +813,6 @@
       <height>30</height>
      </size>
     </property>
-    <property name="toolTip">
-     <string>Flower of Life</string>
-    </property>
     <property name="text">
      <string/>
     </property>
@@ -966,9 +969,6 @@
       <width>30</width>
       <height>30</height>
      </size>
-    </property>
-    <property name="toolTip">
-     <string>Flower of Life</string>
     </property>
     <property name="text">
      <string/>
