@@ -813,9 +813,6 @@
       <height>30</height>
      </size>
     </property>
-    <property name="toolTip">
-     <string>Flower of Life</string>
-    </property>
     <property name="text">
      <string/>
     </property>
@@ -972,9 +969,6 @@
       <width>30</width>
       <height>30</height>
      </size>
-    </property>
-    <property name="toolTip">
-     <string>Flower of Life</string>
     </property>
     <property name="text">
      <string/>
