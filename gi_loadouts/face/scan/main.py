@@ -1,3 +1,4 @@
+
 from gi_loadouts import __versdata__
 from gi_loadouts.face.scan.rule import Rule
 
