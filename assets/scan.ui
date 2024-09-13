@@ -897,7 +897,7 @@
      <string notr="true">#arti_shot {font: 10pt &quot;IBM Plex Sans&quot;; background-color: rgba(128, 128, 128, 128);}</string>
     </property>
     <property name="text">
-     <string>YOUR ARTIFACT WILL SHOW HERE</string>
+     <string>YOUR ARTIFACT SCREENSHOT WILL SHOW UP HERE</string>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
