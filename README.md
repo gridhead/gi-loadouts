@@ -16,16 +16,18 @@
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/github/watchers/gridhead/gi-loadouts?style=flat&logo=github&logoColor=ffffff&color=008080" alt="GitHub - Watchers">
-    <img src="https://img.shields.io/github/stars/gridhead/gi-loadouts?style=flat&logo=github&logoColor=ffffff&color=008080" alt="GitHub - Stars">
-    <img src="https://img.shields.io/github/forks/gridhead/gi-loadouts?style=flat&logo=github&logoColor=ffffff&color=008080" alt="GitHub - Forks">
-    <img src="https://img.shields.io/github/languages/top/gridhead/gi-loadouts?style=flat&logo=github&logoColor=ffffff&color=008080" alt="GitHub - Language">
-    <img src="https://img.shields.io/github/license/gridhead/gi-loadouts?style=flat&logo=github&logoColor=ffffff&color=008080" alt="GitHub - License">
-    <img src="https://img.shields.io/github/v/release/gridhead/gi-loadouts?style=flat&logo=github&logoColor=ffffff&color=008080" alt="GitHub - Release">
-    <img src="https://img.shields.io/github/repo-size/gridhead/gi-loadouts?style=flat&logo=github&logoColor=ffffff&color=008080" alt="GitHub - Size">
-    <img src="https://img.shields.io/github/commit-activity/m/gridhead/gi-loadouts?style=flat&logo=github&logoColor=ffffff&color=008080" alt="GitHub - Activity">
-    <img src="https://img.shields.io/github/contributors/gridhead/gi-loadouts?style=flat&logo=github&logoColor=ffffff&color=008080" alt="GitHub - Contributors">
-    <img src="https://img.shields.io/github/sponsors/gridhead?style=flat&logo=github&logoColor=ffffff&color=008080" alt="GitHub Sponsors - Akashdeep Dhar">
+    <a href="#">
+        <img src="https://img.shields.io/github/watchers/gridhead/gi-loadouts?style=flat&logo=github&logoColor=ffffff&color=008080" alt="GitHub - Watchers">
+        <img src="https://img.shields.io/github/stars/gridhead/gi-loadouts?style=flat&logo=github&logoColor=ffffff&color=008080" alt="GitHub - Stars">
+        <img src="https://img.shields.io/github/forks/gridhead/gi-loadouts?style=flat&logo=github&logoColor=ffffff&color=008080" alt="GitHub - Forks">
+        <img src="https://img.shields.io/github/languages/top/gridhead/gi-loadouts?style=flat&logo=github&logoColor=ffffff&color=008080" alt="GitHub - Language">
+        <img src="https://img.shields.io/github/license/gridhead/gi-loadouts?style=flat&logo=github&logoColor=ffffff&color=008080" alt="GitHub - License">
+        <img src="https://img.shields.io/github/v/release/gridhead/gi-loadouts?style=flat&logo=github&logoColor=ffffff&color=008080" alt="GitHub - Release">
+        <img src="https://img.shields.io/github/repo-size/gridhead/gi-loadouts?style=flat&logo=github&logoColor=ffffff&color=008080" alt="GitHub - Size">
+        <img src="https://img.shields.io/github/commit-activity/m/gridhead/gi-loadouts?style=flat&logo=github&logoColor=ffffff&color=008080" alt="GitHub - Activity">
+        <img src="https://img.shields.io/github/contributors/gridhead/gi-loadouts?style=flat&logo=github&logoColor=ffffff&color=008080" alt="GitHub - Contributors">
+        <img src="https://img.shields.io/github/sponsors/gridhead?style=flat&logo=github&logoColor=ffffff&color=008080" alt="GitHub Sponsors - Akashdeep Dhar">
+    </a>
 </p>
 
 <p align="center">
