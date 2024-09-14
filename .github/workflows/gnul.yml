@@ -44,6 +44,6 @@ jobs:
         with:
           name: gi-loadouts.gnul
           path: dist/gi-loadouts-*
-          retention-days: 90
-          compression-level: 2
+          retention-days: 2
+          compression-level: 9
           overwrite: true
