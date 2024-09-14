@@ -33,7 +33,6 @@ class Rule(QDialog, Ui_scan, Dialog):
         self.thread = None
         self.worker = None
         self.dialog = QMessageBox()
-
         self.dist = {
             "Flower of Life": {"list": MainStatType_FWOL, "part": "fwol"},
             "Plume of Death": {"list": MainStatType_PMOD, "part": "pmod"},
@@ -41,6 +40,21 @@ class Rule(QDialog, Ui_scan, Dialog):
             "Goblet of Eonothem": {"list": MainStatType_GBOE, "part": "gboe"},
             "Circlet of Logos": {"list": MainStatType_CCOL, "part": "ccol"},
         }
+
+    def __del__(self):
+        """
+        TODO: Fix `QThread: Destroyed while thread is still running`
+
+        This is not as much of a problem on faster CPUs but on slower ones, if an image is selected
+        for scanning and immediately after that the scanning dialog is dismissed and the application
+        is quit while the image is being processed in the optical character recognition section, the
+        application will not be happy if it is has to destroy the thread while it is still running.
+
+        This is not likely to cause major problems but still, this is not the right approach and
+        should be rectified at the earliest, no matter how small of a use-case this might be.
+        """
+        if isinstance(self.thread, QThread):
+            self.thread.terminate()
 
     def populate_dropdown(self) -> None:
         """
@@ -172,26 +186,24 @@ class Rule(QDialog, Ui_scan, Dialog):
                 item.levl, item.rare, item.stat_name = levl.value.levl, rare.value.qant, stat
                 self.arti_data_main.setText(f"{round(item.stat_data, 1)}")
 
-    def kick_thread(self) -> None:
+    def initiate_thread(self) -> None:
         """
         Kick things up after the thread has achieved its purpose
 
         :return:
         """
         self.arti_text.setText("Inspecting screenshot...")
-        # self.worker.scan_artifact()
 
-    def wipe_thread(self, rslt) -> None:
+    def complete_thread(self) -> None:
         """
         Wipe things up after the thread has achieved its purpose
 
         :return:
         """
-        print("thread_cleanup INTO")
         self.arti_text.setText("Browse your local storage to load a high quality screenshot of your artifact and the statistics will automatically be computed from there.")
-        # self.register_return_from_scanning(rslt)
-        self.thread.quit()
-        self.thread.wait()
+        if isinstance(self.thread, QThread):
+            self.thread.quit()
+            self.thread.wait()
 
     def load_reader(self) -> None:
         """
@@ -200,14 +212,17 @@ class Rule(QDialog, Ui_scan, Dialog):
         :return:
         """
         try:
-            self.shot, self.snap = file.load_screenshot(self, "Select location to load artifact screenshot")
+            status, self.shot, self.snap = file.load_screenshot(self, "Select location to load artifact screenshot")
 
-            self.thread, self.worker = QThread(), ScanWorker(self.snap)
+            if not status:
+                return
+
+            self.thread, self.worker = QThread(parent=self), ScanWorker(self.snap)
             self.worker.moveToThread(self.thread)
-            self.thread.started.connect(self.kick_thread)
+            self.thread.started.connect(self.initiate_thread)
             self.thread.started.connect(self.worker.scan_artifact)
             self.worker.result.connect(self.register_return_from_scanning)
-            self.worker.result.connect(self.wipe_thread)
+            self.worker.result.connect(self.complete_thread)
             self.thread.start()
         except Exception as expt:
             self.show_dialog(
@@ -222,7 +237,6 @@ class Rule(QDialog, Ui_scan, Dialog):
 
         :return:
         """
-        print("register_return_from_scanning", rslt)
         self.arti_shot.setPixmap(self.shot)
         area, main, seco, team, levl, rare, duration = rslt
         if area in [self.arti_dist.itemText(indx) for indx in range(self.arti_dist.count())]:
@@ -247,7 +261,9 @@ class Rule(QDialog, Ui_scan, Dialog):
         :return:
         """
         try:
-            conf.tessexec = file.load_tessexec(self, "Select location of the Tesseract OCR executable")
+            status, tessexec = file.load_tessexec(self, "Select location of the Tesseract OCR executable")
+            if status:
+                conf.tessexec = tessexec
         except Exception as expt:
             self.show_dialog(
                 QMessageBox.Information,

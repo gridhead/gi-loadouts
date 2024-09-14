@@ -150,5 +150,4 @@ class ScanWorker(QObject):
 
         rslt = area, main, seco, team, levl, rare, (stoptime - strttime)
 
-        print("scan_artifact", rslt)
         self.result.emit(rslt)
