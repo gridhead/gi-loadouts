@@ -10,6 +10,7 @@ jobs:
   ci-make-gnul:
 
     runs-on: ubuntu-latest
+    container: fedorapython/fedora-python-tox:latest
 
     strategy:
       fail-fast: false

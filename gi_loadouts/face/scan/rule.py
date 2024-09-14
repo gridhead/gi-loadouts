@@ -261,4 +261,4 @@ class Rule(QDialog, Ui_scan, Dialog):
 
         :return:
         """
-        self.arti_shot.setText("YOUR ARTIFACT WILL SHOW HERE")
+        self.arti_shot.setText("YOUR ARTIFACT SCREENSHOT WILL SHOW UP HERE")
