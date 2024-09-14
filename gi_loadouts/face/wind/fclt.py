@@ -8,6 +8,7 @@ from PySide6.QtWidgets import QMessageBox
 from gi_loadouts.data.arti import ArtiList
 from gi_loadouts.face.wind.file import file
 from gi_loadouts.face.wind.talk import Dialog
+from gi_loadouts.face.wind.util import show_status
 from gi_loadouts.type.arti import ArtiLevl
 from gi_loadouts.type.file.arti import (
     ArtiArea,
@@ -73,7 +74,8 @@ class Facility(Dialog):
                 f"{getattr(self, f"arti_{part}_type").currentText().strip().replace(" ", "").replace("'", "").replace("-", "")}_{uuid4().hex[0:8].upper()}_{datetime.now().strftime("%Y%m%d_%H%M%S")}.{part}",
                 objc,
             )
-            self.statarea.showMessage("Artifact data has been successfully saved.")
+
+            show_status(self.statarea, "Artifact data has been successfully saved.")
 
         except Exception as expt:
             self.show_dialog(
@@ -115,7 +117,8 @@ class Facility(Dialog):
                 f"{uuid4().hex[0:8].upper()}_{datetime.now().strftime("%Y%m%d_%H%M%S")}",
                 objc,
             )
-            self.statarea.showMessage("Artifact set has been successfully saved.")
+
+            show_status(self.statarea, "Artifact set has been successfully saved.")
 
         except Exception as expt:
             self.show_dialog(
@@ -147,7 +150,8 @@ class Facility(Dialog):
                     f"{objc.name.strip().replace(" ", "").replace("\"", "").replace("-", "").replace("'", "")}_{uuid4().hex[0:8].upper()}_{datetime.now().strftime("%Y%m%d_%H%M%S")}",
                     objc,
                 )
-                self.statarea.showMessage("Weapon data has been successfully saved.")
+
+                show_status(self.statarea, "Weapon data has been successfully saved.")
 
         except Exception as expt:
             self.show_dialog(
@@ -203,7 +207,7 @@ class Facility(Dialog):
                 else:
                     raise ValueError("Artifact stat cannot be identified.")
 
-            self.statarea.showMessage("Artifact data has been successfully loaded.")
+            show_status(self.statarea, "Artifact data has been successfully loaded.")
 
         except Exception as expt:
             self.show_dialog(
@@ -260,7 +264,7 @@ class Facility(Dialog):
                     else:
                         raise ValueError("Artifact stat cannot be identified.")
 
-            self.statarea.showMessage("Artifact set has been successfully loaded.")
+            show_status(self.statarea, "Artifact set has been successfully loaded.")
 
         except Exception as expt:
             self.show_dialog(
@@ -314,7 +318,7 @@ class Facility(Dialog):
                 raise ValueError("Weapon refinement cannot be parsed.")
             self.weap_area_refn.setCurrentText(weap.refn)
 
-            self.statarea.showMessage("Weapon data has been successfully loaded.")
+            show_status(self.statarea, "Weapon data has been successfully loaded.")
 
         except Exception as expt:
             self.show_dialog(
