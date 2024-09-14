@@ -46,27 +46,24 @@
 </p>
 
 <p align="center">
-    This is a desktop application that allows travelers to manage their custom 
-    equipment of artifacts and weapons for playable characters and makes it 
-    convenient for travelers to calculate the associated statistics based on 
-    their equipment using the semantic understanding of how the gameplay works. 
-    Travelers can create their bespoke loadouts consisting of characters, 
-    artifacts and weapons and share them with their fellow travelers. Supported
-    file formats include a human-readable Yet Another Markup Language (YAML) 
-    serialization format and a JSON-based Genshin Open Object Definition (GOOD)
-    serialization format.
+    This is a desktop application that allows travelers to manage their custom equipment of 
+    artifacts and weapons for playable characters and makes it convenient for travelers to 
+    calculate the associated statistics based on their equipment using the semantic understanding 
+    of how the gameplay works. Travelers can create their bespoke loadouts consisting of 
+    characters, artifacts and weapons and share them with their fellow travelers. Supported file
+    formats include a human-readable <b>Yet Another Markup Language (YAML)</b> serialization 
+    format and a JSON-based <b>Genshin Open Object Definition (GOOD)</b> serialization format.
 </p>
 
 <p align="center">
-    This project is currently in its beta phase and we are committed to 
-    delivering a quality experience with every release we make. If you are 
-    excited about the direction of this project and want to contribute to the 
-    efforts, we would greatly appreciate it if you help us boost the project 
-    visibility by starring the project repository, address the releases by 
-    reporting the experienced errors, choose the direction by proposing the 
-    intended features, enhance the usability by documenting the project 
-    repository, improve the codebase by opening the pull requests and finally, 
-    persist our efforts by sponsoring the development members.
+    This project is currently in its beta phase and we are committed to delivering a quality 
+    experience with every release we make. If you are excited about the direction of this project 
+    and want to contribute to the efforts, we would greatly appreciate it if you help us boost the 
+    project visibility by <b>starring the project repository</b>, address the releases by 
+    <b>reporting the experienced errors</b>, choose the direction by <b>proposing the intended 
+    features</b>, enhance the usability by <b>documenting the project repository</b>, improve the 
+    codebase by <b>opening the pull requests</b> and finally, persist our efforts by <b>sponsoring 
+    the development members</b>.
 </p>
 
 ## Screenshots
@@ -159,17 +156,17 @@ ensure that the Tesseract OCR application is installed and configured properly.
     that was selected previously.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_char_name.png)
 
-3.  Select the [*level*](https://genshin-impact.fandom.com/wiki/Character_EXP) 
-    of the [*character*](https://genshin-impact.fandom.com/wiki/Character) 
-    experience from the dropdown menu and the statistics of the character 
-    will be calculated automatically.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_char_levl.png)
-
-4.  Select the [*level*](https://genshin-impact.fandom.com/wiki/Constellation) 
+3.  Select the [*level*](https://genshin-impact.fandom.com/wiki/Constellation) 
     of the [*character*](https://genshin-impact.fandom.com/wiki/Character) 
     constellation from the dropdown menu and statistics of the character will 
     be calculated automatically.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_char_cons.png)
+
+4.  Select the [*level*](https://genshin-impact.fandom.com/wiki/Character_EXP) 
+    of the [*character*](https://genshin-impact.fandom.com/wiki/Character) 
+    experience from the dropdown menu and the statistics of the character 
+    will be calculated automatically.  
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_char_levl.png)
 
 5.  Quickly switch over to either of the 
     [*travelers*](https://genshin-impact.fandom.com/wiki/Traveler), **Lumine** 
@@ -189,17 +186,17 @@ ensure that the Tesseract OCR application is installed and configured properly.
     your choice from the dropdown menu that you want to equip.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_weap_name.png)
 
-8.  Select the [*level*](https://genshin-impact.fandom.com/wiki/Weapon_EXP) 
-    of the [*weapon*](https://genshin-impact.fandom.com/wiki/Weapon) 
-    experience from the dropdown menu and the statistics of the weapon like 
-    will be calculated automatically.  
-    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_weap_levl.png)
-
-9.  Select the [*rank*](https://genshin-impact.fandom.com/wiki/Refinement_Rank)
+8.  Select the [*rank*](https://genshin-impact.fandom.com/wiki/Refinement_Rank)
     of the [*weapon*](https://genshin-impact.fandom.com/wiki/Weapon) 
     refinement from the dropdown menu and the statistics of the weapon will 
     be calculated automatically.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_weap_refn.png)
+
+9.  Select the [*level*](https://genshin-impact.fandom.com/wiki/Weapon_EXP) 
+    of the [*weapon*](https://genshin-impact.fandom.com/wiki/Weapon) 
+    experience from the dropdown menu and the statistics of the weapon like 
+    will be calculated automatically.  
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_weap_levl.png)
 
 10. Load the [*weapon*](https://genshin-impact.fandom.com/wiki/Weapon) 
     equipment from your local storage by using the **LOAD** button beside the 
