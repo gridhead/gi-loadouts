@@ -7,3 +7,4 @@ else:
 
 tempname = ""
 temppath = ""
+stattime = 5000

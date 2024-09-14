@@ -12,6 +12,7 @@ from gi_loadouts.face.scan.main import ScanDialog
 from gi_loadouts.face.util import modify_graphics_resource, truncate_text
 from gi_loadouts.face.wind.calc import Assess
 from gi_loadouts.face.wind.fclt import Facility
+from gi_loadouts.face.wind.util import show_status
 from gi_loadouts.face.wind.wind import Ui_mainwind
 from gi_loadouts.type import arti
 from gi_loadouts.type.arti import ArtiLevl, Collection, __artistat__
@@ -407,7 +408,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             _ = float(text)
             self.statarea.clearMessage()
         except ValueError:
-            self.statarea.showMessage("Please enter a valid input (eg. 69, 42.0 etc.)")
+            show_status(self.statarea, "Please enter a valid input (eg. 69, 42.0 etc.).")
 
     def wipe_artifact(self, part: str) -> None:
         """
