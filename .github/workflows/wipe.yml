@@ -1,5 +1,5 @@
 ---
-name: Manage artifacts to retain four recent artifacts
+name: Managing artifacts to retain four recent artifacts
 on: [push]
 jobs:
   ci-wipe:

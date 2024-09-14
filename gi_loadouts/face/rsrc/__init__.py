@@ -23,7 +23,7 @@ def make_temp_file() -> None:
     Remove the residual cache data from the temporary directory left over during previous sessions
     due to unsuccessful termination before instantiating the same for this session.
     """
-    ptrn = r"gi-loadouts-[A-Za-z0-9]+\.traineddata"
+    ptrn = r"gi-loadouts-[a-z0-9_]+\.traineddata"
     temp = Path(gettempdir())
     resi = [temp / file.name for file in temp.iterdir() if file.is_file() if match(ptrn, file.name)]
     _ = [os.remove(file) for file in resi if file.exists()]
