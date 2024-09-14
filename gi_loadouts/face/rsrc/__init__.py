@@ -1,6 +1,8 @@
+import os
 from os import path, remove
 from pathlib import Path
-from tempfile import NamedTemporaryFile
+from re import match
+from tempfile import NamedTemporaryFile, gettempdir
 
 from PySide6.QtCore import QFile, QIODevice
 
@@ -16,13 +18,22 @@ def make_temp_file() -> None:
 
     :return:
     """
-    file = QFile(":data/data/best.traineddata")
 
+    """
+    Remove the residual cache data from the temporary directory left over during previous sessions
+    due to unsuccessful termination before instantiating the same for this session.
+    """
+    ptrn = r"gi-loadouts-[A-Za-z0-9]+\.traineddata"
+    temp = Path(gettempdir())
+    resi = [temp / file.name for file in temp.iterdir() if file.is_file() if match(ptrn, file.name)]
+    _ = [os.remove(file) for file in resi if file.exists()]
+
+    file = QFile(":data/data/best.traineddata")
     if not file.open(QIODevice.ReadOnly):
         raise FileNotFoundError("Training data for Tesseract OCR could not be initialized.")
-
     cont = file.readAll()
     file.close()
+
     """
     When a file is marked for deletion on Windows, the file cannot be reliably opened. Therefore,
     the context manager protocol for `NamedTemporaryFile` cannot be used here. The temporary file
