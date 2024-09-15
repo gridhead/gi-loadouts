@@ -1,7 +1,7 @@
 from typing import Optional
 
 from gi_loadouts.type.arti.base import Artifact, MainStatType_CCOL, SecoStat
-from gi_loadouts.type.arti.base.stat import (
+from gi_loadouts.type.arti.stat import (
     attack_perc,
     critical_damage_perc,
     critical_rate_perc,
