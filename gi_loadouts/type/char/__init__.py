@@ -181,8 +181,6 @@ class Char(BaseModel):
 class BaseStat(BaseModel):
     """
     Base stats of a character
-
-    SUSPECTED TO BE RESIDUAL CODE
     """
     attack: float = 0.0
     defense: float = 0.0
