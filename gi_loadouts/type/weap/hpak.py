@@ -1,6 +1,6 @@
 from gi_loadouts.type.rank import Rank
 from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.weap.base.tier import Tier
+from gi_loadouts.type.weap.tier import Tier
 
 HPAK = {
     Rank.Rank_0: {
