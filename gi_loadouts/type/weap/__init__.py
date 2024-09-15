@@ -6,9 +6,9 @@ from pydantic import BaseModel
 from gi_loadouts.type.levl import Level
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.stat import STAT
-from gi_loadouts.type.weap.base.ascn import Ascn
-from gi_loadouts.type.weap.base.mult import Mult, MultSeco
-from gi_loadouts.type.weap.base.tier import Tier
+from gi_loadouts.type.weap.ascn import Ascn
+from gi_loadouts.type.weap.mult import Mult, MultSeco
+from gi_loadouts.type.weap.tier import Tier
 
 
 class WeaponStatType(Enum):
