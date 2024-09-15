@@ -1,7 +1,7 @@
 from typing import Optional
 
 from gi_loadouts.type.arti.base import Artifact, MainStatType_SDOE, SecoStat
-from gi_loadouts.type.arti.base.stat import (
+from gi_loadouts.type.arti.stat import (
     attack_perc,
     defense_perc,
     elemental_mastery,
