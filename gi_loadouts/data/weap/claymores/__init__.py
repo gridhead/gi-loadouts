@@ -37,7 +37,7 @@ from gi_loadouts.data.weap.claymores import (
     wtbd,
 )
 
-ClaymoreDict = {
+ClaymoresDict = {
     akmr.Akuoumaru().name: akmr.Akuoumaru(),
     bors.BeaconOfTheReedSea().name: bors.BeaconOfTheReedSea(),
     bcsh.BlackcliffSlasher().name: bcsh.BlackcliffSlasher(),
