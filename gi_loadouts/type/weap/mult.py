@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
 from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.weap.base.tier import Tier
+from gi_loadouts.type.weap.tier import Tier
 
 
 class MultTier(BaseModel):

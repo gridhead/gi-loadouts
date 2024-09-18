@@ -1,7 +1,7 @@
 from typing import Optional
 
 from gi_loadouts.type.arti.base import Artifact, MainStatType_FWOL, SecoStat
-from gi_loadouts.type.arti.base.stat import health_points
+from gi_loadouts.type.arti.stat import health_points
 
 
 class FWOL(Artifact):

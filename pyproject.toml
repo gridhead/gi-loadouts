@@ -52,6 +52,7 @@ select = ["E", "F", "W", "I", "S", "B", "UP"]
 
 [tool.ruff.lint.per-file-ignores]
 "gi_loadouts/*" = ["E501"]
+"test/*" = ["S101", "E501"]
 
 [build-system]
 requires = ["poetry-core"]
