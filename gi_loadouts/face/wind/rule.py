@@ -158,7 +158,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.weap_area_refn.clear()
             self.weap_area_refn_head.setText("No refinements available.")
             self.weap_area_refn_body.setText("No refinements available.")
-            self.weap_area_stat.setText("No substats.")
+            self.weap_area_stat.setText("No substats")
             weap = Family[kind][name]
             self.weap_area_levl.addItems([item.value.name for item in weap.levl_bind])
             self.weap_area_refn.addItems(item for item in weap.refinement.keys())
