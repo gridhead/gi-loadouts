@@ -241,7 +241,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
                 rare = getattr(Rare, droprare.currentText().replace(" ", "_"))
                 stat = getattr(arti, f"revmap_{part}")[dropstat.currentText().strip()]
                 item = getattr(team.value, part)
-                item.levl, item.rare, item.stat_name = levl.value.levl, rare.value.qant, stat
+                item.rare, item.levl, item.stat_name = rare.value.qant, levl.value.levl, stat
                 statdata.setText(f"{round(item.stat_data, 1)}")
 
     def change_artifact_team_by_changing_type(self, droptype: QComboBox, part: str) -> None:

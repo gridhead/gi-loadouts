@@ -36,9 +36,6 @@ class Facility(Dialog):
         :return:
         """
         try:
-            if getattr(self, f"arti_{part}_type").currentText().strip() == "":
-                raise ValueError("Artifact type cannot be identified.")
-
             objc = ArtiFile(
                 type=getattr(ArtiList, getattr(self, f"arti_{part}_type").currentText().strip().replace(" ", "_").replace("'", "").replace("-", "_")),
                 levl=getattr(ArtiLevl, getattr(self, f"arti_{part}_levl").currentText().strip().replace(" ", "_")),
@@ -94,8 +91,6 @@ class Facility(Dialog):
             objc = TeamFile()
             arealist = ["fwol", "pmod", "sdoe", "gboe", "ccol"]
             for part in arealist:
-                if getattr(self, f"arti_{part}_type").currentText().strip() == "":
-                    raise ValueError("Artifact type cannot be identified.")
                 unit = ArtiFile(
                     type=getattr(ArtiList, getattr(self, f"arti_{part}_type").currentText().strip().replace(" ", "_").replace("'", "").replace("-", "_")),
                     levl=getattr(ArtiLevl, getattr(self, f"arti_{part}_levl").currentText().strip().replace(" ", "_")),
@@ -186,9 +181,6 @@ class Facility(Dialog):
                 objc = json.loads(data)
                 arti = make_artifile_from_good(objc)
 
-            if arti.area.value != part.upper():
-                raise ValueError("Artifact area cannot be identified.")
-
             droptype = getattr(self, f"arti_{part}_type")
             droptype.setCurrentText(arti.type.value.name)
             droprare = getattr(self, f"arti_{part}_rare")
@@ -243,9 +235,6 @@ class Facility(Dialog):
 
             for part in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
                 arti = getattr(team, part)
-                if arti.area.value != part.upper():
-                    raise ValueError("Artifact area cannot be identified.")
-
                 droptype = getattr(self, f"arti_{part}_type")
                 droptype.setCurrentText(arti.type.value.name)
                 droprare = getattr(self, f"arti_{part}_rare")
