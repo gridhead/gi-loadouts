@@ -450,7 +450,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         :return:
         """
         self.infoobjc = InfoDialog()
-        self.infoobjc.exec()
+        self.infoobjc.show()
 
     def show_lcns_dialog(self) -> None:
         """
@@ -459,7 +459,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         :return:
         """
         self.lcnsobjc = LcnsDialog()
-        self.lcnsobjc.exec()
+        self.lcnsobjc.show()
 
     def show_scan_dialog(self, part: str) -> None:
         """
