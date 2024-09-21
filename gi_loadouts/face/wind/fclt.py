@@ -297,9 +297,6 @@ class Facility(Dialog):
                 raise ValueError("Weapon name cannot be identified.")
             self.weap_area_name.setCurrentText(weap.name)
 
-            levllist = [self.weap_area_levl.itemText(indx) for indx in range(self.weap_area_levl.count())]
-            if weap.levl.value.name not in levllist:
-                raise ValueError("Weapon level cannot be parsed.")
             self.weap_area_levl.setCurrentText(weap.levl.value.name)
 
             refnlist = [self.weap_area_refn.itemText(indx) for indx in range(self.weap_area_refn.count())]
