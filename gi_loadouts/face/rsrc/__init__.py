@@ -26,7 +26,13 @@ def make_temp_file() -> None:
     ptrn = r"gi-loadouts-[a-z0-9_]+\.traineddata"
     temp = Path(gettempdir())
     resi = [temp / file.name for file in temp.iterdir() if file.is_file() if match(ptrn, file.name)]
-    _ = [os.remove(file) for file in resi if file.exists()]
+
+    for file in resi:
+        if file.exists():
+            try:
+                os.remove(file)
+            except FileNotFoundError:
+                continue
 
     file = QFile(":data/data/best.traineddata")
     if not file.open(QIODevice.ReadOnly):
