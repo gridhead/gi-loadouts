@@ -1,4 +1,3 @@
-import os
 from os import path, remove
 from pathlib import Path
 from re import match
@@ -30,7 +29,7 @@ def make_temp_file() -> None:
     for file in resi:
         if file.exists():
             try:
-                os.remove(file)
+                remove(file)
             except FileNotFoundError:
                 continue
 

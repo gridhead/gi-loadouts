@@ -1,8 +1,12 @@
+from os import path, remove
+from pathlib import Path
 from random import choice, uniform
+from tempfile import NamedTemporaryFile, gettempdir
+from uuid import uuid4
 
 import pytest
 from PySide6.QtCore import Qt
-from PySide6.QtWidgets import QMessageBox
+from PySide6.QtWidgets import QFileDialog, QMessageBox
 
 from gi_loadouts.data.arti import __artilist__
 from gi_loadouts.face.util import truncate_text
@@ -356,3 +360,213 @@ def test_arti_load_name(runner, qtbot, mocker, area, sample, type) -> None:
     assert "Please confirm that the artifact data follows the valid format before loading it from a location that is accessible." in runner.dialog.text()
     assert "Artifact stat cannot be identified." in runner.dialog.text()
     assert runner.dialog.isVisible()
+
+
+@pytest.mark.parametrize(
+    "area",
+    [
+        pytest.param("fwol", id="face.wind.rule: Saving an artifact from 'Flower of Life' area actually as a YAML file"),
+        pytest.param("pmod", id="face.wind.rule: Saving an artifact from 'Plume of Death' area actually as a YAML file"),
+        pytest.param("sdoe", id="face.wind.rule: Saving an artifact from 'Sands of Eon' area actually as a YAML file"),
+        pytest.param("gboe", id="face.wind.rule: Saving an artifact from 'Goblet of Eonothem' area actually as a YAML file"),
+        pytest.param("ccol", id="face.wind.rule: Saving an artifact from 'Circlet of Logos' area actually as a YAML file"),
+    ]
+)
+def test_arti_save_yaml_actual(runner, qtbot, mocker, area) -> None:
+    """
+    Attempt saving an artifact across five areas
+
+    :return:
+    """
+    conf = dict()
+
+    """
+    Set the user interface elements as intended
+    """
+    name = choice([item for item in __artilist__.keys() if item != "None"])
+    getattr(runner, f"arti_{area}_type").setCurrentText(name)
+    conf["rare"] = choice([item for item in __artilist__[name].rare])
+    getattr(runner, f"arti_{area}_rare").setCurrentText(conf["rare"].value.name)
+    conf["levl"] = choice([item for item in ArtiLevl if conf["rare"] in item.value.rare])
+    getattr(runner, f"arti_{area}_levl").setCurrentText(conf["levl"].value.name)
+    conf["stat"] = choice([item for item in getattr(base, f"MainStatType_{area.upper()}") if item.value != STAT.none])
+    getattr(runner, f"arti_{area}_name_main").setCurrentText(conf["stat"].value.value)
+    for indx in ["a", "b", "c", "d"]:
+        getattr(runner, f"arti_{area}_data_{indx}").setText(str(round(uniform(0, 100), 2)))
+
+    """
+    Perform the action of saving the artifact information
+    """
+    extn = ".yaml"
+
+    """
+    Without extension
+    """
+    temp = str(Path(gettempdir()) / uuid4().hex[0:8].upper())
+    mocker.patch.object(QFileDialog, "getSaveFileName", return_value=(temp, yaml_type))
+    qtbot.mouseClick(getattr(runner, f"arti_{area}_save"), Qt.LeftButton)
+    if path.exists(temp + extn):
+        remove(temp + extn)
+
+    """
+    Confirm if the user interface elements change accordingly
+    """
+    assert runner.statarea.currentMessage() == "Artifact data has been successfully saved."
+
+    """
+    With extension
+    """
+    temp = str(Path(gettempdir()) / uuid4().hex[0:8].upper()) + extn
+    mocker.patch.object(QFileDialog, "getSaveFileName", return_value=(temp, yaml_type))
+    qtbot.mouseClick(getattr(runner, f"arti_{area}_save"), Qt.LeftButton)
+    if path.exists(temp):
+        remove(temp)
+
+    """
+    Confirm if the user interface elements change accordingly
+    """
+    assert runner.statarea.currentMessage() == "Artifact data has been successfully saved."
+
+
+@pytest.mark.parametrize(
+    "area",
+    [
+        pytest.param("fwol", id="face.wind.rule: Saving an artifact from 'Flower of Life' area actually as a JSON file"),
+        pytest.param("pmod", id="face.wind.rule: Saving an artifact from 'Plume of Death' area actually as a JSON file"),
+        pytest.param("sdoe", id="face.wind.rule: Saving an artifact from 'Sands of Eon' area actually as a JSON file"),
+        pytest.param("gboe", id="face.wind.rule: Saving an artifact from 'Goblet of Eonothem' area actually as a JSON file"),
+        pytest.param("ccol", id="face.wind.rule: Saving an artifact from 'Circlet of Logos' area actually as a JSON file"),
+    ]
+)
+def test_arti_save_json_actual(runner, qtbot, mocker, area) -> None:
+    """
+    Attempt saving an artifact across five areas
+
+    :return:
+    """
+    conf = dict()
+
+    """
+    Set the user interface elements as intended
+    """
+    name = choice([item for item in __artilist__.keys() if item != "None"])
+    getattr(runner, f"arti_{area}_type").setCurrentText(name)
+    conf["rare"] = choice([item for item in __artilist__[name].rare])
+    getattr(runner, f"arti_{area}_rare").setCurrentText(conf["rare"].value.name)
+    conf["levl"] = choice([item for item in ArtiLevl if conf["rare"] in item.value.rare])
+    getattr(runner, f"arti_{area}_levl").setCurrentText(conf["levl"].value.name)
+    conf["stat"] = choice([item for item in getattr(base, f"MainStatType_{area.upper()}") if item.value != STAT.none])
+    getattr(runner, f"arti_{area}_name_main").setCurrentText(conf["stat"].value.value)
+    for indx in ["a", "b", "c", "d"]:
+        getattr(runner, f"arti_{area}_data_{indx}").setText(str(round(uniform(0, 100), 2)))
+
+    """
+    Perform the action of saving the artifact information
+    """
+    extn = ".json"
+
+    """
+    Without extension
+    """
+    temp = str(Path(gettempdir()) / uuid4().hex[0:8].upper())
+    mocker.patch.object(QFileDialog, "getSaveFileName", return_value=(temp, json_type))
+    qtbot.mouseClick(getattr(runner, f"arti_{area}_save"), Qt.LeftButton)
+    if path.exists(temp + extn):
+        remove(temp + extn)
+
+    """
+    Confirm if the user interface elements change accordingly
+    """
+    assert runner.statarea.currentMessage() == "Artifact data has been successfully saved."
+
+    """
+    With extension
+    """
+    temp = str(Path(gettempdir()) / uuid4().hex[0:8].upper()) + extn
+    mocker.patch.object(QFileDialog, "getSaveFileName", return_value=(temp, json_type))
+    qtbot.mouseClick(getattr(runner, f"arti_{area}_save"), Qt.LeftButton)
+    if path.exists(temp):
+        remove(temp)
+
+    """
+    Confirm if the user interface elements change accordingly
+    """
+    assert runner.statarea.currentMessage() == "Artifact data has been successfully saved."
+
+
+@pytest.mark.parametrize(
+    "area, sample",
+    [
+        pytest.param("fwol", yaml_fwol_sample, id="face.wind.rule: Loading an artifact from 'Flower of Life' area actually as a YAML file"),
+        pytest.param("pmod", yaml_pmod_sample, id="face.wind.rule: Loading an artifact from 'Plume of Death' area actually as a YAML file"),
+        pytest.param("sdoe", yaml_sdoe_sample, id="face.wind.rule: Loading an artifact from 'Sands of Eon' area actually as a YAML file"),
+        pytest.param("gboe", yaml_gboe_sample, id="face.wind.rule: Loading an artifact from 'Goblet of Eonothem' area actually as a YAML file"),
+        pytest.param("ccol", yaml_ccol_sample, id="face.wind.rule: Loading an artifact from 'Circlet of Logos' area actually as a YAML file"),
+    ]
+)
+def test_arti_load_yaml_actual(runner, qtbot, mocker, area, sample) -> None:
+    """
+    Attempt loading an artifact across five areas
+
+    :return:
+    """
+
+    """
+    Perform the action of loading the artifact information
+    """
+    extn = ".yaml"
+    temp = NamedTemporaryFile(prefix="gi-loadouts-", suffix=extn, delete=False, mode="w")
+    temp.write(sample)
+    temp.close()
+
+    mocker.patch.object(QFileDialog, "getOpenFileName", return_value=(temp.name, yaml_type))
+    qtbot.mouseClick(getattr(runner, f"arti_{area}_load"), Qt.LeftButton)
+
+    """
+    Confirm if the user interface elements change accordingly
+    """
+    assert runner.statarea.currentMessage() == "Artifact data has been successfully loaded."
+
+    """
+    Cleanup the temporary files
+    """
+    remove(temp.name)
+
+
+@pytest.mark.parametrize(
+    "area, sample",
+    [
+        pytest.param("fwol", json_fwol_sample, id="face.wind.rule: Loading an artifact from 'Flower of Life' area actually as a JSON file"),
+        pytest.param("pmod", json_pmod_sample, id="face.wind.rule: Loading an artifact from 'Plume of Death' area actually as a JSON file"),
+        pytest.param("sdoe", json_sdoe_sample, id="face.wind.rule: Loading an artifact from 'Sands of Eon' area actually as a JSON file"),
+        pytest.param("gboe", json_gboe_sample, id="face.wind.rule: Loading an artifact from 'Goblet of Eonothem' area actually as a JSON file"),
+        pytest.param("ccol", json_ccol_sample, id="face.wind.rule: Loading an artifact from 'Circlet of Logos' area actually as a JSON file"),
+    ]
+)
+def test_arti_load_json_actual(runner, qtbot, mocker, area, sample) -> None:
+    """
+    Attempt loading an artifact across five areas
+
+    :return:
+    """
+
+    """
+    Perform the action of loading the artifact information
+    """
+    extn = ".json"
+    temp = NamedTemporaryFile(prefix="gi-loadouts-", suffix=extn, delete=False, mode="w")
+    temp.write(sample)
+    temp.close()
+
+    mocker.patch.object(QFileDialog, "getOpenFileName", return_value=(temp.name, json_type))
+    qtbot.mouseClick(getattr(runner, f"arti_{area}_load"), Qt.LeftButton)
+
+    """
+    Confirm if the user interface elements change accordingly
+    """
+    assert runner.statarea.currentMessage() == "Artifact data has been successfully loaded."
+
+    """
+    Cleanup the temporary files
+    """
+    remove(temp.name)

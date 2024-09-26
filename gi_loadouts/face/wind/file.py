@@ -4,13 +4,15 @@ import yaml
 from PySide6.QtWidgets import QFileDialog
 
 from gi_loadouts.type.file.arti import ArtiFile
+from gi_loadouts.type.file.team import TeamFile
+from gi_loadouts.type.file.weap import WeapFile
 
 
 class FileHandling:
     def __init__(self):
         super().__init__()
 
-    def save(self, prnt, head: str, path: str, data: ArtiFile) -> bool:
+    def save(self, prnt, head: str, path: str, data: ArtiFile | TeamFile | WeapFile) -> bool:
         """
         Handle file operations involved in saving data to the storage device
 
