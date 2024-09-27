@@ -1,6 +1,11 @@
+from os import path, remove
+from pathlib import Path
+from tempfile import NamedTemporaryFile, gettempdir
+from uuid import uuid4
+
 import pytest
 from PySide6.QtCore import Qt
-from PySide6.QtWidgets import QMessageBox
+from PySide6.QtWidgets import QFileDialog, QMessageBox
 
 from gi_loadouts.face.wind import file
 from test import json_type, yaml_type
@@ -343,3 +348,215 @@ def test_team_load_name(runner, qtbot, mocker, sample, type) -> None:
     assert "Please confirm that the artifact set follows the valid format before loading it from a location that is accessible." in runner.dialog.text()
     assert "Artifact stat cannot be identified." in runner.dialog.text()
     assert runner.dialog.isVisible()
+
+
+@pytest.mark.parametrize(
+    "_",
+    [
+        pytest.param(None, id="face.wind.rule: Saving an artifact collection as a YAML file")
+    ]
+)
+def test_team_save_yaml_actual(runner, qtbot, mocker, _) -> None:
+    """
+    Attempt saving an artifact across five areas as a YAML file
+
+    :return:
+    """
+
+    """
+    Set the user interface elements as intended
+    """
+    for area, data in actual.items():
+        getattr(runner, f"arti_{area}_type").setCurrentText(data["type"])
+        getattr(runner, f"arti_{area}_rare").setCurrentText(data["rare"])
+        getattr(runner, f"arti_{area}_levl").setCurrentText(data["levl"])
+        getattr(runner, f"arti_{area}_name_main").setCurrentText(data["main"])
+        for item, stat in data["stat"].items():
+            getattr(runner, f"arti_{area}_name_{item}").setCurrentText(stat["name"])
+            getattr(runner, f"arti_{area}_data_{item}").setText(str(stat["data"]))
+
+    """
+    Perform the action of saving the artifact information
+    """
+    extn = ".yaml"
+
+    """
+    Without extension
+    """
+    temp = str(Path(gettempdir()) / uuid4().hex[0:8].upper())
+    mocker.patch.object(QFileDialog, "getSaveFileName", return_value=(temp, yaml_type))
+    qtbot.mouseClick(runner.head_save, Qt.LeftButton)
+    if path.exists(temp + extn):
+        remove(temp + extn)
+
+    """
+    Confirm if the user interface elements change accordingly
+    """
+    assert runner.statarea.currentMessage() == "Artifact set has been successfully saved."
+
+    """
+    With extension
+    """
+    temp = str(Path(gettempdir()) / uuid4().hex[0:8].upper()) + extn
+    mocker.patch.object(QFileDialog, "getSaveFileName", return_value=(temp, yaml_type))
+    qtbot.mouseClick(runner.head_save, Qt.LeftButton)
+    if path.exists(temp):
+        remove(temp)
+
+    """
+    Confirm if the user interface elements change accordingly
+    """
+    assert runner.statarea.currentMessage() == "Artifact set has been successfully saved."
+
+
+@pytest.mark.parametrize(
+    "_",
+    [
+        pytest.param(None, id="face.wind.rule: Saving an artifact collection as a JSON file")
+    ]
+)
+def test_team_save_json_actual(runner, qtbot, mocker, _) -> None:
+    """
+    Attempt saving an artifact across five areas as a JSON file
+
+    :return:
+    """
+
+    """
+    Set the user interface elements as intended
+    """
+    for area, data in actual.items():
+        getattr(runner, f"arti_{area}_type").setCurrentText(data["type"])
+        getattr(runner, f"arti_{area}_rare").setCurrentText(data["rare"])
+        getattr(runner, f"arti_{area}_levl").setCurrentText(data["levl"])
+        getattr(runner, f"arti_{area}_name_main").setCurrentText(data["main"])
+        for item, stat in data["stat"].items():
+            getattr(runner, f"arti_{area}_name_{item}").setCurrentText(stat["name"])
+            getattr(runner, f"arti_{area}_data_{item}").setText(str(stat["data"]))
+
+    """
+    Perform the action of saving the artifact information
+    """
+    extn = ".json"
+
+    """
+    Without extension
+    """
+    temp = str(Path(gettempdir()) / uuid4().hex[0:8].upper())
+    mocker.patch.object(QFileDialog, "getSaveFileName", return_value=(temp, json_type))
+    qtbot.mouseClick(runner.head_save, Qt.LeftButton)
+    if path.exists(temp + extn):
+        remove(temp + extn)
+
+    """
+    Confirm if the user interface elements change accordingly
+    """
+    assert runner.statarea.currentMessage() == "Artifact set has been successfully saved."
+
+    """
+    With extension
+    """
+    temp = str(Path(gettempdir()) / uuid4().hex[0:8].upper()) + extn
+    mocker.patch.object(QFileDialog, "getSaveFileName", return_value=(temp, json_type))
+    qtbot.mouseClick(runner.head_save, Qt.LeftButton)
+    if path.exists(temp):
+        remove(temp)
+
+    """
+    Confirm if the user interface elements change accordingly
+    """
+    assert runner.statarea.currentMessage() == "Artifact set has been successfully saved."
+
+
+@pytest.mark.parametrize(
+    "sample",
+    [
+        pytest.param(yaml_sample, id="face.wind.rule: Loading the actual artifact collection from YAML data")
+    ]
+)
+def test_team_load_yaml_actual(runner, qtbot, mocker, sample) -> None:
+    """
+    Attempt loading an artifact collection from YAML data
+
+    :return:
+    """
+
+    """
+    Perform the action of loading the artifact collection information
+    """
+    extn = ".yaml"
+    temp = NamedTemporaryFile(prefix="gi-loadouts-", suffix=extn, delete=False, mode="w")
+    temp.write(sample)
+    temp.close()
+
+    mocker.patch.object(QFileDialog, "getOpenFileName", return_value=(temp.name, yaml_type))
+    qtbot.mouseClick(runner.head_load, Qt.LeftButton)
+
+    """
+    Confirm if the user interface elements change accordingly
+    """
+    for area, data in actual.items():
+        assert getattr(runner, f"arti_{area}_type").currentText() == data["type"]
+        assert getattr(runner, f"arti_{area}_rare").currentText() == data["rare"]
+        assert getattr(runner, f"arti_{area}_levl").currentText() == data["levl"]
+        assert getattr(runner, f"arti_{area}_name_main").currentText() == data["main"]
+        for item, stat in data["stat"].items():
+            assert getattr(runner, f"arti_{area}_name_{item}").currentText() == stat["name"]
+            assert getattr(runner, f"arti_{area}_data_{item}").text() == str(stat["data"])
+
+    """
+    Confirm if the user interface elements change accordingly
+    """
+    assert runner.statarea.currentMessage() == "Artifact set has been successfully loaded."
+
+    """
+    Cleanup the temporary files
+    """
+    remove(temp.name)
+
+
+@pytest.mark.parametrize(
+    "sample",
+    [
+        pytest.param(json_sample, id="face.wind.rule: Loading the actual artifact collection from JSON data")
+    ]
+)
+def test_team_load_json_actual(runner, qtbot, mocker, sample) -> None:
+    """
+    Attempt loading an artifact collection from JSON data
+
+    :return:
+    """
+
+    """
+    Perform the action of loading the artifact collection information
+    """
+    extn = ".json"
+    temp = NamedTemporaryFile(prefix="gi-loadouts-", suffix=extn, delete=False, mode="w")
+    temp.write(sample)
+    temp.close()
+
+    mocker.patch.object(QFileDialog, "getOpenFileName", return_value=(temp.name, json_sample))
+    qtbot.mouseClick(runner.head_load, Qt.LeftButton)
+
+    """
+    Confirm if the user interface elements change accordingly
+    """
+    for area, data in actual.items():
+        assert getattr(runner, f"arti_{area}_type").currentText() == data["type"]
+        assert getattr(runner, f"arti_{area}_rare").currentText() == data["rare"]
+        assert getattr(runner, f"arti_{area}_levl").currentText() == data["levl"]
+        assert getattr(runner, f"arti_{area}_name_main").currentText() == data["main"]
+        for item, stat in data["stat"].items():
+            assert getattr(runner, f"arti_{area}_name_{item}").currentText() == stat["name"]
+            assert getattr(runner, f"arti_{area}_data_{item}").text() == str(stat["data"])
+
+    """
+    Confirm if the user interface elements change accordingly
+    """
+    assert runner.statarea.currentMessage() == "Artifact set has been successfully loaded."
+
+    """
+    Cleanup the temporary files
+    """
+    remove(temp.name)
