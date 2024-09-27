@@ -1,8 +1,12 @@
+from os import path, remove
+from pathlib import Path
 from random import choice
+from tempfile import NamedTemporaryFile, gettempdir
+from uuid import uuid4
 
 import pytest
 from PySide6.QtCore import Qt
-from PySide6.QtWidgets import QMessageBox
+from PySide6.QtWidgets import QFileDialog, QMessageBox
 
 from gi_loadouts.data.weap import Family
 from gi_loadouts.face.wind import file
@@ -56,7 +60,7 @@ def test_weap_save(runner, qtbot, mocker, type, char) -> None:
     runner.weap_area_levl.setCurrentText(levl)
 
     """
-    Perform the action of saving the artifact information
+    Perform the action of saving the weapon information
     """
     mocker.patch.object(file.FileHandling, "save", return_value=True)
     qtbot.mouseClick(runner.weap_head_save, Qt.LeftButton)
@@ -97,7 +101,7 @@ def test_weap_save_fail(runner, qtbot, mocker, type, char) -> None:
     runner.weap_area_levl.setCurrentText(levl)
 
     """
-    Perform the action of saving the artifact information
+    Perform the action of saving the weapon information
     """
     mocker.patch.object(file.FileHandling, "save", side_effect=ValueError("Mocked mismatch."))
     qtbot.mouseClick(runner.weap_head_save, Qt.LeftButton)
@@ -137,7 +141,7 @@ def test_weap_load_yaml(runner, qtbot, mocker, char, sample, data) -> None:
     runner.head_char_name.setCurrentText(char)
 
     """
-    Perform the action of saving the artifact information
+    Perform the action of saving the weapon information
     """
     mocker.patch.object(file.FileHandling, "load", return_value=(True, sample, yaml_type))
     qtbot.mouseClick(runner.weap_head_load, Qt.LeftButton)
@@ -174,7 +178,7 @@ def test_weap_load_json(runner, qtbot, mocker, char, sample, data) -> None:
     runner.head_char_name.setCurrentText(char)
 
     """
-    Perform the action of saving the artifact information
+    Perform the action of saving the weapon information
     """
     mocker.patch.object(file.FileHandling, "load", return_value=(True, sample, json_type))
     qtbot.mouseClick(runner.weap_head_load, Qt.LeftButton)
@@ -211,7 +215,7 @@ def test_weap_load_nope(runner, qtbot, mocker, char, name) -> None:
     runner.head_char_name.setCurrentText(char)
 
     """
-    Perform the action of saving the artifact information
+    Perform the action of saving the weapon information
     """
     mocker.patch.object(file.FileHandling, "load", return_value=(False, "", ""))
     qtbot.mouseClick(runner.weap_head_load, Qt.LeftButton)
@@ -240,7 +244,7 @@ def test_team_load_void(runner, qtbot, mocker, char) -> None:
     """
 
     """
-    Perform the action of saving the artifact information
+    Perform the action of saving the weapon information
     """
     mocker.patch.object(file.FileHandling, "load", return_value=(True, "", ""))
     qtbot.mouseClick(runner.weap_head_load, Qt.LeftButton)
@@ -284,7 +288,7 @@ def test_weap_load_fail_type(runner, qtbot, mocker, char, sample, type) -> None:
     runner.head_char_name.setCurrentText(char)
 
     """
-    Perform the action of saving the artifact information
+    Perform the action of saving the weapon information
     """
     mocker.patch.object(file.FileHandling, "load", return_value=(True, sample, type))
     qtbot.mouseClick(runner.weap_head_load, Qt.LeftButton)
@@ -328,7 +332,7 @@ def test_weap_load_fail_name(runner, qtbot, mocker, char, sample, type, data) ->
     runner.head_char_name.setCurrentText(char)
 
     """
-    Perform the action of saving the artifact information
+    Perform the action of saving the weapon information
     """
     if type == yaml_type:
         name = data["name"]
@@ -381,7 +385,7 @@ def test_weap_load_fail_levl(runner, qtbot, mocker, char, sample, type, data) ->
     runner.head_char_name.setCurrentText(char)
 
     """
-    Perform the action of saving the artifact information
+    Perform the action of saving the weapon information
     """
     sample = sample.replace("80", "100")
     mocker.patch.object(file.FileHandling, "load", return_value=(True, sample, type))
@@ -426,7 +430,7 @@ def test_weap_load_fail_refn(runner, qtbot, mocker, char, sample, type, data) ->
     runner.head_char_name.setCurrentText(char)
 
     """
-    Perform the action of saving the artifact information
+    Perform the action of saving the weapon information
     """
     if type == yaml_type:
         sample = sample.replace("refn: Refinement 5", "refn: Refinement 0")
@@ -444,3 +448,214 @@ def test_weap_load_fail_refn(runner, qtbot, mocker, char, sample, type, data) ->
     assert "Please confirm that the location that is accessible before loading the weapon data." in runner.dialog.text()
     assert "Weapon refinement cannot be parsed." in runner.dialog.text()
     assert runner.dialog.isVisible()
+
+
+@pytest.mark.parametrize(
+    "type, char",
+    [
+        pytest.param("Bow", "Venti", id="face.wind.rule: Saving a random weapon of bow type actually as a YAML file"),
+        pytest.param("Catalyst", "Nahida", id="face.wind.rule: Saving a random weapon of catalyst type actually as a YAML file"),
+        pytest.param("Claymore", "Navia", id="face.wind.rule: Saving a random weapon of claymore type actually as a YAML file"),
+        pytest.param("Polearm", "Raiden Shogun", id="face.wind.rule: Saving a random weapon of polearm type actually as a YAML file"),
+        pytest.param("Sword", "Furina", id="face.wind.rule: Saving a random weapon of sword type actually as a YAML file"),
+    ]
+)
+def test_weap_save_yaml_actual(runner, qtbot, mocker, type, char) -> None:
+    """
+    Attempt saving a random weapon of a certain type as a YAML file
+
+    :return:
+    """
+
+    """
+    Set the user interface elements as intended
+    """
+    name = choice(list(Family[type].keys()))
+    objc = Family[type][name]
+    levl = choice(objc.levl_bind).value.name
+
+    runner.head_char_name.setCurrentText(char)
+    runner.weap_area_name.setCurrentText(name)
+    runner.weap_area_levl.setCurrentText(levl)
+
+    """
+    Perform the action of saving the weapon information
+    """
+    extn = ".yaml"
+
+    """
+    Without extension
+    """
+    temp = str(Path(gettempdir()) / uuid4().hex[0:8].upper())
+    mocker.patch.object(QFileDialog, "getSaveFileName", return_value=(temp, yaml_type))
+    qtbot.mouseClick(runner.weap_head_save, Qt.LeftButton)
+    if path.exists(temp + extn):
+        remove(temp + extn)
+
+    """
+    Confirm if the user interface elements change accordingly
+    """
+    assert runner.statarea.currentMessage() == "Weapon data has been successfully saved."
+
+    """
+    With extension
+    """
+    temp = str(Path(gettempdir()) / uuid4().hex[0:8].upper()) + extn
+    mocker.patch.object(QFileDialog, "getSaveFileName", return_value=(temp, yaml_type))
+    qtbot.mouseClick(runner.weap_head_save, Qt.LeftButton)
+    if path.exists(temp):
+        remove(temp)
+
+    """
+    Confirm if the user interface elements change accordingly
+    """
+    assert runner.statarea.currentMessage() == "Weapon data has been successfully saved."
+
+
+@pytest.mark.parametrize(
+    "type, char",
+    [
+        pytest.param("Bow", "Venti", id="face.wind.rule: Saving a random weapon of bow type actually as a JSON file"),
+        pytest.param("Catalyst", "Nahida", id="face.wind.rule: Saving a random weapon of catalyst type actually as a JSON file"),
+        pytest.param("Claymore", "Navia", id="face.wind.rule: Saving a random weapon of claymore type actually as a JSON file"),
+        pytest.param("Polearm", "Raiden Shogun", id="face.wind.rule: Saving a random weapon of polearm type actually as a JSON file"),
+        pytest.param("Sword", "Furina", id="face.wind.rule: Saving a random weapon of sword type actually as a JSON file"),
+    ]
+)
+def test_weap_save_json_actual(runner, qtbot, mocker, type, char) -> None:
+    """
+    Attempt saving a random weapon of a certain type as a JSON file
+
+    :return:
+    """
+
+    """
+    Set the user interface elements as intended
+    """
+    name = choice(list(Family[type].keys()))
+    objc = Family[type][name]
+    levl = choice(objc.levl_bind).value.name
+
+    runner.head_char_name.setCurrentText(char)
+    runner.weap_area_name.setCurrentText(name)
+    runner.weap_area_levl.setCurrentText(levl)
+    """
+    Perform the action of saving the weapon information
+    """
+    extn = ".json"
+
+    """
+    Without extension
+    """
+    temp = str(Path(gettempdir()) / uuid4().hex[0:8].upper())
+    mocker.patch.object(QFileDialog, "getSaveFileName", return_value=(temp, json_type))
+    qtbot.mouseClick(runner.weap_head_save, Qt.LeftButton)
+    if path.exists(temp + extn):
+        remove(temp + extn)
+
+    """
+    Confirm if the user interface elements change accordingly
+    """
+    assert runner.statarea.currentMessage() == "Weapon data has been successfully saved."
+
+    """
+    With extension
+    """
+    temp = str(Path(gettempdir()) / uuid4().hex[0:8].upper()) + extn
+    mocker.patch.object(QFileDialog, "getSaveFileName", return_value=(temp, json_type))
+    qtbot.mouseClick(runner.weap_head_save, Qt.LeftButton)
+    if path.exists(temp):
+        remove(temp)
+
+    """
+    Confirm if the user interface elements change accordingly
+    """
+    assert runner.statarea.currentMessage() == "Weapon data has been successfully saved."
+
+
+@pytest.mark.parametrize(
+    "char, sample",
+    [
+        pytest.param("Venti", yaml_bow_sample, id="face.wind.rule: Loading a weapon of bow type actually from YAML file"),
+        pytest.param("Nahida", yaml_catalyst_sample, id="face.wind.rule: Loading a weapon of catalyst type actually from YAML file"),
+        pytest.param("Navia", yaml_claymore_sample, id="face.wind.rule: Loading a weapon of claymore type actually from YAML file"),
+        pytest.param("Raiden Shogun", yaml_polearm_sample, id="face.wind.rule: Loading a weapon of polearm type actually from YAML file"),
+        pytest.param("Furina", yaml_sword_sample, id="face.wind.rule: Loading a weapon of sword type actually from YAML file"),
+    ]
+)
+def test_weap_load_yaml_actual(runner, qtbot, mocker, char, sample) -> None:
+    """
+    Attempt loading a weapon of a certain type from YAML file
+
+    :return:
+    """
+
+    """
+    Set the user interface elements as intended
+    """
+    runner.head_char_name.setCurrentText(char)
+
+    """
+    Perform the action of loading the weapon information
+    """
+    extn = ".yaml"
+    temp = NamedTemporaryFile(prefix="gi-loadouts-", suffix=extn, delete=False, mode="w")
+    temp.write(sample)
+    temp.close()
+
+    mocker.patch.object(QFileDialog, "getOpenFileName", return_value=(temp.name, yaml_type))
+    qtbot.mouseClick(runner.weap_head_load, Qt.LeftButton)
+
+    """
+    Confirm if the user interface elements change accordingly
+    """
+    assert runner.statarea.currentMessage() == "Weapon data has been successfully loaded."
+
+    """
+    Cleanup the temporary files
+    """
+    remove(temp.name)
+
+
+@pytest.mark.parametrize(
+    "char, sample",
+    [
+        pytest.param("Venti", json_bow_sample, id="face.wind.rule: Loading a weapon of bow type actually from JSON file"),
+        pytest.param("Nahida", json_catalyst_sample, id="face.wind.rule: Loading a weapon of catalyst type actually from JSON file"),
+        pytest.param("Navia", json_claymore_sample, id="face.wind.rule: Loading a weapon of claymore type actually from JSON file"),
+        pytest.param("Raiden Shogun", json_polearm_sample, id="face.wind.rule: Loading a weapon of polearm type actually from JSON file"),
+        pytest.param("Furina", json_sword_sample, id="face.wind.rule: Loading a weapon of sword type actually from JSON file"),
+    ]
+)
+def test_weap_load_json_actual(runner, qtbot, mocker, char, sample) -> None:
+    """
+    Attempt loading a weapon of a certain type from JSON file
+
+    :return:
+    """
+
+    """
+    Set the user interface elements as intended
+    """
+    runner.head_char_name.setCurrentText(char)
+
+    """
+    Perform the action of loading the weapon information
+    """
+    extn = ".json"
+    temp = NamedTemporaryFile(prefix="gi-loadouts-", suffix=extn, delete=False, mode="w")
+    temp.write(sample)
+    temp.close()
+
+    mocker.patch.object(QFileDialog, "getOpenFileName", return_value=(temp.name, json_type))
+    qtbot.mouseClick(runner.weap_head_load, Qt.LeftButton)
+
+    """
+    Confirm if the user interface elements change accordingly
+    """
+    assert runner.statarea.currentMessage() == "Weapon data has been successfully loaded."
+
+    """
+    Cleanup the temporary files
+    """
+    remove(temp.name)
