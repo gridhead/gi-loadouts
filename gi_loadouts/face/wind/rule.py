@@ -159,7 +159,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.weap_area_refn_head.setText("No refinements available.")
             self.weap_area_refn_body.setText("No refinements available.")
             self.weap_area_stat.setText("No substats")
-            weap = Family[kind][name]
+            weap = Family[kind][name]()
             self.weap_area_levl.addItems([item.value.name for item in weap.levl_bind])
             self.weap_area_refn.addItems(item for item in weap.refinement.keys())
             self.weap_port_area.setPixmap(QPixmap(weap.rare.value.back))
@@ -175,7 +175,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         if self.weap_area_type.currentText().strip() != "" and self.weap_area_name.currentText().strip() != "" and self.weap_area_levl.currentText().strip() != "":
             name = self.weap_area_name.currentText()
             kind = self.weap_area_type.currentText().strip()
-            weap = Family[kind][name]
+            weap = Family[kind][name]()
             weap.levl = getattr(Level, self.weap_area_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
             self.weap_area_batk.setText(f"ATK {round(weap.main_stat.stat_data)}")
             if weap.levl.value.rank.value <= 1:
@@ -195,7 +195,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         if self.weap_area_type.currentText().strip() != "" and self.weap_area_name.currentText().strip() != "" and self.weap_area_refn.currentText().strip() != "":
             name = self.weap_area_name.currentText()
             kind = self.weap_area_type.currentText().strip()
-            weap = Family[kind][name]
+            weap = Family[kind][name]()
             self.weap_area_refn_head.setText(f"<b>{weap.refi_name}</b>")
             self.weap_area_refn_body.setText(f"{weap.refinement[self.weap_area_refn.currentText().strip()].data}")
 

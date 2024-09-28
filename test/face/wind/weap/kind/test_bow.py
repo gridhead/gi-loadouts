@@ -61,7 +61,7 @@ def test_bow(runner, name, rare, levl, batk, seco, valu, refn) -> None:
     """
     runner.head_char_elem.setCurrentText("Anemo")
     runner.head_char_name.setCurrentText("Venti")
-    unit = BowsDict[name]
+    unit = BowsDict[name]()
     unit.levl = getattr(Level, levl.replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
     runner.weap_area_name.setCurrentText(name)
     runner.weap_area_levl.setCurrentText(levl)

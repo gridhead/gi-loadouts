@@ -107,7 +107,7 @@ class Assess:
             # MAIN
             kind = self.weap_area_type.currentText().strip()
             name = self.weap_area_name.currentText().strip()
-            weap = Family[kind][name]
+            weap = Family[kind][name]()
             refn = self.weap_area_refn.currentText().strip()
             weap.levl = getattr(Level, self.weap_area_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
             self.c_weap.base = ATTR(stat_name=WeaponStatType.attack.value, stat_data=weap.main_stat.stat_data)

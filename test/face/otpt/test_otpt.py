@@ -88,7 +88,7 @@ def test_otpt(runner, qtbot, type, cond) -> None:
     Setting the weapon statistics
     """
     w_name = choice(list(Family[type].keys()))
-    w_objc = Family[type][w_name]
+    w_objc = Family[type][w_name]()
     w_levl = choice(w_objc.levl_bind).value.name
     w_refn = f"({choice(list(w_objc.refinement.keys()))})" if w_objc.refinement.keys() else ""
     runner.weap_area_name.setCurrentText(w_name)

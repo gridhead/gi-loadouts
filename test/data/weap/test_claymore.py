@@ -49,7 +49,7 @@ from test import verify_accuracy
     ]
 )
 def test_claymore(name, rare, tier, levl, batk, seco, valu):
-    unit = ClaymoresDict[name]
+    unit = ClaymoresDict[name]()
     unit.levl = getattr(Level, levl.replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
     assert unit.rare == getattr(Rare, f"Star_{rare}")
     assert unit.tier == getattr(Tier, f"Tier_{tier}")
