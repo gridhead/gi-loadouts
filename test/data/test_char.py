@@ -624,7 +624,7 @@ from test import verify_accuracy
     ]
 )
 def test_char(name, weap, rare, vson, seco, data):
-    unit = __charmaps__[name]
+    unit = __charmaps__[name]()
     assert name == unit.name
     assert getattr(WeaponType, weap) == unit.weapon
     assert getattr(Rare, f"Star_{rare}") == unit.rare

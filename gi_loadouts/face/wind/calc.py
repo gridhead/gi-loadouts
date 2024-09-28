@@ -24,7 +24,7 @@ class Assess:
         """
         if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
             # MAIN
-            char = __charmaps__[self.head_char_name.currentText()]
+            char = __charmaps__[self.head_char_name.currentText()]()
             char.levl = getattr(Level, self.head_char_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
 
             # BASE
@@ -60,7 +60,7 @@ class Assess:
             DEF % scaling = Noelle,
             HP  % scaling = Baizhu, Barbara, Candace, Chevreuse, Dehya, Dori, Kirara, Kuki Shinobu, Mika, Nilou, Yaoyao
             """
-            char = __charmaps__[self.head_char_name.currentText()]
+            char = __charmaps__[self.head_char_name.currentText()]()
             char.levl = getattr(Level, self.head_char_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
             char_substats_prev_data = getattr(self.c_tyvt, self.c_tyvt.revmap[char.seco.stat_name]).stat_data
             char_substats_curt_data = getattr(self.c_char, self.c_char.revmap[char.seco.stat_name]).stat_data

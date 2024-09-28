@@ -77,7 +77,7 @@ def test_otpt(runner, qtbot, type, cond) -> None:
     """
     Setting the character statistics
     """
-    c_name = choice([char.name for char in __charmaps__.values() if char.weapon.value == type])
+    c_name = choice([name for name, data in __charmaps__.items() if data().weapon.value == type])
     c_levl = choice(list(item.value.name for item in Level))
     c_cons = choice(list(item.value.name for item in Cons))
     runner.head_char_name.setCurrentText(c_name)

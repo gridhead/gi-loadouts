@@ -1,39 +1,42 @@
 import pytest
 from PySide6.QtCore import Qt
 
-from gi_loadouts.data.char import Aether, Lumine, __charmaps__
+from gi_loadouts.data.char import __charmaps__
 from gi_loadouts.type.char.cons import Cons
 from gi_loadouts.type.levl import Level
 
 
 @pytest.mark.parametrize(
-    "name, vson, cons, levl, rare, cons_name, afln, weap, attk, dfns, hlpt, stat, seco",
+    "name",
     [
         pytest.param(
-            char.name,
-            char.vision.value.name,
-            char.cons.value.name,
-            char.levl.value.name,
-            char.rare.value.qant,
-            char.cons_name,
-            char.afln,
-            char.weapon.value,
-            round(char.attack.stat_data),
-            round(char.defense.stat_data),
-            round(char.health_points.stat_data),
-            char.seco.stat_data,
-            char.__statname__.value,
-            id=f"face.wind.rule: Configuring character - {char.name}"
-        ) for char in __charmaps__.values()
-        if setattr(char, 'levl', Level.Level_80_90_Rank_6) is None and setattr(char, 'cons', Cons.Constellation_6) is None
+            name,
+            id=f"face.wind.rule: Configuring character - {name}"
+        ) for name in __charmaps__.keys()
     ]
 )
-def test_char_drop(runner, name, vson, cons, levl, rare, cons_name, afln, weap, attk, dfns, hlpt, stat, seco):
+def test_char_drop(runner, name):
     """
     Test the configuration of characters on the user interface
 
     :return:
     """
+    char = __charmaps__[name]()
+    char.levl = Level.Level_80_90_Rank_6
+    char.cons = Cons.Constellation_6
+
+    vson = char.vision.value.name
+    cons = char.cons.value.name
+    levl = char.levl.value.name
+    rare = char.rare.value.qant
+    cons_name = char.cons_name
+    afln = char.afln
+    weap = char.weapon.value
+    attk = round(char.attack.stat_data)
+    dfns = round(char.defense.stat_data)
+    hlpt = round(char.health_points.stat_data)
+    stat = char.seco.stat_data
+    seco = char.__statname__.value
 
     """
     Set the user interface elements as intended
@@ -63,32 +66,35 @@ def test_char_drop(runner, name, vson, cons, levl, rare, cons_name, afln, weap, 
 
 
 @pytest.mark.parametrize(
-    "name, cons, levl, rare, cons_name, weap, attk, dfns, hlpt, stat, seco, butn",
+    "name, butn",
     [
         pytest.param(
-            char.name,
-            char.cons.value.name,
-            char.levl.value.name,
-            char.rare.value.qant,
-            char.cons_name,
-            char.weapon.value,
-            round(char.attack.stat_data),
-            round(char.defense.stat_data),
-            round(char.health_points.stat_data),
-            char.seco.stat_data,
-            char.__statname__.value,
-            butn,
-            id=f"face.wind.rule: Configuring character - {char.name}"
-        ) for butn, char in {"char_head_lumi": Lumine(), "char_head_aeth": Aether()}.items()
-        if setattr(char, 'levl', Level.Level_80_90_Rank_6) is None and setattr(char, 'cons', Cons.Constellation_6) is None
+            name, butn,
+            id=f"face.wind.rule: Configuring character - {name}"
+        ) for name, butn in {"Lumine": "char_head_lumi", "Aether": "char_head_aeth"}.items()
     ]
 )
-def test_char_butn(runner, qtbot, name, cons, levl, rare, cons_name, weap, attk, dfns, hlpt, stat, seco, butn):
+def test_char_butn(runner, qtbot, name, butn):
     """
     Test the configuration of characters on the user interface
 
     :return:
     """
+
+    char = __charmaps__[name]()
+    char.levl = Level.Level_80_90_Rank_6
+    char.cons = Cons.Constellation_6
+
+    cons = char.cons.value.name
+    levl = char.levl.value.name
+    rare = char.rare.value.qant
+    cons_name = char.cons_name
+    weap = char.weapon.value
+    attk = round(char.attack.stat_data)
+    dfns = round(char.defense.stat_data)
+    hlpt = round(char.health_points.stat_data)
+    stat = char.seco.stat_data
+    seco = char.__statname__.value
 
     """
     Set the user interface elements as intended
