@@ -59,7 +59,7 @@ def test_claymore(runner, name, rare, levl, batk, seco, valu, refn) -> None:
     """
     runner.head_char_elem.setCurrentText("Geo")
     runner.head_char_name.setCurrentText("Navia")
-    unit = ClaymoresDict[name]
+    unit = ClaymoresDict[name]()
     unit.levl = getattr(Level, levl.replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
     runner.weap_area_name.setCurrentText(name)
     runner.weap_area_levl.setCurrentText(levl)

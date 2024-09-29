@@ -63,7 +63,7 @@ def test_catalyst(runner, name, rare, levl, batk, seco, valu, refn) -> None:
     """
     runner.head_char_elem.setCurrentText("Dendro")
     runner.head_char_name.setCurrentText("Nahida")
-    unit = CatalystsDict[name]
+    unit = CatalystsDict[name]()
     unit.levl = getattr(Level, levl.replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
     runner.weap_area_name.setCurrentText(name)
     runner.weap_area_levl.setCurrentText(levl)

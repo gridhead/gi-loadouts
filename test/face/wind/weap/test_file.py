@@ -52,7 +52,7 @@ def test_weap_save(runner, qtbot, mocker, type, char) -> None:
     Set the user interface elements as intended
     """
     name = choice(list(Family[type].keys()))
-    objc = Family[type][name]
+    objc = Family[type][name]()
     levl = choice(objc.levl_bind).value.name
 
     runner.head_char_name.setCurrentText(char)
@@ -93,7 +93,7 @@ def test_weap_save_fail(runner, qtbot, mocker, type, char) -> None:
     Set the user interface elements as intended
     """
     name = choice(list(Family[type].keys()))
-    objc = Family[type][name]
+    objc = Family[type][name]()
     levl = choice(objc.levl_bind).value.name
 
     runner.head_char_name.setCurrentText(char)
@@ -471,7 +471,7 @@ def test_weap_save_yaml_actual(runner, qtbot, mocker, type, char) -> None:
     Set the user interface elements as intended
     """
     name = choice(list(Family[type].keys()))
-    objc = Family[type][name]
+    objc = Family[type][name]()
     levl = choice(objc.levl_bind).value.name
 
     runner.head_char_name.setCurrentText(char)
@@ -533,7 +533,7 @@ def test_weap_save_json_actual(runner, qtbot, mocker, type, char) -> None:
     Set the user interface elements as intended
     """
     name = choice(list(Family[type].keys()))
-    objc = Family[type][name]
+    objc = Family[type][name]()
     levl = choice(objc.levl_bind).value.name
 
     runner.head_char_name.setCurrentText(char)
