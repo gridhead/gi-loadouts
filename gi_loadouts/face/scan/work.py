@@ -23,7 +23,7 @@ class ScanWorker(QObject):
         super().__init__()
         self.snap = snap
 
-    def scan_artifact(self) -> None:
+    def scan_artifact(self) -> None: # pragma: no cover
         """
         Scan the screenshot for computing artifact information using Tesseract OCR
 
@@ -31,6 +31,11 @@ class ScanWorker(QObject):
 
         :return: Collection of artifact information and duration of computation
         """
+        """
+        coverage.py does not seem to correctly work with the QThread.
+        Even though this part is tested but the coverage remains unchanged. https://github.com/nedbat/coveragepy/issues/686
+        """
+
         strttime = time()
 
         area, main, seco, team, levl, rare = "", ATTR(), {"a": ATTR(), "b": ATTR(), "c": ATTR(), "d": ATTR()}, "", "Level 00", "Star 0"
@@ -45,9 +50,13 @@ class ScanWorker(QObject):
             text = image_to_string(self.snap, lang=conf.tempname, config=f"--tessdata-dir {location}")
         except (OSError, TesseractError) as expt:
             if isinstance(expt, OSError):
-                raise OSError("Selected executable of Tesseract OCR is unfunctional.") from expt
-            elif isinstance(expt, TesseractError):
-                raise ValueError("Processing failed as either Tesseract OCR executable ceased to function or training data was tampered with.") from expt
+                expt = "Selected executable of Tesseract OCR is unfunctional."
+            else:
+                expt = "Processing failed as either Tesseract OCR executable ceased to function or training data was tampered with."
+            stoptime = time()
+            rslt = area, main, seco, team, levl, rare, (stoptime - strttime), expt
+            self.result.emit(rslt)
+            return
 
         # DISTRIBUTION AREA
         areadict = {}
@@ -148,6 +157,6 @@ class ScanWorker(QObject):
 
         stoptime = time()
 
-        rslt = area, main, seco, team, levl, rare, (stoptime - strttime)
+        rslt = area, main, seco, team, levl, rare, (stoptime - strttime), None
 
         self.result.emit(rslt)
