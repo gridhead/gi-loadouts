@@ -9,7 +9,7 @@ from gi_loadouts.type.weap import WeaponStatType
 
 
 class Assess:
-    def __init__(self) -> None:
+    def __init__(self) -> None:  # pragma: no cover
         self.collection = Collection()
         self.c_team = None
         self.c_weap = None

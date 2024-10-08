@@ -3004,7 +3004,7 @@
        </size>
       </property>
       <property name="toolTip">
-       <string>Load</string>
+       <string>Scan</string>
       </property>
       <property name="styleSheet">
        <string notr="true">#arti_ccol_scan {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
@@ -4055,7 +4055,7 @@
        </size>
       </property>
       <property name="toolTip">
-       <string>Load</string>
+       <string>Scan</string>
       </property>
       <property name="styleSheet">
        <string notr="true">#arti_gboe_scan {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
@@ -4323,7 +4323,7 @@
        </size>
       </property>
       <property name="toolTip">
-       <string>Load</string>
+       <string>Scan</string>
       </property>
       <property name="styleSheet">
        <string notr="true">#arti_sdoe_scan {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
@@ -4591,7 +4591,7 @@
        </size>
       </property>
       <property name="toolTip">
-       <string>Load</string>
+       <string>Scan</string>
       </property>
       <property name="styleSheet">
        <string notr="true">#arti_pmod_scan {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
@@ -4859,7 +4859,7 @@
        </size>
       </property>
       <property name="toolTip">
-       <string>Load</string>
+       <string>Scan</string>
       </property>
       <property name="styleSheet">
        <string notr="true">#arti_fwol_scan {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
