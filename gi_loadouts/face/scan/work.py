@@ -23,7 +23,7 @@ class ScanWorker(QObject):
         super().__init__()
         self.snap = snap
 
-    def scan_artifact(self) -> None: # pragma: no cover
+    def scan_artifact(self) -> None:  # pragma: no cover
         """
         Scan the screenshot for computing artifact information using Tesseract OCR
 

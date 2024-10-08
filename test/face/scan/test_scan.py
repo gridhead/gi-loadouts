@@ -1,7 +1,7 @@
-from os import path, remove
-from pathlib import Path
+from os import remove
 from random import choice, randbytes
-from tempfile import NamedTemporaryFile, gettempdir
+from tempfile import NamedTemporaryFile
+from uuid import uuid4
 
 import pytest
 from PySide6.QtCore import Qt
@@ -10,7 +10,7 @@ from pytesseract import TesseractError
 
 from gi_loadouts import __versdata__, conf
 from gi_loadouts.data.arti import __artilist__
-from gi_loadouts.face.rsrc import make_temp_file
+from gi_loadouts.face.rsrc import kill_temp_file, make_temp_file
 from gi_loadouts.face.scan import file
 from gi_loadouts.face.util import truncate_text
 from gi_loadouts.type.arti import ArtiLevl, base
@@ -42,27 +42,27 @@ def test_scan_window(scantest, _) -> None:
     "name, rare, part, part_type",
     [
         pytest.param(
-            name, team.rare, team.fwol, "Flower of Life", id=f"face.scan.rule: Configuration Flower of Life artifact - {name}"
+            name, team.rare, team.fwol, "Flower of Life", id=f"face.scan.rule: Configuring Flower of Life artifact - {name}"
         ) for name, team in __artilist__.items()
     ] +
     [
         pytest.param(
-            name, team.rare, team.pmod, "Plume of Death", id=f"face.scan.rule: Configuration Plume of Death artifact - {name}"
+            name, team.rare, team.pmod, "Plume of Death", id=f"face.scan.rule: Configuring Plume of Death artifact - {name}"
         ) for name, team in __artilist__.items()
     ] +
     [
         pytest.param(
-            name, team.rare, team.sdoe, "Sands of Eon", id=f"face.scan.rule: Configuration Sands of Eon artifact - {name}"
+            name, team.rare, team.sdoe, "Sands of Eon", id=f"face.scan.rule: Configuring Sands of Eon artifact - {name}"
         ) for name, team in __artilist__.items()
     ] +
     [
         pytest.param(
-            name, team.rare, team.gboe, "Goblet of Eonothem", id=f"face.scan.rule: Configuration Goblet of Eonothem artifact - {name}"
+            name, team.rare, team.gboe, "Goblet of Eonothem", id=f"face.scan.rule: Configuring Goblet of Eonothem artifact - {name}"
         ) for name, team in __artilist__.items()
     ] +
     [
         pytest.param(
-            name, team.rare, team.ccol, "Circlet of Logos", id=f"face.scan.rule: Configuration Circlet of Logos artifact - {name}"
+            name, team.rare, team.ccol, "Circlet of Logos", id=f"face.scan.rule: Configuring Circlet of Logos artifact - {name}"
         ) for name, team in __artilist__.items()
     ]
 )
@@ -88,6 +88,7 @@ def test_scan_arti_drop(scantest, name, rare, part, part_type) -> None:
     scantest.arti_levl.setCurrentText(conf["levl"].value.name)
     conf["stat"] = choice([item for item in getattr(base, __dist__[conf["dist"]]["list"].__name__) if item.value != STAT.none])
     scantest.arti_name_main.setCurrentText(conf["stat"].value.value)
+
     """
     Confirm if the user interface elements change accordingly
     """
@@ -142,20 +143,20 @@ def test_scan_arti_load(scantest, qtbot, mocker, _) -> None:
     """
 
     """
-    Create the tesseract training data
+    Create the Tesseract training data
     """
+    mocker.patch("gi_loadouts.conf.data_prefix", f"{uuid4().hex.upper()[0:8]}-")
     make_temp_file()
 
     """
     Perform the action of loading the artifact information
     """
-    temp_prm = ""
     tempfile = "test/static/img/gi-loadouts-ocr-test.webp"
-    savefile = str(Path(gettempdir()) / "gi-loadouts-ocr-test.webp")
+    savefile = NamedTemporaryFile(prefix="gi-loadouts-ocr-test-", suffix=".webp", delete=False, mode="wb")
     with open(tempfile, "rb") as src_file:
-        with open(savefile, "wb") as dest_file:
-            dest_file.write(src_file.read())
-    mocker.patch.object(QFileDialog, "getOpenFileName", return_value=(savefile, temp_prm))
+        savefile.write(src_file.read())
+    savefile.close()
+    mocker.patch.object(QFileDialog, "getOpenFileName", return_value=(savefile.name, ""))
     qtbot.mouseClick(scantest.arti_cnvs_load, Qt.LeftButton)
 
     """
@@ -180,13 +181,13 @@ def test_scan_arti_load(scantest, qtbot, mocker, _) -> None:
         assert scantest.arti_data_c.text() == "21.0"
         assert scantest.arti_name_d.currentText() == "HP %"
         assert scantest.arti_data_d.text() == "13.4"
+
     qtbot.waitUntil(check_label)
 
     """
-    Clear the copied file from temp directory
+    Cleanup the temporary files from temp directory
     """
-    if path.exists(savefile):
-        remove(savefile)
+    remove(savefile.name)
 
 
 @pytest.mark.parametrize(
@@ -259,13 +260,17 @@ def test_scan_arti_load_fail(scantest, qtbot, mocker, _) -> None:
     """
 
     """
-    Perform the action of loading the artifact snapshot
+    Create a temporary file filled with random data to simulate a failure when trying to open an
+    image using PIL.Image.open().
     """
-    temp_prm = ""
     savefile = NamedTemporaryFile(prefix="gi-loadouts-", suffix=".webp", delete=False, mode="wb")
     savefile.write(randbytes(512*1024))
     savefile.close()
-    mocker.patch.object(QFileDialog, "getOpenFileName", return_value=(savefile.name, temp_prm))
+
+    """
+    Perform the action of loading the artifact snapshot
+    """
+    mocker.patch.object(QFileDialog, "getOpenFileName", return_value=(savefile.name, ""))
     qtbot.mouseClick(scantest.arti_cnvs_load, Qt.LeftButton)
 
     """
@@ -278,18 +283,19 @@ def test_scan_arti_load_fail(scantest, qtbot, mocker, _) -> None:
     assert scantest.dialog.isVisible()
 
     """
-    Cleanup the temporary files
+    Cleanup the temporary files from temp directory
     """
     remove(savefile.name)
 
 
 @pytest.mark.parametrize(
-    "_",
+    "platform, tempexec",
     [
-        pytest.param(None, id="face.scan.rule: Actual loading of Tesseract OCR executable")
+        pytest.param("Linux", "/usr/bin/tesseract", id="face.scan.rule: Actual loading of Tesseract OCR executable in Linux"),
+        pytest.param("Windows", "C:\\Program Files\\Tesseract-OCR\\tesseract.exe", id="face.scan.rule: Actual loading of Tesseract OCR executable in Windows")
     ]
 )
-def test_scan_tessexec_load(scantest, qtbot, mocker, _) -> None:
+def test_scan_tessexec_load(scantest, qtbot, mocker, platform, tempexec) -> None:
     """
     Attempt actual loading of Tesseract OCR executable
 
@@ -297,17 +303,31 @@ def test_scan_tessexec_load(scantest, qtbot, mocker, _) -> None:
     """
 
     """
+    Store the initial conf.tessexec so that after this test it can be restored to the original value
+    """
+    temp = conf.tessexec
+
+    """
+    Mock the system environment and reload the tessexec variable to apply the mocked path
+    """
+    mocker.patch("gi_loadouts.conf.system", return_value=platform)
+    conf.tessexec = conf.get_tessexec_path()
+
+    """
     Perform the action of loading the actual Tesseract OCR executable
     """
-    tempexec = "/usr/bin/tesseract"
-    temp_prm = ""
-    mocker.patch.object(QFileDialog, "getOpenFileName", return_value=(tempexec, temp_prm))
+    mocker.patch.object(QFileDialog, "getOpenFileName", return_value=(tempexec, ""))
     qtbot.mouseClick(scantest.arti_cnvs_conf, Qt.LeftButton)
 
     """
     Confirm if the user interface elements change accordingly
     """
     assert conf.tessexec == tempexec
+
+    """
+    Reinstate the path for Tesseract OCR executable
+    """
+    conf.tessexec = temp
 
 
 @pytest.mark.parametrize(
@@ -356,18 +376,18 @@ def test_scan_register_fail(scantest, qtbot, mocker, expt) -> None:
     """
     Create the tesseract training data
     """
+    mocker.patch("gi_loadouts.conf.data_prefix", f"{uuid4().hex.upper()[0:8]}-")
     make_temp_file()
 
     """
     Perform the action of loading the artifact information
     """
-    temp_prm = ""
     tempfile = "test/static/img/gi-loadouts-ocr-test.webp"
-    savefile = str(Path(gettempdir()) / "gi-loadouts-ocr-test.webp")
+    savefile = NamedTemporaryFile(prefix="gi-loadouts-ocr-test-", suffix=".webp", delete=False, mode="wb")
     with open(tempfile, "rb") as src_file:
-        with open(savefile, "wb") as dest_file:
-            dest_file.write(src_file.read())
-    mocker.patch.object(QFileDialog, "getOpenFileName", return_value=(savefile, temp_prm))
+        savefile.write(src_file.read())
+    savefile.close()
+    mocker.patch.object(QFileDialog, "getOpenFileName", return_value=(savefile.name, ""))
     mocker.patch("gi_loadouts.face.scan.work.image_to_string", side_effect=expt)
     qtbot.mouseClick(scantest.arti_cnvs_load, Qt.LeftButton)
 
@@ -386,13 +406,14 @@ def test_scan_register_fail(scantest, qtbot, mocker, expt) -> None:
         elif isinstance(expt, TesseractError):
             assert "Processing failed as either Tesseract OCR executable ceased to function or training data was tampered with." in scantest.dialog.text()
         assert scantest.dialog.isVisible()
+
     qtbot.waitUntil(check_label)
 
     """
-    Clear the copied file from temp directory
+    Cleanup the temporary files from temp directory
     """
-    if path.exists(savefile):
-        remove(savefile)
+    kill_temp_file()
+    remove(savefile.name)
 
 
 @pytest.mark.parametrize(
@@ -435,18 +456,18 @@ def test_scan_import_arti(scantest, qtbot, mocker, _) -> None:
     """
     Create the tesseract training data
     """
+    mocker.patch("gi_loadouts.conf.data_prefix", f"{uuid4().hex.upper()[0:8]}-")
     make_temp_file()
 
     """
     Perform the action of loading the artifact information
     """
-    temp_prm = ""
     tempfile = "test/static/img/gi-loadouts-ocr-test.webp"
-    savefile = str(Path(gettempdir()) / "gi-loadouts-ocr-test.webp")
+    savefile = NamedTemporaryFile(prefix="gi-loadouts-ocr-test-", suffix=".webp", delete=False, mode="wb")
     with open(tempfile, "rb") as src_file:
-        with open(savefile, "wb") as dest_file:
-            dest_file.write(src_file.read())
-    mocker.patch.object(QFileDialog, "getOpenFileName", return_value=(savefile, temp_prm))
+        savefile.write(src_file.read())
+    savefile.close()
+    mocker.patch.object(QFileDialog, "getOpenFileName", return_value=(savefile.name, ""))
     qtbot.mouseClick(scantest.arti_cnvs_load, Qt.LeftButton)
 
     init = scantest.arti_type.currentText()
@@ -463,7 +484,7 @@ def test_scan_import_arti(scantest, qtbot, mocker, _) -> None:
     assert scantest.keep_info() == __rtrn__
 
     """
-    Clear the copied file from temp directory
+    Cleanup the temporary files from temp directory
     """
-    if path.exists(savefile):
-        remove(savefile)
+    kill_temp_file()
+    remove(savefile.name)

@@ -26,6 +26,7 @@ jobs:
                  xcb-util-keysyms \
                  xcb-util-wm \
                  xorg-x11-server-Xvfb \
+                 tesseract \
              --assumeyes
 
       - name: Install the base dependencies

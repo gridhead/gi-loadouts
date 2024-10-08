@@ -14,9 +14,8 @@ def runner(qtbot):
 @pytest.fixture
 def scantest(qtbot):
     """
-    The codebase will automatically detect the part
-    once the artifact is changed manually in the window
-    or changed by the after the scan
+    The codebase will automatically detect the part once the artifact is changed manually in the
+    window or changed by the after the scan
     """
     testscan = ScanDialog("fwol")
     qtbot.addWidget(testscan)
