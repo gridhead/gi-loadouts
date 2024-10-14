@@ -387,14 +387,25 @@ ensure that the Tesseract OCR application is installed and configured properly.
 ### On GNU/Linux distributions
 
 1.  Ensure that the necessary packages are available on the operating system 
-    installation.
+    installation. 
+    The package manager may change depending on your Linux Distribution
+   
+    On Fedora:
+ 
+    Git - https://git-scm.com/downloads/linux
     ```
-    $ sudo dnf install git tesseract
+    $ sudo dnf install git
+    ```
+    Tesseract is available directly from many Linux distributions. The package is generally called ‘tesseract’ or ‘tesseract-ocr’ 
+
+    Tesseract - https://tesseract-ocr.github.io/tessdoc/Installation.html
+    ```
+    $ sudo dnf install tesseract
     ```
     ```
     $ sudo dnf install python3 python3-pip python3-virtualenv poetry
     ```
-2.  Clone your fork to the local storage and make it your current working 
+3.  Clone your fork to the local storage and make it your current working 
     directory.
     ```
     $ git clone https://github.com/gridhead/gi-loadouts.git
@@ -402,7 +413,7 @@ ensure that the Tesseract OCR application is installed and configured properly.
     ```
     $ cd gi-loadouts
     ```
-3.  Create a virtual environment and activate it for installing project 
+4.  Create a virtual environment and activate it for installing project 
     dependencies.
     ```
     $ virtualenv venv
@@ -410,7 +421,7 @@ ensure that the Tesseract OCR application is installed and configured properly.
     ```
     $ source venv/bin/activate
     ```
-4.  Install the project dependencies after verifying the correctness of the 
+5.  Install the project dependencies after verifying the correctness of the 
     configuration.
     ```
     (venv) $ poetry check
@@ -418,7 +429,7 @@ ensure that the Tesseract OCR application is installed and configured properly.
     ```
     (venv) $ poetry install
     ```
-5.  Start the application after verifying that the dependencies have been 
+6.  Start the application after verifying that the dependencies have been 
     installed.
     ```
     (venv) $ poetry show
@@ -426,7 +437,7 @@ ensure that the Tesseract OCR application is installed and configured properly.
     ```
     (venv) $ gi-loadouts
     ```
-6.  Once done with making changes in a separate branch, make a pull request to 
+7.  Once done with making changes in a separate branch, make a pull request to 
     contribute.
 
 ### On Microsoft Windows
@@ -434,10 +445,8 @@ ensure that the Tesseract OCR application is installed and configured properly.
 1.  Ensure that the necessary packages are available on the operating system 
     installation.
     ```
-    Git - https://git-scm.com/download/
+    Git - https://git-scm.com/downloads/win
     Tesseract - https://github.com/UB-Mannheim/tesseract/wiki
-    ```
-    ```
     Python 3 - https://www.python.org/downloads/
     Poetry - https://python-poetry.org/
     ```
