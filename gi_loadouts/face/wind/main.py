@@ -9,12 +9,19 @@ from gi_loadouts.type.char import CharName
 class MainWindow(Rule):
     def __init__(self) -> None:
         super().__init__()
-        self.dialog = QMessageBox()
+        self.dialog = QMessageBox(parent=self)
         self.setupUi(self)
         self.setWindowTitle(f"Loadouts for Genshin Impact v{__versdata__}")
         self.initialize_events()
         self.initialize_elements()
-        make_temp_file()
+        try:
+            make_temp_file()
+        except Exception as expt:
+            self.show_dialog(
+                QMessageBox.Information,
+                "Initialization failed",
+                f"{expt}",
+            )
 
     def __del__(self) -> None:
         kill_temp_file()

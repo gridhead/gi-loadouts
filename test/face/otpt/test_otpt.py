@@ -2,7 +2,7 @@ from random import choice
 
 import pytest
 from PySide6.QtCore import Qt
-from PySide6.QtWidgets import QMainWindow
+from PySide6.QtWidgets import QMainWindow, QMessageBox
 
 from gi_loadouts import __versdata__
 from gi_loadouts.data.char import __charmaps__
@@ -159,3 +159,37 @@ def test_otpt(runner, qtbot, type, cond) -> None:
     assert runner.otptobjc.area_phys_perc_data.text() == f"{str(round(runner.otptobjc.tyvt.damage_bonus_physical_perc.stat_data, 1))}%"
     assert runner.otptobjc.area_phys_resi_data.text() == f"{str(round(runner.otptobjc.tyvt.resistance_physical_perc.stat_data, 1))}%"
     assert runner.otptobjc.area_crvl_data.text() == f"{str(round(runner.otptobjc.tyvt.critical_damage_perc.stat_data + 2*(runner.otptobjc.tyvt.critical_rate_perc.stat_data), 1))}"
+
+
+@pytest.mark.parametrize(
+    "subdata",
+    [
+        pytest.param("empty", id="face.otpt.rule: Failing to generate final calculation based on character, bow and default artifact set with empty substats value"),
+        pytest.param("invalid", id="face.otpt.rule: Failing to generate final calculation based on character, bow and default artifact set with invalid substats value")
+    ]
+)
+def test_otpt_fail(runner, qtbot, subdata) -> None:
+    """
+    Attempt failing to generate final calculation based on character, weapon and default artifact
+
+    :return:
+    """
+
+    """
+    Set the user interface elements as intended
+    """
+    if subdata == "invalid":
+        runner.arti_fwol_data_a.setText("abc")
+
+    """
+    Perform the action of clicking the help button
+    """
+    qtbot.mouseClick(runner.head_scan, Qt.LeftButton)
+
+    """
+    Confirm if the user interface elements change accordingly
+    """
+    assert isinstance(runner.dialog, QMessageBox)
+    assert runner.dialog.icon() == QMessageBox.Information
+    assert runner.dialog.windowTitle() == "Inaccuracy detected"
+    assert "Please consider checking your input." in runner.dialog.text()
