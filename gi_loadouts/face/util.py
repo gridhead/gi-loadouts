@@ -1,6 +1,6 @@
 from io import BytesIO
 
-from PIL import Image, ImageEnhance, ImageFilter, UnidentifiedImageError
+from PIL import Image, ImageEnhance, ImageFilter
 from PySide6.QtCore import QResource
 from PySide6.QtGui import QImage, QPixmap
 
@@ -27,16 +27,13 @@ def modify_graphics_resource(path: str, radius: float = 2.5, shadow: float = 0.5
     :param path: Path to the imported image file in the resource
     :return: Pixmap created on transformation for user interface
     """
-    try:
-        resource = QResource(path)
-        data = resource.data()
-        iobt = BytesIO(data)
-        proc = Image.open(iobt).convert("RGBA").filter(ImageFilter.GaussianBlur(radius=radius))
-        proc = ImageEnhance.Brightness(proc).enhance(shadow)
-        qimg = QImage(proc.tobytes(), proc.width, proc.height, QImage.Format_RGBA8888)
-        rtrn = QPixmap.fromImage(qimg)
-    except UnidentifiedImageError:
-        rtrn = QPixmap(path)
+    resource = QResource(path)
+    data = resource.data()
+    iobt = BytesIO(data)
+    proc = Image.open(iobt).convert("RGBA").filter(ImageFilter.GaussianBlur(radius=radius))
+    proc = ImageEnhance.Brightness(proc).enhance(shadow)
+    qimg = QImage(proc.tobytes(), proc.width, proc.height, QImage.Format_RGBA8888)
+    rtrn = QPixmap.fromImage(qimg)
     return rtrn
 
 

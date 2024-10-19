@@ -25,7 +25,7 @@ def load_custom_font() -> None:
         QFontDatabase.addApplicationFont(indx)
 
 
-def main() -> None:
+def main() -> None:  # pragma: no cover
     """
     Initialize the user interface before starting up
 
@@ -40,5 +40,5 @@ def main() -> None:
     sys.exit(app.exec())
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     main()

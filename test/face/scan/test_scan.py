@@ -15,7 +15,16 @@ from gi_loadouts.face.scan import file
 from gi_loadouts.face.util import truncate_text
 from gi_loadouts.type.arti import ArtiLevl, base
 from gi_loadouts.type.stat import STAT
-from test.face.scan import __dist__, __rtrn__
+from test.face.scan import (
+    MockScanDialogCCOL,
+    MockScanDialogFWOL,
+    MockScanDialogGBOE,
+    MockScanDialogPMOD,
+    MockScanDialogSDOE,
+    __dist__,
+    __rtrn__,
+    __rtrn_flty__,
+)
 
 
 @pytest.mark.parametrize(
@@ -151,8 +160,8 @@ def test_scan_arti_load(scantest, qtbot, mocker, _) -> None:
     """
     Perform the action of loading the artifact information
     """
-    tempfile = "test/static/img/gi-loadouts-ocr-test.webp"
-    savefile = NamedTemporaryFile(prefix="gi-loadouts-ocr-test-", suffix=".webp", delete=False, mode="wb")
+    tempfile = "test/static/gi-loadouts-ocr-test-sdoe.png"
+    savefile = NamedTemporaryFile(prefix="gi-loadouts-ocr-test-sdoe-", suffix=".png", delete=False, mode="wb")
     with open(tempfile, "rb") as src_file:
         savefile.write(src_file.read())
     savefile.close()
@@ -182,11 +191,12 @@ def test_scan_arti_load(scantest, qtbot, mocker, _) -> None:
         assert scantest.arti_name_d.currentText() == "HP %"
         assert scantest.arti_data_d.text() == "13.4"
 
-    qtbot.waitUntil(check_label)
+    qtbot.waitUntil(check_label, timeout=10000)
 
     """
     Cleanup the temporary files from temp directory
     """
+    kill_temp_file()
     remove(savefile.name)
 
 
@@ -285,6 +295,7 @@ def test_scan_arti_load_fail(scantest, qtbot, mocker, _) -> None:
     """
     Cleanup the temporary files from temp directory
     """
+    kill_temp_file()
     remove(savefile.name)
 
 
@@ -382,8 +393,8 @@ def test_scan_register_fail(scantest, qtbot, mocker, expt) -> None:
     """
     Perform the action of loading the artifact information
     """
-    tempfile = "test/static/img/gi-loadouts-ocr-test.webp"
-    savefile = NamedTemporaryFile(prefix="gi-loadouts-ocr-test-", suffix=".webp", delete=False, mode="wb")
+    tempfile = "test/static/gi-loadouts-ocr-test-sdoe.png"
+    savefile = NamedTemporaryFile(prefix="gi-loadouts-ocr-test-sdoe-", suffix=".png", delete=False, mode="wb")
     with open(tempfile, "rb") as src_file:
         savefile.write(src_file.read())
     savefile.close()
@@ -407,7 +418,7 @@ def test_scan_register_fail(scantest, qtbot, mocker, expt) -> None:
             assert "Processing failed as either Tesseract OCR executable ceased to function or training data was tampered with." in scantest.dialog.text()
         assert scantest.dialog.isVisible()
 
-    qtbot.waitUntil(check_label)
+    qtbot.waitUntil(check_label, timeout=10000)
 
     """
     Cleanup the temporary files from temp directory
@@ -419,7 +430,7 @@ def test_scan_register_fail(scantest, qtbot, mocker, expt) -> None:
 @pytest.mark.parametrize(
     "_",
     [
-        pytest.param(None, id="face.scan.rule: Clearing Snapshot")
+        pytest.param(None, id="face.scan.rule: Clearing snapshot")
     ]
 )
 def test_scan_snapshot_wipe(scantest, qtbot, _) -> None:
@@ -441,12 +452,16 @@ def test_scan_snapshot_wipe(scantest, qtbot, _) -> None:
 
 
 @pytest.mark.parametrize(
-    "_",
+    "dist, part",
     [
-        pytest.param(None, id="face.scan.rule: Importing artifact information in MainWindow")
+        pytest.param("Flower of Life", "fwol", id="face.scan.rule: Importing Flower of Life artifact information in MainWindow"),
+        pytest.param("Plume of Death", "pmod", id="face.scan.rule: Importing Plume of Death artifact information in MainWindow"),
+        pytest.param("Sands of Eon", "sdoe", id="face.scan.rule: Importing Sands of Eon artifact information in MainWindow"),
+        pytest.param("Goblet of Eonothem", "gboe", id="face.scan.rule: Importing Goblet of Eonothem artifact information in MainWindow"),
+        pytest.param("Circlet of Logos", "ccol", id="face.scan.rule: Importing Circlet of Logos artifact information in MainWindow")
     ]
 )
-def test_scan_import_arti(scantest, qtbot, mocker, _) -> None:
+def test_scan_import_arti(scantest, qtbot, mocker, dist, part) -> None:
     """
     Attempt importing artifact information in MainWindow
 
@@ -454,7 +469,7 @@ def test_scan_import_arti(scantest, qtbot, mocker, _) -> None:
     """
 
     """
-    Create the tesseract training data
+    Create the Tesseract training data
     """
     mocker.patch("gi_loadouts.conf.data_prefix", f"{uuid4().hex.upper()[0:8]}-")
     make_temp_file()
@@ -462,8 +477,8 @@ def test_scan_import_arti(scantest, qtbot, mocker, _) -> None:
     """
     Perform the action of loading the artifact information
     """
-    tempfile = "test/static/img/gi-loadouts-ocr-test.webp"
-    savefile = NamedTemporaryFile(prefix="gi-loadouts-ocr-test-", suffix=".webp", delete=False, mode="wb")
+    tempfile = f"test/static/gi-loadouts-ocr-test-{part}.png"
+    savefile = NamedTemporaryFile(prefix=f"gi-loadouts-ocr-test-{part}", suffix=".png", delete=False, mode="wb")
     with open(tempfile, "rb") as src_file:
         savefile.write(src_file.read())
     savefile.close()
@@ -471,7 +486,7 @@ def test_scan_import_arti(scantest, qtbot, mocker, _) -> None:
     qtbot.mouseClick(scantest.arti_cnvs_load, Qt.LeftButton)
 
     init = scantest.arti_type.currentText()
-    qtbot.waitUntil(lambda: scantest.arti_type.currentText() != init)
+    qtbot.waitUntil(lambda: scantest.arti_type.currentText() != init, timeout=10000)
 
     """
     Perform the action of importing artifact info in MainWindow
@@ -481,10 +496,93 @@ def test_scan_import_arti(scantest, qtbot, mocker, _) -> None:
     """
     Confirm if the user interface elements change accordingly
     """
-    assert scantest.keep_info() == __rtrn__
+    assert scantest.keep_info() == __rtrn__[dist]
 
     """
     Cleanup the temporary files from temp directory
     """
     kill_temp_file()
     remove(savefile.name)
+
+
+@pytest.mark.parametrize(
+    "_",
+    [
+        pytest.param(None, id="face.scan.rule: Importing faulty artifact information in MainWindow")
+    ]
+)
+def test_scan_import_arti_flty(scantest, qtbot, _) -> None:
+    """
+    Attempt importing faulty artifact information in MainWindow
+
+    :return:
+    """
+
+    """
+    Set values in scan interface before before transferring it to MainWindow
+    """
+    scantest.arti_dist.setCurrentText("Sands of Eon")
+    scantest.arti_type.setCurrentText("Shimenawa's Reminiscence")
+    scantest.arti_rare.setCurrentText("Star 5")
+    scantest.arti_levl.setCurrentText("Level 20")
+    scantest.arti_name_main.setCurrentText("Energy Recharge")
+    scantest.arti_name_a.setCurrentText("Elemental Mastery")
+    scantest.arti_data_a.setText("23.0")
+    scantest.arti_name_b.setCurrentText("Crit Rate")
+    scantest.arti_data_b.setText("")
+    scantest.arti_name_c.setCurrentText("Crit DMG")
+    scantest.arti_data_c.setText("21.0")
+    scantest.arti_name_d.setCurrentText("HP %")
+    scantest.arti_data_d.setText("abc")
+
+    """
+    Perform the action of importing artifact info in MainWindow
+    """
+    qtbot.mouseClick(scantest.arti_back_done, Qt.LeftButton)
+
+    """
+    Confirm if the user interface elements change accordingly
+    """
+    assert scantest.keep_info() == __rtrn_flty__
+
+
+@pytest.mark.parametrize(
+    "dist, part, mockscan",
+    [
+        pytest.param("Flower of Life", "fwol", MockScanDialogFWOL, id="face.scan.rule: Importing Flower of Life artifact information in MainWindow"),
+        pytest.param("Plume of Death", "pmod", MockScanDialogPMOD, id="face.scan.rule: Importing Plume of Death artifact information in MainWindow"),
+        pytest.param("Sands of Eon", "sdoe", MockScanDialogSDOE, id="face.scan.rule: Importing Sands of Eon artifact information in MainWindow"),
+        pytest.param("Goblet of Eonothem", "gboe", MockScanDialogGBOE, id="face.scan.rule: Importing Goblet of Eonothem artifact information in MainWindow"),
+        pytest.param("Circlet of Logos", "ccol", MockScanDialogCCOL, id="face.scan.rule: Importing Circlet of Logos artifact information in MainWindow")
+    ]
+)
+def test_wind_import_arti(runner, qtbot, mocker, dist, part, mockscan):
+    """
+    Attempt actually importing artifact information in MainWindow
+
+    :return:
+    """
+
+    """
+    Mock the ScanDialog class to ensure predictable outcome
+    """
+    mocker.patch("gi_loadouts.face.wind.rule.ScanDialog", mockscan)
+
+    """
+    Perform the action of importing artifact info in MainWindow
+    """
+    qtbot.mouseClick(getattr(runner, f"arti_{part}_scan"), Qt.LeftButton)
+
+    """
+    Confirm if the user interface elements change accordingly
+    """
+    assert runner.scanobjc.exec() == QDialog.Accepted
+    assert isinstance(runner.scanobjc.keep_info(), dict)
+    assert getattr(runner, f"arti_{part}_type").currentText() == __rtrn__[dist]["team"]
+    assert getattr(runner, f"arti_{part}_rare").currentText() == __rtrn__[dist]["rare"]
+    assert getattr(runner, f"arti_{part}_levl").currentText() == __rtrn__[dist]["levl"]
+    assert getattr(runner, f"arti_{part}_name_main").currentText() == __rtrn__[dist]["stat"]["main"].stat_name
+    assert getattr(runner, f"arti_{part}_data_main").text() == str(__rtrn__[dist]["stat"]["main"].stat_data)
+    for sbst in ["a", "b", "c", "d"]:
+        assert getattr(runner, f"arti_{part}_name_{sbst}").currentText() == __rtrn__[dist]["stat"]["seco"][f"{sbst}"].stat_name
+        assert getattr(runner, f"arti_{part}_data_{sbst}").text() == str(__rtrn__[dist]["stat"]["seco"][f"{sbst}"].stat_data)
