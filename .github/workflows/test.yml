@@ -4,13 +4,17 @@ on: [push]
 jobs:
   ci-test:
     runs-on: ubuntu-latest
-    container: fedorapython/fedora-python-tox:latest
+    container: fedora:latest
     strategy:
       fail-fast: false
       matrix:
         tox-env: ["py312-dist"]
     steps:
       - uses: actions/checkout@v4
+
+      - name: Update existing packages
+        run: |
+             dnf update --refresh --assumeyes
 
       - name: Install the supporting dependencies
         run: |
@@ -27,7 +31,9 @@ jobs:
                  xcb-util-wm \
                  xorg-x11-server-Xvfb \
                  tesseract \
-             --assumeyes
+                 python3-pip \
+             --assumeyes \
+             --setopt=install_weak_deps=False
 
       - name: Install the base dependencies
         run: |
