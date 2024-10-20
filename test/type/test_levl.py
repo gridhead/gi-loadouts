@@ -17,6 +17,11 @@ from gi_loadouts.type.rank import Rank
     ]
 )
 def test_levl(text: str, qant: int, rank: int, name: str) -> None:
+    """
+    Test type of level
+
+    :return:
+    """
     unit = LevelType(
         qant = qant,
         rank = getattr(Rank, f"Rank_{rank}"),

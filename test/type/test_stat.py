@@ -10,5 +10,10 @@ from gi_loadouts.type.stat import ATTR, STAT, __revmap__
     ]
 )
 def test_attr(text: str, name: STAT, qant: float) -> None:
+    """
+    Test type of stats
+
+    :return:
+    """
     prop = ATTR(stat_name=name, stat_data=qant)
     assert prop.stat_name.value == text
