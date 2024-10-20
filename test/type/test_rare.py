@@ -15,6 +15,11 @@ from gi_loadouts.type.rare import Rare
     ]
 )
 def test_rare(indx: str, name: str, qant: int, back: str) -> None:
+    """
+    Test type of rarity
+
+    :return:
+    """
     item = getattr(Rare, indx)
     assert item.name == indx
     assert item.value.name == name

@@ -10,5 +10,10 @@ from gi_loadouts.type.rank import Rank, __rank__
     ]
 )
 def test_rank(text: str, data: int) -> None:
+    """
+    Test type of rank
+
+    :return:
+    """
     rkut = getattr(Rank, text.replace(" ", "_"))
     assert rkut.value == data

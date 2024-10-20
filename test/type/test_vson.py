@@ -17,6 +17,11 @@ from gi_loadouts.type.vson import Vision
     ]
 )
 def test_vson(indx: str, name: str, colour: str) -> None:
+    """
+    Test type of vision
+
+    :return:
+    """
     item = getattr(Vision, indx)
     assert item.name == indx
     assert item.value.name == name
