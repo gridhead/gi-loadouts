@@ -6,8 +6,11 @@ from uuid import uuid4
 import pytest
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QFileDialog, QMessageBox
+from pytest_mock import MockerFixture
+from pytestqt.qtbot import QtBot
 
 from gi_loadouts.face.wind import file
+from gi_loadouts.face.wind.main import MainWindow
 from test import json_type, yaml_type
 
 from . import actual, json_sample, yaml_sample
@@ -22,9 +25,9 @@ from . import actual, json_sample, yaml_sample
         )
     ]
 )
-def test_team_save_none(runner, qtbot, mocker, _) -> None:
+def test_team_save_none(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
     """
-    Attempt saving a 'None' artifact collection
+    Test saving a 'None' artifact collection
 
     :return:
     """
@@ -55,9 +58,9 @@ def test_team_save_none(runner, qtbot, mocker, _) -> None:
         )
     ]
 )
-def test_team_save_name(runner, qtbot, mocker, _) -> None:
+def test_team_save_name(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
     """
-    Attempt saving an artifact across five areas
+    Test saving an artifact across five areas
 
     :return:
     """
@@ -95,9 +98,9 @@ def test_team_save_name(runner, qtbot, mocker, _) -> None:
         )
     ]
 )
-def test_team_save_fail(runner, qtbot, mocker, _) -> None:
+def test_team_save_fail(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
     """
-    Attempt failing to save an artifact collection due to empty data fields
+    Test failing to save an artifact collection due to empty data fields
 
     :return:
     """
@@ -127,9 +130,9 @@ def test_team_save_fail(runner, qtbot, mocker, _) -> None:
         )
     ]
 )
-def test_team_load_yaml(runner, qtbot, mocker, _) -> None:
+def test_team_load_yaml(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
     """
-    Attempt loading an artifact collection from YAML data
+    Test loading an artifact collection from YAML data
 
     :return:
     """
@@ -167,9 +170,9 @@ def test_team_load_yaml(runner, qtbot, mocker, _) -> None:
         )
     ]
 )
-def test_team_load_json(runner, qtbot, mocker, _) -> None:
+def test_team_load_json(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
     """
-    Attempt loading an artifact collection from JSON data
+    Test loading an artifact collection from JSON data
 
     :return:
     """
@@ -207,9 +210,9 @@ def test_team_load_json(runner, qtbot, mocker, _) -> None:
         )
     ]
 )
-def test_team_load_nope(runner, qtbot, mocker, _) -> None:
+def test_team_load_nope(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
     """
-    Attempt cancelling loading an artifact collection
+    Test cancelling loading an artifact collection
 
     :return:
     """
@@ -238,9 +241,9 @@ def test_team_load_nope(runner, qtbot, mocker, _) -> None:
         )
     ]
 )
-def test_team_load_void(runner, qtbot, mocker, _) -> None:
+def test_team_load_void(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
     """
-    Attempt loading an artifact collection from an empty file
+    Test loading an artifact collection from an empty file
 
     :return:
     """
@@ -277,9 +280,9 @@ def test_team_load_void(runner, qtbot, mocker, _) -> None:
         ),
     ]
 )
-def test_team_load_awry(runner, qtbot, mocker, sample, type) -> None:
+def test_team_load_awry(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, sample: str, type: str) -> None:
     """
-    Attempt loading an artifact collection with incorrect areas from data
+    Test loading an artifact collection with incorrect areas from data
 
     :return:
     """
@@ -326,9 +329,9 @@ def test_team_load_awry(runner, qtbot, mocker, sample, type) -> None:
         ),
     ]
 )
-def test_team_load_name(runner, qtbot, mocker, sample, type) -> None:
+def test_team_load_name(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, sample: str, type: str) -> None:
     """
-    Attempt loading an artifact collection with incorrect substats from data
+    Test loading an artifact collection with incorrect substats from data
 
     :return:
     """
@@ -356,9 +359,9 @@ def test_team_load_name(runner, qtbot, mocker, sample, type) -> None:
         pytest.param(None, id="face.wind.rule: Saving an artifact collection as a YAML file")
     ]
 )
-def test_team_save_yaml_actual(runner, qtbot, mocker, _) -> None:
+def test_team_save_yaml_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
     """
-    Attempt saving an artifact across five areas as a YAML file
+    Test saving an artifact across five areas as a YAML file
 
     :return:
     """
@@ -415,9 +418,9 @@ def test_team_save_yaml_actual(runner, qtbot, mocker, _) -> None:
         pytest.param(None, id="face.wind.rule: Saving an artifact collection as a JSON file")
     ]
 )
-def test_team_save_json_actual(runner, qtbot, mocker, _) -> None:
+def test_team_save_json_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
     """
-    Attempt saving an artifact across five areas as a JSON file
+    Test saving an artifact across five areas as a JSON file
 
     :return:
     """
@@ -474,9 +477,9 @@ def test_team_save_json_actual(runner, qtbot, mocker, _) -> None:
         pytest.param(yaml_sample, id="face.wind.rule: Loading the actual artifact collection from YAML data")
     ]
 )
-def test_team_load_yaml_actual(runner, qtbot, mocker, sample) -> None:
+def test_team_load_yaml_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, sample: str) -> None:
     """
-    Attempt loading an artifact collection from YAML data
+    Test loading an artifact collection from YAML data
 
     :return:
     """
@@ -521,9 +524,9 @@ def test_team_load_yaml_actual(runner, qtbot, mocker, sample) -> None:
         pytest.param(json_sample, id="face.wind.rule: Loading the actual artifact collection from JSON data")
     ]
 )
-def test_team_load_json_actual(runner, qtbot, mocker, sample) -> None:
+def test_team_load_json_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, sample: str) -> None:
     """
-    Attempt loading an artifact collection from JSON data
+    Test loading an artifact collection from JSON data
 
     :return:
     """

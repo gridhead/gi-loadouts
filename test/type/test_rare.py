@@ -14,7 +14,7 @@ from gi_loadouts.type.rare import Rare
         pytest.param("Star_5", "Star 5", 5, ":rare/imgs/rare/star_5.webp", id="type.rare: Star 5"),
     ]
 )
-def test_rare(indx, name, qant, back):
+def test_rare(indx: str, name: str, qant: int, back: str) -> None:
     item = getattr(Rare, indx)
     assert item.name == indx
     assert item.value.name == name

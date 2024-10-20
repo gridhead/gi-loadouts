@@ -1,5 +1,8 @@
 import pytest
 from PySide6.QtCore import Qt
+from pytestqt.qtbot import QtBot
+
+from gi_loadouts.face.wind.main import MainWindow
 
 
 @pytest.mark.parametrize(
@@ -11,9 +14,9 @@ from PySide6.QtCore import Qt
         )
     ]
 )
-def test_team_wipe(runner, qtbot, _) -> None:
+def test_team_wipe(runner: MainWindow, qtbot: QtBot, _: None) -> None:
     """
-    Test the configuration of characters on the user interface
+    Test configuring characters on the user interface
 
     :return:
     """

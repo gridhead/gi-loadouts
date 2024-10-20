@@ -2,9 +2,11 @@ from random import choice
 
 import pytest
 from PySide6.QtCore import Qt
+from pytestqt.qtbot import QtBot
 
 from gi_loadouts.data.arti import __artilist__
 from gi_loadouts.face.util import truncate_text
+from gi_loadouts.face.wind.main import MainWindow
 from gi_loadouts.type.arti import ArtiLevl, base
 from gi_loadouts.type.stat import STAT
 
@@ -19,9 +21,9 @@ from gi_loadouts.type.stat import STAT
         ) for name, team in __artilist__.items()
     ]
 )
-def test_arti_drop(runner, name, rare, pair, quad, coll) -> None:
+def test_arti_drop(runner: MainWindow, name: str, rare: list, pair: str, quad: str, coll: tuple) -> None:
     """
-    Test the configuration of artifacts on the user interface
+    Test configuring artifacts on the user interface
 
     :return:
     """
@@ -69,9 +71,9 @@ def test_arti_drop(runner, name, rare, pair, quad, coll) -> None:
         pytest.param("ccol", id="face.wind.rule: Clearing the 'Circlet of Logos' area"),
     ]
 )
-def test_arti_wipe(runner, qtbot, area) -> None:
+def test_arti_wipe(runner: MainWindow, qtbot: QtBot, area: str) -> None:
     """
-    Test the configuration of characters on the user interface
+    Test configuring characters on the user interface
 
     :return:
     """

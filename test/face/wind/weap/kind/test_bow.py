@@ -1,6 +1,7 @@
 import pytest
 
 from gi_loadouts.data.weap.bows import BowsDict
+from gi_loadouts.face.wind.main import MainWindow
 from gi_loadouts.type.levl import Level
 from gi_loadouts.type.weap import Bow, WeaponStatType
 from test import verify_accuracy
@@ -49,9 +50,9 @@ from test import verify_accuracy
         pytest.param("Skyward Harp", 5, "Level 80/90 (Rank 6)", 621, WeaponStatType.critical_rate_perc, 20.1, 5, id="face.wind.rule: Configuring weapon - Bow - Skyward Harp"),
     ]
 )
-def test_bow(runner, name, rare, levl, batk, seco, valu, refn) -> None:
+def test_bow(runner: MainWindow, name: str, rare: int, levl: str, batk: int, seco: WeaponStatType, valu: float, refn: int | None) -> None:
     """
-    Test the configuration of weapons on the user interface
+    Test configuring weapons of bow type on the user interface
 
     :return:
     """

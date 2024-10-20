@@ -119,40 +119,40 @@ class MockScanDialog:
 
 
 class MockScanDialogFWOL(MockScanDialog):
-    def __init__(self, part: str = "fwol"):
+    def __init__(self, part: str = "fwol") -> None:
         self.part = part
 
-    def keep_info(self):
+    def keep_info(self) -> dict:
         return __rtrn__["Flower of Life"]
 
 
 class MockScanDialogPMOD(MockScanDialog):
-    def __init__(self, part: str = "pmod"):
+    def __init__(self, part: str = "pmod") -> None:
         self.part = part
 
-    def keep_info(self):
+    def keep_info(self) -> dict:
         return __rtrn__["Plume of Death"]
 
 
 class MockScanDialogSDOE(MockScanDialog):
-    def __init__(self, part: str = "sdoe"):
+    def __init__(self, part: str = "sdoe") -> None:
         self.part = part
 
-    def keep_info(self):
+    def keep_info(self) -> dict:
         return __rtrn__["Sands of Eon"]
 
 
 class MockScanDialogGBOE(MockScanDialog):
-    def __init__(self, part: str = "gboe"):
+    def __init__(self, part: str = "gboe") -> None:
         self.part = part
 
-    def keep_info(self):
+    def keep_info(self) -> dict:
         return __rtrn__["Goblet of Eonothem"]
 
 
 class MockScanDialogCCOL(MockScanDialog):
-    def __init__(self, part: str = "ccol"):
+    def __init__(self, part: str = "ccol") -> None:
         self.part = part
 
-    def keep_info(self):
+    def keep_info(self) -> dict:
         return __rtrn__["Circlet of Logos"]

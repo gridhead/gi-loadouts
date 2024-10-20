@@ -7,10 +7,13 @@ from uuid import uuid4
 import pytest
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QFileDialog, QMessageBox
+from pytest_mock import MockerFixture
+from pytestqt.qtbot import QtBot
 
 from gi_loadouts.data.arti import __artilist__
 from gi_loadouts.face.util import truncate_text
 from gi_loadouts.face.wind import file
+from gi_loadouts.face.wind.main import MainWindow
 from gi_loadouts.type.arti import ArtiLevl, base
 from gi_loadouts.type.stat import STAT
 from test import json_type, yaml_type
@@ -44,9 +47,9 @@ from . import (
         pytest.param("ccol", id="face.wind.rule: Saving a 'None' artifact from 'Circlet of Logos' area"),
     ]
 )
-def test_arti_save_none(runner, qtbot, mocker, area) -> None:
+def test_arti_save_none(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str) -> None:
     """
-    Attempt saving a 'None' artifact across five areas
+    Test saving a 'None' artifact across five areas
 
     :return:
     """
@@ -78,9 +81,9 @@ def test_arti_save_none(runner, qtbot, mocker, area) -> None:
         pytest.param("ccol", id="face.wind.rule: Saving an artifact from 'Circlet of Logos' area"),
     ]
 )
-def test_arti_save_name(runner, qtbot, mocker, area) -> None:
+def test_arti_save_name(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str) -> None:
     """
-    Attempt saving an artifact across five areas
+    Test saving an artifact across five areas
 
     :return:
     """
@@ -122,9 +125,9 @@ def test_arti_save_name(runner, qtbot, mocker, area) -> None:
         pytest.param("ccol", id="face.wind.rule: Failing to save an artifact from 'Circlet of Logos' area"),
     ]
 )
-def test_arti_save_fail(runner, qtbot, mocker, area) -> None:
+def test_arti_save_fail(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str) -> None:
     """
-    Attempt failing to save an artifact across five areas due to empty data fields
+    Test failing to save an artifact across five areas due to empty data fields
 
     :return:
     """
@@ -155,9 +158,9 @@ def test_arti_save_fail(runner, qtbot, mocker, area) -> None:
         pytest.param("ccol", yaml_ccol_sample, actual_ccol, id="face.wind.rule: Loading an artifact into 'Circlet of Logos' area from YAML data"),
     ]
 )
-def test_arti_load_yaml(runner, qtbot, mocker, area, sample, actual) -> None:
+def test_arti_load_yaml(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str, sample: str, actual: dict) -> None:
     """
-    Attempt loading an artifact across five areas from YAML data
+    Test loading an artifact across five areas from YAML data
 
     :return:
     """
@@ -192,9 +195,9 @@ def test_arti_load_yaml(runner, qtbot, mocker, area, sample, actual) -> None:
         pytest.param("ccol", json_ccol_sample, actual_ccol, id="face.wind.rule: Loading an artifact into 'Circlet of Logos' area from JSON data"),
     ]
 )
-def test_arti_load_json(runner, qtbot, mocker, area, sample, actual) -> None:
+def test_arti_load_json(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str, sample: str, actual: dict) -> None:
     """
-    Attempt loading an artifact across five areas from JSON data
+    Test loading an artifact across five areas from JSON data
 
     :return:
     """
@@ -229,9 +232,9 @@ def test_arti_load_json(runner, qtbot, mocker, area, sample, actual) -> None:
         pytest.param("ccol", id="face.wind.rule: Cancelling loading an artifact into 'Circlet of Logos' area"),
     ]
 )
-def test_arti_load_nope(runner, qtbot, mocker, area) -> None:
+def test_arti_load_nope(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str) -> None:
     """
-    Attempt cancelling loading an artifact across five areas
+    Test cancelling loading an artifact across five areas
 
     :return:
     """
@@ -260,9 +263,9 @@ def test_arti_load_nope(runner, qtbot, mocker, area) -> None:
         pytest.param("ccol", id="face.wind.rule: Loading an artifact into 'Circlet of Logos' area from an empty file"),
     ]
 )
-def test_arti_load_void(runner, qtbot, mocker, area) -> None:
+def test_arti_load_void(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str) -> None:
     """
-    Attempt loading an artifact across five areas from an empty file
+    Test loading an artifact across five areas from an empty file
 
     :return:
     """
@@ -299,9 +302,9 @@ def test_arti_load_void(runner, qtbot, mocker, area) -> None:
         pytest.param("ccol", json_ccol_sample.replace("circlet", "AWRY"), json_type, id="face.wind.rule: Loading an artifact with incorrect area into 'Circlet of Logos' area from JSON data"),
     ]
 )
-def test_arti_load_awry(runner, qtbot, mocker, area, sample, type) -> None:
+def test_arti_load_awry(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str, sample: str, type: str) -> None:
     """
-    Attempt loading an artifact with incorrect area across five areas from data
+    Test loading an artifact with incorrect area across five areas from data
 
     :return:
     """
@@ -338,9 +341,9 @@ def test_arti_load_awry(runner, qtbot, mocker, area, sample, type) -> None:
         pytest.param("ccol", json_ccol_sample.replace("\"key\": \"atk\",\n", "\"key\": \"heal_\",\n"), json_type, id="face.wind.rule: Loading an artifact with incorrect substats into 'Circlet of Logos' area from JSON data"),
     ]
 )
-def test_arti_load_name(runner, qtbot, mocker, area, sample, type) -> None:
+def test_arti_load_name(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str, sample: str, type: str) -> None:
     """
-    Attempt loading an artifact with incorrect substats across five areas from data
+    Test loading an artifact with incorrect substats across five areas from data
 
     :return:
     """
@@ -372,9 +375,9 @@ def test_arti_load_name(runner, qtbot, mocker, area, sample, type) -> None:
         pytest.param("ccol", id="face.wind.rule: Saving an artifact from 'Circlet of Logos' area actually as a YAML file"),
     ]
 )
-def test_arti_save_yaml_actual(runner, qtbot, mocker, area) -> None:
+def test_arti_save_yaml_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str) -> None:
     """
-    Attempt saving an artifact across five areas
+    Test saving an artifact across five areas
 
     :return:
     """
@@ -438,9 +441,9 @@ def test_arti_save_yaml_actual(runner, qtbot, mocker, area) -> None:
         pytest.param("ccol", id="face.wind.rule: Saving an artifact from 'Circlet of Logos' area actually as a JSON file"),
     ]
 )
-def test_arti_save_json_actual(runner, qtbot, mocker, area) -> None:
+def test_arti_save_json_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str) -> None:
     """
-    Attempt saving an artifact across five areas
+    Test saving an artifact across five areas
 
     :return:
     """
@@ -504,9 +507,9 @@ def test_arti_save_json_actual(runner, qtbot, mocker, area) -> None:
         pytest.param("ccol", yaml_ccol_sample, id="face.wind.rule: Loading an artifact from 'Circlet of Logos' area actually as a YAML file"),
     ]
 )
-def test_arti_load_yaml_actual(runner, qtbot, mocker, area, sample) -> None:
+def test_arti_load_yaml_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str, sample: str) -> None:
     """
-    Attempt loading an artifact across five areas
+    Test loading an artifact across five areas
 
     :return:
     """
@@ -543,9 +546,9 @@ def test_arti_load_yaml_actual(runner, qtbot, mocker, area, sample) -> None:
         pytest.param("ccol", json_ccol_sample, id="face.wind.rule: Loading an artifact from 'Circlet of Logos' area actually as a JSON file"),
     ]
 )
-def test_arti_load_json_actual(runner, qtbot, mocker, area, sample) -> None:
+def test_arti_load_json_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str, sample: str) -> None:
     """
-    Attempt loading an artifact across five areas
+    Test loading an artifact across five areas
 
     :return:
     """

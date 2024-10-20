@@ -16,7 +16,7 @@ from gi_loadouts.type.vson import Vision
         pytest.param("none", "None", "rgba(128, 128, 128, 254)", id="type.vson: None"),
     ]
 )
-def test_vson(indx, name, colour):
+def test_vson(indx: str, name: str, colour: str) -> None:
     item = getattr(Vision, indx)
     assert item.name == indx
     assert item.value.name == name

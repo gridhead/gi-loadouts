@@ -7,9 +7,12 @@ from uuid import uuid4
 import pytest
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QFileDialog, QMessageBox
+from pytest_mock import MockerFixture
+from pytestqt.qtbot import QtBot
 
 from gi_loadouts.data.weap import Family
 from gi_loadouts.face.wind import file
+from gi_loadouts.face.wind.main import MainWindow
 from test import json_type, yaml_type
 
 from . import (
@@ -41,9 +44,9 @@ from . import (
         pytest.param("Sword", "Furina", id="face.wind.rule: Saving a random weapon of sword type"),
     ]
 )
-def test_weap_save(runner, qtbot, mocker, type, char) -> None:
+def test_weap_save(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, type: str, char: str) -> None:
     """
-    Attempt saving a random weapon of a certain type
+    Test saving a random weapon of a certain type
 
     :return:
     """
@@ -82,9 +85,9 @@ def test_weap_save(runner, qtbot, mocker, type, char) -> None:
         pytest.param("Sword", "Furina", id="face.wind.rule: Failing to save a random weapon of sword type"),
     ]
 )
-def test_weap_save_fail(runner, qtbot, mocker, type, char) -> None:
+def test_weap_save_fail(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, type: str, char: str) -> None:
     """
-    Attempt failing to save a random weapon of a certain type
+    Test failing to save a random weapon of a certain type
 
     :return:
     """
@@ -128,9 +131,9 @@ def test_weap_save_fail(runner, qtbot, mocker, type, char) -> None:
         pytest.param("Furina", yaml_sword_sample, actual_sword, id="face.wind.rule: Loading a weapon of sword type from YAML data"),
     ]
 )
-def test_weap_load_yaml(runner, qtbot, mocker, char, sample, data) -> None:
+def test_weap_load_yaml(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, char: str, sample: str, data: dict) -> None:
     """
-    Attempt loading a weapon of a certain type from YAML data
+    Test loading a weapon of a certain type from YAML data
 
     :return:
     """
@@ -165,9 +168,9 @@ def test_weap_load_yaml(runner, qtbot, mocker, char, sample, data) -> None:
         pytest.param("Furina", json_sword_sample, actual_sword, id="face.wind.rule: Loading a weapon of sword type from JSON data"),
     ]
 )
-def test_weap_load_json(runner, qtbot, mocker, char, sample, data) -> None:
+def test_weap_load_json(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, char: str, sample: str, data: dict) -> None:
     """
-    Attempt loading a weapon of a certain type from JSON data
+    Test loading a weapon of a certain type from JSON data
 
     :return:
     """
@@ -202,9 +205,9 @@ def test_weap_load_json(runner, qtbot, mocker, char, sample, data) -> None:
         pytest.param("Furina", "Absolution", id="face.wind.rule: Cancelling loading a weapon of sword type from YAML data"),
     ]
 )
-def test_weap_load_nope(runner, qtbot, mocker, char, name) -> None:
+def test_weap_load_nope(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, char: str, name: str) -> None:
     """
-    Attempt cancelling loading a weapon of a certain type
+    Test cancelling loading a weapon of a certain type
 
     :return:
     """
@@ -236,9 +239,9 @@ def test_weap_load_nope(runner, qtbot, mocker, char, name) -> None:
         pytest.param("Furina", id="face.wind.rule: Loading a weapon of sword type from an empty file"),
     ]
 )
-def test_team_load_void(runner, qtbot, mocker, char) -> None:
+def test_team_load_void(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, char: str) -> None:
     """
-    Attempt loading a weapon of a certain type from an empty file
+    Test loading a weapon of a certain type from an empty file
 
     :return:
     """
@@ -275,9 +278,9 @@ def test_team_load_void(runner, qtbot, mocker, char) -> None:
         pytest.param("Venti", json_sword_sample, json_type, id="face.wind.rule: Failing to load a weapon of sword type from JSON data due to type mismatch"),
     ]
 )
-def test_weap_load_fail_type(runner, qtbot, mocker, char, sample, type) -> None:
+def test_weap_load_fail_type(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, char: str, sample: str, type: str) -> None:
     """
-    Attempt failing to load a weapon of a certain type from data due to type mismatch
+    Test failing to load a weapon of a certain type from data due to type mismatch
 
     :return:
     """
@@ -319,9 +322,9 @@ def test_weap_load_fail_type(runner, qtbot, mocker, char, sample, type) -> None:
         pytest.param("Furina", json_sword_sample, json_type, actual_sword, id="face.wind.rule: Failing to load a weapon of sword type from JSON data due to incorrect name"),
     ]
 )
-def test_weap_load_fail_name(runner, qtbot, mocker, char, sample, type, data) -> None:
+def test_weap_load_fail_name(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, char: str, sample: str, type: str, data: dict) -> None:
     """
-    Attempt failing to load a weapon of a certain type from data due to incorrect name
+    Test failing to load a weapon of a certain type from data due to incorrect name
 
     :return:
     """
@@ -372,9 +375,9 @@ def test_weap_load_fail_name(runner, qtbot, mocker, char, sample, type, data) ->
         pytest.param("Furina", json_sword_sample, json_type, actual_sword, id="face.wind.rule: Failing to load a weapon of sword type from JSON data due to incorrect level"),
     ]
 )
-def test_weap_load_fail_levl(runner, qtbot, mocker, char, sample, type, data) -> None:
+def test_weap_load_fail_levl(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, char: str, sample: str, type: str, data: dict) -> None:
     """
-    Attempt failing to load a weapon of a certain type from data due to incorrect level
+    Test failing to load a weapon of a certain type from data due to incorrect level
 
     :return:
     """
@@ -417,9 +420,9 @@ def test_weap_load_fail_levl(runner, qtbot, mocker, char, sample, type, data) ->
         pytest.param("Furina", json_sword_sample, json_type, actual_sword, id="face.wind.rule: Failing to load a weapon of sword type from JSON data due to incorrect refinement"),
     ]
 )
-def test_weap_load_fail_refn(runner, qtbot, mocker, char, sample, type, data) -> None:
+def test_weap_load_fail_refn(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, char: str, sample: str, type: str, data: dict) -> None:
     """
-    Attempt failing to load a weapon of a certain type from data due to incorrect refinement
+    Test failing to load a weapon of a certain type from data due to incorrect refinement
 
     :return:
     """
@@ -460,9 +463,9 @@ def test_weap_load_fail_refn(runner, qtbot, mocker, char, sample, type, data) ->
         pytest.param("Sword", "Furina", id="face.wind.rule: Saving a random weapon of sword type actually as a YAML file"),
     ]
 )
-def test_weap_save_yaml_actual(runner, qtbot, mocker, type, char) -> None:
+def test_weap_save_yaml_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, type: str, char: str) -> None:
     """
-    Attempt saving a random weapon of a certain type as a YAML file
+    Test saving a random weapon of a certain type as a YAML file
 
     :return:
     """
@@ -522,9 +525,9 @@ def test_weap_save_yaml_actual(runner, qtbot, mocker, type, char) -> None:
         pytest.param("Sword", "Furina", id="face.wind.rule: Saving a random weapon of sword type actually as a JSON file"),
     ]
 )
-def test_weap_save_json_actual(runner, qtbot, mocker, type, char) -> None:
+def test_weap_save_json_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, type: str, char: str) -> None:
     """
-    Attempt saving a random weapon of a certain type as a JSON file
+    Test saving a random weapon of a certain type as a JSON file
 
     :return:
     """
@@ -583,9 +586,9 @@ def test_weap_save_json_actual(runner, qtbot, mocker, type, char) -> None:
         pytest.param("Furina", yaml_sword_sample, id="face.wind.rule: Loading a weapon of sword type actually from YAML file"),
     ]
 )
-def test_weap_load_yaml_actual(runner, qtbot, mocker, char, sample) -> None:
+def test_weap_load_yaml_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, char: str, sample: str) -> None:
     """
-    Attempt loading a weapon of a certain type from YAML file
+    Test loading a weapon of a certain type from YAML file
 
     :return:
     """
@@ -627,9 +630,9 @@ def test_weap_load_yaml_actual(runner, qtbot, mocker, char, sample) -> None:
         pytest.param("Furina", json_sword_sample, id="face.wind.rule: Loading a weapon of sword type actually from JSON file"),
     ]
 )
-def test_weap_load_json_actual(runner, qtbot, mocker, char, sample) -> None:
+def test_weap_load_json_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, char: str, sample: str) -> None:
     """
-    Attempt loading a weapon of a certain type from JSON file
+    Test loading a weapon of a certain type from JSON file
 
     :return:
     """

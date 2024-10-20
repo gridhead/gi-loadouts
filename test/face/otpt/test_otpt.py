@@ -3,10 +3,12 @@ from random import choice
 import pytest
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QMainWindow, QMessageBox
+from pytestqt.qtbot import QtBot
 
 from gi_loadouts import __versdata__
 from gi_loadouts.data.char import __charmaps__
 from gi_loadouts.data.weap import Family
+from gi_loadouts.face.wind.main import MainWindow
 from gi_loadouts.type.char.cons import Cons
 from gi_loadouts.type.levl import Level
 
@@ -38,9 +40,9 @@ from . import __test_arti__
         pytest.param("Sword", "none", id="face.otpt.rule: Generate final calculation based on character, sword and no artifacts"),
     ]
 )
-def test_otpt(runner, qtbot, type, cond) -> None:
+def test_otpt(runner: MainWindow, qtbot: QtBot, type: str, cond: str) -> None:
     """
-    Attempt to generate final calculation based on character, weapon and artifacts
+    Test generating final calculation based on character, weapon and artifacts
 
     :return:
     """
@@ -168,9 +170,9 @@ def test_otpt(runner, qtbot, type, cond) -> None:
         pytest.param("invalid", id="face.otpt.rule: Failing to generate final calculation based on character, bow and default artifact set with invalid substats value")
     ]
 )
-def test_otpt_fail(runner, qtbot, subdata) -> None:
+def test_otpt_fail(runner: MainWindow, qtbot: QtBot, subdata: str) -> None:
     """
-    Attempt failing to generate final calculation based on character, weapon and default artifact
+    Test failing to generate final calculation based on character, weapon and default artifact
 
     :return:
     """

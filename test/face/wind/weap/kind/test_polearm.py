@@ -1,6 +1,7 @@
 import pytest
 
 from gi_loadouts.data.weap.polearms import PolearmsDict
+from gi_loadouts.face.wind.main import MainWindow
 from gi_loadouts.type.levl import Level
 from gi_loadouts.type.weap import Polearm, WeaponStatType
 from test import verify_accuracy
@@ -44,9 +45,9 @@ from test import verify_accuracy
         pytest.param("Calamity Queller", 5, "Level 80/90 (Rank 6)", 679, WeaponStatType.attack_perc, 15.1, 5, id="face.wind.rule: Configuring weapon - Polearm - Calamity Queller"),
     ]
 )
-def test_polearm(runner, name, rare, levl, batk, seco, valu, refn) -> None:
+def test_polearm(runner: MainWindow, name: str, rare: int, levl: str, batk: int, seco: WeaponStatType, valu: float, refn: int | None) -> None:
     """
-    Test the configuration of weapons on the user interface
+    Test configuring weapons of polearm type on the user interface
 
     :return:
     """

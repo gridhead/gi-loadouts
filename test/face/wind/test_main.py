@@ -5,6 +5,8 @@ import pytest
 from PySide6.QtCore import Qt, QUrl
 from PySide6.QtGui import QDesktopServices
 from PySide6.QtWidgets import QMessageBox
+from pytest_mock import MockerFixture
+from pytestqt.qtbot import QtBot
 
 from gi_loadouts import __donation__, __homepage__, __issutckt__, conf
 from gi_loadouts.face.rsrc import make_temp_file
@@ -20,9 +22,9 @@ from test.face.wind import MockQFile
         pytest.param("side_cash", __donation__, id="face.info: Clicking the donate button")
     ]
 )
-def test_wind_main_buttons(runner, qtbot, mocker, button, link) -> None:
+def test_wind_main_buttons(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, button: str, link: str) -> None:
     """
-    Attempt clicking the buttons on side of UI
+    Test clicking the buttons on side of UI
 
     :return:
     """
@@ -46,9 +48,9 @@ def test_wind_main_buttons(runner, qtbot, mocker, button, link) -> None:
         pytest.param(None, id="face.wind: Initialise the training data for Tesseract OCR")
     ]
 )
-def test_wind_main_fail(mocker, _) -> None:
+def test_wind_main_fail(mocker: MockerFixture, _: None) -> None:
     """
-    Attempt failing initialisation of training data for Tesseract OCR
+    Test failing initialisation of training data for Tesseract OCR
 
     :return:
     """
@@ -87,9 +89,9 @@ def test_wind_main_fail(mocker, _) -> None:
         pytest.param(None, id="face.wind: Remove the already existing training data for Tesseract OCR")
     ]
 )
-def test_wind_main_fail_continue(runner, mocker, _) -> None:
+def test_wind_main_fail_continue(runner: MainWindow, mocker: MockerFixture, _: None) -> None:
     """
-    Attempt failing removing of training data for Tesseract OCR at startup
+    Test failing removing of training data for Tesseract OCR at startup
 
     :return:
     """
@@ -107,14 +109,16 @@ def test_wind_main_fail_continue(runner, mocker, _) -> None:
         pytest.param(None, id="face.wind: Manually invoke __del__")
     ]
 )
-def test_wind_del(runner, _) -> None:
+def test_wind_del(runner: MainWindow, _: None) -> None:
     """
-    Attempt manually invoking __del__
+    Test manually invoking __del__
 
     :return:
     """
+
     """
-    pytest-qt does not invoke __del__ automatically. Refer https://github.com/gridhead/gi-loadouts/issues/165
+    pytest-qt does not invoke __del__ automatically.
+    Refer https://github.com/gridhead/gi-loadouts/issues/165
     for more details. Thus manually invoking __del__ for increasing the coverage.
     As per ChatGPT: Test runners like pytest-qt keep strong references to objects for logging,
     reporting, and debugging, which can prevent the automatic invocation of the __del__ method.

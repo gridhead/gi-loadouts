@@ -50,7 +50,12 @@ from test import verify_accuracy
         pytest.param("Skyward Harp", 5, 3, "Level 80/90 (Rank 6)", 621, WeaponStatType.critical_rate_perc, 20.1, id="data.weap.bows: Skyward Harp"),
     ]
 )
-def test_bow(name, rare, tier, levl, batk, seco, valu):
+def test_bow(name: str, rare: int, tier: int, levl: str, batk: int, seco: WeaponStatType, valu: float) -> None:
+    """
+    Test all weapons of bow type for correctness
+
+    :return:
+    """
     unit = BowsDict[name]()
     unit.levl = getattr(Level, levl.replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
     assert unit.rare == getattr(Rare, f"Star_{rare}")

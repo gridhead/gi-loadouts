@@ -11,7 +11,7 @@ from gi_loadouts.type.char.cons import Cons, ConsType, __cons__
         ) for item in __cons__
     ]
 )
-def test_char(text, name, data):
+def test_char(text: str, name: str, data: int) -> None:
     unit = ConsType(name=name, data=data)
     csut = getattr(Cons, text)
     assert unit == csut.value

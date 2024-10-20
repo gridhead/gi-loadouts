@@ -1,21 +1,28 @@
 import pytest
+from pytestqt.qtbot import QtBot
 
 from gi_loadouts.face.scan.main import ScanDialog
 from gi_loadouts.face.wind.main import MainWindow
 
 
 @pytest.fixture
-def runner(qtbot):
+def runner(qtbot: QtBot) -> MainWindow:
+    """
+    Fixture for MainWindow class
+
+    :return:
+    """
     testwind = MainWindow()
     qtbot.addWidget(testwind)
     return testwind
 
 
 @pytest.fixture
-def scantest(qtbot):
+def scantest(qtbot: QtBot) -> ScanDialog:
     """
-    The codebase will automatically detect the part once the artifact is changed manually in the
-    window or changed by the after the scan
+    Fixture for ScanDialog class
+
+    :return:
     """
     testscan = ScanDialog("fwol")
     qtbot.addWidget(testscan)

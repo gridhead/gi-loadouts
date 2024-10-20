@@ -623,7 +623,12 @@ from test import verify_accuracy
         ),
     ]
 )
-def test_char(name, weap, rare, vson, seco, data):
+def test_char(name: str, weap: str, rare: int, vson: int, seco: STAT, data: dict) -> None:
+    """
+    Test all characters for correctness
+
+    :return:
+    """
     unit = __charmaps__[name]()
     assert name == unit.name
     assert getattr(WeaponType, weap) == unit.weapon

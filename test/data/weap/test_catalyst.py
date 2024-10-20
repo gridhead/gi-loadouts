@@ -52,7 +52,12 @@ from test import verify_accuracy
         pytest.param("Crane's Echoing Call", 5, 4, "Level 80/90 (Rank 6)", 679, WeaponStatType.attack_perc, 15.1, id="data.weap.catalysts: Crane's Echoing Call"),
     ]
 )
-def test_catalyst(name, rare, tier, levl, batk, seco, valu):
+def test_catalyst(name: str, rare: int, tier: int, levl: str, batk: int, seco: WeaponStatType, valu: float) -> None:
+    """
+    Test all weapons of catalyst type for correctness
+
+    :return:
+    """
     unit = CatalystsDict[name]()
     unit.levl = getattr(Level, levl.replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
     assert unit.rare == getattr(Rare, f"Star_{rare}")

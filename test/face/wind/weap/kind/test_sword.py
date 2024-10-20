@@ -1,6 +1,7 @@
 import pytest
 
 from gi_loadouts.data.weap.swords import SwordsDict
+from gi_loadouts.face.wind.main import MainWindow
 from gi_loadouts.type.levl import Level
 from gi_loadouts.type.weap import Sword, WeaponStatType
 from test import verify_accuracy
@@ -55,9 +56,9 @@ from test import verify_accuracy
         #TODO pytest.param("Sword of Descension", 0, "Level 80/90 (Rank 6)", 414, WeaponStatType.attack_perc, 32.1, 5, id="face.wind.rule: Configuring weapon - Sword - Sword of Descension"),
     ]
 )
-def test_sword(runner, name, rare, levl, batk, seco, valu, refn) -> None:
+def test_sword(runner: MainWindow, name: str, rare: int, levl: str, batk: int, seco: WeaponStatType, valu: float, refn: int | None) -> None:
     """
-    Test the configuration of weapons on the user interface
+    Test configuring weapons of sword type on the user interface
 
     :return:
     """

@@ -48,7 +48,12 @@ from test import verify_accuracy
         pytest.param("Song of Broken Pines", 5, 4, "Level 80/90 (Rank 6)", 679, WeaponStatType.damage_bonus_physical_perc, 18.9, id="data.weap.claymores: Song of Broken Pines"),
     ]
 )
-def test_claymore(name, rare, tier, levl, batk, seco, valu):
+def test_claymore(name: str, rare: int, tier: int, levl: str, batk: int, seco: WeaponStatType, valu: float) -> None:
+    """
+    Test all weapons of claymore type for correctness
+
+    :return:
+    """
     unit = ClaymoresDict[name]()
     unit.levl = getattr(Level, levl.replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
     assert unit.rare == getattr(Rare, f"Star_{rare}")

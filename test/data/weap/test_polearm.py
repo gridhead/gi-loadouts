@@ -45,7 +45,12 @@ from test import verify_accuracy
         pytest.param("Calamity Queller", 5, 4, "Level 80/90 (Rank 6)", 679, WeaponStatType.attack_perc, 15.1, id="data.weap.polearms: Calamity Queller"),
     ]
 )
-def test_polearm(name, rare, tier, levl, batk, seco, valu):
+def test_polearm(name: str, rare: int, tier: int, levl: str, batk: int, seco: WeaponStatType, valu: float) -> None:
+    """
+    Test all weapons of polearm type for correctness
+
+    :return:
+    """
     unit = PolearmsDict[name]()
     unit.levl = getattr(Level, levl.replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
     assert unit.rare == getattr(Rare, f"Star_{rare}")

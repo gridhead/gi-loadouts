@@ -9,6 +9,6 @@ from gi_loadouts.type.rank import Rank, __rank__
         pytest.param(item, unit, id=f"type.rank: {item}") for item, unit in __rank__.items()
     ]
 )
-def test_rank(text, data):
+def test_rank(text: str, data: int) -> None:
     rkut = getattr(Rank, text.replace(" ", "_"))
     assert rkut.value == data

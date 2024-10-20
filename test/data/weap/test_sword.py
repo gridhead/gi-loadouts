@@ -56,7 +56,12 @@ from test import verify_accuracy
         #TODO pytest.param("Sword of Descension", 0, 0, "Level 80/90 (Rank 6)", 414, WeaponStatType.attack_perc, 32.1, id="data.weap.swords: Sword of Descension"),
     ]
 )
-def test_sword(name, rare, tier, levl, batk, seco, valu):
+def test_sword(name: str, rare: int, tier: int, levl: str, batk: int, seco: WeaponStatType, valu: float) -> None:
+    """
+    Test all weapons of sword type for correctness
+
+    :return:
+    """
     unit = SwordsDict[name]()
     unit.levl = getattr(Level, levl.replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
     assert unit.rare == getattr(Rare, f"Star_{rare}")

@@ -1,6 +1,7 @@
 import pytest
 
 from gi_loadouts.data.weap.claymores import ClaymoresDict
+from gi_loadouts.face.wind.main import MainWindow
 from gi_loadouts.type.levl import Level
 from gi_loadouts.type.weap import Claymore, WeaponStatType
 from test import verify_accuracy
@@ -47,9 +48,9 @@ from test import verify_accuracy
         pytest.param("Song of Broken Pines", 5, "Level 80/90 (Rank 6)", 679, WeaponStatType.damage_bonus_physical_perc, 18.9, 5, id="face.wind.rule: Configuring weapon - Claymore - Song of Broken Pines"),
     ]
 )
-def test_claymore(runner, name, rare, levl, batk, seco, valu, refn) -> None:
+def test_claymore(runner: MainWindow, name: str, rare: int, levl: str, batk: int, seco: WeaponStatType, valu: float, refn: int | None) -> None:
     """
-    Test the configuration of weapons on the user interface
+    Test configuring weapons of claymore type on the user interface
 
     :return:
     """

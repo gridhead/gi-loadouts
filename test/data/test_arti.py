@@ -704,7 +704,12 @@ from gi_loadouts.type.stat import ATTR, STAT
         ),
     ]
 )
-def test_arti(name, pair, quad, rare, team):
+def test_arti(name: str, pair: list, quad: list, rare: list, team: list) -> None:
+    """
+    Test all artifacts for correctness
+
+    :return:
+    """
     unit = __artilist__[name]
     assert name == unit.name
     assert pair == unit.pairdata

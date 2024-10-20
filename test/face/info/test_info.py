@@ -2,8 +2,11 @@ import pytest
 from PySide6.QtCore import Qt, QUrl
 from PySide6.QtGui import QDesktopServices
 from PySide6.QtWidgets import QDialog
+from pytest_mock.plugin import MockerFixture
+from pytestqt.qtbot import QtBot
 
 from gi_loadouts import __gicompat_part__, __gicompat_vers__, __releases__, __versdata__
+from gi_loadouts.face.wind.main import MainWindow
 
 
 @pytest.mark.parametrize(
@@ -15,9 +18,9 @@ from gi_loadouts import __gicompat_part__, __gicompat_vers__, __releases__, __ve
         )
     ]
 )
-def test_info(runner, qtbot, mocker, _) -> None:
+def test_info(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
     """
-    Attempt clicking the info button on side of UI
+    Test clicking the info button on side of UI
 
     :return:
     """

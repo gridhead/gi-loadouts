@@ -1,7 +1,9 @@
 import pytest
 from PySide6.QtCore import Qt
+from pytestqt.qtbot import QtBot
 
 from gi_loadouts.data.char import __charmaps__
+from gi_loadouts.face.wind.main import MainWindow
 from gi_loadouts.type.char.cons import Cons
 from gi_loadouts.type.levl import Level
 
@@ -15,12 +17,13 @@ from gi_loadouts.type.levl import Level
         ) for name in __charmaps__.keys()
     ]
 )
-def test_char_drop(runner, name):
+def test_char_drop(runner: MainWindow, name: str) -> None:
     """
-    Test the configuration of characters on the user interface
+    Test configuring characters on the user interface
 
     :return:
     """
+
     char = __charmaps__[name]()
     char.levl = Level.Level_80_90_Rank_6
     char.cons = Cons.Constellation_6
@@ -74,9 +77,9 @@ def test_char_drop(runner, name):
         ) for name, butn in {"Lumine": "char_head_lumi", "Aether": "char_head_aeth"}.items()
     ]
 )
-def test_char_butn(runner, qtbot, name, butn):
+def test_char_butn(runner: MainWindow, qtbot: QtBot, name: str, butn: str) -> None:
     """
-    Test the configuration of characters on the user interface
+    Test configuring travelers on the user interface
 
     :return:
     """

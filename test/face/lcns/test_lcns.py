@@ -1,8 +1,10 @@
 import pytest
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QDialog
+from pytestqt.qtbot import QtBot
 
 from gi_loadouts import __gicompat_part__, __gicompat_vers__, __versdata__
+from gi_loadouts.face.wind.main import MainWindow
 
 
 @pytest.mark.parametrize(
@@ -14,9 +16,9 @@ from gi_loadouts import __gicompat_part__, __gicompat_vers__, __versdata__
         )
     ]
 )
-def test_lcns(runner, qtbot, _) -> None:
+def test_lcns(runner: MainWindow, qtbot: QtBot, _: None) -> None:
     """
-    Attempt clicking the help button on side of UI
+    Test clicking the help button on side of UI
 
     :return:
     """

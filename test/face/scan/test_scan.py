@@ -7,12 +7,16 @@ import pytest
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QDialog, QFileDialog, QMessageBox
 from pytesseract import TesseractError
+from pytest_mock import MockerFixture
+from pytestqt.qtbot import QtBot
 
 from gi_loadouts import __versdata__, conf
 from gi_loadouts.data.arti import __artilist__
 from gi_loadouts.face.rsrc import kill_temp_file, make_temp_file
 from gi_loadouts.face.scan import file
+from gi_loadouts.face.scan.main import ScanDialog
 from gi_loadouts.face.util import truncate_text
+from gi_loadouts.face.wind.main import MainWindow
 from gi_loadouts.type.arti import ArtiLevl, base
 from gi_loadouts.type.stat import STAT
 from test.face.scan import (
@@ -33,9 +37,9 @@ from test.face.scan import (
         pytest.param(None, id="face.scan: Testing ScanWindow")
     ]
 )
-def test_scan_window(scantest, _) -> None:
+def test_scan_window(scantest: ScanDialog, _: None) -> None:
     """
-    Testing ScanWindow
+    Test spawning of an instance of ScanWindow class
 
     :return:
     """
@@ -75,9 +79,9 @@ def test_scan_window(scantest, _) -> None:
         ) for name, team in __artilist__.items()
     ]
 )
-def test_scan_arti_drop(scantest, name, rare, part, part_type) -> None:
+def test_scan_arti_drop(scantest: ScanDialog, name: str, rare: list, part: str, part_type: str) -> None:
     """
-    Test the configuration of artifact on the user interface
+    Test configuring artifact on the user interface
 
     :return:
     """
@@ -114,9 +118,9 @@ def test_scan_arti_drop(scantest, name, rare, part, part_type) -> None:
         pytest.param(None, id="face.scan.rule: Clearing artifact")
     ]
 )
-def test_scan_arti_wipe(scantest, qtbot, _) -> None:
+def test_scan_arti_wipe(scantest: ScanDialog, qtbot: QtBot, _: None) -> None:
     """
-    Test the clearing of the artifact
+    Test clearing of the artifact from the user interface
 
     :return:
     """
@@ -144,9 +148,9 @@ def test_scan_arti_wipe(scantest, qtbot, _) -> None:
         pytest.param(None, id="face.scan.rule: Test OCR functionality")
     ]
 )
-def test_scan_arti_load(scantest, qtbot, mocker, _) -> None:
+def test_scan_arti_load(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
     """
-    Test OCR functionality
+    Test initial OCR functionality
 
     :return:
     """
@@ -206,9 +210,9 @@ def test_scan_arti_load(scantest, qtbot, mocker, _) -> None:
         pytest.param(None, id="face.scan.rule: Cancelling loading an artifact snapshot")
     ]
 )
-def test_scan_arti_load_nope(scantest, qtbot, mocker, _) -> None:
+def test_scan_arti_load_nope(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
     """
-    Attempt cancelling loading an artifact snapshot
+    Test cancelling loading an artifact snapshot
 
     :return:
     """
@@ -262,9 +266,9 @@ def test_scan_arti_load_nope(scantest, qtbot, mocker, _) -> None:
         pytest.param(None, id="face.scan.rule: Failing to load the artifact snapshot")
     ]
 )
-def test_scan_arti_load_fail(scantest, qtbot, mocker, _) -> None:
+def test_scan_arti_load_fail(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
     """
-    Attempt failing to loading the artifact snapshot
+    Test failing to loading the artifact snapshot
 
     :return:
     """
@@ -306,9 +310,9 @@ def test_scan_arti_load_fail(scantest, qtbot, mocker, _) -> None:
         pytest.param("Windows", "C:\\Program Files\\Tesseract-OCR\\tesseract.exe", id="face.scan.rule: Actual loading of Tesseract OCR executable in Windows")
     ]
 )
-def test_scan_tessexec_load(scantest, qtbot, mocker, platform, tempexec) -> None:
+def test_scan_tessexec_load(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, platform: str, tempexec: str) -> None:
     """
-    Attempt actual loading of Tesseract OCR executable
+    Test actual loading of Tesseract OCR executable
 
     :return:
     """
@@ -347,9 +351,9 @@ def test_scan_tessexec_load(scantest, qtbot, mocker, platform, tempexec) -> None
         pytest.param(None, id="face.scan.rule: Failing to load the Tesseract OCR executable")
     ]
 )
-def test_scan_tessexec_load_fail(scantest, qtbot, mocker, _) -> None:
+def test_scan_tessexec_load_fail(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
     """
-    Attempt failing to load the Tesseract OCR executable
+    Test failing to load the Tesseract OCR executable
 
     :return:
     """
@@ -377,9 +381,9 @@ def test_scan_tessexec_load_fail(scantest, qtbot, mocker, _) -> None:
         pytest.param(TesseractError("abc", "xyz"), id="face.scan.rule: Failing of register function with TesseractError")
     ]
 )
-def test_scan_register_fail(scantest, qtbot, mocker, expt) -> None:
+def test_scan_register_fail(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, expt: Exception) -> None:
     """
-    Attempt failing the register function with OSError and TesseractError
+    Test failing the register function with `OSError` and `TesseractError`
 
     :return:
     """
@@ -433,9 +437,9 @@ def test_scan_register_fail(scantest, qtbot, mocker, expt) -> None:
         pytest.param(None, id="face.scan.rule: Clearing snapshot")
     ]
 )
-def test_scan_snapshot_wipe(scantest, qtbot, _) -> None:
+def test_scan_snapshot_wipe(scantest: ScanDialog, qtbot: QtBot, _: None) -> None:
     """
-    Attempt clearing of the snapshot
+    Test clearing of the snapshot from the user interface
 
     :return:
     """
@@ -461,9 +465,9 @@ def test_scan_snapshot_wipe(scantest, qtbot, _) -> None:
         pytest.param("Circlet of Logos", "ccol", id="face.scan.rule: Importing Circlet of Logos artifact information in MainWindow")
     ]
 )
-def test_scan_import_arti(scantest, qtbot, mocker, dist, part) -> None:
+def test_scan_import_arti(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, dist: str, part: str) -> None:
     """
-    Attempt importing artifact information in MainWindow
+    Test importing artifact information in MainWindow
 
     :return:
     """
@@ -511,9 +515,9 @@ def test_scan_import_arti(scantest, qtbot, mocker, dist, part) -> None:
         pytest.param(None, id="face.scan.rule: Importing faulty artifact information in MainWindow")
     ]
 )
-def test_scan_import_arti_flty(scantest, qtbot, _) -> None:
+def test_scan_import_arti_flty(scantest: ScanDialog, qtbot: QtBot, _: None) -> None:
     """
-    Attempt importing faulty artifact information in MainWindow
+    Test importing faulty artifact information in MainWindow
 
     :return:
     """
@@ -556,9 +560,9 @@ def test_scan_import_arti_flty(scantest, qtbot, _) -> None:
         pytest.param("Circlet of Logos", "ccol", MockScanDialogCCOL, id="face.scan.rule: Importing Circlet of Logos artifact information in MainWindow")
     ]
 )
-def test_wind_import_arti(runner, qtbot, mocker, dist, part, mockscan):
+def test_wind_import_arti(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, dist: str, part: str, mockscan: str) -> None:
     """
-    Attempt actually importing artifact information in MainWindow
+    Test actually importing artifact information in MainWindow
 
     :return:
     """

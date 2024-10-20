@@ -16,7 +16,7 @@ from gi_loadouts.type.rank import Rank
         ) for item in __level__.keys()
     ]
 )
-def test_levl(text, qant, rank, name):
+def test_levl(text: str, qant: int, rank: int, name: str) -> None:
     unit = LevelType(
         qant = qant,
         rank = getattr(Rank, f"Rank_{rank}"),
