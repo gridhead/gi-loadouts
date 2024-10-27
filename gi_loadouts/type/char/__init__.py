@@ -56,6 +56,7 @@ class CharName(str, Enum):
     kaeya = "Kaeya"
     kaveh = "Kaveh"
     keqing = "Keqing"
+    kinich = "Kinich"
     kirara = "Kirara"
     klee = "Klee"
     kujou_sara = "Kujou Sara"

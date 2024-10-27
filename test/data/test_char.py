@@ -300,6 +300,13 @@ from test import verify_accuracy
             }, id="data.char: Keqing",
         ),
         pytest.param(
+            "Kinich", "claymore", 5, "dendro", STAT.critical_damage_perc,
+            {
+                "Level 40/50 (Rank 2)": (5779.31, 149.43, 360.29, 9.6),
+                "Level 80/90 (Rank 6)": (11954.32, 309.09, 745.25, 38.4),
+            }, id="data.char: Kinich",
+        ),
+        pytest.param(
             "Kirara", "sword", 4, "dendro", STAT.health_points_perc,
             {
                 "Level 40/50 (Rank 2)": (5614.44, 102.80, 251.69, 6.0),
