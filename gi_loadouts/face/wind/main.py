@@ -9,12 +9,19 @@ from gi_loadouts.type.char import CharName
 class MainWindow(Rule):
     def __init__(self) -> None:
         super().__init__()
-        self.dialog = QMessageBox()
+        self.dialog = QMessageBox(parent=self)
         self.setupUi(self)
         self.setWindowTitle(f"Loadouts for Genshin Impact v{__versdata__}")
         self.initialize_events()
         self.initialize_elements()
-        make_temp_file()
+        try:
+            make_temp_file()
+        except Exception as expt:
+            self.show_dialog(
+                QMessageBox.Information,
+                "Initialization failed",
+                f"{expt}",
+            )
 
     def __del__(self) -> None:
         kill_temp_file()
@@ -82,7 +89,6 @@ class MainWindow(Rule):
                 drop, text = getattr(self, f"arti_{part}_name_{alfa}"), getattr(self, f"arti_{part}_data_{alfa}")
                 drop.currentTextChanged.connect(lambda _, a_drop=drop, a_text=text: self.render_lineedit_readonly_when_none(a_drop, a_text))
                 text.textChanged.connect(self.validate_lineedit_userdata)
-        for part in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
             getattr(self, f"arti_{part}_scan").clicked.connect(lambda _, a_part=part: self.show_scan_dialog(a_part))
             getattr(self, f"arti_{part}_load").clicked.connect(lambda _, a_part=part: self.arti_load(a_part))
             getattr(self, f"arti_{part}_save").clicked.connect(lambda _, a_part=part: self.arti_save(a_part))

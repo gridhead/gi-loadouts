@@ -2,7 +2,7 @@ from PySide6.QtWidgets import QMessageBox
 
 
 class Dialog:
-    def __init__(self) -> None:
+    def __init__(self) -> None:  # pragma: no cover
         self.dialog = QMessageBox(parent=self)
 
     def show_dialog(self, icon: QMessageBox.Icon, head: str, text: str) -> None:

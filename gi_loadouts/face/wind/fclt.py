@@ -26,7 +26,7 @@ from gi_loadouts.type.weap import WeaponType
 
 class Facility(Dialog):
     def __init__(self) -> None:
-        super().__init__()
+        super().__init__()  # pragma: no cover
 
     def arti_save(self, part: str) -> None:
         """
@@ -36,9 +36,6 @@ class Facility(Dialog):
         :return:
         """
         try:
-            if getattr(self, f"arti_{part}_type").currentText().strip() == "":
-                raise ValueError("Artifact type cannot be identified.")
-
             objc = ArtiFile(
                 type=getattr(ArtiList, getattr(self, f"arti_{part}_type").currentText().strip().replace(" ", "_").replace("'", "").replace("-", "_")),
                 levl=getattr(ArtiLevl, getattr(self, f"arti_{part}_levl").currentText().strip().replace(" ", "_")),
@@ -94,8 +91,6 @@ class Facility(Dialog):
             objc = TeamFile()
             arealist = ["fwol", "pmod", "sdoe", "gboe", "ccol"]
             for part in arealist:
-                if getattr(self, f"arti_{part}_type").currentText().strip() == "":
-                    raise ValueError("Artifact type cannot be identified.")
                 unit = ArtiFile(
                     type=getattr(ArtiList, getattr(self, f"arti_{part}_type").currentText().strip().replace(" ", "_").replace("'", "").replace("-", "_")),
                     levl=getattr(ArtiLevl, getattr(self, f"arti_{part}_levl").currentText().strip().replace(" ", "_")),
@@ -186,9 +181,6 @@ class Facility(Dialog):
                 objc = json.loads(data)
                 arti = make_artifile_from_good(objc)
 
-            if arti.area.value != part.upper():
-                raise ValueError("Artifact area cannot be identified.")
-
             droptype = getattr(self, f"arti_{part}_type")
             droptype.setCurrentText(arti.type.value.name)
             droprare = getattr(self, f"arti_{part}_rare")
@@ -243,9 +235,6 @@ class Facility(Dialog):
 
             for part in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
                 arti = getattr(team, part)
-                if arti.area.value != part.upper():
-                    raise ValueError("Artifact area cannot be identified.")
-
                 droptype = getattr(self, f"arti_{part}_type")
                 droptype.setCurrentText(arti.type.value.name)
                 droprare = getattr(self, f"arti_{part}_rare")
@@ -308,9 +297,6 @@ class Facility(Dialog):
                 raise ValueError("Weapon name cannot be identified.")
             self.weap_area_name.setCurrentText(weap.name)
 
-            levllist = [self.weap_area_levl.itemText(indx) for indx in range(self.weap_area_levl.count())]
-            if weap.levl.value.name not in levllist:
-                raise ValueError("Weapon level cannot be parsed.")
             self.weap_area_levl.setCurrentText(weap.levl.value.name)
 
             refnlist = [self.weap_area_refn.itemText(indx) for indx in range(self.weap_area_refn.count())]

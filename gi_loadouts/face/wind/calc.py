@@ -9,7 +9,7 @@ from gi_loadouts.type.weap import WeaponStatType
 
 
 class Assess:
-    def __init__(self) -> None:
+    def __init__(self) -> None:  # pragma: no cover
         self.collection = Collection()
         self.c_team = None
         self.c_weap = None
@@ -24,7 +24,7 @@ class Assess:
         """
         if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
             # MAIN
-            char = __charmaps__[self.head_char_name.currentText()]
+            char = __charmaps__[self.head_char_name.currentText()]()
             char.levl = getattr(Level, self.head_char_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
 
             # BASE
@@ -60,7 +60,7 @@ class Assess:
             DEF % scaling = Noelle,
             HP  % scaling = Baizhu, Barbara, Candace, Chevreuse, Dehya, Dori, Kirara, Kuki Shinobu, Mika, Nilou, Yaoyao
             """
-            char = __charmaps__[self.head_char_name.currentText()]
+            char = __charmaps__[self.head_char_name.currentText()]()
             char.levl = getattr(Level, self.head_char_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
             char_substats_prev_data = getattr(self.c_tyvt, self.c_tyvt.revmap[char.seco.stat_name]).stat_data
             char_substats_curt_data = getattr(self.c_char, self.c_char.revmap[char.seco.stat_name]).stat_data
@@ -107,7 +107,7 @@ class Assess:
             # MAIN
             kind = self.weap_area_type.currentText().strip()
             name = self.weap_area_name.currentText().strip()
-            weap = Family[kind][name]
+            weap = Family[kind][name]()
             refn = self.weap_area_refn.currentText().strip()
             weap.levl = getattr(Level, self.weap_area_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
             self.c_weap.base = ATTR(stat_name=WeaponStatType.attack.value, stat_data=weap.main_stat.stat_data)

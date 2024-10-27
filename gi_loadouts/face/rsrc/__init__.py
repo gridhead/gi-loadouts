@@ -1,4 +1,3 @@
-import os
 from os import path, remove
 from pathlib import Path
 from re import match
@@ -23,10 +22,16 @@ def make_temp_file() -> None:
     Remove the residual cache data from the temporary directory left over during previous sessions
     due to unsuccessful termination before instantiating the same for this session.
     """
-    ptrn = r"gi-loadouts-[A-Za-z0-9]+\.traineddata"
+    ptrn = fr"{conf.data_prefix}[a-z0-9_]+\{conf.data_suffix}"
     temp = Path(gettempdir())
     resi = [temp / file.name for file in temp.iterdir() if file.is_file() if match(ptrn, file.name)]
-    _ = [os.remove(file) for file in resi if file.exists()]
+
+    for file in resi:
+        if file.exists():
+            try:
+                remove(file)
+            except FileNotFoundError:
+                continue
 
     file = QFile(":data/data/best.traineddata")
     if not file.open(QIODevice.ReadOnly):
@@ -40,10 +45,10 @@ def make_temp_file() -> None:
     have to be created and deleted manually. On UNIX based operating systems like GNU/Linux or
     MacOS, files can be reliably opened even when they have been marked for deletion.
     """
-    temp = NamedTemporaryFile(prefix="gi-loadouts-", suffix=".traineddata", delete=False, mode="w+b")
+    temp = NamedTemporaryFile(prefix=conf.data_prefix, suffix=conf.data_suffix, delete=False, mode="w+b")
     temp.write(cont)
     temp.close()
-    conf.tempname = Path(temp.name).name.replace(".traineddata", "")
+    conf.tempname = Path(temp.name).name.replace(conf.data_suffix, "")
     conf.temppath = temp.name
 
 

@@ -6,7 +6,7 @@ from gi_loadouts.type.weap import WeaponType
 
 
 class Diona(Char):
-    __statdata__: dict = {0: 0.0, 1: 0.0, 2: 4.8, 3: 9.6, 4: 9.6, 5: 14.4, 6: 19.2}
+    __statdata__: dict = {0: 0.0, 1: 0.0, 2: 6.0, 3: 12.0, 4: 12.0, 5: 18.0, 6: 24.0}
     __statname__: STAT = STAT.damage_bonus_cryo_perc
     name: str = "Diona"
     rare: Rare = Rare.Star_4

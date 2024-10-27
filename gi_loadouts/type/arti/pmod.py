@@ -1,7 +1,7 @@
 from typing import Optional
 
 from gi_loadouts.type.arti.base import Artifact, MainStatType_PMOD, SecoStat
-from gi_loadouts.type.arti.base.stat import attack
+from gi_loadouts.type.arti.stat import attack
 
 
 class PMOD(Artifact):

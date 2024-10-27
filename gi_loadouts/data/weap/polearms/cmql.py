@@ -2,7 +2,7 @@ from typing import List
 
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Polearm, WeaponStat, WeaponStatType
-from gi_loadouts.type.weap.base.tier import Tier
+from gi_loadouts.type.weap.tier import Tier
 
 
 class CalamityQueller(Polearm):

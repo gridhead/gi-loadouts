@@ -74,7 +74,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         if self.head_char_elem.currentText().strip() != "":
             self.head_char_name.clear()
             if self.head_char_elem.currentText().strip() != "All":
-                self.head_char_name.addItems([item for item, data in __charmaps__.items() if data.vision.value.name == self.head_char_elem.currentText().strip()])
+                self.head_char_name.addItems([item for item, data in __charmaps__.items() if data().vision.value.name == self.head_char_elem.currentText().strip()])
             else:
                 self.head_char_name.addItems([item for item, data in __charmaps__.items()])
 
@@ -101,7 +101,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         :return:
         """
         if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
-            char = __charmaps__[self.head_char_name.currentText()]
+            char = __charmaps__[self.head_char_name.currentText()]()
             char.levl = getattr(Level, self.head_char_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
             self.head_vson.setPixmap(QPixmap(f":vson/imgs/vson/{char.vision.value.name.lower()}.png"))
             self.head_area_back.setPixmap(modify_graphics_resource(f":name/imgs/char/name/{self.head_char_name.currentText().replace(" ", "_").lower()}.png", 1.0, 0.75))
@@ -116,7 +116,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.head_area_line_prim.setText(f"{char.name}")
             self.head_area_line_seco.setText(f"{char.cons_name}")
             self.head_area_line_tert.setText(f"{char.weapon.value}")
-            self.head_area_line_quat.setText(f"<i>{char.name} is a {char.weapon.value.lower()}-wielding {char.vision.value.name if char.vision != Vision.none else ""} character of {char.rare.value.qant}-star quality.</i>")
+            self.head_area_line_quat.setText(f"<i>{char.name} is a {char.weapon.value.lower()}-wielding{f" {char.vision.value.name} " if char.vision != Vision.none else " "}character of {char.rare.value.qant}-star quality.</i>")
             self.head_area_line_quin.setText(f"<i>{char.name} is affiliated with {char.afln}.</i>" if char.afln != "" else f"<i>{char.name} is not affiliated with any association.</i>")
             self.manage_changing_appearance(char.vision.value.colour)
 
@@ -128,7 +128,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         :return:
         """
         if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
-            char = __charmaps__[self.head_char_name.currentText()]
+            char = __charmaps__[self.head_char_name.currentText()]()
             char.levl = getattr(Level, self.head_char_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
             self.weap_area_type.clear()
             self.weap_area_type.addItem(f"{char.weapon.value}")
@@ -158,8 +158,8 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.weap_area_refn.clear()
             self.weap_area_refn_head.setText("No refinements available.")
             self.weap_area_refn_body.setText("No refinements available.")
-            self.weap_area_stat.setText("No substats.")
-            weap = Family[kind][name]
+            self.weap_area_stat.setText("No substats")
+            weap = Family[kind][name]()
             self.weap_area_levl.addItems([item.value.name for item in weap.levl_bind])
             self.weap_area_refn.addItems(item for item in weap.refinement.keys())
             self.weap_port_area.setPixmap(QPixmap(weap.rare.value.back))
@@ -175,7 +175,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         if self.weap_area_type.currentText().strip() != "" and self.weap_area_name.currentText().strip() != "" and self.weap_area_levl.currentText().strip() != "":
             name = self.weap_area_name.currentText()
             kind = self.weap_area_type.currentText().strip()
-            weap = Family[kind][name]
+            weap = Family[kind][name]()
             weap.levl = getattr(Level, self.weap_area_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
             self.weap_area_batk.setText(f"ATK {round(weap.main_stat.stat_data)}")
             if weap.levl.value.rank.value <= 1:
@@ -195,7 +195,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         if self.weap_area_type.currentText().strip() != "" and self.weap_area_name.currentText().strip() != "" and self.weap_area_refn.currentText().strip() != "":
             name = self.weap_area_name.currentText()
             kind = self.weap_area_type.currentText().strip()
-            weap = Family[kind][name]
+            weap = Family[kind][name]()
             self.weap_area_refn_head.setText(f"<b>{weap.refi_name}</b>")
             self.weap_area_refn_body.setText(f"{weap.refinement[self.weap_area_refn.currentText().strip()].data}")
 
@@ -241,7 +241,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
                 rare = getattr(Rare, droprare.currentText().replace(" ", "_"))
                 stat = getattr(arti, f"revmap_{part}")[dropstat.currentText().strip()]
                 item = getattr(team.value, part)
-                item.levl, item.rare, item.stat_name = levl.value.levl, rare.value.qant, stat
+                item.rare, item.levl, item.stat_name = rare.value.qant, levl.value.levl, stat
                 statdata.setText(f"{round(item.stat_data, 1)}")
 
     def change_artifact_team_by_changing_type(self, droptype: QComboBox, part: str) -> None:
@@ -374,7 +374,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.calc_stat()
             self.otptobjc = OtptWindow(
                 {
-                    "char": __charmaps__[self.head_char_name.currentText()],
+                    "char": __charmaps__[self.head_char_name.currentText()](),
                     "levl": self.head_char_levl.currentText().strip(),
                     "cons": self.head_char_cons.currentText().strip(),
                 },
@@ -450,7 +450,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         :return:
         """
         self.infoobjc = InfoDialog()
-        self.infoobjc.exec()
+        self.infoobjc.show()
 
     def show_lcns_dialog(self) -> None:
         """
@@ -459,7 +459,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         :return:
         """
         self.lcnsobjc = LcnsDialog()
-        self.lcnsobjc.exec()
+        self.lcnsobjc.show()
 
     def show_scan_dialog(self, part: str) -> None:
         """

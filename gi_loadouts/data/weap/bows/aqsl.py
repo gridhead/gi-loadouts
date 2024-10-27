@@ -2,13 +2,13 @@ from typing import List
 
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Bow, WeaponStat, WeaponStatType
-from gi_loadouts.type.weap.base.tier import Tier
+from gi_loadouts.type.weap.tier import Tier
 
 
 class AquaSimulacra(Bow):
     name: str = "Aqua Simulacra"
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_damage_perc, stat_data=19.2)
-    tier: Tier = Tier.Tier_2
+    tier: Tier = Tier.Tier_1
     rare: Rare = Rare.Star_5
     refi_name: str = "The Cleansing Form"
     refi_list: List[str] = [

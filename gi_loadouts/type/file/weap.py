@@ -45,7 +45,7 @@ class WeapFile(BaseModel):
             "key": __weaplist_good__[self.name],
             "level": self.levl.value.qant,
             "ascension": self.levl.value.rank.value,
-            "refinement": int(self.refn.split(" ")[1]),
+            "refinement": int(self.refn.split(" ")[1]) if self.refn != "" else self.refn,
             "type": self.type.name
         }
         return data
@@ -82,7 +82,7 @@ def make_weapfile_from_good(objc: dict) -> WeapFile:
             name=__weaplist_good_revmap__[objc["key"]],
             type=getattr(WeaponType, objc["type"]),
             levl=getattr(Level, f"Level_0{objc["level"]}_{__ascn_bond__[objc["ascension"]]}_Rank_{objc["ascension"]}" if objc["level"] < 10 else f"Level_{objc["level"]}_{__ascn_bond__[objc["ascension"]]}_Rank_{objc["ascension"]}"),
-            refn=f"Refinement {objc["refinement"]}",
+            refn=f"Refinement {objc["refinement"]}" if objc["refinement"] != "" else objc["refinement"],
         )
     except Exception as expt:
         raise ValueError("Weapon data cannot be parsed.") from expt

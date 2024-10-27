@@ -317,7 +317,7 @@ __artilist__ = {
         fwol=rosj.fwol(), pmod=rosj.pmod(), sdoe=rosj.sdoe(), gboe=rosj.gboe(), ccol=rosj.ccol(),
         pairdata=rosj.team.__pairdata__, pairtext=rosj.team.__pairtext__,
         quaddata=rosj.team.__quaddata__, quadtext=rosj.team.__quadtext__,
-        rare=[Rare.Star_4, Rare.Star_5],
+        rare=[Rare.Star_3, Rare.Star_4],
         file=rosj.__name__.split(".")[-1]
     ),
     rcbl.team.__teamname__: ArtifactTeam(

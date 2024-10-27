@@ -237,8 +237,18 @@ class Rule(QDialog, Ui_scan, Dialog):
 
         :return:
         """
+        area, main, seco, team, levl, rare, duration, expt = rslt
+
+        if expt:
+            self.show_dialog(
+                QMessageBox.Information,
+                "Faulty scanning",
+                f"Please consider checking your input after ensuring that the proper Tesseract OCR executable has been selected.\n\n{expt}"
+            )
+            return
+
         self.arti_shot.setPixmap(self.shot)
-        area, main, seco, team, levl, rare, duration = rslt
+
         if area in [self.arti_dist.itemText(indx) for indx in range(self.arti_dist.count())]:
             self.arti_dist.setCurrentText(area)
         if team in [self.arti_type.itemText(indx) for indx in range(self.arti_type.count())]:

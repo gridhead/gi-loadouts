@@ -1,0 +1,44 @@
+---
+name: Checking code functionality
+on: [push]
+jobs:
+  ci-test:
+    runs-on: ubuntu-latest
+    container: fedora:latest
+    strategy:
+      fail-fast: false
+      matrix:
+        tox-env: ["py312-dist"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update existing packages
+        run: |
+             dnf update --refresh --assumeyes
+
+      - name: Install the supporting dependencies
+        run: |
+             dnf install \
+                 libglvnd-egl \
+                 dbus-libs \
+                 libxkbcommon-x11 \
+                 libxkbcommon \
+                 xcb-util \
+                 xcb-util-image \
+                 xcb-util-renderutil \
+                 xcb-util-cursor \
+                 xcb-util-keysyms \
+                 xcb-util-wm \
+                 xorg-x11-server-Xvfb \
+                 tesseract \
+                 python3-pip \
+             --assumeyes \
+             --setopt=install_weak_deps=False
+
+      - name: Install the base dependencies
+        run: |
+             python3 -m pip install --upgrade poetry tox
+
+      - name: Check the functionality of the code
+        run: |
+             tox -e ${{ matrix.tox-env }}
