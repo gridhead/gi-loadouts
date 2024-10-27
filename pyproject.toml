@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "gi-loadouts"
-version = "0.1.0a2"
+version = "0.1.0"
 description = "Loadouts for Genshin Impact"
 authors = ["Akashdeep Dhar <akashdeep.dhar@gmail.com>", "Avadhoot Dhere <avadhootd99@gmail.com>", "Dhruv Bhirud <bhiruddhruv@gmail.com>", "Prithviraj Chavan <prithvichavan56110@gmail.com>", "Shounak Dey <shounakdey@ymail.com>"]
 license = "GPL-3.0-or-later"
@@ -34,7 +34,7 @@ python = ">=3.12,<3.13"
 pyside6-essentials = "^6.7.2"
 pydantic = "^2.8.2"
 pyyaml = "^6.0.2"
-pillow = "^10.4.0"
+pillow = "^10.4.0 || ^11.0.0"
 pytesseract = "^0.3.13"
 
 [tool.poetry.group.dev.dependencies]
