@@ -53,8 +53,11 @@ class Rule(QDialog, Ui_scan, Dialog):
         This is not likely to cause major problems but still, this is not the right approach and
         should be rectified at the earliest, no matter how small of a use-case this might be.
         """
-        if isinstance(self.thread, QThread):
-            self.thread.terminate()
+        try:
+            if isinstance(self.thread, QThread):
+                self.thread.terminate()
+        except RuntimeError:
+            return
 
     def populate_dropdown(self) -> None:
         """
