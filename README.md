@@ -434,7 +434,7 @@ ensure that the Tesseract OCR application is installed and configured properly.
 1.  Ensure that the necessary packages are available on the operating system 
     installation.
     ```
-    Git - https://git-scm.com/download/
+    Git - https://git-scm.com/downloads
     Tesseract - https://github.com/UB-Mannheim/tesseract/wiki
     ```
     ```
