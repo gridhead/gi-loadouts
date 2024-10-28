@@ -39,6 +39,7 @@ from gi_loadouts.data.char.kamisato_ayaka import KamisatoAyaka
 from gi_loadouts.data.char.kamisato_ayato import KamisatoAyato
 from gi_loadouts.data.char.kaveh import Kaveh
 from gi_loadouts.data.char.keqing import Keqing
+from gi_loadouts.data.char.kinich import Kinich
 from gi_loadouts.data.char.kirara import Kirara
 from gi_loadouts.data.char.klee import Klee
 from gi_loadouts.data.char.kujou_sara import KujouSara
@@ -129,6 +130,7 @@ __charmaps__ = {
     "Kaeya": Kaeya,
     "Kaveh": Kaveh,
     "Keqing": Keqing,
+    "Kinich": Kinich,
     "Kirara": Kirara,
     "Klee": Klee,
     "Kujou Sara": KujouSara,

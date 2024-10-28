@@ -45,6 +45,7 @@ from test import verify_accuracy
         pytest.param("\"Ultimate Overlord's Mega Magic Sword\"", 4, 3, "Level 80/90 (Rank 6)", 523, WeaponStatType.energy_recharge_perc, 27.9, id="data.weap.claymores: \"Ultimate Overlord's Mega Magic Sword\""),
         pytest.param("Skyward Pride", 5, 3, "Level 80/90 (Rank 6)", 621, WeaponStatType.energy_recharge_perc, 33.5, id="data.weap.claymores: Skyward Pride"),
         pytest.param("Verdict", 5, 3, "Level 80/90 (Rank 6)", 621, WeaponStatType.critical_rate_perc, 20.1, id="data.weap.claymores: Verdict"),
+        pytest.param("Fang of the Mountain King", 5, 4, "Level 80/90 (Rank 6)", 679, WeaponStatType.critical_rate_perc, 10.1, id="data.weap.claymores: Fang of the Mountain King"),
         pytest.param("Song of Broken Pines", 5, 4, "Level 80/90 (Rank 6)", 679, WeaponStatType.damage_bonus_physical_perc, 18.9, id="data.weap.claymores: Song of Broken Pines"),
     ]
 )
