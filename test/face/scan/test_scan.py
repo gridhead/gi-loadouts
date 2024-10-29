@@ -4,8 +4,9 @@ from tempfile import NamedTemporaryFile
 from uuid import uuid4
 
 import pytest
-from PySide6.QtCore import Qt
-from PySide6.QtWidgets import QDialog, QFileDialog, QMessageBox
+from PIL.ImageQt import QImage
+from PySide6.QtCore import QMimeData, Qt
+from PySide6.QtWidgets import QApplication, QDialog, QFileDialog, QMessageBox
 from pytesseract import TesseractError
 from pytest_mock import MockerFixture
 from pytestqt.qtbot import QtBot
@@ -20,11 +21,14 @@ from gi_loadouts.face.wind.main import MainWindow
 from gi_loadouts.type.arti import ArtiLevl, base
 from gi_loadouts.type.stat import STAT
 from test.face.scan import (
+    MockIncident,
+    MockMistakenIncident,
     MockScanDialogCCOL,
     MockScanDialogFWOL,
     MockScanDialogGBOE,
     MockScanDialogPMOD,
     MockScanDialogSDOE,
+    MockScanWorker,
     __dist__,
     __rtrn__,
     __rtrn_flty__,
@@ -207,6 +211,48 @@ def test_scan_arti_load(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixtur
 @pytest.mark.parametrize(
     "_",
     [
+        pytest.param(None, id="face.scan.rule: Failing to scan the artifact snapshot")
+    ]
+)
+def test_scan_arti_scan_fail(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
+    """
+    Test failing to scanning the artifact snapshot
+
+    :return:
+    """
+
+    """
+    Create the Tesseract training data
+    """
+    mocker.patch("gi_loadouts.conf.data_prefix", f"{uuid4().hex.upper()[0:8]}-")
+    make_temp_file()
+
+    """
+    Perform the action of loading the artifact information
+    """
+    tempfile = "test/static/gi-loadouts-ocr-test-sdoe.png"
+    savefile = NamedTemporaryFile(prefix="gi-loadouts-ocr-test-sdoe-", suffix=".png", delete=False, mode="wb")
+    with open(tempfile, "rb") as src_file:
+        savefile.write(src_file.read())
+    savefile.close()
+    mocker.patch.object(QFileDialog, "getOpenFileName", return_value=(savefile.name, ""))
+    mocker.patch("gi_loadouts.face.scan.rule.ScanWorker", MockScanWorker)
+    qtbot.mouseClick(scantest.arti_cnvs_load, Qt.LeftButton)
+
+    """
+    Confirm if the user interface elements change accordingly
+    """
+    assert isinstance(scantest.dialog, QMessageBox)
+    assert scantest.dialog.icon() == QMessageBox.Information
+    assert scantest.dialog.windowTitle() == "Faulty scanning"
+    assert "Please consider checking your input after ensuring that the proper Tesseract OCR executable has been selected." in scantest.dialog.text()
+    assert "Please select an accurate screenshot." in scantest.dialog.text()
+    assert scantest.dialog.isVisible()
+
+
+@pytest.mark.parametrize(
+    "_",
+    [
         pytest.param(None, id="face.scan.rule: Cancelling loading an artifact snapshot")
     ]
 )
@@ -238,7 +284,7 @@ def test_scan_arti_load_nope(scantest: ScanDialog, qtbot: QtBot, mocker: MockerF
     """
     Perform the action of loading the artifact information
     """
-    mocker.patch.object(file.FileHandling, "load_screenshot", return_value=(False, None, None))
+    mocker.patch.object(file.FileHandling, "load_screenshot_with_picker", return_value=(False, None, None))
     qtbot.mouseClick(scantest.arti_cnvs_load, Qt.LeftButton)
 
     """
@@ -258,49 +304,6 @@ def test_scan_arti_load_nope(scantest: ScanDialog, qtbot: QtBot, mocker: MockerF
     assert scantest.arti_data_c.text() == init_arti_data_c
     assert scantest.arti_name_d.currentText() == init_arti_name_d
     assert scantest.arti_data_d.text() == init_arti_data_d
-
-
-@pytest.mark.parametrize(
-    "_",
-    [
-        pytest.param(None, id="face.scan.rule: Failing to load the artifact snapshot")
-    ]
-)
-def test_scan_arti_load_fail(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
-    """
-    Test failing to loading the artifact snapshot
-
-    :return:
-    """
-
-    """
-    Create a temporary file filled with random data to simulate a failure when trying to open an
-    image using PIL.Image.open().
-    """
-    savefile = NamedTemporaryFile(prefix="gi-loadouts-", suffix=".webp", delete=False, mode="wb")
-    savefile.write(randbytes(512*1024))
-    savefile.close()
-
-    """
-    Perform the action of loading the artifact snapshot
-    """
-    mocker.patch.object(QFileDialog, "getOpenFileName", return_value=(savefile.name, ""))
-    qtbot.mouseClick(scantest.arti_cnvs_load, Qt.LeftButton)
-
-    """
-    Confirm if the user interface elements change accordingly
-    """
-    assert isinstance(scantest.dialog, QMessageBox)
-    assert scantest.dialog.icon() == QMessageBox.Information
-    assert scantest.dialog.windowTitle() == "Faulty scanning"
-    assert "Please select an accurate screenshot." in scantest.dialog.text()
-    assert scantest.dialog.isVisible()
-
-    """
-    Cleanup the temporary files from temp directory
-    """
-    kill_temp_file()
-    remove(savefile.name)
 
 
 @pytest.mark.parametrize(
@@ -361,7 +364,7 @@ def test_scan_tessexec_load_fail(scantest: ScanDialog, qtbot: QtBot, mocker: Moc
     """
     Perform the action of loading the Tesseract OCR executable
     """
-    mocker.patch.object(file.FileHandling, "load_tessexec", side_effect=Exception)
+    mocker.patch.object(file.FileHandling, "load_tessexec_with_picker", side_effect=Exception)
     qtbot.mouseClick(scantest.arti_cnvs_conf, Qt.LeftButton)
 
     """
@@ -452,7 +455,10 @@ def test_scan_snapshot_wipe(scantest: ScanDialog, qtbot: QtBot, _: None) -> None
     """
     Confirm if the user interface elements change accordingly
     """
-    assert scantest.arti_shot.text() == "YOUR ARTIFACT SCREENSHOT WILL SHOW UP HERE"
+    assert "YOUR ARTIFACT SCREENSHOT WILL SHOW UP HERE" in scantest.arti_shot.text()
+    assert "IF YOU HAVE AN ARTIFACT SCREENSHOT IN YOUR CLIPBOARD, SIMPLY PRESS" in scantest.arti_shot.text()
+    assert "TO PASTE IT HERE" in scantest.arti_shot.text()
+    assert "DRAG AND DROP WORKS AS WELL" in scantest.arti_shot.text()
 
 
 @pytest.mark.parametrize(
@@ -548,6 +554,225 @@ def test_scan_import_arti_flty(scantest: ScanDialog, qtbot: QtBot, _: None) -> N
     Confirm if the user interface elements change accordingly
     """
     assert scantest.keep_info() == __rtrn_flty__
+
+
+@pytest.mark.parametrize(
+    "dist, part",
+    [
+        pytest.param("Flower of Life", "fwol", id="face.scan.rule: Processing Flower of Life artifact information from the keyboard shortcut"),
+        pytest.param("Plume of Death", "pmod", id="face.scan.rule: Processing Plume of Death artifact information from the keyboard shortcut"),
+        pytest.param("Sands of Eon", "sdoe", id="face.scan.rule: Processing Sands of Eon artifact information from the keyboard shortcut"),
+        pytest.param("Goblet of Eonothem", "gboe", id="face.scan.rule: Processing Goblet of Eonothem artifact information from the keyboard shortcut"),
+        pytest.param("Circlet of Logos", "ccol", id="face.scan.rule: Processing Circlet of Logos artifact information from the keyboard shortcut")
+    ]
+)
+def test_scan_contents_keyboard_shortcut(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, dist: str, part: str) -> None:
+    """
+    Test processing of contents from the keyboard shortcut
+
+    :return:
+    """
+
+    """
+    Create the Tesseract training data
+    """
+    mocker.patch("gi_loadouts.conf.data_prefix", f"{uuid4().hex.upper()[0:8]}-")
+    make_temp_file()
+
+    """
+    Perform the action of loading the artifact information
+    """
+    mimedata = QMimeData()
+    mimedata.setImageData(QImage(f"test/static/gi-loadouts-ocr-test-{part}.png"))
+    QApplication.clipboard().clear()
+    QApplication.clipboard().setMimeData(mimedata)
+    scantest.insert_data_from_shortcut()
+
+    """
+    Confirm if the user interface elements change accordingly
+    """
+    def check_label() -> None:
+        assert scantest.arti_dist.currentText() == dist
+        assert scantest.arti_type.currentText() == __rtrn__[dist]["team"]
+
+    qtbot.waitUntil(check_label, timeout=10000)
+
+    """
+    Cleanup the temporary files from temp directory
+    """
+    kill_temp_file()
+
+
+@pytest.mark.parametrize(
+    "dist, part",
+    [
+        pytest.param("Flower of Life", "fwol", id="face.scan.rule: Processing Flower of Life artifact information from the drag-and-drop action"),
+        pytest.param("Plume of Death", "pmod", id="face.scan.rule: Processing Plume of Death artifact information from the drag-and-drop action"),
+        pytest.param("Sands of Eon", "sdoe", id="face.scan.rule: Processing Sands of Eon artifact information from the drag-and-drop action"),
+        pytest.param("Goblet of Eonothem", "gboe", id="face.scan.rule: Processing Goblet of Eonothem artifact information from the drag-and-drop action"),
+        pytest.param("Circlet of Logos", "ccol", id="face.scan.rule: Processing Circlet of Logos artifact information from the drag-and-drop action")
+    ]
+)
+def test_scan_contents_dasd_action(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, dist: str, part: str) -> None:
+    """
+    Test processing of contents from the drag-and-drop action
+
+    :return:
+    """
+
+    """
+    Create the Tesseract training data
+    """
+    mocker.patch("gi_loadouts.conf.data_prefix", f"{uuid4().hex.upper()[0:8]}-")
+    make_temp_file()
+
+    """
+    Perform the action of loading the artifact information
+    """
+    test_incident = MockIncident(f"test/static/gi-loadouts-ocr-test-{part}.png")
+    scantest.arti_shot.dropEvent(test_incident)
+
+    """
+    Confirm if the user interface elements change accordingly
+    """
+    def check_label() -> None:
+        assert scantest.arti_dist.currentText() == dist
+        assert scantest.arti_type.currentText() == __rtrn__[dist]["team"]
+
+    qtbot.waitUntil(check_label, timeout=10000)
+
+    """
+    Cleanup the temporary files from temp directory
+    """
+    kill_temp_file()
+
+
+@pytest.mark.parametrize(
+    "_",
+    [
+        pytest.param(None, id="face.scan.rule: Failing to load the artifact snapshot due to invalid contents")
+    ]
+)
+def test_scan_arti_load_fail_ic(scantest: ScanDialog, _: None) -> None:
+    """
+    Test failing to load the artifact snapshot due to invalid contents
+
+    :return:
+    """
+
+    """
+    Create a temporary file filled with random data to simulate a failure when trying to open an
+    image using PIL.Image.open().
+    """
+    savefile = NamedTemporaryFile(prefix="gi-loadouts-", suffix=".exe", delete=False, mode="wb")
+    savefile.write(randbytes(512*1024))
+    savefile.close()
+
+    """
+    Perform the action of loading the artifact information
+    """
+    test_incident = MockIncident(savefile.name)
+    scantest.arti_shot.dropEvent(test_incident)
+
+    """
+    Confirm if the user interface elements change accordingly
+    """
+    assert isinstance(scantest.dialog, QMessageBox)
+    assert scantest.dialog.icon() == QMessageBox.Information
+    assert scantest.dialog.windowTitle() == "Faulty scanning"
+    assert "Please consider checking your input after ensuring that the proper Tesseract OCR executable has been selected." in scantest.dialog.text()
+    assert "Please select an accurate screenshot." in scantest.dialog.text()
+    assert scantest.dialog.isVisible()
+
+    """
+    Cleanup the temporary files from temp directory
+    """
+    remove(savefile.name)
+
+
+@pytest.mark.parametrize(
+    "_",
+    [
+        pytest.param(None, id="face.scan.rule: Failing to scan the artifact snapshot due to invalid contents")
+    ]
+)
+def test_scan_arti_scan_fail_ic(scantest: ScanDialog, _: None) -> None:
+    """
+    Test failing to scan the artifact snapshot due to invalid contents
+
+    :return:
+    """
+
+    """
+    Create a temporary file filled with random data to simulate a failure when trying to open an
+    image using PIL.Image.open().
+    """
+    savefile = NamedTemporaryFile(prefix="gi-loadouts-", suffix=".exe", delete=False, mode="wb")
+    savefile.write(randbytes(512*1024))
+    savefile.close()
+
+    """
+    Perform the action of loading the artifact information
+    """
+    test_incident = MockMistakenIncident()
+    scantest.arti_shot.dropEvent(test_incident)
+
+    """
+    Confirm if the user interface elements change accordingly
+    """
+    assert isinstance(scantest.dialog, QMessageBox)
+    assert scantest.dialog.icon() == QMessageBox.Information
+    assert scantest.dialog.windowTitle() == "Faulty scanning"
+    assert "Please consider checking your input after ensuring that the proper Tesseract OCR executable has been selected." in scantest.dialog.text()
+    assert "Please select an accurate screenshot." in scantest.dialog.text()
+    assert scantest.dialog.isVisible()
+
+    """
+    Cleanup the temporary files from temp directory
+    """
+    remove(savefile.name)
+
+
+@pytest.mark.parametrize(
+    "_",
+    [
+        pytest.param(None, id="face.scan.rule: Failing to load the artifact snapshot")
+    ]
+)
+def test_scan_arti_load_fail(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
+    """
+    Test failing to loading the artifact snapshot
+
+    :return:
+    """
+
+    """
+    Create a temporary file filled with random data to simulate a failure when trying to open an
+    image using PIL.Image.open().
+    """
+    savefile = NamedTemporaryFile(prefix="gi-loadouts-", suffix=".webp", delete=False, mode="wb")
+    savefile.write(randbytes(512*1024))
+    savefile.close()
+
+    """
+    Perform the action of loading the artifact snapshot
+    """
+    mocker.patch.object(QFileDialog, "getOpenFileName", return_value=(savefile.name, ""))
+    qtbot.mouseClick(scantest.arti_cnvs_load, Qt.LeftButton)
+
+    """
+    Confirm if the user interface elements change accordingly
+    """
+    assert isinstance(scantest.dialog, QMessageBox)
+    assert scantest.dialog.icon() == QMessageBox.Information
+    assert scantest.dialog.windowTitle() == "Faulty scanning"
+    assert "Please consider checking your input after ensuring that the proper Tesseract OCR executable has been selected." in scantest.dialog.text()
+    assert scantest.dialog.isVisible()
+
+    """
+    Cleanup the temporary files from temp directory
+    """
+    remove(savefile.name)
 
 
 @pytest.mark.parametrize(
