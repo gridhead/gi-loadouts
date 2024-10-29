@@ -2,7 +2,7 @@
 ################################################################################
 ## Form generated from reading UI file 'scan.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.7.2
+## Created by: Qt User Interface Compiler version 6.8.0
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -366,8 +366,7 @@ class Ui_scan:
         self.arti_head_area.setText("")
         self.arti_head_icon.setText("")
         self.arti_back_icon.setText("")
-        self.arti_shot.setText(QCoreApplication.translate("scan", "YOUR ARTIFACT SCREENSHOT WILL SHOW UP HERE", None))
-#if QT_CONFIG(tooltip)
+        self.arti_shot.setText(QCoreApplication.translate("scan", "<html><head/><body><p align=\"center\"><span style=\" font-size:16pt;\">YOUR ARTIFACT SCREENSHOT WILL SHOW UP HERE</span></p><p align=\"center\">INSERT AN ARTIFACT SCREENSHOT HERE BY EITHER PRESSING<span style=\" font-weight:700;\"> CTRL + V</span> OR USING <span style=\" font-weight:700;\">DRAG AND DROP</span></p></body></html>", None))
         self.arti_cnvs_icon.setText("")
 #if QT_CONFIG(tooltip)
         self.arti_cnvs_load.setToolTip(QCoreApplication.translate("scan", "Load", None))

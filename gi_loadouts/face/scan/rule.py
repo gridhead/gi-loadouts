@@ -1,6 +1,10 @@
-from PySide6.QtCore import QThread
-from PySide6.QtGui import QPixmap
-from PySide6.QtWidgets import QComboBox, QDialog, QLineEdit, QMessageBox
+import io
+
+from PIL import Image
+from PIL.ImageQt import QBuffer
+from PySide6.QtCore import QByteArray, QMimeData, QThread
+from PySide6.QtGui import QDragEnterEvent, QDropEvent, QPixmap
+from PySide6.QtWidgets import QApplication, QComboBox, QDialog, QLineEdit, QMessageBox
 
 from gi_loadouts import conf
 from gi_loadouts.data.arti import ArtiList
@@ -208,32 +212,6 @@ class Rule(QDialog, Ui_scan, Dialog):
             self.thread.quit()
             self.thread.wait()
 
-    def load_reader(self) -> None:
-        """
-        Facilitate the loading of data and calculation of statistics
-
-        :return:
-        """
-        try:
-            status, self.shot, self.snap = file.load_screenshot(self, "Select location to load artifact screenshot")
-
-            if not status:
-                return
-
-            self.thread, self.worker = QThread(parent=self), ScanWorker(self.snap)
-            self.worker.moveToThread(self.thread)
-            self.thread.started.connect(self.initiate_thread)
-            self.thread.started.connect(self.worker.scan_artifact)
-            self.worker.result.connect(self.register_return_from_scanning)
-            self.worker.result.connect(self.complete_thread)
-            self.thread.start()
-        except Exception as expt:
-            self.show_dialog(
-                QMessageBox.Information,
-                "Faulty scanning",
-                f"Please consider checking your input after ensuring that the proper Tesseract OCR executable has been selected.\n\n{expt}"
-            )
-
     def register_return_from_scanning(self, rslt: tuple) -> None:
         """
         Place the selected screenshot and the detected attributes on the user interface
@@ -267,6 +245,135 @@ class Rule(QDialog, Ui_scan, Dialog):
                 getattr(self, f"arti_name_{alfa}").setCurrentText(item.stat_name.value)
                 getattr(self, f"arti_data_{alfa}").setText(str(item.stat_data))
 
+    def load_reader(self) -> None:
+        """
+        Facilitate the loading of data and calculation of statistics
+
+        :return:
+        """
+        try:
+            self.thread, self.worker = QThread(parent=self), ScanWorker(self.snap)
+            self.worker.moveToThread(self.thread)
+            self.thread.started.connect(self.initiate_thread)
+            self.thread.started.connect(self.worker.scan_artifact)
+            self.worker.result.connect(self.register_return_from_scanning)
+            self.worker.result.connect(self.complete_thread)
+            self.thread.start()
+        except Exception as expt:
+            self.show_dialog(
+                QMessageBox.Information,
+                "Faulty scanning",
+                f"Please consider checking your input after ensuring that the proper Tesseract OCR executable has been selected.\n\n{expt}"
+            )
+
+    def insert_data_from_file(self) -> None:
+        """
+        Kick off the image loading and scanning from the file
+
+        :return:
+        """
+        try:
+            status, self.shot, self.snap = file.load_screenshot_with_picker(self, "Select location to load artifact screenshot")
+            if not status:
+                return
+            self.load_reader()
+        except Exception as expt:
+            self.show_dialog(
+                QMessageBox.Information,
+                "Faulty scanning",
+                f"Please consider checking your input after ensuring that the proper Tesseract OCR executable has been selected.\n\n{expt}"
+            )
+
+    def transfer_to_processing(self, data: QMimeData) -> None:
+        """
+        Preprocess the data either from the keyboard shortcut or from the drag-and-drop action
+
+        :return:
+        """
+        try:
+            if data.hasImage():
+                """
+                If the item selected from the clipboard are file contents
+                """
+                shot = QPixmap.fromImage(data.imageData())
+                btls = QByteArray()
+                buff = QBuffer(btls)
+                buff.open(QBuffer.WriteOnly)
+                data.imageData().save(buff, "PNG")
+                buff.close()
+                snap = Image.open(io.BytesIO(btls.data()))
+                self.shot, self.snap = shot, snap
+                """
+                Initialize scanning after the shot and snap objects are populated
+                """
+                self.load_reader()
+            elif data.hasUrls():
+                """
+                If the item selected from the clipboard are file paths
+                """
+                urls = data.urls()
+                path = urls[0].toLocalFile()
+                try:
+                    self.shot, self.snap = file.load_mask_from_file(path)
+                    """
+                    Initialize scanning after the shot and snap objects are populated
+                    """
+                    self.load_reader()
+                except Exception as expt:
+                    raise ValueError("Please select an accurate screenshot.") from expt
+            else:
+                """
+                If the item selected from the clipboard are not supported
+                """
+                raise ValueError("Please select an accurate screenshot.")
+        except Exception as expt:
+            self.show_dialog(
+                QMessageBox.Information,
+                "Faulty scanning",
+                f"Please consider checking your input after ensuring that the proper Tesseract OCR executable has been selected.\n\n{expt}"
+            )
+
+    def insert_data_from_shortcut(self) -> None:
+        """
+        Kick off the image loading and scanning from the keyboard shortcut
+
+        :return:
+        """
+        self.transfer_to_processing(QApplication.clipboard().mimeData())
+
+
+    def dragEnterEvent(self, incident: QDragEnterEvent) -> None:  # pragma: no cover
+        """
+        Method override for QWidget to ensure that the said event is properly handled
+
+        Used on the QLabel item arti_shot for the drag-and-drop action
+
+        :return:
+        """
+        incident.acceptProposedAction()
+
+    def dragMoveEvent(self, incident: QDragEnterEvent) -> None:  # pragma: no cover
+        """
+        Method override for QWidget to ensure that the said event is properly handled
+
+        Used on the QLabel item arti_shot for the drag-and-drop action
+
+        :return:
+        """
+        incident.acceptProposedAction()
+
+    def dropEvent(self, incident: QDropEvent) -> None:
+        """
+        Kick off the image loading and scanning from the drag-and-drop action
+
+        Method override for QWidget to ensure that the said event is properly handled
+
+        Used on the QLabel item arti_shot for the drag-and-drop action
+
+        :return:
+        """
+        self.transfer_to_processing(incident.mimeData())
+
     def load_tessexec(self) -> None:
         """
         Locate the Tesseract OCR executable from the storage device
@@ -274,7 +381,7 @@ class Rule(QDialog, Ui_scan, Dialog):
         :return:
         """
         try:
-            status, tessexec = file.load_tessexec(self, "Select location of the Tesseract OCR executable")
+            status, tessexec = file.load_tessexec_with_picker(self, "Select location of the Tesseract OCR executable")
             if status:
                 conf.tessexec = tessexec
         except Exception as expt:
@@ -328,4 +435,10 @@ class Rule(QDialog, Ui_scan, Dialog):
 
         :return:
         """
-        self.arti_shot.setText("YOUR ARTIFACT SCREENSHOT WILL SHOW UP HERE")
+        self.arti_shot.setText("""
+            <html><head/><body>
+            <p align="center">YOUR ARTIFACT SCREENSHOT WILL SHOW UP HERE</p>
+            <p align="center">IF YOU HAVE AN ARTIFACT SCREENSHOT IN YOUR CLIPBOARD, SIMPLY PRESS <span style=" font-weight:700;">CTRL + V</span> TO PASTE IT HERE</p>
+            <p align="center">DRAG AND DROP WORKS AS WELL</p>
+            </body></html>
+        """)

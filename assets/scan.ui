@@ -897,7 +897,7 @@
      <string notr="true">#arti_shot {font: 10pt &quot;IBM Plex Sans&quot;; background-color: rgba(128, 128, 128, 128);}</string>
     </property>
     <property name="text">
-     <string>YOUR ARTIFACT SCREENSHOT WILL SHOW UP HERE</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;YOUR ARTIFACT SCREENSHOT WILL SHOW UP HERE&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;INSERT AN ARTIFACT SCREENSHOT HERE BY EITHER PRESSING&lt;span style=&quot; font-weight:700;&quot;&gt; CTRL + V&lt;/span&gt; OR USING &lt;span style=&quot; font-weight:700;&quot;&gt;DRAG AND DROP&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
