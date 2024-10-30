@@ -249,6 +249,11 @@ def test_scan_arti_scan_fail(scantest: ScanDialog, qtbot: QtBot, mocker: MockerF
     assert "Please select an accurate screenshot." in scantest.dialog.text()
     assert scantest.dialog.isVisible()
 
+    """
+    Cleanup the temporary files from temp directory
+    """
+    remove(savefile.name)
+
 
 @pytest.mark.parametrize(
     "_",
@@ -455,10 +460,8 @@ def test_scan_snapshot_wipe(scantest: ScanDialog, qtbot: QtBot, _: None) -> None
     """
     Confirm if the user interface elements change accordingly
     """
-    assert "YOUR ARTIFACT SCREENSHOT WILL SHOW UP HERE" in scantest.arti_shot.text()
-    assert "IF YOU HAVE AN ARTIFACT SCREENSHOT IN YOUR CLIPBOARD, SIMPLY PRESS" in scantest.arti_shot.text()
-    assert "TO PASTE IT HERE" in scantest.arti_shot.text()
-    assert "DRAG AND DROP WORKS AS WELL" in scantest.arti_shot.text()
+    for indx in ["YOUR ARTIFACT SCREENSHOT WILL SHOW UP HERE", "INSERT AN ARTIFACT SCREENSHOT HERE BY EITHER PRESSING", "CTRL + V", "OR USING", "DRAG AND DROP"]:
+        assert indx in scantest.arti_shot.text()
 
 
 @pytest.mark.parametrize(
@@ -704,14 +707,6 @@ def test_scan_arti_scan_fail_ic(scantest: ScanDialog, _: None) -> None:
     """
 
     """
-    Create a temporary file filled with random data to simulate a failure when trying to open an
-    image using PIL.Image.open().
-    """
-    savefile = NamedTemporaryFile(prefix="gi-loadouts-", suffix=".exe", delete=False, mode="wb")
-    savefile.write(randbytes(512*1024))
-    savefile.close()
-
-    """
     Perform the action of loading the artifact information
     """
     test_incident = MockMistakenIncident()
@@ -726,11 +721,6 @@ def test_scan_arti_scan_fail_ic(scantest: ScanDialog, _: None) -> None:
     assert "Please consider checking your input after ensuring that the proper Tesseract OCR executable has been selected." in scantest.dialog.text()
     assert "Please select an accurate screenshot." in scantest.dialog.text()
     assert scantest.dialog.isVisible()
-
-    """
-    Cleanup the temporary files from temp directory
-    """
-    remove(savefile.name)
 
 
 @pytest.mark.parametrize(

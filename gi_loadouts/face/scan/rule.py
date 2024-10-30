@@ -435,10 +435,4 @@ class Rule(QDialog, Ui_scan, Dialog):
 
         :return:
         """
-        self.arti_shot.setText("""
-            <html><head/><body>
-            <p align="center">YOUR ARTIFACT SCREENSHOT WILL SHOW UP HERE</p>
-            <p align="center">IF YOU HAVE AN ARTIFACT SCREENSHOT IN YOUR CLIPBOARD, SIMPLY PRESS <span style=" font-weight:700;">CTRL + V</span> TO PASTE IT HERE</p>
-            <p align="center">DRAG AND DROP WORKS AS WELL</p>
-            </body></html>
-        """)
+        self.arti_shot.setText("<html><head/><body><p align=\"center\"><span style=\" font-size:16pt;\">YOUR ARTIFACT SCREENSHOT WILL SHOW UP HERE</span></p><p align=\"center\">INSERT AN ARTIFACT SCREENSHOT HERE BY EITHER PRESSING<span style=\" font-weight:700;\"> CTRL + V</span> OR USING <span style=\" font-weight:700;\">DRAG AND DROP</span></p></body></html>")

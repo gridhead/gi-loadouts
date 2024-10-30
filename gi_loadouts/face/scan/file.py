@@ -12,6 +12,7 @@ class FileHandling:
     def load_mask_from_file(self, path: str) -> Tuple[QPixmap, ImageFile]:
         """
         Handle file operations involved in loading data from the storage device
+        Backend
 
         :return: Image that is intended to be read from
         """
@@ -25,6 +26,7 @@ class FileHandling:
     def load_screenshot_with_picker(self, prnt, head: str) -> Tuple[bool, QPixmap, ImageFile]:
         """
         Handle file operations involved in loading data from the storage device
+        Frontend
 
         :return: Image that is intended to be read from
         """
