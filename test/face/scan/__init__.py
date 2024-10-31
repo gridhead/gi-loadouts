@@ -1,3 +1,4 @@
+from PySide6.QtCore import QMimeData, QUrl
 from PySide6.QtWidgets import QDialog
 
 from gi_loadouts.face.util import modify_datatype_to_transfer
@@ -156,3 +157,29 @@ class MockScanDialogCCOL(MockScanDialog):
 
     def keep_info(self) -> dict:
         return __rtrn__["Circlet of Logos"]
+
+
+class MockIncident:
+    def __init__(self, path: str):
+        self.data = QMimeData()
+        self.data.setUrls([QUrl.fromLocalFile(path)])
+
+    def mimeData(self) -> QMimeData:
+        return self.data
+
+
+class MockMistakenIncident:
+    def __init__(self):
+        self.data = QMimeData()
+        self.data.setHtml("")
+
+    def mimeData(self) -> QMimeData:
+        return self.data
+
+
+class MockScanWorker:
+    def __init__(self, parent):
+        self.parent = parent
+
+    def moveToThread(self, thread):
+        raise ValueError("Please select an accurate screenshot.")

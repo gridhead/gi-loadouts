@@ -10,7 +10,7 @@ def runner(qtbot: QtBot) -> MainWindow:
     """
     Fixture for MainWindow class
 
-    :return:
+    :return: Instance of MainWindow
     """
     testwind = MainWindow()
     qtbot.addWidget(testwind)
@@ -22,7 +22,7 @@ def scantest(qtbot: QtBot) -> ScanDialog:
     """
     Fixture for ScanDialog class
 
-    :return:
+    :return: Instance of ScanDialog
     """
     testscan = ScanDialog("fwol")
     qtbot.addWidget(testscan)

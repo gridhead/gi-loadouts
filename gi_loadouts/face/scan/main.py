@@ -1,3 +1,4 @@
+from PySide6.QtGui import QKeySequence, QShortcut
 
 from gi_loadouts import __versdata__
 from gi_loadouts.face.scan.rule import Rule
@@ -39,7 +40,13 @@ class ScanDialog(Rule):
             drop, text = getattr(self, f"arti_name_{alfa}"), getattr(self, f"arti_data_{alfa}")
             drop.currentTextChanged.connect(lambda _, a_drop=drop, a_text=text: self.render_lineedit_readonly_when_none(a_drop, a_text))
         self.arti_back_wipe.clicked.connect(self.wipe_artifact)
-        self.arti_cnvs_load.clicked.connect(self.load_reader)
+        self.arti_cnvs_load.clicked.connect(self.insert_data_from_file)
+        self.clip_shortcut = QShortcut(QKeySequence("Ctrl+V"), self)
+        self.clip_shortcut.activated.connect(self.insert_data_from_shortcut)
+        self.arti_shot.setAcceptDrops(True)
         self.arti_cnvs_conf.clicked.connect(self.load_tessexec)
         self.arti_cnvs_wipe.clicked.connect(self.wipe_snapshot)
         self.arti_back_done.clicked.connect(self.accept)
+        self.arti_shot.dragEnterEvent = self.dragEnterEvent
+        self.arti_shot.dragMoveEvent = self.dragMoveEvent
+        self.arti_shot.dropEvent = self.dropEvent
