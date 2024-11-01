@@ -264,121 +264,147 @@ ensure that the Tesseract OCR application is installed and configured properly.
     interface using the **LOAD** button.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_scan_load.png)
 
-20. Confirm if the correct
+20. Alternatively, the in-game screenshot of the 
+    [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) units can be inserted from the 
+    clipboard by pressing `CTRL` + `V`.  
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_scan_dgbx.png)
+
+21. Alternatively, the in-game screenshot of the 
+    [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) units can be inserted by using
+    the drag and drop action.  
+    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_scan_dgbx.png)
+
+22. Please note that the *supported image formats* include, but are not limited to, the following.  
+    - Bitmap `[image/bmp]` `[BMP]`
+    - Graphics Interchange Format `[image/gif]` `[GIF]`
+    - Tagged Image File Format `[image/tiff]` `[TIF]`
+    - Truevision TGA `[image/x-tga]` `[TGA]`
+    - Open Document Drawing `[application/vnd.oasis.opendocument.graphics]` `[ODG]`
+    - Icon `[image/x-icon]` `[ICO]`
+    - Portable Network Graphics `[image/png]` `[PNG]`
+    - Joint Photographic Experts Group `[image/jpeg]` `[JPG]`
+    - WebP Image `[image/webp]` `[WEBP]`
+    - Photoshop Document `[image/vnd.adobe.photoshop]` `[PSD]`
+
+23. Please note that the *unsupported image formats* include, but are not limited to, the following.  
+    - Scalable Vector Graphics `[image/svg+xml]` `[SVG]`
+    - Encapsulated PostScript `[application/postscript]` `[EPS]`
+
+24. Confirm if the correct
     [Tesseract OCR](https://github.com/UB-Mannheim/tesseract/wiki) executable 
     is selected by using the **LOCATE** button.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_scan_conf.png)
 
-21. Wipe the in-game screenshot of the 
+25. Wipe the in-game screenshot of the 
     [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) unit from the
     configuration area by using the **WIPE** button.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_scan_imwp.png)
 
-22. Import the statistics of the detected 
+26. Import the statistics of the detected 
     [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) unit by using
     the **IMPORT** button.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_scan_impt.png)
 
-23. Wipe the statistics of the detected 
+27. Wipe the statistics of the detected 
     [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) unit by using
     from the configuration area by using the **WIPE** button.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_scan_dtwp.png)
 
-24. Wait for the statistics to be read from the in-game screenshot of 
+28. Wait for the statistics to be read from the in-game screenshot of 
     [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) using Optical
     Character Recognition or OCR.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_scan_dgbx.png)
 
-25. Make corrections wherever the application was unable to correctly recognize
+29. Make corrections wherever the application was unable to correctly recognize
     statistics of the 
     [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) before 
     importing them.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_scan_rslt_01.png)
 
-26. Confirm if better scanning results are obtained for the statistics 
+30. Confirm if better scanning results are obtained for the statistics 
     of the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) from 
     the *details screen*.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_scan_rslt_02.png)
 
-27. Confirm if better scanning results are obtained for the statistics 
+31. Confirm if better scanning results are obtained for the statistics 
     of the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) from 
     the *inventory screen*.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_scan_rslt_03.png)
 
-28. Confirm if better scanning results are obtained for the statistics 
+32. Confirm if better scanning results are obtained for the statistics 
     of the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) from 
     the *enhancement screen*.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_scan_rslt_04.png)
 
-29. Alternatively, load the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) 
+33. Alternatively, load the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) 
     units from your local storage by using the **LOAD** buttons beside the 
     distribution areas.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_arti_load.png)
 
-30. Save the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) 
+34. Save the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) 
     units to your local storage by using the **SAVE** buttons beside the 
     distribution areas.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_arti_save.png)
 
-31. Wipe the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) 
+35. Wipe the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) 
     units from the configuration area by using the **WIPE** buttons beside the 
     distribution areas.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_arti_wipe.png)
 
-32. Read the 
+36. Read the 
     [*artifact bonuses*](https://genshin-impact.fandom.com/wiki/Artifact/Sets) 
     available to the character when using two pieces or four-pieces of a 
     certain [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) 
     set.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_team_bone.png)
 
-33. Load the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact)
+37. Load the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact)
     sets from your local storage by using the **LOAD** buttons beside the 
     distribution areas.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_team_load.png)
 
-34. Save the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact)
+38. Save the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact)
     sets to your local storage by using the **SAVE** buttons beside the 
     distribution areas.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_team_save.png)
 
-35. Wipe the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact)
+39. Wipe the [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact)
     sets from the configuration area by using the **WIPE** buttons beside the 
     distribution areas.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_team_wipe.png)
 
-36. Calculate the 
+40. Calculate the 
     [*character*](https://genshin-impact.fandom.com/wiki/Character) potential 
     with the equipped 
     [*artifact*](https://genshin-impact.fandom.com/wiki/Artifact) units or sets 
     and [*weapon*](https://genshin-impact.fandom.com/wiki/Weapon).  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_team_scan.png)
 
-37. View the calculations of the character potential on the newly created 
+41. View the calculations of the character potential on the newly created 
     dialog box.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/docs_calc.png)
 
-38. View the 
+42. View the 
     [*help details*](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/lcns.png) 
     about the application by clicking on the **HELP** button from the user 
     interface.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/lcns.png)
 
-39. View the 
+43. View the 
     [*info details*](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/info.png) 
     about the application by clicking on the **INFO** button from the user 
     interface.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/info.png)
 
-40. View the [*homepage*](https://github.com/gridhead/gi-loadouts/) of the 
+44. View the [*homepage*](https://github.com/gridhead/gi-loadouts/) of the 
     project by clicking on the **FORK** button from the user interface.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/fork.png)
 
-41. Report software errors or feature requests by clicking on the **REPORT** 
+45. Report software errors or feature requests by clicking on the **REPORT** 
     button from the user interface.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/tckt.png)
 
-42. Donate to the [*project*](https://github.com/sponsors/gridhead) by 
+46. Donate to the [*project*](https://github.com/sponsors/gridhead) by 
     clicking on the **HEART** button from the user interface.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/cash.png)
 
