@@ -32,6 +32,8 @@ class FileHandling:
         """
         explorer = QFileDialog()
         filepath = explorer.getOpenFileName(prnt, head, "", "All Files (*)")[0]
+        if filepath.strip() == "":
+            return False, None, None
         return True, *self.load_mask_from_file(filepath)
 
     def load_tessexec_with_picker(self, prnt, head: str) -> Tuple[bool, str]:
