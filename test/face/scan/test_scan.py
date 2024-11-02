@@ -289,7 +289,7 @@ def test_scan_arti_load_nope(scantest: ScanDialog, qtbot: QtBot, mocker: MockerF
     """
     Perform the action of loading the artifact information
     """
-    mocker.patch.object(file.FileHandling, "load_screenshot_with_picker", return_value=(False, None, None))
+    mocker.patch.object(file.QFileDialog, "getOpenFileName", return_value=("", ""))
     qtbot.mouseClick(scantest.arti_cnvs_load, Qt.LeftButton)
 
     """
