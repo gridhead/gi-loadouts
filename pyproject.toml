@@ -39,7 +39,7 @@ pytesseract = "^0.3.13"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.3"
-pytest-cov = "^4.1.0 || ^5.0.0"
+pytest-cov = "^4.1.0 || ^5.0.0 || ^6.0.0"
 pytest-qt = "^4.4.0"
 pytest-xvfb = "^3.0.0"
 pytest-mock = "^3.14.0"
