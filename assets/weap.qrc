@@ -277,6 +277,8 @@
     <file>imgs/weap/polearms/mnpr_b.webp</file>
     <file>imgs/weap/polearms/mswp_a.webp</file>
     <file>imgs/weap/polearms/mswp_b.webp</file>
+    <file>imgs/weap/polearms/mtbb_a.webp</file>
+    <file>imgs/weap/polearms/mtbb_b.webp</file>
     <file>imgs/weap/polearms/pdrl_a.webp</file>
     <file>imgs/weap/polearms/pdrl_b.webp</file>
     <file>imgs/weap/polearms/pjws_a.webp</file>
@@ -349,6 +351,8 @@
     <file>imgs/weap/swords/msrf_b.webp</file>
     <file>imgs/weap/swords/pmjc_a.webp</file>
     <file>imgs/weap/swords/pmjc_b.webp</file>
+    <file>imgs/weap/swords/ppts_a.webp</file>
+    <file>imgs/weap/swords/ppts_b.webp</file>
     <file>imgs/weap/swords/ptrc_a.webp</file>
     <file>imgs/weap/swords/ptrc_b.webp</file>
     <file>imgs/weap/swords/ryls_a.webp</file>
@@ -371,6 +375,8 @@
     <file>imgs/weap/swords/srsd_b.webp</file>
     <file>imgs/weap/swords/swbd_a.webp</file>
     <file>imgs/weap/swords/swbd_b.webp</file>
+    <file>imgs/weap/swords/sybe_a.webp</file>
+    <file>imgs/weap/swords/sybe_b.webp</file>
     <file>imgs/weap/swords/tayf_a.webp</file>
     <file>imgs/weap/swords/tayf_b.webp</file>
     <file>imgs/weap/swords/tbsd_a.webp</file>

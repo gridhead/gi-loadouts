@@ -35,6 +35,7 @@ from test import verify_accuracy
         pytest.param("Kitain Cross Spear", 4, "Level 80/90 (Rank 6)", 523, WeaponStatType.elemental_mastery, 101, 5, id="face.wind.rule: Configuring weapon - Polearm - Kitain Cross Spear"),
         pytest.param("Lithic Spear", 4, "Level 80/90 (Rank 6)", 523, WeaponStatType.attack_perc, 25.1, 5, id="face.wind.rule: Configuring weapon - Polearm - Lithic Spear"),
         pytest.param("Moonpiercer", 4, "Level 80/90 (Rank 6)", 523, WeaponStatType.elemental_mastery, 101, 5, id="face.wind.rule: Configuring weapon - Polearm - Moonpiercer"),
+        pytest.param("Mountain-Bracing Bolt", 4, "Level 80/90 (Rank 6)", 523, WeaponStatType.energy_recharge_perc, 27.9, 5, id="face.wind.rule: Configuring weapon - Polearm - Mountain-Bracing Bolt"),
         pytest.param("Prospector's Drill", 4, "Level 80/90 (Rank 6)", 523, WeaponStatType.attack_perc, 25.1, 5, id="face.wind.rule: Configuring weapon - Polearm - Prospector's Drill"),
         pytest.param("Rightful Reward", 4, "Level 80/90 (Rank 6)", 523, WeaponStatType.health_points_perc, 25.1, 5, id="face.wind.rule: Configuring weapon - Polearm - Rightful Reward"),
         pytest.param("Royal Spear", 4, "Level 80/90 (Rank 6)", 523, WeaponStatType.attack_perc, 25.1, 5, id="face.wind.rule: Configuring weapon - Polearm - Royal Spear"),
