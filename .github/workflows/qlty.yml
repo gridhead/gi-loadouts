@@ -1,6 +1,6 @@
 ---
 name: Checking code quality
-on: [push]
+on: [push, pull_request]
 jobs:
   ci-qlty:
     runs-on: ubuntu-latest
