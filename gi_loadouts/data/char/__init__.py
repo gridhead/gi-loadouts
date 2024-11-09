@@ -78,6 +78,7 @@ from gi_loadouts.data.char.wriothesley import Wriothesley
 from gi_loadouts.data.char.xiangling import Xiangling
 from gi_loadouts.data.char.xianyun import Xianyun
 from gi_loadouts.data.char.xiao import Xiao
+from gi_loadouts.data.char.xilonen import Xilonen
 from gi_loadouts.data.char.xingqiu import Xingqiu
 from gi_loadouts.data.char.xinyan import Xinyan
 from gi_loadouts.data.char.yae_miko import YaeMiko
@@ -169,6 +170,7 @@ __charmaps__ = {
     "Xiangling": Xiangling,
     "Xianyun": Xianyun,
     "Xiao": Xiao,
+    "Xilonen": Xilonen,
     "Xingqiu": Xingqiu,
     "Xinyan": Xinyan,
     "Yae Miko": YaeMiko,

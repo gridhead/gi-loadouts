@@ -566,6 +566,13 @@ from test import verify_accuracy
             }, id="data.char: Xiao",
         ),
         pytest.param(
+            "Xilonen", "sword", 5, "geo", STAT.defense_perc,
+            {
+                "Level 40/50 (Rank 2)": (5575.66, 123.63, 417.98, 9.0),
+                "Level 80/90 (Rank 6)": (11533.07, 255.72, 864.58, 36.0),
+            }, id="data.char: Xilonen",
+        ),
+        pytest.param(
             "Xingqiu", "sword", 4, "hydro", STAT.attack_perc,
             {
                 "Level 40/50 (Rank 2)": (4712.12, 93.01, 349.22, 6.0),

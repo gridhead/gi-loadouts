@@ -95,6 +95,7 @@ class CharName(str, Enum):
     xiangling = "Xiangling"
     xianyun = "Xianyun"
     xiao = "Xiao"
+    xilonen = "Xilonen"
     xingqiu = "Xingqiu"
     xinyan = "Xinyan"
     yae_miko = "Yae Miko"
