@@ -11,6 +11,7 @@ from gi_loadouts.data.char.beidou import Beidou
 from gi_loadouts.data.char.bennett import Bennett
 from gi_loadouts.data.char.candace import Candace
 from gi_loadouts.data.char.charlotte import Charlotte
+from gi_loadouts.data.char.chasca import Chasca
 from gi_loadouts.data.char.chevreuse import Chevreuse
 from gi_loadouts.data.char.chiori import Chiori
 from gi_loadouts.data.char.chongyun import Chongyun
@@ -58,6 +59,7 @@ from gi_loadouts.data.char.neuvillette import Neuvillette
 from gi_loadouts.data.char.nilou import Nilou
 from gi_loadouts.data.char.ningguang import Ningguang
 from gi_loadouts.data.char.noelle import Noelle
+from gi_loadouts.data.char.ororon import Ororon
 from gi_loadouts.data.char.qiqi import Qiqi
 from gi_loadouts.data.char.raiden_shogun import RaidenShogun
 from gi_loadouts.data.char.razor import Razor
@@ -103,6 +105,7 @@ __charmaps__ = {
     "Bennett": Bennett,
     "Candace": Candace,
     "Charlotte": Charlotte,
+    "Chasca": Chasca,
     "Chevreuse": Chevreuse,
     "Chiori": Chiori,
     "Chongyun": Chongyun,
@@ -150,6 +153,7 @@ __charmaps__ = {
     "Nilou": Nilou,
     "Ningguang": Ningguang,
     "Noelle": Noelle,
+    "Ororon": Ororon,
     "Qiqi": Qiqi,
     "Raiden Shogun": RaidenShogun,
     "Razor": Razor,
