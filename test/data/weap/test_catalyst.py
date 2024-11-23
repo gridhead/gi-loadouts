@@ -15,6 +15,7 @@ from test import verify_accuracy
         pytest.param("Eye of Perception", 4, 1, "Level 80/90 (Rank 6)", 427, WeaponStatType.attack_perc, 50.3, id="data.weap.catalysts: Eye of Perception"),
         pytest.param("Sacrificial Fragments", 4, 1, "Level 80/90 (Rank 6)", 427, WeaponStatType.elemental_mastery, 201, id="data.weap.catalysts: Sacrificial Fragments"),
         pytest.param("Sacrificial Jade", 4, 1, "Level 80/90 (Rank 6)", 427, WeaponStatType.critical_rate_perc, 33.5, id="data.weap.catalysts: Sacrificial Jade"),
+        pytest.param("Waveriding Whirl", 4, 1, "Level 80/90 (Rank 6)", 427, WeaponStatType.energy_recharge_perc, 55.9, id="data.weap.catalysts: Waveriding Whirl"),
         pytest.param("A Thousand Floating Dreams", 5, 1, "Level 80/90 (Rank 6)", 506, WeaponStatType.elemental_mastery, 241, id="data.weap.catalysts: A Thousand Floating Dreams"),
         pytest.param("Surf's Up", 5, 1, "Level 80/90 (Rank 6)", 506, WeaponStatType.critical_damage_perc, 80.4, id="data.weap.catalysts: Surf's Up"),
         pytest.param("Tome of the Eternal Flow", 5, 1, "Level 80/90 (Rank 6)", 506, WeaponStatType.critical_damage_perc, 80.4, id="data.weap.catalysts: Tome of the Eternal Flow"),
