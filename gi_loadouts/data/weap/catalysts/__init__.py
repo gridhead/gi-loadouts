@@ -39,6 +39,7 @@ from gi_loadouts.data.weap.catalysts import (
     twsh,
     wdes,
     wnsg,
+    wrwl,
 )
 
 CatalystsDict = {
@@ -81,5 +82,6 @@ CatalystsDict = {
     "Tulaytullah's Remembrance": ttrb.TulaytullahsRemembrance,
     "Twin Nephrite": twnp.TwinNephrite,
     "Wandering Evenstar": wdes.WanderingEvenstar,
+    "Waveriding Whirl": wrwl.WaveridingWhirl,
     "Wine and Song": wnsg.WineandSong
 }

@@ -5,6 +5,8 @@
     <file>imgs/weap/bows/aqsl_b.webp</file>
     <file>imgs/weap/bows/asbw_a.webp</file>
     <file>imgs/weap/bows/asbw_b.webp</file>
+    <file>imgs/weap/bows/avcp_a.webp</file>
+    <file>imgs/weap/bows/avcp_b.webp</file>
     <file>imgs/weap/bows/ayht_a.webp</file>
     <file>imgs/weap/bows/ayht_b.webp</file>
     <file>imgs/weap/bows/bcwb_a.webp</file>
@@ -23,6 +25,8 @@
     <file>imgs/weap/bows/fdtl_b.webp</file>
     <file>imgs/weap/bows/fvwb_a.webp</file>
     <file>imgs/weap/bows/fvwb_b.webp</file>
+    <file>imgs/weap/bows/fwtf_a.webp</file>
+    <file>imgs/weap/bows/fwtf_b.webp</file>
     <file>imgs/weap/bows/hmym_a.webp</file>
     <file>imgs/weap/bows/hmym_b.webp</file>
     <file>imgs/weap/bows/htbw_a.webp</file>
@@ -161,6 +165,8 @@
     <file>imgs/weap/catalysts/wdes_b.webp</file>
     <file>imgs/weap/catalysts/wnsg_a.webp</file>
     <file>imgs/weap/catalysts/wnsg_b.webp</file>
+    <file>imgs/weap/catalysts/wrwl_a.webp</file>
+    <file>imgs/weap/catalysts/wrwl_b.webp</file>
     <file>imgs/weap/claymores/akmr_a.webp</file>
     <file>imgs/weap/claymores/akmr_b.webp</file>
     <file>imgs/weap/claymores/bcsh_a.webp</file>
