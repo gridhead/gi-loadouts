@@ -104,6 +104,13 @@ from test import verify_accuracy
             }, id="data.char: Charlotte",
         ),
         pytest.param(
+            "Chasca", "bow", 5, "anemo", STAT.critical_rate_perc,
+            {
+                "Level 40/50 (Rank 2)": (4403.29, 155.88, 276.35, 4.8),
+                "Level 80/90 (Rank 6)": (9108.05, 322.43, 571.62, 19.2),
+            }, id="data.char: Chasca",
+        ),
+        pytest.param(
             "Chevreuse", "polearm", 4, "pyro", STAT.health_points_perc,
             {
                 "Level 40/50 (Rank 2)": (5514.18, 89.09, 278.75, 6.0),
@@ -424,6 +431,13 @@ from test import verify_accuracy
                 "Level 40/50 (Rank 2)": (5564.31, 88.12, 368.10, 7.5),
                 "Level 80/90 (Rank 6)": (11235.17, 177.92, 743.25, 30.0),
             }, id="data.char: Noelle",
+        ),
+        pytest.param(
+            "Ororon", "bow", 4, "electro", STAT.attack_perc,
+            {
+                "Level 40/50 (Rank 2)": (4260.96, 112.59, 270.57, 6.0),
+                "Level 80/90 (Rank 6)": (8603.51, 227.34, 546.32, 24.0),
+            }, id="data.char: Ororon",
         ),
         pytest.param(
             "Qiqi", "sword", 5, "cryo", STAT.healing_bonus_perc,
