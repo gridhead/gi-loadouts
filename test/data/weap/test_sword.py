@@ -47,6 +47,7 @@ from test import verify_accuracy
         pytest.param("Summit Shaper", 5, 2, "Level 80/90 (Rank 6)", 563, WeaponStatType.attack_perc, 45.3, id="data.weap.swords: Summit Shaper"),
         pytest.param("Traveler's Handy Sword", 3, 3, "Level 80/90 (Rank 6)", 415, WeaponStatType.defense_perc, 26.7, id="data.weap.swords: Traveler's Handy Sword"),
         pytest.param("Blackcliff Longsword", 4, 3, "Level 80/90 (Rank 6)", 523, WeaponStatType.critical_damage_perc, 33.5, id="data.weap.swords: Blackcliff Longsword"),
+        pytest.param("Calamity of Eshu", 4, 3, "Level 80/90 (Rank 6)", 523, WeaponStatType.attack_perc, 25.1, id="data.weap.swords: Calamity of Eshu"),
         pytest.param("Finale of the Deep", 4, 3, "Level 80/90 (Rank 6)", 523, WeaponStatType.attack_perc, 25.1, id="data.weap.swords: Finale of the Deep"),
         pytest.param("Prototype Rancour", 4, 3, "Level 80/90 (Rank 6)", 523, WeaponStatType.damage_bonus_physical_perc, 31.5, id="data.weap.swords: Prototype Rancour"),
         pytest.param("Sapwood Blade", 4, 3, "Level 80/90 (Rank 6)", 523, WeaponStatType.energy_recharge_perc, 27.9, id="data.weap.swords: Sapwood Blade"),
@@ -54,7 +55,7 @@ from test import verify_accuracy
         pytest.param("Absolution", 5, 3, "Level 80/90 (Rank 6)", 621, WeaponStatType.critical_damage_perc, 40.2, id="data.weap.swords: Absolution"),
         pytest.param("Aquila Favonia", 5, 3, "Level 80/90 (Rank 6)", 621, WeaponStatType.damage_bonus_physical_perc, 37.7, id="data.weap.swords: Aquila Favonia"),
         pytest.param("Mistsplitter Reforged", 5, 3, "Level 80/90 (Rank 6)", 621, WeaponStatType.critical_damage_perc, 40.2, id="data.weap.swords: Mistsplitter Reforged"),
-        pytest.param("The Alley Flash", 4, 4, "Level 80/90 (Rank 6)", 571, WeaponStatType.elemental_mastery, 50, id="data.weap.swords: The Alley Flash"),
+        pytest.param("The Alley Flash", 4, 4, "Level 80/90 (Rank 6)", 571, WeaponStatType.elemental_mastery, 50, id="data.weap.swords: The Alley Flash")
         #TODO pytest.param("Sword of Descension", 0, 0, "Level 80/90 (Rank 6)", 414, WeaponStatType.attack_perc, 32.1, id="data.weap.swords: Sword of Descension"),
     ]
 )

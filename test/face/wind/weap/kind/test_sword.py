@@ -47,6 +47,7 @@ from test import verify_accuracy
         pytest.param("Summit Shaper", 5, "Level 80/90 (Rank 6)", 563, WeaponStatType.attack_perc, 45.3, 5, id="face.wind.rule: Configuring weapon - Sword - Summit Shaper"),
         pytest.param("Traveler's Handy Sword", 3, "Level 80/90 (Rank 6)", 415, WeaponStatType.defense_perc, 26.7, 5, id="face.wind.rule: Configuring weapon - Sword - Traveler's Handy Sword"),
         pytest.param("Blackcliff Longsword", 4, "Level 80/90 (Rank 6)", 523, WeaponStatType.critical_damage_perc, 33.5, 5, id="face.wind.rule: Configuring weapon - Sword - Blackcliff Longsword"),
+        pytest.param("Calamity of Eshu", 4, "Level 80/90 (Rank 6)", 523, WeaponStatType.attack_perc, 25.1, 5, id="face.wind.rule: Configuring weapon - Sword - Calamity of Eshu"),
         pytest.param("Finale of the Deep", 4, "Level 80/90 (Rank 6)", 523, WeaponStatType.attack_perc, 25.1, 5, id="face.wind.rule: Configuring weapon - Sword - Finale of the Deep"),
         pytest.param("Prototype Rancour", 4, "Level 80/90 (Rank 6)", 523, WeaponStatType.damage_bonus_physical_perc, 31.5, 5, id="face.wind.rule: Configuring weapon - Sword - Prototype Rancour"),
         pytest.param("Sapwood Blade", 4, "Level 80/90 (Rank 6)", 523, WeaponStatType.energy_recharge_perc, 27.9, 5, id="face.wind.rule: Configuring weapon - Sword - Sapwood Blade"),
@@ -54,7 +55,7 @@ from test import verify_accuracy
         pytest.param("Absolution", 5, "Level 80/90 (Rank 6)", 621, WeaponStatType.critical_damage_perc, 40.2, 5, id="face.wind.rule: Configuring weapon - Sword - Absolution"),
         pytest.param("Aquila Favonia", 5, "Level 80/90 (Rank 6)", 621, WeaponStatType.damage_bonus_physical_perc, 37.7, 5, id="face.wind.rule: Configuring weapon - Sword - Aquila Favonia"),
         pytest.param("Mistsplitter Reforged", 5, "Level 80/90 (Rank 6)", 621, WeaponStatType.critical_damage_perc, 40.2, 5, id="face.wind.rule: Configuring weapon - Sword - Mistsplitter Reforged"),
-        pytest.param("The Alley Flash", 4, "Level 80/90 (Rank 6)", 571, WeaponStatType.elemental_mastery, 50, 5, id="face.wind.rule: Configuring weapon - Sword - The Alley Flash"),
+        pytest.param("The Alley Flash", 4, "Level 80/90 (Rank 6)", 571, WeaponStatType.elemental_mastery, 50, 5, id="face.wind.rule: Configuring weapon - Sword - The Alley Flash")
         #TODO pytest.param("Sword of Descension", 0, "Level 80/90 (Rank 6)", 414, WeaponStatType.attack_perc, 32.1, 5, id="face.wind.rule: Configuring weapon - Sword - Sword of Descension"),
     ]
 )
