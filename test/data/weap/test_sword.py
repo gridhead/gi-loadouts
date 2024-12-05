@@ -55,8 +55,8 @@ from test import verify_accuracy
         pytest.param("Absolution", 5, 3, "Level 80/90 (Rank 6)", 621, WeaponStatType.critical_damage_perc, 40.2, id="data.weap.swords: Absolution"),
         pytest.param("Aquila Favonia", 5, 3, "Level 80/90 (Rank 6)", 621, WeaponStatType.damage_bonus_physical_perc, 37.7, id="data.weap.swords: Aquila Favonia"),
         pytest.param("Mistsplitter Reforged", 5, 3, "Level 80/90 (Rank 6)", 621, WeaponStatType.critical_damage_perc, 40.2, id="data.weap.swords: Mistsplitter Reforged"),
-        pytest.param("The Alley Flash", 4, 4, "Level 80/90 (Rank 6)", 571, WeaponStatType.elemental_mastery, 50, id="data.weap.swords: The Alley Flash")
-        #TODO pytest.param("Sword of Descension", 0, 0, "Level 80/90 (Rank 6)", 414, WeaponStatType.attack_perc, 32.1, id="data.weap.swords: Sword of Descension"),
+        pytest.param("The Alley Flash", 4, 4, "Level 80/90 (Rank 6)", 571, WeaponStatType.elemental_mastery, 50, id="data.weap.swords: The Alley Flash"),
+        pytest.param("Sword of Descension", 4, 2, "Level 80/90 (Rank 6)", 414, WeaponStatType.attack_perc, 32.1, id="data.weap.swords: Sword of Descension")
     ]
 )
 def test_sword(name: str, rare: int, tier: int, levl: str, batk: int, seco: WeaponStatType, valu: float) -> None:

@@ -101,6 +101,18 @@ class Weapon(BaseModel):
 
         if self.rare in [Rare.Star_1, Rare.Star_2]:
             mult = Mult[Rare.Star_3][self.levl.value.qant].data[self.tier]
+        elif self.file == "sods" and self.name == "Sword of Descension":
+            """
+            `Sword of Descension` is a special weapon. Although it is a 4-Star rarity weapon which
+            uses the 4-Star ascension value, it actually uses 3-Star Tier 2 base value and
+            multipliers.
+
+            Although this is an anti-pattern and we do not generally support such kinds of
+            development, we have implemented this specific calculation to ensure the displayed
+            values are accurate for users.
+            """
+            base = Tier.Tier_2.value["rare"][Rare.Star_3.value.qant]
+            mult = Mult[Rare.Star_3][self.levl.value.qant].data[self.tier]
         else:
             mult = Mult[self.rare][self.levl.value.qant].data[self.tier]
 
