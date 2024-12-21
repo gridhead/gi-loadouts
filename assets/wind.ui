@@ -7707,7 +7707,6 @@
  <resources>
   <include location="name.qrc"/>
   <include location="rare.qrc"/>
-  <include location="side.qrc"/>
   <include location="text.qrc"/>
   <include location="face.qrc"/>
   <include location="icon.qrc"/>

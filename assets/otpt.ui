@@ -6247,7 +6247,6 @@ Head area line SECO</string>
   </widget>
  </widget>
  <resources>
-  <include location="cons.qrc"/>
   <include location="vson.qrc"/>
   <include location="back.qrc"/>
   <include location="wish.qrc"/>
