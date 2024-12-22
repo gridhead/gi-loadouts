@@ -64,3 +64,18 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
 gi-loadouts = "gi_loadouts.main:main"
+
+[tool.coverage]
+report = { show_missing = true }
+
+[tool.coverage.run]
+omit = [
+    "gi_loadouts/face/rsrc/arti/*.py",
+    "gi_loadouts/face/rsrc/char/*.py",
+    "gi_loadouts/face/rsrc/data/*.py",
+    "gi_loadouts/face/rsrc/font/*.py",
+    "gi_loadouts/face/rsrc/pmon/*.py",
+    "gi_loadouts/face/rsrc/rare/*.py",
+    "gi_loadouts/face/rsrc/vson/*.py",
+    "gi_loadouts/face/rsrc/weap/*.py"
+]
