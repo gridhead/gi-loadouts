@@ -15,6 +15,7 @@ from gi_loadouts.data.char.chasca import Chasca
 from gi_loadouts.data.char.chevreuse import Chevreuse
 from gi_loadouts.data.char.chiori import Chiori
 from gi_loadouts.data.char.chongyun import Chongyun
+from gi_loadouts.data.char.citlali import Citlali
 from gi_loadouts.data.char.clorinde import Clorinde
 from gi_loadouts.data.char.collei import Collei
 from gi_loadouts.data.char.cyno import Cyno
@@ -110,6 +111,7 @@ __charmaps__ = {
     "Chevreuse": Chevreuse,
     "Chiori": Chiori,
     "Chongyun": Chongyun,
+    "Citlali": Citlali,
     "Clorinde": Clorinde,
     "Collei": Collei,
     "Cyno": Cyno,
