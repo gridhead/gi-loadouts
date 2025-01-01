@@ -4,10 +4,7 @@ from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Claymore, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
 
-"""
-Dynamic calculation not implemented
-"""
-
+# Dynamic calculation has not been implemented
 
 class MakhairaAquamarine(Claymore):
     name: str = "Makhaira Aquamarine"
