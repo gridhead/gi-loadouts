@@ -132,6 +132,13 @@ from test import verify_accuracy
             }, id="data.char: Chongyun",
         ),
         pytest.param(
+            "Citlali", "catalyst", 5, "cryo", STAT.elemental_mastery,
+            {
+                "Level 40/50 (Rank 2)": (5229.451285714286, 56.97654357142857, 343.0167307142857, 28.8),
+                "Level 80/90 (Rank 6)": (10815.882, 117.84738999999999, 709.52277, 115.2),
+            }, id="data.char: Citlali",
+        ),
+        pytest.param(
             "Clorinde", "sword", 5, "electro", STAT.critical_rate_perc,
             {
                 "Level 40/50 (Rank 2)": (5823.35, 151.58, 352.35, 4.8),
