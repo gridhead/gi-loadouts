@@ -67,6 +67,7 @@ class CharName(str, Enum):
     lumine = "Lumine"
     lynette = "Lynette"
     lyney = "Lyney"
+    mavuika = "Mavuika"
     mika = "Mika"
     mona = "Mona"
     mualani = "Mualani"

@@ -50,6 +50,7 @@ from gi_loadouts.data.char.lisa import Lisa
 from gi_loadouts.data.char.lumine import Lumine
 from gi_loadouts.data.char.lynette import Lynette
 from gi_loadouts.data.char.lyney import Lyney
+from gi_loadouts.data.char.mavuika import Mavuika
 from gi_loadouts.data.char.mika import Mika
 from gi_loadouts.data.char.mona import Mona
 from gi_loadouts.data.char.mualani import Mualani
@@ -144,6 +145,7 @@ __charmaps__ = {
     "Lumine": Lumine,
     "Lynette": Lynette,
     "Lyney": Lyney,
+    "Mavuika": Mavuika,
     "Mika": Mika,
     "Mona": Mona,
     "Mualani": Mualani,

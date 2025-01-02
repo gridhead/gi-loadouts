@@ -377,6 +377,13 @@ from test import verify_accuracy
             }, id="data.char: Lyney",
         ),
         pytest.param(
+            "Mavuika", "claymore", 5, "pyro", STAT.critical_damage_perc,
+            {
+                "Level 40/50 (Rank 2)": (5641.509357142857, 161.25512785714287, 355.7947757142857, 9.6),
+                "Level 80/90 (Rank 6)": (11669.769, 333.54921, 735.96714, 38.4),
+            }, id="data.char: Mavuika",
+        ),
+        pytest.param(
             "Mika", "polearm", 4, "cryo", STAT.health_points_perc,
             {
                 "Level 40/50 (Rank 2)": (5764.82, 102.80, 328.77, 6.0),
