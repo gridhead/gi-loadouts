@@ -1,18 +1,32 @@
 ---
 name: Checking code functionality
+
 on: [push, pull_request]
+
 jobs:
+
   ci-test:
+
     runs-on: ubuntu-latest
-    container: fedora:41
+
     strategy:
       fail-fast: false
-      matrix:
-        tox-env: ["py313-dist"]
-    steps:
-      - uses: actions/checkout@v4
 
-      - name: Update existing packages
+      matrix:
+        include:
+          - tox-env: "py312-dist"
+            container: "fedora:40"
+          - tox-env: "py313-dist"
+            container: "fedora:41"
+
+    container: ${{ matrix.container }}
+
+    steps:
+
+      - name: Checkout the codebase current state
+        uses: actions/checkout@v4
+
+      - name: Update the existing packages
         run: |
              dnf update --refresh --assumeyes
 

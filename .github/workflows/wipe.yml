@@ -6,9 +6,13 @@ on:
     - cron: 0 0 * * *
     
 jobs:
+
   ci-wipe:
+
     runs-on: ubuntu-latest
+
     steps:
+
       - name: Manage artifacts to retain four recent artifacts
         run: |
              KEEP_QANT=4
