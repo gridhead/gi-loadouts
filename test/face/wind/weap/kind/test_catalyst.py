@@ -51,6 +51,7 @@ from test import verify_accuracy
         pytest.param("Skyward Atlas", 5, "Level 80/90 (Rank 6)", 621, WeaponStatType.attack_perc, 30.2, 5, id="face.wind.rule: Configuring weapon - Catalyst - Skyward Atlas"),
         pytest.param("Tulaytullah's Remembrance", 5, "Level 80/90 (Rank 6)", 621, WeaponStatType.critical_damage_perc, 40.2, 5, id="face.wind.rule: Configuring weapon - Catalyst - Tulaytullah's Remembrance"),
         pytest.param("Crane's Echoing Call", 5, "Level 80/90 (Rank 6)", 679, WeaponStatType.attack_perc, 15.1, 5, id="face.wind.rule: Configuring weapon - Catalyst - Crane's Echoing Call"),
+        pytest.param("Starcaller's Watch", 5, "Level 80/90 (Rank 6)", 506, WeaponStatType.elemental_mastery, 241, 5, id="face.wind.rule: Configuring weapon - Catalyst - Starcaller's Watch"),
     ]
 )
 def test_catalyst(runner: MainWindow, name: str, rare: int, levl: str, batk: int, seco: WeaponStatType, valu: float, refn: int | None) -> None:
