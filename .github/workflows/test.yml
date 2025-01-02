@@ -4,11 +4,11 @@ on: [push, pull_request]
 jobs:
   ci-test:
     runs-on: ubuntu-latest
-    container: fedora:40
+    container: fedora:41
     strategy:
       fail-fast: false
       matrix:
-        tox-env: ["py312-dist"]
+        tox-env: ["py313-dist"]
     steps:
       - uses: actions/checkout@v4
 
@@ -32,6 +32,7 @@ jobs:
                  xorg-x11-server-Xvfb \
                  tesseract \
                  python3-pip \
+                 fontconfig \
              --assumeyes \
              --setopt=install_weak_deps=False
 
