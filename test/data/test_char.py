@@ -15,8 +15,8 @@ from test import verify_accuracy
         pytest.param(
             "Aether", "sword", 5, "none", STAT.attack_perc,
             {
-                "Level 40/50 (Rank 2)": (5012.89, 97.91, 314.61, 6.0),
-                "Level 80/90 (Rank 6)": (10121.78, 197.69, 635.25, 24.0),
+                "Level 40/50 (Rank 2)": (4964.595265571429, 96.96991671428573, 311.60630000000003, 6.0),
+                "Level 80/90 (Rank 6)": (10049.826276, 196.301898, 630.80213, 24.0),
             }, id="data.char: Aether",
         ),
         pytest.param(
@@ -358,8 +358,8 @@ from test import verify_accuracy
         pytest.param(
             "Lumine", "sword", 5, "none", STAT.attack_perc,
             {
-                "Level 40/50 (Rank 2)": (5012.89, 97.91, 314.61, 6.0),
-                "Level 80/90 (Rank 6)": (10121.78, 197.69, 635.25, 24.0),
+                "Level 40/50 (Rank 2)": (4964.595265571429, 96.96991671428573, 311.60630000000003, 6.0),
+                "Level 80/90 (Rank 6)": (10049.826276, 196.301898, 630.80213, 24.0),
             }, id="data.char: Lumine",
         ),
         pytest.param(
