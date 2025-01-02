@@ -4,7 +4,7 @@ on: [push, pull_request]
 jobs:
   ci-test:
     runs-on: ubuntu-latest
-    container: fedora:41
+    container: fedora:42
     strategy:
       fail-fast: false
       matrix:
