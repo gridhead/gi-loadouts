@@ -96,6 +96,50 @@
 -  **Dark mode** - Result  
    ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/mswn_dark_rslt.png)
 
+## Disclaimer
+
+The "Loadouts for Genshin Impact" project, also known as "GI Loadouts", fully 
+adheres to the 
+[**terms of services**](https://genshin.hoyoverse.com/en/company/terms) and the
+[**regulations regarding third-party software**](https://genshin.hoyoverse.com/en/news/detail/103714)
+established by [MiHoYo](https://www.mihoyo.com/en/) for 
+[Genshin Impact](https://genshin.hoyoverse.com/en/). This ecosystem application
+is safe for users, as its unmodified usage strictly avoids any violations, 
+including but not limited to those outlined below.
+
+- **This ecosystem application DOES NOT exploit the game**
+  - This ecosystem application DOES NOT need Genshin Impact to be present on 
+    the computer on which this runs on.
+
+- **This ecosystem application DOES NOT help achieve artificial in-game progress**
+  - This ecosystem application DOES NOT interact with Genshin Impact game
+    assets or game process for facilitation.
+
+- **This ecosystem application DOES NOT help selling or exchanging accounts**
+  - This ecosystem application DOES NOT explore beyond its primary purpose of
+    helping manage custom player loadouts.
+
+- **This ecosystem application DOES NOT help topping up via unofficial channels**
+  - This ecosystem application DOES NOT need an active internet connection for 
+    its intended functionality to work.
+
+With an extensive suite of 
+[**over 1350 diverse functionality tests**](https://github.com/gridhead/gi-loadouts/tree/main/test)
+and
+[**impeccable 100% source code coverage**](https://github.com/gridhead/gi-loadouts/blob/main/.github/workflows/test.yml),
+we proudly invite auditors and analysts from 
+[MiHoYo](https://www.mihoyo.com/en/) and other organizations to review our free
+and open source codebase. This thorough transparency underscores our unwavering
+commitment to maintaining the fairness and integrity of the game.
+
+The users of this ecosystem application can have complete confidence that their
+accounts are safe from warnings, suspensions or terminations when using this 
+project. The ecosystem application ensures complete compliance with the 
+[**terms of services**](https://genshin.hoyoverse.com/en/company/terms) and the
+[**regulations regarding third-party software**](https://genshin.hoyoverse.com/en/news/detail/103714)
+established by [MiHoYo](https://www.mihoyo.com/en/) for 
+[Genshin Impact](https://genshin.hoyoverse.com/en/).
+
 ## Download
 
 ### Optical Character Recognition
