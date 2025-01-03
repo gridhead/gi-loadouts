@@ -4,7 +4,7 @@ from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Claymore, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
 
-#Please consider the world quest completion will increase the atk more.
+# Please consider the completion of the world quest for an increase in attack statistics.
 
 class UltimateOverlordsMegaMagicSword(Claymore):
     name: str = "\"Ultimate Overlord's Mega Magic Sword\""
