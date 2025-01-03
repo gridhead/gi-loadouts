@@ -1,5 +1,6 @@
 from gi_loadouts.data.weap.claymores import (
     akmr,
+    atbs,
     bcsh,
     bors,
     btgs,
@@ -40,6 +41,7 @@ from gi_loadouts.data.weap.claymores import (
 
 ClaymoresDict = {
     "Akuoumaru": akmr.Akuoumaru,
+    "A Thousand Blazing Suns": atbs.AThousandBlazingSuns,
     "Beacon of the Reed Sea": bors.BeaconOfTheReedSea,
     "Blackcliff Slasher": bcsh.BlackcliffSlasher,
     "Bloodtainted Greatsword": btgs.BloodtaintedGreatsword,

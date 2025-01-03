@@ -47,6 +47,7 @@ from test import verify_accuracy
         pytest.param("Verdict", 5, "Level 80/90 (Rank 6)", 621, WeaponStatType.critical_rate_perc, 20.1, 5, id="face.wind.rule: Configuring weapon - Claymore - Verdict"),
         pytest.param("Fang of the Mountain King", 5, "Level 80/90 (Rank 6)", 679, WeaponStatType.critical_rate_perc, 10.1, 5, id="face.wind.rule: Configuring weapon - Claymore - Fang of the Mountain King"),
         pytest.param("Song of Broken Pines", 5, "Level 80/90 (Rank 6)", 679, WeaponStatType.damage_bonus_physical_perc, 18.9, 5, id="face.wind.rule: Configuring weapon - Claymore - Song of Broken Pines"),
+        pytest.param("A Thousand Blazing Suns", 5, "Level 80/90 (Rank 6)", 679, WeaponStatType.critical_rate_perc, 10.1, 5, id="face.wind.rule: Configuring weapon - Claymore - A Thousand Blazing Suns"),
     ]
 )
 def test_claymore(runner: MainWindow, name: str, rare: int, levl: str, batk: int, seco: WeaponStatType, valu: float, refn: int | None) -> None:
