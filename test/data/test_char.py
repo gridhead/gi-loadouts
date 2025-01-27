@@ -349,6 +349,13 @@ from test import verify_accuracy
             }, id="data.char: Kuki Shinobu",
         ),
         pytest.param(
+            "Lan Yan", "catalyst", 4, "anemo", STAT.attack_perc,
+            {
+                "Level 40/50 (Rank 2)": (4260.96, 115.53, 267.42, 6.0),
+                "Level 80/90 (Rank 6)": (8603.51, 233.27, 539.97, 24.0),
+            }, id="data.char: Lan Yan",
+        ),
+        pytest.param(
             "Layla", "sword", 4, "cryo", STAT.health_points_perc,
             {
                 "Level 40/50 (Rank 2)": (5113.15, 99.86, 302.03, 6.0),

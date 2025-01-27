@@ -46,6 +46,7 @@ from gi_loadouts.data.char.kirara import Kirara
 from gi_loadouts.data.char.klee import Klee
 from gi_loadouts.data.char.kujou_sara import KujouSara
 from gi_loadouts.data.char.kuki_shinobu import KukiShinobu
+from gi_loadouts.data.char.lan_yan import LanYan
 from gi_loadouts.data.char.layla import Layla
 from gi_loadouts.data.char.lisa import Lisa
 from gi_loadouts.data.char.lumine import Lumine
@@ -142,6 +143,7 @@ __charmaps__ = {
     "Klee": Klee,
     "Kujou Sara": KujouSara,
     "Kuki Shinobu": KukiShinobu,
+    "Lan Yan": LanYan,
     "Layla": Layla,
     "Lisa": Lisa,
     "Lumine": Lumine,
