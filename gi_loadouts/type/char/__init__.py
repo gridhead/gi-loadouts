@@ -136,6 +136,19 @@ class Char(BaseModel):
     afln: str = ""
     head: str = ""
 
+    def _calc_stat(self, base_stat: float, ascension_stat: float, stat_type: STAT) -> ATTR:
+        """
+        Generalized stat calculation method for attack, defense, and health points.
+
+        :param base_stat: BaseStat value for the character (attack, defense, or health).
+        :param ascension_stat: Ascension value for the given stat.
+        :param stat_type: Type of the stat (STAT.attack, STAT.defense, or STAT.health_points).
+        :return: ATTR instance with calculated stat value.
+        """
+        stat_data = base_stat * Mult[self.levl.value.qant][self.rare] + Secs[self.levl.value.rank] * ascension_stat
+
+        return ATTR(stat_name=stat_type, stat_data=stat_data)
+
     @property
     def attack(self) -> ATTR:
         """
@@ -143,10 +156,7 @@ class Char(BaseModel):
 
         :return: Attack potential associated with the character
         """
-        return ATTR(
-            stat_name=STAT.attack,
-            stat_data=self.base.attack * Mult[self.levl.value.qant][self.rare] + Secs[self.levl.value.rank] * self.ascn.attack
-        )
+        return self._calc_stat(self.base.attack, self.ascn.attack, STAT.attack)
 
     @property
     def defense(self) -> ATTR:
@@ -155,10 +165,7 @@ class Char(BaseModel):
 
         :return: Defense potential associated with the character
         """
-        return ATTR(
-            stat_name=STAT.defense,
-            stat_data=self.base.defense * Mult[self.levl.value.qant][self.rare] + Secs[self.levl.value.rank] * self.ascn.defense
-        )
+        return self._calc_stat(self.base.defense, self.ascn.defense, STAT.defense)
 
     @property
     def health_points(self) -> ATTR:
@@ -167,10 +174,7 @@ class Char(BaseModel):
 
         :return: Health points potential associated with the character
         """
-        return ATTR(
-            stat_name=STAT.health_points,
-            stat_data=self.base.health_points * Mult[self.levl.value.qant][self.rare] + Secs[self.levl.value.rank] * self.ascn.health_points
-        )
+        return self._calc_stat(self.base.health_points, self.ascn.health_points, STAT.health_points)
 
     @property
     def seco(self) -> SecoStat:
@@ -183,6 +187,29 @@ class Char(BaseModel):
             stat_name=self.__statname__,
             stat_data=self.__statdata__[self.levl.value.rank.value]
         )
+
+
+class MainChar(Char):
+    """
+    Main character primitive
+    """
+
+    def _calc_stat(self, base_stat: float, ascension_stat: float, stat_type: STAT) -> ATTR:
+        """
+        `Aether` and `Lumine` are special characters. Although they are 5-Star quality
+        characters which use the 5-Star Level Multiplier values, they actually use 4-Star
+        Level Multipliers. Although this is an anti-pattern and we do not generally
+        support such kinds of development, we have implemented this specific calculation
+        to ensure the displayed values are accurate for users.
+
+        :param base_stat: BaseStat value for the character (attack, defense, or health).
+        :param ascension_stat: Ascension value for the given stat.
+        :param stat_type: Type of the stat (STAT.attack, STAT.defense, or STAT.health_points).
+        :return: ATTR instance with calculated stat value.
+        """
+        stat_data = base_stat * Mult[self.levl.value.qant][Rare.Star_4] + Secs[self.levl.value.rank] * ascension_stat
+
+        return ATTR(stat_name=stat_type, stat_data=stat_data)
 
 
 class BaseStat(BaseModel):
