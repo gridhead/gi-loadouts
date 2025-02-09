@@ -66,6 +66,15 @@
     the development members</b>.
 </p>
 
+## Index
+
+1. **[Screenshots](#screenshots)**
+2. **[Download](#download)**
+3. **[Usage](#usage)**
+4. **[Development](#development)**
+5. **[Contribution](#contribution)**
+6. **[Disclaimer](#disclaimer)**
+
 ## Screenshots
 
 ### On GNU/Linux distributions
