@@ -91,6 +91,7 @@ from gi_loadouts.data.char.yanfei import Yanfei
 from gi_loadouts.data.char.yaoyao import Yaoyao
 from gi_loadouts.data.char.yelan import Yelan
 from gi_loadouts.data.char.yoimiya import Yoimiya
+from gi_loadouts.data.char.yumemizuki_mizuki import YumemizukiMizuki
 from gi_loadouts.data.char.yun_jin import YunJin
 from gi_loadouts.data.char.zhongli import Zhongli
 
@@ -188,6 +189,7 @@ __charmaps__ = {
     "Yaoyao": Yaoyao,
     "Yelan": Yelan,
     "Yoimiya": Yoimiya,
+    "Yumemizuki Mizuki": YumemizukiMizuki,
     "Yun Jin": YunJin,
     "Zhongli": Zhongli,
 }

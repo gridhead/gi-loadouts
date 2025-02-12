@@ -108,6 +108,7 @@ class CharName(str, Enum):
     yaoyao  = "Yaoyao"
     yelan = "Yelan"
     yoimiya = "Yoimiya"
+    yumemizuki_mizuki = "Yumemizuki Mizuki"
     yun_jin = "Yun Jin"
     zhongli = "Zhongli"
 
