@@ -657,6 +657,13 @@ from test import verify_accuracy
             }, id="data.char: Yoimiya",
         ),
         pytest.param(
+            "Yumemizuki Mizuki", "catalyst", 5, "anemo", STAT.elemental_mastery,
+            {
+                "Level 40/50 (Rank 2)": (5724.27, 96.75, 340.26	, 28.8),
+                "Level 80/90 (Rank 6)": (11840.47, 200.13, 703.81, 115.2),
+            }, id="data.char: Yumemizuki Mizuki",
+        ),
+        pytest.param(
             "Yun Jin", "polearm", 4, "geo", STAT.energy_recharge_perc,
             {
                 "Level 40/50 (Rank 2)": (4912.63, 88.12, 338.53, 6.7),
