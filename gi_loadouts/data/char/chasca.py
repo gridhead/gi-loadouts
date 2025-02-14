@@ -1,4 +1,4 @@
-from gi_loadouts.type.char import BaseStat, Char
+from gi_loadouts.type.char import BaseStat, Char, CharName
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.stat import STAT
 from gi_loadouts.type.vson import Vision
@@ -8,7 +8,7 @@ from gi_loadouts.type.weap import WeaponType
 class Chasca(Char):
     __statdata__: dict = {0: 0.0, 1: 0.0, 2: 4.8, 3: 9.6, 4: 9.6, 5: 14.4, 6: 19.2}
     __statname__: STAT = STAT.critical_rate_perc
-    name: str = "Chasca"
+    name: CharName = CharName.chasca
     rare: Rare = Rare.Star_5
     """
     TODO: Change the default values after the values are updated in Genshin Impact Wiki

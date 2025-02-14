@@ -1,4 +1,4 @@
-from gi_loadouts.type.char import BaseStat, Char
+from gi_loadouts.type.char import BaseStat, Char, CharName
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.stat import STAT
 from gi_loadouts.type.vson import Vision
@@ -8,7 +8,7 @@ from gi_loadouts.type.weap import WeaponType
 class YumemizukiMizuki(Char):
     __statdata__: dict = {0: 0.0, 1: 0.0, 2: 28.8, 3: 57.6, 4: 57.6, 5: 86.4, 6: 115.2}
     __statname__: STAT = STAT.elemental_mastery
-    name: str = "Yumemizuki Mizuki"
+    name: CharName = CharName.yumemizuki_mizuki
     rare: Rare = Rare.Star_5
     base: BaseStat = BaseStat(attack=16.758, defense=58.93255, health_points=991.4528)
     ascn: BaseStat = BaseStat(attack=68.81238, defense=242.0145, health_points=4071.4412)
