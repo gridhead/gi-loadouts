@@ -39,6 +39,7 @@ from test import verify_accuracy
         pytest.param("Prospector's Drill", 4, "Level 80/90 (Rank 6)", 523, WeaponStatType.attack_perc, 25.1, 5, id="face.wind.rule: Configuring weapon - Polearm - Prospector's Drill"),
         pytest.param("Rightful Reward", 4, "Level 80/90 (Rank 6)", 523, WeaponStatType.health_points_perc, 25.1, 5, id="face.wind.rule: Configuring weapon - Polearm - Rightful Reward"),
         pytest.param("Royal Spear", 4, "Level 80/90 (Rank 6)", 523, WeaponStatType.attack_perc, 25.1, 5, id="face.wind.rule: Configuring weapon - Polearm - Royal Spear"),
+        pytest.param("Tamayuratei no Ohanashi", 4, "Level 80/90 (Rank 6)", 523, WeaponStatType.energy_recharge_perc, 27.9, 5, id="face.wind.rule: Configuring weapon - Polearm - Tamayuratei no Ohanashi"),
         pytest.param("Crimson Moon's Semblance", 5, "Level 80/90 (Rank 6)", 621, WeaponStatType.critical_rate_perc, 20.1, 5, id="face.wind.rule: Configuring weapon - Polearm - Crimson Moon's Semblance"),
         pytest.param("Primordial Jade Winged-Spear", 5, "Level 80/90 (Rank 6)", 621, WeaponStatType.critical_rate_perc, 20.1, 5, id="face.wind.rule: Configuring weapon - Polearm - Primordial Jade Winged-Spear"),
         pytest.param("Skyward Spine", 5, "Level 80/90 (Rank 6)", 621, WeaponStatType.energy_recharge_perc, 33.5, 5, id="face.wind.rule: Configuring weapon - Polearm - Skyward Spine"),
