@@ -17,6 +17,7 @@ from test import verify_accuracy
         pytest.param("Sacrificial Jade", 4, "Level 80/90 (Rank 6)", 427, WeaponStatType.critical_rate_perc, 33.5, 5, id="face.wind.rule: Configuring weapon - Catalyst - Sacrificial Jade"),
         pytest.param("Waveriding Whirl", 4, "Level 80/90 (Rank 6)", 427, WeaponStatType.energy_recharge_perc, 55.9, 5, id="face.wind.rule: Configuring weapon - Catalyst - Waveriding Whirl"),
         pytest.param("A Thousand Floating Dreams", 5, "Level 80/90 (Rank 6)", 506, WeaponStatType.elemental_mastery, 241, 5, id="face.wind.rule: Configuring weapon - Catalyst - A Thousand Floating Dreams"),
+        pytest.param("Sunny Morning Sleep-In", 5, "Level 80/90 (Rank 6)", 506, WeaponStatType.elemental_mastery, 241, 5, id="face.wind.rule: Configuring weapon - Catalyst - Sunny Morning Sleep-In"),
         pytest.param("Surf's Up", 5, "Level 80/90 (Rank 6)", 506, WeaponStatType.critical_damage_perc, 80.4, 5, id="face.wind.rule: Configuring weapon - Catalyst - Surf's Up"),
         pytest.param("Tome of the Eternal Flow", 5, "Level 80/90 (Rank 6)", 506, WeaponStatType.critical_damage_perc, 80.4, 5, id="face.wind.rule: Configuring weapon - Catalyst - Tome of the Eternal Flow"),
         pytest.param("Apprentice's Notes", 1, "Level 60/70 (Rank 4)", 169, WeaponStatType.none, 0, None, id="face.wind.rule: Configuring weapon - Catalyst - Apprentice's Notes"),
