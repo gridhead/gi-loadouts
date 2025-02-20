@@ -139,14 +139,16 @@ class Facility(Dialog):
                     refn=self.weap_area_refn.currentText(),
                 )
 
-                file.save(
+                save_status = file.save(
                     self,
                     "Select location to save weapon data",
                     f"{objc.name.strip().replace(" ", "").replace("\"", "").replace("-", "").replace("'", "")}_{uuid4().hex[0:8].upper()}_{datetime.now().strftime("%Y%m%d_%H%M%S")}",
                     objc,
                 )
-
-                show_status(self.statarea, "Weapon data has been successfully saved.")
+                if save_status:
+                    show_status(self.statarea, "Weapon data has been successfully saved.")
+                else:
+                    show_status(self.statarea, "Save process cancelled.")
 
         except Exception as expt:
             self.show_dialog(
