@@ -114,7 +114,6 @@ def test_arti_save_name(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
     """
     assert runner.statarea.currentMessage() == "Artifact data has been successfully saved."
 
-
 @pytest.mark.parametrize(
     "area",
     [

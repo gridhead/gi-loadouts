@@ -58,6 +58,60 @@ def test_team_save_none(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
         )
     ]
 )
+def test_team_save(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
+    """
+    Test saving an artifact collection
+
+    :return:
+    """
+    for area, data in actual.items():
+        getattr(runner, f"arti_{area}_type").setCurrentText(data["type"])
+        getattr(runner, f"arti_{area}_rare").setCurrentText(data["rare"])
+        getattr(runner, f"arti_{area}_levl").setCurrentText(data["levl"])
+        getattr(runner, f"arti_{area}_name_main").setCurrentText(data["main"])
+        for item, stat in data["stat"].items():
+            getattr(runner, f"arti_{area}_name_{item}").setCurrentText(stat["name"])
+            getattr(runner, f"arti_{area}_data_{item}").setText(str(stat["data"]))
+
+    mocker.patch.object(file.FileHandling, "save", return_value=True)
+    qtbot.mouseClick(runner.head_save, Qt.LeftButton)
+    assert runner.statarea.currentMessage() == "Artifact set has been successfully saved."
+
+@pytest.mark.parametrize(
+    "_",
+    [
+        pytest.param(
+            None,
+            id="face.wind.rule: Failing to save the artifact collection"
+        )
+    ]
+)
+def test_team_save_fail(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
+    """
+    Test failing to save an artifact collection due to empty data fields
+
+    :return:
+    """
+    qtbot.mouseClick(runner.head_wipe, Qt.LeftButton)  
+    mocker.patch.object(file.FileHandling, "save", side_effect=ValueError("Mocked mismatch."))
+    qtbot.mouseClick(runner.head_save, Qt.LeftButton)
+
+    assert isinstance(runner.dialog, QMessageBox)
+    assert runner.dialog.icon() == QMessageBox.Information
+    assert runner.dialog.windowTitle() == "Save failed"
+    assert "Please confirm that the input is valid" in runner.dialog.text()
+    assert "Mocked mismatch." in runner.dialog.text()
+    assert runner.dialog.isVisible()
+
+@pytest.mark.parametrize(
+    "_",
+    [
+        pytest.param(
+            None,
+            id="face.wind.rule: Saving an artifact across five areas"
+        )
+    ]
+)
 def test_team_save_name(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
     """
     Test saving an artifact across five areas
@@ -87,38 +141,6 @@ def test_team_save_name(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
     Confirm if the user interface elements change accordingly
     """
     assert runner.statarea.currentMessage() == "Artifact set has been successfully saved."
-
-
-@pytest.mark.parametrize(
-    "_",
-    [
-        pytest.param(
-            None,
-            id="face.wind.rule: Failing to save the artifact collection"
-        )
-    ]
-)
-def test_team_save_fail(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
-    """
-    Test failing to save an artifact collection due to empty data fields
-
-    :return:
-    """
-
-    """
-    Perform the action of saving the artifact collection information
-    """
-    mocker.patch.object(file.FileHandling, "save", return_value=True)
-    qtbot.mouseClick(runner.head_save, Qt.LeftButton)
-
-    """
-    Confirm if the user interface elements change accordingly
-    """
-    assert isinstance(runner.dialog, QMessageBox)
-    assert runner.dialog.icon() == QMessageBox.Information
-    assert runner.dialog.windowTitle() == "Save failed"
-    assert "Please confirm that the input is valid (eg. 69, 42.0 etc.) before saving the artifact set in a location that is accessible." in runner.dialog.text()
-    assert runner.dialog.isVisible()
 
 
 @pytest.mark.parametrize(
