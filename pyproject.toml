@@ -27,6 +27,11 @@ classifiers= [
     "Topic :: Games/Entertainment",
     "Topic :: Utilities",
     "Typing :: Typed"
+
+]
+include = [
+    { path = "test", format = "sdist" },
+    { path = "tox.ini", format = "sdist" },
 ]
 
 [tool.poetry.dependencies]
