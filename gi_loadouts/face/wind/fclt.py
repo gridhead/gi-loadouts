@@ -112,7 +112,9 @@ class Facility(Dialog):
                 f"{uuid4().hex[0:8].upper()}_{datetime.now().strftime("%Y%m%d_%H%M%S")}",
                 objc,
             )
-
+            if not status:
+                show_status(self.statarea, "Ready.")
+                return
             show_status(self.statarea, "Artifact set has been successfully saved.")
 
         except Exception as expt:
