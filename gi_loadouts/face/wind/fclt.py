@@ -114,6 +114,7 @@ class Facility(Dialog):
                 objc,
             )
             if not status:
+                show_status(self.statarea, "Ready.")
                 return
             show_status(self.statarea, "Artifact set has been successfully saved.")
 
