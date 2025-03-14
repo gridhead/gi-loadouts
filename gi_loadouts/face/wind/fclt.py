@@ -65,13 +65,15 @@ class Facility(Dialog):
                             )
                         )
 
-            file.save(
+            status = file.save(
                 self,
                 "Select location to save artifact data",
                 f"{getattr(self, f"arti_{part}_type").currentText().strip().replace(" ", "").replace("'", "").replace("-", "")}_{uuid4().hex[0:8].upper()}_{datetime.now().strftime("%Y%m%d_%H%M%S")}.{part}",
                 objc,
             )
-
+            if not status:
+                show_status(self.statarea, "Ready.")
+                return
             show_status(self.statarea, "Artifact data has been successfully saved.")
 
         except Exception as expt:
@@ -106,13 +108,15 @@ class Facility(Dialog):
                             setattr(unit, f"stat_{indx}", ATTR(stat_name=__revmap__[getattr(self, f"arti_{part}_name_{indx}").currentText().strip()], stat_data=float(getattr(self, f"arti_{part}_data_{indx}").text().strip())))
                 setattr(objc, part, unit)
 
-            file.save(
+            status = file.save(
                 self,
                 "Select location to save artifact data",
                 f"{uuid4().hex[0:8].upper()}_{datetime.now().strftime("%Y%m%d_%H%M%S")}",
                 objc,
             )
-
+            if not status:
+                show_status(self.statarea, "Ready.")
+                return
             show_status(self.statarea, "Artifact set has been successfully saved.")
 
         except Exception as expt:
@@ -139,13 +143,15 @@ class Facility(Dialog):
                     refn=self.weap_area_refn.currentText(),
                 )
 
-                file.save(
+                status = file.save(
                     self,
                     "Select location to save weapon data",
                     f"{objc.name.strip().replace(" ", "").replace("\"", "").replace("-", "").replace("'", "")}_{uuid4().hex[0:8].upper()}_{datetime.now().strftime("%Y%m%d_%H%M%S")}",
                     objc,
                 )
-
+                if not status:
+                    show_status(self.statarea, "Ready.")
+                    return
                 show_status(self.statarea, "Weapon data has been successfully saved.")
 
         except Exception as expt:
