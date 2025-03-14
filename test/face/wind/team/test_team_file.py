@@ -563,3 +563,47 @@ def test_team_load_json_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerF
     Cleanup the temporary files
     """
     remove(temp.name)
+
+
+@pytest.mark.parametrize(
+    "_",
+    [
+        pytest.param(
+            None,
+            id="face.wind.rule: Cancelling the save process for an artifact collection"
+        )
+    ]
+)
+def test_team_save_nope(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
+    """
+    Test cancelling the save process for an artifact collection
+
+    :return:
+    """
+
+    """
+    Set the user interface elements as intended
+    """
+    for area, data in actual.items():
+        getattr(runner, f"arti_{area}_type").setCurrentText(data["type"])
+        getattr(runner, f"arti_{area}_rare").setCurrentText(data["rare"])
+        getattr(runner, f"arti_{area}_levl").setCurrentText(data["levl"])
+        getattr(runner, f"arti_{area}_name_main").setCurrentText(data["main"])
+        for item, stat in data["stat"].items():
+            getattr(runner, f"arti_{area}_name_{item}").setCurrentText(stat["name"])
+            getattr(runner, f"arti_{area}_data_{item}").setText(str(stat["data"]))
+
+    """
+    Mock file.save to simulate cancellation
+    """
+    mocker.patch.object(file.FileHandling, "save", return_value=False)
+
+    """
+    Perform the action of saving the artifact collection information
+    """
+    qtbot.mouseClick(runner.head_save, Qt.LeftButton)
+
+    """
+    Confirm that the status message remains unchanged
+    """
+    assert runner.statarea.currentMessage() == "Ready."
