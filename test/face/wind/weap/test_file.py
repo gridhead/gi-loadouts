@@ -596,26 +596,17 @@ def test_weap_save_cancelled(runner: MainWindow, qtbot: QtBot, mocker: MockerFix
     """
     Set the user interface elements as intended
     """
-    name = choice(list(Family[type].keys()))
-    objc = Family[type][name]()
-    levl = choice(objc.levl_bind).value.name
 
     runner.head_char_name.setCurrentText(char)
-    runner.weap_area_name.setCurrentText(name)
-    runner.weap_area_levl.setCurrentText(levl)
 
     """
-    Mock file.save to simulate cancellation
+    Perform the action of cancellation of saving the weapon information
     """
     mocker.patch.object(file.FileHandling, "save", return_value=False)
+    qtbot.mouseClick(runner.weap_head_save, Qt.LeftButton)
 
     """
-    Perform the action of saving the weapon information
-    """
-    qtbot.mouseClick(runner.weap_head_save, Qt.LeftButton)
-    
-    """
-    Confirm that the status message is updated correctly
+    Confirm if the user interface elements change accordingly
     """
     assert runner.statarea.currentMessage() == "Ready."
 
