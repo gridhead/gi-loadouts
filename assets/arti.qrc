@@ -1,10 +1,5 @@
 <RCC>
   <qresource prefix="arti">
-    <file>imgs/arti/acpt/ccol.webp</file>
-    <file>imgs/arti/acpt/fwol.webp</file>
-    <file>imgs/arti/acpt/gboe.webp</file>
-    <file>imgs/arti/acpt/pmod.webp</file>
-    <file>imgs/arti/acpt/sdoe.webp</file>
     <file>imgs/arti/main/ccol.png</file>
     <file>imgs/arti/main/fwol.png</file>
     <file>imgs/arti/main/gboe.png</file>
