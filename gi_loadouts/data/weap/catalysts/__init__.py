@@ -39,6 +39,7 @@ from gi_loadouts.data.weap.catalysts import (
     ttrb,
     twnp,
     twsh,
+    vdns,
     wdes,
     wnsg,
     wrwl,
@@ -85,6 +86,7 @@ CatalystsDict = {
     "Tome of the Eternal Flow": toef.TomeoftheEternalFlow,
     "Tulaytullah's Remembrance": ttrb.TulaytullahsRemembrance,
     "Twin Nephrite": twnp.TwinNephrite,
+    "Vivid Notions": vdns.VividNotions,
     "Wandering Evenstar": wdes.WanderingEvenstar,
     "Waveriding Whirl": wrwl.WaveridingWhirl,
     "Wine and Song": wnsg.WineandSong
