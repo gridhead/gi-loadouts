@@ -94,6 +94,7 @@ class CharName(str, Enum):
     tartaglia = "Tartaglia"
     thoma = "Thoma"
     tighnari = "Tighnari"
+    varesa = "Varesa"
     venti = "Venti"
     wanderer = "Wanderer"
     wriothesley = "Wriothesley"
