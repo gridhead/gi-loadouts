@@ -77,6 +77,7 @@ from gi_loadouts.data.char.sucrose import Sucrose
 from gi_loadouts.data.char.tartaglia import Tartaglia
 from gi_loadouts.data.char.thoma import Thoma
 from gi_loadouts.data.char.tighnari import Tighnari
+from gi_loadouts.data.char.varesa import Varesa
 from gi_loadouts.data.char.venti import Venti
 from gi_loadouts.data.char.wanderer import Wanderer
 from gi_loadouts.data.char.wriothesley import Wriothesley
@@ -175,6 +176,7 @@ __charmaps__ = {
     "Tartaglia": Tartaglia,
     "Thoma": Thoma,
     "Tighnari": Tighnari,
+    "Varesa": Varesa,
     "Venti": Venti,
     "Wanderer": Wanderer,
     "Wriothesley": Wriothesley,
