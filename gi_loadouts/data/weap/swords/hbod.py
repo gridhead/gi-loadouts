@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Sword, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -11,14 +9,14 @@ class HarbingerofDawn(Sword):
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_3
     refi_name: str = "Vigorous"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
         "When HP is above 90%, increases CRIT Rate by 14%.",
         "When HP is above 90%, increases CRIT Rate by 17.5%.",
         "When HP is above 90%, increases CRIT Rate by 21%.",
         "When HP is above 90%, increases CRIT Rate by 24.5%.",
         "When HP is above 90%, increases CRIT Rate by 28%.",
     ]
-    refi_stat: List[WeaponStat] = [
+    refi_stat: list[WeaponStat] = [
         [WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=14.0)],
         [WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=17.5)],
         [WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=21.0)],

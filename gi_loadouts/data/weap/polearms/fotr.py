@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Polearm, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -11,7 +9,7 @@ class FootprintoftheRainbow(Polearm):
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_4
     refi_name: str = "Pact of Flowing Springs"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
         "Using an Elemental Skill increases DEF by 16% for 15s.",
         "Using an Elemental Skill increases DEF by 20% for 15s.",
         "Using an Elemental Skill increases DEF by 24% for 15s.",

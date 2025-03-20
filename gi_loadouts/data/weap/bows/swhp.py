@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Bow, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -11,14 +9,14 @@ class SkywardHarp(Bow):
     tier: Tier = Tier.Tier_3
     rare: Rare = Rare.Star_5
     refi_name: str = "Echoing Ballad"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
         "Increases CRIT DMG by 20%. Hits have a 60% chance to inflict a small AoE attack, dealing 125% Physical ATK DMG. Can only occur once every 4s.",
         "Increases CRIT DMG by 25%. Hits have a 70% chance to inflict a small AoE attack, dealing 125% Physical ATK DMG. Can only occur once every 3.5s.",
         "Increases CRIT DMG by 30%. Hits have a 80% chance to inflict a small AoE attack, dealing 125% Physical ATK DMG. Can only occur once every 3s.",
         "Increases CRIT DMG by 35%. Hits have a 90% chance to inflict a small AoE attack, dealing 125% Physical ATK DMG. Can only occur once every 2.5s.",
         "Increases CRIT DMG by 40%. Hits have a 100% chance to inflict a small AoE attack, dealing 125% Physical ATK DMG. Can only occur once every 2s.",
     ]
-    refi_stat: List[WeaponStat] = [
+    refi_stat: list[WeaponStat] = [
         [WeaponStat(stat_name=WeaponStatType.critical_damage_perc, stat_data=20.0)],
         [WeaponStat(stat_name=WeaponStatType.critical_damage_perc, stat_data=25.0)],
         [WeaponStat(stat_name=WeaponStatType.critical_damage_perc, stat_data=30.0)],

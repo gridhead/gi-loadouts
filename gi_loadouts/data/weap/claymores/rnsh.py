@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Claymore, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -11,7 +9,7 @@ class Rainslasher(Claymore):
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_4
     refi_name: str = "Bane of Storm and Tide"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
         "Increases DMG against opponents affected by Hydro or Electro by 20%.",
         "Increases DMG against opponents affected by Hydro or Electro by 24%.",
         "Increases DMG against opponents affected by Hydro or Electro by 28%.",

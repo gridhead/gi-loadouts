@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Catalyst, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -11,7 +9,7 @@ class OathswornEye(Catalyst):
     tier: Tier = Tier.Tier_3
     rare: Rare = Rare.Star_4
     refi_name: str = "People of the Faltering Light"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
         "Increases Energy Recharge by 24% for 10s after using an Elemental Skill.",
         "Increases Energy Recharge by 30% for 10s after using an Elemental Skill.",
         "Increases Energy Recharge by 36% for 10s after using an Elemental Skill.",

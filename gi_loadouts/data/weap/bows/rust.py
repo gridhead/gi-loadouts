@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Bow, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -11,7 +9,7 @@ class Rust(Bow):
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_4
     refi_name: str = "Rapid Firing"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
             "Increases Normal Attack DMG by 40% but decreases Charged Attack DMG by 10%.",
             "Increases Normal Attack DMG by 50% but decreases Charged Attack DMG by 10%.",
             "Increases Normal Attack DMG by 60% but decreases Charged Attack DMG by 10%.",

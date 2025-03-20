@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Sword, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -11,7 +9,7 @@ class IronSting(Sword):
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_4
     refi_name: str = "Infusion Stinger"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
         "Dealing Elemental DMG increases all DMG by 6% for 6s. Max 2 stacks. Can only occur once every 1s.",
         "Dealing Elemental DMG increases all DMG by 7.5% for 6s. Max 2 stacks. Can only occur once every 1s.",
         "Dealing Elemental DMG increases all DMG by 9% for 6s. Max 2 stacks. Can only occur once every 1s.",

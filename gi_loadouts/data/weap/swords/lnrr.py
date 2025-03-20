@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Sword, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -11,7 +9,7 @@ class LionsRoar(Sword):
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_4
     refi_name: str = "Bane of Fire and Thunder"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
         "Increases DMG against enemies affected by Pyro or Electro by 20%.",
         "Increases DMG against enemies affected by Pyro or Electro by 24%.",
         "Increases DMG against enemies affected by Pyro or Electro by 28%.",

@@ -1,13 +1,18 @@
-from gi_loadouts.type.arti.ccol import CCOL, __revmap__ as revmap_ccol  # noqa : F401
-from gi_loadouts.type.arti.fwol import FWOL, __revmap__ as revmap_fwol  # noqa : F401
-from gi_loadouts.type.arti.gboe import GBOE, __revmap__ as revmap_gboe  # noqa : F401
-from gi_loadouts.type.arti.pmod import PMOD, __revmap__ as revmap_pmod  # noqa : F401
-from gi_loadouts.type.arti.sdoe import SDOE, __revmap__ as revmap_sdoe  # noqa : F401
+from enum import Enum
 
 from pydantic import BaseModel
+
+from gi_loadouts.type.arti.ccol import CCOL  # noqa : F401
+from gi_loadouts.type.arti.ccol import __revmap__ as revmap_ccol  # noqa : F401
+from gi_loadouts.type.arti.fwol import FWOL  # noqa : F401
+from gi_loadouts.type.arti.fwol import __revmap__ as revmap_fwol  # noqa : F401
+from gi_loadouts.type.arti.gboe import GBOE  # noqa : F401
+from gi_loadouts.type.arti.gboe import __revmap__ as revmap_gboe  # noqa : F401
+from gi_loadouts.type.arti.pmod import PMOD  # noqa : F401
+from gi_loadouts.type.arti.pmod import __revmap__ as revmap_pmod  # noqa : F401
+from gi_loadouts.type.arti.sdoe import SDOE  # noqa : F401
+from gi_loadouts.type.arti.sdoe import __revmap__ as revmap_sdoe  # noqa : F401
 from gi_loadouts.type.rare import Rare
-from typing import List
-from enum import Enum
 
 
 class ArtifactTeam(BaseModel):
@@ -21,14 +26,14 @@ class ArtifactTeam(BaseModel):
     quaddata: list = []
     pairtext: str = ""
     quadtext: str = ""
-    rare: List[Rare] = []
+    rare: list[Rare] = []
     file: str = ""
 
 
 class ArtiLevlType(BaseModel):
     levl: int = 0
     name: str = "Level 00"
-    rare: List[Rare] = [Rare.Star_1]
+    rare: list[Rare] = [Rare.Star_1]
 
 
 __artilevl__ = {

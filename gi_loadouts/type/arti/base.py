@@ -1,5 +1,5 @@
 from enum import Enum
-from typing import List, Optional
+from typing import Optional
 
 from pydantic import BaseModel
 
@@ -97,9 +97,9 @@ class Artifact(BaseModel):
     Artifact primitive
     """
     __teamname__: str = ""
-    __pairdata__: List[ATTR] = []
+    __pairdata__: list[ATTR] = []
     __pairtext__: str = ""
-    __quaddata__: List[ATTR] = []
+    __quaddata__: list[ATTR] = []
     __quadtext__: str = ""
     levl: Optional[int] = 0
     rare: Optional[int] = 1

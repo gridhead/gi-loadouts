@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Claymore, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -11,7 +9,7 @@ class BloodtaintedGreatsword(Claymore):
     tier: Tier = Tier.Tier_1
     rare: Rare = Rare.Star_3
     refi_name: str = "Bane of Fire and Thunder"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
         "Increases DMG against opponents affected by Pyro or Electro by 12%.",
         "Increases DMG against opponents affected by Pyro or Electro by 15%.",
         "Increases DMG against opponents affected by Pyro or Electro by 18%.",

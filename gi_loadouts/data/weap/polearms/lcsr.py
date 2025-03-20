@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Polearm, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -11,7 +9,7 @@ class LithicSpear(Polearm):
     tier: Tier = Tier.Tier_3
     rare: Rare = Rare.Star_4
     refi_name: str = "Lithic Axiom: Unity"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
         "For every character in the party who hails from Liyue, the character who equips this weapon gains 7% ATK increase and a 3% CRIT Rate increase. This effect stacks up to 4 times.",
         "For every character in the party who hails from Liyue, the character who equips this weapon gains 8% ATK increase and a 4% CRIT Rate increase. This effect stacks up to 4 times.",
         "For every character in the party who hails from Liyue, the character who equips this weapon gains 9% ATK increase and a 5% CRIT Rate increase. This effect stacks up to 4 times.",

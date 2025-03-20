@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Polearm, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -11,7 +9,7 @@ class DragonsBane(Polearm):
     tier: Tier = Tier.Tier_1
     rare: Rare = Rare.Star_4
     refi_name: str = "Bane of Flame and Water"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
         "Increases DMG against opponents affected by Hydro or Pyro by 20%.",
         "Increases DMG against opponents affected by Hydro or Pyro by 24%.",
         "Increases DMG against opponents affected by Hydro or Pyro by 28%.",

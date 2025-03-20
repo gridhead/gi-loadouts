@@ -1,5 +1,3 @@
-from typing import Tuple
-
 from PIL import Image, ImageFile, ImageQt
 from PySide6.QtGui import QPixmap
 from PySide6.QtWidgets import QFileDialog
@@ -9,7 +7,7 @@ class FileHandling:
     def __init__(self):
         super().__init__()
 
-    def load_mask_from_file(self, path: str) -> Tuple[QPixmap, ImageFile]:
+    def load_mask_from_file(self, path: str) -> tuple[QPixmap, ImageFile]:
         """
         Handle file operations involved in loading data from the storage device
         Backend
@@ -23,7 +21,7 @@ class FileHandling:
             pxmp = QPixmap.fromImage(qtim)
         return pxmp, data
 
-    def load_screenshot_with_picker(self, prnt, head: str) -> Tuple[bool, QPixmap, ImageFile]:
+    def load_screenshot_with_picker(self, prnt, head: str) -> tuple[bool, QPixmap, ImageFile]:
         """
         Handle file operations involved in loading data from the storage device
         Frontend
@@ -36,7 +34,7 @@ class FileHandling:
             return False, None, None
         return True, *self.load_mask_from_file(filepath)
 
-    def load_tessexec_with_picker(self, prnt, head: str) -> Tuple[bool, str]:
+    def load_tessexec_with_picker(self, prnt, head: str) -> tuple[bool, str]:
         """
         Handle file operations involved in loading executable from the storage device
 

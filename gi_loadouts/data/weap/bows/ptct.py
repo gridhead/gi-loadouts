@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Bow, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -11,7 +9,7 @@ class PrototypeCrescent(Bow):
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_4
     refi_name: str = "Unreturning"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
             "Charged Attack hits on weak points increase Movement SPD by 10% and ATK by 36% for 10s.",
             "Charged Attack hits on weak points increase Movement SPD by 10% and ATK by 45% for 10s.",
             "Charged Attack hits on weak points increase Movement SPD by 10% and ATK by 54% for 10s.",

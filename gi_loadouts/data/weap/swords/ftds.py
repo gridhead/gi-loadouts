@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Sword, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -11,7 +9,7 @@ class FesteringDesire(Sword):
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_4
     refi_name: str = "Undying Admiration"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
         "Increases Elemental Skill DMG by 16% and Elemental Skill CRIT Rate by 6%.",
         "Increases Elemental Skill DMG by 20% and Elemental Skill CRIT Rate by 7.5%.",
         "Increases Elemental Skill DMG by 24% and Elemental Skill CRIT Rate by 9%.",

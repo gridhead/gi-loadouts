@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Bow, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -11,7 +9,7 @@ class TheStringless(Bow):
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_4
     refi_name: str = "Arrowless Song"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
             "Increases Elemental Skill and Elemental Burst DMG by 24%.",
             "Increases Elemental Skill and Elemental Burst DMG by 30%.",
             "Increases Elemental Skill and Elemental Burst DMG by 36%.",

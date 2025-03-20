@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Polearm, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -11,7 +9,7 @@ class Halberd(Polearm):
     tier: Tier = Tier.Tier_3
     rare: Rare = Rare.Star_3
     refi_name: str = "Heavy"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
         "Normal Attacks deal an additional 160% DMG. Can only occur once every 10s.",
         "Normal Attacks deal an additional 200% DMG. Can only occur once every 10s.",
         "Normal Attacks deal an additional 240% DMG. Can only occur once every 10s.",

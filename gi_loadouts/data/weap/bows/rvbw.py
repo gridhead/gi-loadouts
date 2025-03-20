@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Bow, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -11,7 +9,7 @@ class RavenBow(Bow):
     tier: Tier = Tier.Tier_3
     rare: Rare = Rare.Star_3
     refi_name: str = "Bane of Flame and Water"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
             "Increases DMG against opponents affected by Hydro or Pyro by 12%.",
             "Increases DMG against opponents affected by Hydro or Pyro by 15%.",
             "Increases DMG against opponents affected by Hydro or Pyro by 18%.",
