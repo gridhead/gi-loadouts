@@ -1,5 +1,5 @@
 from enum import Enum
-from typing import List, Optional
+from typing import Optional
 
 from pydantic import BaseModel
 
@@ -61,7 +61,7 @@ class Refinement(BaseModel):
     Refinement primitive
     """
     qant: int = 1
-    stat: List[WeaponStat] = []
+    stat: list[WeaponStat] = []
     data: str = ""
 
 
@@ -74,9 +74,9 @@ class Weapon(BaseModel):
     levl: Optional[Level] = Level.Level_01_20_Rank_0
     tier: Optional[Tier] = Tier.Tier_1
     rare: Optional[Rare] = Rare.Star_1
-    stat_list: List[WeaponStat] = []
-    refi_list: List[str] = []
-    refi_stat: List[WeaponStat] = []
+    stat_list: list[WeaponStat] = []
+    refi_list: list[str] = []
+    refi_stat: list[WeaponStat] = []
     file: str = ""
 
     @property

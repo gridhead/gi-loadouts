@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Catalyst, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -11,7 +9,7 @@ class LostPrayertotheSacredWinds(Catalyst):
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_5
     refi_name: str = "Boundless Blessing"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
         "Increases Movement SPD by 10%. When in battle, gain an 8% Elemental DMG Bonus every 4s. Max 4 stacks. Lasts until the character falls or leaves combat.",
         "Increases Movement SPD by 10%. When in battle, gain an 10% Elemental DMG Bonus every 4s. Max 4 stacks. Lasts until the character falls or leaves combat.",
         "Increases Movement SPD by 10%. When in battle, gain an 12% Elemental DMG Bonus every 4s. Max 4 stacks. Lasts until the character falls or leaves combat.",

@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Claymore, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -11,7 +9,7 @@ class FerrousShadow(Claymore):
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_3
     refi_name: str = "Unbending"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
         "When HP falls below 70%, increases Charged Attack DMG by 30%, and Charged Attacks become much harder to interrupt.",
         "When HP falls below 75%, increases Charged Attack DMG by 35%, and Charged Attacks become much harder to interrupt.",
         "When HP falls below 80%, increases Charged Attack DMG by 40%, and Charged Attacks become much harder to interrupt.",

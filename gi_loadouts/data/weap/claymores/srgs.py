@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Claymore, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -11,7 +9,7 @@ class SkyriderGreatsword(Claymore):
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_3
     refi_name: str = "Courage"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
         "On hit, Normal or Charged Attacks increase ATK by 6% for 6s. Max 4 stacks. Can only occur once every 0.5s.",
         "On hit, Normal or Charged Attacks increase ATK by 7% for 6s. Max 4 stacks. Can only occur once every 0.5s.",
         "On hit, Normal or Charged Attacks increase ATK by 8% for 6s. Max 4 stacks. Can only occur once every 0.5s.",

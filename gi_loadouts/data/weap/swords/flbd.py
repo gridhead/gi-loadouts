@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Sword, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -11,7 +9,7 @@ class FilletBlade(Sword):
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_3
     refi_name: str = "Gash"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
         "On hit, has 50% chance to deal 240% ATK DMG to a single enemy. Can only occur once every 15s.",
         "On hit, has 50% chance to deal 280% ATK DMG to a single enemy. Can only occur once every 14s.",
         "On hit, has 50% chance to deal 320% ATK DMG to a single enemy. Can only occur once every 13s.",

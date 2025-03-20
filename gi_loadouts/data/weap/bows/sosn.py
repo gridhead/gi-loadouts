@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Bow, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -11,7 +9,7 @@ class SongofStillness(Bow):
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_4
     refi_name: str = "Benthic Pulse"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
             "After the wielder is healed, they will deal 16% more DMG for 8s. This can be triggered even when the character is not on the field.",
             "After the wielder is healed, they will deal 20% more DMG for 8s. This can be triggered even when the character is not on the field.",
             "After the wielder is healed, they will deal 24% more DMG for 8s. This can be triggered even when the character is not on the field.",
