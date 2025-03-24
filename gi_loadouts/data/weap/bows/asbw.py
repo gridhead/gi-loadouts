@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Bow, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -11,7 +9,7 @@ class AmosBow(Bow):
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_5
     refi_name: str = "Strong-Willed"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
         "Increases Normal Attack and Charged Attack DMG by 12%. After a Normal or Charged Attack is fired, DMG dealt increases by a further 8% every 0.1 seconds the arrow is in the air for up to 5 times.",
         "Increases Normal Attack and Charged Attack DMG by 15%. After a Normal or Charged Attack is fired, DMG dealt increases by a further 10% every 0.1 seconds the arrow is in the air for up to 5 times.",
         "Increases Normal Attack and Charged Attack DMG by 18%. After a Normal or Charged Attack is fired, DMG dealt increases by a further 12% every 0.1 seconds the arrow is in the air for up to 5 times.",

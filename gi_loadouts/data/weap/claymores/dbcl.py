@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Claymore, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -11,7 +9,7 @@ class DebateClub(Claymore):
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_3
     refi_name: str = "Blunt Conclusion"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
         "After using an Elemental Skill, Normal or Charged Attacks, on hit, deal an additional 60% ATK DMG in a small area. Effect lasts 15s. DMG can only occur once every 3s.",
         "After using an Elemental Skill, Normal or Charged Attacks, on hit, deal an additional 75% ATK DMG in a small area. Effect lasts 15s. DMG can only occur once every 3s.",
         "After using an Elemental Skill, Normal or Charged Attacks, on hit, deal an additional 90% ATK DMG in a small area. Effect lasts 15s. DMG can only occur once every 3s.",

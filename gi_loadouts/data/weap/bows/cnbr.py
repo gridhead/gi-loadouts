@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Bow, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -11,7 +9,7 @@ class ChainBreaker(Bow):
     tier: Tier = Tier.Tier_3
     rare: Rare = Rare.Star_4
     refi_name: str = "Flower—Feather Song"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
         "For every party member from Natlan or who has a different Elemental Type from the equipping character, the equipping character gains 4.8% increased ATK. When there are no less than 3 of the aforementioned characters, the equipping character gains 24 Elemental Mastery.",
         "For every party member from Natlan or who has a different Elemental Type from the equipping character, the equipping character gains 6% increased ATK. When there are no less than 3 of the aforementioned characters, the equipping character gains 30 Elemental Mastery.",
         "For every party member from Natlan or who has a different Elemental Type from the equipping character, the equipping character gains 7.2% increased ATK. When there are no less than 3 of the aforementioned characters, the equipping character gains 36 Elemental Mastery.",

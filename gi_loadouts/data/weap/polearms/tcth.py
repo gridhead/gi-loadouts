@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Polearm, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -11,7 +9,7 @@ class TheCatch(Polearm):
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_4
     refi_name: str = "Shanty"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
         "Increases Elemental Burst DMG by 16% and Elemental Burst CRIT Rate by 6%.",
         "Increases Elemental Burst DMG by 20% and Elemental Burst CRIT Rate by 7.5%.",
         "Increases Elemental Burst DMG by 24% and Elemental Burst CRIT Rate by 9%.",

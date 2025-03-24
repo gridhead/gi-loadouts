@@ -1,6 +1,3 @@
-
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Polearm, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -12,7 +9,7 @@ class BalladoftheFjords(Polearm):
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_4
     refi_name: str = "Tales of the Tundra"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
         "When there are at least 3 different Elemental Types in your party, Elemental Mastery will be increased by 120.",
         "When there are at least 3 different Elemental Types in your party, Elemental Mastery will be increased by 150.",
         "When there are at least 3 different Elemental Types in your party, Elemental Mastery will be increased by 180.",

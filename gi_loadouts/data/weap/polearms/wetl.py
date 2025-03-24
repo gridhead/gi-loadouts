@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Polearm, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -11,7 +9,7 @@ class WhiteTassel(Polearm):
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_3
     refi_name: str = "Sharp"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
         "Increases Normal Attack DMG by 24%.",
         "Increases Normal Attack DMG by 30%.",
         "Increases Normal Attack DMG by 36%.",

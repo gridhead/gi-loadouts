@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Claymore, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -11,7 +9,7 @@ class EarthShaker(Claymore):
     tier: Tier = Tier.Tier_3
     rare: Rare = Rare.Star_4
     refi_name: str = "Oath of Qhapaq Nan"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
         "After a party member triggers a Pyro-related reaction, the equipping character's Elemental Skill DMG is increased by 16% for 8s. This effect can be triggered even when the triggering party member is not on the field.",
         "After a party member triggers a Pyro-related reaction, the equipping character's Elemental Skill DMG is increased by 20% for 8s. This effect can be triggered even when the triggering party member is not on the field.",
         "After a party member triggers a Pyro-related reaction, the equipping character's Elemental Skill DMG is increased by 24% for 8s. This effect can be triggered even when the triggering party member is not on the field.",

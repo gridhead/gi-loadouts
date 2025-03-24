@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Polearm, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -11,7 +9,7 @@ class TamayurateiNoOhanashi(Polearm):
     tier: Tier = Tier.Tier_3
     rare: Rare = Rare.Star_4
     refi_name: str = "Busybody's Running Light"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
         "Increase ATK by 20% and Movement SPD by 10% for 10s when using an Elemental Skill.",
         "Increase ATK by 25% and Movement SPD by 10% for 10s when using an Elemental Skill.",
         "Increase ATK by 30% and Movement SPD by 10% for 10s when using an Elemental Skill.",

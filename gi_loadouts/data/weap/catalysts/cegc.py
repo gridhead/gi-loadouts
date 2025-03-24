@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Catalyst, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -11,7 +9,7 @@ class CranesEchoingCall(Catalyst):
     tier: Tier = Tier.Tier_4
     rare: Rare = Rare.Star_5
     refi_name: str = "Cloudfall Axiom"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
         "After the equipping character hits an opponent with a Plunging Attack, all nearby party members' Plunging Attacks will deal 28% increased DMG for 20s. When nearby party members hit opponents with Plunging Attacks, they will restore 2.5 Energy to the equipping character. Energy can restored this way every 0.7s. This energy regain effect can be triggered even if the equipping character is not on the field.",
         "After the equipping character hits an opponent with a Plunging Attack, all nearby party members' Plunging Attacks will deal 41% increased DMG for 20s. When nearby party members hit opponents with Plunging Attacks, they will restore 2.75 Energy to the equipping character. Energy can restored this way every 0.7s. This energy regain effect can be triggered even if the equipping character is not on the field.",
         "After the equipping character hits an opponent with a Plunging Attack, all nearby party members' Plunging Attacks will deal 54% increased DMG for 20s. When nearby party members hit opponents with Plunging Attacks, they will restore 3 Energy to the equipping character. Energy can restored this way every 0.7s. This energy regain effect can be triggered even if the equipping character is not on the field.",

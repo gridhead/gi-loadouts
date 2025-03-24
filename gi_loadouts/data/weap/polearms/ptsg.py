@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Polearm, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -11,7 +9,7 @@ class PrototypeStarglitter(Polearm):
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_4
     refi_name: str = "Magic Affinity"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
         "After using an Elemental Skill, increases Normal and Charged Attack DMG by 8% for 12s. Max 2 stacks.",
         "After using an Elemental Skill, increases Normal and Charged Attack DMG by 10% for 12s. Max 2 stacks.",
         "After using an Elemental Skill, increases Normal and Charged Attack DMG by 12% for 12s. Max 2 stacks.",

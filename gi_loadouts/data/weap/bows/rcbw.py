@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Bow, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -11,7 +9,7 @@ class RecurveBow(Bow):
     tier: Tier = Tier.Tier_1
     rare: Rare = Rare.Star_3
     refi_name: str = "Cull the Weak"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
             "Defeating an opponent restores 8% HP.",
             "Defeating an opponent restores 10% HP.",
             "Defeating an opponent restores 12% HP.",

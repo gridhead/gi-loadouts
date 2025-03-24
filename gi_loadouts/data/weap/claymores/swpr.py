@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Claymore, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -12,7 +10,7 @@ class SkywardPride(Claymore):
     tier: Tier = Tier.Tier_3
     rare: Rare = Rare.Star_5
     refi_name: str = "Sky-ripping Dragon Spine"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
         "Increases all DMG by 8%. After using an Elemental Burst, a vacuum blade that does 80% of ATK as DMG to opponents along its path will be created when Normal or Charged Attacks hit. Lasts for 20s or 8 vacuum blades.",
         "Increases all DMG by 10%. After using an Elemental Burst, a vacuum blade that does 100% of ATK as DMG to opponents along its path will be created when Normal or Charged Attacks hit. Lasts for 20s or 8 vacuum blades.",
         "Increases all DMG by 12%. After using an Elemental Burst, a vacuum blade that does 120% of ATK as DMG to opponents along its path will be created when Normal or Charged Attacks hit. Lasts for 20s or 8 vacuum blades.",

@@ -1,5 +1,3 @@
-from typing import List
-
 from gi_loadouts.type.rare import Rare
 from gi_loadouts.type.weap import Catalyst, WeaponStat, WeaponStatType
 from gi_loadouts.type.weap.tier import Tier
@@ -11,7 +9,7 @@ class TheWidsith(Catalyst):
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_4
     refi_name: str = "Debut"
-    refi_list: List[str] = [
+    refi_list: list[str] = [
         "When a character takes the field, they will gain a random theme song for 10s. This can only occur once every 30s. Recitative: ATK is increased by 60%. Aria: Increases all Elemental DMG by 48%. Interlude: Elemental Mastery is increased by 240.",
         "When a character takes the field, they will gain a random theme song for 10s. This can only occur once every 30s. Recitative: ATK is increased by 75%. Aria: Increases all Elemental DMG by 60%. Interlude: Elemental Mastery is increased by 300.",
         "When a character takes the field, they will gain a random theme song for 10s. This can only occur once every 30s. Recitative: ATK is increased by 90%. Aria: Increases all Elemental DMG by 72%. Interlude: Elemental Mastery is increased by 360.",
