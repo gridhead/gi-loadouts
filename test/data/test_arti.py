@@ -317,6 +317,20 @@ from gi_loadouts.type.stat import ATTR, STAT
             id="data.arti: Lavawalker"
         ),
         pytest.param(
+            "Long Night's Oath",
+            [],
+            [],
+            [4, 5],
+            (
+                "Lightkeeper's Pledge",
+                "Nightingale's Tail Feather",
+                "Undying One's Mourning Bell",
+                "A Horn Unwinded",
+                "Dyed Tassel"
+            ),
+            id="data.arti: Long Night's Oath"
+        ),
+        pytest.param(
             "Lucky Dog",
             [ATTR(stat_name=STAT.defense, stat_data=100)],
             [],
