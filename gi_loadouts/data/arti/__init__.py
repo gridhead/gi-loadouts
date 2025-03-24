@@ -23,6 +23,7 @@ from gi_loadouts.data.arti import (
     hood,
     istr,
     lkdg,
+    lnso,
     lvwk,
     mcht,
     mdbv,
@@ -231,6 +232,14 @@ __artilist__ = {
         quaddata=lvwk.team.__quaddata__, quadtext=lvwk.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
         file=lvwk.__name__.split(".")[-1]
+    ),
+    lnso.team.__teamname__: ArtifactTeam(
+        name=lnso.team.__teamname__,
+        fwol=lnso.fwol(), pmod=lnso.pmod(), sdoe=lnso.sdoe(), gboe=lnso.gboe(), ccol=lnso.ccol(),
+        pairdata=lnso.team.__pairdata__, pairtext=lnso.team.__pairtext__,
+        quaddata=lnso.team.__quaddata__, quadtext=lnso.team.__quadtext__,
+        rare=[Rare.Star_4, Rare.Star_5],
+        file=lnso.__name__.split(".")[-1]
     ),
     lkdg.team.__teamname__: ArtifactTeam(
         name=lkdg.team.__teamname__,
