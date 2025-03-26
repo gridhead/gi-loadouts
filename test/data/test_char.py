@@ -566,6 +566,13 @@ from test import verify_accuracy
             }, id="data.char: Venti",
         ),
         pytest.param(
+            "Varesa", "catalyst", 5, "electro", STAT.critical_rate_perc,
+            {
+                "Level 40/50 (Rank 2)": (5707.76, 160.18, 351.31, 4.8),
+                "Level 80/90 (Rank 6)": (11806.31, 331.32, 726.67, 19.2),
+            }, id="data.char: Varesa",
+        ),
+        pytest.param(
             "Wanderer", "catalyst", 5, "anemo", STAT.critical_rate_perc,
             {
                 "Level 40/50 (Rank 2)": (4568.41, 147.28, 272.90, 4.8),
