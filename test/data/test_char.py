@@ -258,6 +258,13 @@ from test import verify_accuracy
             }, id="data.char: Hu Tao",
         ),
         pytest.param(
+            "Iansan", "polearm", 4, "electro", STAT.attack_perc,
+            {
+                "Level 40/50 (Rank 2)": (4912.63, 118.47, 294.16, 6.0),
+                "Level 80/90 (Rank 6)": (9919.34, 239.20, 593.96, 24.0),
+            }, id="data.char: Iansan",
+        ),
+        pytest.param(
             "Jean", "sword", 5, "anemo", STAT.healing_bonus_perc,
             {
                 "Level 40/50 (Rank 2)": (6604.93, 107.50, 345.44, 5.5),
