@@ -33,6 +33,7 @@ from gi_loadouts.data.char.gaming import Gaming
 from gi_loadouts.data.char.ganyu import Ganyu
 from gi_loadouts.data.char.gorou import Gorou
 from gi_loadouts.data.char.hu_tao import HuTao
+from gi_loadouts.data.char.iansan import Iansan
 from gi_loadouts.data.char.jean import Jean
 from gi_loadouts.data.char.kachina import Kachina
 from gi_loadouts.data.char.kaedehara_kazuha import KaedeharaKazuha
@@ -132,6 +133,7 @@ __charmaps__ = {
     "Ganyu": Ganyu,
     "Gorou": Gorou,
     "Hu Tao": HuTao,
+    "Iansan": Iansan,
     "Jean": Jean,
     "Kachina": Kachina,
     "Kaedehara Kazuha": KaedeharaKazuha,
