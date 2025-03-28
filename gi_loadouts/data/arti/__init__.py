@@ -13,6 +13,7 @@ from gi_loadouts.data.arti import (
     dwmm,
     eoao,
     eosf,
+    fodg,
     fohw,
     fopl,
     gdfl,
@@ -152,6 +153,14 @@ __artilist__ = {
         quaddata=eosf.team.__quaddata__, quadtext=eosf.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
         file=eosf.__name__.split(".")[-1]
+    ),
+    fodg.team.__teamname__: ArtifactTeam(
+        name=fodg.team.__teamname__,
+        fwol=fodg.fwol(), pmod=fodg.pmod(), sdoe=fodg.sdoe(), gboe=fodg.gboe(), ccol=fodg.ccol(),
+        pairdata=fodg.team.__pairdata__, pairtext=fodg.team.__pairtext__,
+        quaddata=fodg.team.__quaddata__, quadtext=fodg.team.__quadtext__,
+        rare=[Rare.Star_4, Rare.Star_5],
+        file=fodg.__name__.split(".")[-1]
     ),
     fopl.team.__teamname__: ArtifactTeam(
         name=fopl.team.__teamname__,

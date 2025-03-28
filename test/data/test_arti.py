@@ -177,6 +177,20 @@ from gi_loadouts.type.stat import ATTR, STAT
             id="data.arti: Emblem of Severed Fate"
         ),
         pytest.param(
+            "Finale of the Deep Galleries",
+            [ATTR(stat_name=STAT.damage_bonus_cryo_perc, stat_data=15)],
+            [],
+            [4, 5],
+            (
+                "Deep Gallery's Echoing Song",
+                "Deep Gallery's Distant Pact",
+                "Deep Gallery's Moment of Oblivion",
+                "Deep Gallery's Bestowed Banquet",
+                "Deep Gallery's Lost Crown"
+            ),
+            id="data.arti: Finale of the Deep Galleries"
+        ),
+        pytest.param(
             "Flower of Paradise Lost",
             [ATTR(stat_name=STAT.elemental_mastery, stat_data=80)],
             [],
