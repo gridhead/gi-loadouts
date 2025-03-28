@@ -17,6 +17,7 @@ from test import verify_accuracy
         pytest.param("Sacrificial Jade", 4, "Level 80/90 (Rank 6)", 427, WeaponStatType.critical_rate_perc, 33.5, 5, id="face.wind.rule: Configuring weapon - Catalyst - Sacrificial Jade"),
         pytest.param("Waveriding Whirl", 4, "Level 80/90 (Rank 6)", 427, WeaponStatType.energy_recharge_perc, 55.9, 5, id="face.wind.rule: Configuring weapon - Catalyst - Waveriding Whirl"),
         pytest.param("A Thousand Floating Dreams", 5, "Level 80/90 (Rank 6)", 506, WeaponStatType.elemental_mastery, 241, 5, id="face.wind.rule: Configuring weapon - Catalyst - A Thousand Floating Dreams"),
+        pytest.param("Starcaller's Watch", 5, "Level 80/90 (Rank 6)", 506, WeaponStatType.elemental_mastery, 241, 5, id="face.wind.rule: Configuring weapon - Catalyst - Starcaller's Watch"),
         pytest.param("Sunny Morning Sleep-In", 5, "Level 80/90 (Rank 6)", 506, WeaponStatType.elemental_mastery, 241, 5, id="face.wind.rule: Configuring weapon - Catalyst - Sunny Morning Sleep-In"),
         pytest.param("Surf's Up", 5, "Level 80/90 (Rank 6)", 506, WeaponStatType.critical_damage_perc, 80.4, 5, id="face.wind.rule: Configuring weapon - Catalyst - Surf's Up"),
         pytest.param("Tome of the Eternal Flow", 5, "Level 80/90 (Rank 6)", 506, WeaponStatType.critical_damage_perc, 80.4, 5, id="face.wind.rule: Configuring weapon - Catalyst - Tome of the Eternal Flow"),
@@ -51,8 +52,8 @@ from test import verify_accuracy
         pytest.param("Cashflow Supervision", 5, "Level 80/90 (Rank 6)", 621, WeaponStatType.critical_rate_perc, 20.1, 5, id="face.wind.rule: Configuring weapon - Catalyst - Cashflow Supervision"),
         pytest.param("Skyward Atlas", 5, "Level 80/90 (Rank 6)", 621, WeaponStatType.attack_perc, 30.2, 5, id="face.wind.rule: Configuring weapon - Catalyst - Skyward Atlas"),
         pytest.param("Tulaytullah's Remembrance", 5, "Level 80/90 (Rank 6)", 621, WeaponStatType.critical_damage_perc, 40.2, 5, id="face.wind.rule: Configuring weapon - Catalyst - Tulaytullah's Remembrance"),
+        pytest.param("Vivid Notions", 5, "Level 80/90 (Rank 6)", 621, WeaponStatType.critical_damage_perc, 40.2, 5, id="face.wind.rule: Configuring weapon - Catalyst - Vivid Notions"),
         pytest.param("Crane's Echoing Call", 5, "Level 80/90 (Rank 6)", 679, WeaponStatType.attack_perc, 15.1, 5, id="face.wind.rule: Configuring weapon - Catalyst - Crane's Echoing Call"),
-        pytest.param("Starcaller's Watch", 5, "Level 80/90 (Rank 6)", 506, WeaponStatType.elemental_mastery, 241, 5, id="face.wind.rule: Configuring weapon - Catalyst - Starcaller's Watch"),
     ]
 )
 def test_catalyst(runner: MainWindow, name: str, rare: int, levl: str, batk: int, seco: WeaponStatType, valu: float, refn: int | None) -> None:

@@ -17,6 +17,7 @@ from test import verify_accuracy
         pytest.param("Sacrificial Jade", 4, 1, "Level 80/90 (Rank 6)", 427, WeaponStatType.critical_rate_perc, 33.5, id="data.weap.catalysts: Sacrificial Jade"),
         pytest.param("Waveriding Whirl", 4, 1, "Level 80/90 (Rank 6)", 427, WeaponStatType.energy_recharge_perc, 55.9, id="data.weap.catalysts: Waveriding Whirl"),
         pytest.param("A Thousand Floating Dreams", 5, 1, "Level 80/90 (Rank 6)", 506, WeaponStatType.elemental_mastery, 241, id="data.weap.catalysts: A Thousand Floating Dreams"),
+        pytest.param("Starcaller's Watch", 5, 1, "Level 80/90 (Rank 6)", 506, WeaponStatType.elemental_mastery, 241, id="data.weap.catalysts: Starcaller's Watch"),
         pytest.param("Sunny Morning Sleep-In", 5, 1, "Level 80/90 (Rank 6)", 506, WeaponStatType.elemental_mastery, 241, id="data.weap.catalysts: Sunny Morning Sleep-In"),
         pytest.param("Surf's Up", 5, 1, "Level 80/90 (Rank 6)", 506, WeaponStatType.critical_damage_perc, 80.4, id="data.weap.catalysts: Surf's Up"),
         pytest.param("Tome of the Eternal Flow", 5, 1, "Level 80/90 (Rank 6)", 506, WeaponStatType.critical_damage_perc, 80.4, id="data.weap.catalysts: Tome of the Eternal Flow"),
@@ -51,8 +52,8 @@ from test import verify_accuracy
         pytest.param("Cashflow Supervision", 5, 3, "Level 80/90 (Rank 6)", 621, WeaponStatType.critical_rate_perc, 20.1, id="data.weap.catalysts: Cashflow Supervision"),
         pytest.param("Skyward Atlas", 5, 3, "Level 80/90 (Rank 6)", 621, WeaponStatType.attack_perc, 30.2, id="data.weap.catalysts: Skyward Atlas"),
         pytest.param("Tulaytullah's Remembrance", 5, 3, "Level 80/90 (Rank 6)", 621, WeaponStatType.critical_damage_perc, 40.2, id="data.weap.catalysts: Tulaytullah's Remembrance"),
+        pytest.param("Vivid Notions", 5, 3, "Level 80/90 (Rank 6)", 621, WeaponStatType.critical_damage_perc, 40.2, id="data.weap.catalysts: Vivid Notions"),
         pytest.param("Crane's Echoing Call", 5, 4, "Level 80/90 (Rank 6)", 679, WeaponStatType.attack_perc, 15.1, id="data.weap.catalysts: Crane's Echoing Call"),
-        pytest.param("Starcaller's Watch", 5, 1, "Level 80/90 (Rank 6)", 506, WeaponStatType.elemental_mastery, 241, id="data.weap.catalysts: Starcaller's Watch"),
     ]
 )
 def test_catalyst(name: str, rare: int, tier: int, levl: str, batk: int, seco: WeaponStatType, valu: float) -> None:
