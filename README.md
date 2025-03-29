@@ -124,7 +124,7 @@ including but not limited to those outlined below.
     its intended functionality to work.
 
 With an extensive suite of 
-[**over 1350 diverse functionality tests**](https://github.com/gridhead/gi-loadouts/tree/main/test)
+[**over 1380 diverse functionality tests**](https://github.com/gridhead/gi-loadouts/tree/main/test)
 and
 [**impeccable 100% source code coverage**](https://github.com/gridhead/gi-loadouts/blob/main/.github/workflows/test.yml),
 we proudly invite auditors and analysts from 
@@ -180,7 +180,7 @@ ensure that the Tesseract OCR application is installed and configured properly.
 
 #### Nightly
 
-**Releases** for the _testing debugging purposes_ can be found [here](https://github.com/gridhead/expedite/actions).
+**Releases** for the _testing debugging purposes_ can be found [here](https://github.com/gridhead/gi-loadouts/actions).
 
 #### Package
 
