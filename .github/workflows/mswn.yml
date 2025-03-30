@@ -30,6 +30,9 @@ jobs:
       - name: Disable using virtual environments with Poetry
         run: poetry config virtualenvs.create false
 
+      - name: Update the interstitial versioning identifier
+        run: (Get-Content -Raw pyproject.toml) -replace 'version\s*=\s*"([^"]*)"', ('version = "$1+' + (git rev-parse --short=8 HEAD) + '"') | Set-Content pyproject.toml
+
       - name: Install the runtime dependencies of the project
         run: python3 -m poetry install
 
