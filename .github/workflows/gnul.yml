@@ -32,6 +32,9 @@ jobs:
       - name: Disable using virtual environments with Poetry
         run: poetry config virtualenvs.create false
 
+      - name: Ignore warnings about dubious repository ownership
+        run: git config --global --add safe.directory .
+
       - name: Update the interstitial versioning identifier
         run: sed -i "s/^version = \"\(.*\)\"/version = \"\1+$(git rev-parse --short=8 HEAD)\"/" pyproject.toml
 
