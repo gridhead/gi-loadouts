@@ -43,6 +43,7 @@ from test import verify_accuracy
         pytest.param("Forest Regalia", 4, "Level 80/90 (Rank 6)", 523, WeaponStatType.energy_recharge_perc, 27.9, 5, id="face.wind.rule: Configuring weapon - Claymore - Forest Regalia"),
         pytest.param("Earth Shaker", 4, "Level 80/90 (Rank 6)", 523, WeaponStatType.attack_perc, 25.1, 5, id="face.wind.rule: Configuring weapon - Claymore - Earth Shaker"),
         pytest.param("\"Ultimate Overlord's Mega Magic Sword\"", 4, "Level 80/90 (Rank 6)", 523, WeaponStatType.energy_recharge_perc, 27.9, 5, id="face.wind.rule: Configuring weapon - Claymore - \"Ultimate Overlord's Mega Magic Sword\""),
+        pytest.param("Fruitful Hook", 4, "Level 80/90 (Rank 6)", 523, WeaponStatType.attack_perc, 25.1, 5, id="face.wind.rule: Configuring weapon - Claymore - Fruitful Hook"),
         pytest.param("Skyward Pride", 5, "Level 80/90 (Rank 6)", 621, WeaponStatType.energy_recharge_perc, 33.5, 5, id="face.wind.rule: Configuring weapon - Claymore - Skyward Pride"),
         pytest.param("Verdict", 5, "Level 80/90 (Rank 6)", 621, WeaponStatType.critical_rate_perc, 20.1, 5, id="face.wind.rule: Configuring weapon - Claymore - Verdict"),
         pytest.param("Fang of the Mountain King", 5, "Level 80/90 (Rank 6)", 679, WeaponStatType.critical_rate_perc, 10.1, 5, id="face.wind.rule: Configuring weapon - Claymore - Fang of the Mountain King"),
