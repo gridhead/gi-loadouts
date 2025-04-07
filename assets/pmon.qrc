@@ -1,14 +1,14 @@
 <RCC>
     <qresource prefix="/pmon">
-        <file>imgs/pmon/0.png</file>
-        <file>imgs/pmon/1.png</file>
-        <file>imgs/pmon/2.png</file>
-        <file>imgs/pmon/3.png</file>
-        <file>imgs/pmon/4.png</file>
-        <file>imgs/pmon/5.png</file>
-        <file>imgs/pmon/6.png</file>
-        <file>imgs/pmon/7.png</file>
-        <file>imgs/pmon/8.png</file>
-        <file>imgs/pmon/9.png</file>
+        <file>imgs/pmon/0.webp</file>
+        <file>imgs/pmon/1.webp</file>
+        <file>imgs/pmon/2.webp</file>
+        <file>imgs/pmon/3.webp</file>
+        <file>imgs/pmon/4.webp</file>
+        <file>imgs/pmon/5.webp</file>
+        <file>imgs/pmon/6.webp</file>
+        <file>imgs/pmon/7.webp</file>
+        <file>imgs/pmon/8.webp</file>
+        <file>imgs/pmon/9.webp</file>
     </qresource>
 </RCC>
