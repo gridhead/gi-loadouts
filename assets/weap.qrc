@@ -1,6 +1,6 @@
 <RCC>
   <qresource prefix="weap">
-    <file>imgs/weap/main/weap.png</file>
+    <file>imgs/weap/main/weap.webp</file>
     <file>imgs/weap/bows/aqsl_a.webp</file>
     <file>imgs/weap/bows/aqsl_b.webp</file>
     <file>imgs/weap/bows/asbw_a.webp</file>
