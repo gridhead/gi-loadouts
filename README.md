@@ -1,7 +1,7 @@
 <h1 align="center">Loadouts for Genshin Impact</h1>
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/imgs/pmon/8.png" alt="drawing" width="200"/>
+    <img src="https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/imgs/pmon/8.webp" alt="drawing" width="200"/>
 </p>
 
 <p align="center">
