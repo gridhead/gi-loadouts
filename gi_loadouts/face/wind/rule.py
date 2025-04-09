@@ -103,7 +103,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
             char = __charmaps__[self.head_char_name.currentText()]()
             char.levl = getattr(Level, self.head_char_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
-            self.head_vson.setPixmap(QPixmap(f":vson/imgs/vson/{char.vision.value.name.lower()}.png"))
+            self.head_vson.setPixmap(QPixmap(f":vson/imgs/vson/{char.vision.value.name.lower()}.webp"))
             self.head_area_back.setPixmap(modify_graphics_resource(f":name/imgs/char/name/{self.head_char_name.currentText().replace(" ", "_").lower()}.png", 1.0, 0.75))
             self.char_inpt_icon.setPixmap(QPixmap(f":face/imgs/char/face/{self.head_char_name.currentText().replace(" ", "_").lower()}.png"))
             self.char_inpt_area.setPixmap(QPixmap(char.rare.value.back))

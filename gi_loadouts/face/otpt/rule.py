@@ -78,6 +78,6 @@ class Rule(QMainWindow, Ui_otptwind):
 
         :return:
         """
-        self.head_vson.setPixmap(QPixmap(f":vson/imgs/vson/{self.char["char"].vision.value.name.lower()}.png"))
+        self.head_vson.setPixmap(QPixmap(f":vson/imgs/vson/{self.char["char"].vision.value.name.lower()}.webp"))
         self.char_back.setPixmap(modify_graphics_resource(f":back/imgs/char/back/{self.char["char"].name.lower().replace(" ", "_")}.webp"))
         self.char_wish.setPixmap(QPixmap(f":wish/imgs/char/wish/{self.char["char"].name.lower().replace(" ", "_")}.webp"))
