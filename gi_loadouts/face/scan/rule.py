@@ -98,7 +98,7 @@ class Rule(QDialog, Ui_scan, Dialog):
             self.arti_type_name.setText(truncate_text(getattr(kind.value, self.dist[self.arti_dist.currentText().strip()]["part"]).__name__, 34))
             self.arti_head_icon.setPixmap(QPixmap(f":arti/imgs/arti/{kind.value.file}/{self.dist[self.arti_dist.currentText().strip()]["part"]}.webp"))
             if self.arti_type.currentText().strip() == "None":
-                self.arti_head_icon.setPixmap(QPixmap(f":arti/imgs/arti/main/{self.dist[self.arti_dist.currentText().strip()]["part"]}.png"))
+                self.arti_head_icon.setPixmap(QPixmap(f":arti/imgs/arti/main/{self.dist[self.arti_dist.currentText().strip()]["part"]}.webp"))
 
     def change_levels_backdrop_by_changing_rarity(self) -> None:
         """
