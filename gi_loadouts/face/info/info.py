@@ -36,7 +36,7 @@ class Ui_info:
         self.icon.setSizePolicy(sizePolicy)
         self.icon.setMinimumSize(QSize(150, 150))
         self.icon.setMaximumSize(QSize(150, 150))
-        self.icon.setPixmap(QPixmap(":/pmon/imgs/pmon/8.png"))
+        self.icon.setPixmap(QPixmap(":/pmon/imgs/pmon/8.webp"))
         self.icon.setScaledContents(True)
         self.head = QLabel(info)
         self.head.setObjectName("head")
