@@ -8,7 +8,7 @@ from PySide6.QtWidgets import QApplication, QComboBox, QDialog, QLineEdit, QMess
 
 from gi_loadouts import conf
 from gi_loadouts.data.arti import ArtiList
-from gi_loadouts.face.scan import areaiden
+from gi_loadouts.face.scan import areaiden, tab_order_scan
 from gi_loadouts.face.scan.file import file
 from gi_loadouts.face.scan.scan import Ui_scan
 from gi_loadouts.face.scan.work import ScanWorker
@@ -436,3 +436,12 @@ class Rule(QDialog, Ui_scan, Dialog):
         :return:
         """
         self.arti_shot.setText("<html><head/><body><p align=\"center\"><span style=\" font-size:16pt;\">YOUR ARTIFACT SCREENSHOT WILL SHOW UP HERE</span></p><p align=\"center\">INSERT AN ARTIFACT SCREENSHOT HERE BY EITHER PRESSING<span style=\" font-weight:700;\"> CTRL + V</span> OR USING <span style=\" font-weight:700;\">DRAG AND DROP</span></p></body></html>")
+
+    def regulate_taborder(self) -> None:
+        """
+        Set the tab order
+
+        :return:
+        """
+        for current_widget, next_widget in zip(tab_order_scan, tab_order_scan[1:]):
+             self.setTabOrder(getattr(self, current_widget), getattr(self, next_widget))
