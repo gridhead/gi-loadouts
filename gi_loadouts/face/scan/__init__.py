@@ -86,3 +86,41 @@ mainstat = {
 }
 
 levliden = r"\+([0-9]|1[0-9]|20)\b"
+
+# List of widgets present in artifact information panel
+info_arti_widget = [
+    "arti_dist",
+    "arti_type",
+    "arti_levl",
+    "arti_rare",
+    "arti_name_main",
+    "arti_data_main",
+    "arti_name_a",
+    "arti_data_a",
+    "arti_name_b",
+    "arti_data_b",
+    "arti_name_c",
+    "arti_data_c",
+    "arti_name_d",
+    "arti_data_d"
+]
+
+# List of widgets present in return back panel
+back_arti_widget = [
+    "arti_back_done",
+    "arti_back_wipe"
+]
+
+# List of widgets present in right sidebar
+right_sidebar_widget = [
+    "arti_cnvs_load",
+    "arti_cnvs_conf",
+    "arti_cnvs_wipe"
+]
+
+# List of unpacked widgets arranged as per chronological `TAB` order
+tab_order_scan = [
+    *info_arti_widget,
+    *back_arti_widget,
+    *right_sidebar_widget
+]
