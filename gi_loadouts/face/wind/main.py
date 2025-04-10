@@ -53,6 +53,7 @@ class MainWindow(Rule):
             self.change_artifact_substats_by_changing_rarity_or_mainstat(item[2], item[3], item[5])
             self.change_levels_backdrop_by_changing_rarity(item[0], item[8], item[2])
         self.statarea.showMessage("Ready.")
+        self.set_tab_order()
 
     def initialize_events(self) -> None:
         """
