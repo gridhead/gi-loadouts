@@ -20,6 +20,7 @@ class ScanDialog(Rule):
         :return:
         """
         self.populate_dropdown()
+        self.set_tab_order()
 
     def initialize_events(self) -> None:
         """
