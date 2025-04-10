@@ -10,6 +10,7 @@ from gi_loadouts.face.lcns.main import LcnsDialog
 from gi_loadouts.face.otpt.main import OtptWindow
 from gi_loadouts.face.scan.main import ScanDialog
 from gi_loadouts.face.util import modify_graphics_resource, truncate_text
+from gi_loadouts.face.wind import tab_order_wind
 from gi_loadouts.face.wind.calc import Assess
 from gi_loadouts.face.wind.fclt import Facility
 from gi_loadouts.face.wind.util import show_status
@@ -503,3 +504,12 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         :return:
         """
         QDesktopServices.openUrl(QUrl(link))
+
+    def regulate_taborder(self) -> None:
+        """
+        Set the tab order
+
+        :return:
+        """
+        for current_widget, next_widget in zip(tab_order_wind, tab_order_wind[1:]):
+             self.setTabOrder(getattr(self, current_widget), getattr(self, next_widget))
