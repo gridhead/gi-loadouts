@@ -217,7 +217,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             artiname.setText(truncate_text(getattr(kind.value, part).__name__, 32))
             headicon.setPixmap(QPixmap(f":arti/imgs/arti/{kind.value.file}/{part}.webp"))
             if droptype.currentText().strip() == "None":
-                headicon.setPixmap(QPixmap(f":arti/imgs/arti/main/{part}.png"))
+                headicon.setPixmap(QPixmap(f":arti/imgs/arti/main/{part}.webp"))
 
     def change_data_by_changing_level_or_stat(self, droplevl: QComboBox, droptype: QComboBox, droprare: QComboBox, dropstat: QComboBox, statdata: QLineEdit, part: str) -> None:
         """
