@@ -1,9 +1,9 @@
 from pydantic import BaseModel
 
-from gi_loadouts.type.char import CharName
-from gi_loadouts.type.char.cons import Cons
-from gi_loadouts.type.levl import Level
-from gi_loadouts.type.stat import ATTR, STAT
+from ..char import CharName
+from ..char.cons import Cons
+from ..levl import Level
+from ..stat import ATTR, STAT
 
 
 class BaseStats(BaseModel):

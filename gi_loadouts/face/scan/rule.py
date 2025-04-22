@@ -6,17 +6,11 @@ from PySide6.QtCore import QByteArray, QMimeData, QThread
 from PySide6.QtGui import QDragEnterEvent, QDropEvent, QPixmap
 from PySide6.QtWidgets import QApplication, QComboBox, QDialog, QLineEdit, QMessageBox
 
-from gi_loadouts import conf
-from gi_loadouts.data.arti import ArtiList
-from gi_loadouts.face.scan import areaiden, tab_order_scan
-from gi_loadouts.face.scan.file import file
-from gi_loadouts.face.scan.scan import Ui_scan
-from gi_loadouts.face.scan.work import ScanWorker
-from gi_loadouts.face.util import modify_datatype_to_transfer, truncate_text
-from gi_loadouts.face.wind.talk import Dialog
-from gi_loadouts.type import arti
-from gi_loadouts.type.arti import ArtiLevl, __artistat__
-from gi_loadouts.type.arti.base import (
+from ... import conf
+from ...data.arti import ArtiList
+from ...type import arti
+from ...type.arti import ArtiLevl, __artistat__
+from ...type.arti.base import (
     MainStatType_CCOL,
     MainStatType_FWOL,
     MainStatType_GBOE,
@@ -24,8 +18,14 @@ from gi_loadouts.type.arti.base import (
     MainStatType_SDOE,
     SecoStatType,
 )
-from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.stat import ATTR, __revmap__
+from ...type.rare import Rare
+from ...type.stat import ATTR, __revmap__
+from ..util import modify_datatype_to_transfer, truncate_text
+from ..wind.talk import Dialog
+from . import areaiden, tab_order_scan
+from .file import file
+from .scan import Ui_scan
+from .work import ScanWorker
 
 
 class Rule(QDialog, Ui_scan, Dialog):

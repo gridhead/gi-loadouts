@@ -3,9 +3,9 @@ import json
 import yaml
 from PySide6.QtWidgets import QFileDialog
 
-from gi_loadouts.type.file.arti import ArtiFile
-from gi_loadouts.type.file.team import TeamFile
-from gi_loadouts.type.file.weap import WeapFile
+from ...type.file.arti import ArtiFile
+from ...type.file.team import TeamFile
+from ...type.file.weap import WeapFile
 
 
 class FileHandling:

@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 
-from gi_loadouts.type.stat import ATTR, STAT
+from ..stat import ATTR, STAT
 
 
 class FWOL(BaseModel):

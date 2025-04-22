@@ -2,13 +2,13 @@ from enum import Enum
 
 from pydantic import BaseModel
 
-from gi_loadouts.type.char.cons import Cons
-from gi_loadouts.type.char.mult import Mult, Secs
-from gi_loadouts.type.levl import Level
-from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.stat import ATTR, STAT
-from gi_loadouts.type.vson import Vision
-from gi_loadouts.type.weap import WeaponType
+from ..levl import Level
+from ..rare import Rare
+from ..stat import ATTR, STAT
+from ..vson import Vision
+from ..weap import WeaponType
+from .cons import Cons
+from .mult import Mult, Secs
 
 
 class CharName(str, Enum):

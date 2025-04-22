@@ -1,4 +1,4 @@
-from gi_loadouts.data.weap.polearms import (
+from . import (
     bcpl,
     bgpr,
     bktl,

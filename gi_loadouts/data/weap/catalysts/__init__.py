@@ -1,4 +1,4 @@
-from gi_loadouts.data.weap.catalysts import (
+from . import (
     agdh,
     aptn,
     atfd,

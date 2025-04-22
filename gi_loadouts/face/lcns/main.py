@@ -3,8 +3,8 @@ from time import time
 from PySide6.QtGui import QPixmap
 from PySide6.QtWidgets import QDialog
 
-from gi_loadouts import __gicompat_part__, __gicompat_vers__, __versdata__
-from gi_loadouts.face.lcns.lcns import Ui_lcns
+from ... import __gicompat_part__, __gicompat_vers__, __versdata__
+from .lcns import Ui_lcns
 
 
 class LcnsDialog(QDialog, Ui_lcns):

@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
-from gi_loadouts.type.stat import ATTR
-from gi_loadouts.type.weap import WeaponStat, WeaponStatType
+from ..stat import ATTR
+from ..weap import WeaponStat, WeaponStatType
 
 
 class WEAP(BaseModel):

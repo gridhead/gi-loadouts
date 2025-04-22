@@ -1,7 +1,7 @@
-from gi_loadouts.data.arti import ArtiList
-from gi_loadouts.data.weap import Family
-from gi_loadouts.type.arti import ArtiLevl
-from gi_loadouts.type.stat import STAT
+from ...data.arti import ArtiList
+from ...data.weap import Family
+from ..arti import ArtiLevl
+from ..stat import STAT
 
 __stat_good__ = {
     STAT.health_points: "hp",

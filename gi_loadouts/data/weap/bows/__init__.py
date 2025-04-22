@@ -1,4 +1,4 @@
-from gi_loadouts.data.weap.bows import (
+from . import (
     aqsl,
     asbw,
     avcp,

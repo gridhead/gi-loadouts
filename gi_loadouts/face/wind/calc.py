@@ -1,11 +1,11 @@
-from gi_loadouts.data.arti import ArtiList
-from gi_loadouts.data.char import __charmaps__
-from gi_loadouts.data.weap import Family
-from gi_loadouts.type.arti import Collection
-from gi_loadouts.type.calc import CHAR, TEAM, WEAP
-from gi_loadouts.type.levl import Level
-from gi_loadouts.type.stat import ATTR, STAT, __revmap__
-from gi_loadouts.type.weap import WeaponStatType
+from ...data.arti import ArtiList
+from ...data.char import __charmaps__
+from ...data.weap import Family
+from ...type.arti import Collection
+from ...type.calc import CHAR, TEAM, WEAP
+from ...type.levl import Level
+from ...type.stat import ATTR, STAT, __revmap__
+from ...type.weap import WeaponStatType
 
 
 class Assess:

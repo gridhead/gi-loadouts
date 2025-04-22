@@ -4,8 +4,8 @@ from PySide6.QtCore import QUrl
 from PySide6.QtGui import QDesktopServices, QPixmap
 from PySide6.QtWidgets import QDialog
 
-from gi_loadouts import __gicompat_part__, __gicompat_vers__, __releases__, __versdata__
-from gi_loadouts.face.info.info import Ui_info
+from ... import __gicompat_part__, __gicompat_vers__, __releases__, __versdata__
+from .info import Ui_info
 
 
 class InfoDialog(QDialog, Ui_info):

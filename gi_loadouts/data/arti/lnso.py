@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 
-from gi_loadouts.type.arti import CCOL, FWOL, GBOE, PMOD, SDOE
+from ...type.arti import CCOL, FWOL, GBOE, PMOD, SDOE
 
 
 class team(BaseModel):

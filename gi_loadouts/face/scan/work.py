@@ -8,12 +8,12 @@ from PIL import ImageFile
 from PySide6.QtCore import QObject, Signal
 from pytesseract import TesseractError, image_to_string, pytesseract
 
-from gi_loadouts import conf
-from gi_loadouts.data.arti import ArtiList
-from gi_loadouts.face.scan import areaiden, levliden, mainstat, substats, teamiden
-from gi_loadouts.type.arti import ArtiLevl
-from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.stat import ATTR
+from ... import conf
+from ...data.arti import ArtiList
+from ...type.arti import ArtiLevl
+from ...type.rare import Rare
+from ...type.stat import ATTR
+from . import areaiden, levliden, mainstat, substats, teamiden
 
 
 class ScanWorker(QObject):

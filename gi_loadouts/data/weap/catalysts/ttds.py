@@ -1,6 +1,6 @@
-from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.weap import Catalyst, WeaponStat, WeaponStatType
-from gi_loadouts.type.weap.tier import Tier
+from ....type.rare import Rare
+from ....type.weap import Catalyst, WeaponStat, WeaponStatType
+from ....type.weap.tier import Tier
 
 
 class ThrillingTalesofDragonSlayers(Catalyst):

@@ -1,6 +1,6 @@
-from gi_loadouts.data.arti import ArtiList
-from gi_loadouts.type.arti import CCOL, FWOL, GBOE, PMOD, SDOE
-from gi_loadouts.type.stat import STAT
+from ...data.arti import ArtiList
+from ...type.arti import CCOL, FWOL, GBOE, PMOD, SDOE
+from ...type.stat import STAT
 
 areaiden = {
     FWOL: "Flower of Life",

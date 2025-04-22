@@ -1,6 +1,6 @@
-from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.weap import Claymore, WeaponStat, WeaponStatType
-from gi_loadouts.type.weap.tier import Tier
+from ....type.rare import Rare
+from ....type.weap import Claymore, WeaponStat, WeaponStatType
+from ....type.weap.tier import Tier
 
 # TODO - Check if the increase DMG is elemental DMG bonus or not
 

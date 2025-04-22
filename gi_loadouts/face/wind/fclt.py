@@ -5,23 +5,23 @@ from uuid import uuid4
 import yaml
 from PySide6.QtWidgets import QMessageBox
 
-from gi_loadouts.data.arti import ArtiList
-from gi_loadouts.face.wind.file import file
-from gi_loadouts.face.wind.talk import Dialog
-from gi_loadouts.face.wind.util import show_status
-from gi_loadouts.type.arti import ArtiLevl
-from gi_loadouts.type.file.arti import (
+from ...data.arti import ArtiList
+from ...type.arti import ArtiLevl
+from ...type.file.arti import (
     ArtiArea,
     ArtiFile,
     make_artifile_from_good,
     make_artifile_from_yaml,
 )
-from gi_loadouts.type.file.team import TeamFile, make_teamfile_from_good, make_teamfile_from_yaml
-from gi_loadouts.type.file.weap import WeapFile, make_weapfile_from_good, make_weapfile_from_yaml
-from gi_loadouts.type.levl import Level
-from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.stat import ATTR, STAT, __revmap__
-from gi_loadouts.type.weap import WeaponType
+from ...type.file.team import TeamFile, make_teamfile_from_good, make_teamfile_from_yaml
+from ...type.file.weap import WeapFile, make_weapfile_from_good, make_weapfile_from_yaml
+from ...type.levl import Level
+from ...type.rare import Rare
+from ...type.stat import ATTR, STAT, __revmap__
+from ...type.weap import WeaponType
+from .file import file
+from .talk import Dialog
+from .util import show_status
 
 
 class Facility(Dialog):
