@@ -17,7 +17,7 @@ jobs:
           - tox-env: "py312-dist"
             container: "fedora:40"
           - tox-env: "py313-dist"
-            container: "fedora:41"
+            container: "fedora:42"
 
     container: ${{ matrix.container }}
 
