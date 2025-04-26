@@ -3,9 +3,9 @@ from uuid import uuid4
 
 from pydantic import BaseModel
 
-from gi_loadouts.data.arti import ArtiList
-from gi_loadouts.type.arti import ArtiLevl
-from gi_loadouts.type.file import (
+from ...data.arti import ArtiList
+from ..arti import ArtiLevl
+from ..file import (
     __artiarea_good__,
     __artiarea_good_revmap__,
     __artilevl_good__,
@@ -14,8 +14,8 @@ from gi_loadouts.type.file import (
     __stat_good__,
     __stat_good_revmap__,
 )
-from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.stat import ATTR, __revmap__
+from ..rare import Rare
+from ..stat import ATTR, __revmap__
 
 
 class ArtiArea(str, Enum):

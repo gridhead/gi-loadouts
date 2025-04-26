@@ -1,4 +1,4 @@
-from gi_loadouts.data.weap.swords import (
+from . import (
     absn,
     ankg,
     aqfv,

@@ -3,12 +3,12 @@ from typing import Optional
 
 from pydantic import BaseModel
 
-from gi_loadouts.type.levl import Level
-from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.stat import STAT
-from gi_loadouts.type.weap.ascn import Ascn
-from gi_loadouts.type.weap.mult import Mult, MultSeco
-from gi_loadouts.type.weap.tier import Tier
+from ..levl import Level
+from ..rare import Rare
+from ..stat import STAT
+from .ascn import Ascn
+from .mult import Mult, MultSeco
+from .tier import Tier
 
 
 class WeaponStatType(Enum):

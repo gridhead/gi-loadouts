@@ -1,7 +1,7 @@
 from PySide6.QtGui import QKeySequence, QShortcut
 
-from gi_loadouts import __versdata__
-from gi_loadouts.face.scan.rule import Rule
+from ... import __versdata__
+from .rule import Rule
 
 
 class ScanDialog(Rule):

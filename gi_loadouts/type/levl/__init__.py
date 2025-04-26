@@ -2,7 +2,7 @@ from enum import Enum
 
 from pydantic import BaseModel
 
-from gi_loadouts.type.rank import Rank
+from ..rank import Rank
 
 
 class LevelType(BaseModel):

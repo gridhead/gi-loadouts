@@ -1,4 +1,4 @@
-from gi_loadouts.data.weap.claymores import (
+from . import (
     akmr,
     atbs,
     bcsh,

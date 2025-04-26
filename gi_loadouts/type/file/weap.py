@@ -2,9 +2,9 @@ from uuid import uuid4
 
 from pydantic import BaseModel
 
-from gi_loadouts.type.file import __ascn_bond__, __weaplist_good__, __weaplist_good_revmap__
-from gi_loadouts.type.levl import Level
-from gi_loadouts.type.weap import WeaponType
+from ..levl import Level
+from ..weap import WeaponType
+from . import __ascn_bond__, __weaplist_good__, __weaplist_good_revmap__
 
 
 class WeapFile(BaseModel):

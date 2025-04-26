@@ -1,4 +1,4 @@
-from gi_loadouts.data.weap import bows, catalysts, claymores, polearms, swords
+from ..weap import bows, catalysts, claymores, polearms, swords
 
 Family = {
     "Bow": bows.BowsDict,

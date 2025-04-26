@@ -2,22 +2,12 @@ from PySide6.QtCore import QUrl
 from PySide6.QtGui import QDesktopServices, QPixmap
 from PySide6.QtWidgets import QComboBox, QDialog, QLabel, QLineEdit, QMainWindow, QMessageBox
 
-from gi_loadouts.data.arti import ArtiList
-from gi_loadouts.data.char import __charmaps__
-from gi_loadouts.data.weap import Family
-from gi_loadouts.face.info.main import InfoDialog
-from gi_loadouts.face.lcns.main import LcnsDialog
-from gi_loadouts.face.otpt.main import OtptWindow
-from gi_loadouts.face.scan.main import ScanDialog
-from gi_loadouts.face.util import modify_graphics_resource, truncate_text
-from gi_loadouts.face.wind import tab_order_wind
-from gi_loadouts.face.wind.calc import Assess
-from gi_loadouts.face.wind.fclt import Facility
-from gi_loadouts.face.wind.util import show_status
-from gi_loadouts.face.wind.wind import Ui_mainwind
-from gi_loadouts.type import arti
-from gi_loadouts.type.arti import ArtiLevl, Collection, __artistat__
-from gi_loadouts.type.arti.base import (
+from ...data.arti import ArtiList
+from ...data.char import __charmaps__
+from ...data.weap import Family
+from ...type import arti
+from ...type.arti import ArtiLevl, Collection, __artistat__
+from ...type.arti.base import (
     MainStatType_CCOL,
     MainStatType_FWOL,
     MainStatType_GBOE,
@@ -25,12 +15,22 @@ from gi_loadouts.type.arti.base import (
     MainStatType_SDOE,
     SecoStatType,
 )
-from gi_loadouts.type.char import CharName
-from gi_loadouts.type.char.cons import Cons
-from gi_loadouts.type.levl import Level
-from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.vson import Vision
-from gi_loadouts.type.weap import WeaponStatType, WeaponType
+from ...type.char import CharName
+from ...type.char.cons import Cons
+from ...type.levl import Level
+from ...type.rare import Rare
+from ...type.vson import Vision
+from ...type.weap import WeaponStatType, WeaponType
+from ..info.main import InfoDialog
+from ..lcns.main import LcnsDialog
+from ..otpt.main import OtptWindow
+from ..scan.main import ScanDialog
+from ..util import modify_graphics_resource, truncate_text
+from . import tab_order_wind
+from .calc import Assess
+from .fclt import Facility
+from .util import show_status
+from .wind import Ui_mainwind
 
 
 class Rule(QMainWindow, Ui_mainwind, Facility, Assess):

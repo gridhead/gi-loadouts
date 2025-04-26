@@ -1,6 +1,8 @@
 from enum import Enum
 
-from gi_loadouts.data.arti import (
+from ...type.arti import ArtifactTeam
+from ...type.rare import Rare
+from . import (
     acpt,
     advn,
     bscv,
@@ -54,8 +56,6 @@ from gi_loadouts.data.arti import (
     vmha,
     wdtp,
 )
-from gi_loadouts.type.arti import ArtifactTeam
-from gi_loadouts.type.rare import Rare
 
 __artilist__ = {
     advn.team.__teamname__: ArtifactTeam(

@@ -1,7 +1,7 @@
 from PySide6.QtCore import QTimer
 from PySide6.QtWidgets import QStatusBar
 
-from gi_loadouts import conf
+from ... import conf
 
 
 def show_status(status_bar: QStatusBar, text: str, orig: str = "Ready.") -> None:

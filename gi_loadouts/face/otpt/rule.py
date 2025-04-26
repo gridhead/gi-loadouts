@@ -1,8 +1,8 @@
 from PySide6.QtGui import QPixmap
 from PySide6.QtWidgets import QMainWindow
 
-from gi_loadouts.face.otpt.otpt import Ui_otptwind
-from gi_loadouts.face.util import modify_graphics_resource
+from ...face.util import modify_graphics_resource
+from .otpt import Ui_otptwind
 
 
 class Rule(QMainWindow, Ui_otptwind):

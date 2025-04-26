@@ -1,6 +1,6 @@
-from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.weap import Claymore, WeaponStat, WeaponStatType
-from gi_loadouts.type.weap.tier import Tier
+from ....type.rare import Rare
+from ....type.weap import Claymore, WeaponStat, WeaponStatType
+from ....type.weap.tier import Tier
 
 # Please consider the completion of the world quest for an increase in attack statistics.
 

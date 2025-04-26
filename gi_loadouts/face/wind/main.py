@@ -1,9 +1,9 @@
 from PySide6.QtWidgets import QMessageBox
 
-from gi_loadouts import __donation__, __homepage__, __issutckt__, __versdata__
-from gi_loadouts.face.rsrc import kill_temp_file, make_temp_file
-from gi_loadouts.face.wind.rule import Rule
-from gi_loadouts.type.char import CharName
+from ... import __donation__, __homepage__, __issutckt__, __versdata__
+from ...type.char import CharName
+from ..rsrc import kill_temp_file, make_temp_file
+from ..wind.rule import Rule
 
 
 class MainWindow(Rule):

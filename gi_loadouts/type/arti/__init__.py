@@ -2,17 +2,17 @@ from enum import Enum
 
 from pydantic import BaseModel
 
-from gi_loadouts.type.arti.ccol import CCOL  # noqa : F401
-from gi_loadouts.type.arti.ccol import __revmap__ as revmap_ccol  # noqa : F401
-from gi_loadouts.type.arti.fwol import FWOL  # noqa : F401
-from gi_loadouts.type.arti.fwol import __revmap__ as revmap_fwol  # noqa : F401
-from gi_loadouts.type.arti.gboe import GBOE  # noqa : F401
-from gi_loadouts.type.arti.gboe import __revmap__ as revmap_gboe  # noqa : F401
-from gi_loadouts.type.arti.pmod import PMOD  # noqa : F401
-from gi_loadouts.type.arti.pmod import __revmap__ as revmap_pmod  # noqa : F401
-from gi_loadouts.type.arti.sdoe import SDOE  # noqa : F401
-from gi_loadouts.type.arti.sdoe import __revmap__ as revmap_sdoe  # noqa : F401
-from gi_loadouts.type.rare import Rare
+from ..rare import Rare
+from .ccol import CCOL  # noqa : F401
+from .ccol import __revmap__ as revmap_ccol  # noqa : F401
+from .fwol import FWOL  # noqa : F401
+from .fwol import __revmap__ as revmap_fwol  # noqa : F401
+from .gboe import GBOE  # noqa : F401
+from .gboe import __revmap__ as revmap_gboe  # noqa : F401
+from .pmod import PMOD  # noqa : F401
+from .pmod import __revmap__ as revmap_pmod  # noqa : F401
+from .sdoe import SDOE  # noqa : F401
+from .sdoe import __revmap__ as revmap_sdoe  # noqa : F401
 
 
 class ArtifactTeam(BaseModel):

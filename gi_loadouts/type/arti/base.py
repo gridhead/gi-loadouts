@@ -3,7 +3,7 @@ from typing import Optional
 
 from pydantic import BaseModel
 
-from gi_loadouts.type.stat import ATTR, STAT
+from ..stat import ATTR, STAT
 
 
 class MainStatType_FWOL(Enum):

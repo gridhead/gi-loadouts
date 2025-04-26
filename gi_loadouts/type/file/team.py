@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
-from gi_loadouts.type.file import __artiarea_good_revmap__
-from gi_loadouts.type.file.arti import (
+from ..file import __artiarea_good_revmap__
+from ..file.arti import (
     ArtiArea,
     ArtiFile,
     make_artifile_from_good,

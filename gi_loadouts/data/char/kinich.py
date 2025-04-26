@@ -1,8 +1,8 @@
-from gi_loadouts.type.char import BaseStat, Char, CharName
-from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.stat import STAT
-from gi_loadouts.type.vson import Vision
-from gi_loadouts.type.weap import WeaponType
+from ...type.char import BaseStat, Char, CharName
+from ...type.rare import Rare
+from ...type.stat import STAT
+from ...type.vson import Vision
+from ...type.weap import WeaponType
 
 
 class Kinich(Char):

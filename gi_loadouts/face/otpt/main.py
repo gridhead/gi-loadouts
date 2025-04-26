@@ -1,8 +1,8 @@
 from PySide6.QtCore import Qt
 
-from gi_loadouts import __versdata__
-from gi_loadouts.face.otpt.rule import Rule
-from gi_loadouts.type.calc.char import CHAR
+from ... import __versdata__
+from ...type.calc import CHAR
+from .rule import Rule
 
 
 class OtptWindow(Rule):

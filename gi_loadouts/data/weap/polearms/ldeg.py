@@ -1,6 +1,6 @@
-from gi_loadouts.type.rare import Rare
-from gi_loadouts.type.weap import Polearm, WeaponStat, WeaponStatType
-from gi_loadouts.type.weap.tier import Tier
+from ....type.rare import Rare
+from ....type.weap import Polearm, WeaponStat, WeaponStatType
+from ....type.weap.tier import Tier
 
 
 class LumidouceElegy(Polearm):
