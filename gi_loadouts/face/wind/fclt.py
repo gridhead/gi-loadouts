@@ -196,8 +196,6 @@ class Facility(Dialog):
                     dropname.setCurrentText(getattr(arti, f"stat_{indx}").stat_name.value)
                     if indx != "main":
                         dropdata.setText(str(getattr(arti, f"stat_{indx}").stat_data))
-                else:
-                    raise ValueError("Artifact stat cannot be identified.")
 
             show_status(self.statarea, "Artifact data has been successfully loaded.")
 
@@ -250,8 +248,6 @@ class Facility(Dialog):
                         dropname.setCurrentText(getattr(arti, f"stat_{indx}").stat_name.value)
                         if indx != "main":
                             dropdata.setText(str(getattr(arti, f"stat_{indx}").stat_data))
-                    else:
-                        raise ValueError("Artifact stat cannot be identified.")
 
             show_status(self.statarea, "Artifact set has been successfully loaded.")
 
