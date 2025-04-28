@@ -309,21 +309,21 @@ def test_team_load_awry(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
     [
         pytest.param(
             yaml_sample.
-            replace("name: Crit Rate\n", "name: HP\n").
-            replace("name: DEF\n", "name: ATK\n").
-            replace("name: ATK\n", "name: Elemental Mastery\n").
-            replace("name: Elemental Mastery\n", "name: Physical DMG Bonus\n").
-            replace("name: ATK\n", "name: Healing Bonus\n"),
+            replace("name: Crit Rate\n", "name: Foo Bar\n").
+            replace("name: DEF\n", "name: Foo Bar\n").
+            replace("name: ATK\n", "name: Foo Bar\n").
+            replace("name: Elemental Mastery\n", "name: Foo Bar\n").
+            replace("name: ATK\n", "name: Foo Bar\n"),
             yaml_type,
             id="face.wind.rule: Loading an artifact with incorrect substats from YAML data"
         ),
         pytest.param(
             json_sample.
-            replace("\"key\": \"critRate_\",\n", "\"key\": \"hp\",\n").
-            replace("\"key\": \"def\",\n", "\"key\": \"atk\",\n").
-            replace("\"key\": \"atk\",\n", "\"key\": \"eleMas\",\n").
-            replace("\"key\": \"eleMas\",\n", "\"key\": \"physical_dmg_\",\n").
-            replace("\"key\": \"atk\",\n", "\"key\": \"heal_\",\n"),
+            replace("\"key\": \"critRate_\",\n", "\"key\": \"foobar\",\n").
+            replace("\"key\": \"def\",\n", "\"key\": \"foobar\",\n").
+            replace("\"key\": \"atk\",\n", "\"key\": \"foobar\",\n").
+            replace("\"key\": \"eleMas\",\n", "\"key\": \"foobar\",\n").
+            replace("\"key\": \"atk\",\n", "\"key\": \"foobar\",\n"),
             json_type,
             id="face.wind.rule: Loading an artifact with incorrect substats from JSON data"
         ),
@@ -349,7 +349,7 @@ def test_team_load_name(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
     assert runner.dialog.icon() == QMessageBox.Information
     assert runner.dialog.windowTitle() == "Load failed"
     assert "Please confirm that the artifact set follows the valid format before loading it from a location that is accessible." in runner.dialog.text()
-    assert "Artifact stat cannot be identified." in runner.dialog.text()
+    assert "Artifact set data cannot be parsed." in runner.dialog.text()
     assert runner.dialog.isVisible()
 
 
