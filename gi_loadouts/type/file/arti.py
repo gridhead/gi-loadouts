@@ -129,7 +129,11 @@ def make_artifile_from_yaml(objc: dict) -> ArtiFile:
             stat_d=ATTR(stat_name=__revmap__[objc["stat"]["d"]["name"]], stat_data=objc["stat"]["d"]["data"]),
         )
     except Exception as expt:
-        raise ValueError("Artifact unit data cannot be parsed.") from expt
+        raise ValueError("Artifact stat cannot be identified or unit data cannot be parsed.") from expt
+
+    for indx in ["a", "b", "c", "d"]:
+        if artiobjc.stat_main.stat_name == getattr(artiobjc, f"stat_{indx}").stat_name:
+            raise ValueError("Artifact substat matches main stat.")
     return artiobjc
 
 
@@ -160,5 +164,9 @@ def make_artifile_from_good(objc: dict) -> ArtiFile:
             setattr(artiobjc, f"stat_{alfalist[0]}", ATTR(stat_name=__stat_good_revmap__[item["key"]], stat_data=item["value"]))
             alfalist.pop(0)
     except Exception as expt:
-        raise ValueError("Artifact unit data cannot be parsed.") from expt
+        raise ValueError("Artifact stat cannot be identified or unit data cannot be parsed.") from expt
+
+    for indx in ["a", "b", "c", "d"]:
+        if artiobjc.stat_main.stat_name == getattr(artiobjc, f"stat_{indx}").stat_name:
+            raise ValueError("Artifact substat matches main stat.")
     return artiobjc
