@@ -329,6 +329,45 @@ def test_arti_load_awry(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
 @pytest.mark.parametrize(
     "area, sample, type",
     [
+        pytest.param("fwol", yaml_pmod_sample.replace("name: HP\n", "name: Energy Recharge\n").replace("name: ATK\n", "name: HP\n"), yaml_type, id="face.wind.rule: Loading an artifact with mismatched area into 'Flower of Life' area from YAML data"),
+        pytest.param("pmod", yaml_sdoe_sample.replace("name: ATK\n", "name: HP\n").replace("name: Elemental Mastery\n", "name: ATK\n"), yaml_type, id="face.wind.rule: Loading an artifact with mismatched area into 'Plume of Death' area from YAML data"),
+        pytest.param("sdoe", yaml_gboe_sample.replace("name: Physical DMG Bonus\n", "name: ATK %\n"), yaml_type, id="face.wind.rule: Loading an artifact with mismatched area into 'Sands of Eon' area from YAML data"),
+        pytest.param("gboe", yaml_ccol_sample.replace("name: Healing Bonus\n", "name: HP %\n"), yaml_type, id="face.wind.rule: Loading an artifact with mismatched area into 'Goblet of Eonothem' area from YAML data"),
+        pytest.param("ccol", yaml_fwol_sample.replace("name: HP\n", "name: HP %\n"), yaml_type, id="face.wind.rule: Loading an artifact with mismatched area into 'Circlet of Logos' area from YAML data"),
+        pytest.param("fwol", json_pmod_sample.replace("\"key\": \"hp\",\n", "\"key\": \"enerRech_\",\n").replace("\"mainStatKey\": \"atk\",\n", "\"mainStatKey\": \"hp\",\n"), json_type, id="face.wind.rule: Loading an artifact with mismatched area into 'Flower of Life' area from JSON data"),
+        pytest.param("pmod", json_sdoe_sample.replace("\"key\": \"atk\",\n", "\"key\": \"hp\",\n").replace("\"mainStatKey\": \"eleMas\",\n", "\"mainStatKey\": \"atk\",\n"), json_type, id="face.wind.rule: Loading an artifact with mismatched area into 'Plume of Death' area from JSON data"),
+        pytest.param("sdoe", json_gboe_sample.replace("\"mainStatKey\": \"physical_dmg_\",\n", "\"mainStatKey\": \"atk_\",\n"), json_type, id="face.wind.rule: Loading an artifact with mismatched area into 'Sands of Eon' area from JSON data"),
+        pytest.param("gboe", json_ccol_sample.replace("\"mainStatKey\": \"heal_\",\n", "\"mainStatKey\": \"hp_\",\n"), json_type, id="face.wind.rule: Loading an artifact with incorrect mismatched into 'Goblet of Eonothem' area from JSON data"),
+        pytest.param("ccol", json_fwol_sample.replace("\"mainStatKey\": \"hp\",\n", "\"mainStatKey\": \"hp_\",\n"), json_type, id="face.wind.rule: Loading an artifact with mismatched area into 'Circlet of Logos' area from JSON data"),
+    ]
+)
+def test_arti_load_area_diff(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str, sample: str, type: str) -> None:
+    """
+    Test loading an artifact with mismatched area from the file
+
+    :return:
+    """
+
+    """
+    Perform the action of saving the artifact information
+    """
+    mocker.patch.object(file.FileHandling, "load", return_value=(True, sample, type))
+    qtbot.mouseClick(getattr(runner, f"arti_{area}_load"), Qt.LeftButton)
+
+    """
+    Confirm if the user interface elements change accordingly
+    """
+    assert isinstance(runner.dialog, QMessageBox)
+    assert runner.dialog.icon() == QMessageBox.Information
+    assert runner.dialog.windowTitle() == "Load failed"
+    assert "Please confirm that the artifact data follows the valid format before loading it from a location that is accessible." in runner.dialog.text()
+    assert "The artifact file does not match the expected equipment slot." in runner.dialog.text()
+    assert runner.dialog.isVisible()
+
+
+@pytest.mark.parametrize(
+    "area, sample, type",
+    [
         pytest.param("fwol", yaml_fwol_sample.replace("name: Crit Rate\n", "name: Foo Bar\n"), yaml_type, id="face.wind.rule: Loading an artifact with incorrect substats into 'Flower of Life' area from YAML data"),
         pytest.param("pmod", yaml_pmod_sample.replace("name: DEF\n", "name: Foo Bar\n"), yaml_type, id="face.wind.rule: Loading an artifact with incorrect substats into 'Plume of Death' area from YAML data"),
         pytest.param("sdoe", yaml_sdoe_sample.replace("name: ATK\n", "name: Foo Bar\n"), yaml_type, id="face.wind.rule: Loading an artifact with incorrect substats into 'Sands of Eon' area from YAML data"),
