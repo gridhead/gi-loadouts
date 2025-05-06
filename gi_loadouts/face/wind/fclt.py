@@ -181,6 +181,9 @@ class Facility(Dialog):
                 objc = json.loads(data)
                 arti = make_artifile_from_good(objc)
 
+            if arti.area.lower() != part.lower():
+                raise ValueError("The artifact file does not match the expected equipment slot.")
+
             droptype = getattr(self, f"arti_{part}_type")
             droptype.setCurrentText(arti.type.value.name)
             droprare = getattr(self, f"arti_{part}_rare")
