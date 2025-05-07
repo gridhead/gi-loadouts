@@ -35,6 +35,7 @@ from .ganyu import Ganyu
 from .gorou import Gorou
 from .hu_tao import HuTao
 from .iansan import Iansan
+from .ifa import Ifa
 from .jean import Jean
 from .kachina import Kachina
 from .kaedehara_kazuha import KaedeharaKazuha
@@ -136,6 +137,7 @@ __charmaps__ = {
     "Gorou": Gorou,
     "Hu Tao": HuTao,
     "Iansan": Iansan,
+    "Ifa": Ifa,
     "Jean": Jean,
     "Kachina": Kachina,
     "Kaedehara Kazuha": KaedeharaKazuha,
