@@ -28,6 +28,7 @@ from test import verify_accuracy
         pytest.param("Engulfing Lightning", 5, 2, "Level 80/90 (Rank 6)", 563, WeaponStatType.energy_recharge_perc, 50.3, id="data.weap.polearms: Engulfing Lightning"),
         pytest.param("Lumidouce Elegy", 5, 2, "Level 80/90 (Rank 6)", 563, WeaponStatType.critical_rate_perc, 30.2, id="data.weap.polearms: Lumidouce Elegy"),
         pytest.param("Staff of Homa", 5, 2, "Level 80/90 (Rank 6)", 563, WeaponStatType.critical_damage_perc, 60.3, id="data.weap.polearms: Staff of Homa"),
+        pytest.param("Symphonist of Scents", 5, 2, "Level 80/90 (Rank 6)", 563, WeaponStatType.critical_damage_perc, 60.3, id="data.weap.polearms: Symphonist of Scents"),
         pytest.param("Vortex Vanquisher", 5, 2, "Level 80/90 (Rank 6)", 563, WeaponStatType.attack_perc, 45.3, id="data.weap.polearms: Vortex Vanquisher"),
         pytest.param("Halberd", 3, 3, "Level 80/90 (Rank 6)", 415, WeaponStatType.attack_perc, 21.4, id="data.weap.polearms: Halberd"),
         pytest.param("Crescent Pike", 4, 3, "Level 80/90 (Rank 6)", 523, WeaponStatType.damage_bonus_physical_perc, 31.5, id="data.weap.polearms: Crescent Pike"),
