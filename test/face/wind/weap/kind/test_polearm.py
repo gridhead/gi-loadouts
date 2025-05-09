@@ -28,6 +28,7 @@ from test import verify_accuracy
         pytest.param("Engulfing Lightning", 5, "Level 80/90 (Rank 6)", 563, WeaponStatType.energy_recharge_perc, 50.3, 5, id="face.wind.rule: Configuring weapon - Polearm - Engulfing Lightning"),
         pytest.param("Lumidouce Elegy", 5, "Level 80/90 (Rank 6)", 563, WeaponStatType.critical_rate_perc, 30.2, 5, id="face.wind.rule: Configuring weapon - Polearm - Lumidouce Elegy"),
         pytest.param("Staff of Homa", 5, "Level 80/90 (Rank 6)", 563, WeaponStatType.critical_damage_perc, 60.3, 5, id="face.wind.rule: Configuring weapon - Polearm - Staff of Homa"),
+        pytest.param("Symphonist of Scents", 5, "Level 80/90 (Rank 6)", 563, WeaponStatType.critical_damage_perc, 60.3, 5, id="face.wind.rule: Configuring weapon - Polearm - Symphonist of Scents"),
         pytest.param("Vortex Vanquisher", 5, "Level 80/90 (Rank 6)", 563, WeaponStatType.attack_perc, 45.3, 5, id="face.wind.rule: Configuring weapon - Polearm - Vortex Vanquisher"),
         pytest.param("Halberd", 3, "Level 80/90 (Rank 6)", 415, WeaponStatType.attack_perc, 21.4, 5, id="face.wind.rule: Configuring weapon - Polearm - Halberd"),
         pytest.param("Crescent Pike", 4, "Level 80/90 (Rank 6)", 523, WeaponStatType.damage_bonus_physical_perc, 31.5, 5, id="face.wind.rule: Configuring weapon - Polearm - Crescent Pike"),
