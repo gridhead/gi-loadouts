@@ -651,3 +651,52 @@ def test_arti_load_json_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerF
     Cleanup the temporary files
     """
     remove(temp.name)
+
+
+@pytest.mark.parametrize(
+    "area",
+    [
+        pytest.param("fwol", id="face.wind.rule: Cancelling the save process for an artifact from 'Flower of Life' area"),
+        pytest.param("pmod", id="face.wind.rule: Cancelling the save process for an artifact from 'Plume of Death' area"),
+        pytest.param("sdoe", id="face.wind.rule: Cancelling the save process for an artifact from 'Sands of Eon' area"),
+        pytest.param("gboe", id="face.wind.rule: Cancelling the save process for an artifact from 'Goblet of Eonothem' area"),
+        pytest.param("ccol", id="face.wind.rule: Cancelling the save process for an artifact from 'Circlet of Logos' area"),
+    ]
+)
+def test_arti_save_nope(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str) -> None:
+    """
+    Test cancelling the save process for an artifact in different areas
+
+    :return:
+    """
+
+    conf = dict()
+
+    """
+    Set the user interface elements as intended
+    """
+    name = choice([item for item in __artilist__.keys() if item != "None"])
+    getattr(runner, f"arti_{area}_type").setCurrentText(name)
+    conf["rare"] = choice([item for item in __artilist__[name].rare])
+    getattr(runner, f"arti_{area}_rare").setCurrentText(conf["rare"].value.name)
+    conf["levl"] = choice([item for item in ArtiLevl if conf["rare"] in item.value.rare])
+    getattr(runner, f"arti_{area}_levl").setCurrentText(conf["levl"].value.name)
+    conf["stat"] = choice([item for item in getattr(base, f"MainStatType_{area.upper()}") if item.value != STAT.none])
+    getattr(runner, f"arti_{area}_name_main").setCurrentText(conf["stat"].value.value)
+    for indx in ["a", "b", "c", "d"]:
+        getattr(runner, f"arti_{area}_data_{indx}").setText(str(round(uniform(0, 100), 2)))
+
+    """
+    Mock file.save to simulate cancellation
+    """
+    mocker.patch.object(file.FileHandling, "save", return_value=False)
+
+    """
+    Perform the action of saving the artifact information
+    """
+    qtbot.mouseClick(getattr(runner, f"arti_{area}_save"), Qt.LeftButton)
+
+    """
+    Confirm that the status message is updated correctly
+    """
+    assert runner.statarea.currentMessage() == "Ready."

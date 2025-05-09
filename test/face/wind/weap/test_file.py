@@ -577,6 +577,41 @@ def test_weap_save_json_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerF
 
 
 @pytest.mark.parametrize(
+    "char",
+    [
+        pytest.param("Venti", id="face.wind.rule: Cancelling saving a weapon of bow type"),
+        pytest.param("Nahida", id="face.wind.rule: Cancelling saving a weapon of catalyst type"),
+        pytest.param("Navia", id="face.wind.rule: Cancelling saving a weapon of claymore type"),
+        pytest.param("Raiden Shogun", id="face.wind.rule: Cancelling saving a weapon of polearm type"),
+        pytest.param("Furina", id="face.wind.rule: Cancelling saving a weapon of sword type"),
+    ]
+)
+def test_weap_save_nope(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, char: str) -> None:
+    """
+    Test cancelling the save process for a weapon of a certain type
+
+    :return:
+    """
+
+    """
+    Set the user interface elements as intended
+    """
+
+    runner.head_char_name.setCurrentText(char)
+
+    """
+    Perform the action of cancellation of saving the weapon information
+    """
+    mocker.patch.object(file.FileHandling, "save", return_value=False)
+    qtbot.mouseClick(runner.weap_head_save, Qt.LeftButton)
+
+    """
+    Confirm if the user interface elements change accordingly
+    """
+    assert runner.statarea.currentMessage() == "Ready."
+
+
+@pytest.mark.parametrize(
     "char, sample",
     [
         pytest.param("Venti", yaml_bow_sample, id="face.wind.rule: Loading a weapon of bow type actually from YAML file"),
