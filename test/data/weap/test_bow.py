@@ -30,6 +30,7 @@ from test import verify_accuracy
         pytest.param("Prototype Crescent", 4, 2, "Level 80/90 (Rank 6)", 475, WeaponStatType.attack_perc, 37.7, id="data.weap.bows: Prototype Crescent"),
         pytest.param("Royal Bow", 4, 2, "Level 80/90 (Rank 6)", 475, WeaponStatType.attack_perc, 37.7, id="data.weap.bows: Royal Bow"),
         pytest.param("Rust", 4, 2, "Level 80/90 (Rank 6)", 475, WeaponStatType.attack_perc, 37.7, id="data.weap.bows: Rust"),
+        pytest.param("Sequence of Solitude", 4, 2, "Level 80/90 (Rank 6)", 475, WeaponStatType.health_points_perc, 37.7, id="data.weap.bows: Sequence of Solitude"),
         pytest.param("Song of Stillness", 4, 2, "Level 80/90 (Rank 6)", 475, WeaponStatType.attack_perc, 37.7, id="data.weap.bows: Song of Stillness"),
         pytest.param("The Stringless", 4, 2, "Level 80/90 (Rank 6)", 475, WeaponStatType.elemental_mastery, 151, id="data.weap.bows: The Stringless"),
         pytest.param("The Viridescent Hunt", 4, 2, "Level 80/90 (Rank 6)", 475, WeaponStatType.critical_rate_perc, 25.1, id="data.weap.bows: The Viridescent Hunt"),
