@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "gi-loadouts"
-version = "0.1.7"
+version = "0.1.8"
 description = "Loadouts for Genshin Impact"
 authors = ["Akashdeep Dhar <akashdeep.dhar@gmail.com>", "Avadhoot Dhere <avadhootd99@gmail.com>", "Dhruv Bhirud <bhiruddhruv@gmail.com>", "Prithviraj Chavan <prithvichavan56110@gmail.com>", "Shounak Dey <shounakdey@ymail.com>"]
 license = "GPL-3.0-or-later"
