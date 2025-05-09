@@ -272,6 +272,13 @@ from test import verify_accuracy
             }, id="data.char: Iansan",
         ),
         pytest.param(
+            "Ifa", "catalyst", 4, "anemo", STAT.elemental_mastery,
+            {
+                "Level 40/50 (Rank 2)": (4646.95, 82.24, 279.06, 24.0),
+                "Level 80/90 (Rank 6)": (9382.89, 166.06, 563.47, 96.0),
+            }, id="data.char: Ifa",
+        ),
+        pytest.param(
             "Jean", "sword", 5, "anemo", STAT.healing_bonus_perc,
             {
                 "Level 40/50 (Rank 2)": (6604.93, 107.50, 345.44, 5.5),
