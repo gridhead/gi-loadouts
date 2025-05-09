@@ -195,6 +195,13 @@ from test import verify_accuracy
             }, id="data.char: Emilie",
         ),
         pytest.param(
+            "Escoffier", "polearm", 5, "cryo", STAT.critical_rate_perc,
+            {
+                "Level 40/50 (Rank 2)": (5999.48, 155.88, 328.86, 4.8),
+                "Level 80/90 (Rank 6)": (12409.72, 322.43, 680.23, 19.2),
+            }, id="data.char: Escoffier",
+        ),
+        pytest.param(
             "Eula", "claymore", 5, "cryo", STAT.critical_damage_perc,
             {
                 "Level 40/50 (Rank 2)": (5944.44, 153.73, 337.49, 9.6),
