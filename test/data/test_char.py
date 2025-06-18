@@ -559,6 +559,13 @@ from test import verify_accuracy
             }, id="data.char: Sigewinne",
         ),
         pytest.param(
+            "Skirk", "sword", 5, "cryo", STAT.critical_damage_perc,
+            {
+                "Level 40/50 (Rank 2)": (5581.17, 161.25, 362.36, 9.6),
+                "Level 80/90 (Rank 6)": (11544.45, 333.55, 749.54, 38.4),
+            }, id="data.char: Skirk",
+        ),
+        pytest.param(
             "Sucrose", "catalyst", 4, "anemo", STAT.damage_bonus_anemo_perc,
             {
                 "Level 40/50 (Rank 2)": (4260.96, 78.33, 324.05, 6.0),
