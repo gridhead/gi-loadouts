@@ -167,6 +167,13 @@ from test import verify_accuracy
             }, id="data.char: Dehya",
         ),
         pytest.param(
+            "Dahlia", "catalyst", 4, "hydro", STAT.health_points_perc,
+            {
+                "Level 40/50 (Rank 2)": (5764.82, 87.14, 257.98, 6.0),
+                "Level 80/90 (Rank 6)": (11640.04, 175.94, 520.91, 24.0),
+            }, id="data.char: Dahlia",
+        ),
+        pytest.param(
             "Diluc", "claymore", 5, "pyro", STAT.critical_rate_perc,
             {
                 "Level 40/50 (Rank 2)": (5834.36, 150.50, 352.35, 4.8),
