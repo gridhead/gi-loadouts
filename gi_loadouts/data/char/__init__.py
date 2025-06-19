@@ -77,6 +77,7 @@ from .sethos import Sethos
 from .shenhe import Shenhe
 from .shikanoin_heizou import ShikanoinHeizou
 from .sigewinne import Sigewinne
+from .skirk import Skirk
 from .sucrose import Sucrose
 from .tartaglia import Tartaglia
 from .thoma import Thoma
@@ -180,6 +181,7 @@ __charmaps__ = {
     "Shenhe": Shenhe,
     "Shikanoin Heizou": ShikanoinHeizou,
     "Sigewinne": Sigewinne,
+    "Skirk": Skirk,
     "Sucrose": Sucrose,
     "Tartaglia": Tartaglia,
     "Thoma": Thoma,

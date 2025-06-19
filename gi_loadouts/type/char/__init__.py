@@ -94,6 +94,7 @@ class CharName(str, Enum):
     shenhe = "Shenhe"
     shikanoin_heizou = "Shikanoin Heizou"
     sigewinne = "Sigewinne"
+    skirk = "Skirk"
     sucrose = "Sucrose"
     tartaglia = "Tartaglia"
     thoma = "Thoma"
