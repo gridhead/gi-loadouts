@@ -19,6 +19,7 @@ from .citlali import Citlali
 from .clorinde import Clorinde
 from .collei import Collei
 from .cyno import Cyno
+from .dahlia import Dahlia
 from .dehya import Dehya
 from .diluc import Diluc
 from .diona import Diona
@@ -121,6 +122,7 @@ __charmaps__ = {
     "Clorinde": Clorinde,
     "Collei": Collei,
     "Cyno": Cyno,
+    "Dahlia": Dahlia,
     "Dehya": Dehya,
     "Diluc": Diluc,
     "Diona": Diona,
