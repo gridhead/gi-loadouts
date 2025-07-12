@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2024-2025 Akashdeep Dhar <t0xic0der@fedoraproject.org> -->
+<component type="desktop">
+  <id>net.gridhead.gi-loadouts</id>
+  <metadata_license>CC-BY-SA-3.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <name>Loadouts for Genshin Impact</name>
+  <summary>Loadouts for Genshin Impact</summary>
+  <description>
+    <p>
+      This is a desktop application that allows travelers to manage their custom equipment of 
+      artifacts and weapons for playable characters and makes it convenient for travelers to 
+      calculate the associated statistics based on their equipment using the semantic understanding 
+      of how the gameplay works. Travelers can create their bespoke loadouts consisting of 
+      characters, artifacts and weapons and share them with their fellow travelers. Supported file
+      formats include a human-readable <b>Yet Another Markup Language (YAML)</b> serialization 
+      format and a JSON-based <b>Genshin Open Object Definition (GOOD)</b> serialization format.
+    </p>
+    <p>
+      This project is currently in its beta phase and we are committed to delivering a quality 
+      experience with every release we make. If you are excited about the direction of this project 
+      and want to contribute to the efforts, we would greatly appreciate it if you help us boost the 
+      project visibility by <b>starring the project repository</b>, address the releases by 
+      <b>reporting the experienced errors</b>, choose the direction by <b>proposing the intended 
+      features</b>, enhance the usability by <b>documenting the project repository</b>, improve the 
+      codebase by <b>opening the pull requests</b> and finally, persist our efforts by <b>sponsoring 
+      the development members</b>.
+    </p>
+  </description>
+  <launchable type="desktop-id">net.gridhead.gi-loadouts.desktop</launchable>
+  <screenshots>
+    <screenshot type="default">
+      <image width="1597" height="984">https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/gnul_lite.png</image>
+    </screenshot>
+    <screenshot>
+      <image width="1262" height="629">https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/gnul_lite_rslt.png</image>
+    </screenshot>
+    <screenshot>
+      <image width="1597" height="984">https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/gnul_dark.png</image>
+    </screenshot>
+    <screenshot>
+      <image width="1262" height="629">https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/gnul_dark_rslt.png</image>
+    </screenshot>
+    <screenshot>
+      <image width="1597" height="987">https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/mswn_lite.png</image>
+    </screenshot>
+    <screenshot>
+      <image width="1262" height="632">https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/mswn_lite_rslt.png</image>
+    </screenshot>
+    <screenshot>
+      <image width="1597" height="987">https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/mswn_dark.png</image>
+    </screenshot>
+    <screenshot>
+      <image width="1262" height="632">https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/mswn_dark_rslt.png</image>
+    </screenshot>
+  </screenshots>
+  <update_contact>t0xic0der@fedoraproject.org</update_contact>
+  <developer_name>Akashdeep Dhar</developer_name>
+  <url type="homepage">https://github.com/gridhead/gi-loadouts</url>
+  <url type="bugtracker">https://github.com/gridhead/gi-loadouts/issues</url>
+  <url type="help">https://pypi.org/project/gi-loadouts</url>
+  <url type="donation">https://github.com/sponsors/gridhead</url>
+  <categories>
+    <category>Database</category>
+    <category>Game</category>
+    <category>Utility</category>
+  </categories>
+  <keywords>
+    <keyword>yuanshen</keyword>
+    <keyword>mihoyo</keyword>
+    <keyword>genshin</keyword>
+    <keyword>impact</keyword>
+  </keywords>
+  <content_rating type="oars-1.0"/>
+  <releases>
+    <release version="0.1.9" date="2025-07-02">
+      <description>
+        <p>v0.1.9 - Released on July 02nd, 2025</p>
+        <p>Announcement - https://gridhead.net/loadouts-for-genshin-impact-v0-1-9-released/</p>
+        <p>GitHub release - https://github.com/gridhead/gi-loadouts/releases/tag/0.1.9</p>
+        <p>PyPI release - https://pypi.org/project/gi-loadouts/</p>
+      </description>
+    </release>
+  </releases>
+</component>
