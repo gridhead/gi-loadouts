@@ -66,6 +66,14 @@
     the development members</b>.
 </p>
 
+## Activity
+
+<p align="center">
+    <a href="https://github.com/gridhead/gi-loadouts/graphs/contributors">
+        <img src="https://repobeats.axiom.co/api/embed/2da0aac42c72bd80cb7f53c05b7502add79958dc.svg" alt="Activity">
+    </a>
+</p>
+
 ## Screenshots
 
 ### On GNU/Linux distributions
