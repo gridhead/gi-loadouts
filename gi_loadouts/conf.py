@@ -1,7 +1,7 @@
 from platform import system
 
 
-def get_tessexec_path():
+def get_tessexec_path() -> str:
     if system() == "Windows":
         return "C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
     else:
