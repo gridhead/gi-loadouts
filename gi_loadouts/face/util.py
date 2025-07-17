@@ -38,11 +38,8 @@ def modify_graphics_resource(path: str, radius: float = 2.5, shadow: float = 0.5
 
 
 def modify_datatype_to_transfer(text: str = "") -> float:
-    if text.strip() == "":
+    try:
+        rtrn = float(text)
+    except ValueError:
         rtrn = 0.0
-    else:
-        try:
-            rtrn = float(text)
-        except ValueError:
-            rtrn = 0.0
     return rtrn

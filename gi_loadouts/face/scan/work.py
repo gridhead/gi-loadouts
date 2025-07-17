@@ -39,7 +39,6 @@ class ScanWorker(QObject):
         strttime = time()
 
         area, main, seco, team, levl, rare = "", ATTR(), {"a": ATTR(), "b": ATTR(), "c": ATTR(), "d": ATTR()}, "", "Level 00", "Star 0"
-        pytesseract.tesseract_cmd = conf.tessexec
 
         w, h = self.snap.size
         l, t, r, b = w // 2, 0, w, h  # noqa: E741
@@ -47,8 +46,9 @@ class ScanWorker(QObject):
         location = PurePath(realpath(gettempdir())).as_posix()
 
         try:
+            pytesseract.tesseract_cmd = conf.tessexec
             text = image_to_string(self.snap, lang=conf.tempname, config=f"--tessdata-dir {location}")
-        except (OSError, TesseractError) as expt:
+        except (OSError, TesseractError, TypeError) as expt:
             if isinstance(expt, OSError):
                 expt = "Selected executable of Tesseract OCR is unfunctional."
             else:
