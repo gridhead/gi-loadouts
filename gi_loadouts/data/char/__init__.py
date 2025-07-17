@@ -1,3 +1,5 @@
+from enum import Enum
+
 from .aether import Aether
 from .albedo import Albedo
 from .alhaitham import Alhaitham
@@ -205,3 +207,10 @@ __charmaps__ = {
     "Yun Jin": YunJin,
     "Zhongli": Zhongli,
 }
+
+CharList = Enum(
+    "CharacterList",
+    {
+        item.replace(" ", "_").replace("'", "").replace("-", "_"): data for item, data in __charmaps__.items()
+    }
+)

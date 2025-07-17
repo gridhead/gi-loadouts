@@ -47,19 +47,17 @@ class Rule(QDialog, Ui_scan, Dialog):
 
     def __del__(self):
         """
-        TODO: Fix `QThread: Destroyed while thread is still running`
+        Properly cleanup the QThread when the object is destroyed
 
-        This is not as much of a problem on faster CPUs but on slower ones, if an image is selected
-        for scanning and immediately after that the scanning dialog is dismissed and the application
-        is quit while the image is being processed in the optical character recognition section, the
-        application will not be happy if it is has to destroy the thread while it is still running.
-
-        This is not likely to cause major problems but still, this is not the right approach and
-        should be rectified at the earliest, no matter how small of a use-case this might be.
+        This ensures that the thread is gracefully stopped and cleaned up rather than being
+        forcefully terminated, which can cause issues especially on slower systems where
+        the thread might still be processing when the object is destroyed.
         """
         try:
             if isinstance(self.thread, QThread):
-                self.thread.terminate()
+                if self.thread.isRunning():
+                    self.thread.quit()
+                    self.thread.wait()
         except RuntimeError:
             return
 

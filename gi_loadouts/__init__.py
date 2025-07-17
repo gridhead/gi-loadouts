@@ -1,7 +1,12 @@
-from importlib.metadata import metadata
+from importlib.metadata import PackageNotFoundError, metadata
 
-__metadict__ = metadata("gi-loadouts").json
-__versdata__ = __metadict__.get("version")
+try:
+    __metadict__ = metadata("gi-loadouts").json
+    __versdata__ = __metadict__.get("version")
+except PackageNotFoundError:
+    # Fallback when package is not installed (development mode)
+    __metadict__ = {}
+    __versdata__ = "0.1.9"  # Use version from pyproject.toml
 
 __gicompat_vers__ = "5.7"
 __gicompat_part__ = "1"
