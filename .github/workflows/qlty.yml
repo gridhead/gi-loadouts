@@ -1,7 +1,14 @@
 ---
 name: Checking code quality
 
-on: [push, pull_request]
+on: 
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: read
 
 jobs:
 
@@ -16,8 +23,13 @@ jobs:
 
     steps:
 
+      - name: Harden Runner
+        uses: step-security/harden-runner@91182cccc01eb5e619899d80e4e971d6181294a7 # v2.10.1
+        with:
+          egress-policy: audit
+
       - name: Checkout the codebase current state
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
       - name: Install the base dependencies
         run: |
