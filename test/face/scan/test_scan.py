@@ -312,13 +312,13 @@ def test_scan_arti_load_nope(scantest: ScanDialog, qtbot: QtBot, mocker: MockerF
 
 
 @pytest.mark.parametrize(
-    "platform, tempexec",
+    "tempexec",
     [
-        pytest.param("Linux", "/usr/bin/tesseract", id="face.scan.rule: Actual loading of Tesseract OCR executable in Linux"),
-        pytest.param("Windows", "C:\\Program Files\\Tesseract-OCR\\tesseract.exe", id="face.scan.rule: Actual loading of Tesseract OCR executable in Windows")
+        pytest.param("/usr/bin/tesseract", id="face.scan.rule: Actual loading of Tesseract OCR executable in Linux"),
+        pytest.param("C:\\Program Files\\Tesseract-OCR\\tesseract.exe", id="face.scan.rule: Actual loading of Tesseract OCR executable in Windows")
     ]
 )
-def test_scan_tessexec_load(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, platform: str, tempexec: str) -> None:
+def test_scan_tessexec_load(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, tempexec: str) -> None:
     """
     Test actual loading of Tesseract OCR executable
 
@@ -333,7 +333,7 @@ def test_scan_tessexec_load(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFi
     """
     Mock the system environment and reload the tessexec variable to apply the mocked path
     """
-    mocker.patch("gi_loadouts.conf.system", return_value=platform)
+    mocker.patch("gi_loadouts.conf.which", return_value=tempexec)
     conf.tessexec = conf.get_tessexec_path()
 
     """
@@ -385,22 +385,26 @@ def test_scan_tessexec_load_fail(scantest: ScanDialog, qtbot: QtBot, mocker: Moc
 @pytest.mark.parametrize(
     "expt",
     [
-        pytest.param(OSError, id="face.scan.rule: Failing of register function with OSError"),
-        pytest.param(TesseractError("abc", "xyz"), id="face.scan.rule: Failing of register function with TesseractError")
+        pytest.param(OSError(), id="face.scan.rule: Failing of register function with OSError"),
+        pytest.param(TesseractError("abc", "xyz"), id="face.scan.rule: Failing of register function with TesseractError"),
+        pytest.param(TypeError(), id="face.scan.rule: Failing of register function with TypeError"),
     ]
 )
 def test_scan_register_fail(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, expt: Exception) -> None:
     """
-    Test failing the register function with `OSError` and `TesseractError`
+    Test failing the register function with `OSError`, `TesseractError` and `TypeError`
 
     :return:
     """
 
-    """
-    Create the tesseract training data
-    """
-    mocker.patch("gi_loadouts.conf.data_prefix", f"{uuid4().hex.upper()[0:8]}-")
-    make_temp_file()
+    if isinstance(expt, TypeError):
+        mocker.patch("gi_loadouts.conf.tessexec", None)
+    else:
+        """
+        Create the tesseract training data
+        """
+        mocker.patch("gi_loadouts.conf.data_prefix", f"{uuid4().hex.upper()[0:8]}-")
+        make_temp_file()
 
     """
     Perform the action of loading the artifact information
@@ -426,7 +430,7 @@ def test_scan_register_fail(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFi
         assert scantest.dialog.windowTitle() == "Faulty scanning"
         if isinstance(expt, OSError):
             assert "Selected executable of Tesseract OCR is unfunctional." in scantest.dialog.text()
-        elif isinstance(expt, TesseractError):
+        elif isinstance(expt, TesseractError) or isinstance(expt, TypeError):
             assert "Processing failed as either Tesseract OCR executable ceased to function or training data was tampered with." in scantest.dialog.text()
         assert scantest.dialog.isVisible()
 

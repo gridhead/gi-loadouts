@@ -1,11 +1,8 @@
-from platform import system
+from shutil import which
 
 
-def get_tessexec_path():
-    if system() == "Windows":
-        return "C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
-    else:
-        return "/usr/bin/tesseract"
+def get_tessexec_path() -> str | None:
+    return which("tesseract")
 
 tessexec = get_tessexec_path()
 
