@@ -10,10 +10,10 @@ class SharpshootersOath(Bow):
     rare: Rare = Rare.Star_3
     refi_name: str = "Precise"
     refi_list: list[str] = [
-            "Increases DMG against weak spots by 24%.",
-            "Increases DMG against weak spots by 30%.",
-            "Increases DMG against weak spots by 36%.",
-            "Increases DMG against weak spots by 42%.",
-            "Increases DMG against weak spots by 48%.",
-        ]
+        "Increases DMG against weak spots by 24%.",
+        "Increases DMG against weak spots by 30%.",
+        "Increases DMG against weak spots by 36%.",
+        "Increases DMG against weak spots by 42%.",
+        "Increases DMG against weak spots by 48%.",
+    ]
     file: str = "ssoh"

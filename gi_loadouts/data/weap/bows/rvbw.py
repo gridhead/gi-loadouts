@@ -10,10 +10,10 @@ class RavenBow(Bow):
     rare: Rare = Rare.Star_3
     refi_name: str = "Bane of Flame and Water"
     refi_list: list[str] = [
-            "Increases DMG against opponents affected by Hydro or Pyro by 12%.",
-            "Increases DMG against opponents affected by Hydro or Pyro by 15%.",
-            "Increases DMG against opponents affected by Hydro or Pyro by 18%.",
-            "Increases DMG against opponents affected by Hydro or Pyro by 21%.",
-            "Increases DMG against opponents affected by Hydro or Pyro by 24%.",
-        ]
+        "Increases DMG against opponents affected by Hydro or Pyro by 12%.",
+        "Increases DMG against opponents affected by Hydro or Pyro by 15%.",
+        "Increases DMG against opponents affected by Hydro or Pyro by 18%.",
+        "Increases DMG against opponents affected by Hydro or Pyro by 21%.",
+        "Increases DMG against opponents affected by Hydro or Pyro by 24%.",
+    ]
     file: str = "rvbw"

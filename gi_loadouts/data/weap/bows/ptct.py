@@ -10,10 +10,10 @@ class PrototypeCrescent(Bow):
     rare: Rare = Rare.Star_4
     refi_name: str = "Unreturning"
     refi_list: list[str] = [
-            "Charged Attack hits on weak points increase Movement SPD by 10% and ATK by 36% for 10s.",
-            "Charged Attack hits on weak points increase Movement SPD by 10% and ATK by 45% for 10s.",
-            "Charged Attack hits on weak points increase Movement SPD by 10% and ATK by 54% for 10s.",
-            "Charged Attack hits on weak points increase Movement SPD by 10% and ATK by 63% for 10s.",
-            "Charged Attack hits on weak points increase Movement SPD by 10% and ATK by 72% for 10s.",
-        ]
+        "Charged Attack hits on weak points increase Movement SPD by 10% and ATK by 36% for 10s.",
+        "Charged Attack hits on weak points increase Movement SPD by 10% and ATK by 45% for 10s.",
+        "Charged Attack hits on weak points increase Movement SPD by 10% and ATK by 54% for 10s.",
+        "Charged Attack hits on weak points increase Movement SPD by 10% and ATK by 63% for 10s.",
+        "Charged Attack hits on weak points increase Movement SPD by 10% and ATK by 72% for 10s.",
+    ]
     file: str = "ptct"

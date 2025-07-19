@@ -10,10 +10,10 @@ class TheStringless(Bow):
     rare: Rare = Rare.Star_4
     refi_name: str = "Arrowless Song"
     refi_list: list[str] = [
-            "Increases Elemental Skill and Elemental Burst DMG by 24%.",
-            "Increases Elemental Skill and Elemental Burst DMG by 30%.",
-            "Increases Elemental Skill and Elemental Burst DMG by 36%.",
-            "Increases Elemental Skill and Elemental Burst DMG by 42%.",
-            "Increases Elemental Skill and Elemental Burst DMG by 48%.",
-        ]
+        "Increases Elemental Skill and Elemental Burst DMG by 24%.",
+        "Increases Elemental Skill and Elemental Burst DMG by 30%.",
+        "Increases Elemental Skill and Elemental Burst DMG by 36%.",
+        "Increases Elemental Skill and Elemental Burst DMG by 42%.",
+        "Increases Elemental Skill and Elemental Burst DMG by 48%.",
+    ]
     file: str = "tsgs"
