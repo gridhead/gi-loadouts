@@ -53,6 +53,11 @@ class FileHandling:
         if loadfile.strip() != "":
             with open(loadfile) as fileobjc:
                 data = fileobjc.read()
+            
+            # Handle tab characters in YAML files to prevent parsing errors
+            if filetype == "YAML Files (*.yaml)":
+                data = data.replace('\t', '  ')  # Replace tabs with 2 spaces
+            
             status = True
 
         return status, data, filetype

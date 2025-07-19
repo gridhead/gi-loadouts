@@ -438,3 +438,28 @@ actual_ccol = {
         },
     }
 }
+
+# YAML sample with tab characters to test tab handling fix
+yaml_fwol_with_tabs_sample = """
+area: FWOL
+levl: Level 00
+name: Adventurer's Flower
+rare: 1
+stat:
+  a:
+    data: 1.0
+    name: ATK %
+  b:
+    data: 0.0
+    name: None
+  c:
+    data: 0.0
+    name: None	
+  d:
+    data: 0.0
+    name: None
+  main:
+    data: 129.0
+    name: HP
+type: Adventurer
+"""

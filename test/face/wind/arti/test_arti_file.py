@@ -31,6 +31,7 @@ from . import (
     json_sdoe_sample,
     yaml_ccol_sample,
     yaml_fwol_sample,
+    yaml_fwol_with_tabs_sample,
     yaml_gboe_sample,
     yaml_pmod_sample,
     yaml_sdoe_sample,
@@ -641,6 +642,35 @@ def test_arti_load_json_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerF
 
     mocker.patch.object(QFileDialog, "getOpenFileName", return_value=(temp.name, json_type))
     qtbot.mouseClick(getattr(runner, f"arti_{area}_load"), Qt.LeftButton)
+
+    """
+    Confirm if the user interface elements change accordingly
+    """
+    assert runner.statarea.currentMessage() == "Artifact data has been successfully loaded."
+
+    """
+    Cleanup the temporary files
+    """
+    remove(temp.name)
+
+
+def test_arti_load_yaml_with_tabs(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture) -> None:
+    """
+    Test loading an artifact from YAML file containing tab characters (issue #331)
+
+    :return:
+    """
+
+    """
+    Perform the action of loading the artifact information with tab characters
+    """
+    extn = ".yaml"
+    temp = NamedTemporaryFile(prefix="gi-loadouts-", suffix=extn, delete=False, mode="w")
+    temp.write(yaml_fwol_with_tabs_sample)
+    temp.close()
+
+    mocker.patch.object(QFileDialog, "getOpenFileName", return_value=(temp.name, yaml_type))
+    qtbot.mouseClick(runner.arti_fwol_load, Qt.LeftButton)
 
     """
     Confirm if the user interface elements change accordingly
