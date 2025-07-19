@@ -67,11 +67,13 @@ def test_sword(name: str, rare: int, tier: int, levl: str, batk: int, seco: Weap
     :return:
     """
     unit = SwordsDict[name]()
+    assert unit.type == Sword().type
+    assert len(unit.refinement) == len(unit.refi_list)
+    assert len(unit.levl_bind) == 74 if rare in {1, 2} else 96
     unit.levl = getattr(Level, levl.replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
     assert unit.rare == getattr(Rare, f"Star_{rare}")
     assert unit.tier == getattr(Tier, f"Tier_{tier}")
     assert round(unit.main_stat.stat_data) == batk
     assert unit.seco_stat.stat_name == seco
-    assert unit.type == Sword().type
     if unit.seco_stat.stat_name != WeaponStatType.none:
         assert verify_accuracy(unit.seco_stat_calc.stat_data, valu, 1.5)
