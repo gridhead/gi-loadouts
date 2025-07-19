@@ -10,10 +10,10 @@ class RecurveBow(Bow):
     rare: Rare = Rare.Star_3
     refi_name: str = "Cull the Weak"
     refi_list: list[str] = [
-            "Defeating an opponent restores 8% HP.",
-            "Defeating an opponent restores 10% HP.",
-            "Defeating an opponent restores 12% HP.",
-            "Defeating an opponent restores 14% HP.",
-            "Defeating an opponent restores 16% HP.",
-        ]
+        "Defeating an opponent restores 8% HP.",
+        "Defeating an opponent restores 10% HP.",
+        "Defeating an opponent restores 12% HP.",
+        "Defeating an opponent restores 14% HP.",
+        "Defeating an opponent restores 16% HP.",
+    ]
     file: str = "rcbw"
