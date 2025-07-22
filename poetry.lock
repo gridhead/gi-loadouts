@@ -918,29 +918,26 @@ files = [
 
 [[package]]
 name = "tox"
-version = "4.27.0"
+version = "4.28.0"
 description = "tox is a generic virtualenv management and test command line tool"
 optional = false
 python-versions = ">=3.9"
 groups = ["dev"]
 files = [
-    {file = "tox-4.27.0-py3-none-any.whl", hash = "sha256:2b8a7fb986b82aa2c830c0615082a490d134e0626dbc9189986da46a313c4f20"},
-    {file = "tox-4.27.0.tar.gz", hash = "sha256:b97d5ecc0c0d5755bcc5348387fef793e1bfa68eb33746412f4c60881d7f5f57"},
+    {file = "tox-4.28.0-py3-none-any.whl", hash = "sha256:3e2f5c0a00523a58666690108b66820150f6435cb6e4dd95caf21bb52133c1d1"},
+    {file = "tox-4.28.0.tar.gz", hash = "sha256:442347b1a415733850f097e7e78b8c5f38b5e1719f8b7205aade5d055f08068c"},
 ]
 
 [package.dependencies]
-cachetools = ">=5.5.1"
+cachetools = ">=6.1"
 chardet = ">=5.2"
 colorama = ">=0.4.6"
-filelock = ">=3.16.1"
-packaging = ">=24.2"
-platformdirs = ">=4.3.6"
-pluggy = ">=1.5"
-pyproject-api = ">=1.8"
-virtualenv = ">=20.31"
-
-[package.extras]
-test = ["devpi-process (>=1.0.2)", "pytest (>=8.3.4)", "pytest-mock (>=3.14)"]
+filelock = ">=3.18"
+packaging = ">=25"
+platformdirs = ">=4.3.8"
+pluggy = ">=1.6"
+pyproject-api = ">=1.9.1"
+virtualenv = ">=20.31.2"
 
 [[package]]
 name = "typing-extensions"
@@ -971,14 +968,14 @@ typing-extensions = ">=4.12.0"
 
 [[package]]
 name = "virtualenv"
-version = "20.31.2"
+version = "20.32.0"
 description = "Virtual Python Environment builder"
 optional = false
 python-versions = ">=3.8"
 groups = ["dev"]
 files = [
-    {file = "virtualenv-20.31.2-py3-none-any.whl", hash = "sha256:36efd0d9650ee985f0cad72065001e66d49a6f24eb44d98980f630686243cf11"},
-    {file = "virtualenv-20.31.2.tar.gz", hash = "sha256:e10c0a9d02835e592521be48b332b6caee6887f332c111aa79a09b9e79efc2af"},
+    {file = "virtualenv-20.32.0-py3-none-any.whl", hash = "sha256:2c310aecb62e5aa1b06103ed7c2977b81e042695de2697d01017ff0f1034af56"},
+    {file = "virtualenv-20.32.0.tar.gz", hash = "sha256:886bf75cadfdc964674e6e33eb74d787dff31ca314ceace03ca5810620f4ecf0"},
 ]
 
 [package.dependencies]
