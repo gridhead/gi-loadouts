@@ -1,9 +1,6 @@
-from itertools import product
-
 import pytest
 
-from gi_loadouts.data.arti import __artilist__
-from gi_loadouts.type.arti import Collection
+from gi_loadouts.type.arti import CCOL, FWOL, GBOE, PMOD, SDOE
 from gi_loadouts.type.arti.base import (
     MainStatType_CCOL,
     MainStatType_FWOL,
@@ -11,7 +8,6 @@ from gi_loadouts.type.arti.base import (
     MainStatType_PMOD,
     MainStatType_SDOE,
 )
-from gi_loadouts.type.arti import CCOL, FWOL, GBOE, PMOD, SDOE
 from gi_loadouts.type.arti.ccol import __revmap__ as __ccolpage__
 from gi_loadouts.type.arti.fwol import __revmap__ as __fwolpage__
 from gi_loadouts.type.arti.gboe import __revmap__ as __gboepage__
