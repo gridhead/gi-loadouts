@@ -19,6 +19,83 @@ __dist__ = {
     "Circlet of Logos": {"list": MainStatType_CCOL, "part": "ccol"},
 }
 
+__text__ = {
+    "Flower of Life": """
+        Selfless Floral Accessory
+        Flower of Life
+        HP 4,780
+        +20
+        DEF+53
+        CRIT DMG+14.0%
+        DEF+12.4%
+        CRIT Rate+6.2%
+        Nighttime Whispers in the Echoing Woods:
+        2-Piece Set: ATK +18%.
+        4-Piece Set: After using an Elemental Skill, gain a 20% Geo DMG Bonus for 10s. While under a shield granted by
+        the Crystallize reaction, the above effect will be increased by 150%, and this additional increase disappears
+        1s after the shield is lost.
+    """,
+    "Plume of Death": """
+        Shaft of Remembrance
+        Plume of Death
+        ATK 311
+        +20
+        CRIT DMG+21.8%
+        DEF+21
+        CRIT Rate+3.1%
+        ATK+21.0%
+        Shimenawa's Reminiscence:
+        2-Piece Set: ATK +18%.
+        4-Piece Set: When casting an Elemental Skill, if the character has 15 or more Energy, they lose 15 Energy and
+        Normal/Charged/Plunging Attack DMG is increased by 50% for 10s. This effect will not trigger again during that
+        duration.
+    """,
+    "Sands of Eon": """
+        Morning Dew's Moment
+        Sands of Eon
+        Energy Recharge 51.8%
+        +20
+        HP+13.4%
+        CRIT DMG+21.0%
+        Elemental Mastery+23
+        CRIT Rate+6.6%
+        Shimenawa's Reminiscence:
+        2-Piece Set: ATK +18%.
+        4-Piece Set: When casting an Elemental Skill, if the character has 15 or more Energy, they lose 15 Energy and
+        Normal/Charged/Plunging Attack DMG is increased by 50% for 10s. This effect will not trigger again during that
+        duration.
+    """,
+    "Goblet of Eonothem": """
+        Magnanimous Ink Bottle
+        Goblet of Eonothem
+        Geo DMG Bonus 46.6%
+        +20
+        HP+568
+        DEF+56
+        CRIT DMG+5.4%
+        ATK+35
+        Nighttime Whispers in the Echoing Woods:
+        2-Piece Set: ATK +18%.
+        4-Piece Set: After using an Elemental Skill, gain a 20% Geo DMG Bonus for 10s. While under a shield granted by
+        the Crystallize reaction, the above effect will be increased by 150%, and this additional increase disappears
+        1s after the shield is lost.
+    """,
+    "Circlet of Logos": """
+        Witch's Scorching Hat
+        Circlet of Logos
+        CRIT Rate 31.1%
+        +20
+        HP+717
+        HP+5.8%
+        ATK+53
+        CRIT DMG+13.2%
+        Crimson Witch of Flames:
+        2-Piece Set: Pyro DMG Bonus +15%
+        4-Piece Set: Increases Overloaded, Burning, and Burgeon DMG by 40%. Increases Vaporize and Melt DMG by 15%.
+        Using Elemental Skill increases the 2-Piece Set Bonus by 50% of its starting value for 10s. Max 2 stacks.
+    """
+}
+
 __rtrn__ = {
     "Flower of Life": {
         "part": "fwol",
@@ -39,9 +116,9 @@ __rtrn__ = {
         "part": "pmod",
         "team": "Shimenawa's Reminiscence",
         "rare": "Star 5",
-        "levl": "Level 18",
+        "levl": "Level 20",
         "stat": {
-            "main": ATTR(stat_name=STAT.attack, stat_data=285.0),
+            "main": ATTR(stat_name=STAT.attack, stat_data=311.0),
             "seco": {
                 "a": ATTR(stat_name=STAT.critical_rate_perc, stat_data=3.1),
                 "b": ATTR(stat_name=STAT.critical_damage_perc, stat_data=21.8),
@@ -115,48 +192,22 @@ __rtrn_flty__ = {
 
 
 class MockScanDialog:
+    def __init__(self, part: str):
+        self.part = part
+        self.pair = {
+            "fwol": "Flower of Life",
+            "pmod": "Plume of Death",
+            "sdoe": "Sands of Eon",
+            "gboe": "Goblet of Eonothem",
+            "ccol": "Circlet of Logos"
+        }
+
     def exec(self):
         return QDialog.Accepted
 
-
-class MockScanDialogFWOL(MockScanDialog):
-    def __init__(self, part: str = "fwol") -> None:
-        self.part = part
-
     def keep_info(self) -> dict:
-        return __rtrn__["Flower of Life"]
-
-
-class MockScanDialogPMOD(MockScanDialog):
-    def __init__(self, part: str = "pmod") -> None:
-        self.part = part
-
-    def keep_info(self) -> dict:
-        return __rtrn__["Plume of Death"]
-
-
-class MockScanDialogSDOE(MockScanDialog):
-    def __init__(self, part: str = "sdoe") -> None:
-        self.part = part
-
-    def keep_info(self) -> dict:
-        return __rtrn__["Sands of Eon"]
-
-
-class MockScanDialogGBOE(MockScanDialog):
-    def __init__(self, part: str = "gboe") -> None:
-        self.part = part
-
-    def keep_info(self) -> dict:
-        return __rtrn__["Goblet of Eonothem"]
-
-
-class MockScanDialogCCOL(MockScanDialog):
-    def __init__(self, part: str = "ccol") -> None:
-        self.part = part
-
-    def keep_info(self) -> dict:
-        return __rtrn__["Circlet of Logos"]
+        dist = self.pair[self.part]
+        return __rtrn__[dist]
 
 
 class MockIncident:
