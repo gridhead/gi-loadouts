@@ -26,6 +26,7 @@ from test import verify_accuracy
         pytest.param("Missive Windspear", 4, "Level 80/90 (Rank 6)", 475, WeaponStatType.attack_perc, 37.7, 5, id="face.wind.rule: Configuring weapon - Polearm - Missive Windspear"),
         pytest.param("Prototype Starglitter", 4, "Level 80/90 (Rank 6)", 475, WeaponStatType.energy_recharge_perc, 41.9, 5, id="face.wind.rule: Configuring weapon - Polearm - Prototype Starglitter"),
         pytest.param("Engulfing Lightning", 5, "Level 80/90 (Rank 6)", 563, WeaponStatType.energy_recharge_perc, 50.3, 5, id="face.wind.rule: Configuring weapon - Polearm - Engulfing Lightning"),
+        pytest.param("Fractured Halo", 5, "Level 80/90 (Rank 6)", 563, WeaponStatType.critical_damage_perc, 60.3, 5, id="face.wind.rule: Configuring weapon - Polearm - Fractured Halo"),
         pytest.param("Lumidouce Elegy", 5, "Level 80/90 (Rank 6)", 563, WeaponStatType.critical_rate_perc, 30.2, 5, id="face.wind.rule: Configuring weapon - Polearm - Lumidouce Elegy"),
         pytest.param("Staff of Homa", 5, "Level 80/90 (Rank 6)", 563, WeaponStatType.critical_damage_perc, 60.3, 5, id="face.wind.rule: Configuring weapon - Polearm - Staff of Homa"),
         pytest.param("Symphonist of Scents", 5, "Level 80/90 (Rank 6)", 563, WeaponStatType.critical_damage_perc, 60.3, 5, id="face.wind.rule: Configuring weapon - Polearm - Symphonist of Scents"),
