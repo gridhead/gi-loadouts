@@ -26,6 +26,7 @@ from test import verify_accuracy
         pytest.param("Missive Windspear", 4, 2, "Level 80/90 (Rank 6)", 475, WeaponStatType.attack_perc, 37.7, id="data.weap.polearms: Missive Windspear"),
         pytest.param("Prototype Starglitter", 4, 2, "Level 80/90 (Rank 6)", 475, WeaponStatType.energy_recharge_perc, 41.9, id="data.weap.polearms: Prototype Starglitter"),
         pytest.param("Engulfing Lightning", 5, 2, "Level 80/90 (Rank 6)", 563, WeaponStatType.energy_recharge_perc, 50.3, id="data.weap.polearms: Engulfing Lightning"),
+        pytest.param("Fractured Halo", 5, 2, "Level 80/90 (Rank 6)", 563, WeaponStatType.critical_damage_perc, 60.3, id="data.weap.polearms: Fractured Halo"),
         pytest.param("Lumidouce Elegy", 5, 2, "Level 80/90 (Rank 6)", 563, WeaponStatType.critical_rate_perc, 30.2, id="data.weap.polearms: Lumidouce Elegy"),
         pytest.param("Staff of Homa", 5, 2, "Level 80/90 (Rank 6)", 563, WeaponStatType.critical_damage_perc, 60.3, id="data.weap.polearms: Staff of Homa"),
         pytest.param("Symphonist of Scents", 5, 2, "Level 80/90 (Rank 6)", 563, WeaponStatType.critical_damage_perc, 60.3, id="data.weap.polearms: Symphonist of Scents"),
