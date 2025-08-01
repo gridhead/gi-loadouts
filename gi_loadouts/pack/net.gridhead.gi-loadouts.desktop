@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=GI Loadouts
+Exec=/usr/bin/gi-loadouts
+Comment=Loadouts for Genshin Impact
+Icon=net.gridhead.gi-loadouts
+Terminal=false
+Type=Application
+StartupNotify=false
+Categories=Game;
+Keywords=yuanshen;mihoyo;genshin;impact;

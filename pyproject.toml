@@ -18,7 +18,6 @@ classifiers= [
     "Intended Audience :: End Users/Desktop",
     "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
     "License :: OSI Approved :: SIL Open Font License 1.1 (OFL-1.1)",
-    "Natural Language :: English",
     "Operating System :: Microsoft :: Windows",
     "Operating System :: POSIX :: Linux",
     "Natural Language :: English",
