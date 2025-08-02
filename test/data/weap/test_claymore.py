@@ -31,6 +31,7 @@ from test import verify_accuracy
         pytest.param("Katsuragikiri Nagamasa", 4, 2, "Level 80/90 (Rank 6)", 475, WeaponStatType.energy_recharge_perc, 41.9, id="data.weap.claymores: Katsuragikiri Nagamasa"),
         pytest.param("Blackcliff Slasher", 4, 2, "Level 80/90 (Rank 6)", 475, WeaponStatType.critical_damage_perc, 50.3, id="data.weap.claymores: Blackcliff Slasher"),
         pytest.param("Akuoumaru", 4, 2, "Level 80/90 (Rank 6)", 475, WeaponStatType.attack_perc, 37.7, id="data.weap.claymores: Akuoumaru"),
+        pytest.param("Flame-Forged Insight", 4, 2, "Level 80/90 (Rank 6)", 475, WeaponStatType.elemental_mastery, 151, id="data.weap.claymores: Flame-Forged Insight"),
         pytest.param("Beacon of the Reed Sea", 5, 2, "Level 80/90 (Rank 6)", 563, WeaponStatType.critical_rate_perc, 30.2, id="data.weap.claymores: Beacon of the Reed Sea"),
         pytest.param("Wolf's Gravestone", 5, 2, "Level 80/90 (Rank 6)", 563, WeaponStatType.attack_perc, 45.3, id="data.weap.claymores: Wolf's Gravestone"),
         pytest.param("The Unforged", 5, 2, "Level 80/90 (Rank 6)", 563, WeaponStatType.attack_perc, 45.3, id="data.weap.claymores: The Unforged"),

@@ -31,6 +31,7 @@ from test import verify_accuracy
         pytest.param("Katsuragikiri Nagamasa", 4, "Level 80/90 (Rank 6)", 475, WeaponStatType.energy_recharge_perc, 41.9, 5, id="face.wind.rule: Configuring weapon - Claymore - Katsuragikiri Nagamasa"),
         pytest.param("Blackcliff Slasher", 4, "Level 80/90 (Rank 6)", 475, WeaponStatType.critical_damage_perc, 50.3, 5, id="face.wind.rule: Configuring weapon - Claymore - Blackcliff Slasher"),
         pytest.param("Akuoumaru", 4, "Level 80/90 (Rank 6)", 475, WeaponStatType.attack_perc, 37.7, 5, id="face.wind.rule: Configuring weapon - Claymore - Akuoumaru"),
+        pytest.param("Flame-Forged Insight", 4, "Level 80/90 (Rank 6)", 475, WeaponStatType.elemental_mastery, 151, 5, id="face.wind.rule: Configuring weapon - Claymore - Flame-Forged Insight"),
         pytest.param("Beacon of the Reed Sea", 5, "Level 80/90 (Rank 6)", 563, WeaponStatType.critical_rate_perc, 30.2, 5, id="face.wind.rule: Configuring weapon - Claymore - Beacon of the Reed Sea"),
         pytest.param("Wolf's Gravestone", 5, "Level 80/90 (Rank 6)", 563, WeaponStatType.attack_perc, 45.3, 5, id="face.wind.rule: Configuring weapon - Claymore - Wolf's Gravestone"),
         pytest.param("The Unforged", 5, "Level 80/90 (Rank 6)", 563, WeaponStatType.attack_perc, 45.3, 5, id="face.wind.rule: Configuring weapon - Claymore - The Unforged"),
