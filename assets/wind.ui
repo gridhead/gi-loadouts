@@ -628,7 +628,7 @@
      <widget class="QComboBox" name="arti_fwol_levl">
       <property name="geometry">
        <rect>
-        <x>5</x>
+        <x>110</x>
         <y>240</y>
         <width>95</width>
         <height>25</height>
@@ -659,7 +659,7 @@
      <widget class="QComboBox" name="arti_fwol_rare">
       <property name="geometry">
        <rect>
-        <x>110</x>
+        <x>5</x>
         <y>240</y>
         <width>95</width>
         <height>25</height>
@@ -1282,7 +1282,7 @@
      <widget class="QComboBox" name="arti_pmod_levl">
       <property name="geometry">
        <rect>
-        <x>5</x>
+        <x>110</x>
         <y>240</y>
         <width>95</width>
         <height>25</height>
@@ -1344,7 +1344,7 @@
      <widget class="QComboBox" name="arti_pmod_rare">
       <property name="geometry">
        <rect>
-        <x>110</x>
+        <x>5</x>
         <y>240</y>
         <width>95</width>
         <height>25</height>
@@ -1967,7 +1967,7 @@
      <widget class="QComboBox" name="arti_sdoe_levl">
       <property name="geometry">
        <rect>
-        <x>5</x>
+        <x>110</x>
         <y>240</y>
         <width>95</width>
         <height>25</height>
@@ -1998,7 +1998,7 @@
      <widget class="QComboBox" name="arti_sdoe_rare">
       <property name="geometry">
        <rect>
-        <x>110</x>
+        <x>5</x>
         <y>240</y>
         <width>95</width>
         <height>25</height>
@@ -2652,7 +2652,7 @@
      <widget class="QComboBox" name="arti_gboe_levl">
       <property name="geometry">
        <rect>
-        <x>5</x>
+        <x>110</x>
         <y>240</y>
         <width>95</width>
         <height>25</height>
@@ -2714,7 +2714,7 @@
      <widget class="QComboBox" name="arti_gboe_rare">
       <property name="geometry">
        <rect>
-        <x>110</x>
+        <x>5</x>
         <y>240</y>
         <width>95</width>
         <height>25</height>
@@ -3568,7 +3568,7 @@
      <widget class="QComboBox" name="arti_ccol_levl">
       <property name="geometry">
        <rect>
-        <x>5</x>
+        <x>110</x>
         <y>240</y>
         <width>95</width>
         <height>25</height>
@@ -3599,7 +3599,7 @@
      <widget class="QComboBox" name="arti_ccol_rare">
       <property name="geometry">
        <rect>
-        <x>110</x>
+        <x>5</x>
         <y>240</y>
         <width>95</width>
         <height>25</height>
