@@ -91,8 +91,8 @@ levliden = r"\+([0-9]|1[0-9]|20)\b"
 info_arti_widget = [
     "arti_dist",
     "arti_type",
-    "arti_levl",
     "arti_rare",
+    "arti_levl",
     "arti_name_main",
     "arti_data_main",
     "arti_name_a",
