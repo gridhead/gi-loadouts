@@ -1,12 +1,13 @@
 --- a/pyproject.toml
 +++ b/pyproject.toml
-@@ -30,8 +30,7 @@
+@@ -29,10 +29,9 @@ classifiers= [
  ]
 
  [tool.poetry.dependencies]
 -python = ">=3.12,<3.14"
--pyside6-essentials = "^6.8.1,<6.8.1.1"
 +python = ">=3.12"
- pydantic = "^2.8.2"
- pyyaml = "^6.0.2"
  pillow = "^10.4.0 || ^11.0.0"
+ pydantic = "^2.8.2"
+-pyside6-essentials = "^6.8.1,<6.8.1.1"
+ pytesseract = "^0.3.13"
+ pyyaml = "^6.0.2"

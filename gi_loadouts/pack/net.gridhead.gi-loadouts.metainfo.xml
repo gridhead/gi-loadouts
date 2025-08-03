@@ -73,6 +73,14 @@
   </keywords>
   <content_rating type="oars-1.0"/>
   <releases>
+    <release version="0.1.10" date="2025-08-10">
+      <description>
+        <p>v0.1.10 - Released on August 10th, 2025</p>
+        <p>Announcement - https://gridhead.net/loadouts-for-genshin-impact-v0-1-10-released/</p>
+        <p>GitHub release - https://github.com/gridhead/gi-loadouts/releases/tag/0.1.10</p>
+        <p>PyPI release - https://pypi.org/project/gi-loadouts/</p>
+      </description>
+    </release>
     <release version="0.1.9" date="2025-07-02">
       <description>
         <p>v0.1.9 - Released on July 02nd, 2025</p>
