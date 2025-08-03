@@ -34,8 +34,8 @@ info_team_widget = [
 # List of widgets present in `Flower of Life` artifact information panel
 info_arti_fwol_widget = [
     "arti_fwol_type",
-    "arti_fwol_levl",
     "arti_fwol_rare",
+    "arti_fwol_levl",
     "arti_fwol_name_main",
     "arti_fwol_data_main",
     "arti_fwol_name_a",
@@ -55,8 +55,8 @@ info_arti_fwol_widget = [
 # List of widgets present in `Plume of Death` artifact information panel
 info_arti_pmod_widget = [
     "arti_pmod_type",
-    "arti_pmod_levl",
     "arti_pmod_rare",
+    "arti_pmod_levl",
     "arti_pmod_name_main",
     "arti_pmod_data_main",
     "arti_pmod_name_a",
@@ -76,8 +76,8 @@ info_arti_pmod_widget = [
 # List of widgets present in `Sands of Eon` artifact information panel
 info_arti_sdoe_widget = [
     "arti_sdoe_type",
-    "arti_sdoe_levl",
     "arti_sdoe_rare",
+    "arti_sdoe_levl",
     "arti_sdoe_name_main",
     "arti_sdoe_data_main",
     "arti_sdoe_name_a",
@@ -97,8 +97,8 @@ info_arti_sdoe_widget = [
 # List of widgets present in `Goblet of Eonothem` artifact information panel
 info_arti_gboe_widget = [
     "arti_gboe_type",
-    "arti_gboe_levl",
     "arti_gboe_rare",
+    "arti_gboe_levl",
     "arti_gboe_name_main",
     "arti_gboe_data_main",
     "arti_gboe_name_a",
@@ -118,8 +118,8 @@ info_arti_gboe_widget = [
 # List of widgets present in `Circlet of Logos` artifact information panel
 info_arti_ccol_widget = [
     "arti_ccol_type",
-    "arti_ccol_levl",
     "arti_ccol_rare",
+    "arti_ccol_levl",
     "arti_ccol_name_main",
     "arti_ccol_data_main",
     "arti_ccol_name_a",
