@@ -286,6 +286,13 @@ from test import verify_accuracy
             }, id="data.char: Ifa",
         ),
         pytest.param(
+            "Ineffa", "polearm", 5, "electro", STAT.critical_rate_perc,
+            {
+                "Level 40/50 (Rank 2)": (5669.23, 148.35, 372.04, 4.8),
+                "Level 80/90 (Rank 6)": (11726.61, 306.86, 769.55, 19.2),
+            }, id="data.char: Ineffa",
+        ),
+        pytest.param(
             "Jean", "sword", 5, "anemo", STAT.healing_bonus_perc,
             {
                 "Level 40/50 (Rank 2)": (6604.93, 107.50, 345.44, 5.5),
