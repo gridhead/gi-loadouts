@@ -460,9 +460,20 @@ ensure that the Tesseract OCR application is installed and configured properly.
     clicking on the **HEART** button from the user interface.  
     ![](https://raw.githubusercontent.com/gridhead/gi-loadouts/main/assets/docs/cash.png)
 
-## Development
+## Installation
 
-### On GNU/Linux distributions
+### From PyPI
+
+1.  Install the project using PyPI
+    ```
+    pip install --upgrade gi-loadouts
+    ```
+
+    We recommend installing the project inside a Python virtual environment
+
+### From Source
+
+#### On GNU/Linux distributions
 
 1.  Ensure that the necessary packages are available on the operating system 
     installation.
@@ -504,10 +515,8 @@ ensure that the Tesseract OCR application is installed and configured properly.
     ```
     (venv) $ gi-loadouts
     ```
-6.  Once done with making changes in a separate branch, make a pull request to 
-    contribute.
 
-### On Microsoft Windows
+#### On Microsoft Windows
 
 1.  Ensure that the necessary packages are available on the operating system 
     installation.
@@ -551,8 +560,6 @@ ensure that the Tesseract OCR application is installed and configured properly.
     ```
     (venv) PS > gi-loadouts.cmd
     ```
-6.  Once done with making changes in a separate branch, make a pull request to 
-    contribute.
 
 ## Contribution
 
@@ -587,6 +594,8 @@ You can help our efforts by
   By providing financial support, the maintainers have the means to dedicate 
   more efforts into the development of the project codebase and ensure 
   compatibility from each upcoming Genshin Impact release.
+
+Check out CONTRIBUTING.md for more details.
 
 ## Disclaimer
 
