@@ -16,7 +16,7 @@
     "extends": [
       "group:allNonMajor"
     ],
-    "commitMessageAction": "Automated dependency updates for GI Loadouts"
+    "commitMessage": "Automated dependency updates for GI Loadouts"
   },
   "automergeStrategy": "rebase",
   "rangeStrategy": "widen",
