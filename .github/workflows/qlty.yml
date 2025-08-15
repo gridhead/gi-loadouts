@@ -17,7 +17,7 @@ jobs:
     steps:
 
       - name: Checkout the codebase current state
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Install the base dependencies
         run: |
