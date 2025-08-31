@@ -69,6 +69,7 @@ class CharName(str, Enum):
     kujou_sara = "Kujou Sara"
     kuki_shinobu = "Kuki Shinobu"
     lan_yan = "Lan Yan"
+    lauma = "Lauma"
     layla = "Layla"
     lisa = "Lisa"
     lumine = "Lumine"

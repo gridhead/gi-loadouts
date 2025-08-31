@@ -391,6 +391,13 @@ from test import verify_accuracy
             }, id="data.char: Lan Yan",
         ),
         pytest.param(
+            "Lauma", "catalyst", 5, "dendro", STAT.elemental_mastery,
+            {
+                "Level 40/50 (Rank 2)": (4784.71, 114.49, 300.48, 28.8),
+                "Level 80/90 (Rank 6)": (9894.80, 236.82, 621.49, 115.2),
+            }, id="data.char: Lauma",
+        ),
+        pytest.param(
             "Layla", "sword", 4, "cryo", STAT.health_points_perc,
             {
                 "Level 40/50 (Rank 2)": (5113.15, 99.86, 302.03, 6.0),
