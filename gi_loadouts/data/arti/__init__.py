@@ -43,6 +43,7 @@ from . import (
     sclr,
     shcc,
     smrm,
+    smsn,
     sodp,
     tdfr,
     tdst,
@@ -369,6 +370,14 @@ __artilist__ = {
         quaddata=smrm.team.__quaddata__, quadtext=smrm.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
         file=smrm.__name__.split(".")[-1]
+    ),
+    smsn.team.__teamname__: ArtifactTeam(
+        name=smsn.team.__teamname__,
+        fwol=smsn.fwol(), pmod=smsn.pmod(), sdoe=smsn.sdoe(), gboe=smsn.gboe(), ccol=smsn.ccol(),
+        pairdata=smsn.team.__pairdata__, pairtext=smsn.team.__pairtext__,
+        quaddata=smsn.team.__quaddata__, quadtext=smsn.team.__quadtext__,
+        rare=[Rare.Star_4, Rare.Star_5],
+        file=smsn.__name__.split(".")[-1]
     ),
     sodp.team.__teamname__: ArtifactTeam(
         name=sodp.team.__teamname__,
