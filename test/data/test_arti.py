@@ -555,6 +555,20 @@ from gi_loadouts.type.stat import ATTR, STAT
             id="data.arti: Shimenawa's Reminiscence"
         ),
         pytest.param(
+            "Silken Moon's Serenade",
+            [ATTR(stat_name=STAT.energy_recharge_perc, stat_data=20)],
+            [],
+            [4, 5],
+            (
+                "Crystal Tear of the Wanderer",
+                "Pristine Plume of the Blessed",
+                "Frost Devotee’s Delirium",
+                "Joyous Glory of the Pure",
+                "Holy Crown of the Believer"
+            ),
+            id="data.arti: Silken Moon's Serenade"
+        ),
+        pytest.param(
             "Song of Days Past",
             [ATTR(stat_name=STAT.healing_bonus_perc, stat_data=15)],
             [],
