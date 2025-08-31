@@ -401,6 +401,20 @@ from gi_loadouts.type.stat import ATTR, STAT
             id="data.arti: Martial Artist"
         ),
         pytest.param(
+            "Night of the Sky's Unveiling",
+            [ATTR(stat_name=STAT.elemental_mastery, stat_data=80)],
+            [],
+            [4, 5],
+            (
+                "Bloom of the Mind's Desire",
+                "Feather of Indelible Sin",
+                "Revelation's Toll",
+                "Vessel of Plenty",
+                "Crown of the Befallen"
+            ),
+            id="data.arti: Night of the Sky's Unveiling"
+        ),
+        pytest.param(
             "Nighttime Whispers in the Echoing Woods",
             [ATTR(stat_name=STAT.attack_perc, stat_data=18)],
             [],
