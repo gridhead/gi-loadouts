@@ -30,6 +30,7 @@ from .escoffier import Escoffier
 from .eula import Eula
 from .faruzan import Faruzan
 from .fischl import Fischl
+from .flins import Flins
 from .freminet import Freminet
 from .furina import Furina
 from .gaming import Gaming
@@ -137,6 +138,7 @@ __charmaps__ = {
     "Eula": Eula,
     "Faruzan": Faruzan,
     "Fischl": Fischl,
+    "Flins": Flins,
     "Freminet": Freminet,
     "Furina": Furina,
     "Gaming": Gaming,

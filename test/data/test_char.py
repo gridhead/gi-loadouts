@@ -237,6 +237,13 @@ from test import verify_accuracy
             }, id="data.char: Faruzan",
         ),
         pytest.param(
+            "Flins", "polearm", 5, "electro", STAT.critical_damage_perc,
+            {
+                "Level 40/50 (Rank 2)": (5613.794000000001, 158.02672214285718, 363.39948714285714, 9.6),
+                "Level 80/90 (Rank 6)": (11613.284, 326.87489000000005, 751.68518, 38.4),
+            }, id="data.char: Flins",
+        ),
+        pytest.param(
             "Freminet", "claymore", 4, "cryo", STAT.attack_perc,
             {
                 "Level 40/50 (Rank 2)": (5564.31, 117.49, 326.57, 6.0),
