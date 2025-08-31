@@ -52,6 +52,7 @@ from .klee import Klee
 from .kujou_sara import KujouSara
 from .kuki_shinobu import KukiShinobu
 from .lan_yan import LanYan
+from .lauma import Lauma
 from .layla import Layla
 from .lisa import Lisa
 from .lumine import Lumine
@@ -157,6 +158,7 @@ __charmaps__ = {
     "Kujou Sara": KujouSara,
     "Kuki Shinobu": KukiShinobu,
     "Lan Yan": LanYan,
+    "Lauma": Lauma,
     "Layla": Layla,
     "Lisa": Lisa,
     "Lumine": Lumine,
