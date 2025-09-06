@@ -16,6 +16,7 @@ from test import verify_accuracy
         pytest.param("Favonius Sword", 4, 1, "Level 80/90 (Rank 6)", 427, WeaponStatType.energy_recharge_perc, 55.9, id="data.weap.swords: Favonius Sword"),
         pytest.param("Flute of Ezpitzal", 4, 1, "Level 80/90 (Rank 6)", 427, WeaponStatType.defense_perc, 62.9, id="data.weap.swords: Flute of Ezpitzal"),
         pytest.param("Sacrificial Sword", 4, 1, "Level 80/90 (Rank 6)", 427, WeaponStatType.energy_recharge_perc, 55.9, id="data.weap.swords: Sacrificial Sword"),
+        pytest.param("Serenity's Call", 4, 1, "Level 80/90 (Rank 6)", 427, WeaponStatType.energy_recharge_perc, 55.9, id="data.weap.swords: Serenity's Call"),
         pytest.param("Key of Khaj-Nisut", 5, 1, "Level 80/90 (Rank 6)", 506, WeaponStatType.health_points_perc, 60.3, id="data.weap.swords: Key of Khaj-Nisut"),
         pytest.param("Light of Foliar Incision", 5, 1, "Level 80/90 (Rank 6)", 506, WeaponStatType.critical_damage_perc, 80.4, id="data.weap.swords: Light of Foliar Incision"),
         pytest.param("Peak Patrol Song", 5, 1, "Level 80/90 (Rank 6)", 506, WeaponStatType.defense_perc, 75.4, id="data.weap.swords: Peak Patrol Song"),
