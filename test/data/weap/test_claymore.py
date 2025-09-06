@@ -14,6 +14,7 @@ from test import verify_accuracy
         pytest.param("Portable Power Saw", 4, 1, "Level 80/90 (Rank 6)", 427, WeaponStatType.health_points_perc, 50.3, id="data.weap.claymores: Portable Power Saw"),
         pytest.param("Luxurious Sea-Lord", 4, 1, "Level 80/90 (Rank 6)", 427, WeaponStatType.attack_perc, 50.3, id="data.weap.claymores: Luxurious Sea-Lord"),
         pytest.param("Favonius Greatsword", 4, 1, "Level 80/90 (Rank 6)", 427, WeaponStatType.energy_recharge_perc, 55.9, id="data.weap.claymores: Favonius Greatsword"),
+        pytest.param("Master Key", 4, 1, "Level 80/90 (Rank 6)", 427, WeaponStatType.energy_recharge_perc, 55.9, id="data.weap.claymores: Master Key"),
         pytest.param("Redhorn Stonethresher", 5, 1, "Level 80/90 (Rank 6)", 506, WeaponStatType.critical_damage_perc, 80.4, id="data.weap.claymores: Redhorn Stonethresher"),
         pytest.param("Waster Greatsword", 1, 2, "Level 60/70 (Rank 4)", 169, WeaponStatType.none, 0, id="data.weap.claymores: Waster Greatsword"),
         pytest.param("Old Merc's Pal", 2, 2, "Level 60/70 (Rank 4)", 220, WeaponStatType.none, 0, id="data.weap.claymores: Old Merc's Pal"),
