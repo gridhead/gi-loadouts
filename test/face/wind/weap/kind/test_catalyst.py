@@ -14,6 +14,7 @@ from test import verify_accuracy
         pytest.param("Dodoco Tales", 4, "Level 80/90 (Rank 6)", 427, WeaponStatType.attack_perc, 50.3, 5, id="face.wind.rule: Configuring weapon - Catalyst - Dodoco Tales"),
         pytest.param("Eye of Perception", 4, "Level 80/90 (Rank 6)", 427, WeaponStatType.attack_perc, 50.3, 5, id="face.wind.rule: Configuring weapon - Catalyst - Eye of Perception"),
         pytest.param("Sacrificial Fragments", 4, "Level 80/90 (Rank 6)", 427, WeaponStatType.elemental_mastery, 201, 5, id="face.wind.rule: Configuring weapon - Catalyst - Sacrificial Fragments"),
+        pytest.param("Blackmarrow Lantern", 4, "Level 80/90 (Rank 6)", 427, WeaponStatType.elemental_mastery, 201, 5, id="face.wind.rule: Configuring weapon - Catalyst - Blackmarrow Lantern"),
         pytest.param("Sacrificial Jade", 4, "Level 80/90 (Rank 6)", 427, WeaponStatType.critical_rate_perc, 33.5, 5, id="face.wind.rule: Configuring weapon - Catalyst - Sacrificial Jade"),
         pytest.param("Waveriding Whirl", 4, "Level 80/90 (Rank 6)", 427, WeaponStatType.energy_recharge_perc, 55.9, 5, id="face.wind.rule: Configuring weapon - Catalyst - Waveriding Whirl"),
         pytest.param("A Thousand Floating Dreams", 5, "Level 80/90 (Rank 6)", 506, WeaponStatType.elemental_mastery, 241, 5, id="face.wind.rule: Configuring weapon - Catalyst - A Thousand Floating Dreams"),
