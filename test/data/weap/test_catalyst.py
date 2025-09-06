@@ -55,6 +55,7 @@ from test import verify_accuracy
         pytest.param("Tulaytullah's Remembrance", 5, 3, "Level 80/90 (Rank 6)", 621, WeaponStatType.critical_damage_perc, 40.2, id="data.weap.catalysts: Tulaytullah's Remembrance"),
         pytest.param("Vivid Notions", 5, 3, "Level 80/90 (Rank 6)", 621, WeaponStatType.critical_damage_perc, 40.2, id="data.weap.catalysts: Vivid Notions"),
         pytest.param("Crane's Echoing Call", 5, 4, "Level 80/90 (Rank 6)", 679, WeaponStatType.attack_perc, 15.1, id="data.weap.catalysts: Crane's Echoing Call"),
+        pytest.param("Etherlight Spindlelute", 4, 2, "Level 80/90 (Rank 6)", 475, WeaponStatType.energy_recharge_perc, 41.9, id="data.weap.catalysts: Etherlight Spindlelute"),
     ]
 )
 def test_catalyst(name: str, rare: int, tier: int, levl: str, batk: int, seco: WeaponStatType, valu: float) -> None:
