@@ -57,6 +57,7 @@ from test import verify_accuracy
         pytest.param("Aquila Favonia", 5, "Level 80/90 (Rank 6)", 621, WeaponStatType.damage_bonus_physical_perc, 37.7, 5, id="face.wind.rule: Configuring weapon - Sword - Aquila Favonia"),
         pytest.param("Azurelight", 5, "Level 80/90 (Rank 6)", 621, WeaponStatType.critical_rate_perc, 20.1, 5, id="face.wind.rule: Configuring weapon - Sword - Azurelight"),
         pytest.param("Mistsplitter Reforged", 5, "Level 80/90 (Rank 6)", 621, WeaponStatType.critical_damage_perc, 40.2, 5, id="face.wind.rule: Configuring weapon - Sword - Mistsplitter Reforged"),
+        pytest.param("Moonweaver's Dawn", 4, "Level 80/90 (Rank 6)", 523, WeaponStatType.attack_perc, 25.1, 5, id="face.wind.rule: Configuring weapon - Sword - Moonweaver's Dawn"),
         pytest.param("The Alley Flash", 4, "Level 80/90 (Rank 6)", 571, WeaponStatType.elemental_mastery, 50, 5, id="face.wind.rule: Configuring weapon - Sword - The Alley Flash"),
         pytest.param("Sword of Descension", 4, "Level 80/90 (Rank 6)", 414, WeaponStatType.attack_perc, 32.1, 1, id="face.wind.rule: Configuring weapon - Sword - Sword of Descension")
     ]
