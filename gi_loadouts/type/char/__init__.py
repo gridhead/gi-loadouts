@@ -46,6 +46,7 @@ class CharName(str, Enum):
     eula = "Eula"
     faruzan = "Faruzan"
     fischl = "Fischl"
+    flins = "Flins"
     freminet = "Freminet"
     furina = "Furina"
     gaming = "Gaming"
