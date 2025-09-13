@@ -16,6 +16,7 @@ from test import verify_accuracy
         pytest.param("Slingshot", 3, "Level 80/90 (Rank 6)", 334, WeaponStatType.critical_rate_perc, 28.5, 5, id="face.wind.rule: Configuring weapon - Bow - Slingshot"),
         pytest.param("Compound Bow", 4, "Level 80/90 (Rank 6)", 427, WeaponStatType.damage_bonus_physical_perc, 62.9, 5, id="face.wind.rule: Configuring weapon - Bow - Compound Bow"),
         pytest.param("Favonius Warbow", 4, "Level 80/90 (Rank 6)", 427, WeaponStatType.energy_recharge_perc, 55.9, 5, id="face.wind.rule: Configuring weapon - Bow - Favonius Warbow"),
+        pytest.param("Snare Hook", 4, "Level 80/90 (Rank 6)", 427, WeaponStatType.energy_recharge_perc, 55.9, 5, id="face.wind.rule: Configuring weapon - Bow - Snare Hook"),
         pytest.param("Hamayumi", 4, "Level 80/90 (Rank 6)", 427, WeaponStatType.attack_perc, 50.3, 5, id="face.wind.rule: Configuring weapon - Bow - Hamayumi"),
         pytest.param("King's Squire", 4, "Level 80/90 (Rank 6)", 427, WeaponStatType.attack_perc, 50.3, 5, id="face.wind.rule: Configuring weapon - Bow - King's Squire"),
         pytest.param("Aqua Simulacra", 5, "Level 80/90 (Rank 6)", 506, WeaponStatType.critical_damage_perc, 80.4, 5, id="face.wind.rule: Configuring weapon - Bow - Aqua Simulacra"),
