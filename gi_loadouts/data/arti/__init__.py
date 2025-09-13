@@ -34,6 +34,7 @@ from . import (
     nlob,
     nmdr,
     none,
+    ntsu,
     nwiw,
     ochc,
     odcx,
@@ -282,6 +283,14 @@ __artilist__ = {
         quaddata=mtat.team.__quaddata__, quadtext=mtat.team.__quadtext__,
         rare=[Rare.Star_3, Rare.Star_4],
         file=mtat.__name__.split(".")[-1]
+    ),
+    ntsu.team.__teamname__: ArtifactTeam(
+        name=ntsu.team.__teamname__,
+        fwol=ntsu.fwol(), pmod=ntsu.pmod(), sdoe=ntsu.sdoe(), gboe=ntsu.gboe(), ccol=ntsu.ccol(),
+        pairdata=ntsu.team.__pairdata__, pairtext=ntsu.team.__pairtext__,
+        quaddata=ntsu.team.__quaddata__, quadtext=ntsu.team.__quadtext__,
+        rare=[Rare.Star_4, Rare.Star_5],
+        file=ntsu.__name__.split(".")[-1]
     ),
     nwiw.team.__teamname__: ArtifactTeam(
         name=nwiw.team.__teamname__,
