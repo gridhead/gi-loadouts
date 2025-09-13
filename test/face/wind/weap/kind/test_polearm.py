@@ -25,6 +25,7 @@ from test import verify_accuracy
         pytest.param("Footprint of the Rainbow", 4, "Level 80/90 (Rank 6)", 475, WeaponStatType.defense_perc, 47.2, 5, id="face.wind.rule: Configuring weapon - Polearm - Footprint of the Rainbow"),
         pytest.param("Missive Windspear", 4, "Level 80/90 (Rank 6)", 475, WeaponStatType.attack_perc, 37.7, 5, id="face.wind.rule: Configuring weapon - Polearm - Missive Windspear"),
         pytest.param("Prototype Starglitter", 4, "Level 80/90 (Rank 6)", 475, WeaponStatType.energy_recharge_perc, 41.9, 5, id="face.wind.rule: Configuring weapon - Polearm - Prototype Starglitter"),
+        pytest.param("Prospector's Shovel", 4, "Level 80/90 (Rank 6)", 475, WeaponStatType.attack_perc, 37.7, 5, id="face.wind.rule: Configuring weapon - Polearm - Prospector's Shovel"),
         pytest.param("Engulfing Lightning", 5, "Level 80/90 (Rank 6)", 563, WeaponStatType.energy_recharge_perc, 50.3, 5, id="face.wind.rule: Configuring weapon - Polearm - Engulfing Lightning"),
         pytest.param("Fractured Halo", 5, "Level 80/90 (Rank 6)", 563, WeaponStatType.critical_damage_perc, 60.3, 5, id="face.wind.rule: Configuring weapon - Polearm - Fractured Halo"),
         pytest.param("Lumidouce Elegy", 5, "Level 80/90 (Rank 6)", 563, WeaponStatType.critical_rate_perc, 30.2, 5, id="face.wind.rule: Configuring weapon - Polearm - Lumidouce Elegy"),
