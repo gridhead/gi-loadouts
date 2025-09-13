@@ -1,6 +1,7 @@
 <RCC>
   <qresource prefix="name">
     <file>imgs/char/name/aether.webp</file>
+    <file>imgs/char/name/aino.webp</file>
     <file>imgs/char/name/albedo.webp</file>
     <file>imgs/char/name/alhaitham.webp</file>
     <file>imgs/char/name/aloy.webp</file>

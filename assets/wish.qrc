@@ -1,6 +1,7 @@
 <RCC>
   <qresource prefix="wish">
     <file>imgs/char/wish/aether.webp</file>
+    <file>imgs/char/wish/aino.webp</file>
     <file>imgs/char/wish/albedo.webp</file>
     <file>imgs/char/wish/alhaitham.webp</file>
     <file>imgs/char/wish/aloy.webp</file>
