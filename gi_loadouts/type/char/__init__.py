@@ -16,6 +16,7 @@ class CharName(str, Enum):
     Set of characters possible
     """
     aether = "Aether"
+    aino = "Aino"
     albedo = "Albedo"
     alhaitham = "Alhaitham"
     aloy = "Aloy"

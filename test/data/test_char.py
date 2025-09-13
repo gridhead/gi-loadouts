@@ -20,6 +20,13 @@ from test import verify_accuracy
             }, id="data.char: Aether",
         ),
         pytest.param(
+            "Aino", "claymore", 4, "hydro", STAT.elemental_mastery,
+            {
+                "Level 40/50 (Rank 2)": (5167.38, 111.68, 280.12, 24.0),
+                "Level 80/90 (Rank 6)": (10433.47, 225.48, 565.70, 96.0),
+            }, id="data.char: Aino",
+        ),
+        pytest.param(
             "Albedo", "sword", 5, "geo", STAT.damage_bonus_geo_perc,
             {
                 "Level 40/50 (Rank 2)": (5944.44, 112.88, 393.80, 7.2),

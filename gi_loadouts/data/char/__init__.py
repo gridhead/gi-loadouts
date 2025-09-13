@@ -1,4 +1,5 @@
 from .aether import Aether
+from .aino import Aino
 from .albedo import Albedo
 from .alhaitham import Alhaitham
 from .aloy import Aloy
@@ -105,6 +106,7 @@ from .zhongli import Zhongli
 
 __charmaps__ = {
     "Aether": Aether,
+    "Aino": Aino,
     "Albedo": Albedo,
     "Alhaitham": Alhaitham,
     "Aloy": Aloy,
