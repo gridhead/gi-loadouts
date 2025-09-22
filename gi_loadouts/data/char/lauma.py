@@ -6,7 +6,8 @@ from ...type.weap import WeaponType
 
 
 class Lauma(Char):
-    __statdata__: dict = {0: 0.0, 1: 0.0, 2: 28.8, 3: 57.6, 4: 57.6, 5: 86.4, 6: 115.2}
+    # Lauma has 200 Elemental Mastery in her base statistics
+    __statdata__: dict = {0: 200.0, 1: 200.0, 2: 228.8, 3: 257.6, 4: 257.6, 5: 286.4, 6: 315.2}
     __statname__: STAT = STAT.elemental_mastery
     name: CharName = CharName.lauma
     rare: Rare = Rare.Star_5
