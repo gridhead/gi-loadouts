@@ -400,8 +400,8 @@ from test import verify_accuracy
         pytest.param(
             "Lauma", "catalyst", 5, "dendro", STAT.elemental_mastery,
             {
-                "Level 40/50 (Rank 2)": (4784.71, 114.49, 300.48, 28.8),
-                "Level 80/90 (Rank 6)": (9894.80, 236.82, 621.49, 115.2),
+                "Level 40/50 (Rank 2)": (4784.71, 114.49, 300.48, 228.8),
+                "Level 80/90 (Rank 6)": (9894.80, 236.82, 621.49, 315.2),
             }, id="data.char: Lauma",
         ),
         pytest.param(
