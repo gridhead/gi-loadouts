@@ -48,6 +48,7 @@ from test import verify_accuracy
         pytest.param("Skyward Spine", 5, "Level 80/90 (Rank 6)", 621, WeaponStatType.energy_recharge_perc, 33.5, 5, id="face.wind.rule: Configuring weapon - Polearm - Skyward Spine"),
         pytest.param("Wavebreaker's Fin", 4, "Level 80/90 (Rank 6)", 571, WeaponStatType.attack_perc, 12.5, 5, id="face.wind.rule: Configuring weapon - Polearm - Wavebreaker's Fin"),
         pytest.param("Calamity Queller", 5, "Level 80/90 (Rank 6)", 679, WeaponStatType.attack_perc, 15.1, 5, id="face.wind.rule: Configuring weapon - Polearm - Calamity Queller"),
+        pytest.param("Bloodsoaked Ruins", 5, "Level 80/90 (Rank 6)", 563, WeaponStatType.critical_rate_perc, 20.1, 5, id="face.wind.rule: Configuring weapon - Polearm - Bloodsoaked Ruins"),
     ]
 )
 def test_polearm(runner: MainWindow, name: str, rare: int, levl: str, batk: int, seco: WeaponStatType, valu: float, refn: int | None) -> None:
