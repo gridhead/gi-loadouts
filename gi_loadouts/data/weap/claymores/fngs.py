@@ -5,7 +5,9 @@ from ....type.weap.tier import Tier
 
 class FavoniusGreatsword(Claymore):
     name: str = "Favonius Greatsword"
-    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.energy_recharge_perc, stat_data=13.3)
+    seco_stat: WeaponStat = WeaponStat(
+        stat_name=WeaponStatType.energy_recharge_perc, stat_data=13.3
+    )
     tier: Tier = Tier.Tier_1
     rare: Rare = Rare.Star_4
     refi_name: str = "Windfall"

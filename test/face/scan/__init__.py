@@ -93,7 +93,7 @@ __text__ = {
         2-Piece Set: Pyro DMG Bonus +15%
         4-Piece Set: Increases Overloaded, Burning, and Burgeon DMG by 40%. Increases Vaporize and Melt DMG by 15%.
         Using Elemental Skill increases the 2-Piece Set Bonus by 50% of its starting value for 10s. Max 2 stacks.
-    """
+    """,
 }
 
 __rtrn__ = {
@@ -108,9 +108,9 @@ __rtrn__ = {
                 "a": ATTR(stat_name=STAT.critical_rate_perc, stat_data=6.2),
                 "b": ATTR(stat_name=STAT.critical_damage_perc, stat_data=14.0),
                 "c": ATTR(stat_name=STAT.defense_perc, stat_data=12.4),
-                "d": ATTR(stat_name=STAT.defense, stat_data=53.0)
-            }
-        }
+                "d": ATTR(stat_name=STAT.defense, stat_data=53.0),
+            },
+        },
     },
     "Plume of Death": {
         "part": "pmod",
@@ -123,9 +123,9 @@ __rtrn__ = {
                 "a": ATTR(stat_name=STAT.critical_rate_perc, stat_data=3.1),
                 "b": ATTR(stat_name=STAT.critical_damage_perc, stat_data=21.8),
                 "c": ATTR(stat_name=STAT.attack_perc, stat_data=21.0),
-                "d": ATTR(stat_name=STAT.defense, stat_data=21.0)
-            }
-        }
+                "d": ATTR(stat_name=STAT.defense, stat_data=21.0),
+            },
+        },
     },
     "Sands of Eon": {
         "part": "sdoe",
@@ -138,9 +138,9 @@ __rtrn__ = {
                 "a": ATTR(stat_name=STAT.elemental_mastery, stat_data=23.0),
                 "b": ATTR(stat_name=STAT.critical_rate_perc, stat_data=6.6),
                 "c": ATTR(stat_name=STAT.critical_damage_perc, stat_data=21.0),
-                "d": ATTR(stat_name=STAT.health_points_perc, stat_data=13.4)
-            }
-        }
+                "d": ATTR(stat_name=STAT.health_points_perc, stat_data=13.4),
+            },
+        },
     },
     "Goblet of Eonothem": {
         "part": "gboe",
@@ -153,9 +153,9 @@ __rtrn__ = {
                 "a": ATTR(stat_name=STAT.critical_damage_perc, stat_data=5.4),
                 "b": ATTR(stat_name=STAT.health_points, stat_data=568.0),
                 "c": ATTR(stat_name=STAT.defense, stat_data=56.0),
-                "d": ATTR(stat_name=STAT.attack, stat_data=35.0)
-            }
-        }
+                "d": ATTR(stat_name=STAT.attack, stat_data=35.0),
+            },
+        },
     },
     "Circlet of Logos": {
         "part": "ccol",
@@ -168,10 +168,10 @@ __rtrn__ = {
                 "a": ATTR(stat_name=STAT.critical_damage_perc, stat_data=13.2),
                 "b": ATTR(stat_name=STAT.health_points_perc, stat_data=5.8),
                 "c": ATTR(stat_name=STAT.health_points, stat_data=717.0),
-                "d": ATTR(stat_name=STAT.attack, stat_data=53.0)
-            }
-        }
-    }
+                "d": ATTR(stat_name=STAT.attack, stat_data=53.0),
+            },
+        },
+    },
 }
 
 __rtrn_flty__ = {
@@ -183,11 +183,15 @@ __rtrn_flty__ = {
         "main": ATTR(stat_name=STAT.energy_recharge_perc, stat_data=51.8),
         "seco": {
             "a": ATTR(stat_name=STAT.elemental_mastery, stat_data=23.0),
-            "b": ATTR(stat_name=STAT.critical_rate_perc, stat_data=modify_datatype_to_transfer(" ")),
+            "b": ATTR(
+                stat_name=STAT.critical_rate_perc, stat_data=modify_datatype_to_transfer(" ")
+            ),
             "c": ATTR(stat_name=STAT.critical_damage_perc, stat_data=21.0),
-            "d": ATTR(stat_name=STAT.health_points_perc, stat_data=modify_datatype_to_transfer("abc"))
-        }
-    }
+            "d": ATTR(
+                stat_name=STAT.health_points_perc, stat_data=modify_datatype_to_transfer("abc")
+            ),
+        },
+    },
 }
 
 
@@ -199,7 +203,7 @@ class MockScanDialog:
             "pmod": "Plume of Death",
             "sdoe": "Sands of Eon",
             "gboe": "Goblet of Eonothem",
-            "ccol": "Circlet of Logos"
+            "ccol": "Circlet of Logos",
         }
 
     def exec(self):

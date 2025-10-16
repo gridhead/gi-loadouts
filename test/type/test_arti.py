@@ -19,10 +19,12 @@ from gi_loadouts.type.arti.sdoe import __revmap__ as __sdoepage__
     "item, stat",
     [
         pytest.param(
-            FWOL(), stat,
+            FWOL(),
+            stat,
             id=f"type.arti.fwol: Flower of Life with {stat.value.value}",
-        ) for stat in __fwolpage__.values()
-    ]
+        )
+        for stat in __fwolpage__.values()
+    ],
 )
 def test_fwol(item, stat):
     zerodata = {
@@ -36,14 +38,16 @@ def test_fwol(item, stat):
     "item, stat",
     [
         pytest.param(
-            PMOD(), stat,
+            PMOD(),
+            stat,
             id=f"type.arti.pmod: Plume of Death with {stat.value.value}",
-        ) for stat in __pmodpage__.values()
-    ]
+        )
+        for stat in __pmodpage__.values()
+    ],
 )
 def test_pmod(item, stat):
     zerodata = {
-        MainStatType_PMOD.attack : 8.0,
+        MainStatType_PMOD.attack: 8.0,
     }
     item.stat_name = stat
     assert item.stat_data == zerodata[stat]
@@ -53,14 +57,16 @@ def test_pmod(item, stat):
     "item, stat",
     [
         pytest.param(
-            SDOE(), stat,
+            SDOE(),
+            stat,
             id=f"type.arti.sdoe: Sands of Eon with {stat.value.value}",
-        ) for stat in __sdoepage__.values()
-    ]
+        )
+        for stat in __sdoepage__.values()
+    ],
 )
 def test_sdoe(item, stat):
     zerodata = {
-        MainStatType_SDOE.attack_perc : 3.1,
+        MainStatType_SDOE.attack_perc: 3.1,
         MainStatType_SDOE.defense_perc: 3.9,
         MainStatType_SDOE.health_points_perc: 3.1,
         MainStatType_SDOE.elemental_mastery: 12.6,
@@ -74,10 +80,12 @@ def test_sdoe(item, stat):
     "item, stat",
     [
         pytest.param(
-            GBOE(), stat,
+            GBOE(),
+            stat,
             id=f"type.arti.gboe: Goblet of Eonothem with {stat.value.value}",
-        ) for stat in __gboepage__.values()
-    ]
+        )
+        for stat in __gboepage__.values()
+    ],
 )
 def test_gboe(item, stat):
     zerodata = {
@@ -102,10 +110,12 @@ def test_gboe(item, stat):
     "item, stat",
     [
         pytest.param(
-            CCOL(), stat,
+            CCOL(),
+            stat,
             id=f"type.arti.ccol: Circlet of Logos with {stat.value.value}",
-        ) for stat in __ccolpage__.values()
-    ]
+        )
+        for stat in __ccolpage__.values()
+    ],
 )
 def test_ccol(item, stat):
     zerodata = {

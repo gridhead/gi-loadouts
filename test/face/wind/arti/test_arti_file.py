@@ -40,12 +40,22 @@ from . import (
 @pytest.mark.parametrize(
     "area",
     [
-        pytest.param("fwol", id="face.wind.rule: Saving a 'None' artifact from 'Flower of Life' area"),
-        pytest.param("pmod", id="face.wind.rule: Saving a 'None' artifact from 'Plume of Death' area"),
-        pytest.param("sdoe", id="face.wind.rule: Saving a 'None' artifact from 'Sands of Eon' area"),
-        pytest.param("gboe", id="face.wind.rule: Saving a 'None' artifact from 'Goblet of Eonothem' area"),
-        pytest.param("ccol", id="face.wind.rule: Saving a 'None' artifact from 'Circlet of Logos' area"),
-    ]
+        pytest.param(
+            "fwol", id="face.wind.rule: Saving a 'None' artifact from 'Flower of Life' area"
+        ),
+        pytest.param(
+            "pmod", id="face.wind.rule: Saving a 'None' artifact from 'Plume of Death' area"
+        ),
+        pytest.param(
+            "sdoe", id="face.wind.rule: Saving a 'None' artifact from 'Sands of Eon' area"
+        ),
+        pytest.param(
+            "gboe", id="face.wind.rule: Saving a 'None' artifact from 'Goblet of Eonothem' area"
+        ),
+        pytest.param(
+            "ccol", id="face.wind.rule: Saving a 'None' artifact from 'Circlet of Logos' area"
+        ),
+    ],
 )
 def test_arti_save_none(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str) -> None:
     """
@@ -77,9 +87,11 @@ def test_arti_save_none(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
         pytest.param("fwol", id="face.wind.rule: Saving an artifact from 'Flower of Life' area"),
         pytest.param("pmod", id="face.wind.rule: Saving an artifact from 'Plume of Death' area"),
         pytest.param("sdoe", id="face.wind.rule: Saving an artifact from 'Sands of Eon' area"),
-        pytest.param("gboe", id="face.wind.rule: Saving an artifact from 'Goblet of Eonothem' area"),
+        pytest.param(
+            "gboe", id="face.wind.rule: Saving an artifact from 'Goblet of Eonothem' area"
+        ),
         pytest.param("ccol", id="face.wind.rule: Saving an artifact from 'Circlet of Logos' area"),
-    ]
+    ],
 )
 def test_arti_save_name(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str) -> None:
     """
@@ -98,7 +110,9 @@ def test_arti_save_name(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
     getattr(runner, f"arti_{area}_rare").setCurrentText(conf["rare"].value.name)
     conf["levl"] = choice([item for item in ArtiLevl if conf["rare"] in item.value.rare])
     getattr(runner, f"arti_{area}_levl").setCurrentText(conf["levl"].value.name)
-    conf["stat"] = choice([item for item in getattr(base, f"MainStatType_{area.upper()}") if item.value != STAT.none])
+    conf["stat"] = choice(
+        [item for item in getattr(base, f"MainStatType_{area.upper()}") if item.value != STAT.none]
+    )
     getattr(runner, f"arti_{area}_name_main").setCurrentText(conf["stat"].value.value)
     for indx in ["a", "b", "c", "d"]:
         getattr(runner, f"arti_{area}_data_{indx}").setText(str(round(uniform(0, 100), 2)))
@@ -118,12 +132,22 @@ def test_arti_save_name(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
 @pytest.mark.parametrize(
     "area",
     [
-        pytest.param("fwol", id="face.wind.rule: Failing to save an artifact from 'Flower of Life' area"),
-        pytest.param("pmod", id="face.wind.rule: Failing to save an artifact from 'Plume of Death' area"),
-        pytest.param("sdoe", id="face.wind.rule: Failing to save an artifact from 'Sands of Eon' area"),
-        pytest.param("gboe", id="face.wind.rule: Failing to save an artifact from 'Goblet of Eonothem' area"),
-        pytest.param("ccol", id="face.wind.rule: Failing to save an artifact from 'Circlet of Logos' area"),
-    ]
+        pytest.param(
+            "fwol", id="face.wind.rule: Failing to save an artifact from 'Flower of Life' area"
+        ),
+        pytest.param(
+            "pmod", id="face.wind.rule: Failing to save an artifact from 'Plume of Death' area"
+        ),
+        pytest.param(
+            "sdoe", id="face.wind.rule: Failing to save an artifact from 'Sands of Eon' area"
+        ),
+        pytest.param(
+            "gboe", id="face.wind.rule: Failing to save an artifact from 'Goblet of Eonothem' area"
+        ),
+        pytest.param(
+            "ccol", id="face.wind.rule: Failing to save an artifact from 'Circlet of Logos' area"
+        ),
+    ],
 )
 def test_arti_save_fail(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str) -> None:
     """
@@ -144,21 +168,51 @@ def test_arti_save_fail(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
     assert isinstance(runner.dialog, QMessageBox)
     assert runner.dialog.icon() == QMessageBox.Information
     assert runner.dialog.windowTitle() == "Save failed"
-    assert "Please confirm that the input is valid (eg. 69, 42.0 etc.) before saving the artifact data in a location that is accessible." in runner.dialog.text()
+    assert (
+        "Please confirm that the input is valid (eg. 69, 42.0 etc.) before saving the artifact data in a location that is accessible."
+        in runner.dialog.text()
+    )
     assert runner.dialog.isVisible()
 
 
 @pytest.mark.parametrize(
     "area, sample, actual",
     [
-        pytest.param("fwol", yaml_fwol_sample, actual_fwol, id="face.wind.rule: Loading an artifact into 'Flower of Life' area from YAML data"),
-        pytest.param("pmod", yaml_pmod_sample, actual_pmod, id="face.wind.rule: Loading an artifact into 'Plume of Death' area from YAML data"),
-        pytest.param("sdoe", yaml_sdoe_sample, actual_sdoe, id="face.wind.rule: Loading an artifact into 'Sands of Eon' area from YAML data"),
-        pytest.param("gboe", yaml_gboe_sample, actual_gboe, id="face.wind.rule: Loading an artifact into 'Goblet of Eonothem' area from YAML data"),
-        pytest.param("ccol", yaml_ccol_sample, actual_ccol, id="face.wind.rule: Loading an artifact into 'Circlet of Logos' area from YAML data"),
-    ]
+        pytest.param(
+            "fwol",
+            yaml_fwol_sample,
+            actual_fwol,
+            id="face.wind.rule: Loading an artifact into 'Flower of Life' area from YAML data",
+        ),
+        pytest.param(
+            "pmod",
+            yaml_pmod_sample,
+            actual_pmod,
+            id="face.wind.rule: Loading an artifact into 'Plume of Death' area from YAML data",
+        ),
+        pytest.param(
+            "sdoe",
+            yaml_sdoe_sample,
+            actual_sdoe,
+            id="face.wind.rule: Loading an artifact into 'Sands of Eon' area from YAML data",
+        ),
+        pytest.param(
+            "gboe",
+            yaml_gboe_sample,
+            actual_gboe,
+            id="face.wind.rule: Loading an artifact into 'Goblet of Eonothem' area from YAML data",
+        ),
+        pytest.param(
+            "ccol",
+            yaml_ccol_sample,
+            actual_ccol,
+            id="face.wind.rule: Loading an artifact into 'Circlet of Logos' area from YAML data",
+        ),
+    ],
 )
-def test_arti_load_yaml(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str, sample: str, actual: dict) -> None:
+def test_arti_load_yaml(
+    runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str, sample: str, actual: dict
+) -> None:
     """
     Test loading an artifact across five areas from YAML data
 
@@ -180,22 +234,54 @@ def test_arti_load_yaml(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
     assert getattr(runner, f"arti_{area}_type_name").text() == truncate_text(actual["name"], 32)
     assert getattr(runner, f"arti_{area}_name_main").currentText() == actual["main"]
     for item in ["a", "b", "c", "d"]:
-        assert getattr(runner, f"arti_{area}_name_{item}").currentText() == actual["stat"][item]["name"]
-        assert getattr(runner, f"arti_{area}_data_{item}").text() == str(actual["stat"][item]["data"])
+        assert (
+            getattr(runner, f"arti_{area}_name_{item}").currentText()
+            == actual["stat"][item]["name"]
+        )
+        assert getattr(runner, f"arti_{area}_data_{item}").text() == str(
+            actual["stat"][item]["data"]
+        )
     assert runner.statarea.currentMessage() == "Artifact data has been successfully loaded."
 
 
 @pytest.mark.parametrize(
     "area, sample, actual",
     [
-        pytest.param("fwol", json_fwol_sample, actual_fwol, id="face.wind.rule: Loading an artifact into 'Flower of Life' area from JSON data"),
-        pytest.param("pmod", json_pmod_sample, actual_pmod, id="face.wind.rule: Loading an artifact into 'Plume of Death' area from JSON data"),
-        pytest.param("sdoe", json_sdoe_sample, actual_sdoe, id="face.wind.rule: Loading an artifact into 'Sands of Eon' area from JSON data"),
-        pytest.param("gboe", json_gboe_sample, actual_gboe, id="face.wind.rule: Loading an artifact into 'Goblet of Eonothem' area from JSON data"),
-        pytest.param("ccol", json_ccol_sample, actual_ccol, id="face.wind.rule: Loading an artifact into 'Circlet of Logos' area from JSON data"),
-    ]
+        pytest.param(
+            "fwol",
+            json_fwol_sample,
+            actual_fwol,
+            id="face.wind.rule: Loading an artifact into 'Flower of Life' area from JSON data",
+        ),
+        pytest.param(
+            "pmod",
+            json_pmod_sample,
+            actual_pmod,
+            id="face.wind.rule: Loading an artifact into 'Plume of Death' area from JSON data",
+        ),
+        pytest.param(
+            "sdoe",
+            json_sdoe_sample,
+            actual_sdoe,
+            id="face.wind.rule: Loading an artifact into 'Sands of Eon' area from JSON data",
+        ),
+        pytest.param(
+            "gboe",
+            json_gboe_sample,
+            actual_gboe,
+            id="face.wind.rule: Loading an artifact into 'Goblet of Eonothem' area from JSON data",
+        ),
+        pytest.param(
+            "ccol",
+            json_ccol_sample,
+            actual_ccol,
+            id="face.wind.rule: Loading an artifact into 'Circlet of Logos' area from JSON data",
+        ),
+    ],
 )
-def test_arti_load_json(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str, sample: str, actual: dict) -> None:
+def test_arti_load_json(
+    runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str, sample: str, actual: dict
+) -> None:
     """
     Test loading an artifact across five areas from JSON data
 
@@ -217,20 +303,36 @@ def test_arti_load_json(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
     assert getattr(runner, f"arti_{area}_type_name").text() == truncate_text(actual["name"], 32)
     assert getattr(runner, f"arti_{area}_name_main").currentText() == actual["main"]
     for item in ["a", "b", "c", "d"]:
-        assert getattr(runner, f"arti_{area}_name_{item}").currentText() == actual["stat"][item]["name"]
-        assert getattr(runner, f"arti_{area}_data_{item}").text() == str(actual["stat"][item]["data"])
+        assert (
+            getattr(runner, f"arti_{area}_name_{item}").currentText()
+            == actual["stat"][item]["name"]
+        )
+        assert getattr(runner, f"arti_{area}_data_{item}").text() == str(
+            actual["stat"][item]["data"]
+        )
     assert runner.statarea.currentMessage() == "Artifact data has been successfully loaded."
 
 
 @pytest.mark.parametrize(
     "area",
     [
-        pytest.param("fwol", id="face.wind.rule: Cancelling loading an artifact into 'Flower of Life' area"),
-        pytest.param("pmod", id="face.wind.rule: Cancelling loading an artifact into 'Plume of Death' area"),
-        pytest.param("sdoe", id="face.wind.rule: Cancelling loading an artifact into 'Sands of Eon' area"),
-        pytest.param("gboe", id="face.wind.rule: Cancelling loading an artifact into 'Goblet of Eonothem' area"),
-        pytest.param("ccol", id="face.wind.rule: Cancelling loading an artifact into 'Circlet of Logos' area"),
-    ]
+        pytest.param(
+            "fwol", id="face.wind.rule: Cancelling loading an artifact into 'Flower of Life' area"
+        ),
+        pytest.param(
+            "pmod", id="face.wind.rule: Cancelling loading an artifact into 'Plume of Death' area"
+        ),
+        pytest.param(
+            "sdoe", id="face.wind.rule: Cancelling loading an artifact into 'Sands of Eon' area"
+        ),
+        pytest.param(
+            "gboe",
+            id="face.wind.rule: Cancelling loading an artifact into 'Goblet of Eonothem' area",
+        ),
+        pytest.param(
+            "ccol", id="face.wind.rule: Cancelling loading an artifact into 'Circlet of Logos' area"
+        ),
+    ],
 )
 def test_arti_load_nope(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str) -> None:
     """
@@ -256,12 +358,27 @@ def test_arti_load_nope(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
 @pytest.mark.parametrize(
     "area",
     [
-        pytest.param("fwol", id="face.wind.rule: Loading an artifact into 'Flower of Life' area from an empty file"),
-        pytest.param("pmod", id="face.wind.rule: Loading an artifact into 'Plume of Death' area from an empty file"),
-        pytest.param("sdoe", id="face.wind.rule: Loading an artifact into 'Sands of Eon' area from an empty file"),
-        pytest.param("gboe", id="face.wind.rule: Loading an artifact into 'Goblet of Eonothem' area from an empty file"),
-        pytest.param("ccol", id="face.wind.rule: Loading an artifact into 'Circlet of Logos' area from an empty file"),
-    ]
+        pytest.param(
+            "fwol",
+            id="face.wind.rule: Loading an artifact into 'Flower of Life' area from an empty file",
+        ),
+        pytest.param(
+            "pmod",
+            id="face.wind.rule: Loading an artifact into 'Plume of Death' area from an empty file",
+        ),
+        pytest.param(
+            "sdoe",
+            id="face.wind.rule: Loading an artifact into 'Sands of Eon' area from an empty file",
+        ),
+        pytest.param(
+            "gboe",
+            id="face.wind.rule: Loading an artifact into 'Goblet of Eonothem' area from an empty file",
+        ),
+        pytest.param(
+            "ccol",
+            id="face.wind.rule: Loading an artifact into 'Circlet of Logos' area from an empty file",
+        ),
+    ],
 )
 def test_arti_load_void(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str) -> None:
     """
@@ -282,7 +399,10 @@ def test_arti_load_void(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
     assert isinstance(runner.dialog, QMessageBox)
     assert runner.dialog.icon() == QMessageBox.Information
     assert runner.dialog.windowTitle() == "Load failed"
-    assert "Please confirm that the artifact data follows the valid format before loading it from a location that is accessible." in runner.dialog.text()
+    assert (
+        "Please confirm that the artifact data follows the valid format before loading it from a location that is accessible."
+        in runner.dialog.text()
+    )
     assert "Selected file cannot be read." in runner.dialog.text()
     assert runner.dialog.isVisible()
 
@@ -290,19 +410,71 @@ def test_arti_load_void(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
 @pytest.mark.parametrize(
     "area, sample, type",
     [
-        pytest.param("fwol", json_fwol_sample.replace("fwol", "AWRY"), yaml_type, id="face.wind.rule: Loading an artifact with incorrect area into 'Flower of Life' area from YAML data"),
-        pytest.param("pmod", json_pmod_sample.replace("pmod", "AWRY"), yaml_type, id="face.wind.rule: Loading an artifact with incorrect area into 'Plume of Death' area from YAML data"),
-        pytest.param("sdoe", json_sdoe_sample.replace("sdoe", "AWRY"), yaml_type, id="face.wind.rule: Loading an artifact with incorrect area into 'Sands of Eon' area from YAML data"),
-        pytest.param("gboe", json_gboe_sample.replace("gboe", "AWRY"), yaml_type, id="face.wind.rule: Loading an artifact with incorrect area into 'Goblet of Eonothem' area from YAML data"),
-        pytest.param("ccol", json_ccol_sample.replace("ccol", "AWRY"), yaml_type, id="face.wind.rule: Loading an artifact with incorrect area into 'Circlet of Logos' area from YAML data"),
-        pytest.param("fwol", json_fwol_sample.replace("flower", "AWRY"), json_type, id="face.wind.rule: Loading an artifact with incorrect area into 'Flower of Life' area from JSON data"),
-        pytest.param("pmod", json_pmod_sample.replace("plume", "AWRY"), json_type, id="face.wind.rule: Loading an artifact with incorrect area into 'Plume of Death' area from JSON data"),
-        pytest.param("sdoe", json_sdoe_sample.replace("sands", "AWRY"), json_type, id="face.wind.rule: Loading an artifact with incorrect area into 'Sands of Eon' area from JSON data"),
-        pytest.param("gboe", json_gboe_sample.replace("goblet", "AWRY"), json_type, id="face.wind.rule: Loading an artifact with incorrect area into 'Goblet of Eonothem' area from JSON data"),
-        pytest.param("ccol", json_ccol_sample.replace("circlet", "AWRY"), json_type, id="face.wind.rule: Loading an artifact with incorrect area into 'Circlet of Logos' area from JSON data"),
-    ]
+        pytest.param(
+            "fwol",
+            json_fwol_sample.replace("fwol", "AWRY"),
+            yaml_type,
+            id="face.wind.rule: Loading an artifact with incorrect area into 'Flower of Life' area from YAML data",
+        ),
+        pytest.param(
+            "pmod",
+            json_pmod_sample.replace("pmod", "AWRY"),
+            yaml_type,
+            id="face.wind.rule: Loading an artifact with incorrect area into 'Plume of Death' area from YAML data",
+        ),
+        pytest.param(
+            "sdoe",
+            json_sdoe_sample.replace("sdoe", "AWRY"),
+            yaml_type,
+            id="face.wind.rule: Loading an artifact with incorrect area into 'Sands of Eon' area from YAML data",
+        ),
+        pytest.param(
+            "gboe",
+            json_gboe_sample.replace("gboe", "AWRY"),
+            yaml_type,
+            id="face.wind.rule: Loading an artifact with incorrect area into 'Goblet of Eonothem' area from YAML data",
+        ),
+        pytest.param(
+            "ccol",
+            json_ccol_sample.replace("ccol", "AWRY"),
+            yaml_type,
+            id="face.wind.rule: Loading an artifact with incorrect area into 'Circlet of Logos' area from YAML data",
+        ),
+        pytest.param(
+            "fwol",
+            json_fwol_sample.replace("flower", "AWRY"),
+            json_type,
+            id="face.wind.rule: Loading an artifact with incorrect area into 'Flower of Life' area from JSON data",
+        ),
+        pytest.param(
+            "pmod",
+            json_pmod_sample.replace("plume", "AWRY"),
+            json_type,
+            id="face.wind.rule: Loading an artifact with incorrect area into 'Plume of Death' area from JSON data",
+        ),
+        pytest.param(
+            "sdoe",
+            json_sdoe_sample.replace("sands", "AWRY"),
+            json_type,
+            id="face.wind.rule: Loading an artifact with incorrect area into 'Sands of Eon' area from JSON data",
+        ),
+        pytest.param(
+            "gboe",
+            json_gboe_sample.replace("goblet", "AWRY"),
+            json_type,
+            id="face.wind.rule: Loading an artifact with incorrect area into 'Goblet of Eonothem' area from JSON data",
+        ),
+        pytest.param(
+            "ccol",
+            json_ccol_sample.replace("circlet", "AWRY"),
+            json_type,
+            id="face.wind.rule: Loading an artifact with incorrect area into 'Circlet of Logos' area from JSON data",
+        ),
+    ],
 )
-def test_arti_load_awry(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str, sample: str, type: str) -> None:
+def test_arti_load_awry(
+    runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str, sample: str, type: str
+) -> None:
     """
     Test loading an artifact with incorrect area across five areas from data
 
@@ -321,27 +493,94 @@ def test_arti_load_awry(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
     assert isinstance(runner.dialog, QMessageBox)
     assert runner.dialog.icon() == QMessageBox.Information
     assert runner.dialog.windowTitle() == "Load failed"
-    assert "Please confirm that the artifact data follows the valid format before loading it from a location that is accessible." in runner.dialog.text()
-    assert "Artifact stat cannot be identified or unit data cannot be parsed." in runner.dialog.text()
+    assert (
+        "Please confirm that the artifact data follows the valid format before loading it from a location that is accessible."
+        in runner.dialog.text()
+    )
+    assert (
+        "Artifact stat cannot be identified or unit data cannot be parsed." in runner.dialog.text()
+    )
     assert runner.dialog.isVisible()
 
 
 @pytest.mark.parametrize(
     "area, sample, type",
     [
-        pytest.param("fwol", yaml_pmod_sample.replace("name: HP\n", "name: Energy Recharge\n").replace("name: ATK\n", "name: HP\n"), yaml_type, id="face.wind.rule: Loading an artifact with mismatched area into 'Flower of Life' area from YAML data"),
-        pytest.param("pmod", yaml_sdoe_sample.replace("name: ATK\n", "name: HP\n").replace("name: Elemental Mastery\n", "name: ATK\n"), yaml_type, id="face.wind.rule: Loading an artifact with mismatched area into 'Plume of Death' area from YAML data"),
-        pytest.param("sdoe", yaml_gboe_sample.replace("name: Physical DMG Bonus\n", "name: ATK %\n"), yaml_type, id="face.wind.rule: Loading an artifact with mismatched area into 'Sands of Eon' area from YAML data"),
-        pytest.param("gboe", yaml_ccol_sample.replace("name: Healing Bonus\n", "name: HP %\n"), yaml_type, id="face.wind.rule: Loading an artifact with mismatched area into 'Goblet of Eonothem' area from YAML data"),
-        pytest.param("ccol", yaml_fwol_sample.replace("name: HP\n", "name: HP %\n"), yaml_type, id="face.wind.rule: Loading an artifact with mismatched area into 'Circlet of Logos' area from YAML data"),
-        pytest.param("fwol", json_pmod_sample.replace("\"key\": \"hp\",\n", "\"key\": \"enerRech_\",\n").replace("\"mainStatKey\": \"atk\",\n", "\"mainStatKey\": \"hp\",\n"), json_type, id="face.wind.rule: Loading an artifact with mismatched area into 'Flower of Life' area from JSON data"),
-        pytest.param("pmod", json_sdoe_sample.replace("\"key\": \"atk\",\n", "\"key\": \"hp\",\n").replace("\"mainStatKey\": \"eleMas\",\n", "\"mainStatKey\": \"atk\",\n"), json_type, id="face.wind.rule: Loading an artifact with mismatched area into 'Plume of Death' area from JSON data"),
-        pytest.param("sdoe", json_gboe_sample.replace("\"mainStatKey\": \"physical_dmg_\",\n", "\"mainStatKey\": \"atk_\",\n"), json_type, id="face.wind.rule: Loading an artifact with mismatched area into 'Sands of Eon' area from JSON data"),
-        pytest.param("gboe", json_ccol_sample.replace("\"mainStatKey\": \"heal_\",\n", "\"mainStatKey\": \"hp_\",\n"), json_type, id="face.wind.rule: Loading an artifact with incorrect mismatched into 'Goblet of Eonothem' area from JSON data"),
-        pytest.param("ccol", json_fwol_sample.replace("\"mainStatKey\": \"hp\",\n", "\"mainStatKey\": \"hp_\",\n"), json_type, id="face.wind.rule: Loading an artifact with mismatched area into 'Circlet of Logos' area from JSON data"),
-    ]
+        pytest.param(
+            "fwol",
+            yaml_pmod_sample.replace("name: HP\n", "name: Energy Recharge\n").replace(
+                "name: ATK\n", "name: HP\n"
+            ),
+            yaml_type,
+            id="face.wind.rule: Loading an artifact with mismatched area into 'Flower of Life' area from YAML data",
+        ),
+        pytest.param(
+            "pmod",
+            yaml_sdoe_sample.replace("name: ATK\n", "name: HP\n").replace(
+                "name: Elemental Mastery\n", "name: ATK\n"
+            ),
+            yaml_type,
+            id="face.wind.rule: Loading an artifact with mismatched area into 'Plume of Death' area from YAML data",
+        ),
+        pytest.param(
+            "sdoe",
+            yaml_gboe_sample.replace("name: Physical DMG Bonus\n", "name: ATK %\n"),
+            yaml_type,
+            id="face.wind.rule: Loading an artifact with mismatched area into 'Sands of Eon' area from YAML data",
+        ),
+        pytest.param(
+            "gboe",
+            yaml_ccol_sample.replace("name: Healing Bonus\n", "name: HP %\n"),
+            yaml_type,
+            id="face.wind.rule: Loading an artifact with mismatched area into 'Goblet of Eonothem' area from YAML data",
+        ),
+        pytest.param(
+            "ccol",
+            yaml_fwol_sample.replace("name: HP\n", "name: HP %\n"),
+            yaml_type,
+            id="face.wind.rule: Loading an artifact with mismatched area into 'Circlet of Logos' area from YAML data",
+        ),
+        pytest.param(
+            "fwol",
+            json_pmod_sample.replace('"key": "hp",\n', '"key": "enerRech_",\n').replace(
+                '"mainStatKey": "atk",\n', '"mainStatKey": "hp",\n'
+            ),
+            json_type,
+            id="face.wind.rule: Loading an artifact with mismatched area into 'Flower of Life' area from JSON data",
+        ),
+        pytest.param(
+            "pmod",
+            json_sdoe_sample.replace('"key": "atk",\n', '"key": "hp",\n').replace(
+                '"mainStatKey": "eleMas",\n', '"mainStatKey": "atk",\n'
+            ),
+            json_type,
+            id="face.wind.rule: Loading an artifact with mismatched area into 'Plume of Death' area from JSON data",
+        ),
+        pytest.param(
+            "sdoe",
+            json_gboe_sample.replace(
+                '"mainStatKey": "physical_dmg_",\n', '"mainStatKey": "atk_",\n'
+            ),
+            json_type,
+            id="face.wind.rule: Loading an artifact with mismatched area into 'Sands of Eon' area from JSON data",
+        ),
+        pytest.param(
+            "gboe",
+            json_ccol_sample.replace('"mainStatKey": "heal_",\n', '"mainStatKey": "hp_",\n'),
+            json_type,
+            id="face.wind.rule: Loading an artifact with incorrect mismatched into 'Goblet of Eonothem' area from JSON data",
+        ),
+        pytest.param(
+            "ccol",
+            json_fwol_sample.replace('"mainStatKey": "hp",\n', '"mainStatKey": "hp_",\n'),
+            json_type,
+            id="face.wind.rule: Loading an artifact with mismatched area into 'Circlet of Logos' area from JSON data",
+        ),
+    ],
 )
-def test_arti_load_area_diff(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str, sample: str, type: str) -> None:
+def test_arti_load_area_diff(
+    runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str, sample: str, type: str
+) -> None:
     """
     Test loading an artifact with mismatched area from the file
 
@@ -360,7 +599,10 @@ def test_arti_load_area_diff(runner: MainWindow, qtbot: QtBot, mocker: MockerFix
     assert isinstance(runner.dialog, QMessageBox)
     assert runner.dialog.icon() == QMessageBox.Information
     assert runner.dialog.windowTitle() == "Load failed"
-    assert "Please confirm that the artifact data follows the valid format before loading it from a location that is accessible." in runner.dialog.text()
+    assert (
+        "Please confirm that the artifact data follows the valid format before loading it from a location that is accessible."
+        in runner.dialog.text()
+    )
     assert "The artifact file does not match the expected equipment slot." in runner.dialog.text()
     assert runner.dialog.isVisible()
 
@@ -368,19 +610,71 @@ def test_arti_load_area_diff(runner: MainWindow, qtbot: QtBot, mocker: MockerFix
 @pytest.mark.parametrize(
     "area, sample, type",
     [
-        pytest.param("fwol", yaml_fwol_sample.replace("name: Crit Rate\n", "name: Foo Bar\n"), yaml_type, id="face.wind.rule: Loading an artifact with incorrect substats into 'Flower of Life' area from YAML data"),
-        pytest.param("pmod", yaml_pmod_sample.replace("name: DEF\n", "name: Foo Bar\n"), yaml_type, id="face.wind.rule: Loading an artifact with incorrect substats into 'Plume of Death' area from YAML data"),
-        pytest.param("sdoe", yaml_sdoe_sample.replace("name: ATK\n", "name: Foo Bar\n"), yaml_type, id="face.wind.rule: Loading an artifact with incorrect substats into 'Sands of Eon' area from YAML data"),
-        pytest.param("gboe", yaml_gboe_sample.replace("name: Elemental Mastery\n", "name: Foo Bar\n"), yaml_type, id="face.wind.rule: Loading an artifact with incorrect substats into 'Goblet of Eonothem' area from YAML data"),
-        pytest.param("ccol", yaml_ccol_sample.replace("name: ATK\n", "name: Foo Bar\n"), yaml_type, id="face.wind.rule: Loading an artifact with incorrect substats into 'Circlet of Logos' area from YAML data"),
-        pytest.param("fwol", json_fwol_sample.replace("\"key\": \"critRate_\",\n", "\"key\": \"foobar\",\n"), json_type, id="face.wind.rule: Loading an artifact with incorrect substats into 'Flower of Life' area from JSON data"),
-        pytest.param("pmod", json_pmod_sample.replace("\"key\": \"def\",\n", "\"key\": \"foobar\",\n"), json_type, id="face.wind.rule: Loading an artifact with incorrect substats into 'Plume of Death' area from JSON data"),
-        pytest.param("sdoe", json_sdoe_sample.replace("\"key\": \"atk\",\n", "\"key\": \"foobar\",\n"), json_type, id="face.wind.rule: Loading an artifact with incorrect substats into 'Sands of Eon' area from JSON data"),
-        pytest.param("gboe", json_gboe_sample.replace("\"key\": \"eleMas\",\n", "\"key\": \"foobar\",\n"), json_type, id="face.wind.rule: Loading an artifact with incorrect substats into 'Goblet of Eonothem' area from JSON data"),
-        pytest.param("ccol", json_ccol_sample.replace("\"key\": \"atk\",\n", "\"key\": \"foobar\",\n"), json_type, id="face.wind.rule: Loading an artifact with incorrect substats into 'Circlet of Logos' area from JSON data"),
-    ]
+        pytest.param(
+            "fwol",
+            yaml_fwol_sample.replace("name: Crit Rate\n", "name: Foo Bar\n"),
+            yaml_type,
+            id="face.wind.rule: Loading an artifact with incorrect substats into 'Flower of Life' area from YAML data",
+        ),
+        pytest.param(
+            "pmod",
+            yaml_pmod_sample.replace("name: DEF\n", "name: Foo Bar\n"),
+            yaml_type,
+            id="face.wind.rule: Loading an artifact with incorrect substats into 'Plume of Death' area from YAML data",
+        ),
+        pytest.param(
+            "sdoe",
+            yaml_sdoe_sample.replace("name: ATK\n", "name: Foo Bar\n"),
+            yaml_type,
+            id="face.wind.rule: Loading an artifact with incorrect substats into 'Sands of Eon' area from YAML data",
+        ),
+        pytest.param(
+            "gboe",
+            yaml_gboe_sample.replace("name: Elemental Mastery\n", "name: Foo Bar\n"),
+            yaml_type,
+            id="face.wind.rule: Loading an artifact with incorrect substats into 'Goblet of Eonothem' area from YAML data",
+        ),
+        pytest.param(
+            "ccol",
+            yaml_ccol_sample.replace("name: ATK\n", "name: Foo Bar\n"),
+            yaml_type,
+            id="face.wind.rule: Loading an artifact with incorrect substats into 'Circlet of Logos' area from YAML data",
+        ),
+        pytest.param(
+            "fwol",
+            json_fwol_sample.replace('"key": "critRate_",\n', '"key": "foobar",\n'),
+            json_type,
+            id="face.wind.rule: Loading an artifact with incorrect substats into 'Flower of Life' area from JSON data",
+        ),
+        pytest.param(
+            "pmod",
+            json_pmod_sample.replace('"key": "def",\n', '"key": "foobar",\n'),
+            json_type,
+            id="face.wind.rule: Loading an artifact with incorrect substats into 'Plume of Death' area from JSON data",
+        ),
+        pytest.param(
+            "sdoe",
+            json_sdoe_sample.replace('"key": "atk",\n', '"key": "foobar",\n'),
+            json_type,
+            id="face.wind.rule: Loading an artifact with incorrect substats into 'Sands of Eon' area from JSON data",
+        ),
+        pytest.param(
+            "gboe",
+            json_gboe_sample.replace('"key": "eleMas",\n', '"key": "foobar",\n'),
+            json_type,
+            id="face.wind.rule: Loading an artifact with incorrect substats into 'Goblet of Eonothem' area from JSON data",
+        ),
+        pytest.param(
+            "ccol",
+            json_ccol_sample.replace('"key": "atk",\n', '"key": "foobar",\n'),
+            json_type,
+            id="face.wind.rule: Loading an artifact with incorrect substats into 'Circlet of Logos' area from JSON data",
+        ),
+    ],
 )
-def test_arti_load_name(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str, sample: str, type: str) -> None:
+def test_arti_load_name(
+    runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str, sample: str, type: str
+) -> None:
     """
     Test loading an artifact with incorrect substats across five areas from data
 
@@ -399,27 +693,92 @@ def test_arti_load_name(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
     assert isinstance(runner.dialog, QMessageBox)
     assert runner.dialog.icon() == QMessageBox.Information
     assert runner.dialog.windowTitle() == "Load failed"
-    assert "Please confirm that the artifact data follows the valid format before loading it from a location that is accessible." in runner.dialog.text()
-    assert "Artifact stat cannot be identified or unit data cannot be parsed." in runner.dialog.text()
+    assert (
+        "Please confirm that the artifact data follows the valid format before loading it from a location that is accessible."
+        in runner.dialog.text()
+    )
+    assert (
+        "Artifact stat cannot be identified or unit data cannot be parsed." in runner.dialog.text()
+    )
     assert runner.dialog.isVisible()
 
 
 @pytest.mark.parametrize(
     "area, sample, type",
     [
-        pytest.param("fwol", yaml_fwol_sample.replace("name: Crit Rate\n", "name: HP\n"), yaml_type, id="face.wind.rule: Loading an artifact with same substat and mainstat into 'Flower of Life' area from YAML data"),
-        pytest.param("pmod", yaml_pmod_sample.replace("name: DEF\n", "name: ATK\n"), yaml_type, id="face.wind.rule: Loading an artifact with same substat and mainstat into 'Plume of Death' area from YAML data"),
-        pytest.param("sdoe", yaml_sdoe_sample.replace("name: ATK\n", "name: Elemental Mastery\n"), yaml_type, id="face.wind.rule: Loading an artifact with same substat and mainstat into 'Sands of Eon' area from YAML data"),
-        pytest.param("gboe", yaml_gboe_sample.replace("name: Elemental Mastery\n", "name: ATK %\n").replace("name: Physical DMG Bonus\n", "name: ATK %\n"), yaml_type, id="face.wind.rule: Loading an artifact with same substat and mainstat into 'Goblet of Eonothem' area from YAML data"),
-        pytest.param("ccol", yaml_ccol_sample.replace("name: ATK\n", "name: HP\n").replace("name: Healing Bonus\n", "name: HP\n"), yaml_type, id="face.wind.rule: Loading an artifact with same substat and mainstat into 'Circlet of Logos' area from YAML data"),
-        pytest.param("fwol", json_fwol_sample.replace("\"key\": \"critRate_\",\n", "\"key\": \"hp\",\n"), json_type, id="face.wind.rule: Loading an artifact with same substat and mainstat into 'Flower of Life' area from JSON data"),
-        pytest.param("pmod", json_pmod_sample.replace("\"key\": \"def\",\n", "\"key\": \"atk\",\n"), json_type, id="face.wind.rule: Loading an artifact with same substat and mainstat into 'Plume of Death' area from JSON data"),
-        pytest.param("sdoe", json_sdoe_sample.replace("\"key\": \"atk\",\n", "\"key\": \"eleMas\",\n"), json_type, id="face.wind.rule: Loading an artifact with same substat and mainstat into 'Sands of Eon' area from JSON data"),
-        pytest.param("gboe", json_gboe_sample.replace("\"key\": \"eleMas\",\n", "\"key\": \"atk_\",\n").replace("\"mainStatKey\": \"physical_dmg_\",\n", "\"mainStatKey\": \"atk_\",\n"), json_type, id="face.wind.rule: Loading an artifact with same substat and mainstat into 'Goblet of Eonothem' area from JSON data"),
-        pytest.param("ccol", json_ccol_sample.replace("\"key\": \"atk\",\n", "\"key\": \"hp\",\n").replace("\"mainStatKey\": \"heal_\",\n", "\"mainStatKey\": \"hp\",\n"), json_type, id="face.wind.rule: Loading an artifact with same substat and mainstat into 'Circlet of Logos' area from JSON data"),
-    ]
+        pytest.param(
+            "fwol",
+            yaml_fwol_sample.replace("name: Crit Rate\n", "name: HP\n"),
+            yaml_type,
+            id="face.wind.rule: Loading an artifact with same substat and mainstat into 'Flower of Life' area from YAML data",
+        ),
+        pytest.param(
+            "pmod",
+            yaml_pmod_sample.replace("name: DEF\n", "name: ATK\n"),
+            yaml_type,
+            id="face.wind.rule: Loading an artifact with same substat and mainstat into 'Plume of Death' area from YAML data",
+        ),
+        pytest.param(
+            "sdoe",
+            yaml_sdoe_sample.replace("name: ATK\n", "name: Elemental Mastery\n"),
+            yaml_type,
+            id="face.wind.rule: Loading an artifact with same substat and mainstat into 'Sands of Eon' area from YAML data",
+        ),
+        pytest.param(
+            "gboe",
+            yaml_gboe_sample.replace("name: Elemental Mastery\n", "name: ATK %\n").replace(
+                "name: Physical DMG Bonus\n", "name: ATK %\n"
+            ),
+            yaml_type,
+            id="face.wind.rule: Loading an artifact with same substat and mainstat into 'Goblet of Eonothem' area from YAML data",
+        ),
+        pytest.param(
+            "ccol",
+            yaml_ccol_sample.replace("name: ATK\n", "name: HP\n").replace(
+                "name: Healing Bonus\n", "name: HP\n"
+            ),
+            yaml_type,
+            id="face.wind.rule: Loading an artifact with same substat and mainstat into 'Circlet of Logos' area from YAML data",
+        ),
+        pytest.param(
+            "fwol",
+            json_fwol_sample.replace('"key": "critRate_",\n', '"key": "hp",\n'),
+            json_type,
+            id="face.wind.rule: Loading an artifact with same substat and mainstat into 'Flower of Life' area from JSON data",
+        ),
+        pytest.param(
+            "pmod",
+            json_pmod_sample.replace('"key": "def",\n', '"key": "atk",\n'),
+            json_type,
+            id="face.wind.rule: Loading an artifact with same substat and mainstat into 'Plume of Death' area from JSON data",
+        ),
+        pytest.param(
+            "sdoe",
+            json_sdoe_sample.replace('"key": "atk",\n', '"key": "eleMas",\n'),
+            json_type,
+            id="face.wind.rule: Loading an artifact with same substat and mainstat into 'Sands of Eon' area from JSON data",
+        ),
+        pytest.param(
+            "gboe",
+            json_gboe_sample.replace('"key": "eleMas",\n', '"key": "atk_",\n').replace(
+                '"mainStatKey": "physical_dmg_",\n', '"mainStatKey": "atk_",\n'
+            ),
+            json_type,
+            id="face.wind.rule: Loading an artifact with same substat and mainstat into 'Goblet of Eonothem' area from JSON data",
+        ),
+        pytest.param(
+            "ccol",
+            json_ccol_sample.replace('"key": "atk",\n', '"key": "hp",\n').replace(
+                '"mainStatKey": "heal_",\n', '"mainStatKey": "hp",\n'
+            ),
+            json_type,
+            id="face.wind.rule: Loading an artifact with same substat and mainstat into 'Circlet of Logos' area from JSON data",
+        ),
+    ],
 )
-def test_arti_load_same(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str, sample: str, type: str) -> None:
+def test_arti_load_same(
+    runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str, sample: str, type: str
+) -> None:
     """
     Test loading an artifact with same substat and mainstat across five areas from data
 
@@ -438,7 +797,10 @@ def test_arti_load_same(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
     assert isinstance(runner.dialog, QMessageBox)
     assert runner.dialog.icon() == QMessageBox.Information
     assert runner.dialog.windowTitle() == "Load failed"
-    assert "Please confirm that the artifact data follows the valid format before loading it from a location that is accessible." in runner.dialog.text()
+    assert (
+        "Please confirm that the artifact data follows the valid format before loading it from a location that is accessible."
+        in runner.dialog.text()
+    )
     assert "Artifact substat matches main stat." in runner.dialog.text()
     assert runner.dialog.isVisible()
 
@@ -446,14 +808,31 @@ def test_arti_load_same(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
 @pytest.mark.parametrize(
     "area",
     [
-        pytest.param("fwol", id="face.wind.rule: Saving an artifact from 'Flower of Life' area actually as a YAML file"),
-        pytest.param("pmod", id="face.wind.rule: Saving an artifact from 'Plume of Death' area actually as a YAML file"),
-        pytest.param("sdoe", id="face.wind.rule: Saving an artifact from 'Sands of Eon' area actually as a YAML file"),
-        pytest.param("gboe", id="face.wind.rule: Saving an artifact from 'Goblet of Eonothem' area actually as a YAML file"),
-        pytest.param("ccol", id="face.wind.rule: Saving an artifact from 'Circlet of Logos' area actually as a YAML file"),
-    ]
+        pytest.param(
+            "fwol",
+            id="face.wind.rule: Saving an artifact from 'Flower of Life' area actually as a YAML file",
+        ),
+        pytest.param(
+            "pmod",
+            id="face.wind.rule: Saving an artifact from 'Plume of Death' area actually as a YAML file",
+        ),
+        pytest.param(
+            "sdoe",
+            id="face.wind.rule: Saving an artifact from 'Sands of Eon' area actually as a YAML file",
+        ),
+        pytest.param(
+            "gboe",
+            id="face.wind.rule: Saving an artifact from 'Goblet of Eonothem' area actually as a YAML file",
+        ),
+        pytest.param(
+            "ccol",
+            id="face.wind.rule: Saving an artifact from 'Circlet of Logos' area actually as a YAML file",
+        ),
+    ],
 )
-def test_arti_save_yaml_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str) -> None:
+def test_arti_save_yaml_actual(
+    runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str
+) -> None:
     """
     Test saving an artifact across five areas
 
@@ -470,7 +849,9 @@ def test_arti_save_yaml_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerF
     getattr(runner, f"arti_{area}_rare").setCurrentText(conf["rare"].value.name)
     conf["levl"] = choice([item for item in ArtiLevl if conf["rare"] in item.value.rare])
     getattr(runner, f"arti_{area}_levl").setCurrentText(conf["levl"].value.name)
-    conf["stat"] = choice([item for item in getattr(base, f"MainStatType_{area.upper()}") if item.value != STAT.none])
+    conf["stat"] = choice(
+        [item for item in getattr(base, f"MainStatType_{area.upper()}") if item.value != STAT.none]
+    )
     getattr(runner, f"arti_{area}_name_main").setCurrentText(conf["stat"].value.value)
     for indx in ["a", "b", "c", "d"]:
         getattr(runner, f"arti_{area}_data_{indx}").setText(str(round(uniform(0, 100), 2)))
@@ -512,14 +893,31 @@ def test_arti_save_yaml_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerF
 @pytest.mark.parametrize(
     "area",
     [
-        pytest.param("fwol", id="face.wind.rule: Saving an artifact from 'Flower of Life' area actually as a JSON file"),
-        pytest.param("pmod", id="face.wind.rule: Saving an artifact from 'Plume of Death' area actually as a JSON file"),
-        pytest.param("sdoe", id="face.wind.rule: Saving an artifact from 'Sands of Eon' area actually as a JSON file"),
-        pytest.param("gboe", id="face.wind.rule: Saving an artifact from 'Goblet of Eonothem' area actually as a JSON file"),
-        pytest.param("ccol", id="face.wind.rule: Saving an artifact from 'Circlet of Logos' area actually as a JSON file"),
-    ]
+        pytest.param(
+            "fwol",
+            id="face.wind.rule: Saving an artifact from 'Flower of Life' area actually as a JSON file",
+        ),
+        pytest.param(
+            "pmod",
+            id="face.wind.rule: Saving an artifact from 'Plume of Death' area actually as a JSON file",
+        ),
+        pytest.param(
+            "sdoe",
+            id="face.wind.rule: Saving an artifact from 'Sands of Eon' area actually as a JSON file",
+        ),
+        pytest.param(
+            "gboe",
+            id="face.wind.rule: Saving an artifact from 'Goblet of Eonothem' area actually as a JSON file",
+        ),
+        pytest.param(
+            "ccol",
+            id="face.wind.rule: Saving an artifact from 'Circlet of Logos' area actually as a JSON file",
+        ),
+    ],
 )
-def test_arti_save_json_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str) -> None:
+def test_arti_save_json_actual(
+    runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str
+) -> None:
     """
     Test saving an artifact across five areas
 
@@ -536,7 +934,9 @@ def test_arti_save_json_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerF
     getattr(runner, f"arti_{area}_rare").setCurrentText(conf["rare"].value.name)
     conf["levl"] = choice([item for item in ArtiLevl if conf["rare"] in item.value.rare])
     getattr(runner, f"arti_{area}_levl").setCurrentText(conf["levl"].value.name)
-    conf["stat"] = choice([item for item in getattr(base, f"MainStatType_{area.upper()}") if item.value != STAT.none])
+    conf["stat"] = choice(
+        [item for item in getattr(base, f"MainStatType_{area.upper()}") if item.value != STAT.none]
+    )
     getattr(runner, f"arti_{area}_name_main").setCurrentText(conf["stat"].value.value)
     for indx in ["a", "b", "c", "d"]:
         getattr(runner, f"arti_{area}_data_{indx}").setText(str(round(uniform(0, 100), 2)))
@@ -578,14 +978,36 @@ def test_arti_save_json_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerF
 @pytest.mark.parametrize(
     "area, sample",
     [
-        pytest.param("fwol", yaml_fwol_sample, id="face.wind.rule: Loading an artifact from 'Flower of Life' area actually as a YAML file"),
-        pytest.param("pmod", yaml_pmod_sample, id="face.wind.rule: Loading an artifact from 'Plume of Death' area actually as a YAML file"),
-        pytest.param("sdoe", yaml_sdoe_sample, id="face.wind.rule: Loading an artifact from 'Sands of Eon' area actually as a YAML file"),
-        pytest.param("gboe", yaml_gboe_sample, id="face.wind.rule: Loading an artifact from 'Goblet of Eonothem' area actually as a YAML file"),
-        pytest.param("ccol", yaml_ccol_sample, id="face.wind.rule: Loading an artifact from 'Circlet of Logos' area actually as a YAML file"),
-    ]
+        pytest.param(
+            "fwol",
+            yaml_fwol_sample,
+            id="face.wind.rule: Loading an artifact from 'Flower of Life' area actually as a YAML file",
+        ),
+        pytest.param(
+            "pmod",
+            yaml_pmod_sample,
+            id="face.wind.rule: Loading an artifact from 'Plume of Death' area actually as a YAML file",
+        ),
+        pytest.param(
+            "sdoe",
+            yaml_sdoe_sample,
+            id="face.wind.rule: Loading an artifact from 'Sands of Eon' area actually as a YAML file",
+        ),
+        pytest.param(
+            "gboe",
+            yaml_gboe_sample,
+            id="face.wind.rule: Loading an artifact from 'Goblet of Eonothem' area actually as a YAML file",
+        ),
+        pytest.param(
+            "ccol",
+            yaml_ccol_sample,
+            id="face.wind.rule: Loading an artifact from 'Circlet of Logos' area actually as a YAML file",
+        ),
+    ],
 )
-def test_arti_load_yaml_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str, sample: str) -> None:
+def test_arti_load_yaml_actual(
+    runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str, sample: str
+) -> None:
     """
     Test loading an artifact across five areas
 
@@ -617,14 +1039,36 @@ def test_arti_load_yaml_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerF
 @pytest.mark.parametrize(
     "area, sample",
     [
-        pytest.param("fwol", json_fwol_sample, id="face.wind.rule: Loading an artifact from 'Flower of Life' area actually as a JSON file"),
-        pytest.param("pmod", json_pmod_sample, id="face.wind.rule: Loading an artifact from 'Plume of Death' area actually as a JSON file"),
-        pytest.param("sdoe", json_sdoe_sample, id="face.wind.rule: Loading an artifact from 'Sands of Eon' area actually as a JSON file"),
-        pytest.param("gboe", json_gboe_sample, id="face.wind.rule: Loading an artifact from 'Goblet of Eonothem' area actually as a JSON file"),
-        pytest.param("ccol", json_ccol_sample, id="face.wind.rule: Loading an artifact from 'Circlet of Logos' area actually as a JSON file"),
-    ]
+        pytest.param(
+            "fwol",
+            json_fwol_sample,
+            id="face.wind.rule: Loading an artifact from 'Flower of Life' area actually as a JSON file",
+        ),
+        pytest.param(
+            "pmod",
+            json_pmod_sample,
+            id="face.wind.rule: Loading an artifact from 'Plume of Death' area actually as a JSON file",
+        ),
+        pytest.param(
+            "sdoe",
+            json_sdoe_sample,
+            id="face.wind.rule: Loading an artifact from 'Sands of Eon' area actually as a JSON file",
+        ),
+        pytest.param(
+            "gboe",
+            json_gboe_sample,
+            id="face.wind.rule: Loading an artifact from 'Goblet of Eonothem' area actually as a JSON file",
+        ),
+        pytest.param(
+            "ccol",
+            json_ccol_sample,
+            id="face.wind.rule: Loading an artifact from 'Circlet of Logos' area actually as a JSON file",
+        ),
+    ],
 )
-def test_arti_load_json_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str, sample: str) -> None:
+def test_arti_load_json_actual(
+    runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str, sample: str
+) -> None:
     """
     Test loading an artifact across five areas
 
@@ -656,12 +1100,27 @@ def test_arti_load_json_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerF
 @pytest.mark.parametrize(
     "area",
     [
-        pytest.param("fwol", id="face.wind.rule: Cancelling the save process for an artifact from 'Flower of Life' area"),
-        pytest.param("pmod", id="face.wind.rule: Cancelling the save process for an artifact from 'Plume of Death' area"),
-        pytest.param("sdoe", id="face.wind.rule: Cancelling the save process for an artifact from 'Sands of Eon' area"),
-        pytest.param("gboe", id="face.wind.rule: Cancelling the save process for an artifact from 'Goblet of Eonothem' area"),
-        pytest.param("ccol", id="face.wind.rule: Cancelling the save process for an artifact from 'Circlet of Logos' area"),
-    ]
+        pytest.param(
+            "fwol",
+            id="face.wind.rule: Cancelling the save process for an artifact from 'Flower of Life' area",
+        ),
+        pytest.param(
+            "pmod",
+            id="face.wind.rule: Cancelling the save process for an artifact from 'Plume of Death' area",
+        ),
+        pytest.param(
+            "sdoe",
+            id="face.wind.rule: Cancelling the save process for an artifact from 'Sands of Eon' area",
+        ),
+        pytest.param(
+            "gboe",
+            id="face.wind.rule: Cancelling the save process for an artifact from 'Goblet of Eonothem' area",
+        ),
+        pytest.param(
+            "ccol",
+            id="face.wind.rule: Cancelling the save process for an artifact from 'Circlet of Logos' area",
+        ),
+    ],
 )
 def test_arti_save_nope(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, area: str) -> None:
     """
@@ -681,7 +1140,9 @@ def test_arti_save_nope(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
     getattr(runner, f"arti_{area}_rare").setCurrentText(conf["rare"].value.name)
     conf["levl"] = choice([item for item in ArtiLevl if conf["rare"] in item.value.rare])
     getattr(runner, f"arti_{area}_levl").setCurrentText(conf["levl"].value.name)
-    conf["stat"] = choice([item for item in getattr(base, f"MainStatType_{area.upper()}") if item.value != STAT.none])
+    conf["stat"] = choice(
+        [item for item in getattr(base, f"MainStatType_{area.upper()}") if item.value != STAT.none]
+    )
     getattr(runner, f"arti_{area}_name_main").setCurrentText(conf["stat"].value.value)
     for indx in ["a", "b", "c", "d"]:
         getattr(runner, f"arti_{area}_data_{indx}").setText(str(round(uniform(0, 100), 2)))

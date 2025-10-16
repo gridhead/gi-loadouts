@@ -5,7 +5,9 @@ from ....type.weap.tier import Tier
 
 class KatsuragikiriNagamasa(Claymore):
     name: str = "Katsuragikiri Nagamasa"
-    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.energy_recharge_perc, stat_data=10.0)
+    seco_stat: WeaponStat = WeaponStat(
+        stat_name=WeaponStatType.energy_recharge_perc, stat_data=10.0
+    )
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_4
     refi_name: str = "Samurai Conduct"

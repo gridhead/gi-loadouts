@@ -14,7 +14,7 @@ def truncate_text(text: str = "", qant: int = 30) -> str:
     :return:
     """
     if len(text) > qant:
-        text = f"{text[0:qant-3]}..."
+        text = f"{text[0 : qant - 3]}..."
     return text
 
 

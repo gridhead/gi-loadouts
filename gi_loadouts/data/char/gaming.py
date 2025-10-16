@@ -10,8 +10,12 @@ class Gaming(Char):
     __statname__: STAT = STAT.attack_perc
     name: CharName = CharName.gaming
     rare: Rare = Rare.Star_4
-    base: BaseStat = BaseStat(attack=25.287359237671, defense=58.941749572754, health_points=957.38055419922)
-    ascn: BaseStat = BaseStat(attack=90.479843139648, defense=210.89250183105, health_points=3425.4904785156)
+    base: BaseStat = BaseStat(
+        attack=25.287359237671, defense=58.941749572754, health_points=957.38055419922
+    )
+    ascn: BaseStat = BaseStat(
+        attack=90.479843139648, defense=210.89250183105, health_points=3425.4904785156
+    )
     weapon: WeaponType = WeaponType.claymore
     vision: Vision = Vision.pyro
     cons_name: str = "Leo Expergiscens"

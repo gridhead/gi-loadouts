@@ -4,9 +4,12 @@ from ....type.weap.tier import Tier
 
 # Dynamic calculation has not been implemented
 
+
 class EngulfingLightning(Polearm):
     name: str = "Engulfing Lightning"
-    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.energy_recharge_perc, stat_data=12.0)
+    seco_stat: WeaponStat = WeaponStat(
+        stat_name=WeaponStatType.energy_recharge_perc, stat_data=12.0
+    )
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_5
     refi_name: str = "Timeless Dream: Eternal Stove"

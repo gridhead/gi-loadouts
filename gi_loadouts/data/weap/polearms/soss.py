@@ -4,6 +4,7 @@ from ....type.weap.tier import Tier
 
 # Dynamic calculation has not been implemented
 
+
 class StaffOfTheScarletSands(Polearm):
     name: str = "Staff of the Scarlet Sands"
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=9.6)

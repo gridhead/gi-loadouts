@@ -10,6 +10,7 @@ class MainStatType_FWOL(Enum):
     """
     Set of mainstats possible for artifacts belonging from the "Flower of Life" area
     """
+
     health_points = STAT.health_points
     none = STAT.none
 
@@ -18,6 +19,7 @@ class MainStatType_PMOD(Enum):
     """
     Set of mainstats possible for artifacts belonging from the "Plume of Death" area
     """
+
     attack = STAT.attack
     none = STAT.none
 
@@ -26,6 +28,7 @@ class MainStatType_SDOE(Enum):
     """
     Set of mainstats possible for artifacts belonging from the "Sands of Eon" area
     """
+
     attack_perc = STAT.attack_perc
     defense_perc = STAT.defense_perc
     health_points_perc = STAT.health_points_perc
@@ -38,6 +41,7 @@ class MainStatType_GBOE(Enum):
     """
     Set of mainstats possible for artifacts belonging from the "Goblet of Eonothem" area
     """
+
     attack_perc = STAT.attack_perc
     defense_perc = STAT.defense_perc
     health_points_perc = STAT.health_points_perc
@@ -57,6 +61,7 @@ class MainStatType_CCOL(Enum):
     """
     Set of mainstats possible for artifacts belonging from the "Circlet of Logos" area
     """
+
     attack_perc = STAT.attack_perc
     defense_perc = STAT.defense_perc
     health_points_perc = STAT.health_points_perc
@@ -71,6 +76,7 @@ class SecoStatType(Enum):
     """
     Set of possible secondary stat types in an artifact
     """
+
     attack = STAT.attack
     attack_perc = STAT.attack_perc
     defense = STAT.defense
@@ -88,6 +94,7 @@ class SecoStat(BaseModel):
     """
     Data class for secondary stat of an artifact
     """
+
     stat_name: Optional[SecoStatType] = SecoStatType.none
     stat_data: Optional[float] = 0
 
@@ -96,6 +103,7 @@ class Artifact(BaseModel):
     """
     Artifact primitive
     """
+
     __teamname__: str = ""
     __pairdata__: list[ATTR] = []
     __pairtext__: str = ""

@@ -18,9 +18,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Adventurer's Tail Feather",
                 "Adventurer's Pocket Watch",
                 "Adventurer's Golden Goblet",
-                "Adventurer's Bandana"
+                "Adventurer's Bandana",
             ),
-            id="data.arti: Adventurer"
+            id="data.arti: Adventurer",
         ),
         pytest.param(
             "Archaic Petra",
@@ -32,9 +32,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Feather of Jagged Peaks",
                 "Sundial of Enduring Jade",
                 "Goblet of Chiseled Crag",
-                "Mask of Solitude Basalt"
+                "Mask of Solitude Basalt",
             ),
-            id="data.arti: Archaic Petra"
+            id="data.arti: Archaic Petra",
         ),
         pytest.param(
             "Berserker",
@@ -46,9 +46,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Berserker's Indigo Feather",
                 "Berserker's Timepiece",
                 "Berserker's Bone Goblet",
-                "Berserker's Battle Mask"
+                "Berserker's Battle Mask",
             ),
-            id="data.arti: Berserker"
+            id="data.arti: Berserker",
         ),
         pytest.param(
             "Blizzard Strayer",
@@ -60,9 +60,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Icebreaker's Resolve",
                 "Frozen Homeland's Demise",
                 "Frost-Weaved Dignity",
-                "Broken Rime's Echo"
+                "Broken Rime's Echo",
             ),
-            id="data.arti: Blizzard Strayer"
+            id="data.arti: Blizzard Strayer",
         ),
         pytest.param(
             "Bloodstained Chivalry",
@@ -74,9 +74,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Bloodstained Black Plume",
                 "Bloodstained Final Hour",
                 "Bloodstained Chevalier's Goblet",
-                "Bloodstained Iron Mask"
+                "Bloodstained Iron Mask",
             ),
-            id="data.arti: Bloodstained Chivalry"
+            id="data.arti: Bloodstained Chivalry",
         ),
         pytest.param(
             "Brave Heart",
@@ -88,9 +88,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Prospect of the Brave",
                 "Fortitude of the Brave",
                 "Outset of the Brave",
-                "Crown of the Brave"
+                "Crown of the Brave",
             ),
-            id="data.arti: Brave Heart"
+            id="data.arti: Brave Heart",
         ),
         pytest.param(
             "Crimson Witch of Flames",
@@ -102,9 +102,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Witch's Ever-Burning Plume",
                 "Witch's End Time",
                 "Witch's Heart Flames",
-                "Witch's Scorching Hat"
+                "Witch's Scorching Hat",
             ),
-            id="data.arti: Crimson Witch of Flames"
+            id="data.arti: Crimson Witch of Flames",
         ),
         pytest.param(
             "Deepwood Memories",
@@ -116,9 +116,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Scholar of Vines",
                 "A Time of Insight",
                 "Lamp of the Lost",
-                "Laurel Coronet"
+                "Laurel Coronet",
             ),
-            id="data.arti: Deepwood Memories"
+            id="data.arti: Deepwood Memories",
         ),
         pytest.param(
             "Defender's Will",
@@ -130,9 +130,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Guardian's Sigil",
                 "Guardian's Clock",
                 "Guardian's Vessel",
-                "Guardian's Band"
+                "Guardian's Band",
             ),
-            id="data.arti: Defender's Will"
+            id="data.arti: Defender's Will",
         ),
         pytest.param(
             "Desert Pavilion Chronicle",
@@ -144,9 +144,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "End of the Golden Realm",
                 "Timepiece of the Lost Path",
                 "Defender of the Enchanting Dream",
-                "Legacy of the Desert High-Born"
+                "Legacy of the Desert High-Born",
             ),
-            id="data.arti: Desert Pavilion Chronicle"
+            id="data.arti: Desert Pavilion Chronicle",
         ),
         pytest.param(
             "Echoes of an Offering",
@@ -158,9 +158,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Jade Leaf",
                 "Symbol of Felicitation",
                 "Chalice of the Font",
-                "Flowing Rings"
+                "Flowing Rings",
             ),
-            id="data.arti: Archaic Petra"
+            id="data.arti: Archaic Petra",
         ),
         pytest.param(
             "Emblem of Severed Fate",
@@ -172,9 +172,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Sundered Feather",
                 "Storm Cage",
                 "Scarlet Vessel",
-                "Ornate Kabuto"
+                "Ornate Kabuto",
             ),
-            id="data.arti: Emblem of Severed Fate"
+            id="data.arti: Emblem of Severed Fate",
         ),
         pytest.param(
             "Finale of the Deep Galleries",
@@ -186,9 +186,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Deep Gallery's Distant Pact",
                 "Deep Gallery's Moment of Oblivion",
                 "Deep Gallery's Bestowed Banquet",
-                "Deep Gallery's Lost Crown"
+                "Deep Gallery's Lost Crown",
             ),
-            id="data.arti: Finale of the Deep Galleries"
+            id="data.arti: Finale of the Deep Galleries",
         ),
         pytest.param(
             "Flower of Paradise Lost",
@@ -200,9 +200,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Wilting Feast",
                 "A Moment Congealed",
                 "Secret-Keeper's Magic Bottle",
-                "Amethyst Crown"
+                "Amethyst Crown",
             ),
-            id="data.arti: Flower of Paradise Lost"
+            id="data.arti: Flower of Paradise Lost",
         ),
         pytest.param(
             "Fragment of Harmonic Whimsy",
@@ -214,9 +214,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Ancient Sea's Nocturnal Musing",
                 "The Grand Jape of the Turning of Fate",
                 "Ichor Shower Rhapsody",
-                "Whimsical Dance of the Withered"
+                "Whimsical Dance of the Withered",
             ),
-            id="data.arti: Fragment of Harmonic Whimsy"
+            id="data.arti: Fragment of Harmonic Whimsy",
         ),
         pytest.param(
             "Gambler",
@@ -228,9 +228,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Gambler's Feather Accessory",
                 "Gambler's Pocket Watch",
                 "Gambler's Dice Cup",
-                "Gambler's Earrings"
+                "Gambler's Earrings",
             ),
-            id="data.arti: Gambler"
+            id="data.arti: Gambler",
         ),
         pytest.param(
             "Gilded Dreams",
@@ -242,9 +242,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Feather of Judgment",
                 "The Sunken Years",
                 "Honeyed Final Feast",
-                "Shadow of the Sand King"
+                "Shadow of the Sand King",
             ),
-            id="data.arti: Gilded Dreams"
+            id="data.arti: Gilded Dreams",
         ),
         pytest.param(
             "Gladiator's Finale",
@@ -256,9 +256,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Gladiator's Destiny",
                 "Gladiator's Longing",
                 "Gladiator's Intoxication",
-                "Gladiator's Triumphus"
+                "Gladiator's Triumphus",
             ),
-            id="data.arti: Gladiator's Finale"
+            id="data.arti: Gladiator's Finale",
         ),
         pytest.param(
             "Golden Troupe",
@@ -270,9 +270,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Golden Bird's Shedding",
                 "Golden Era's Prelude",
                 "Golden Night's Bustle",
-                "Golden Troupe's Reward"
+                "Golden Troupe's Reward",
             ),
-            id="data.arti: Golden Troupe"
+            id="data.arti: Golden Troupe",
         ),
         pytest.param(
             "Heart of Depth",
@@ -284,9 +284,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Gust of Nostalgia",
                 "Copper Compass",
                 "Goblet of Thundering Deep",
-                "Wine-Stained Tricorne"
+                "Wine-Stained Tricorne",
             ),
-            id="data.arti: Heart of Depth"
+            id="data.arti: Heart of Depth",
         ),
         pytest.param(
             "Husk of Opulent Dreams",
@@ -298,9 +298,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Plume of Luxury",
                 "Song of Life",
                 "Calabash of Awakening",
-                "Skeletal Hat"
+                "Skeletal Hat",
             ),
-            id="data.arti: Husk of Opulent Dreams"
+            id="data.arti: Husk of Opulent Dreams",
         ),
         pytest.param(
             "Instructor",
@@ -312,9 +312,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Instructor's Feather Accessory",
                 "Instructor's Pocket Watch",
                 "Instructor's Tea Cup",
-                "Instructor's Cap"
+                "Instructor's Cap",
             ),
-            id="data.arti: Instructor"
+            id="data.arti: Instructor",
         ),
         pytest.param(
             "Lavawalker",
@@ -326,9 +326,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Lavawalker's Salvation",
                 "Lavawalker's Torment",
                 "Lavawalker's Epiphany",
-                "Lavawalker's Wisdom"
+                "Lavawalker's Wisdom",
             ),
-            id="data.arti: Lavawalker"
+            id="data.arti: Lavawalker",
         ),
         pytest.param(
             "Long Night's Oath",
@@ -340,9 +340,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Nightingale's Tail Feather",
                 "Undying One's Mourning Bell",
                 "A Horn Unwinded",
-                "Dyed Tassel"
+                "Dyed Tassel",
             ),
-            id="data.arti: Long Night's Oath"
+            id="data.arti: Long Night's Oath",
         ),
         pytest.param(
             "Lucky Dog",
@@ -354,9 +354,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Lucky Dog's Eagle Feather",
                 "Lucky Dog's Hourglass",
                 "Lucky Dog's Goblet",
-                "Lucky Dog's Silver Circlet"
+                "Lucky Dog's Silver Circlet",
             ),
-            id="data.arti: Lucky Dog"
+            id="data.arti: Lucky Dog",
         ),
         pytest.param(
             "Maiden Beloved",
@@ -368,9 +368,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Maiden's Heart-Stricken Infatuation",
                 "Maiden's Passing Youth",
                 "Maiden's Fleeting Leisure",
-                "Maiden's Fading Beauty"
+                "Maiden's Fading Beauty",
             ),
-            id="data.arti: Maiden Beloved"
+            id="data.arti: Maiden Beloved",
         ),
         pytest.param(
             "Marechaussee Hunter",
@@ -382,9 +382,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Masterpiece's Overture",
                 "Moment of Judgment",
                 "Forgotten Vessel",
-                "Veteran's Visage"
+                "Veteran's Visage",
             ),
-            id="data.arti: Marechaussee Hunter"
+            id="data.arti: Marechaussee Hunter",
         ),
         pytest.param(
             "Martial Artist",
@@ -396,9 +396,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Martial Artist's Feather Accessory",
                 "Martial Artist's Water Hourglass",
                 "Martial Artist's Wine Cup",
-                "Martial Artist's Bandana"
+                "Martial Artist's Bandana",
             ),
-            id="data.arti: Martial Artist"
+            id="data.arti: Martial Artist",
         ),
         pytest.param(
             "Night of the Sky's Unveiling",
@@ -410,9 +410,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Feather of Indelible Sin",
                 "Revelation's Toll",
                 "Vessel of Plenty",
-                "Crown of the Befallen"
+                "Crown of the Befallen",
             ),
-            id="data.arti: Night of the Sky's Unveiling"
+            id="data.arti: Night of the Sky's Unveiling",
         ),
         pytest.param(
             "Nighttime Whispers in the Echoing Woods",
@@ -424,9 +424,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Honest Quill",
                 "Faithful Hourglass",
                 "Magnanimous Ink Bottle",
-                "Compassionate Ladies' Hat"
+                "Compassionate Ladies' Hat",
             ),
-            id="data.arti: Nighttime Whispers in the Echoing Woods"
+            id="data.arti: Nighttime Whispers in the Echoing Woods",
         ),
         pytest.param(
             "Noblesse Oblige",
@@ -438,9 +438,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Royal Plume",
                 "Royal Pocket Watch",
                 "Royal Silver Urn",
-                "Royal Masque"
+                "Royal Masque",
             ),
-            id="data.arti: Noblesse Oblige"
+            id="data.arti: Noblesse Oblige",
         ),
         pytest.param(
             "Nymph's Dream",
@@ -452,9 +452,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Wicked Mage's Plumule",
                 "Nymph's Constancy",
                 "Heroes' Tea Party",
-                "Fell Dragon's Monocle"
+                "Fell Dragon's Monocle",
             ),
-            id="data.arti: Nymph's Dream"
+            id="data.arti: Nymph's Dream",
         ),
         pytest.param(
             "Obsidian Codex",
@@ -466,9 +466,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Root of the Spirit-Marrow",
                 "Myths of the Night Realm",
                 "Pre-Banquet of the Contenders",
-                "Crown of the Saints"
+                "Crown of the Saints",
             ),
-            id="data.arti: Obsidian Codex"
+            id="data.arti: Obsidian Codex",
         ),
         pytest.param(
             "Ocean-Hued Clam",
@@ -480,9 +480,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Deep Palace's Plume",
                 "Cowry of Parting",
                 "Pearl Cage",
-                "Crown of Watatsumi"
+                "Crown of Watatsumi",
             ),
-            id="data.arti: Ocean-Hued Clam"
+            id="data.arti: Ocean-Hued Clam",
         ),
         pytest.param(
             "Pale Flame",
@@ -494,9 +494,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Wise Doctor's Pinion",
                 "Moment of Cessation",
                 "Surpassing Cup",
-                "Mocking Mask"
+                "Mocking Mask",
             ),
-            id="data.arti: Pale Flame"
+            id="data.arti: Pale Flame",
         ),
         pytest.param(
             "Resolution of Sojourner",
@@ -508,9 +508,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Feather of Homecoming",
                 "Sundial of the Sojourner",
                 "Goblet of the Sojourner",
-                "Crown of Parting"
+                "Crown of Parting",
             ),
-            id="data.arti: Resolution of Sojourner"
+            id="data.arti: Resolution of Sojourner",
         ),
         pytest.param(
             "Retracing Bolide",
@@ -522,9 +522,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Summer Night's Finale",
                 "Summer Night's Moment",
                 "Summer Night's Waterballoon",
-                "Summer Night's Mask"
+                "Summer Night's Mask",
             ),
-            id="data.arti: Retracing Bolide"
+            id="data.arti: Retracing Bolide",
         ),
         pytest.param(
             "Scholar",
@@ -536,9 +536,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Scholar's Quill Pen",
                 "Scholar's Clock",
                 "Scholar's Ink Cup",
-                "Scholar's Lens"
+                "Scholar's Lens",
             ),
-            id="data.arti: Scholar"
+            id="data.arti: Scholar",
         ),
         pytest.param(
             "Scroll of the Hero of Cinder City",
@@ -550,9 +550,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Mountain Ranger's Marker",
                 "Mystic's Gold Dial",
                 "Wandering Scholar's Claw Cup",
-                "Demon-Warrior's Feather Mask"
+                "Demon-Warrior's Feather Mask",
             ),
-            id="data.arti: Scroll of the Hero of Cinder City"
+            id="data.arti: Scroll of the Hero of Cinder City",
         ),
         pytest.param(
             "Shimenawa's Reminiscence",
@@ -564,9 +564,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Shaft of Remembrance",
                 "Morning Dew's Moment",
                 "Hopeful Heart",
-                "Capricious Visage"
+                "Capricious Visage",
             ),
-            id="data.arti: Shimenawa's Reminiscence"
+            id="data.arti: Shimenawa's Reminiscence",
         ),
         pytest.param(
             "Silken Moon's Serenade",
@@ -578,9 +578,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Pristine Plume of the Blessed",
                 "Frost Devotee’s Delirium",
                 "Joyous Glory of the Pure",
-                "Holy Crown of the Believer"
+                "Holy Crown of the Believer",
             ),
-            id="data.arti: Silken Moon's Serenade"
+            id="data.arti: Silken Moon's Serenade",
         ),
         pytest.param(
             "Song of Days Past",
@@ -592,9 +592,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Recollection of Days Past",
                 "Echoing Sound From Days Past",
                 "Promised Dream of Days Past",
-                "Poetry of Days Past"
+                "Poetry of Days Past",
             ),
-            id="data.arti: Song of Days Past"
+            id="data.arti: Song of Days Past",
         ),
         pytest.param(
             "Tenacity of the Millelith",
@@ -606,9 +606,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Ceremonial War-Plume",
                 "Orichalceous Time-Dial",
                 "Noble's Pledging Vessel",
-                "General's Ancient Helm"
+                "General's Ancient Helm",
             ),
-            id="data.arti: Tenacity of the Millelith"
+            id="data.arti: Tenacity of the Millelith",
         ),
         pytest.param(
             "The Exile",
@@ -620,9 +620,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Exile's Feather",
                 "Exile's Pocket Watch",
                 "Exile's Goblet",
-                "Exile's Circlet"
+                "Exile's Circlet",
             ),
-            id="data.arti: The Exile"
+            id="data.arti: The Exile",
         ),
         pytest.param(
             "Thundering Fury",
@@ -634,9 +634,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Survivor of Catastrophe",
                 "Hourglass of Thunder",
                 "Omen of Thunderstorm",
-                "Thunder Summoner's Crown"
+                "Thunder Summoner's Crown",
             ),
-            id="data.arti: Thundering Fury"
+            id="data.arti: Thundering Fury",
         ),
         pytest.param(
             "Thundersoother",
@@ -648,9 +648,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Thundersoother's Plume",
                 "Hour of Soothing Thunder",
                 "Thundersoother's Goblet",
-                "Thundersoother's Diadem"
+                "Thundersoother's Diadem",
             ),
-            id="data.arti: Thundersoother"
+            id="data.arti: Thundersoother",
         ),
         pytest.param(
             "Tiny Miracle",
@@ -661,7 +661,7 @@ from gi_loadouts.type.stat import ATTR, STAT
                 ATTR(stat_name=STAT.resistance_electro_perc, stat_data=20),
                 ATTR(stat_name=STAT.resistance_geo_perc, stat_data=20),
                 ATTR(stat_name=STAT.resistance_hydro_perc, stat_data=20),
-                ATTR(stat_name=STAT.resistance_pyro_perc, stat_data=20)
+                ATTR(stat_name=STAT.resistance_pyro_perc, stat_data=20),
             ],
             [],
             [3, 4],
@@ -670,9 +670,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Tiny Miracle's Feather",
                 "Tiny Miracle's Hourglass",
                 "Tiny Miracle's Goblet",
-                "Tiny Miracle's Earrings"
+                "Tiny Miracle's Earrings",
             ),
-            id="data.arti: Tiny Miracle"
+            id="data.arti: Tiny Miracle",
         ),
         pytest.param(
             "Traveling Doctor",
@@ -684,9 +684,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Traveling Doctor's Owl Feather",
                 "Traveling Doctor's Pocket Watch",
                 "Traveling Doctor's Medicine Pot",
-                "Traveling Doctor's Handkerchief"
+                "Traveling Doctor's Handkerchief",
             ),
-            id="data.arti: Traveling Doctor"
+            id="data.arti: Traveling Doctor",
         ),
         pytest.param(
             "Unfinished Reverie",
@@ -698,9 +698,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Faded Emerald Tail",
                 "Moment of Attainment",
                 "The Wine-Flask Over Which the Plan Was Hatched",
-                "Crownless Crown"
+                "Crownless Crown",
             ),
-            id="data.arti: Unfinished Reverie"
+            id="data.arti: Unfinished Reverie",
         ),
         pytest.param(
             "Vermillion Hereafter",
@@ -712,9 +712,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Feather of Nascent Light",
                 "Solar Relic",
                 "Moment of the Pact",
-                "Thundering Poise"
+                "Thundering Poise",
             ),
-            id="data.arti: Vermillion Hereafter"
+            id="data.arti: Vermillion Hereafter",
         ),
         pytest.param(
             "Viridescent Venerer",
@@ -726,9 +726,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Viridescent Arrow Feather",
                 "Viridescent Venerer's Determination",
                 "Viridescent Venerer's Vessel",
-                "Viridescent Venerer's Diadem"
+                "Viridescent Venerer's Diadem",
             ),
-            id="data.arti: Viridescent Venerer"
+            id="data.arti: Viridescent Venerer",
         ),
         pytest.param(
             "Vourukasha's Glow",
@@ -740,9 +740,9 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Vibrant Pinion",
                 "Ancient Abscission",
                 "Feast of Boundless Joy",
-                "Heart of Khvarena's Brilliance"
+                "Heart of Khvarena's Brilliance",
             ),
-            id="data.arti: Vourukasha's Glow"
+            id="data.arti: Vourukasha's Glow",
         ),
         pytest.param(
             "Wanderer's Troupe",
@@ -754,11 +754,11 @@ from gi_loadouts.type.stat import ATTR, STAT
                 "Bard's Arrow Feather",
                 "Concert's Final Hour",
                 "Wanderer's String-Kettle",
-                "Conductor's Top Hat"
+                "Conductor's Top Hat",
             ),
-            id="data.arti: Wanderer's Troupe"
+            id="data.arti: Wanderer's Troupe",
         ),
-    ]
+    ],
 )
 def test_arti(name: str, pair: list, quad: list, rare: list, team: list) -> None:
     """

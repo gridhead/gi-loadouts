@@ -19,10 +19,12 @@ from test.face.wind import MockQFile
     [
         pytest.param("side_head", __homepage__, id="face.info: Clicking the home button"),
         pytest.param("side_tckt", __issutckt__, id="face.info: Clicking the report button"),
-        pytest.param("side_cash", __donation__, id="face.info: Clicking the donate button")
-    ]
+        pytest.param("side_cash", __donation__, id="face.info: Clicking the donate button"),
+    ],
 )
-def test_wind_main_buttons(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, button: str, link: str) -> None:
+def test_wind_main_buttons(
+    runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, button: str, link: str
+) -> None:
     """
     Test clicking the buttons on side of UI
 
@@ -32,7 +34,7 @@ def test_wind_main_buttons(runner: MainWindow, qtbot: QtBot, mocker: MockerFixtu
     """
     Perform the action of clicking the button
     """
-    mock_open_url = mocker.patch.object(QDesktopServices, 'openUrl')
+    mock_open_url = mocker.patch.object(QDesktopServices, "openUrl")
     qtbot.mouseClick(getattr(runner, f"{button}"), Qt.LeftButton)
     expected_url = QUrl(link)
 
@@ -43,10 +45,7 @@ def test_wind_main_buttons(runner: MainWindow, qtbot: QtBot, mocker: MockerFixtu
 
 
 @pytest.mark.parametrize(
-    "_",
-    [
-        pytest.param(None, id="face.wind: Initialise the training data for Tesseract OCR")
-    ]
+    "_", [pytest.param(None, id="face.wind: Initialise the training data for Tesseract OCR")]
 )
 def test_wind_main_fail(mocker: MockerFixture, _: None) -> None:
     """
@@ -86,8 +85,10 @@ def test_wind_main_fail(mocker: MockerFixture, _: None) -> None:
 @pytest.mark.parametrize(
     "_",
     [
-        pytest.param(None, id="face.wind: Remove the already existing training data for Tesseract OCR")
-    ]
+        pytest.param(
+            None, id="face.wind: Remove the already existing training data for Tesseract OCR"
+        )
+    ],
 )
 def test_wind_main_fail_continue(runner: MainWindow, mocker: MockerFixture, _: None) -> None:
     """
@@ -103,12 +104,7 @@ def test_wind_main_fail_continue(runner: MainWindow, mocker: MockerFixture, _: N
     make_temp_file()
 
 
-@pytest.mark.parametrize(
-    "_",
-    [
-        pytest.param(None, id="face.wind: Manually invoke __del__")
-    ]
-)
+@pytest.mark.parametrize("_", [pytest.param(None, id="face.wind: Manually invoke __del__")])
 def test_wind_del(runner: MainWindow, _: None) -> None:
     """
     Test manually invoking __del__

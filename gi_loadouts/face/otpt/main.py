@@ -13,7 +13,9 @@ class OtptWindow(Rule):
         self.weap = weap
         self.tyvt = tyvt
         self.setupUi(self)
-        self.setWindowTitle(f"Loadouts for Genshin Impact v{__versdata__} - {self.char["char"].name.value}")
+        self.setWindowTitle(
+            f"Loadouts for Genshin Impact v{__versdata__} - {self.char['char'].name.value}"
+        )
         self.setWindowModality(Qt.ApplicationModal)
         self.manage_assets()
         self.populate_header()

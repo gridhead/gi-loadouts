@@ -15,5 +15,5 @@ class Xinyan(Char):
     weapon: WeaponType = WeaponType.claymore
     vision: Vision = Vision.pyro
     cons_name: str = "Fila Ignium"
-    afln: str = "\"The Red Strings\""
+    afln: str = '"The Red Strings"'
     head: str = "Blazing Riff"

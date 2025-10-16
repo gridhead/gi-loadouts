@@ -9,6 +9,7 @@ def get_tessexec_path() -> str | None:
         return "C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
     return tessexec
 
+
 tessexec = get_tessexec_path()
 
 tempname = ""

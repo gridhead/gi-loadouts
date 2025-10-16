@@ -5,7 +5,9 @@ from ....type.weap.tier import Tier
 
 class TheWidsith(Catalyst):
     name: str = "The Widsith"
-    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_damage_perc, stat_data=12.0)
+    seco_stat: WeaponStat = WeaponStat(
+        stat_name=WeaponStatType.critical_damage_perc, stat_data=12.0
+    )
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_4
     refi_name: str = "Debut"

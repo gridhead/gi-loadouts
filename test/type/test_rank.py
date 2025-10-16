@@ -5,9 +5,7 @@ from gi_loadouts.type.rank import Rank, __rank__
 
 @pytest.mark.parametrize(
     "text, data",
-    [
-        pytest.param(item, unit, id=f"type.rank: {item}") for item, unit in __rank__.items()
-    ]
+    [pytest.param(item, unit, id=f"type.rank: {item}") for item, unit in __rank__.items()],
 )
 def test_rank(text: str, data: int) -> None:
     """

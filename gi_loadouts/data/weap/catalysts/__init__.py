@@ -95,5 +95,5 @@ CatalystsDict = {
     "Vivid Notions": vdns.VividNotions,
     "Wandering Evenstar": wdes.WanderingEvenstar,
     "Waveriding Whirl": wrwl.WaveridingWhirl,
-    "Wine and Song": wnsg.WineandSong
+    "Wine and Song": wnsg.WineandSong,
 }

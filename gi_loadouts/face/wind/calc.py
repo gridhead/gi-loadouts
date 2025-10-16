@@ -22,10 +22,20 @@ class Assess:
 
         :return:
         """
-        if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
+        if (
+            self.head_char_name.currentText().strip() != ""
+            and self.head_char_levl.currentText().strip() != ""
+        ):
             # MAIN
             char = __charmaps__[self.head_char_name.currentText()]()
-            char.levl = getattr(Level, self.head_char_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
+            char.levl = getattr(
+                Level,
+                self.head_char_levl.currentText()
+                .replace(" ", "_")
+                .replace("(", "")
+                .replace(")", "")
+                .replace("/", "_"),
+            )
 
             # BASE
             self.c_char.attack = char.attack
@@ -38,10 +48,7 @@ class Assess:
             setattr(
                 self.c_char,
                 self.c_char.revmap[char.seco.stat_name],
-                ATTR(
-                    stat_name=char.seco.stat_name,
-                    stat_data=prev_stat_data + curt_stat_data
-                )
+                ATTR(stat_name=char.seco.stat_name, stat_data=prev_stat_data + curt_stat_data),
             )
 
     def char_stat(self) -> None:
@@ -50,7 +57,10 @@ class Assess:
 
         :return:
         """
-        if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
+        if (
+            self.head_char_name.currentText().strip() != ""
+            and self.head_char_levl.currentText().strip() != ""
+        ):
             # SUBSTATS
             """
             The SUBSTATS need to be calculated before the BASE due to implications of changes in BASE attributes
@@ -61,39 +71,82 @@ class Assess:
             HP  % scaling = Baizhu, Barbara, Candace, Chevreuse, Dehya, Dori, Kirara, Kuki Shinobu, Mika, Nilou, Yaoyao
             """
             char = __charmaps__[self.head_char_name.currentText()]()
-            char.levl = getattr(Level, self.head_char_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
-            char_substats_prev_data = getattr(self.c_tyvt, self.c_tyvt.revmap[char.seco.stat_name]).stat_data
-            char_substats_curt_data = getattr(self.c_char, self.c_char.revmap[char.seco.stat_name]).stat_data
+            char.levl = getattr(
+                Level,
+                self.head_char_levl.currentText()
+                .replace(" ", "_")
+                .replace("(", "")
+                .replace(")", "")
+                .replace("/", "_"),
+            )
+            char_substats_prev_data = getattr(
+                self.c_tyvt, self.c_tyvt.revmap[char.seco.stat_name]
+            ).stat_data
+            char_substats_curt_data = getattr(
+                self.c_char, self.c_char.revmap[char.seco.stat_name]
+            ).stat_data
             setattr(
                 self.c_tyvt,
                 self.c_tyvt.revmap[char.seco.stat_name],
                 ATTR(
                     stat_name=char.seco.stat_name,
-                    stat_data=char_substats_prev_data + char_substats_curt_data
-                )
+                    stat_data=char_substats_prev_data + char_substats_curt_data,
+                ),
             )
 
             # BASE
             self.c_tyvt.attack = ATTR(
                 stat_name=STAT.attack,
-                stat_data=(self.c_char.attack.stat_data + self.c_weap.base.stat_data) * (100 + self.c_tyvt.attack_perc.stat_data) / 100.0 + self.c_tyvt.attack.stat_data
+                stat_data=(self.c_char.attack.stat_data + self.c_weap.base.stat_data)
+                * (100 + self.c_tyvt.attack_perc.stat_data)
+                / 100.0
+                + self.c_tyvt.attack.stat_data,
             )
             self.c_tyvt.health_points = ATTR(
                 stat_name=STAT.health_points,
-                stat_data=self.c_char.health_points.stat_data * (100 + self.c_tyvt.health_points_perc.stat_data) / 100.0 + self.c_tyvt.health_points.stat_data
+                stat_data=self.c_char.health_points.stat_data
+                * (100 + self.c_tyvt.health_points_perc.stat_data)
+                / 100.0
+                + self.c_tyvt.health_points.stat_data,
             )
             self.c_tyvt.defense = ATTR(
                 stat_name=STAT.defense,
-                stat_data=self.c_char.defense.stat_data * (100 + self.c_tyvt.defense_perc.stat_data) / 100.0 + self.c_tyvt.defense.stat_data
+                stat_data=self.c_char.defense.stat_data
+                * (100 + self.c_tyvt.defense_perc.stat_data)
+                / 100.0
+                + self.c_tyvt.defense.stat_data,
             )
 
             # ADDENDUM
-            self.c_tyvt.addendum_base_attack = ATTR(stat_name=STAT.attack, stat_data=self.c_char.attack.stat_data + self.c_weap.base.stat_data)
-            self.c_tyvt.addendum_plus_attack = ATTR(stat_name=STAT.attack, stat_data=abs(self.c_tyvt.attack.stat_data - self.c_tyvt.addendum_base_attack.stat_data))
-            self.c_tyvt.addendum_base_health_points = ATTR(stat_name=STAT.health_points, stat_data=self.c_char.health_points.stat_data)
-            self.c_tyvt.addendum_plus_health_points = ATTR(stat_name=STAT.health_points, stat_data=abs(self.c_tyvt.health_points.stat_data - self.c_tyvt.addendum_base_health_points.stat_data))
-            self.c_tyvt.addendum_base_defense = ATTR(stat_name=STAT.defense, stat_data=self.c_char.defense.stat_data)
-            self.c_tyvt.addendum_plus_defense = ATTR(stat_name=STAT.defense, stat_data=abs(self.c_tyvt.defense.stat_data - self.c_tyvt.addendum_base_defense.stat_data))
+            self.c_tyvt.addendum_base_attack = ATTR(
+                stat_name=STAT.attack,
+                stat_data=self.c_char.attack.stat_data + self.c_weap.base.stat_data,
+            )
+            self.c_tyvt.addendum_plus_attack = ATTR(
+                stat_name=STAT.attack,
+                stat_data=abs(
+                    self.c_tyvt.attack.stat_data - self.c_tyvt.addendum_base_attack.stat_data
+                ),
+            )
+            self.c_tyvt.addendum_base_health_points = ATTR(
+                stat_name=STAT.health_points, stat_data=self.c_char.health_points.stat_data
+            )
+            self.c_tyvt.addendum_plus_health_points = ATTR(
+                stat_name=STAT.health_points,
+                stat_data=abs(
+                    self.c_tyvt.health_points.stat_data
+                    - self.c_tyvt.addendum_base_health_points.stat_data
+                ),
+            )
+            self.c_tyvt.addendum_base_defense = ATTR(
+                stat_name=STAT.defense, stat_data=self.c_char.defense.stat_data
+            )
+            self.c_tyvt.addendum_plus_defense = ATTR(
+                stat_name=STAT.defense,
+                stat_data=abs(
+                    self.c_tyvt.defense.stat_data - self.c_tyvt.addendum_base_defense.stat_data
+                ),
+            )
 
     def weap_keep(self) -> None:
         """
@@ -101,20 +154,31 @@ class Assess:
 
         :return:
         """
-        if (self.weap_area_type.currentText().strip() != "" and
-            self.weap_area_name.currentText().strip() != "" and
-            self.weap_area_levl.currentText().strip() != ""):
+        if (
+            self.weap_area_type.currentText().strip() != ""
+            and self.weap_area_name.currentText().strip() != ""
+            and self.weap_area_levl.currentText().strip() != ""
+        ):
             # MAIN
             kind = self.weap_area_type.currentText().strip()
             name = self.weap_area_name.currentText().strip()
             weap = Family[kind][name]()
             refn = self.weap_area_refn.currentText().strip()
-            weap.levl = getattr(Level, self.weap_area_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
-            self.c_weap.base = ATTR(stat_name=WeaponStatType.attack.value, stat_data=weap.main_stat.stat_data)
+            weap.levl = getattr(
+                Level,
+                self.weap_area_levl.currentText()
+                .replace(" ", "_")
+                .replace("(", "")
+                .replace(")", "")
+                .replace("/", "_"),
+            )
+            self.c_weap.base = ATTR(
+                stat_name=WeaponStatType.attack.value, stat_data=weap.main_stat.stat_data
+            )
             if weap.seco_stat.stat_name != WeaponStatType.none:
                 self.c_weap.seco = ATTR(
                     stat_name=weap.seco_stat_calc.stat_name.value,
-                    stat_data=weap.seco_stat_calc.stat_data
+                    stat_data=weap.seco_stat_calc.stat_data,
                 )
             if len(weap.refinement) != 0:
                 self.c_weap.refn = weap.refinement[refn].stat
@@ -134,7 +198,7 @@ class Assess:
         setattr(
             self.c_tyvt,
             self.c_tyvt.revmap[self.c_weap.seco.stat_name],
-            ATTR(stat_name=self.c_weap.seco.stat_name, stat_data=prev + curt)
+            ATTR(stat_name=self.c_weap.seco.stat_name, stat_data=prev + curt),
         )
 
         # REFINEMENT
@@ -143,7 +207,11 @@ class Assess:
                 if item == indx.stat_name.value:
                     prev = getattr(self.c_tyvt, self.c_tyvt.revmap[item]).stat_data
                     curt = indx.stat_data
-                    setattr(self.c_tyvt, self.c_tyvt.revmap[item], ATTR(stat_name=item, stat_data=prev + curt))
+                    setattr(
+                        self.c_tyvt,
+                        self.c_tyvt.revmap[item],
+                        ATTR(stat_name=item, stat_data=prev + curt),
+                    )
 
     def arti_keep(self) -> None:
         """
@@ -156,38 +224,55 @@ class Assess:
             if getattr(self, f"arti_{part}_type").currentText().strip() != "":
                 for indx in ["main", "a", "b", "c", "d"]:
                     if getattr(self, f"arti_{part}_name_{indx}").currentText().strip() != "":
-                        if getattr(self, f"arti_{part}_name_{indx}").currentText().strip() == "None":
+                        if (
+                            getattr(self, f"arti_{part}_name_{indx}").currentText().strip()
+                            == "None"
+                        ):
                             setattr(
                                 self.c_team,
                                 f"{part}_{indx}",
-                                ATTR(
-                                    stat_name=STAT.none,
-                                    stat_data=0.0
-                                )
+                                ATTR(stat_name=STAT.none, stat_data=0.0),
                             )
                         else:
                             setattr(
                                 self.c_team,
                                 f"{part}_{indx}",
                                 ATTR(
-                                    stat_name=__revmap__[getattr(self, f"arti_{part}_name_{indx}").currentText().strip()],
-                                    stat_data=float(getattr(self, f"arti_{part}_data_{indx}").text().strip())
-                                )
+                                    stat_name=__revmap__[
+                                        getattr(self, f"arti_{part}_name_{indx}")
+                                        .currentText()
+                                        .strip()
+                                    ],
+                                    stat_data=float(
+                                        getattr(self, f"arti_{part}_data_{indx}").text().strip()
+                                    ),
+                                ),
                             )
 
         # SETBONUS
         if self.collection.quad != "":
-            pack = getattr(ArtiList, self.collection.quad.replace(" ", "_").replace("'", "").replace("-", "_"))
+            pack = getattr(
+                ArtiList, self.collection.quad.replace(" ", "_").replace("'", "").replace("-", "_")
+            )
             self.c_team.pairdata_a = pack.value.pairdata
             self.c_team.quaddata = pack.value.quaddata
         elif self.collection.pair != []:
             if len(self.collection.pair) == 1:
-                pack_a = getattr(ArtiList, self.collection.pair[0].replace(" ", "_").replace("'", "").replace("-", "_"))
+                pack_a = getattr(
+                    ArtiList,
+                    self.collection.pair[0].replace(" ", "_").replace("'", "").replace("-", "_"),
+                )
                 self.c_team.pairdata_a = pack_a.value.pairdata
             elif len(self.collection.pair) == 2:
-                pack_a = getattr(ArtiList, self.collection.pair[0].replace(" ", "_").replace("'", "").replace("-", "_"))
+                pack_a = getattr(
+                    ArtiList,
+                    self.collection.pair[0].replace(" ", "_").replace("'", "").replace("-", "_"),
+                )
                 self.c_team.pairdata_a = pack_a.value.pairdata
-                pack_b = getattr(ArtiList, self.collection.pair[1].replace(" ", "_").replace("'", "").replace("-", "_"))
+                pack_b = getattr(
+                    ArtiList,
+                    self.collection.pair[1].replace(" ", "_").replace("'", "").replace("-", "_"),
+                )
                 self.c_team.pairdata_b = pack_b.value.pairdata
 
     def arti_stat(self) -> None:
@@ -196,7 +281,10 @@ class Assess:
 
         :return:
         """
-        if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
+        if (
+            self.head_char_name.currentText().strip() != ""
+            and self.head_char_levl.currentText().strip() != ""
+        ):
             # ARTIUNIT
             for item in self.c_tyvt.revmap:
                 for kind in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
@@ -204,7 +292,11 @@ class Assess:
                         if getattr(self.c_team, f"{kind}_{indx}").stat_name == item:
                             prev = getattr(self.c_tyvt, self.c_tyvt.revmap[item]).stat_data
                             curt = getattr(self.c_team, f"{kind}_{indx}").stat_data
-                            setattr(self.c_tyvt, self.c_tyvt.revmap[item], ATTR(stat_name=item, stat_data=prev+curt))
+                            setattr(
+                                self.c_tyvt,
+                                self.c_tyvt.revmap[item],
+                                ATTR(stat_name=item, stat_data=prev + curt),
+                            )
 
             # SETBONUS
             for item in self.c_tyvt.revmap:
@@ -215,7 +307,11 @@ class Assess:
                             if jndx.stat_name == item:
                                 prev = getattr(self.c_tyvt, self.c_tyvt.revmap[item]).stat_data
                                 curt = jndx.stat_data
-                                setattr(self.c_tyvt, self.c_tyvt.revmap[item], ATTR(stat_name=item, stat_data=prev + curt))
+                                setattr(
+                                    self.c_tyvt,
+                                    self.c_tyvt.revmap[item],
+                                    ATTR(stat_name=item, stat_data=prev + curt),
+                                )
 
     def calc_stat(self) -> None:
         """

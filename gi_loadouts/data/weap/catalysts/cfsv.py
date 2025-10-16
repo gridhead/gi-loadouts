@@ -14,7 +14,7 @@ class CashflowSupervision(Catalyst):
         "ATK is increased by 20%. When current HP increases or decreases, Normal Attack DMG will be increased by 20% and Charged Attack DMG will be increased by 17.5% for 4s. Max 3 stacks. This effect can be triggered once every 0.3s. When the wielder has 3 stacks, ATK SPD will be increased by 10%.",
         "ATK is increased by 24%. When current HP increases or decreases, Normal Attack DMG will be increased by 24% and Charged Attack DMG will be increased by 21% for 4s. Max 3 stacks. This effect can be triggered once every 0.3s. When the wielder has 3 stacks, ATK SPD will be increased by 12%.",
         "ATK is increased by 28%. When current HP increases or decreases, Normal Attack DMG will be increased by 28% and Charged Attack DMG will be increased by 24.5% for 4s. Max 3 stacks. This effect can be triggered once every 0.3s. When the wielder has 3 stacks, ATK SPD will be increased by 14%.",
-        "ATK is increased by 32%. When current HP increases or decreases, Normal Attack DMG will be increased by 32% and Charged Attack DMG will be increased by 28% for 4s. Max 3 stacks. This effect can be triggered once every 0.3s. When the wielder has 3 stacks, ATK SPD will be increased by 16%."
+        "ATK is increased by 32%. When current HP increases or decreases, Normal Attack DMG will be increased by 32% and Charged Attack DMG will be increased by 28% for 4s. Max 3 stacks. This effect can be triggered once every 0.3s. When the wielder has 3 stacks, ATK SPD will be increased by 16%.",
     ]
     refi_stat: list[WeaponStat] = [
         [WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=16.0)],

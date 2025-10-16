@@ -89,5 +89,5 @@ BowsDict = {
     "The Stringless": tsgs.TheStringless,
     "The Viridescent Hunt": tvsh.TheViridescentHunt,
     "Thundering Pulse": tdpe.ThunderingPulse,
-    "Windblume Ode": wboe.WindblumeOde
+    "Windblume Ode": wboe.WindblumeOde,
 }

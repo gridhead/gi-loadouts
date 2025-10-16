@@ -11,11 +11,9 @@ from gi_loadouts.type.levl import Level
 @pytest.mark.parametrize(
     "name",
     [
-        pytest.param(
-            name,
-            id=f"face.wind.rule: Configuring character - {name}"
-        ) for name in __charmaps__.keys()
-    ]
+        pytest.param(name, id=f"face.wind.rule: Configuring character - {name}")
+        for name in __charmaps__.keys()
+    ],
 )
 def test_char_drop(runner: MainWindow, name: str) -> None:
     """
@@ -47,7 +45,7 @@ def test_char_drop(runner: MainWindow, name: str) -> None:
     runner.head_char_elem.setCurrentText(vson.title())
     runner.head_char_name.setCurrentText(name)
     runner.head_char_levl.setCurrentText(levl)
-    runner.head_char_cons.setCurrentText(cons.replace(" ","_"))
+    runner.head_char_cons.setCurrentText(cons.replace(" ", "_"))
 
     """
     Confirm if the user interface elements change accordingly
@@ -56,8 +54,15 @@ def test_char_drop(runner: MainWindow, name: str) -> None:
     assert runner.char_area_rare.text() == " ".join(["STAR"] * rare)
     assert runner.head_area_line_seco.text() == cons_name
     assert runner.head_area_line_tert.text() == weap
-    assert runner.head_area_line_quat.text() == f"<i>{name} is a {weap.lower()}-wielding {vson + " " if vson.lower() != "none" else ""}character of {rare}-star quality.</i>"
-    assert runner.head_area_line_quin.text() == f"<i>{name} is affiliated with {afln}.</i>" if afln != "" else f"<i>{name} is not affiliated with any association.</i>"
+    assert (
+        runner.head_area_line_quat.text()
+        == f"<i>{name} is a {weap.lower()}-wielding {vson + ' ' if vson.lower() != 'none' else ''}character of {rare}-star quality.</i>"
+    )
+    assert (
+        runner.head_area_line_quin.text() == f"<i>{name} is affiliated with {afln}.</i>"
+        if afln != ""
+        else f"<i>{name} is not affiliated with any association.</i>"
+    )
     assert int(runner.head_char_data_attk.text()) == attk
     assert int(runner.head_char_data_dfns.text()) == dfns
     assert int(runner.head_char_data_hlpt.text()) == hlpt
@@ -71,11 +76,9 @@ def test_char_drop(runner: MainWindow, name: str) -> None:
 @pytest.mark.parametrize(
     "name, butn",
     [
-        pytest.param(
-            name, butn,
-            id=f"face.wind.rule: Configuring character - {name}"
-        ) for name, butn in {"Lumine": "char_head_lumi", "Aether": "char_head_aeth"}.items()
-    ]
+        pytest.param(name, butn, id=f"face.wind.rule: Configuring character - {name}")
+        for name, butn in {"Lumine": "char_head_lumi", "Aether": "char_head_aeth"}.items()
+    ],
 )
 def test_char_butn(runner: MainWindow, qtbot: QtBot, name: str, butn: str) -> None:
     """
@@ -104,7 +107,7 @@ def test_char_butn(runner: MainWindow, qtbot: QtBot, name: str, butn: str) -> No
     """
     qtbot.mouseClick(getattr(runner, butn), Qt.LeftButton)
     runner.head_char_levl.setCurrentText(levl)
-    runner.head_char_cons.setCurrentText(cons.replace(" ","_"))
+    runner.head_char_cons.setCurrentText(cons.replace(" ", "_"))
 
     """
     Confirm if the user interface elements change accordingly
@@ -113,8 +116,14 @@ def test_char_butn(runner: MainWindow, qtbot: QtBot, name: str, butn: str) -> No
     assert runner.char_area_rare.text() == " ".join(["STAR"] * rare)
     assert runner.head_area_line_seco.text() == cons_name
     assert runner.head_area_line_tert.text() == weap
-    assert runner.head_area_line_quat.text() == f"<i>{name} is a {weap.lower()}-wielding character of {rare}-star quality.</i>"
-    assert runner.head_area_line_quin.text() == f"<i>{name} is not affiliated with any association.</i>"
+    assert (
+        runner.head_area_line_quat.text()
+        == f"<i>{name} is a {weap.lower()}-wielding character of {rare}-star quality.</i>"
+    )
+    assert (
+        runner.head_area_line_quin.text()
+        == f"<i>{name} is not affiliated with any association.</i>"
+    )
     assert int(runner.head_char_data_attk.text()) == attk
     assert int(runner.head_char_data_dfns.text()) == dfns
     assert int(runner.head_char_data_hlpt.text()) == hlpt

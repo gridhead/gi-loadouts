@@ -4,6 +4,7 @@ from ....type.weap.tier import Tier
 
 # TODO - Check if the increase DMG is elemental DMG bonus or not
 
+
 class SkywardPride(Claymore):
     name: str = "Skyward Pride"
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.energy_recharge_perc, stat_data=8.0)

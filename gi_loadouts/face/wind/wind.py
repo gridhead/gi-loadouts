@@ -1,4 +1,3 @@
-
 ################################################################################
 ## Form generated from reading UI file 'wind.ui'
 ##
@@ -34,7 +33,9 @@ class Ui_mainwind:
         mainwind.setSizePolicy(sizePolicy)
         mainwind.setMinimumSize(QSize(1595, 955))
         mainwind.setMaximumSize(QSize(1595, 955))
-        mainwind.setStyleSheet("* {font: 10pt \"IBM Plex Sans\";} QToolTip {font: 10pt \"IBM Plex Sans\";}")
+        mainwind.setStyleSheet(
+            '* {font: 10pt "IBM Plex Sans";} QToolTip {font: 10pt "IBM Plex Sans";}'
+        )
         self.centwdgt = QWidget(mainwind)
         self.centwdgt.setObjectName("centwdgt")
         sizePolicy.setHeightForWidth(self.centwdgt.sizePolicy().hasHeightForWidth())
@@ -48,7 +49,9 @@ class Ui_mainwind:
         self.arti_area.setSizePolicy(sizePolicy)
         self.arti_area.setMinimumSize(QSize(1280, 475))
         self.arti_area.setMaximumSize(QSize(1280, 475))
-        self.arti_area.setStyleSheet("#arti_area {border: 1px solid rgba(128, 128, 128, 128); border-radius: 5px;}")
+        self.arti_area.setStyleSheet(
+            "#arti_area {border: 1px solid rgba(128, 128, 128, 128); border-radius: 5px;}"
+        )
         self.arti_area.setFrameShape(QFrame.Shape.StyledPanel)
         self.arti_area.setFrameShadow(QFrame.Shadow.Raised)
         self.arti_fwol_area = QFrame(self.arti_area)
@@ -58,7 +61,9 @@ class Ui_mainwind:
         self.arti_fwol_area.setSizePolicy(sizePolicy)
         self.arti_fwol_area.setMinimumSize(QSize(210, 465))
         self.arti_fwol_area.setMaximumSize(QSize(210, 465))
-        self.arti_fwol_area.setStyleSheet("#arti_fwol_area  {border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 64);}")
+        self.arti_fwol_area.setStyleSheet(
+            "#arti_fwol_area  {border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 64);}"
+        )
         self.arti_fwol_area.setFrameShape(QFrame.Shape.StyledPanel)
         self.arti_fwol_area.setFrameShadow(QFrame.Shadow.Raised)
         self.arti_fwol_type_area = QFrame(self.arti_fwol_area)
@@ -68,7 +73,9 @@ class Ui_mainwind:
         self.arti_fwol_type_area.setSizePolicy(sizePolicy)
         self.arti_fwol_type_area.setMinimumSize(QSize(210, 35))
         self.arti_fwol_type_area.setMaximumSize(QSize(210, 35))
-        self.arti_fwol_type_area.setStyleSheet("#arti_fwol_type_area {background-color: rgba(128, 128, 128, 64);}")
+        self.arti_fwol_type_area.setStyleSheet(
+            "#arti_fwol_type_area {background-color: rgba(128, 128, 128, 64);}"
+        )
         self.arti_fwol_type_area.setFrameShape(QFrame.Shape.NoFrame)
         self.arti_fwol_type_area.setFrameShadow(QFrame.Shadow.Plain)
         self.arti_fwol_type_area.setLineWidth(0)
@@ -79,7 +86,7 @@ class Ui_mainwind:
         self.arti_fwol_type_name.setSizePolicy(sizePolicy)
         self.arti_fwol_type_name.setMinimumSize(QSize(200, 25))
         self.arti_fwol_type_name.setMaximumSize(QSize(200, 25))
-        self.arti_fwol_type_name.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_fwol_type_name.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_fwol_name_d = QComboBox(self.arti_fwol_area)
         self.arti_fwol_name_d.setObjectName("arti_fwol_name_d")
         self.arti_fwol_name_d.setGeometry(QRect(5, 435, 145, 25))
@@ -87,7 +94,7 @@ class Ui_mainwind:
         self.arti_fwol_name_d.setSizePolicy(sizePolicy)
         self.arti_fwol_name_d.setMinimumSize(QSize(145, 25))
         self.arti_fwol_name_d.setMaximumSize(QSize(145, 25))
-        self.arti_fwol_name_d.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_fwol_name_d.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_fwol_name_c = QComboBox(self.arti_fwol_area)
         self.arti_fwol_name_c.setObjectName("arti_fwol_name_c")
         self.arti_fwol_name_c.setGeometry(QRect(5, 405, 145, 25))
@@ -95,7 +102,7 @@ class Ui_mainwind:
         self.arti_fwol_name_c.setSizePolicy(sizePolicy)
         self.arti_fwol_name_c.setMinimumSize(QSize(145, 25))
         self.arti_fwol_name_c.setMaximumSize(QSize(145, 25))
-        self.arti_fwol_name_c.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_fwol_name_c.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_fwol_data_b = QLineEdit(self.arti_fwol_area)
         self.arti_fwol_data_b.setObjectName("arti_fwol_data_b")
         self.arti_fwol_data_b.setGeometry(QRect(155, 375, 50, 25))
@@ -103,8 +110,12 @@ class Ui_mainwind:
         self.arti_fwol_data_b.setSizePolicy(sizePolicy)
         self.arti_fwol_data_b.setMinimumSize(QSize(50, 25))
         self.arti_fwol_data_b.setMaximumSize(QSize(50, 25))
-        self.arti_fwol_data_b.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
-        self.arti_fwol_data_b.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.arti_fwol_data_b.setStyleSheet('font: 10pt "IBM Plex Sans";')
+        self.arti_fwol_data_b.setAlignment(
+            Qt.AlignmentFlag.AlignRight
+            | Qt.AlignmentFlag.AlignTrailing
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.arti_fwol_data_b.setReadOnly(False)
         self.arti_fwol_data_a = QLineEdit(self.arti_fwol_area)
         self.arti_fwol_data_a.setObjectName("arti_fwol_data_a")
@@ -113,8 +124,12 @@ class Ui_mainwind:
         self.arti_fwol_data_a.setSizePolicy(sizePolicy)
         self.arti_fwol_data_a.setMinimumSize(QSize(50, 25))
         self.arti_fwol_data_a.setMaximumSize(QSize(50, 25))
-        self.arti_fwol_data_a.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
-        self.arti_fwol_data_a.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.arti_fwol_data_a.setStyleSheet('font: 10pt "IBM Plex Sans";')
+        self.arti_fwol_data_a.setAlignment(
+            Qt.AlignmentFlag.AlignRight
+            | Qt.AlignmentFlag.AlignTrailing
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.arti_fwol_data_a.setReadOnly(False)
         self.arti_fwol_name_a = QComboBox(self.arti_fwol_area)
         self.arti_fwol_name_a.setObjectName("arti_fwol_name_a")
@@ -123,7 +138,7 @@ class Ui_mainwind:
         self.arti_fwol_name_a.setSizePolicy(sizePolicy)
         self.arti_fwol_name_a.setMinimumSize(QSize(145, 25))
         self.arti_fwol_name_a.setMaximumSize(QSize(145, 25))
-        self.arti_fwol_name_a.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_fwol_name_a.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_fwol_data_c = QLineEdit(self.arti_fwol_area)
         self.arti_fwol_data_c.setObjectName("arti_fwol_data_c")
         self.arti_fwol_data_c.setGeometry(QRect(155, 405, 50, 25))
@@ -131,8 +146,12 @@ class Ui_mainwind:
         self.arti_fwol_data_c.setSizePolicy(sizePolicy)
         self.arti_fwol_data_c.setMinimumSize(QSize(50, 25))
         self.arti_fwol_data_c.setMaximumSize(QSize(50, 25))
-        self.arti_fwol_data_c.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
-        self.arti_fwol_data_c.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.arti_fwol_data_c.setStyleSheet('font: 10pt "IBM Plex Sans";')
+        self.arti_fwol_data_c.setAlignment(
+            Qt.AlignmentFlag.AlignRight
+            | Qt.AlignmentFlag.AlignTrailing
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.arti_fwol_data_c.setReadOnly(False)
         self.arti_fwol_main = QFrame(self.arti_fwol_area)
         self.arti_fwol_main.setObjectName("arti_fwol_main")
@@ -141,7 +160,9 @@ class Ui_mainwind:
         self.arti_fwol_main.setSizePolicy(sizePolicy)
         self.arti_fwol_main.setMinimumSize(QSize(210, 35))
         self.arti_fwol_main.setMaximumSize(QSize(210, 35))
-        self.arti_fwol_main.setStyleSheet("#arti_fwol_main {background-color: rgba(96, 96, 96, 128);}")
+        self.arti_fwol_main.setStyleSheet(
+            "#arti_fwol_main {background-color: rgba(96, 96, 96, 128);}"
+        )
         self.arti_fwol_main.setFrameShape(QFrame.Shape.NoFrame)
         self.arti_fwol_main.setFrameShadow(QFrame.Shadow.Plain)
         self.arti_fwol_main.setLineWidth(0)
@@ -152,7 +173,7 @@ class Ui_mainwind:
         self.arti_fwol_name_main.setSizePolicy(sizePolicy)
         self.arti_fwol_name_main.setMinimumSize(QSize(145, 25))
         self.arti_fwol_name_main.setMaximumSize(QSize(145, 25))
-        self.arti_fwol_name_main.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_fwol_name_main.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_fwol_data_main = QLineEdit(self.arti_fwol_main)
         self.arti_fwol_data_main.setObjectName("arti_fwol_data_main")
         self.arti_fwol_data_main.setGeometry(QRect(155, 5, 50, 25))
@@ -160,8 +181,12 @@ class Ui_mainwind:
         self.arti_fwol_data_main.setSizePolicy(sizePolicy)
         self.arti_fwol_data_main.setMinimumSize(QSize(50, 25))
         self.arti_fwol_data_main.setMaximumSize(QSize(50, 25))
-        self.arti_fwol_data_main.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
-        self.arti_fwol_data_main.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.arti_fwol_data_main.setStyleSheet('font: 10pt "IBM Plex Sans";')
+        self.arti_fwol_data_main.setAlignment(
+            Qt.AlignmentFlag.AlignRight
+            | Qt.AlignmentFlag.AlignTrailing
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.arti_fwol_data_main.setReadOnly(True)
         self.arti_fwol_data_d = QLineEdit(self.arti_fwol_area)
         self.arti_fwol_data_d.setObjectName("arti_fwol_data_d")
@@ -170,8 +195,12 @@ class Ui_mainwind:
         self.arti_fwol_data_d.setSizePolicy(sizePolicy)
         self.arti_fwol_data_d.setMinimumSize(QSize(50, 25))
         self.arti_fwol_data_d.setMaximumSize(QSize(50, 25))
-        self.arti_fwol_data_d.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
-        self.arti_fwol_data_d.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.arti_fwol_data_d.setStyleSheet('font: 10pt "IBM Plex Sans";')
+        self.arti_fwol_data_d.setAlignment(
+            Qt.AlignmentFlag.AlignRight
+            | Qt.AlignmentFlag.AlignTrailing
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.arti_fwol_data_d.setReadOnly(False)
         self.arti_fwol_name_b = QComboBox(self.arti_fwol_area)
         self.arti_fwol_name_b.setObjectName("arti_fwol_name_b")
@@ -180,7 +209,7 @@ class Ui_mainwind:
         self.arti_fwol_name_b.setSizePolicy(sizePolicy)
         self.arti_fwol_name_b.setMinimumSize(QSize(145, 25))
         self.arti_fwol_name_b.setMaximumSize(QSize(145, 25))
-        self.arti_fwol_name_b.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_fwol_name_b.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_fwol_type = QComboBox(self.arti_fwol_area)
         self.arti_fwol_type.setObjectName("arti_fwol_type")
         self.arti_fwol_type.setGeometry(QRect(5, 210, 200, 25))
@@ -188,7 +217,7 @@ class Ui_mainwind:
         self.arti_fwol_type.setSizePolicy(sizePolicy)
         self.arti_fwol_type.setMinimumSize(QSize(200, 25))
         self.arti_fwol_type.setMaximumSize(QSize(200, 25))
-        self.arti_fwol_type.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_fwol_type.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_fwol_levl = QComboBox(self.arti_fwol_area)
         self.arti_fwol_levl.setObjectName("arti_fwol_levl")
         self.arti_fwol_levl.setGeometry(QRect(110, 240, 95, 25))
@@ -196,7 +225,7 @@ class Ui_mainwind:
         self.arti_fwol_levl.setSizePolicy(sizePolicy)
         self.arti_fwol_levl.setMinimumSize(QSize(95, 25))
         self.arti_fwol_levl.setMaximumSize(QSize(95, 25))
-        self.arti_fwol_levl.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_fwol_levl.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_fwol_rare = QComboBox(self.arti_fwol_area)
         self.arti_fwol_rare.setObjectName("arti_fwol_rare")
         self.arti_fwol_rare.setGeometry(QRect(5, 240, 95, 25))
@@ -204,7 +233,7 @@ class Ui_mainwind:
         self.arti_fwol_rare.setSizePolicy(sizePolicy)
         self.arti_fwol_rare.setMinimumSize(QSize(95, 25))
         self.arti_fwol_rare.setMaximumSize(QSize(95, 25))
-        self.arti_fwol_rare.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_fwol_rare.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_fwol_head_area = QLabel(self.arti_fwol_area)
         self.arti_fwol_head_area.setObjectName("arti_fwol_head_area")
         self.arti_fwol_head_area.setGeometry(QRect(5, 5, 200, 200))
@@ -234,7 +263,9 @@ class Ui_mainwind:
         self.arti_pmod_area.setSizePolicy(sizePolicy)
         self.arti_pmod_area.setMinimumSize(QSize(210, 465))
         self.arti_pmod_area.setMaximumSize(QSize(210, 465))
-        self.arti_pmod_area.setStyleSheet("#arti_pmod_area {border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 64);}")
+        self.arti_pmod_area.setStyleSheet(
+            "#arti_pmod_area {border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 64);}"
+        )
         self.arti_pmod_area.setFrameShape(QFrame.Shape.StyledPanel)
         self.arti_pmod_area.setFrameShadow(QFrame.Shadow.Raised)
         self.arti_pmod_name_b = QComboBox(self.arti_pmod_area)
@@ -244,7 +275,7 @@ class Ui_mainwind:
         self.arti_pmod_name_b.setSizePolicy(sizePolicy)
         self.arti_pmod_name_b.setMinimumSize(QSize(145, 25))
         self.arti_pmod_name_b.setMaximumSize(QSize(145, 25))
-        self.arti_pmod_name_b.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_pmod_name_b.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_pmod_main = QFrame(self.arti_pmod_area)
         self.arti_pmod_main.setObjectName("arti_pmod_main")
         self.arti_pmod_main.setGeometry(QRect(0, 305, 210, 35))
@@ -252,7 +283,9 @@ class Ui_mainwind:
         self.arti_pmod_main.setSizePolicy(sizePolicy)
         self.arti_pmod_main.setMinimumSize(QSize(210, 35))
         self.arti_pmod_main.setMaximumSize(QSize(210, 35))
-        self.arti_pmod_main.setStyleSheet("#arti_pmod_main {background-color: rgba(96, 96, 96, 128);}")
+        self.arti_pmod_main.setStyleSheet(
+            "#arti_pmod_main {background-color: rgba(96, 96, 96, 128);}"
+        )
         self.arti_pmod_main.setFrameShape(QFrame.Shape.NoFrame)
         self.arti_pmod_main.setFrameShadow(QFrame.Shadow.Plain)
         self.arti_pmod_main.setLineWidth(0)
@@ -263,7 +296,7 @@ class Ui_mainwind:
         self.arti_pmod_name_main.setSizePolicy(sizePolicy)
         self.arti_pmod_name_main.setMinimumSize(QSize(145, 25))
         self.arti_pmod_name_main.setMaximumSize(QSize(145, 25))
-        self.arti_pmod_name_main.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_pmod_name_main.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_pmod_data_main = QLineEdit(self.arti_pmod_main)
         self.arti_pmod_data_main.setObjectName("arti_pmod_data_main")
         self.arti_pmod_data_main.setGeometry(QRect(155, 5, 50, 25))
@@ -271,8 +304,12 @@ class Ui_mainwind:
         self.arti_pmod_data_main.setSizePolicy(sizePolicy)
         self.arti_pmod_data_main.setMinimumSize(QSize(50, 25))
         self.arti_pmod_data_main.setMaximumSize(QSize(50, 25))
-        self.arti_pmod_data_main.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
-        self.arti_pmod_data_main.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.arti_pmod_data_main.setStyleSheet('font: 10pt "IBM Plex Sans";')
+        self.arti_pmod_data_main.setAlignment(
+            Qt.AlignmentFlag.AlignRight
+            | Qt.AlignmentFlag.AlignTrailing
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.arti_pmod_data_main.setReadOnly(True)
         self.arti_pmod_type_area = QFrame(self.arti_pmod_area)
         self.arti_pmod_type_area.setObjectName("arti_pmod_type_area")
@@ -281,7 +318,9 @@ class Ui_mainwind:
         self.arti_pmod_type_area.setSizePolicy(sizePolicy)
         self.arti_pmod_type_area.setMinimumSize(QSize(210, 35))
         self.arti_pmod_type_area.setMaximumSize(QSize(210, 35))
-        self.arti_pmod_type_area.setStyleSheet("#arti_pmod_type_area {background-color: rgba(128, 128, 128, 64);}")
+        self.arti_pmod_type_area.setStyleSheet(
+            "#arti_pmod_type_area {background-color: rgba(128, 128, 128, 64);}"
+        )
         self.arti_pmod_type_area.setFrameShape(QFrame.Shape.NoFrame)
         self.arti_pmod_type_area.setFrameShadow(QFrame.Shadow.Plain)
         self.arti_pmod_type_area.setLineWidth(0)
@@ -292,7 +331,7 @@ class Ui_mainwind:
         self.arti_pmod_type_name.setSizePolicy(sizePolicy)
         self.arti_pmod_type_name.setMinimumSize(QSize(200, 25))
         self.arti_pmod_type_name.setMaximumSize(QSize(200, 25))
-        self.arti_pmod_type_name.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_pmod_type_name.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_pmod_data_b = QLineEdit(self.arti_pmod_area)
         self.arti_pmod_data_b.setObjectName("arti_pmod_data_b")
         self.arti_pmod_data_b.setGeometry(QRect(155, 375, 50, 25))
@@ -300,8 +339,12 @@ class Ui_mainwind:
         self.arti_pmod_data_b.setSizePolicy(sizePolicy)
         self.arti_pmod_data_b.setMinimumSize(QSize(50, 25))
         self.arti_pmod_data_b.setMaximumSize(QSize(50, 25))
-        self.arti_pmod_data_b.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
-        self.arti_pmod_data_b.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.arti_pmod_data_b.setStyleSheet('font: 10pt "IBM Plex Sans";')
+        self.arti_pmod_data_b.setAlignment(
+            Qt.AlignmentFlag.AlignRight
+            | Qt.AlignmentFlag.AlignTrailing
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.arti_pmod_data_b.setReadOnly(False)
         self.arti_pmod_name_d = QComboBox(self.arti_pmod_area)
         self.arti_pmod_name_d.setObjectName("arti_pmod_name_d")
@@ -310,7 +353,7 @@ class Ui_mainwind:
         self.arti_pmod_name_d.setSizePolicy(sizePolicy)
         self.arti_pmod_name_d.setMinimumSize(QSize(145, 25))
         self.arti_pmod_name_d.setMaximumSize(QSize(145, 25))
-        self.arti_pmod_name_d.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_pmod_name_d.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_pmod_name_c = QComboBox(self.arti_pmod_area)
         self.arti_pmod_name_c.setObjectName("arti_pmod_name_c")
         self.arti_pmod_name_c.setGeometry(QRect(5, 405, 145, 25))
@@ -318,7 +361,7 @@ class Ui_mainwind:
         self.arti_pmod_name_c.setSizePolicy(sizePolicy)
         self.arti_pmod_name_c.setMinimumSize(QSize(145, 25))
         self.arti_pmod_name_c.setMaximumSize(QSize(145, 25))
-        self.arti_pmod_name_c.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_pmod_name_c.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_pmod_name_a = QComboBox(self.arti_pmod_area)
         self.arti_pmod_name_a.setObjectName("arti_pmod_name_a")
         self.arti_pmod_name_a.setGeometry(QRect(5, 345, 145, 25))
@@ -326,7 +369,7 @@ class Ui_mainwind:
         self.arti_pmod_name_a.setSizePolicy(sizePolicy)
         self.arti_pmod_name_a.setMinimumSize(QSize(145, 25))
         self.arti_pmod_name_a.setMaximumSize(QSize(145, 25))
-        self.arti_pmod_name_a.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_pmod_name_a.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_pmod_data_a = QLineEdit(self.arti_pmod_area)
         self.arti_pmod_data_a.setObjectName("arti_pmod_data_a")
         self.arti_pmod_data_a.setGeometry(QRect(155, 345, 50, 25))
@@ -334,8 +377,12 @@ class Ui_mainwind:
         self.arti_pmod_data_a.setSizePolicy(sizePolicy)
         self.arti_pmod_data_a.setMinimumSize(QSize(50, 25))
         self.arti_pmod_data_a.setMaximumSize(QSize(50, 25))
-        self.arti_pmod_data_a.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
-        self.arti_pmod_data_a.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.arti_pmod_data_a.setStyleSheet('font: 10pt "IBM Plex Sans";')
+        self.arti_pmod_data_a.setAlignment(
+            Qt.AlignmentFlag.AlignRight
+            | Qt.AlignmentFlag.AlignTrailing
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.arti_pmod_data_a.setReadOnly(False)
         self.arti_pmod_data_c = QLineEdit(self.arti_pmod_area)
         self.arti_pmod_data_c.setObjectName("arti_pmod_data_c")
@@ -344,8 +391,12 @@ class Ui_mainwind:
         self.arti_pmod_data_c.setSizePolicy(sizePolicy)
         self.arti_pmod_data_c.setMinimumSize(QSize(50, 25))
         self.arti_pmod_data_c.setMaximumSize(QSize(50, 25))
-        self.arti_pmod_data_c.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
-        self.arti_pmod_data_c.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.arti_pmod_data_c.setStyleSheet('font: 10pt "IBM Plex Sans";')
+        self.arti_pmod_data_c.setAlignment(
+            Qt.AlignmentFlag.AlignRight
+            | Qt.AlignmentFlag.AlignTrailing
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.arti_pmod_data_c.setReadOnly(False)
         self.arti_pmod_data_d = QLineEdit(self.arti_pmod_area)
         self.arti_pmod_data_d.setObjectName("arti_pmod_data_d")
@@ -354,8 +405,12 @@ class Ui_mainwind:
         self.arti_pmod_data_d.setSizePolicy(sizePolicy)
         self.arti_pmod_data_d.setMinimumSize(QSize(50, 25))
         self.arti_pmod_data_d.setMaximumSize(QSize(50, 25))
-        self.arti_pmod_data_d.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
-        self.arti_pmod_data_d.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.arti_pmod_data_d.setStyleSheet('font: 10pt "IBM Plex Sans";')
+        self.arti_pmod_data_d.setAlignment(
+            Qt.AlignmentFlag.AlignRight
+            | Qt.AlignmentFlag.AlignTrailing
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.arti_pmod_data_d.setReadOnly(False)
         self.arti_pmod_levl = QComboBox(self.arti_pmod_area)
         self.arti_pmod_levl.setObjectName("arti_pmod_levl")
@@ -364,7 +419,7 @@ class Ui_mainwind:
         self.arti_pmod_levl.setSizePolicy(sizePolicy)
         self.arti_pmod_levl.setMinimumSize(QSize(95, 25))
         self.arti_pmod_levl.setMaximumSize(QSize(95, 25))
-        self.arti_pmod_levl.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_pmod_levl.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_pmod_type = QComboBox(self.arti_pmod_area)
         self.arti_pmod_type.setObjectName("arti_pmod_type")
         self.arti_pmod_type.setGeometry(QRect(5, 210, 200, 25))
@@ -372,7 +427,7 @@ class Ui_mainwind:
         self.arti_pmod_type.setSizePolicy(sizePolicy)
         self.arti_pmod_type.setMinimumSize(QSize(200, 25))
         self.arti_pmod_type.setMaximumSize(QSize(200, 25))
-        self.arti_pmod_type.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_pmod_type.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_pmod_rare = QComboBox(self.arti_pmod_area)
         self.arti_pmod_rare.setObjectName("arti_pmod_rare")
         self.arti_pmod_rare.setGeometry(QRect(5, 240, 95, 25))
@@ -380,7 +435,7 @@ class Ui_mainwind:
         self.arti_pmod_rare.setSizePolicy(sizePolicy)
         self.arti_pmod_rare.setMinimumSize(QSize(95, 25))
         self.arti_pmod_rare.setMaximumSize(QSize(95, 25))
-        self.arti_pmod_rare.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_pmod_rare.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_pmod_head_area = QLabel(self.arti_pmod_area)
         self.arti_pmod_head_area.setObjectName("arti_pmod_head_area")
         self.arti_pmod_head_area.setGeometry(QRect(5, 5, 200, 200))
@@ -410,7 +465,9 @@ class Ui_mainwind:
         self.arti_sdoe_area.setSizePolicy(sizePolicy)
         self.arti_sdoe_area.setMinimumSize(QSize(210, 465))
         self.arti_sdoe_area.setMaximumSize(QSize(210, 465))
-        self.arti_sdoe_area.setStyleSheet("#arti_sdoe_area {border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 64);}")
+        self.arti_sdoe_area.setStyleSheet(
+            "#arti_sdoe_area {border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 64);}"
+        )
         self.arti_sdoe_area.setFrameShape(QFrame.Shape.StyledPanel)
         self.arti_sdoe_area.setFrameShadow(QFrame.Shadow.Raised)
         self.arti_sdoe_name_c = QComboBox(self.arti_sdoe_area)
@@ -420,7 +477,7 @@ class Ui_mainwind:
         self.arti_sdoe_name_c.setSizePolicy(sizePolicy)
         self.arti_sdoe_name_c.setMinimumSize(QSize(145, 25))
         self.arti_sdoe_name_c.setMaximumSize(QSize(145, 25))
-        self.arti_sdoe_name_c.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_sdoe_name_c.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_sdoe_data_d = QLineEdit(self.arti_sdoe_area)
         self.arti_sdoe_data_d.setObjectName("arti_sdoe_data_d")
         self.arti_sdoe_data_d.setGeometry(QRect(155, 435, 50, 25))
@@ -428,8 +485,12 @@ class Ui_mainwind:
         self.arti_sdoe_data_d.setSizePolicy(sizePolicy)
         self.arti_sdoe_data_d.setMinimumSize(QSize(50, 25))
         self.arti_sdoe_data_d.setMaximumSize(QSize(50, 25))
-        self.arti_sdoe_data_d.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
-        self.arti_sdoe_data_d.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.arti_sdoe_data_d.setStyleSheet('font: 10pt "IBM Plex Sans";')
+        self.arti_sdoe_data_d.setAlignment(
+            Qt.AlignmentFlag.AlignRight
+            | Qt.AlignmentFlag.AlignTrailing
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.arti_sdoe_data_d.setReadOnly(False)
         self.arti_sdoe_main = QFrame(self.arti_sdoe_area)
         self.arti_sdoe_main.setObjectName("arti_sdoe_main")
@@ -438,7 +499,9 @@ class Ui_mainwind:
         self.arti_sdoe_main.setSizePolicy(sizePolicy)
         self.arti_sdoe_main.setMinimumSize(QSize(210, 35))
         self.arti_sdoe_main.setMaximumSize(QSize(210, 35))
-        self.arti_sdoe_main.setStyleSheet("#arti_sdoe_main {background-color: rgba(96, 96, 96, 128);}")
+        self.arti_sdoe_main.setStyleSheet(
+            "#arti_sdoe_main {background-color: rgba(96, 96, 96, 128);}"
+        )
         self.arti_sdoe_main.setFrameShape(QFrame.Shape.NoFrame)
         self.arti_sdoe_main.setFrameShadow(QFrame.Shadow.Plain)
         self.arti_sdoe_main.setLineWidth(0)
@@ -449,7 +512,7 @@ class Ui_mainwind:
         self.arti_sdoe_name_main.setSizePolicy(sizePolicy)
         self.arti_sdoe_name_main.setMinimumSize(QSize(145, 25))
         self.arti_sdoe_name_main.setMaximumSize(QSize(145, 25))
-        self.arti_sdoe_name_main.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_sdoe_name_main.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_sdoe_data_main = QLineEdit(self.arti_sdoe_main)
         self.arti_sdoe_data_main.setObjectName("arti_sdoe_data_main")
         self.arti_sdoe_data_main.setGeometry(QRect(155, 5, 50, 25))
@@ -457,8 +520,12 @@ class Ui_mainwind:
         self.arti_sdoe_data_main.setSizePolicy(sizePolicy)
         self.arti_sdoe_data_main.setMinimumSize(QSize(50, 25))
         self.arti_sdoe_data_main.setMaximumSize(QSize(50, 25))
-        self.arti_sdoe_data_main.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
-        self.arti_sdoe_data_main.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.arti_sdoe_data_main.setStyleSheet('font: 10pt "IBM Plex Sans";')
+        self.arti_sdoe_data_main.setAlignment(
+            Qt.AlignmentFlag.AlignRight
+            | Qt.AlignmentFlag.AlignTrailing
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.arti_sdoe_data_main.setReadOnly(True)
         self.arti_sdoe_name_d = QComboBox(self.arti_sdoe_area)
         self.arti_sdoe_name_d.setObjectName("arti_sdoe_name_d")
@@ -467,7 +534,7 @@ class Ui_mainwind:
         self.arti_sdoe_name_d.setSizePolicy(sizePolicy)
         self.arti_sdoe_name_d.setMinimumSize(QSize(145, 25))
         self.arti_sdoe_name_d.setMaximumSize(QSize(145, 25))
-        self.arti_sdoe_name_d.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_sdoe_name_d.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_sdoe_data_b = QLineEdit(self.arti_sdoe_area)
         self.arti_sdoe_data_b.setObjectName("arti_sdoe_data_b")
         self.arti_sdoe_data_b.setGeometry(QRect(155, 375, 50, 25))
@@ -475,8 +542,12 @@ class Ui_mainwind:
         self.arti_sdoe_data_b.setSizePolicy(sizePolicy)
         self.arti_sdoe_data_b.setMinimumSize(QSize(50, 25))
         self.arti_sdoe_data_b.setMaximumSize(QSize(50, 25))
-        self.arti_sdoe_data_b.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
-        self.arti_sdoe_data_b.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.arti_sdoe_data_b.setStyleSheet('font: 10pt "IBM Plex Sans";')
+        self.arti_sdoe_data_b.setAlignment(
+            Qt.AlignmentFlag.AlignRight
+            | Qt.AlignmentFlag.AlignTrailing
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.arti_sdoe_data_b.setReadOnly(False)
         self.arti_sdoe_data_a = QLineEdit(self.arti_sdoe_area)
         self.arti_sdoe_data_a.setObjectName("arti_sdoe_data_a")
@@ -485,8 +556,12 @@ class Ui_mainwind:
         self.arti_sdoe_data_a.setSizePolicy(sizePolicy)
         self.arti_sdoe_data_a.setMinimumSize(QSize(50, 25))
         self.arti_sdoe_data_a.setMaximumSize(QSize(50, 25))
-        self.arti_sdoe_data_a.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
-        self.arti_sdoe_data_a.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.arti_sdoe_data_a.setStyleSheet('font: 10pt "IBM Plex Sans";')
+        self.arti_sdoe_data_a.setAlignment(
+            Qt.AlignmentFlag.AlignRight
+            | Qt.AlignmentFlag.AlignTrailing
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.arti_sdoe_data_a.setReadOnly(False)
         self.arti_sdoe_data_c = QLineEdit(self.arti_sdoe_area)
         self.arti_sdoe_data_c.setObjectName("arti_sdoe_data_c")
@@ -495,8 +570,12 @@ class Ui_mainwind:
         self.arti_sdoe_data_c.setSizePolicy(sizePolicy)
         self.arti_sdoe_data_c.setMinimumSize(QSize(50, 25))
         self.arti_sdoe_data_c.setMaximumSize(QSize(50, 25))
-        self.arti_sdoe_data_c.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
-        self.arti_sdoe_data_c.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.arti_sdoe_data_c.setStyleSheet('font: 10pt "IBM Plex Sans";')
+        self.arti_sdoe_data_c.setAlignment(
+            Qt.AlignmentFlag.AlignRight
+            | Qt.AlignmentFlag.AlignTrailing
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.arti_sdoe_data_c.setReadOnly(False)
         self.arti_sdoe_type_area = QFrame(self.arti_sdoe_area)
         self.arti_sdoe_type_area.setObjectName("arti_sdoe_type_area")
@@ -505,7 +584,9 @@ class Ui_mainwind:
         self.arti_sdoe_type_area.setSizePolicy(sizePolicy)
         self.arti_sdoe_type_area.setMinimumSize(QSize(210, 35))
         self.arti_sdoe_type_area.setMaximumSize(QSize(210, 35))
-        self.arti_sdoe_type_area.setStyleSheet("#arti_sdoe_type_area {background-color: rgba(128, 128, 128, 64);}")
+        self.arti_sdoe_type_area.setStyleSheet(
+            "#arti_sdoe_type_area {background-color: rgba(128, 128, 128, 64);}"
+        )
         self.arti_sdoe_type_area.setFrameShape(QFrame.Shape.NoFrame)
         self.arti_sdoe_type_area.setFrameShadow(QFrame.Shadow.Plain)
         self.arti_sdoe_type_area.setLineWidth(0)
@@ -516,7 +597,7 @@ class Ui_mainwind:
         self.arti_sdoe_type_name.setSizePolicy(sizePolicy)
         self.arti_sdoe_type_name.setMinimumSize(QSize(200, 25))
         self.arti_sdoe_type_name.setMaximumSize(QSize(200, 25))
-        self.arti_sdoe_type_name.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_sdoe_type_name.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_sdoe_name_a = QComboBox(self.arti_sdoe_area)
         self.arti_sdoe_name_a.setObjectName("arti_sdoe_name_a")
         self.arti_sdoe_name_a.setGeometry(QRect(5, 345, 145, 25))
@@ -524,7 +605,7 @@ class Ui_mainwind:
         self.arti_sdoe_name_a.setSizePolicy(sizePolicy)
         self.arti_sdoe_name_a.setMinimumSize(QSize(145, 25))
         self.arti_sdoe_name_a.setMaximumSize(QSize(145, 25))
-        self.arti_sdoe_name_a.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_sdoe_name_a.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_sdoe_name_b = QComboBox(self.arti_sdoe_area)
         self.arti_sdoe_name_b.setObjectName("arti_sdoe_name_b")
         self.arti_sdoe_name_b.setGeometry(QRect(5, 375, 145, 25))
@@ -532,7 +613,7 @@ class Ui_mainwind:
         self.arti_sdoe_name_b.setSizePolicy(sizePolicy)
         self.arti_sdoe_name_b.setMinimumSize(QSize(145, 25))
         self.arti_sdoe_name_b.setMaximumSize(QSize(145, 25))
-        self.arti_sdoe_name_b.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_sdoe_name_b.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_sdoe_levl = QComboBox(self.arti_sdoe_area)
         self.arti_sdoe_levl.setObjectName("arti_sdoe_levl")
         self.arti_sdoe_levl.setGeometry(QRect(110, 240, 95, 25))
@@ -540,7 +621,7 @@ class Ui_mainwind:
         self.arti_sdoe_levl.setSizePolicy(sizePolicy)
         self.arti_sdoe_levl.setMinimumSize(QSize(95, 25))
         self.arti_sdoe_levl.setMaximumSize(QSize(95, 25))
-        self.arti_sdoe_levl.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_sdoe_levl.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_sdoe_rare = QComboBox(self.arti_sdoe_area)
         self.arti_sdoe_rare.setObjectName("arti_sdoe_rare")
         self.arti_sdoe_rare.setGeometry(QRect(5, 240, 95, 25))
@@ -548,7 +629,7 @@ class Ui_mainwind:
         self.arti_sdoe_rare.setSizePolicy(sizePolicy)
         self.arti_sdoe_rare.setMinimumSize(QSize(95, 25))
         self.arti_sdoe_rare.setMaximumSize(QSize(95, 25))
-        self.arti_sdoe_rare.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_sdoe_rare.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_sdoe_type = QComboBox(self.arti_sdoe_area)
         self.arti_sdoe_type.setObjectName("arti_sdoe_type")
         self.arti_sdoe_type.setGeometry(QRect(5, 210, 200, 25))
@@ -556,7 +637,7 @@ class Ui_mainwind:
         self.arti_sdoe_type.setSizePolicy(sizePolicy)
         self.arti_sdoe_type.setMinimumSize(QSize(200, 25))
         self.arti_sdoe_type.setMaximumSize(QSize(200, 25))
-        self.arti_sdoe_type.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_sdoe_type.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_sdoe_head_area = QLabel(self.arti_sdoe_area)
         self.arti_sdoe_head_area.setObjectName("arti_sdoe_head_area")
         self.arti_sdoe_head_area.setGeometry(QRect(5, 5, 200, 200))
@@ -586,7 +667,9 @@ class Ui_mainwind:
         self.arti_gboe_area.setSizePolicy(sizePolicy)
         self.arti_gboe_area.setMinimumSize(QSize(210, 465))
         self.arti_gboe_area.setMaximumSize(QSize(210, 465))
-        self.arti_gboe_area.setStyleSheet("#arti_gboe_area {border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 64);}")
+        self.arti_gboe_area.setStyleSheet(
+            "#arti_gboe_area {border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 64);}"
+        )
         self.arti_gboe_area.setFrameShape(QFrame.Shape.StyledPanel)
         self.arti_gboe_area.setFrameShadow(QFrame.Shadow.Raised)
         self.arti_gboe_name_d = QComboBox(self.arti_gboe_area)
@@ -596,7 +679,7 @@ class Ui_mainwind:
         self.arti_gboe_name_d.setSizePolicy(sizePolicy)
         self.arti_gboe_name_d.setMinimumSize(QSize(145, 25))
         self.arti_gboe_name_d.setMaximumSize(QSize(145, 25))
-        self.arti_gboe_name_d.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_gboe_name_d.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_gboe_data_d = QLineEdit(self.arti_gboe_area)
         self.arti_gboe_data_d.setObjectName("arti_gboe_data_d")
         self.arti_gboe_data_d.setGeometry(QRect(155, 435, 50, 25))
@@ -604,8 +687,12 @@ class Ui_mainwind:
         self.arti_gboe_data_d.setSizePolicy(sizePolicy)
         self.arti_gboe_data_d.setMinimumSize(QSize(50, 25))
         self.arti_gboe_data_d.setMaximumSize(QSize(50, 25))
-        self.arti_gboe_data_d.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
-        self.arti_gboe_data_d.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.arti_gboe_data_d.setStyleSheet('font: 10pt "IBM Plex Sans";')
+        self.arti_gboe_data_d.setAlignment(
+            Qt.AlignmentFlag.AlignRight
+            | Qt.AlignmentFlag.AlignTrailing
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.arti_gboe_data_d.setReadOnly(False)
         self.arti_gboe_name_c = QComboBox(self.arti_gboe_area)
         self.arti_gboe_name_c.setObjectName("arti_gboe_name_c")
@@ -614,7 +701,7 @@ class Ui_mainwind:
         self.arti_gboe_name_c.setSizePolicy(sizePolicy)
         self.arti_gboe_name_c.setMinimumSize(QSize(145, 25))
         self.arti_gboe_name_c.setMaximumSize(QSize(145, 25))
-        self.arti_gboe_name_c.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_gboe_name_c.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_gboe_data_c = QLineEdit(self.arti_gboe_area)
         self.arti_gboe_data_c.setObjectName("arti_gboe_data_c")
         self.arti_gboe_data_c.setGeometry(QRect(155, 405, 50, 25))
@@ -622,8 +709,12 @@ class Ui_mainwind:
         self.arti_gboe_data_c.setSizePolicy(sizePolicy)
         self.arti_gboe_data_c.setMinimumSize(QSize(50, 25))
         self.arti_gboe_data_c.setMaximumSize(QSize(50, 25))
-        self.arti_gboe_data_c.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
-        self.arti_gboe_data_c.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.arti_gboe_data_c.setStyleSheet('font: 10pt "IBM Plex Sans";')
+        self.arti_gboe_data_c.setAlignment(
+            Qt.AlignmentFlag.AlignRight
+            | Qt.AlignmentFlag.AlignTrailing
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.arti_gboe_data_c.setReadOnly(False)
         self.arti_gboe_data_b = QLineEdit(self.arti_gboe_area)
         self.arti_gboe_data_b.setObjectName("arti_gboe_data_b")
@@ -632,8 +723,12 @@ class Ui_mainwind:
         self.arti_gboe_data_b.setSizePolicy(sizePolicy)
         self.arti_gboe_data_b.setMinimumSize(QSize(50, 25))
         self.arti_gboe_data_b.setMaximumSize(QSize(50, 25))
-        self.arti_gboe_data_b.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
-        self.arti_gboe_data_b.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.arti_gboe_data_b.setStyleSheet('font: 10pt "IBM Plex Sans";')
+        self.arti_gboe_data_b.setAlignment(
+            Qt.AlignmentFlag.AlignRight
+            | Qt.AlignmentFlag.AlignTrailing
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.arti_gboe_data_b.setReadOnly(False)
         self.arti_gboe_type_area = QFrame(self.arti_gboe_area)
         self.arti_gboe_type_area.setObjectName("arti_gboe_type_area")
@@ -642,7 +737,9 @@ class Ui_mainwind:
         self.arti_gboe_type_area.setSizePolicy(sizePolicy)
         self.arti_gboe_type_area.setMinimumSize(QSize(210, 35))
         self.arti_gboe_type_area.setMaximumSize(QSize(210, 35))
-        self.arti_gboe_type_area.setStyleSheet("#arti_gboe_type_area {background-color: rgba(128, 128, 128, 64);}")
+        self.arti_gboe_type_area.setStyleSheet(
+            "#arti_gboe_type_area {background-color: rgba(128, 128, 128, 64);}"
+        )
         self.arti_gboe_type_area.setFrameShape(QFrame.Shape.NoFrame)
         self.arti_gboe_type_area.setFrameShadow(QFrame.Shadow.Plain)
         self.arti_gboe_type_area.setLineWidth(0)
@@ -653,7 +750,7 @@ class Ui_mainwind:
         self.arti_gboe_type_name.setSizePolicy(sizePolicy)
         self.arti_gboe_type_name.setMinimumSize(QSize(200, 25))
         self.arti_gboe_type_name.setMaximumSize(QSize(200, 25))
-        self.arti_gboe_type_name.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_gboe_type_name.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_gboe_main = QFrame(self.arti_gboe_area)
         self.arti_gboe_main.setObjectName("arti_gboe_main")
         self.arti_gboe_main.setGeometry(QRect(0, 305, 210, 35))
@@ -661,7 +758,9 @@ class Ui_mainwind:
         self.arti_gboe_main.setSizePolicy(sizePolicy)
         self.arti_gboe_main.setMinimumSize(QSize(210, 35))
         self.arti_gboe_main.setMaximumSize(QSize(210, 35))
-        self.arti_gboe_main.setStyleSheet("#arti_gboe_main {background-color: rgba(96, 96, 96, 128);}")
+        self.arti_gboe_main.setStyleSheet(
+            "#arti_gboe_main {background-color: rgba(96, 96, 96, 128);}"
+        )
         self.arti_gboe_main.setFrameShape(QFrame.Shape.NoFrame)
         self.arti_gboe_main.setFrameShadow(QFrame.Shadow.Plain)
         self.arti_gboe_main.setLineWidth(0)
@@ -672,7 +771,7 @@ class Ui_mainwind:
         self.arti_gboe_name_main.setSizePolicy(sizePolicy)
         self.arti_gboe_name_main.setMinimumSize(QSize(145, 25))
         self.arti_gboe_name_main.setMaximumSize(QSize(145, 25))
-        self.arti_gboe_name_main.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_gboe_name_main.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_gboe_data_main = QLineEdit(self.arti_gboe_main)
         self.arti_gboe_data_main.setObjectName("arti_gboe_data_main")
         self.arti_gboe_data_main.setGeometry(QRect(155, 5, 50, 25))
@@ -680,8 +779,12 @@ class Ui_mainwind:
         self.arti_gboe_data_main.setSizePolicy(sizePolicy)
         self.arti_gboe_data_main.setMinimumSize(QSize(50, 25))
         self.arti_gboe_data_main.setMaximumSize(QSize(50, 25))
-        self.arti_gboe_data_main.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
-        self.arti_gboe_data_main.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.arti_gboe_data_main.setStyleSheet('font: 10pt "IBM Plex Sans";')
+        self.arti_gboe_data_main.setAlignment(
+            Qt.AlignmentFlag.AlignRight
+            | Qt.AlignmentFlag.AlignTrailing
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.arti_gboe_data_main.setReadOnly(True)
         self.arti_gboe_data_a = QLineEdit(self.arti_gboe_area)
         self.arti_gboe_data_a.setObjectName("arti_gboe_data_a")
@@ -690,8 +793,12 @@ class Ui_mainwind:
         self.arti_gboe_data_a.setSizePolicy(sizePolicy)
         self.arti_gboe_data_a.setMinimumSize(QSize(50, 25))
         self.arti_gboe_data_a.setMaximumSize(QSize(50, 25))
-        self.arti_gboe_data_a.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
-        self.arti_gboe_data_a.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.arti_gboe_data_a.setStyleSheet('font: 10pt "IBM Plex Sans";')
+        self.arti_gboe_data_a.setAlignment(
+            Qt.AlignmentFlag.AlignRight
+            | Qt.AlignmentFlag.AlignTrailing
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.arti_gboe_data_a.setReadOnly(False)
         self.arti_gboe_name_a = QComboBox(self.arti_gboe_area)
         self.arti_gboe_name_a.setObjectName("arti_gboe_name_a")
@@ -700,7 +807,7 @@ class Ui_mainwind:
         self.arti_gboe_name_a.setSizePolicy(sizePolicy)
         self.arti_gboe_name_a.setMinimumSize(QSize(145, 25))
         self.arti_gboe_name_a.setMaximumSize(QSize(145, 25))
-        self.arti_gboe_name_a.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_gboe_name_a.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_gboe_name_b = QComboBox(self.arti_gboe_area)
         self.arti_gboe_name_b.setObjectName("arti_gboe_name_b")
         self.arti_gboe_name_b.setGeometry(QRect(5, 375, 145, 25))
@@ -708,7 +815,7 @@ class Ui_mainwind:
         self.arti_gboe_name_b.setSizePolicy(sizePolicy)
         self.arti_gboe_name_b.setMinimumSize(QSize(145, 25))
         self.arti_gboe_name_b.setMaximumSize(QSize(145, 25))
-        self.arti_gboe_name_b.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_gboe_name_b.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_gboe_levl = QComboBox(self.arti_gboe_area)
         self.arti_gboe_levl.setObjectName("arti_gboe_levl")
         self.arti_gboe_levl.setGeometry(QRect(110, 240, 95, 25))
@@ -716,7 +823,7 @@ class Ui_mainwind:
         self.arti_gboe_levl.setSizePolicy(sizePolicy)
         self.arti_gboe_levl.setMinimumSize(QSize(95, 25))
         self.arti_gboe_levl.setMaximumSize(QSize(95, 25))
-        self.arti_gboe_levl.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_gboe_levl.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_gboe_type = QComboBox(self.arti_gboe_area)
         self.arti_gboe_type.setObjectName("arti_gboe_type")
         self.arti_gboe_type.setGeometry(QRect(5, 210, 200, 25))
@@ -724,7 +831,7 @@ class Ui_mainwind:
         self.arti_gboe_type.setSizePolicy(sizePolicy)
         self.arti_gboe_type.setMinimumSize(QSize(200, 25))
         self.arti_gboe_type.setMaximumSize(QSize(200, 25))
-        self.arti_gboe_type.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_gboe_type.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_gboe_rare = QComboBox(self.arti_gboe_area)
         self.arti_gboe_rare.setObjectName("arti_gboe_rare")
         self.arti_gboe_rare.setGeometry(QRect(5, 240, 95, 25))
@@ -732,7 +839,7 @@ class Ui_mainwind:
         self.arti_gboe_rare.setSizePolicy(sizePolicy)
         self.arti_gboe_rare.setMinimumSize(QSize(95, 25))
         self.arti_gboe_rare.setMaximumSize(QSize(95, 25))
-        self.arti_gboe_rare.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_gboe_rare.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_gboe_head_area = QLabel(self.arti_gboe_area)
         self.arti_gboe_head_area.setObjectName("arti_gboe_head_area")
         self.arti_gboe_head_area.setGeometry(QRect(5, 5, 200, 200))
@@ -762,7 +869,9 @@ class Ui_mainwind:
         self.arti_ccol_head.setSizePolicy(sizePolicy)
         self.arti_ccol_head.setMinimumSize(QSize(35, 125))
         self.arti_ccol_head.setMaximumSize(QSize(35, 125))
-        self.arti_ccol_head.setStyleSheet("#arti_ccol_head {border-radius: 5px; background-color: rgba(128, 128, 128, 64);}")
+        self.arti_ccol_head.setStyleSheet(
+            "#arti_ccol_head {border-radius: 5px; background-color: rgba(128, 128, 128, 64);}"
+        )
         self.arti_ccol_head.setFrameShape(QFrame.Shape.StyledPanel)
         self.arti_ccol_head.setFrameShadow(QFrame.Shadow.Raised)
         self.arti_ccol_load = QPushButton(self.arti_ccol_head)
@@ -772,7 +881,9 @@ class Ui_mainwind:
         self.arti_ccol_load.setSizePolicy(sizePolicy)
         self.arti_ccol_load.setMinimumSize(QSize(25, 25))
         self.arti_ccol_load.setMaximumSize(QSize(25, 25))
-        self.arti_ccol_load.setStyleSheet("#arti_ccol_load {font: 87 10pt \"Font Awesome 6 Free Solid\";}")
+        self.arti_ccol_load.setStyleSheet(
+            '#arti_ccol_load {font: 87 10pt "Font Awesome 6 Free Solid";}'
+        )
         self.arti_ccol_save = QPushButton(self.arti_ccol_head)
         self.arti_ccol_save.setObjectName("arti_ccol_save")
         self.arti_ccol_save.setGeometry(QRect(5, 65, 25, 25))
@@ -780,7 +891,9 @@ class Ui_mainwind:
         self.arti_ccol_save.setSizePolicy(sizePolicy)
         self.arti_ccol_save.setMinimumSize(QSize(25, 25))
         self.arti_ccol_save.setMaximumSize(QSize(25, 25))
-        self.arti_ccol_save.setStyleSheet("#arti_ccol_save {font: 87 10pt \"Font Awesome 6 Free Solid\";}")
+        self.arti_ccol_save.setStyleSheet(
+            '#arti_ccol_save {font: 87 10pt "Font Awesome 6 Free Solid";}'
+        )
         self.arti_ccol_wipe = QPushButton(self.arti_ccol_head)
         self.arti_ccol_wipe.setObjectName("arti_ccol_wipe")
         self.arti_ccol_wipe.setGeometry(QRect(5, 95, 25, 25))
@@ -788,7 +901,9 @@ class Ui_mainwind:
         self.arti_ccol_wipe.setSizePolicy(sizePolicy)
         self.arti_ccol_wipe.setMinimumSize(QSize(25, 25))
         self.arti_ccol_wipe.setMaximumSize(QSize(25, 25))
-        self.arti_ccol_wipe.setStyleSheet("#arti_ccol_wipe {font: 87 10pt \"Font Awesome 6 Free Solid\";}")
+        self.arti_ccol_wipe.setStyleSheet(
+            '#arti_ccol_wipe {font: 87 10pt "Font Awesome 6 Free Solid";}'
+        )
         self.arti_ccol_scan = QPushButton(self.arti_ccol_head)
         self.arti_ccol_scan.setObjectName("arti_ccol_scan")
         self.arti_ccol_scan.setGeometry(QRect(5, 5, 25, 25))
@@ -796,7 +911,9 @@ class Ui_mainwind:
         self.arti_ccol_scan.setSizePolicy(sizePolicy)
         self.arti_ccol_scan.setMinimumSize(QSize(25, 25))
         self.arti_ccol_scan.setMaximumSize(QSize(25, 25))
-        self.arti_ccol_scan.setStyleSheet("#arti_ccol_scan {font: 87 10pt \"Font Awesome 6 Free Solid\";}")
+        self.arti_ccol_scan.setStyleSheet(
+            '#arti_ccol_scan {font: 87 10pt "Font Awesome 6 Free Solid";}'
+        )
         self.arti_ccol_area = QFrame(self.arti_area)
         self.arti_ccol_area.setObjectName("arti_ccol_area")
         self.arti_ccol_area.setGeometry(QRect(1025, 5, 210, 465))
@@ -804,7 +921,9 @@ class Ui_mainwind:
         self.arti_ccol_area.setSizePolicy(sizePolicy)
         self.arti_ccol_area.setMinimumSize(QSize(210, 465))
         self.arti_ccol_area.setMaximumSize(QSize(210, 465))
-        self.arti_ccol_area.setStyleSheet("#arti_ccol_area {border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 64);}")
+        self.arti_ccol_area.setStyleSheet(
+            "#arti_ccol_area {border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 64);}"
+        )
         self.arti_ccol_area.setFrameShape(QFrame.Shape.StyledPanel)
         self.arti_ccol_area.setFrameShadow(QFrame.Shadow.Raised)
         self.arti_ccol_name_a = QComboBox(self.arti_ccol_area)
@@ -814,7 +933,7 @@ class Ui_mainwind:
         self.arti_ccol_name_a.setSizePolicy(sizePolicy)
         self.arti_ccol_name_a.setMinimumSize(QSize(145, 25))
         self.arti_ccol_name_a.setMaximumSize(QSize(145, 25))
-        self.arti_ccol_name_a.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_ccol_name_a.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_ccol_name_d = QComboBox(self.arti_ccol_area)
         self.arti_ccol_name_d.setObjectName("arti_ccol_name_d")
         self.arti_ccol_name_d.setGeometry(QRect(5, 435, 145, 25))
@@ -822,7 +941,7 @@ class Ui_mainwind:
         self.arti_ccol_name_d.setSizePolicy(sizePolicy)
         self.arti_ccol_name_d.setMinimumSize(QSize(145, 25))
         self.arti_ccol_name_d.setMaximumSize(QSize(145, 25))
-        self.arti_ccol_name_d.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_ccol_name_d.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_ccol_data_d = QLineEdit(self.arti_ccol_area)
         self.arti_ccol_data_d.setObjectName("arti_ccol_data_d")
         self.arti_ccol_data_d.setGeometry(QRect(155, 435, 50, 25))
@@ -830,9 +949,13 @@ class Ui_mainwind:
         self.arti_ccol_data_d.setSizePolicy(sizePolicy)
         self.arti_ccol_data_d.setMinimumSize(QSize(50, 25))
         self.arti_ccol_data_d.setMaximumSize(QSize(50, 25))
-        self.arti_ccol_data_d.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_ccol_data_d.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_ccol_data_d.setFrame(True)
-        self.arti_ccol_data_d.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.arti_ccol_data_d.setAlignment(
+            Qt.AlignmentFlag.AlignRight
+            | Qt.AlignmentFlag.AlignTrailing
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.arti_ccol_data_d.setReadOnly(False)
         self.arti_ccol_name_b = QComboBox(self.arti_ccol_area)
         self.arti_ccol_name_b.setObjectName("arti_ccol_name_b")
@@ -841,7 +964,7 @@ class Ui_mainwind:
         self.arti_ccol_name_b.setSizePolicy(sizePolicy)
         self.arti_ccol_name_b.setMinimumSize(QSize(145, 25))
         self.arti_ccol_name_b.setMaximumSize(QSize(145, 25))
-        self.arti_ccol_name_b.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_ccol_name_b.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_ccol_main = QFrame(self.arti_ccol_area)
         self.arti_ccol_main.setObjectName("arti_ccol_main")
         self.arti_ccol_main.setGeometry(QRect(0, 305, 210, 35))
@@ -849,7 +972,9 @@ class Ui_mainwind:
         self.arti_ccol_main.setSizePolicy(sizePolicy)
         self.arti_ccol_main.setMinimumSize(QSize(210, 35))
         self.arti_ccol_main.setMaximumSize(QSize(210, 35))
-        self.arti_ccol_main.setStyleSheet("#arti_ccol_main {background-color: rgba(96, 96, 96, 128);}")
+        self.arti_ccol_main.setStyleSheet(
+            "#arti_ccol_main {background-color: rgba(96, 96, 96, 128);}"
+        )
         self.arti_ccol_main.setFrameShape(QFrame.Shape.NoFrame)
         self.arti_ccol_main.setFrameShadow(QFrame.Shadow.Plain)
         self.arti_ccol_main.setLineWidth(0)
@@ -860,7 +985,7 @@ class Ui_mainwind:
         self.arti_ccol_name_main.setSizePolicy(sizePolicy)
         self.arti_ccol_name_main.setMinimumSize(QSize(145, 25))
         self.arti_ccol_name_main.setMaximumSize(QSize(145, 25))
-        self.arti_ccol_name_main.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_ccol_name_main.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_ccol_data_main = QLineEdit(self.arti_ccol_main)
         self.arti_ccol_data_main.setObjectName("arti_ccol_data_main")
         self.arti_ccol_data_main.setGeometry(QRect(155, 5, 50, 25))
@@ -868,9 +993,13 @@ class Ui_mainwind:
         self.arti_ccol_data_main.setSizePolicy(sizePolicy)
         self.arti_ccol_data_main.setMinimumSize(QSize(50, 25))
         self.arti_ccol_data_main.setMaximumSize(QSize(50, 25))
-        self.arti_ccol_data_main.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_ccol_data_main.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_ccol_data_main.setFrame(True)
-        self.arti_ccol_data_main.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.arti_ccol_data_main.setAlignment(
+            Qt.AlignmentFlag.AlignRight
+            | Qt.AlignmentFlag.AlignTrailing
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.arti_ccol_data_main.setReadOnly(True)
         self.arti_ccol_name_c = QComboBox(self.arti_ccol_area)
         self.arti_ccol_name_c.setObjectName("arti_ccol_name_c")
@@ -879,7 +1008,7 @@ class Ui_mainwind:
         self.arti_ccol_name_c.setSizePolicy(sizePolicy)
         self.arti_ccol_name_c.setMinimumSize(QSize(145, 25))
         self.arti_ccol_name_c.setMaximumSize(QSize(145, 25))
-        self.arti_ccol_name_c.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_ccol_name_c.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_ccol_data_b = QLineEdit(self.arti_ccol_area)
         self.arti_ccol_data_b.setObjectName("arti_ccol_data_b")
         self.arti_ccol_data_b.setGeometry(QRect(155, 375, 50, 25))
@@ -887,9 +1016,13 @@ class Ui_mainwind:
         self.arti_ccol_data_b.setSizePolicy(sizePolicy)
         self.arti_ccol_data_b.setMinimumSize(QSize(50, 25))
         self.arti_ccol_data_b.setMaximumSize(QSize(50, 25))
-        self.arti_ccol_data_b.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_ccol_data_b.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_ccol_data_b.setFrame(True)
-        self.arti_ccol_data_b.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.arti_ccol_data_b.setAlignment(
+            Qt.AlignmentFlag.AlignRight
+            | Qt.AlignmentFlag.AlignTrailing
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.arti_ccol_data_b.setReadOnly(False)
         self.arti_ccol_type_area = QFrame(self.arti_ccol_area)
         self.arti_ccol_type_area.setObjectName("arti_ccol_type_area")
@@ -898,7 +1031,9 @@ class Ui_mainwind:
         self.arti_ccol_type_area.setSizePolicy(sizePolicy)
         self.arti_ccol_type_area.setMinimumSize(QSize(210, 35))
         self.arti_ccol_type_area.setMaximumSize(QSize(210, 35))
-        self.arti_ccol_type_area.setStyleSheet("#arti_ccol_type_area {background-color: rgba(128, 128, 128, 64);}")
+        self.arti_ccol_type_area.setStyleSheet(
+            "#arti_ccol_type_area {background-color: rgba(128, 128, 128, 64);}"
+        )
         self.arti_ccol_type_area.setFrameShape(QFrame.Shape.NoFrame)
         self.arti_ccol_type_area.setFrameShadow(QFrame.Shadow.Plain)
         self.arti_ccol_type_area.setLineWidth(0)
@@ -909,7 +1044,7 @@ class Ui_mainwind:
         self.arti_ccol_type_name.setSizePolicy(sizePolicy)
         self.arti_ccol_type_name.setMinimumSize(QSize(200, 25))
         self.arti_ccol_type_name.setMaximumSize(QSize(200, 25))
-        self.arti_ccol_type_name.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_ccol_type_name.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_ccol_data_a = QLineEdit(self.arti_ccol_area)
         self.arti_ccol_data_a.setObjectName("arti_ccol_data_a")
         self.arti_ccol_data_a.setGeometry(QRect(155, 345, 50, 25))
@@ -917,9 +1052,13 @@ class Ui_mainwind:
         self.arti_ccol_data_a.setSizePolicy(sizePolicy)
         self.arti_ccol_data_a.setMinimumSize(QSize(50, 25))
         self.arti_ccol_data_a.setMaximumSize(QSize(50, 25))
-        self.arti_ccol_data_a.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_ccol_data_a.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_ccol_data_a.setFrame(True)
-        self.arti_ccol_data_a.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.arti_ccol_data_a.setAlignment(
+            Qt.AlignmentFlag.AlignRight
+            | Qt.AlignmentFlag.AlignTrailing
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.arti_ccol_data_a.setReadOnly(False)
         self.arti_ccol_data_c = QLineEdit(self.arti_ccol_area)
         self.arti_ccol_data_c.setObjectName("arti_ccol_data_c")
@@ -928,9 +1067,13 @@ class Ui_mainwind:
         self.arti_ccol_data_c.setSizePolicy(sizePolicy)
         self.arti_ccol_data_c.setMinimumSize(QSize(50, 25))
         self.arti_ccol_data_c.setMaximumSize(QSize(50, 25))
-        self.arti_ccol_data_c.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_ccol_data_c.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_ccol_data_c.setFrame(True)
-        self.arti_ccol_data_c.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.arti_ccol_data_c.setAlignment(
+            Qt.AlignmentFlag.AlignRight
+            | Qt.AlignmentFlag.AlignTrailing
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.arti_ccol_data_c.setReadOnly(False)
         self.arti_ccol_type = QComboBox(self.arti_ccol_area)
         self.arti_ccol_type.setObjectName("arti_ccol_type")
@@ -939,7 +1082,7 @@ class Ui_mainwind:
         self.arti_ccol_type.setSizePolicy(sizePolicy)
         self.arti_ccol_type.setMinimumSize(QSize(200, 25))
         self.arti_ccol_type.setMaximumSize(QSize(200, 25))
-        self.arti_ccol_type.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_ccol_type.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_ccol_levl = QComboBox(self.arti_ccol_area)
         self.arti_ccol_levl.setObjectName("arti_ccol_levl")
         self.arti_ccol_levl.setGeometry(QRect(110, 240, 95, 25))
@@ -947,7 +1090,7 @@ class Ui_mainwind:
         self.arti_ccol_levl.setSizePolicy(sizePolicy)
         self.arti_ccol_levl.setMinimumSize(QSize(95, 25))
         self.arti_ccol_levl.setMaximumSize(QSize(95, 25))
-        self.arti_ccol_levl.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_ccol_levl.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_ccol_rare = QComboBox(self.arti_ccol_area)
         self.arti_ccol_rare.setObjectName("arti_ccol_rare")
         self.arti_ccol_rare.setGeometry(QRect(5, 240, 95, 25))
@@ -955,7 +1098,7 @@ class Ui_mainwind:
         self.arti_ccol_rare.setSizePolicy(sizePolicy)
         self.arti_ccol_rare.setMinimumSize(QSize(95, 25))
         self.arti_ccol_rare.setMaximumSize(QSize(95, 25))
-        self.arti_ccol_rare.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.arti_ccol_rare.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_ccol_head_area = QLabel(self.arti_ccol_area)
         self.arti_ccol_head_area.setObjectName("arti_ccol_head_area")
         self.arti_ccol_head_area.setGeometry(QRect(5, 5, 200, 200))
@@ -985,7 +1128,9 @@ class Ui_mainwind:
         self.arti_ccol_back_area.setSizePolicy(sizePolicy)
         self.arti_ccol_back_area.setMinimumSize(QSize(40, 40))
         self.arti_ccol_back_area.setMaximumSize(QSize(40, 40))
-        self.arti_ccol_back_area.setStyleSheet("#arti_ccol_back_area {border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 64);}")
+        self.arti_ccol_back_area.setStyleSheet(
+            "#arti_ccol_back_area {border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 64);}"
+        )
         self.arti_ccol_back_area.setFrameShape(QFrame.Shape.StyledPanel)
         self.arti_ccol_back_area.setFrameShadow(QFrame.Shadow.Raised)
         self.arti_ccol_back_icon = QLabel(self.arti_ccol_back_area)
@@ -1006,7 +1151,9 @@ class Ui_mainwind:
         self.arti_gboe_back_area.setSizePolicy(sizePolicy)
         self.arti_gboe_back_area.setMinimumSize(QSize(40, 40))
         self.arti_gboe_back_area.setMaximumSize(QSize(40, 40))
-        self.arti_gboe_back_area.setStyleSheet("#arti_gboe_back_area {border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 64);}")
+        self.arti_gboe_back_area.setStyleSheet(
+            "#arti_gboe_back_area {border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 64);}"
+        )
         self.arti_gboe_back_area.setFrameShape(QFrame.Shape.StyledPanel)
         self.arti_gboe_back_area.setFrameShadow(QFrame.Shadow.Raised)
         self.arti_gboe_back_icon = QLabel(self.arti_gboe_back_area)
@@ -1027,7 +1174,9 @@ class Ui_mainwind:
         self.arti_gboe_head.setSizePolicy(sizePolicy)
         self.arti_gboe_head.setMinimumSize(QSize(35, 125))
         self.arti_gboe_head.setMaximumSize(QSize(35, 125))
-        self.arti_gboe_head.setStyleSheet("#arti_gboe_head {border-radius: 5px; background-color: rgba(128, 128, 128, 64);}")
+        self.arti_gboe_head.setStyleSheet(
+            "#arti_gboe_head {border-radius: 5px; background-color: rgba(128, 128, 128, 64);}"
+        )
         self.arti_gboe_head.setFrameShape(QFrame.Shape.StyledPanel)
         self.arti_gboe_head.setFrameShadow(QFrame.Shadow.Raised)
         self.arti_gboe_load = QPushButton(self.arti_gboe_head)
@@ -1037,7 +1186,9 @@ class Ui_mainwind:
         self.arti_gboe_load.setSizePolicy(sizePolicy)
         self.arti_gboe_load.setMinimumSize(QSize(25, 25))
         self.arti_gboe_load.setMaximumSize(QSize(25, 25))
-        self.arti_gboe_load.setStyleSheet("#arti_gboe_load {font: 87 10pt \"Font Awesome 6 Free Solid\";}")
+        self.arti_gboe_load.setStyleSheet(
+            '#arti_gboe_load {font: 87 10pt "Font Awesome 6 Free Solid";}'
+        )
         self.arti_gboe_save = QPushButton(self.arti_gboe_head)
         self.arti_gboe_save.setObjectName("arti_gboe_save")
         self.arti_gboe_save.setGeometry(QRect(5, 65, 25, 25))
@@ -1045,7 +1196,9 @@ class Ui_mainwind:
         self.arti_gboe_save.setSizePolicy(sizePolicy)
         self.arti_gboe_save.setMinimumSize(QSize(25, 25))
         self.arti_gboe_save.setMaximumSize(QSize(25, 25))
-        self.arti_gboe_save.setStyleSheet("#arti_gboe_save {font: 87 10pt \"Font Awesome 6 Free Solid\";}")
+        self.arti_gboe_save.setStyleSheet(
+            '#arti_gboe_save {font: 87 10pt "Font Awesome 6 Free Solid";}'
+        )
         self.arti_gboe_wipe = QPushButton(self.arti_gboe_head)
         self.arti_gboe_wipe.setObjectName("arti_gboe_wipe")
         self.arti_gboe_wipe.setGeometry(QRect(5, 95, 25, 25))
@@ -1053,7 +1206,9 @@ class Ui_mainwind:
         self.arti_gboe_wipe.setSizePolicy(sizePolicy)
         self.arti_gboe_wipe.setMinimumSize(QSize(25, 25))
         self.arti_gboe_wipe.setMaximumSize(QSize(25, 25))
-        self.arti_gboe_wipe.setStyleSheet("#arti_gboe_wipe {font: 87 10pt \"Font Awesome 6 Free Solid\";}")
+        self.arti_gboe_wipe.setStyleSheet(
+            '#arti_gboe_wipe {font: 87 10pt "Font Awesome 6 Free Solid";}'
+        )
         self.arti_gboe_scan = QPushButton(self.arti_gboe_head)
         self.arti_gboe_scan.setObjectName("arti_gboe_scan")
         self.arti_gboe_scan.setGeometry(QRect(5, 5, 25, 25))
@@ -1061,7 +1216,9 @@ class Ui_mainwind:
         self.arti_gboe_scan.setSizePolicy(sizePolicy)
         self.arti_gboe_scan.setMinimumSize(QSize(25, 25))
         self.arti_gboe_scan.setMaximumSize(QSize(25, 25))
-        self.arti_gboe_scan.setStyleSheet("#arti_gboe_scan {font: 87 10pt \"Font Awesome 6 Free Solid\";}")
+        self.arti_gboe_scan.setStyleSheet(
+            '#arti_gboe_scan {font: 87 10pt "Font Awesome 6 Free Solid";}'
+        )
         self.arti_sdoe_back_area = QFrame(self.arti_area)
         self.arti_sdoe_back_area.setObjectName("arti_sdoe_back_area")
         self.arti_sdoe_back_area.setGeometry(QRect(725, 5, 40, 40))
@@ -1069,7 +1226,9 @@ class Ui_mainwind:
         self.arti_sdoe_back_area.setSizePolicy(sizePolicy)
         self.arti_sdoe_back_area.setMinimumSize(QSize(40, 40))
         self.arti_sdoe_back_area.setMaximumSize(QSize(40, 40))
-        self.arti_sdoe_back_area.setStyleSheet("#arti_sdoe_back_area {border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 64);}")
+        self.arti_sdoe_back_area.setStyleSheet(
+            "#arti_sdoe_back_area {border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 64);}"
+        )
         self.arti_sdoe_back_area.setFrameShape(QFrame.Shape.StyledPanel)
         self.arti_sdoe_back_area.setFrameShadow(QFrame.Shadow.Raised)
         self.arti_sdoe_back_icon = QLabel(self.arti_sdoe_back_area)
@@ -1090,7 +1249,9 @@ class Ui_mainwind:
         self.arti_sdoe_head.setSizePolicy(sizePolicy)
         self.arti_sdoe_head.setMinimumSize(QSize(35, 125))
         self.arti_sdoe_head.setMaximumSize(QSize(35, 125))
-        self.arti_sdoe_head.setStyleSheet("#arti_sdoe_head {border-radius: 5px; background-color: rgba(128, 128, 128, 64);}")
+        self.arti_sdoe_head.setStyleSheet(
+            "#arti_sdoe_head {border-radius: 5px; background-color: rgba(128, 128, 128, 64);}"
+        )
         self.arti_sdoe_head.setFrameShape(QFrame.Shape.StyledPanel)
         self.arti_sdoe_head.setFrameShadow(QFrame.Shadow.Raised)
         self.arti_sdoe_load = QPushButton(self.arti_sdoe_head)
@@ -1100,7 +1261,9 @@ class Ui_mainwind:
         self.arti_sdoe_load.setSizePolicy(sizePolicy)
         self.arti_sdoe_load.setMinimumSize(QSize(25, 25))
         self.arti_sdoe_load.setMaximumSize(QSize(25, 25))
-        self.arti_sdoe_load.setStyleSheet("#arti_sdoe_load {font: 87 10pt \"Font Awesome 6 Free Solid\";}")
+        self.arti_sdoe_load.setStyleSheet(
+            '#arti_sdoe_load {font: 87 10pt "Font Awesome 6 Free Solid";}'
+        )
         self.arti_sdoe_save = QPushButton(self.arti_sdoe_head)
         self.arti_sdoe_save.setObjectName("arti_sdoe_save")
         self.arti_sdoe_save.setGeometry(QRect(5, 65, 25, 25))
@@ -1108,7 +1271,9 @@ class Ui_mainwind:
         self.arti_sdoe_save.setSizePolicy(sizePolicy)
         self.arti_sdoe_save.setMinimumSize(QSize(25, 25))
         self.arti_sdoe_save.setMaximumSize(QSize(25, 25))
-        self.arti_sdoe_save.setStyleSheet("#arti_sdoe_save {font: 87 10pt \"Font Awesome 6 Free Solid\";}")
+        self.arti_sdoe_save.setStyleSheet(
+            '#arti_sdoe_save {font: 87 10pt "Font Awesome 6 Free Solid";}'
+        )
         self.arti_sdoe_wipe = QPushButton(self.arti_sdoe_head)
         self.arti_sdoe_wipe.setObjectName("arti_sdoe_wipe")
         self.arti_sdoe_wipe.setGeometry(QRect(5, 95, 25, 25))
@@ -1116,7 +1281,9 @@ class Ui_mainwind:
         self.arti_sdoe_wipe.setSizePolicy(sizePolicy)
         self.arti_sdoe_wipe.setMinimumSize(QSize(25, 25))
         self.arti_sdoe_wipe.setMaximumSize(QSize(25, 25))
-        self.arti_sdoe_wipe.setStyleSheet("#arti_sdoe_wipe {font: 87 10pt \"Font Awesome 6 Free Solid\";}")
+        self.arti_sdoe_wipe.setStyleSheet(
+            '#arti_sdoe_wipe {font: 87 10pt "Font Awesome 6 Free Solid";}'
+        )
         self.arti_sdoe_scan = QPushButton(self.arti_sdoe_head)
         self.arti_sdoe_scan.setObjectName("arti_sdoe_scan")
         self.arti_sdoe_scan.setGeometry(QRect(5, 5, 25, 25))
@@ -1124,7 +1291,9 @@ class Ui_mainwind:
         self.arti_sdoe_scan.setSizePolicy(sizePolicy)
         self.arti_sdoe_scan.setMinimumSize(QSize(25, 25))
         self.arti_sdoe_scan.setMaximumSize(QSize(25, 25))
-        self.arti_sdoe_scan.setStyleSheet("#arti_sdoe_scan {font: 87 10pt \"Font Awesome 6 Free Solid\";}")
+        self.arti_sdoe_scan.setStyleSheet(
+            '#arti_sdoe_scan {font: 87 10pt "Font Awesome 6 Free Solid";}'
+        )
         self.arti_pmod_back_area = QFrame(self.arti_area)
         self.arti_pmod_back_area.setObjectName("arti_pmod_back_area")
         self.arti_pmod_back_area.setGeometry(QRect(470, 5, 40, 40))
@@ -1132,7 +1301,9 @@ class Ui_mainwind:
         self.arti_pmod_back_area.setSizePolicy(sizePolicy)
         self.arti_pmod_back_area.setMinimumSize(QSize(40, 40))
         self.arti_pmod_back_area.setMaximumSize(QSize(40, 40))
-        self.arti_pmod_back_area.setStyleSheet("#arti_pmod_back_area {border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 64);}")
+        self.arti_pmod_back_area.setStyleSheet(
+            "#arti_pmod_back_area {border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 64);}"
+        )
         self.arti_pmod_back_area.setFrameShape(QFrame.Shape.StyledPanel)
         self.arti_pmod_back_area.setFrameShadow(QFrame.Shadow.Raised)
         self.arti_pmod_back_icon = QLabel(self.arti_pmod_back_area)
@@ -1153,7 +1324,9 @@ class Ui_mainwind:
         self.arti_pmod_head.setSizePolicy(sizePolicy)
         self.arti_pmod_head.setMinimumSize(QSize(35, 125))
         self.arti_pmod_head.setMaximumSize(QSize(35, 125))
-        self.arti_pmod_head.setStyleSheet("#arti_pmod_head {border-radius: 5px; background-color: rgba(128, 128, 128, 64);}")
+        self.arti_pmod_head.setStyleSheet(
+            "#arti_pmod_head {border-radius: 5px; background-color: rgba(128, 128, 128, 64);}"
+        )
         self.arti_pmod_head.setFrameShape(QFrame.Shape.StyledPanel)
         self.arti_pmod_head.setFrameShadow(QFrame.Shadow.Raised)
         self.arti_pmod_load = QPushButton(self.arti_pmod_head)
@@ -1163,7 +1336,9 @@ class Ui_mainwind:
         self.arti_pmod_load.setSizePolicy(sizePolicy)
         self.arti_pmod_load.setMinimumSize(QSize(25, 25))
         self.arti_pmod_load.setMaximumSize(QSize(25, 25))
-        self.arti_pmod_load.setStyleSheet("#arti_pmod_load {font: 87 10pt \"Font Awesome 6 Free Solid\";}")
+        self.arti_pmod_load.setStyleSheet(
+            '#arti_pmod_load {font: 87 10pt "Font Awesome 6 Free Solid";}'
+        )
         self.arti_pmod_save = QPushButton(self.arti_pmod_head)
         self.arti_pmod_save.setObjectName("arti_pmod_save")
         self.arti_pmod_save.setGeometry(QRect(5, 65, 25, 25))
@@ -1171,7 +1346,9 @@ class Ui_mainwind:
         self.arti_pmod_save.setSizePolicy(sizePolicy)
         self.arti_pmod_save.setMinimumSize(QSize(25, 25))
         self.arti_pmod_save.setMaximumSize(QSize(25, 25))
-        self.arti_pmod_save.setStyleSheet("#arti_pmod_save {font: 87 10pt \"Font Awesome 6 Free Solid\";}")
+        self.arti_pmod_save.setStyleSheet(
+            '#arti_pmod_save {font: 87 10pt "Font Awesome 6 Free Solid";}'
+        )
         self.arti_pmod_wipe = QPushButton(self.arti_pmod_head)
         self.arti_pmod_wipe.setObjectName("arti_pmod_wipe")
         self.arti_pmod_wipe.setGeometry(QRect(5, 95, 25, 25))
@@ -1179,7 +1356,9 @@ class Ui_mainwind:
         self.arti_pmod_wipe.setSizePolicy(sizePolicy)
         self.arti_pmod_wipe.setMinimumSize(QSize(25, 25))
         self.arti_pmod_wipe.setMaximumSize(QSize(25, 25))
-        self.arti_pmod_wipe.setStyleSheet("#arti_pmod_wipe{ font: 87 10pt \"Font Awesome 6 Free Solid\";}")
+        self.arti_pmod_wipe.setStyleSheet(
+            '#arti_pmod_wipe{ font: 87 10pt "Font Awesome 6 Free Solid";}'
+        )
         self.arti_pmod_scan = QPushButton(self.arti_pmod_head)
         self.arti_pmod_scan.setObjectName("arti_pmod_scan")
         self.arti_pmod_scan.setGeometry(QRect(5, 5, 25, 25))
@@ -1187,7 +1366,9 @@ class Ui_mainwind:
         self.arti_pmod_scan.setSizePolicy(sizePolicy)
         self.arti_pmod_scan.setMinimumSize(QSize(25, 25))
         self.arti_pmod_scan.setMaximumSize(QSize(25, 25))
-        self.arti_pmod_scan.setStyleSheet("#arti_pmod_scan {font: 87 10pt \"Font Awesome 6 Free Solid\";}")
+        self.arti_pmod_scan.setStyleSheet(
+            '#arti_pmod_scan {font: 87 10pt "Font Awesome 6 Free Solid";}'
+        )
         self.arti_fwol_back_area = QFrame(self.arti_area)
         self.arti_fwol_back_area.setObjectName("arti_fwol_back_area")
         self.arti_fwol_back_area.setGeometry(QRect(215, 5, 40, 40))
@@ -1195,7 +1376,9 @@ class Ui_mainwind:
         self.arti_fwol_back_area.setSizePolicy(sizePolicy)
         self.arti_fwol_back_area.setMinimumSize(QSize(40, 40))
         self.arti_fwol_back_area.setMaximumSize(QSize(40, 40))
-        self.arti_fwol_back_area.setStyleSheet("#arti_fwol_back_area {border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 64);}")
+        self.arti_fwol_back_area.setStyleSheet(
+            "#arti_fwol_back_area {border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 64);}"
+        )
         self.arti_fwol_back_area.setFrameShape(QFrame.Shape.StyledPanel)
         self.arti_fwol_back_area.setFrameShadow(QFrame.Shadow.Raised)
         self.arti_fwol_back_icon = QLabel(self.arti_fwol_back_area)
@@ -1216,7 +1399,9 @@ class Ui_mainwind:
         self.arti_fwol_head.setSizePolicy(sizePolicy)
         self.arti_fwol_head.setMinimumSize(QSize(35, 125))
         self.arti_fwol_head.setMaximumSize(QSize(35, 125))
-        self.arti_fwol_head.setStyleSheet("#arti_fwol_head {border-radius: 5px; background-color: rgba(128, 128, 128, 64);}")
+        self.arti_fwol_head.setStyleSheet(
+            "#arti_fwol_head {border-radius: 5px; background-color: rgba(128, 128, 128, 64);}"
+        )
         self.arti_fwol_head.setFrameShape(QFrame.Shape.StyledPanel)
         self.arti_fwol_head.setFrameShadow(QFrame.Shadow.Raised)
         self.arti_fwol_load = QPushButton(self.arti_fwol_head)
@@ -1226,7 +1411,9 @@ class Ui_mainwind:
         self.arti_fwol_load.setSizePolicy(sizePolicy)
         self.arti_fwol_load.setMinimumSize(QSize(25, 25))
         self.arti_fwol_load.setMaximumSize(QSize(25, 25))
-        self.arti_fwol_load.setStyleSheet("#arti_fwol_load {font: 87 10pt \"Font Awesome 6 Free Solid\";}")
+        self.arti_fwol_load.setStyleSheet(
+            '#arti_fwol_load {font: 87 10pt "Font Awesome 6 Free Solid";}'
+        )
         self.arti_fwol_save = QPushButton(self.arti_fwol_head)
         self.arti_fwol_save.setObjectName("arti_fwol_save")
         self.arti_fwol_save.setGeometry(QRect(5, 65, 25, 25))
@@ -1234,7 +1421,9 @@ class Ui_mainwind:
         self.arti_fwol_save.setSizePolicy(sizePolicy)
         self.arti_fwol_save.setMinimumSize(QSize(25, 25))
         self.arti_fwol_save.setMaximumSize(QSize(25, 25))
-        self.arti_fwol_save.setStyleSheet("#arti_fwol_save {font: 87 10pt \"Font Awesome 6 Free Solid\";}")
+        self.arti_fwol_save.setStyleSheet(
+            '#arti_fwol_save {font: 87 10pt "Font Awesome 6 Free Solid";}'
+        )
         self.arti_fwol_wipe = QPushButton(self.arti_fwol_head)
         self.arti_fwol_wipe.setObjectName("arti_fwol_wipe")
         self.arti_fwol_wipe.setGeometry(QRect(5, 95, 25, 25))
@@ -1242,7 +1431,9 @@ class Ui_mainwind:
         self.arti_fwol_wipe.setSizePolicy(sizePolicy)
         self.arti_fwol_wipe.setMinimumSize(QSize(25, 25))
         self.arti_fwol_wipe.setMaximumSize(QSize(25, 25))
-        self.arti_fwol_wipe.setStyleSheet("#arti_fwol_wipe {font: 87 10pt \"Font Awesome 6 Free Solid\";}")
+        self.arti_fwol_wipe.setStyleSheet(
+            '#arti_fwol_wipe {font: 87 10pt "Font Awesome 6 Free Solid";}'
+        )
         self.arti_fwol_scan = QPushButton(self.arti_fwol_head)
         self.arti_fwol_scan.setObjectName("arti_fwol_scan")
         self.arti_fwol_scan.setGeometry(QRect(5, 5, 25, 25))
@@ -1250,7 +1441,9 @@ class Ui_mainwind:
         self.arti_fwol_scan.setSizePolicy(sizePolicy)
         self.arti_fwol_scan.setMinimumSize(QSize(25, 25))
         self.arti_fwol_scan.setMaximumSize(QSize(25, 25))
-        self.arti_fwol_scan.setStyleSheet("#arti_fwol_scan {font: 87 10pt \"Font Awesome 6 Free Solid\";}")
+        self.arti_fwol_scan.setStyleSheet(
+            '#arti_fwol_scan {font: 87 10pt "Font Awesome 6 Free Solid";}'
+        )
         self.bone_area = QFrame(self.centwdgt)
         self.bone_area.setObjectName("bone_area")
         self.bone_area.setGeometry(QRect(45, 230, 260, 475))
@@ -1258,7 +1451,9 @@ class Ui_mainwind:
         self.bone_area.setSizePolicy(sizePolicy)
         self.bone_area.setMinimumSize(QSize(260, 475))
         self.bone_area.setMaximumSize(QSize(260, 475))
-        self.bone_area.setStyleSheet("#bone_area {border: 1px solid rgba(128, 128, 128, 128); border-radius: 5px;}")
+        self.bone_area.setStyleSheet(
+            "#bone_area {border: 1px solid rgba(128, 128, 128, 128); border-radius: 5px;}"
+        )
         self.bone_area.setFrameShape(QFrame.Shape.StyledPanel)
         self.bone_area.setFrameShadow(QFrame.Shadow.Raised)
         self.bone_main_area = QFrame(self.bone_area)
@@ -1268,7 +1463,9 @@ class Ui_mainwind:
         self.bone_main_area.setSizePolicy(sizePolicy)
         self.bone_main_area.setMinimumSize(QSize(210, 465))
         self.bone_main_area.setMaximumSize(QSize(210, 465))
-        self.bone_main_area.setStyleSheet("#bone_main_area {border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 64);}")
+        self.bone_main_area.setStyleSheet(
+            "#bone_main_area {border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 64);}"
+        )
         self.bone_main_area.setFrameShape(QFrame.Shape.StyledPanel)
         self.bone_main_area.setFrameShadow(QFrame.Shadow.Raised)
         self.pair_area_desc = QTextEdit(self.bone_main_area)
@@ -1278,7 +1475,9 @@ class Ui_mainwind:
         self.pair_area_desc.setSizePolicy(sizePolicy)
         self.pair_area_desc.setMinimumSize(QSize(200, 195))
         self.pair_area_desc.setMaximumSize(QSize(200, 195))
-        self.pair_area_desc.setStyleSheet("#pair_area_desc {font: 10pt \"IBM Plex Sans\"; background-color: rgba(192, 192, 192, 128);}")
+        self.pair_area_desc.setStyleSheet(
+            '#pair_area_desc {font: 10pt "IBM Plex Sans"; background-color: rgba(192, 192, 192, 128);}'
+        )
         self.pair_area_desc.setFrameShape(QFrame.Shape.NoFrame)
         self.pair_area_desc.setFrameShadow(QFrame.Shadow.Plain)
         self.pair_area_desc.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOn)
@@ -1291,8 +1490,12 @@ class Ui_mainwind:
         self.pair_area_head.setSizePolicy(sizePolicy)
         self.pair_area_head.setMinimumSize(QSize(200, 25))
         self.pair_area_head.setMaximumSize(QSize(200, 25))
-        self.pair_area_head.setStyleSheet("font: 75 10pt \"IBM Plex Sans\";")
-        self.pair_area_head.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
+        self.pair_area_head.setStyleSheet('font: 75 10pt "IBM Plex Sans";')
+        self.pair_area_head.setAlignment(
+            Qt.AlignmentFlag.AlignLeading
+            | Qt.AlignmentFlag.AlignLeft
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.pair_area_head.setWordWrap(True)
         self.quad_area_head = QLabel(self.bone_main_area)
         self.quad_area_head.setObjectName("quad_area_head")
@@ -1301,8 +1504,12 @@ class Ui_mainwind:
         self.quad_area_head.setSizePolicy(sizePolicy)
         self.quad_area_head.setMinimumSize(QSize(200, 25))
         self.quad_area_head.setMaximumSize(QSize(200, 25))
-        self.quad_area_head.setStyleSheet("font: 75 10pt \"IBM Plex Sans\";")
-        self.quad_area_head.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
+        self.quad_area_head.setStyleSheet('font: 75 10pt "IBM Plex Sans";')
+        self.quad_area_head.setAlignment(
+            Qt.AlignmentFlag.AlignLeading
+            | Qt.AlignmentFlag.AlignLeft
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.quad_area_head.setWordWrap(True)
         self.quad_area_desc = QTextEdit(self.bone_main_area)
         self.quad_area_desc.setObjectName("quad_area_desc")
@@ -1311,7 +1518,9 @@ class Ui_mainwind:
         self.quad_area_desc.setSizePolicy(sizePolicy)
         self.quad_area_desc.setMinimumSize(QSize(200, 195))
         self.quad_area_desc.setMaximumSize(QSize(200, 195))
-        self.quad_area_desc.setStyleSheet("#quad_area_desc {font: 10pt \"IBM Plex Sans\"; background-color: rgba(192, 192, 192, 128);}")
+        self.quad_area_desc.setStyleSheet(
+            '#quad_area_desc {font: 10pt "IBM Plex Sans"; background-color: rgba(192, 192, 192, 128);}'
+        )
         self.quad_area_desc.setFrameShape(QFrame.Shape.NoFrame)
         self.quad_area_desc.setFrameShadow(QFrame.Shadow.Plain)
         self.quad_area_desc.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOn)
@@ -1324,7 +1533,9 @@ class Ui_mainwind:
         self.bone_back_area.setSizePolicy(sizePolicy)
         self.bone_back_area.setMinimumSize(QSize(40, 40))
         self.bone_back_area.setMaximumSize(QSize(40, 40))
-        self.bone_back_area.setStyleSheet("#bone_back_area {border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 64);}")
+        self.bone_back_area.setStyleSheet(
+            "#bone_back_area {border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 64);}"
+        )
         self.bone_back_area.setFrameShape(QFrame.Shape.StyledPanel)
         self.bone_back_area.setFrameShadow(QFrame.Shadow.Raised)
         self.bone_back_icon = QLabel(self.bone_back_area)
@@ -1345,7 +1556,9 @@ class Ui_mainwind:
         self.bone_head.setSizePolicy(sizePolicy)
         self.bone_head.setMinimumSize(QSize(35, 125))
         self.bone_head.setMaximumSize(QSize(35, 125))
-        self.bone_head.setStyleSheet("#bone_head {border-radius: 5px; background-color: rgba(128, 128, 128, 64);}")
+        self.bone_head.setStyleSheet(
+            "#bone_head {border-radius: 5px; background-color: rgba(128, 128, 128, 64);}"
+        )
         self.bone_head.setFrameShape(QFrame.Shape.StyledPanel)
         self.bone_head.setFrameShadow(QFrame.Shadow.Raised)
         self.head_wipe = QPushButton(self.bone_head)
@@ -1355,8 +1568,7 @@ class Ui_mainwind:
         self.head_wipe.setSizePolicy(sizePolicy)
         self.head_wipe.setMinimumSize(QSize(25, 25))
         self.head_wipe.setMaximumSize(QSize(25, 25))
-        self.head_wipe.setStyleSheet("#head_wipe {font: 87 10pt \"Font Awesome 6 Free Solid\";}\n"
-"")
+        self.head_wipe.setStyleSheet('#head_wipe {font: 87 10pt "Font Awesome 6 Free Solid";}\n')
         self.head_save = QPushButton(self.bone_head)
         self.head_save.setObjectName("head_save")
         self.head_save.setGeometry(QRect(5, 65, 25, 25))
@@ -1364,7 +1576,7 @@ class Ui_mainwind:
         self.head_save.setSizePolicy(sizePolicy)
         self.head_save.setMinimumSize(QSize(25, 25))
         self.head_save.setMaximumSize(QSize(25, 25))
-        self.head_save.setStyleSheet("#head_save {font: 87 10pt \"Font Awesome 6 Free Solid\";}")
+        self.head_save.setStyleSheet('#head_save {font: 87 10pt "Font Awesome 6 Free Solid";}')
         self.head_load = QPushButton(self.bone_head)
         self.head_load.setObjectName("head_load")
         self.head_load.setGeometry(QRect(5, 35, 25, 25))
@@ -1372,7 +1584,7 @@ class Ui_mainwind:
         self.head_load.setSizePolicy(sizePolicy)
         self.head_load.setMinimumSize(QSize(25, 25))
         self.head_load.setMaximumSize(QSize(25, 25))
-        self.head_load.setStyleSheet("#head_load {font: 87 10pt \"Font Awesome 6 Free Solid\";}")
+        self.head_load.setStyleSheet('#head_load {font: 87 10pt "Font Awesome 6 Free Solid";}')
         self.head_scan = QPushButton(self.bone_head)
         self.head_scan.setObjectName("head_scan")
         self.head_scan.setGeometry(QRect(5, 5, 25, 25))
@@ -1380,7 +1592,7 @@ class Ui_mainwind:
         self.head_scan.setSizePolicy(sizePolicy)
         self.head_scan.setMinimumSize(QSize(25, 25))
         self.head_scan.setMaximumSize(QSize(25, 25))
-        self.head_scan.setStyleSheet("#head_scan {font: 87 10pt \"Font Awesome 6 Free Solid\";}")
+        self.head_scan.setStyleSheet('#head_scan {font: 87 10pt "Font Awesome 6 Free Solid";}')
         self.weap_area = QFrame(self.centwdgt)
         self.weap_area.setObjectName("weap_area")
         self.weap_area.setGeometry(QRect(45, 710, 260, 220))
@@ -1388,7 +1600,9 @@ class Ui_mainwind:
         self.weap_area.setSizePolicy(sizePolicy)
         self.weap_area.setMinimumSize(QSize(260, 220))
         self.weap_area.setMaximumSize(QSize(260, 220))
-        self.weap_area.setStyleSheet("#weap_area {border: 1px solid rgba(128, 128, 128, 128); border-radius: 5px;}")
+        self.weap_area.setStyleSheet(
+            "#weap_area {border: 1px solid rgba(128, 128, 128, 128); border-radius: 5px;}"
+        )
         self.weap_area.setFrameShape(QFrame.Shape.StyledPanel)
         self.weap_area.setFrameShadow(QFrame.Shadow.Raised)
         self.weap_main = QFrame(self.weap_area)
@@ -1398,7 +1612,9 @@ class Ui_mainwind:
         self.weap_main.setSizePolicy(sizePolicy)
         self.weap_main.setMinimumSize(QSize(210, 210))
         self.weap_main.setMaximumSize(QSize(210, 210))
-        self.weap_main.setStyleSheet("#weap_main {border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 64);}")
+        self.weap_main.setStyleSheet(
+            "#weap_main {border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 64);}"
+        )
         self.weap_main.setFrameShape(QFrame.Shape.StyledPanel)
         self.weap_main.setFrameShadow(QFrame.Shadow.Raised)
         self.weap_area_levl = QComboBox(self.weap_main)
@@ -1408,7 +1624,7 @@ class Ui_mainwind:
         self.weap_area_levl.setSizePolicy(sizePolicy)
         self.weap_area_levl.setMinimumSize(QSize(200, 25))
         self.weap_area_levl.setMaximumSize(QSize(200, 25))
-        self.weap_area_levl.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.weap_area_levl.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.weap_area_type = QComboBox(self.weap_main)
         self.weap_area_type.setObjectName("weap_area_type")
         self.weap_area_type.setGeometry(QRect(5, 5, 200, 25))
@@ -1416,7 +1632,7 @@ class Ui_mainwind:
         self.weap_area_type.setSizePolicy(sizePolicy)
         self.weap_area_type.setMinimumSize(QSize(200, 25))
         self.weap_area_type.setMaximumSize(QSize(200, 25))
-        self.weap_area_type.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.weap_area_type.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.weap_area_refn = QComboBox(self.weap_main)
         self.weap_area_refn.setObjectName("weap_area_refn")
         self.weap_area_refn.setGeometry(QRect(5, 65, 200, 25))
@@ -1424,7 +1640,7 @@ class Ui_mainwind:
         self.weap_area_refn.setSizePolicy(sizePolicy)
         self.weap_area_refn.setMinimumSize(QSize(200, 25))
         self.weap_area_refn.setMaximumSize(QSize(200, 25))
-        self.weap_area_refn.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.weap_area_refn.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.weap_area_name = QComboBox(self.weap_main)
         self.weap_area_name.setObjectName("weap_area_name")
         self.weap_area_name.setGeometry(QRect(5, 35, 200, 25))
@@ -1432,7 +1648,7 @@ class Ui_mainwind:
         self.weap_area_name.setSizePolicy(sizePolicy)
         self.weap_area_name.setMinimumSize(QSize(200, 25))
         self.weap_area_name.setMaximumSize(QSize(200, 25))
-        self.weap_area_name.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.weap_area_name.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.weap_area_rare = QLabel(self.weap_main)
         self.weap_area_rare.setObjectName("weap_area_rare")
         self.weap_area_rare.setGeometry(QRect(5, 125, 200, 20))
@@ -1440,8 +1656,12 @@ class Ui_mainwind:
         self.weap_area_rare.setSizePolicy(sizePolicy)
         self.weap_area_rare.setMinimumSize(QSize(200, 20))
         self.weap_area_rare.setMaximumSize(QSize(200, 20))
-        self.weap_area_rare.setStyleSheet("font: 900 10pt \"Font Awesome 6 Free Solid\"; ")
-        self.weap_area_rare.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
+        self.weap_area_rare.setStyleSheet('font: 900 10pt "Font Awesome 6 Free Solid"; ')
+        self.weap_area_rare.setAlignment(
+            Qt.AlignmentFlag.AlignLeading
+            | Qt.AlignmentFlag.AlignLeft
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.weap_area_rare.setWordWrap(True)
         self.weap_area_batk = QLineEdit(self.weap_main)
         self.weap_area_batk.setObjectName("weap_area_batk")
@@ -1450,8 +1670,12 @@ class Ui_mainwind:
         self.weap_area_batk.setSizePolicy(sizePolicy)
         self.weap_area_batk.setMinimumSize(QSize(200, 25))
         self.weap_area_batk.setMaximumSize(QSize(200, 25))
-        self.weap_area_batk.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
-        self.weap_area_batk.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.weap_area_batk.setStyleSheet('font: 10pt "IBM Plex Sans";')
+        self.weap_area_batk.setAlignment(
+            Qt.AlignmentFlag.AlignRight
+            | Qt.AlignmentFlag.AlignTrailing
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.weap_area_batk.setReadOnly(True)
         self.weap_area_stat = QLineEdit(self.weap_main)
         self.weap_area_stat.setObjectName("weap_area_stat")
@@ -1460,8 +1684,12 @@ class Ui_mainwind:
         self.weap_area_stat.setSizePolicy(sizePolicy)
         self.weap_area_stat.setMinimumSize(QSize(200, 25))
         self.weap_area_stat.setMaximumSize(QSize(200, 25))
-        self.weap_area_stat.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
-        self.weap_area_stat.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.weap_area_stat.setStyleSheet('font: 10pt "IBM Plex Sans";')
+        self.weap_area_stat.setAlignment(
+            Qt.AlignmentFlag.AlignRight
+            | Qt.AlignmentFlag.AlignTrailing
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.weap_area_stat.setReadOnly(True)
         self.weap_area_batk_icon = QPushButton(self.weap_main)
         self.weap_area_batk_icon.setObjectName("weap_area_batk_icon")
@@ -1471,7 +1699,9 @@ class Ui_mainwind:
         self.weap_area_batk_icon.setSizePolicy(sizePolicy)
         self.weap_area_batk_icon.setMinimumSize(QSize(25, 25))
         self.weap_area_batk_icon.setMaximumSize(QSize(25, 25))
-        self.weap_area_batk_icon.setStyleSheet("#weap_area_batk_icon {font: 87 10pt \"Font Awesome 6 Free Solid\"; color: rgb(192, 0, 0);}")
+        self.weap_area_batk_icon.setStyleSheet(
+            '#weap_area_batk_icon {font: 87 10pt "Font Awesome 6 Free Solid"; color: rgb(192, 0, 0);}'
+        )
         self.weap_area_batk_icon.setFlat(True)
         self.weap_area_stat_icon = QPushButton(self.weap_main)
         self.weap_area_stat_icon.setObjectName("weap_area_stat_icon")
@@ -1481,7 +1711,9 @@ class Ui_mainwind:
         self.weap_area_stat_icon.setSizePolicy(sizePolicy)
         self.weap_area_stat_icon.setMinimumSize(QSize(25, 25))
         self.weap_area_stat_icon.setMaximumSize(QSize(25, 25))
-        self.weap_area_stat_icon.setStyleSheet("#weap_area_stat_icon {font: 87 10pt \"Font Awesome 6 Free Solid\"; color: rgb(208, 208, 0);}")
+        self.weap_area_stat_icon.setStyleSheet(
+            '#weap_area_stat_icon {font: 87 10pt "Font Awesome 6 Free Solid"; color: rgb(208, 208, 0);}'
+        )
         self.weap_area_stat_icon.setFlat(True)
         self.weap_back_area = QFrame(self.weap_area)
         self.weap_back_area.setObjectName("weap_back_area")
@@ -1490,7 +1722,9 @@ class Ui_mainwind:
         self.weap_back_area.setSizePolicy(sizePolicy)
         self.weap_back_area.setMinimumSize(QSize(40, 40))
         self.weap_back_area.setMaximumSize(QSize(40, 40))
-        self.weap_back_area.setStyleSheet("#weap_back_area {border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 64);}")
+        self.weap_back_area.setStyleSheet(
+            "#weap_back_area {border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 64);}"
+        )
         self.weap_back_area.setFrameShape(QFrame.Shape.StyledPanel)
         self.weap_back_area.setFrameShadow(QFrame.Shadow.Raised)
         self.weap_back_icon = QLabel(self.weap_back_area)
@@ -1511,7 +1745,9 @@ class Ui_mainwind:
         self.weap_head.setSizePolicy(sizePolicy)
         self.weap_head.setMinimumSize(QSize(35, 65))
         self.weap_head.setMaximumSize(QSize(35, 65))
-        self.weap_head.setStyleSheet("#weap_head {border-radius: 5px; background-color: rgba(128, 128, 128, 64);}")
+        self.weap_head.setStyleSheet(
+            "#weap_head {border-radius: 5px; background-color: rgba(128, 128, 128, 64);}"
+        )
         self.weap_head.setFrameShape(QFrame.Shape.StyledPanel)
         self.weap_head.setFrameShadow(QFrame.Shadow.Raised)
         self.weap_head_load = QPushButton(self.weap_head)
@@ -1521,7 +1757,9 @@ class Ui_mainwind:
         self.weap_head_load.setSizePolicy(sizePolicy)
         self.weap_head_load.setMinimumSize(QSize(25, 25))
         self.weap_head_load.setMaximumSize(QSize(25, 25))
-        self.weap_head_load.setStyleSheet("#weap_head_load {font: 87 10pt \"Font Awesome 6 Free Solid\";}")
+        self.weap_head_load.setStyleSheet(
+            '#weap_head_load {font: 87 10pt "Font Awesome 6 Free Solid";}'
+        )
         self.weap_head_save = QPushButton(self.weap_head)
         self.weap_head_save.setObjectName("weap_head_save")
         self.weap_head_save.setGeometry(QRect(5, 35, 25, 25))
@@ -1529,7 +1767,9 @@ class Ui_mainwind:
         self.weap_head_save.setSizePolicy(sizePolicy)
         self.weap_head_save.setMinimumSize(QSize(25, 25))
         self.weap_head_save.setMaximumSize(QSize(25, 25))
-        self.weap_head_save.setStyleSheet("#weap_head_save {font: 87 10pt \"Font Awesome 6 Free Solid\";}")
+        self.weap_head_save.setStyleSheet(
+            '#weap_head_save {font: 87 10pt "Font Awesome 6 Free Solid";}'
+        )
         self.defn_area = QFrame(self.centwdgt)
         self.defn_area.setObjectName("defn_area")
         self.defn_area.setGeometry(QRect(310, 710, 1280, 220))
@@ -1537,7 +1777,9 @@ class Ui_mainwind:
         self.defn_area.setSizePolicy(sizePolicy)
         self.defn_area.setMinimumSize(QSize(1280, 220))
         self.defn_area.setMaximumSize(QSize(1280, 220))
-        self.defn_area.setStyleSheet("#defn_area {border: 1px solid rgba(128, 128, 128, 128); border-radius: 5px;}")
+        self.defn_area.setStyleSheet(
+            "#defn_area {border: 1px solid rgba(128, 128, 128, 128); border-radius: 5px;}"
+        )
         self.defn_area.setFrameShape(QFrame.Shape.StyledPanel)
         self.defn_area.setFrameShadow(QFrame.Shadow.Raised)
         self.weap_inpt = QFrame(self.defn_area)
@@ -1547,7 +1789,9 @@ class Ui_mainwind:
         self.weap_inpt.setSizePolicy(sizePolicy)
         self.weap_inpt.setMinimumSize(QSize(210, 210))
         self.weap_inpt.setMaximumSize(QSize(210, 210))
-        self.weap_inpt.setStyleSheet("#weap_inpt {border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 64);}")
+        self.weap_inpt.setStyleSheet(
+            "#weap_inpt {border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 64);}"
+        )
         self.weap_inpt.setFrameShape(QFrame.Shape.StyledPanel)
         self.weap_inpt.setFrameShadow(QFrame.Shadow.Raised)
         self.weap_port_area = QLabel(self.weap_inpt)
@@ -1579,7 +1823,9 @@ class Ui_mainwind:
         self.weap_refn_area.setSizePolicy(sizePolicy)
         self.weap_refn_area.setMinimumSize(QSize(1055, 210))
         self.weap_refn_area.setMaximumSize(QSize(1055, 210))
-        self.weap_refn_area.setStyleSheet("#weap_refn_area {border-radius: 5px; background-color: rgba(128, 128, 128, 64);}")
+        self.weap_refn_area.setStyleSheet(
+            "#weap_refn_area {border-radius: 5px; background-color: rgba(128, 128, 128, 64);}"
+        )
         self.weap_refn_area.setFrameShape(QFrame.Shape.StyledPanel)
         self.weap_refn_area.setFrameShadow(QFrame.Shadow.Raised)
         self.weap_area_refn_body = QTextEdit(self.weap_refn_area)
@@ -1589,7 +1835,9 @@ class Ui_mainwind:
         self.weap_area_refn_body.setSizePolicy(sizePolicy)
         self.weap_area_refn_body.setMinimumSize(QSize(1045, 170))
         self.weap_area_refn_body.setMaximumSize(QSize(1045, 170))
-        self.weap_area_refn_body.setStyleSheet("#weap_area_refn_body {font: 10pt \"IBM Plex Sans\"; background-color: rgba(192, 192, 192, 128);}")
+        self.weap_area_refn_body.setStyleSheet(
+            '#weap_area_refn_body {font: 10pt "IBM Plex Sans"; background-color: rgba(192, 192, 192, 128);}'
+        )
         self.weap_area_refn_body.setFrameShape(QFrame.Shape.NoFrame)
         self.weap_area_refn_body.setFrameShadow(QFrame.Shadow.Plain)
         self.weap_area_refn_body.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOn)
@@ -1601,8 +1849,12 @@ class Ui_mainwind:
         self.weap_area_refn_head.setSizePolicy(sizePolicy)
         self.weap_area_refn_head.setMinimumSize(QSize(1045, 25))
         self.weap_area_refn_head.setMaximumSize(QSize(1045, 25))
-        self.weap_area_refn_head.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
-        self.weap_area_refn_head.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
+        self.weap_area_refn_head.setStyleSheet('font: 10pt "IBM Plex Sans";')
+        self.weap_area_refn_head.setAlignment(
+            Qt.AlignmentFlag.AlignLeading
+            | Qt.AlignmentFlag.AlignLeft
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.weap_area_refn_head.setWordWrap(True)
         self.head_back = QFrame(self.centwdgt)
         self.head_back.setObjectName("head_back")
@@ -1611,7 +1863,9 @@ class Ui_mainwind:
         self.head_back.setSizePolicy(sizePolicy)
         self.head_back.setMinimumSize(QSize(260, 220))
         self.head_back.setMaximumSize(QSize(260, 220))
-        self.head_back.setStyleSheet("#head_back {border: 1px solid rgba(128, 128, 128, 128); border-radius: 5px;}")
+        self.head_back.setStyleSheet(
+            "#head_back {border: 1px solid rgba(128, 128, 128, 128); border-radius: 5px;}"
+        )
         self.head_back.setFrameShape(QFrame.Shape.StyledPanel)
         self.head_back.setFrameShadow(QFrame.Shadow.Raised)
         self.head_main = QFrame(self.head_back)
@@ -1621,7 +1875,9 @@ class Ui_mainwind:
         self.head_main.setSizePolicy(sizePolicy)
         self.head_main.setMinimumSize(QSize(210, 210))
         self.head_main.setMaximumSize(QSize(210, 210))
-        self.head_main.setStyleSheet("#head_main {background-color: rgba(128, 128, 128, 64); border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;}")
+        self.head_main.setStyleSheet(
+            "#head_main {background-color: rgba(128, 128, 128, 64); border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;}"
+        )
         self.head_main.setFrameShape(QFrame.Shape.StyledPanel)
         self.head_main.setFrameShadow(QFrame.Shadow.Raised)
         self.head_char_name = QComboBox(self.head_main)
@@ -1631,7 +1887,7 @@ class Ui_mainwind:
         self.head_char_name.setSizePolicy(sizePolicy)
         self.head_char_name.setMinimumSize(QSize(200, 25))
         self.head_char_name.setMaximumSize(QSize(200, 25))
-        self.head_char_name.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.head_char_name.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.head_char_cons = QComboBox(self.head_main)
         self.head_char_cons.setObjectName("head_char_cons")
         self.head_char_cons.setGeometry(QRect(5, 65, 200, 25))
@@ -1639,7 +1895,7 @@ class Ui_mainwind:
         self.head_char_cons.setSizePolicy(sizePolicy)
         self.head_char_cons.setMinimumSize(QSize(200, 25))
         self.head_char_cons.setMaximumSize(QSize(200, 25))
-        self.head_char_cons.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.head_char_cons.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.head_char_levl = QComboBox(self.head_main)
         self.head_char_levl.setObjectName("head_char_levl")
         self.head_char_levl.setGeometry(QRect(5, 95, 200, 25))
@@ -1647,7 +1903,7 @@ class Ui_mainwind:
         self.head_char_levl.setSizePolicy(sizePolicy)
         self.head_char_levl.setMinimumSize(QSize(200, 25))
         self.head_char_levl.setMaximumSize(QSize(200, 25))
-        self.head_char_levl.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.head_char_levl.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.head_char_data_dfns = QLineEdit(self.head_main)
         self.head_char_data_dfns.setObjectName("head_char_data_dfns")
         self.head_char_data_dfns.setGeometry(QRect(110, 150, 95, 25))
@@ -1655,8 +1911,12 @@ class Ui_mainwind:
         self.head_char_data_dfns.setSizePolicy(sizePolicy)
         self.head_char_data_dfns.setMinimumSize(QSize(95, 25))
         self.head_char_data_dfns.setMaximumSize(QSize(95, 25))
-        self.head_char_data_dfns.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
-        self.head_char_data_dfns.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.head_char_data_dfns.setStyleSheet('font: 10pt "IBM Plex Sans";')
+        self.head_char_data_dfns.setAlignment(
+            Qt.AlignmentFlag.AlignRight
+            | Qt.AlignmentFlag.AlignTrailing
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.head_char_data_dfns.setReadOnly(True)
         self.head_char_icon_dfns = QPushButton(self.head_main)
         self.head_char_icon_dfns.setObjectName("head_char_icon_dfns")
@@ -1666,7 +1926,9 @@ class Ui_mainwind:
         self.head_char_icon_dfns.setSizePolicy(sizePolicy)
         self.head_char_icon_dfns.setMinimumSize(QSize(25, 25))
         self.head_char_icon_dfns.setMaximumSize(QSize(25, 25))
-        self.head_char_icon_dfns.setStyleSheet("#head_char_icon_dfns {font: 87 10pt \"Font Awesome 6 Free Solid\"; color: rgb(0, 0, 192);}")
+        self.head_char_icon_dfns.setStyleSheet(
+            '#head_char_icon_dfns {font: 87 10pt "Font Awesome 6 Free Solid"; color: rgb(0, 0, 192);}'
+        )
         self.head_char_icon_dfns.setFlat(True)
         self.head_char_icon_attk = QPushButton(self.head_main)
         self.head_char_icon_attk.setObjectName("head_char_icon_attk")
@@ -1676,7 +1938,9 @@ class Ui_mainwind:
         self.head_char_icon_attk.setSizePolicy(sizePolicy)
         self.head_char_icon_attk.setMinimumSize(QSize(25, 25))
         self.head_char_icon_attk.setMaximumSize(QSize(25, 25))
-        self.head_char_icon_attk.setStyleSheet("#head_char_icon_attk {font: 87 10pt \"Font Awesome 6 Free Solid\"; color: rgb(192, 0, 0);}")
+        self.head_char_icon_attk.setStyleSheet(
+            '#head_char_icon_attk {font: 87 10pt "Font Awesome 6 Free Solid"; color: rgb(192, 0, 0);}'
+        )
         self.head_char_icon_attk.setFlat(True)
         self.head_char_data_attk = QLineEdit(self.head_main)
         self.head_char_data_attk.setObjectName("head_char_data_attk")
@@ -1685,8 +1949,12 @@ class Ui_mainwind:
         self.head_char_data_attk.setSizePolicy(sizePolicy)
         self.head_char_data_attk.setMinimumSize(QSize(95, 25))
         self.head_char_data_attk.setMaximumSize(QSize(95, 25))
-        self.head_char_data_attk.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
-        self.head_char_data_attk.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.head_char_data_attk.setStyleSheet('font: 10pt "IBM Plex Sans";')
+        self.head_char_data_attk.setAlignment(
+            Qt.AlignmentFlag.AlignRight
+            | Qt.AlignmentFlag.AlignTrailing
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.head_char_data_attk.setReadOnly(True)
         self.head_char_data_hlpt = QLineEdit(self.head_main)
         self.head_char_data_hlpt.setObjectName("head_char_data_hlpt")
@@ -1695,8 +1963,12 @@ class Ui_mainwind:
         self.head_char_data_hlpt.setSizePolicy(sizePolicy)
         self.head_char_data_hlpt.setMinimumSize(QSize(95, 25))
         self.head_char_data_hlpt.setMaximumSize(QSize(95, 25))
-        self.head_char_data_hlpt.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
-        self.head_char_data_hlpt.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.head_char_data_hlpt.setStyleSheet('font: 10pt "IBM Plex Sans";')
+        self.head_char_data_hlpt.setAlignment(
+            Qt.AlignmentFlag.AlignRight
+            | Qt.AlignmentFlag.AlignTrailing
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.head_char_data_hlpt.setReadOnly(True)
         self.head_char_data_subs = QLineEdit(self.head_main)
         self.head_char_data_subs.setObjectName("head_char_data_subs")
@@ -1705,8 +1977,12 @@ class Ui_mainwind:
         self.head_char_data_subs.setSizePolicy(sizePolicy)
         self.head_char_data_subs.setMinimumSize(QSize(95, 25))
         self.head_char_data_subs.setMaximumSize(QSize(95, 25))
-        self.head_char_data_subs.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
-        self.head_char_data_subs.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.head_char_data_subs.setStyleSheet('font: 10pt "IBM Plex Sans";')
+        self.head_char_data_subs.setAlignment(
+            Qt.AlignmentFlag.AlignRight
+            | Qt.AlignmentFlag.AlignTrailing
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.head_char_data_subs.setReadOnly(True)
         self.head_char_icon_subs = QPushButton(self.head_main)
         self.head_char_icon_subs.setObjectName("head_char_icon_subs")
@@ -1716,7 +1992,9 @@ class Ui_mainwind:
         self.head_char_icon_subs.setSizePolicy(sizePolicy)
         self.head_char_icon_subs.setMinimumSize(QSize(25, 25))
         self.head_char_icon_subs.setMaximumSize(QSize(25, 25))
-        self.head_char_icon_subs.setStyleSheet("#head_char_icon_subs {font: 87 10pt \"Font Awesome 6 Free Solid\"; color: rgb(208, 208, 0);}")
+        self.head_char_icon_subs.setStyleSheet(
+            '#head_char_icon_subs {font: 87 10pt "Font Awesome 6 Free Solid"; color: rgb(208, 208, 0);}'
+        )
         self.head_char_icon_subs.setFlat(True)
         self.head_char_icon_hlpt = QPushButton(self.head_main)
         self.head_char_icon_hlpt.setObjectName("head_char_icon_hlpt")
@@ -1726,7 +2004,9 @@ class Ui_mainwind:
         self.head_char_icon_hlpt.setSizePolicy(sizePolicy)
         self.head_char_icon_hlpt.setMinimumSize(QSize(25, 25))
         self.head_char_icon_hlpt.setMaximumSize(QSize(25, 25))
-        self.head_char_icon_hlpt.setStyleSheet("#head_char_icon_hlpt {font: 87 10pt \"Font Awesome 6 Free Solid\"; color: rgb(0, 192, 0);}")
+        self.head_char_icon_hlpt.setStyleSheet(
+            '#head_char_icon_hlpt {font: 87 10pt "Font Awesome 6 Free Solid"; color: rgb(0, 192, 0);}'
+        )
         self.head_char_icon_hlpt.setFlat(True)
         self.head_char_elem = QComboBox(self.head_main)
         self.head_char_elem.setObjectName("head_char_elem")
@@ -1735,7 +2015,7 @@ class Ui_mainwind:
         self.head_char_elem.setSizePolicy(sizePolicy)
         self.head_char_elem.setMinimumSize(QSize(200, 25))
         self.head_char_elem.setMaximumSize(QSize(200, 25))
-        self.head_char_elem.setStyleSheet("font: 10pt \"IBM Plex Sans\";")
+        self.head_char_elem.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.char_area_rare = QLabel(self.head_main)
         self.char_area_rare.setObjectName("char_area_rare")
         self.char_area_rare.setGeometry(QRect(5, 125, 200, 20))
@@ -1743,8 +2023,12 @@ class Ui_mainwind:
         self.char_area_rare.setSizePolicy(sizePolicy)
         self.char_area_rare.setMinimumSize(QSize(200, 20))
         self.char_area_rare.setMaximumSize(QSize(200, 20))
-        self.char_area_rare.setStyleSheet("font: 900 10pt \"Font Awesome 6 Free Solid\"; ")
-        self.char_area_rare.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
+        self.char_area_rare.setStyleSheet('font: 900 10pt "Font Awesome 6 Free Solid"; ')
+        self.char_area_rare.setAlignment(
+            Qt.AlignmentFlag.AlignLeading
+            | Qt.AlignmentFlag.AlignLeft
+            | Qt.AlignmentFlag.AlignVCenter
+        )
         self.char_area_rare.setWordWrap(True)
         self.head_char_name.raise_()
         self.head_char_cons.raise_()
@@ -1766,7 +2050,9 @@ class Ui_mainwind:
         self.char_back_area.setSizePolicy(sizePolicy)
         self.char_back_area.setMinimumSize(QSize(40, 40))
         self.char_back_area.setMaximumSize(QSize(40, 40))
-        self.char_back_area.setStyleSheet("#char_back_area {border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 64);}")
+        self.char_back_area.setStyleSheet(
+            "#char_back_area {border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: rgba(128, 128, 128, 64);}"
+        )
         self.char_back_area.setFrameShape(QFrame.Shape.StyledPanel)
         self.char_back_area.setFrameShadow(QFrame.Shadow.Raised)
         self.char_back_icon = QLabel(self.char_back_area)
@@ -1787,7 +2073,9 @@ class Ui_mainwind:
         self.char_head.setSizePolicy(sizePolicy)
         self.char_head.setMinimumSize(QSize(35, 65))
         self.char_head.setMaximumSize(QSize(35, 65))
-        self.char_head.setStyleSheet("#char_head {border-radius: 5px; background-color: rgba(128, 128, 128, 64);}")
+        self.char_head.setStyleSheet(
+            "#char_head {border-radius: 5px; background-color: rgba(128, 128, 128, 64);}"
+        )
         self.char_head.setFrameShape(QFrame.Shape.StyledPanel)
         self.char_head.setFrameShadow(QFrame.Shadow.Raised)
         self.char_head_lumi = QPushButton(self.char_head)
@@ -1797,7 +2085,9 @@ class Ui_mainwind:
         self.char_head_lumi.setSizePolicy(sizePolicy)
         self.char_head_lumi.setMinimumSize(QSize(25, 25))
         self.char_head_lumi.setMaximumSize(QSize(25, 25))
-        self.char_head_lumi.setStyleSheet("#char_head_lumi {font: 87 10pt \"Font Awesome 6 Free Solid\";}")
+        self.char_head_lumi.setStyleSheet(
+            '#char_head_lumi {font: 87 10pt "Font Awesome 6 Free Solid";}'
+        )
         self.char_head_aeth = QPushButton(self.char_head)
         self.char_head_aeth.setObjectName("char_head_aeth")
         self.char_head_aeth.setGeometry(QRect(5, 35, 25, 25))
@@ -1805,7 +2095,9 @@ class Ui_mainwind:
         self.char_head_aeth.setSizePolicy(sizePolicy)
         self.char_head_aeth.setMinimumSize(QSize(25, 25))
         self.char_head_aeth.setMaximumSize(QSize(25, 25))
-        self.char_head_aeth.setStyleSheet("#char_head_aeth {font: 87 10pt \"Font Awesome 6 Free Solid\";}")
+        self.char_head_aeth.setStyleSheet(
+            '#char_head_aeth {font: 87 10pt "Font Awesome 6 Free Solid";}'
+        )
         self.head_area = QFrame(self.centwdgt)
         self.head_area.setObjectName("head_area")
         self.head_area.setGeometry(QRect(310, 5, 1280, 220))
@@ -1813,7 +2105,9 @@ class Ui_mainwind:
         self.head_area.setSizePolicy(sizePolicy)
         self.head_area.setMinimumSize(QSize(1280, 220))
         self.head_area.setMaximumSize(QSize(1280, 220))
-        self.head_area.setStyleSheet("#head_area {border: 1px solid rgba(128, 128, 128, 128); border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 110px; border-bottom-right-radius: 110px; background-color: rgba(128, 128, 128, 64);}")
+        self.head_area.setStyleSheet(
+            "#head_area {border: 1px solid rgba(128, 128, 128, 128); border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 110px; border-bottom-right-radius: 110px; background-color: rgba(128, 128, 128, 64);}"
+        )
         self.head_area.setFrameShape(QFrame.Shape.StyledPanel)
         self.head_area.setFrameShadow(QFrame.Shadow.Raised)
         self.char_inpt = QFrame(self.head_area)
@@ -1823,7 +2117,9 @@ class Ui_mainwind:
         self.char_inpt.setSizePolicy(sizePolicy)
         self.char_inpt.setMinimumSize(QSize(210, 210))
         self.char_inpt.setMaximumSize(QSize(210, 210))
-        self.char_inpt.setStyleSheet("#char_inpt {border-radius: 5px; background-color: rgba(128, 128, 128, 64);}")
+        self.char_inpt.setStyleSheet(
+            "#char_inpt {border-radius: 5px; background-color: rgba(128, 128, 128, 64);}"
+        )
         self.char_inpt.setFrameShape(QFrame.Shape.StyledPanel)
         self.char_inpt.setFrameShadow(QFrame.Shadow.Raised)
         self.char_inpt_area = QLabel(self.char_inpt)
@@ -1872,7 +2168,9 @@ class Ui_mainwind:
         self.head_area_line_quin.setSizePolicy(sizePolicy)
         self.head_area_line_quin.setMinimumSize(QSize(950, 25))
         self.head_area_line_quin.setMaximumSize(QSize(950, 25))
-        self.head_area_line_quin.setStyleSheet("font: 10pt \"IBM Plex Sans\"; color: rgba(255, 255, 255, 255);")
+        self.head_area_line_quin.setStyleSheet(
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
+        )
         self.head_area_line_prim = QLabel(self.head_area)
         self.head_area_line_prim.setObjectName("head_area_line_prim")
         self.head_area_line_prim.setGeometry(QRect(220, 10, 950, 25))
@@ -1880,7 +2178,9 @@ class Ui_mainwind:
         self.head_area_line_prim.setSizePolicy(sizePolicy)
         self.head_area_line_prim.setMinimumSize(QSize(950, 25))
         self.head_area_line_prim.setMaximumSize(QSize(950, 25))
-        self.head_area_line_prim.setStyleSheet("font: 75 15pt \"IBM Plex Sans\"; color: rgba(255, 255, 255, 255);")
+        self.head_area_line_prim.setStyleSheet(
+            'font: 75 15pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
+        )
         self.head_area_line_seco = QLabel(self.head_area)
         self.head_area_line_seco.setObjectName("head_area_line_seco")
         self.head_area_line_seco.setGeometry(QRect(220, 40, 950, 25))
@@ -1888,7 +2188,9 @@ class Ui_mainwind:
         self.head_area_line_seco.setSizePolicy(sizePolicy)
         self.head_area_line_seco.setMinimumSize(QSize(950, 25))
         self.head_area_line_seco.setMaximumSize(QSize(950, 25))
-        self.head_area_line_seco.setStyleSheet("font: 75 15pt \"IBM Plex Sans\"; color: rgba(255, 255, 255, 255);")
+        self.head_area_line_seco.setStyleSheet(
+            'font: 75 15pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
+        )
         self.head_area_line_tert = QLabel(self.head_area)
         self.head_area_line_tert.setObjectName("head_area_line_tert")
         self.head_area_line_tert.setGeometry(QRect(220, 70, 950, 25))
@@ -1896,7 +2198,9 @@ class Ui_mainwind:
         self.head_area_line_tert.setSizePolicy(sizePolicy)
         self.head_area_line_tert.setMinimumSize(QSize(950, 25))
         self.head_area_line_tert.setMaximumSize(QSize(950, 25))
-        self.head_area_line_tert.setStyleSheet("font: 75 15pt \"IBM Plex Sans\"; color: rgba(255, 255, 255, 255);")
+        self.head_area_line_tert.setStyleSheet(
+            'font: 75 15pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
+        )
         self.head_area_line_quat = QLabel(self.head_area)
         self.head_area_line_quat.setObjectName("head_area_line_quat")
         self.head_area_line_quat.setGeometry(QRect(220, 165, 950, 25))
@@ -1904,7 +2208,9 @@ class Ui_mainwind:
         self.head_area_line_quat.setSizePolicy(sizePolicy)
         self.head_area_line_quat.setMinimumSize(QSize(950, 25))
         self.head_area_line_quat.setMaximumSize(QSize(950, 25))
-        self.head_area_line_quat.setStyleSheet("font: 10pt \"IBM Plex Sans\"; color: rgba(255, 255, 255, 255);")
+        self.head_area_line_quat.setStyleSheet(
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
+        )
         self.head_area_back.raise_()
         self.char_inpt.raise_()
         self.head_area_line_prim.raise_()
@@ -1919,7 +2225,9 @@ class Ui_mainwind:
         self.side_back.setSizePolicy(sizePolicy)
         self.side_back.setMinimumSize(QSize(35, 925))
         self.side_back.setMaximumSize(QSize(35, 925))
-        self.side_back.setStyleSheet("#side_back {border: 1px solid rgba(128, 128, 128, 128); border-radius: 5px; background-color: rgba(128, 128, 128, 64);}")
+        self.side_back.setStyleSheet(
+            "#side_back {border: 1px solid rgba(128, 128, 128, 128); border-radius: 5px; background-color: rgba(128, 128, 128, 64);}"
+        )
         self.side_back.setFrameShape(QFrame.Shape.StyledPanel)
         self.side_back.setFrameShadow(QFrame.Shadow.Raised)
         self.side_info = QPushButton(self.side_back)
@@ -1929,7 +2237,7 @@ class Ui_mainwind:
         self.side_info.setSizePolicy(sizePolicy)
         self.side_info.setMinimumSize(QSize(25, 25))
         self.side_info.setMaximumSize(QSize(25, 25))
-        self.side_info.setStyleSheet("#side_info {font: 87 10pt \"Font Awesome 6 Free Solid\";}")
+        self.side_info.setStyleSheet('#side_info {font: 87 10pt "Font Awesome 6 Free Solid";}')
         self.side_lcns = QPushButton(self.side_back)
         self.side_lcns.setObjectName("side_lcns")
         self.side_lcns.setGeometry(QRect(5, 865, 25, 25))
@@ -1937,7 +2245,7 @@ class Ui_mainwind:
         self.side_lcns.setSizePolicy(sizePolicy)
         self.side_lcns.setMinimumSize(QSize(25, 25))
         self.side_lcns.setMaximumSize(QSize(25, 25))
-        self.side_lcns.setStyleSheet("#side_lcns {font: 87 10pt \"Font Awesome 6 Free Solid\";}")
+        self.side_lcns.setStyleSheet('#side_lcns {font: 87 10pt "Font Awesome 6 Free Solid";}')
         self.side_cash = QPushButton(self.side_back)
         self.side_cash.setObjectName("side_cash")
         self.side_cash.setGeometry(QRect(5, 835, 25, 25))
@@ -1945,7 +2253,7 @@ class Ui_mainwind:
         self.side_cash.setSizePolicy(sizePolicy)
         self.side_cash.setMinimumSize(QSize(25, 25))
         self.side_cash.setMaximumSize(QSize(25, 25))
-        self.side_cash.setStyleSheet("#side_cash {font: 87 10pt \"Font Awesome 6 Free Solid\";}")
+        self.side_cash.setStyleSheet('#side_cash {font: 87 10pt "Font Awesome 6 Free Solid";}')
         self.side_head = QPushButton(self.side_back)
         self.side_head.setObjectName("side_head")
         self.side_head.setGeometry(QRect(5, 5, 25, 25))
@@ -1953,7 +2261,7 @@ class Ui_mainwind:
         self.side_head.setSizePolicy(sizePolicy)
         self.side_head.setMinimumSize(QSize(25, 25))
         self.side_head.setMaximumSize(QSize(25, 25))
-        self.side_head.setStyleSheet("#side_head {font: 87 10pt \"Font Awesome 6 Free Solid\";}")
+        self.side_head.setStyleSheet('#side_head {font: 87 10pt "Font Awesome 6 Free Solid";}')
         self.side_tckt = QPushButton(self.side_back)
         self.side_tckt.setObjectName("side_tckt")
         self.side_tckt.setGeometry(QRect(5, 805, 25, 25))
@@ -1961,7 +2269,7 @@ class Ui_mainwind:
         self.side_tckt.setSizePolicy(sizePolicy)
         self.side_tckt.setMinimumSize(QSize(25, 25))
         self.side_tckt.setMaximumSize(QSize(25, 25))
-        self.side_tckt.setStyleSheet("#side_tckt {font: 87 10pt \"Font Awesome 6 Free Solid\";}")
+        self.side_tckt.setStyleSheet('#side_tckt {font: 87 10pt "Font Awesome 6 Free Solid";}')
         mainwind.setCentralWidget(self.centwdgt)
         self.statarea = QStatusBar(mainwind)
         self.statarea.setObjectName("statarea")
@@ -1976,257 +2284,362 @@ class Ui_mainwind:
         self.retranslateUi(mainwind)
 
         QMetaObject.connectSlotsByName(mainwind)
+
     # setupUi
 
     def retranslateUi(self, mainwind):
         mainwind.setWindowTitle(QCoreApplication.translate("mainwind", "MainWindow", None))
         self.arti_fwol_type_name.setText(QCoreApplication.translate("mainwind", "UNASSIGNED", None))
-        self.arti_fwol_data_b.setPlaceholderText(QCoreApplication.translate("mainwind", "Data", None))
-        self.arti_fwol_data_a.setPlaceholderText(QCoreApplication.translate("mainwind", "Data", None))
-        self.arti_fwol_data_c.setPlaceholderText(QCoreApplication.translate("mainwind", "Data", None))
-        self.arti_fwol_data_main.setPlaceholderText(QCoreApplication.translate("mainwind", "Data", None))
-        self.arti_fwol_data_d.setPlaceholderText(QCoreApplication.translate("mainwind", "Data", None))
+        self.arti_fwol_data_b.setPlaceholderText(
+            QCoreApplication.translate("mainwind", "Data", None)
+        )
+        self.arti_fwol_data_a.setPlaceholderText(
+            QCoreApplication.translate("mainwind", "Data", None)
+        )
+        self.arti_fwol_data_c.setPlaceholderText(
+            QCoreApplication.translate("mainwind", "Data", None)
+        )
+        self.arti_fwol_data_main.setPlaceholderText(
+            QCoreApplication.translate("mainwind", "Data", None)
+        )
+        self.arti_fwol_data_d.setPlaceholderText(
+            QCoreApplication.translate("mainwind", "Data", None)
+        )
         self.arti_fwol_head_area.setText("")
         self.arti_fwol_head_icon.setText("")
-        self.arti_pmod_data_main.setPlaceholderText(QCoreApplication.translate("mainwind", "Data", None))
+        self.arti_pmod_data_main.setPlaceholderText(
+            QCoreApplication.translate("mainwind", "Data", None)
+        )
         self.arti_pmod_type_name.setText(QCoreApplication.translate("mainwind", "UNASSIGNED", None))
-        self.arti_pmod_data_b.setPlaceholderText(QCoreApplication.translate("mainwind", "Data", None))
-        self.arti_pmod_data_a.setPlaceholderText(QCoreApplication.translate("mainwind", "Data", None))
-        self.arti_pmod_data_c.setPlaceholderText(QCoreApplication.translate("mainwind", "Data", None))
-        self.arti_pmod_data_d.setPlaceholderText(QCoreApplication.translate("mainwind", "Data", None))
+        self.arti_pmod_data_b.setPlaceholderText(
+            QCoreApplication.translate("mainwind", "Data", None)
+        )
+        self.arti_pmod_data_a.setPlaceholderText(
+            QCoreApplication.translate("mainwind", "Data", None)
+        )
+        self.arti_pmod_data_c.setPlaceholderText(
+            QCoreApplication.translate("mainwind", "Data", None)
+        )
+        self.arti_pmod_data_d.setPlaceholderText(
+            QCoreApplication.translate("mainwind", "Data", None)
+        )
         self.arti_pmod_head_area.setText("")
         self.arti_pmod_head_icon.setText("")
-        self.arti_sdoe_data_d.setPlaceholderText(QCoreApplication.translate("mainwind", "Data", None))
-        self.arti_sdoe_data_main.setPlaceholderText(QCoreApplication.translate("mainwind", "Data", None))
-        self.arti_sdoe_data_b.setPlaceholderText(QCoreApplication.translate("mainwind", "Data", None))
-        self.arti_sdoe_data_a.setPlaceholderText(QCoreApplication.translate("mainwind", "Data", None))
-        self.arti_sdoe_data_c.setPlaceholderText(QCoreApplication.translate("mainwind", "Data", None))
+        self.arti_sdoe_data_d.setPlaceholderText(
+            QCoreApplication.translate("mainwind", "Data", None)
+        )
+        self.arti_sdoe_data_main.setPlaceholderText(
+            QCoreApplication.translate("mainwind", "Data", None)
+        )
+        self.arti_sdoe_data_b.setPlaceholderText(
+            QCoreApplication.translate("mainwind", "Data", None)
+        )
+        self.arti_sdoe_data_a.setPlaceholderText(
+            QCoreApplication.translate("mainwind", "Data", None)
+        )
+        self.arti_sdoe_data_c.setPlaceholderText(
+            QCoreApplication.translate("mainwind", "Data", None)
+        )
         self.arti_sdoe_type_name.setText(QCoreApplication.translate("mainwind", "UNASSIGNED", None))
         self.arti_sdoe_head_area.setText("")
         self.arti_sdoe_head_icon.setText("")
-        self.arti_gboe_data_d.setPlaceholderText(QCoreApplication.translate("mainwind", "Data", None))
-        self.arti_gboe_data_c.setPlaceholderText(QCoreApplication.translate("mainwind", "Data", None))
-        self.arti_gboe_data_b.setPlaceholderText(QCoreApplication.translate("mainwind", "Data", None))
+        self.arti_gboe_data_d.setPlaceholderText(
+            QCoreApplication.translate("mainwind", "Data", None)
+        )
+        self.arti_gboe_data_c.setPlaceholderText(
+            QCoreApplication.translate("mainwind", "Data", None)
+        )
+        self.arti_gboe_data_b.setPlaceholderText(
+            QCoreApplication.translate("mainwind", "Data", None)
+        )
         self.arti_gboe_type_name.setText(QCoreApplication.translate("mainwind", "UNASSIGNED", None))
-        self.arti_gboe_data_main.setPlaceholderText(QCoreApplication.translate("mainwind", "Data", None))
-        self.arti_gboe_data_a.setPlaceholderText(QCoreApplication.translate("mainwind", "Data", None))
+        self.arti_gboe_data_main.setPlaceholderText(
+            QCoreApplication.translate("mainwind", "Data", None)
+        )
+        self.arti_gboe_data_a.setPlaceholderText(
+            QCoreApplication.translate("mainwind", "Data", None)
+        )
         self.arti_gboe_head_area.setText("")
         self.arti_gboe_head_icon.setText("")
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.arti_ccol_load.setToolTip(QCoreApplication.translate("mainwind", "Load", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.arti_ccol_load.setText(QCoreApplication.translate("mainwind", "folder-open", None))
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.arti_ccol_save.setToolTip(QCoreApplication.translate("mainwind", "Save", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.arti_ccol_save.setText(QCoreApplication.translate("mainwind", "floppy-disk", None))
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.arti_ccol_wipe.setToolTip(QCoreApplication.translate("mainwind", "Wipe", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.arti_ccol_wipe.setText(QCoreApplication.translate("mainwind", "trash", None))
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.arti_ccol_scan.setToolTip(QCoreApplication.translate("mainwind", "Scan", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.arti_ccol_scan.setText(QCoreApplication.translate("mainwind", "eye", None))
-        self.arti_ccol_data_d.setPlaceholderText(QCoreApplication.translate("mainwind", "Data", None))
-        self.arti_ccol_data_main.setPlaceholderText(QCoreApplication.translate("mainwind", "Data", None))
-        self.arti_ccol_data_b.setPlaceholderText(QCoreApplication.translate("mainwind", "Data", None))
+        self.arti_ccol_data_d.setPlaceholderText(
+            QCoreApplication.translate("mainwind", "Data", None)
+        )
+        self.arti_ccol_data_main.setPlaceholderText(
+            QCoreApplication.translate("mainwind", "Data", None)
+        )
+        self.arti_ccol_data_b.setPlaceholderText(
+            QCoreApplication.translate("mainwind", "Data", None)
+        )
         self.arti_ccol_type_name.setText(QCoreApplication.translate("mainwind", "UNASSIGNED", None))
-        self.arti_ccol_data_a.setPlaceholderText(QCoreApplication.translate("mainwind", "Data", None))
-        self.arti_ccol_data_c.setPlaceholderText(QCoreApplication.translate("mainwind", "Data", None))
+        self.arti_ccol_data_a.setPlaceholderText(
+            QCoreApplication.translate("mainwind", "Data", None)
+        )
+        self.arti_ccol_data_c.setPlaceholderText(
+            QCoreApplication.translate("mainwind", "Data", None)
+        )
         self.arti_ccol_head_area.setText("")
         self.arti_ccol_head_icon.setText("")
-#if QT_CONFIG(tooltip)
-        self.arti_ccol_back_icon.setToolTip(QCoreApplication.translate("mainwind", "Circlet of Logos", None))
-#endif // QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
+        self.arti_ccol_back_icon.setToolTip(
+            QCoreApplication.translate("mainwind", "Circlet of Logos", None)
+        )
+        # endif // QT_CONFIG(tooltip)
         self.arti_ccol_back_icon.setText("")
-#if QT_CONFIG(tooltip)
-        self.arti_gboe_back_icon.setToolTip(QCoreApplication.translate("mainwind", "Goblet of Eonothem", None))
-#endif // QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
+        self.arti_gboe_back_icon.setToolTip(
+            QCoreApplication.translate("mainwind", "Goblet of Eonothem", None)
+        )
+        # endif // QT_CONFIG(tooltip)
         self.arti_gboe_back_icon.setText("")
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.arti_gboe_load.setToolTip(QCoreApplication.translate("mainwind", "Load", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.arti_gboe_load.setText(QCoreApplication.translate("mainwind", "folder-open", None))
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.arti_gboe_save.setToolTip(QCoreApplication.translate("mainwind", "Save", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.arti_gboe_save.setText(QCoreApplication.translate("mainwind", "floppy-disk", None))
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.arti_gboe_wipe.setToolTip(QCoreApplication.translate("mainwind", "Wipe", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.arti_gboe_wipe.setText(QCoreApplication.translate("mainwind", "trash", None))
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.arti_gboe_scan.setToolTip(QCoreApplication.translate("mainwind", "Scan", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.arti_gboe_scan.setText(QCoreApplication.translate("mainwind", "eye", None))
-#if QT_CONFIG(tooltip)
-        self.arti_sdoe_back_icon.setToolTip(QCoreApplication.translate("mainwind", "Sands of Eon", None))
-#endif // QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
+        self.arti_sdoe_back_icon.setToolTip(
+            QCoreApplication.translate("mainwind", "Sands of Eon", None)
+        )
+        # endif // QT_CONFIG(tooltip)
         self.arti_sdoe_back_icon.setText("")
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.arti_sdoe_load.setToolTip(QCoreApplication.translate("mainwind", "Load", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.arti_sdoe_load.setText(QCoreApplication.translate("mainwind", "folder-open", None))
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.arti_sdoe_save.setToolTip(QCoreApplication.translate("mainwind", "Save", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.arti_sdoe_save.setText(QCoreApplication.translate("mainwind", "floppy-disk", None))
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.arti_sdoe_wipe.setToolTip(QCoreApplication.translate("mainwind", "Wipe", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.arti_sdoe_wipe.setText(QCoreApplication.translate("mainwind", "trash", None))
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.arti_sdoe_scan.setToolTip(QCoreApplication.translate("mainwind", "Scan", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.arti_sdoe_scan.setText(QCoreApplication.translate("mainwind", "eye", None))
-#if QT_CONFIG(tooltip)
-        self.arti_pmod_back_icon.setToolTip(QCoreApplication.translate("mainwind", "Plume of Death", None))
-#endif // QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
+        self.arti_pmod_back_icon.setToolTip(
+            QCoreApplication.translate("mainwind", "Plume of Death", None)
+        )
+        # endif // QT_CONFIG(tooltip)
         self.arti_pmod_back_icon.setText("")
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.arti_pmod_load.setToolTip(QCoreApplication.translate("mainwind", "Load", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.arti_pmod_load.setText(QCoreApplication.translate("mainwind", "folder-open", None))
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.arti_pmod_save.setToolTip(QCoreApplication.translate("mainwind", "Save", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.arti_pmod_save.setText(QCoreApplication.translate("mainwind", "floppy-disk", None))
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.arti_pmod_wipe.setToolTip(QCoreApplication.translate("mainwind", "Wipe", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.arti_pmod_wipe.setText(QCoreApplication.translate("mainwind", "trash", None))
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.arti_pmod_scan.setToolTip(QCoreApplication.translate("mainwind", "Scan", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.arti_pmod_scan.setText(QCoreApplication.translate("mainwind", "eye", None))
-#if QT_CONFIG(tooltip)
-        self.arti_fwol_back_icon.setToolTip(QCoreApplication.translate("mainwind", "Flower of Life", None))
-#endif // QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
+        self.arti_fwol_back_icon.setToolTip(
+            QCoreApplication.translate("mainwind", "Flower of Life", None)
+        )
+        # endif // QT_CONFIG(tooltip)
         self.arti_fwol_back_icon.setText("")
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.arti_fwol_load.setToolTip(QCoreApplication.translate("mainwind", "Load", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.arti_fwol_load.setText(QCoreApplication.translate("mainwind", "folder-open", None))
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.arti_fwol_save.setToolTip(QCoreApplication.translate("mainwind", "Save", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.arti_fwol_save.setText(QCoreApplication.translate("mainwind", "floppy-disk", None))
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.arti_fwol_wipe.setToolTip(QCoreApplication.translate("mainwind", "Wipe", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.arti_fwol_wipe.setText(QCoreApplication.translate("mainwind", "trash", None))
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.arti_fwol_scan.setToolTip(QCoreApplication.translate("mainwind", "Scan", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.arti_fwol_scan.setText(QCoreApplication.translate("mainwind", "eye", None))
-        self.pair_area_desc.setDocumentTitle(QCoreApplication.translate("mainwind", "pair_area_desc", None))
-        self.pair_area_desc.setPlaceholderText(QCoreApplication.translate("mainwind", "No artifact set bonus.", None))
-        self.pair_area_head.setText(QCoreApplication.translate("mainwind", "No artifact set.", None))
-        self.quad_area_head.setText(QCoreApplication.translate("mainwind", "No artifact set.", None))
-        self.quad_area_desc.setDocumentTitle(QCoreApplication.translate("mainwind", "quad_area_desc", None))
-        self.quad_area_desc.setPlaceholderText(QCoreApplication.translate("mainwind", "No artifact set bonus.", None))
-#if QT_CONFIG(tooltip)
+        self.pair_area_desc.setDocumentTitle(
+            QCoreApplication.translate("mainwind", "pair_area_desc", None)
+        )
+        self.pair_area_desc.setPlaceholderText(
+            QCoreApplication.translate("mainwind", "No artifact set bonus.", None)
+        )
+        self.pair_area_head.setText(
+            QCoreApplication.translate("mainwind", "No artifact set.", None)
+        )
+        self.quad_area_head.setText(
+            QCoreApplication.translate("mainwind", "No artifact set.", None)
+        )
+        self.quad_area_desc.setDocumentTitle(
+            QCoreApplication.translate("mainwind", "quad_area_desc", None)
+        )
+        self.quad_area_desc.setPlaceholderText(
+            QCoreApplication.translate("mainwind", "No artifact set bonus.", None)
+        )
+        # if QT_CONFIG(tooltip)
         self.bone_back_icon.setToolTip(QCoreApplication.translate("mainwind", "Artifact", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.bone_back_icon.setText("")
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.head_wipe.setToolTip(QCoreApplication.translate("mainwind", "Wipe", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.head_wipe.setText(QCoreApplication.translate("mainwind", "trash", None))
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.head_save.setToolTip(QCoreApplication.translate("mainwind", "Save", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.head_save.setText(QCoreApplication.translate("mainwind", "floppy-disk", None))
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.head_load.setToolTip(QCoreApplication.translate("mainwind", "Load", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.head_load.setText(QCoreApplication.translate("mainwind", "folder-open", None))
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.head_scan.setToolTip(QCoreApplication.translate("mainwind", "Generate", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.head_scan.setText(QCoreApplication.translate("mainwind", "circle-check", None))
-        self.weap_area_rare.setText(QCoreApplication.translate("mainwind", "STAR STAR STAR STAR STAR ", None))
-#if QT_CONFIG(tooltip)
+        self.weap_area_rare.setText(
+            QCoreApplication.translate("mainwind", "STAR STAR STAR STAR STAR ", None)
+        )
+        # if QT_CONFIG(tooltip)
         self.weap_area_batk_icon.setToolTip(QCoreApplication.translate("mainwind", "ATK", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.weap_area_batk_icon.setText(QCoreApplication.translate("mainwind", "skull", None))
         self.weap_area_stat_icon.setText(QCoreApplication.translate("mainwind", "star", None))
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.weap_back_icon.setToolTip(QCoreApplication.translate("mainwind", "Weapon", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.weap_back_icon.setText("")
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.weap_head_load.setToolTip(QCoreApplication.translate("mainwind", "Load", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.weap_head_load.setText(QCoreApplication.translate("mainwind", "folder-open", None))
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.weap_head_save.setToolTip(QCoreApplication.translate("mainwind", "Save", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.weap_head_save.setText(QCoreApplication.translate("mainwind", "floppy-disk", None))
         self.weap_port_area.setText("")
         self.weap_port_icon.setText("")
-        self.weap_area_refn_body.setDocumentTitle(QCoreApplication.translate("mainwind", "weap_area_refn_body", None))
-        self.weap_area_refn_body.setPlaceholderText(QCoreApplication.translate("mainwind", "No refinements available.", None))
-        self.weap_area_refn_head.setText(QCoreApplication.translate("mainwind", "No refinements available.", None))
-        self.head_char_data_dfns.setPlaceholderText(QCoreApplication.translate("mainwind", "Data", None))
-#if QT_CONFIG(tooltip)
+        self.weap_area_refn_body.setDocumentTitle(
+            QCoreApplication.translate("mainwind", "weap_area_refn_body", None)
+        )
+        self.weap_area_refn_body.setPlaceholderText(
+            QCoreApplication.translate("mainwind", "No refinements available.", None)
+        )
+        self.weap_area_refn_head.setText(
+            QCoreApplication.translate("mainwind", "No refinements available.", None)
+        )
+        self.head_char_data_dfns.setPlaceholderText(
+            QCoreApplication.translate("mainwind", "Data", None)
+        )
+        # if QT_CONFIG(tooltip)
         self.head_char_icon_dfns.setToolTip(QCoreApplication.translate("mainwind", "DEF", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.head_char_icon_dfns.setText(QCoreApplication.translate("mainwind", "shield", None))
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.head_char_icon_attk.setToolTip(QCoreApplication.translate("mainwind", "ATK", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.head_char_icon_attk.setText(QCoreApplication.translate("mainwind", "skull", None))
-        self.head_char_data_attk.setPlaceholderText(QCoreApplication.translate("mainwind", "Data", None))
-        self.head_char_data_hlpt.setPlaceholderText(QCoreApplication.translate("mainwind", "Data", None))
-        self.head_char_data_subs.setPlaceholderText(QCoreApplication.translate("mainwind", "Data", None))
+        self.head_char_data_attk.setPlaceholderText(
+            QCoreApplication.translate("mainwind", "Data", None)
+        )
+        self.head_char_data_hlpt.setPlaceholderText(
+            QCoreApplication.translate("mainwind", "Data", None)
+        )
+        self.head_char_data_subs.setPlaceholderText(
+            QCoreApplication.translate("mainwind", "Data", None)
+        )
         self.head_char_icon_subs.setText(QCoreApplication.translate("mainwind", "star", None))
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.head_char_icon_hlpt.setToolTip(QCoreApplication.translate("mainwind", "HP", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.head_char_icon_hlpt.setText(QCoreApplication.translate("mainwind", "heart", None))
-        self.char_area_rare.setText(QCoreApplication.translate("mainwind", "STAR STAR STAR STAR STAR ", None))
-#if QT_CONFIG(tooltip)
+        self.char_area_rare.setText(
+            QCoreApplication.translate("mainwind", "STAR STAR STAR STAR STAR ", None)
+        )
+        # if QT_CONFIG(tooltip)
         self.char_back_icon.setToolTip(QCoreApplication.translate("mainwind", "Weapon", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.char_back_icon.setText("")
-#if QT_CONFIG(tooltip)
-        self.char_head_lumi.setToolTip(QCoreApplication.translate("mainwind", "Change to Lumine", None))
-#endif // QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
+        self.char_head_lumi.setToolTip(
+            QCoreApplication.translate("mainwind", "Change to Lumine", None)
+        )
+        # endif // QT_CONFIG(tooltip)
         self.char_head_lumi.setText(QCoreApplication.translate("mainwind", "venus", None))
-#if QT_CONFIG(tooltip)
-        self.char_head_aeth.setToolTip(QCoreApplication.translate("mainwind", "Change to Aether", None))
-#endif // QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
+        self.char_head_aeth.setToolTip(
+            QCoreApplication.translate("mainwind", "Change to Aether", None)
+        )
+        # endif // QT_CONFIG(tooltip)
         self.char_head_aeth.setText(QCoreApplication.translate("mainwind", "mars", None))
         self.char_inpt_area.setText("")
         self.char_inpt_icon.setText("")
         self.head_vson.setText("")
         self.head_area_back.setText("")
-        self.head_area_line_quin.setText(QCoreApplication.translate("mainwind", "Head area line QUAT", None))
-        self.head_area_line_prim.setText(QCoreApplication.translate("mainwind", "Head area line PRIM", None))
-        self.head_area_line_seco.setText(QCoreApplication.translate("mainwind", "Head area line PRIM", None))
-        self.head_area_line_tert.setText(QCoreApplication.translate("mainwind", "Head area line PRIM", None))
-        self.head_area_line_quat.setText(QCoreApplication.translate("mainwind", "Head area line QUAT", None))
-#if QT_CONFIG(tooltip)
+        self.head_area_line_quin.setText(
+            QCoreApplication.translate("mainwind", "Head area line QUAT", None)
+        )
+        self.head_area_line_prim.setText(
+            QCoreApplication.translate("mainwind", "Head area line PRIM", None)
+        )
+        self.head_area_line_seco.setText(
+            QCoreApplication.translate("mainwind", "Head area line PRIM", None)
+        )
+        self.head_area_line_tert.setText(
+            QCoreApplication.translate("mainwind", "Head area line PRIM", None)
+        )
+        self.head_area_line_quat.setText(
+            QCoreApplication.translate("mainwind", "Head area line QUAT", None)
+        )
+        # if QT_CONFIG(tooltip)
         self.side_info.setToolTip(QCoreApplication.translate("mainwind", "Info", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.side_info.setText(QCoreApplication.translate("mainwind", "info-circle", None))
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.side_lcns.setToolTip(QCoreApplication.translate("mainwind", "Help", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.side_lcns.setText(QCoreApplication.translate("mainwind", "circle-user", None))
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.side_cash.setToolTip(QCoreApplication.translate("mainwind", "Donate", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.side_cash.setText(QCoreApplication.translate("mainwind", "heart", None))
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.side_head.setToolTip(QCoreApplication.translate("mainwind", "Home", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.side_head.setText(QCoreApplication.translate("mainwind", "code-fork", None))
-#if QT_CONFIG(tooltip)
+        # if QT_CONFIG(tooltip)
         self.side_tckt.setToolTip(QCoreApplication.translate("mainwind", "Report", None))
-#endif // QT_CONFIG(tooltip)
+        # endif // QT_CONFIG(tooltip)
         self.side_tckt.setText(QCoreApplication.translate("mainwind", "bug", None))
-    # retranslateUi
 
+    # retranslateUi

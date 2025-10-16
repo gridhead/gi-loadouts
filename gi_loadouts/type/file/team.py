@@ -13,6 +13,7 @@ class TeamFile(BaseModel):
     """
     Artifact collection storage primitive
     """
+
     fwol: ArtiFile = ArtiFile(area=ArtiArea.fwol)
     pmod: ArtiFile = ArtiFile(area=ArtiArea.pmod)
     sdoe: ArtiFile = ArtiFile(area=ArtiArea.sdoe)

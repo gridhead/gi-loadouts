@@ -76,7 +76,7 @@ PolearmsDict = {
     "Skyward Spine": swsp.SkywardSpine,
     "Symphonist of Scents": spos.SymphonistofScents,
     "Tamayuratei no Ohanashi": tyno.TamayurateiNoOhanashi,
-    "\"The Catch\"": tcth.TheCatch,
+    '"The Catch"': tcth.TheCatch,
     "Vortex Vanquisher": vtvq.VortexVanquisher,
     "Wavebreaker's Fin": wbfn.WavebreakersFin,
     "White Tassel": wetl.WhiteTassel,

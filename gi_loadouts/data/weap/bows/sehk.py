@@ -5,7 +5,9 @@ from ....type.weap.tier import Tier
 
 class SnareHook(Bow):
     name: str = "Snare Hook"
-    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.energy_recharge_perc, stat_data=13.33)
+    seco_stat: WeaponStat = WeaponStat(
+        stat_name=WeaponStatType.energy_recharge_perc, stat_data=13.33
+    )
     tier: Tier = Tier.Tier_1
     rare: Rare = Rare.Star_4
     refi_name: str = "Phantom Flash"

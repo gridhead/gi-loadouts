@@ -1,4 +1,3 @@
-
 ################################################################################
 ## Form generated from reading UI file 'info.ui'
 ##
@@ -65,7 +64,9 @@ class Ui_info:
         self.body.setSizePolicy(sizePolicy)
         self.body.setMinimumSize(QSize(500, 285))
         self.body.setMaximumSize(QSize(500, 285))
-        self.body.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignTop)
+        self.body.setAlignment(
+            Qt.AlignmentFlag.AlignLeading | Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignTop
+        )
         self.body.setWordWrap(True)
         self.comp = QLabel(info)
         self.comp.setObjectName("comp")
@@ -86,16 +87,33 @@ class Ui_info:
         self.retranslateUi(info)
 
         QMetaObject.connectSlotsByName(info)
+
     # setupUi
 
     def retranslateUi(self, info):
         info.setWindowTitle(QCoreApplication.translate("info", "Dialog", None))
         self.icon.setText("")
-        self.head.setText(QCoreApplication.translate("info", "<html><head/><body><p><span style=\" font-weight:700;\">Loadouts for Genshin Impact</span></p></body></html>", None))
+        self.head.setText(
+            QCoreApplication.translate(
+                "info",
+                '<html><head/><body><p><span style=" font-weight:700;">Loadouts for Genshin Impact</span></p></body></html>',
+                None,
+            )
+        )
         self.vers.setText(QCoreApplication.translate("info", "Version v0.0.0", None))
-        self.body.setText(QCoreApplication.translate("info", "<html><head/><body><p align=\"justify\">This is a desktop application that allows travelers to manage their custom equipment of artifacts and weapons for playable characters and makes it convenient for travelers to calculate the associated statistics based on their equipment using the semantic understanding of how the gameplay works. Travelers can create their bespoke loadouts consisting of characters, artifacts and weapons and share them with their fellow travelers. Supported file formats include a human-readable <span style=\" font-weight:700;\">Yet Another Markup Language (YAML)</span> serialization format and a JSON-based <span style=\" font-weight:700;\">Genshin Open Object Definition (GOOD)</span> serialization format.</p><p align=\"justify\">This project is currently in its beta phase and we are committed to delivering a quality experience with every release we make. If you are excited about the direction of this project and want to contribute to the efforts, we would greatly appreciate it if you help u"
-                        "s boost the project visibility by <span style=\" font-weight:700;\">starring the project repository</span>, address the releases by <span style=\" font-weight:700;\">reporting the experienced errors</span>, choose the direction by <span style=\" font-weight:700;\">proposing the intended features</span>, enhance the usability by <span style=\" font-weight:700;\">documenting the project repository</span>, improve the codebase by <span style=\" font-weight:700;\">opening the pull requests</span> and finally, persist our efforts by <span style=\" font-weight:700;\">sponsoring the development members</span>.</p></body></html>", None))
-        self.comp.setText(QCoreApplication.translate("info", "This version is compatible with Genshin Impact 0.0 Phase 0", None))
+        self.body.setText(
+            QCoreApplication.translate(
+                "info",
+                '<html><head/><body><p align="justify">This is a desktop application that allows travelers to manage their custom equipment of artifacts and weapons for playable characters and makes it convenient for travelers to calculate the associated statistics based on their equipment using the semantic understanding of how the gameplay works. Travelers can create their bespoke loadouts consisting of characters, artifacts and weapons and share them with their fellow travelers. Supported file formats include a human-readable <span style=" font-weight:700;">Yet Another Markup Language (YAML)</span> serialization format and a JSON-based <span style=" font-weight:700;">Genshin Open Object Definition (GOOD)</span> serialization format.</p><p align="justify">This project is currently in its beta phase and we are committed to delivering a quality experience with every release we make. If you are excited about the direction of this project and want to contribute to the efforts, we would greatly appreciate it if you help u'
+                's boost the project visibility by <span style=" font-weight:700;">starring the project repository</span>, address the releases by <span style=" font-weight:700;">reporting the experienced errors</span>, choose the direction by <span style=" font-weight:700;">proposing the intended features</span>, enhance the usability by <span style=" font-weight:700;">documenting the project repository</span>, improve the codebase by <span style=" font-weight:700;">opening the pull requests</span> and finally, persist our efforts by <span style=" font-weight:700;">sponsoring the development members</span>.</p></body></html>',
+                None,
+            )
+        )
+        self.comp.setText(
+            QCoreApplication.translate(
+                "info", "This version is compatible with Genshin Impact 0.0 Phase 0", None
+            )
+        )
         self.updt.setText(QCoreApplication.translate("info", "CHECK FOR UPDATES", None))
-    # retranslateUi
 
+    # retranslateUi

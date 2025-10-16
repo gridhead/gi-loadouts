@@ -13,7 +13,7 @@ class team(BaseModel):
         ATTR(stat_name=STAT.resistance_electro_perc, stat_data=20),
         ATTR(stat_name=STAT.resistance_geo_perc, stat_data=20),
         ATTR(stat_name=STAT.resistance_hydro_perc, stat_data=20),
-        ATTR(stat_name=STAT.resistance_pyro_perc, stat_data=20)
+        ATTR(stat_name=STAT.resistance_pyro_perc, stat_data=20),
     ]
     __pairtext__ = "All Elemental RES increased by 20%"
     __quaddata__ = []

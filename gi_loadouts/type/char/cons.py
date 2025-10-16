@@ -19,9 +19,4 @@ __cons__ = {
 }
 
 
-Cons = Enum(
-    "Cons",
-    {
-        item.replace(" ", "_"): data for item, data in __cons__.items()
-    }
-)
+Cons = Enum("Cons", {item.replace(" ", "_"): data for item, data in __cons__.items()})

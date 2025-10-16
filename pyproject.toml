@@ -50,6 +50,16 @@ tox = "^4.0.0"
 [tool.ruff]
 line-length = 100
 fix = true
+extend-exclude = [
+    "gi_loadouts/face/rsrc/arti/*.py",
+    "gi_loadouts/face/rsrc/char/*.py",
+    "gi_loadouts/face/rsrc/data/*.py",
+    "gi_loadouts/face/rsrc/font/*.py",
+    "gi_loadouts/face/rsrc/pmon/*.py",
+    "gi_loadouts/face/rsrc/rare/*.py",
+    "gi_loadouts/face/rsrc/vson/*.py",
+    "gi_loadouts/face/rsrc/weap/*.py"
+]
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "S", "B", "UP"]

@@ -10,8 +10,12 @@ class Xianyun(Char):
     __statname__: STAT = STAT.attack_perc
     name: CharName = CharName.xianyun
     rare: Rare = Rare.Star_5
-    base: BaseStat = BaseStat(attack=26.068000793457, defense=44.573348999023, health_points=810.32202148438)
-    ascn: BaseStat = BaseStat(attack=107.04148101807, defense=183.04649353027, health_points=3327.6201171875)
+    base: BaseStat = BaseStat(
+        attack=26.068000793457, defense=44.573348999023, health_points=810.32202148438
+    )
+    ascn: BaseStat = BaseStat(
+        attack=107.04148101807, defense=183.04649353027, health_points=3327.6201171875
+    )
     weapon: WeaponType = WeaponType.catalyst
     vision: Vision = Vision.anemo
     cons_name: str = "Grus Serena"

@@ -9,7 +9,9 @@ class team(BaseModel):
     __pairdata__ = [ATTR(stat_name=STAT.elemental_mastery, stat_data=80)]
     __pairtext__ = "Increases Elemental Mastery by 80."
     __quaddata__ = []
-    __quadtext__ = "After using Elemental Skill, increases all party members' Elemental Mastery by 120 for 8s."
+    __quadtext__ = (
+        "After using Elemental Skill, increases all party members' Elemental Mastery by 120 for 8s."
+    )
 
 
 class fwol(team, FWOL):

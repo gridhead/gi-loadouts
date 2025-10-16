@@ -5,7 +5,9 @@ from ....type.weap.tier import Tier
 
 class CrescentPike(Polearm):
     name: str = "Crescent Pike"
-    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.damage_bonus_physical_perc, stat_data=7.5)
+    seco_stat: WeaponStat = WeaponStat(
+        stat_name=WeaponStatType.damage_bonus_physical_perc, stat_data=7.5
+    )
     tier: Tier = Tier.Tier_3
     rare: Rare = Rare.Star_4
     refi_name: str = "Infusion Needle"

@@ -37,38 +37,59 @@ class Facility(Dialog):
         """
         try:
             objc = ArtiFile(
-                type=getattr(ArtiList, getattr(self, f"arti_{part}_type").currentText().strip().replace(" ", "_").replace("'", "").replace("-", "_")),
-                levl=getattr(ArtiLevl, getattr(self, f"arti_{part}_levl").currentText().strip().replace(" ", "_")),
+                type=getattr(
+                    ArtiList,
+                    getattr(self, f"arti_{part}_type")
+                    .currentText()
+                    .strip()
+                    .replace(" ", "_")
+                    .replace("'", "")
+                    .replace("-", "_"),
+                ),
+                levl=getattr(
+                    ArtiLevl,
+                    getattr(self, f"arti_{part}_levl").currentText().strip().replace(" ", "_"),
+                ),
                 area=getattr(ArtiArea, part),
-                name=getattr(getattr(ArtiList, getattr(self, f"arti_{part}_type").currentText().strip().replace(" ", "_").replace("'", "").replace("-", "_")).value, part).__name__,
-                rare=getattr(Rare, getattr(self, f"arti_{part}_rare").currentText().strip().replace(" ", "_")),
+                name=getattr(
+                    getattr(
+                        ArtiList,
+                        getattr(self, f"arti_{part}_type")
+                        .currentText()
+                        .strip()
+                        .replace(" ", "_")
+                        .replace("'", "")
+                        .replace("-", "_"),
+                    ).value,
+                    part,
+                ).__name__,
+                rare=getattr(
+                    Rare, getattr(self, f"arti_{part}_rare").currentText().strip().replace(" ", "_")
+                ),
             )
 
             for indx in ["main", "a", "b", "c", "d"]:
                 if getattr(self, f"arti_{part}_name_{indx}").currentText().strip() != "":
                     if getattr(self, f"arti_{part}_name_{indx}").currentText().strip() == "None":
-                        setattr(
-                            objc,
-                            f"stat_{indx}",
-                            ATTR(
-                                stat_name=STAT.none,
-                                stat_data=0.0
-                            )
-                        )
+                        setattr(objc, f"stat_{indx}", ATTR(stat_name=STAT.none, stat_data=0.0))
                     else:
                         setattr(
                             objc,
                             f"stat_{indx}",
                             ATTR(
-                                stat_name=__revmap__[getattr(self, f"arti_{part}_name_{indx}").currentText().strip()],
-                                stat_data=float(getattr(self, f"arti_{part}_data_{indx}").text().strip())
-                            )
+                                stat_name=__revmap__[
+                                    getattr(self, f"arti_{part}_name_{indx}").currentText().strip()
+                                ],
+                                stat_data=float(
+                                    getattr(self, f"arti_{part}_data_{indx}").text().strip()
+                                ),
+                            ),
                         )
 
             status = file.save(
                 self,
                 "Select location to save artifact data",
-                f"{getattr(self, f"arti_{part}_type").currentText().strip().replace(" ", "").replace("'", "").replace("-", "")}_{uuid4().hex[0:8].upper()}_{datetime.now().strftime("%Y%m%d_%H%M%S")}.{part}",
+                f"{getattr(self, f'arti_{part}_type').currentText().strip().replace(' ', '').replace("'", '').replace('-', '')}_{uuid4().hex[0:8].upper()}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.{part}",
                 objc,
             )
             if not status:
@@ -94,24 +115,65 @@ class Facility(Dialog):
             arealist = ["fwol", "pmod", "sdoe", "gboe", "ccol"]
             for part in arealist:
                 unit = ArtiFile(
-                    type=getattr(ArtiList, getattr(self, f"arti_{part}_type").currentText().strip().replace(" ", "_").replace("'", "").replace("-", "_")),
-                    levl=getattr(ArtiLevl, getattr(self, f"arti_{part}_levl").currentText().strip().replace(" ", "_")),
+                    type=getattr(
+                        ArtiList,
+                        getattr(self, f"arti_{part}_type")
+                        .currentText()
+                        .strip()
+                        .replace(" ", "_")
+                        .replace("'", "")
+                        .replace("-", "_"),
+                    ),
+                    levl=getattr(
+                        ArtiLevl,
+                        getattr(self, f"arti_{part}_levl").currentText().strip().replace(" ", "_"),
+                    ),
                     area=getattr(ArtiArea, part),
-                    name=getattr(getattr(ArtiList, getattr(self, f"arti_{part}_type").currentText().strip().replace(" ", "_").replace("'", "").replace("-", "_")).value, part).__name__,
-                    rare=getattr(Rare, getattr(self, f"arti_{part}_rare").currentText().strip().replace(" ", "_")),
+                    name=getattr(
+                        getattr(
+                            ArtiList,
+                            getattr(self, f"arti_{part}_type")
+                            .currentText()
+                            .strip()
+                            .replace(" ", "_")
+                            .replace("'", "")
+                            .replace("-", "_"),
+                        ).value,
+                        part,
+                    ).__name__,
+                    rare=getattr(
+                        Rare,
+                        getattr(self, f"arti_{part}_rare").currentText().strip().replace(" ", "_"),
+                    ),
                 )
                 for indx in ["main", "a", "b", "c", "d"]:
                     if getattr(self, f"arti_{part}_name_{indx}").currentText().strip() != "":
-                        if getattr(self, f"arti_{part}_name_{indx}").currentText().strip() == "None":
+                        if (
+                            getattr(self, f"arti_{part}_name_{indx}").currentText().strip()
+                            == "None"
+                        ):
                             setattr(unit, f"stat_{indx}", ATTR(stat_name=STAT.none, stat_data=0.0))
                         else:
-                            setattr(unit, f"stat_{indx}", ATTR(stat_name=__revmap__[getattr(self, f"arti_{part}_name_{indx}").currentText().strip()], stat_data=float(getattr(self, f"arti_{part}_data_{indx}").text().strip())))
+                            setattr(
+                                unit,
+                                f"stat_{indx}",
+                                ATTR(
+                                    stat_name=__revmap__[
+                                        getattr(self, f"arti_{part}_name_{indx}")
+                                        .currentText()
+                                        .strip()
+                                    ],
+                                    stat_data=float(
+                                        getattr(self, f"arti_{part}_data_{indx}").text().strip()
+                                    ),
+                                ),
+                            )
                 setattr(objc, part, unit)
 
             status = file.save(
                 self,
                 "Select location to save artifact data",
-                f"{uuid4().hex[0:8].upper()}_{datetime.now().strftime("%Y%m%d_%H%M%S")}",
+                f"{uuid4().hex[0:8].upper()}_{datetime.now().strftime('%Y%m%d_%H%M%S')}",
                 objc,
             )
             if not status:
@@ -133,20 +195,29 @@ class Facility(Dialog):
         :return:
         """
         try:
-            if (self.weap_area_type.currentText() != "" and
-                self.weap_area_name.currentText() != "" and
-                self.weap_area_levl.currentText() != ""):
+            if (
+                self.weap_area_type.currentText() != ""
+                and self.weap_area_name.currentText() != ""
+                and self.weap_area_levl.currentText() != ""
+            ):
                 objc = WeapFile(
                     name=self.weap_area_name.currentText(),
                     type=getattr(WeaponType, self.weap_area_type.currentText().lower()),
-                    levl=getattr(Level, self.weap_area_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_")),
+                    levl=getattr(
+                        Level,
+                        self.weap_area_levl.currentText()
+                        .replace(" ", "_")
+                        .replace("(", "")
+                        .replace(")", "")
+                        .replace("/", "_"),
+                    ),
                     refn=self.weap_area_refn.currentText(),
                 )
 
                 status = file.save(
                     self,
                     "Select location to save weapon data",
-                    f"{objc.name.strip().replace(" ", "").replace("\"", "").replace("-", "").replace("'", "")}_{uuid4().hex[0:8].upper()}_{datetime.now().strftime("%Y%m%d_%H%M%S")}",
+                    f"{objc.name.strip().replace(' ', '').replace('"', '').replace('-', '').replace("'", '')}_{uuid4().hex[0:8].upper()}_{datetime.now().strftime('%Y%m%d_%H%M%S')}",
                     objc,
                 )
                 if not status:
@@ -169,10 +240,7 @@ class Facility(Dialog):
         :return:
         """
         try:
-            status, data, filetype = file.load(
-                self,
-                "Select location to load artifact data"
-            )
+            status, data, filetype = file.load(self, "Select location to load artifact data")
 
             if not status:
                 return
@@ -212,7 +280,7 @@ class Facility(Dialog):
             self.show_dialog(
                 QMessageBox.Information,
                 "Load failed",
-                f"Please confirm that the artifact data follows the valid format before loading it from a location that is accessible.\n\n{expt}"
+                f"Please confirm that the artifact data follows the valid format before loading it from a location that is accessible.\n\n{expt}",
             )
 
     def team_load(self) -> None:
@@ -222,10 +290,7 @@ class Facility(Dialog):
         :return:
         """
         try:
-            status, data, filetype = file.load(
-                self,
-                "Select location to load artifact set"
-            )
+            status, data, filetype = file.load(self, "Select location to load artifact set")
 
             if not status:
                 return
@@ -264,7 +329,7 @@ class Facility(Dialog):
             self.show_dialog(
                 QMessageBox.Information,
                 "Load failed",
-                f"Please confirm that the artifact set follows the valid format before loading it from a location that is accessible.\n\n{expt}"
+                f"Please confirm that the artifact set follows the valid format before loading it from a location that is accessible.\n\n{expt}",
             )
 
     def weap_load(self) -> None:
@@ -274,10 +339,7 @@ class Facility(Dialog):
         :return:
         """
         try:
-            status, data, filetype = file.load(
-                self,
-                "Select location to load weapon data"
-            )
+            status, data, filetype = file.load(self, "Select location to load weapon data")
 
             if not status:
                 return
@@ -292,19 +354,25 @@ class Facility(Dialog):
                 objc = json.loads(data)
                 weap = make_weapfile_from_good(objc)
 
-            typelist = [self.weap_area_type.itemText(indx) for indx in range(self.weap_area_type.count())]
+            typelist = [
+                self.weap_area_type.itemText(indx) for indx in range(self.weap_area_type.count())
+            ]
             if weap.type.value not in typelist:
                 raise ValueError("Weapon type cannot be identified.")
             self.weap_area_type.setCurrentText(weap.type.value)
 
-            weaplist = [self.weap_area_name.itemText(indx) for indx in range(self.weap_area_name.count())]
+            weaplist = [
+                self.weap_area_name.itemText(indx) for indx in range(self.weap_area_name.count())
+            ]
             if weap.name not in weaplist:
                 raise ValueError("Weapon name cannot be identified.")
             self.weap_area_name.setCurrentText(weap.name)
 
             self.weap_area_levl.setCurrentText(weap.levl.value.name)
 
-            refnlist = [self.weap_area_refn.itemText(indx) for indx in range(self.weap_area_refn.count())]
+            refnlist = [
+                self.weap_area_refn.itemText(indx) for indx in range(self.weap_area_refn.count())
+            ]
             if weap.refn and weap.refn not in refnlist:
                 raise ValueError("Weapon refinement cannot be parsed.")
             self.weap_area_refn.setCurrentText(weap.refn)

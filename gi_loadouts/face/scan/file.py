@@ -41,7 +41,9 @@ class FileHandling:
         :return: Path to the Tesseract OCR executable
         """
         explorer, status = QFileDialog(), False
-        filepath = explorer.getOpenFileName(prnt, head, "", "All Files (*);;Executable Files (*.exe)")[0]
+        filepath = explorer.getOpenFileName(
+            prnt, head, "", "All Files (*);;Executable Files (*.exe)"
+        )[0]
         if filepath.strip() != "":
             status = True
         return status, filepath.strip()

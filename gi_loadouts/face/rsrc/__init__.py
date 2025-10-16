@@ -22,7 +22,7 @@ def make_temp_file() -> None:
     Remove the residual cache data from the temporary directory left over during previous sessions
     due to unsuccessful termination before instantiating the same for this session.
     """
-    ptrn = fr"{conf.data_prefix}[a-z0-9_]+\{conf.data_suffix}"
+    ptrn = rf"{conf.data_prefix}[a-z0-9_]+\{conf.data_suffix}"
     temp = Path(gettempdir())
     resi = [temp / file.name for file in temp.iterdir() if file.is_file() if match(ptrn, file.name)]
 
@@ -45,7 +45,9 @@ def make_temp_file() -> None:
     have to be created and deleted manually. On UNIX based operating systems like GNU/Linux or
     MacOS, files can be reliably opened even when they have been marked for deletion.
     """
-    temp = NamedTemporaryFile(prefix=conf.data_prefix, suffix=conf.data_suffix, delete=False, mode="w+b")
+    temp = NamedTemporaryFile(
+        prefix=conf.data_prefix, suffix=conf.data_suffix, delete=False, mode="w+b"
+    )
     temp.write(cont)
     temp.close()
     conf.tempname = Path(temp.name).name.replace(conf.data_suffix, "")
