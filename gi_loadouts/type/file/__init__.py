@@ -23,12 +23,10 @@ __stat_good__ = {
     STAT.damage_bonus_geo_perc: "geo_dmg_",
     STAT.damage_bonus_hydro_perc: "hydro_dmg_",
     STAT.damage_bonus_pyro_perc: "pyro_dmg_",
-    STAT.none: "none"
+    STAT.none: "none",
 }
 
-__stat_good_revmap__ = {
-    data: item for item, data in __stat_good__.items()
-}
+__stat_good_revmap__ = {data: item for item, data in __stat_good__.items()}
 
 __artiarea_good__ = {
     "FWOL": "flower",
@@ -38,29 +36,34 @@ __artiarea_good__ = {
     "CCOL": "circlet",
 }
 
-__artiarea_good_revmap__ = {
-    data: item for item, data in __artiarea_good__.items()
-}
+__artiarea_good_revmap__ = {data: item for item, data in __artiarea_good__.items()}
 
 __artilist_good__ = {
-    item.value.name: "".join([item.title() for item in item.value.name.replace("'", "").replace("-", " ").split(" ")]) for item in ArtiList
+    item.value.name: "".join(
+        [item.title() for item in item.value.name.replace("'", "").replace("-", " ").split(" ")]
+    )
+    for item in ArtiList
 }
 
-__artilist_good_revmap__ = {
-    data: item for item, data in __artilist_good__.items()
-}
+__artilist_good_revmap__ = {data: item for item, data in __artilist_good__.items()}
 
 __artilevl_good__ = {
-    item: getattr(ArtiLevl, f"Level_0{item}" if item < 10 else f"Level_{item}") for item in range(21)
+    item: getattr(ArtiLevl, f"Level_0{item}" if item < 10 else f"Level_{item}")
+    for item in range(21)
 }
 
 __weaplist_good__ = {
-    item: "".join([word.title() for word in item.replace("'", "").replace("\"", "").replace("-", " ").split(" ")]) for weap in Family.values() for item in weap.keys()
+    item: "".join(
+        [
+            word.title()
+            for word in item.replace("'", "").replace('"', "").replace("-", " ").split(" ")
+        ]
+    )
+    for weap in Family.values()
+    for item in weap.keys()
 }
 
-__weaplist_good_revmap__ = {
-    data: item for item, data in __weaplist_good__.items()
-}
+__weaplist_good_revmap__ = {data: item for item, data in __weaplist_good__.items()}
 
 __ascn_bond__ = {
     0: 20,

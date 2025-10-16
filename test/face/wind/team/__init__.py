@@ -263,5 +263,5 @@ actual = {
     "pmod": actual_pmod,
     "sdoe": actual_sdoe,
     "gboe": actual_gboe,
-    "ccol": actual_ccol
+    "ccol": actual_ccol,
 }

@@ -23,7 +23,9 @@ class FileHandling:
         :return:
         """
         explorer, status = QFileDialog(), False
-        savefile, filetype = explorer.getSaveFileName(prnt, head, path, "YAML Files (*.yaml);;GOOD Files (*.json)")
+        savefile, filetype = explorer.getSaveFileName(
+            prnt, head, path, "YAML Files (*.yaml);;GOOD Files (*.json)"
+        )
 
         if savefile.strip() != "":
             if filetype == "YAML Files (*.yaml)":
@@ -38,7 +40,6 @@ class FileHandling:
 
         return status
 
-
     def load(self, prnt, head: str) -> tuple:
         """
         Handle file operations involved in loading data from the storage device
@@ -48,7 +49,9 @@ class FileHandling:
         :return: Data that is intended to be loaded from the sought file
         """
         explorer, status, data = QFileDialog(), False, ""
-        loadfile, filetype = explorer.getOpenFileName(prnt, head, "", "YAML Files (*.yaml);;GOOD Files (*.json)")
+        loadfile, filetype = explorer.getOpenFileName(
+            prnt, head, "", "YAML Files (*.yaml);;GOOD Files (*.json)"
+        )
 
         if loadfile.strip() != "":
             with open(loadfile) as fileobjc:

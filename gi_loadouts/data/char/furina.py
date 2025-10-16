@@ -11,7 +11,9 @@ class Furina(Char):
     name: CharName = CharName.furina
     rare: Rare = Rare.Star_5
     base: BaseStat = BaseStat(attack=18.9924, defense=54.146148681641, health_points=1191.65)
-    ascn: BaseStat = BaseStat(attack=77.987365722656, defense=222.35850524902, health_points=4893.5590820312)
+    ascn: BaseStat = BaseStat(
+        attack=77.987365722656, defense=222.35850524902, health_points=4893.5590820312
+    )
     weapon: WeaponType = WeaponType.sword
     vision: Vision = Vision.hydro
     cons_name: str = "Animula Choragi"

@@ -6,13 +6,7 @@ from gi_loadouts.face.wind.main import MainWindow
 
 
 @pytest.mark.parametrize(
-    "_",
-    [
-        pytest.param(
-            None,
-            id="face.wind.rule: Wiping the artifact collection"
-        )
-    ]
+    "_", [pytest.param(None, id="face.wind.rule: Wiping the artifact collection")]
 )
 def test_team_wipe(runner: MainWindow, qtbot: QtBot, _: None) -> None:
     """

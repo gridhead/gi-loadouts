@@ -14,6 +14,6 @@ class AshGravenDrinkingHorn(Catalyst):
         "When an attack hits an opponent, deal AoE DMG equal to 50% of Max HP at the target location. This effect can be triggered once every 15s.",
         "When an attack hits an opponent, deal AoE DMG equal to 60% of Max HP at the target location. This effect can be triggered once every 15s.",
         "When an attack hits an opponent, deal AoE DMG equal to 70% of Max HP at the target location. This effect can be triggered once every 15s.",
-        "When an attack hits an opponent, deal AoE DMG equal to 80% of Max HP at the target location. This effect can be triggered once every 15s."
+        "When an attack hits an opponent, deal AoE DMG equal to 80% of Max HP at the target location. This effect can be triggered once every 15s.",
     ]
     file: str = "agdh"

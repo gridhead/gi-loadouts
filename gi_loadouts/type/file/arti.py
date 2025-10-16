@@ -22,6 +22,7 @@ class ArtiArea(str, Enum):
     """
     Set of possible artifact areas
     """
+
     fwol = "FWOL"
     pmod = "PMOD"
     sdoe = "SDOE"
@@ -33,6 +34,7 @@ class ArtiFile(BaseModel):
     """
     Artifact storage primitive
     """
+
     name: str = ""
     type: ArtiList = getattr(ArtiList, "None")
     area: Enum = ArtiArea.fwol
@@ -78,7 +80,7 @@ class ArtiFile(BaseModel):
                     "name": self.stat_d.stat_name.value,
                     "data": self.stat_d.stat_data,
                 },
-            }
+            },
         }
         return data
 
@@ -102,8 +104,10 @@ class ArtiFile(BaseModel):
                 {
                     "key": __stat_good__[getattr(self, f"stat_{alfa}").stat_name],
                     "value": getattr(self, f"stat_{alfa}").stat_data,
-                } for alfa in ["a", "b", "c", "d"] if getattr(self, f"stat_{alfa}") != ATTR()
-            ]
+                }
+                for alfa in ["a", "b", "c", "d"]
+                if getattr(self, f"stat_{alfa}") != ATTR()
+            ],
         }
         return data
 
@@ -118,18 +122,33 @@ def make_artifile_from_yaml(objc: dict) -> ArtiFile:
     try:
         artiobjc = ArtiFile(
             name=objc["name"],
-            type=getattr(ArtiList, objc["type"].replace(" ", "_").replace("'", "").replace("-", "_")),
+            type=getattr(
+                ArtiList, objc["type"].replace(" ", "_").replace("'", "").replace("-", "_")
+            ),
             area=getattr(ArtiArea, objc["area"].lower()),
-            rare=getattr(Rare, f"Star_{objc["rare"]}"),
+            rare=getattr(Rare, f"Star_{objc['rare']}"),
             levl=getattr(ArtiLevl, objc["levl"].replace(" ", "_")),
-            stat_main=ATTR(stat_name=__revmap__[objc["stat"]["main"]["name"]], stat_data=objc["stat"]["main"]["data"]),
-            stat_a=ATTR(stat_name=__revmap__[objc["stat"]["a"]["name"]], stat_data=objc["stat"]["a"]["data"]),
-            stat_b=ATTR(stat_name=__revmap__[objc["stat"]["b"]["name"]], stat_data=objc["stat"]["b"]["data"]),
-            stat_c=ATTR(stat_name=__revmap__[objc["stat"]["c"]["name"]], stat_data=objc["stat"]["c"]["data"]),
-            stat_d=ATTR(stat_name=__revmap__[objc["stat"]["d"]["name"]], stat_data=objc["stat"]["d"]["data"]),
+            stat_main=ATTR(
+                stat_name=__revmap__[objc["stat"]["main"]["name"]],
+                stat_data=objc["stat"]["main"]["data"],
+            ),
+            stat_a=ATTR(
+                stat_name=__revmap__[objc["stat"]["a"]["name"]], stat_data=objc["stat"]["a"]["data"]
+            ),
+            stat_b=ATTR(
+                stat_name=__revmap__[objc["stat"]["b"]["name"]], stat_data=objc["stat"]["b"]["data"]
+            ),
+            stat_c=ATTR(
+                stat_name=__revmap__[objc["stat"]["c"]["name"]], stat_data=objc["stat"]["c"]["data"]
+            ),
+            stat_d=ATTR(
+                stat_name=__revmap__[objc["stat"]["d"]["name"]], stat_data=objc["stat"]["d"]["data"]
+            ),
         )
     except Exception as expt:
-        raise ValueError("Artifact stat cannot be identified or unit data cannot be parsed.") from expt
+        raise ValueError(
+            "Artifact stat cannot be identified or unit data cannot be parsed."
+        ) from expt
 
     for indx in ["a", "b", "c", "d"]:
         if artiobjc.stat_main.stat_name == getattr(artiobjc, f"stat_{indx}").stat_name:
@@ -152,19 +171,36 @@ def make_artifile_from_good(objc: dict) -> ArtiFile:
         """
         artiobjc = ArtiFile(
             name="",
-            type=getattr(ArtiList, __artilist_good_revmap__[objc["setKey"]].replace(" ", "_").replace("'", "").replace("-", "_")),
+            type=getattr(
+                ArtiList,
+                __artilist_good_revmap__[objc["setKey"]]
+                .replace(" ", "_")
+                .replace("'", "")
+                .replace("-", "_"),
+            ),
             area=getattr(ArtiArea, __artiarea_good_revmap__[objc["slotKey"]].lower()),
-            rare=getattr(Rare, f"Star_{objc["rarity"]}"),
-            levl=getattr(ArtiLevl, "None") if objc["rarity"] == 0 else __artilevl_good__[objc["level"]],
+            rare=getattr(Rare, f"Star_{objc['rarity']}"),
+            levl=getattr(ArtiLevl, "None")
+            if objc["rarity"] == 0
+            else __artilevl_good__[objc["level"]],
             stat_main=ATTR(stat_name=__stat_good_revmap__[objc["mainStatKey"]], stat_data=0.0),
-            stat_a=ATTR(), stat_b=ATTR(), stat_c=ATTR(), stat_d=ATTR()
+            stat_a=ATTR(),
+            stat_b=ATTR(),
+            stat_c=ATTR(),
+            stat_d=ATTR(),
         )
         alfalist = ["a", "b", "c", "d"]
         for item in objc["substats"]:
-            setattr(artiobjc, f"stat_{alfalist[0]}", ATTR(stat_name=__stat_good_revmap__[item["key"]], stat_data=item["value"]))
+            setattr(
+                artiobjc,
+                f"stat_{alfalist[0]}",
+                ATTR(stat_name=__stat_good_revmap__[item["key"]], stat_data=item["value"]),
+            )
             alfalist.pop(0)
     except Exception as expt:
-        raise ValueError("Artifact stat cannot be identified or unit data cannot be parsed.") from expt
+        raise ValueError(
+            "Artifact stat cannot be identified or unit data cannot be parsed."
+        ) from expt
 
     for indx in ["a", "b", "c", "d"]:
         if artiobjc.stat_main.stat_name == getattr(artiobjc, f"stat_{indx}").stat_name:

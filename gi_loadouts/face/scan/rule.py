@@ -82,7 +82,11 @@ class Rule(QDialog, Ui_scan, Dialog):
         if self.arti_dist.currentText().strip() != "":
             self.arti_name_main.clear()
             self.arti_name_main.addItems(
-                [item.value.value for item in self.dist[self.arti_dist.currentText().strip()]["list"] if item != self.dist[self.arti_dist.currentText().strip()]["list"].none]
+                [
+                    item.value.value
+                    for item in self.dist[self.arti_dist.currentText().strip()]["list"]
+                    if item != self.dist[self.arti_dist.currentText().strip()]["list"].none
+                ]
             )
 
     def change_artifact_name_by_changing_artifact_area_or_type(self) -> None:
@@ -91,14 +95,35 @@ class Rule(QDialog, Ui_scan, Dialog):
 
         :return:
         """
-        if self.arti_dist.currentText().strip() != "" and self.arti_type.currentText().strip() != "":
-            kind = getattr(ArtiList, self.arti_type.currentText().replace(" ", "_").replace("'", "").replace("-", "_"))
+        if (
+            self.arti_dist.currentText().strip() != ""
+            and self.arti_type.currentText().strip() != ""
+        ):
+            kind = getattr(
+                ArtiList,
+                self.arti_type.currentText().replace(" ", "_").replace("'", "").replace("-", "_"),
+            )
             self.arti_rare.clear()
             self.arti_rare.addItems([indx.value.name for indx in kind.value.rare])
-            self.arti_type_name.setText(truncate_text(getattr(kind.value, self.dist[self.arti_dist.currentText().strip()]["part"]).__name__, 34))
-            self.arti_head_icon.setPixmap(QPixmap(f":arti/imgs/arti/{kind.value.file}/{self.dist[self.arti_dist.currentText().strip()]["part"]}.webp"))
+            self.arti_type_name.setText(
+                truncate_text(
+                    getattr(
+                        kind.value, self.dist[self.arti_dist.currentText().strip()]["part"]
+                    ).__name__,
+                    34,
+                )
+            )
+            self.arti_head_icon.setPixmap(
+                QPixmap(
+                    f":arti/imgs/arti/{kind.value.file}/{self.dist[self.arti_dist.currentText().strip()]['part']}.webp"
+                )
+            )
             if self.arti_type.currentText().strip() == "None":
-                self.arti_head_icon.setPixmap(QPixmap(f":arti/imgs/arti/main/{self.dist[self.arti_dist.currentText().strip()]["part"]}.webp"))
+                self.arti_head_icon.setPixmap(
+                    QPixmap(
+                        f":arti/imgs/arti/main/{self.dist[self.arti_dist.currentText().strip()]['part']}.webp"
+                    )
+                )
 
     def change_levels_backdrop_by_changing_rarity(self) -> None:
         """
@@ -109,7 +134,9 @@ class Rule(QDialog, Ui_scan, Dialog):
         if self.arti_rare.currentText().strip() != "":
             rare = getattr(Rare, self.arti_rare.currentText().replace(" ", "_"))
             self.arti_levl.clear()
-            self.arti_levl.addItems([item.value.name for item in ArtiLevl if rare in item.value.rare])
+            self.arti_levl.addItems(
+                [item.value.name for item in ArtiLevl if rare in item.value.rare]
+            )
             self.arti_head_area.setPixmap(QPixmap(rare.value.back))
 
     def change_artifact_substats_by_changing_rarity_or_mainstat(self) -> None:
@@ -118,12 +145,18 @@ class Rule(QDialog, Ui_scan, Dialog):
 
         :return:
         """
-        if self.arti_rare.currentText().strip() != "" and self.arti_name_main.currentText().strip() != "" and self.arti_type.currentText().strip() != "":
+        if (
+            self.arti_rare.currentText().strip() != ""
+            and self.arti_name_main.currentText().strip() != ""
+            and self.arti_type.currentText().strip() != ""
+        ):
             rare = getattr(Rare, self.arti_rare.currentText().replace(" ", "_"))
             stat = self.arti_name_main.currentText().strip()
             for indx in __artistat__[rare.value.qant]["active"]:
                 getattr(self, f"arti_name_{indx}").clear()
-                getattr(self, f"arti_name_{indx}").addItems([item.value.value for item in SecoStatType if item.value.value != stat])
+                getattr(self, f"arti_name_{indx}").addItems(
+                    [item.value.value for item in SecoStatType if item.value.value != stat]
+                )
             for alfa in __artistat__[rare.value.qant]["inactive"]:
                 getattr(self, f"arti_name_{alfa}").clear()
                 getattr(self, f"arti_name_{alfa}").addItems(["None"])
@@ -151,7 +184,10 @@ class Rule(QDialog, Ui_scan, Dialog):
 
         :return:
         """
-        if self.arti_type.currentText().strip() != "" and self.arti_dist.currentText().strip() != "":
+        if (
+            self.arti_type.currentText().strip() != ""
+            and self.arti_dist.currentText().strip() != ""
+        ):
             if self.arti_type.currentText().strip() == "None":
                 self.arti_name_main.clear()
                 self.arti_name_main.addItems(["None"])
@@ -161,7 +197,13 @@ class Rule(QDialog, Ui_scan, Dialog):
                 self.arti_data_main.clear()
                 self.arti_name_main.setDisabled(False)
                 self.arti_name_main.clear()
-                self.arti_name_main.addItems([item.value.value for item in self.dist[self.arti_dist.currentText().strip()]["list"] if item != self.dist[self.arti_dist.currentText().strip()]["list"].none])
+                self.arti_name_main.addItems(
+                    [
+                        item.value.value
+                        for item in self.dist[self.arti_dist.currentText().strip()]["list"]
+                        if item != self.dist[self.arti_dist.currentText().strip()]["list"].none
+                    ]
+                )
 
     def wipe_artifact(self) -> None:
         """
@@ -179,16 +221,32 @@ class Rule(QDialog, Ui_scan, Dialog):
 
         :return:
         """
-        if self.arti_dist.currentText().strip() != "" and self.arti_levl.currentText().strip() != "" and self.arti_type.currentText().strip() != "" and self.arti_rare.currentText().strip() and self.arti_name_main.currentText().strip() != "":
+        if (
+            self.arti_dist.currentText().strip() != ""
+            and self.arti_levl.currentText().strip() != ""
+            and self.arti_type.currentText().strip() != ""
+            and self.arti_rare.currentText().strip()
+            and self.arti_name_main.currentText().strip() != ""
+        ):
             """
             Checking if no artifact is selected
             """
-            if self.arti_type.currentText().strip() != "None" and self.arti_name_main.currentText().strip() != "None":
-
+            if (
+                self.arti_type.currentText().strip() != "None"
+                and self.arti_name_main.currentText().strip() != "None"
+            ):
                 levl = getattr(ArtiLevl, self.arti_levl.currentText().replace(" ", "_"))
-                team = getattr(ArtiList, self.arti_type.currentText().replace(" ", "_").replace("'", "").replace("-", "_"))
+                team = getattr(
+                    ArtiList,
+                    self.arti_type.currentText()
+                    .replace(" ", "_")
+                    .replace("'", "")
+                    .replace("-", "_"),
+                )
                 rare = getattr(Rare, self.arti_rare.currentText().replace(" ", "_"))
-                stat = getattr(arti, f"revmap_{self.dist[self.arti_dist.currentText().strip()]["part"]}")[self.arti_name_main.currentText().strip()]
+                stat = getattr(
+                    arti, f"revmap_{self.dist[self.arti_dist.currentText().strip()]['part']}"
+                )[self.arti_name_main.currentText().strip()]
                 item = getattr(team.value, self.dist[self.arti_dist.currentText().strip()]["part"])
                 item.levl, item.rare, item.stat_name = levl.value.levl, rare.value.qant, stat
                 self.arti_data_main.setText(f"{round(item.stat_data, 1)}")
@@ -207,7 +265,9 @@ class Rule(QDialog, Ui_scan, Dialog):
 
         :return:
         """
-        self.arti_text.setText("Browse your local storage to load a high quality screenshot of your artifact and the statistics will automatically be computed from there.")
+        self.arti_text.setText(
+            "Browse your local storage to load a high quality screenshot of your artifact and the statistics will automatically be computed from there."
+        )
         if isinstance(self.thread, QThread):
             self.thread.quit()
             self.thread.wait()
@@ -224,7 +284,7 @@ class Rule(QDialog, Ui_scan, Dialog):
             self.show_dialog(
                 QMessageBox.Information,
                 "Faulty scanning",
-                f"Please consider checking your input after ensuring that the proper Tesseract OCR executable has been selected.\n\n{expt}"
+                f"Please consider checking your input after ensuring that the proper Tesseract OCR executable has been selected.\n\n{expt}",
             )
             return
 
@@ -238,10 +298,15 @@ class Rule(QDialog, Ui_scan, Dialog):
             self.arti_rare.setCurrentText(rare)
         if levl in [self.arti_levl.itemText(indx) for indx in range(self.arti_levl.count())]:
             self.arti_levl.setCurrentText(levl)
-        if main.stat_name.value in [self.arti_name_main.itemText(indx) for indx in range(self.arti_name_main.count())]:
+        if main.stat_name.value in [
+            self.arti_name_main.itemText(indx) for indx in range(self.arti_name_main.count())
+        ]:
             self.arti_name_main.setCurrentText(main.stat_name.value)
         for alfa, item in seco.items():
-            if item.stat_name.value in [getattr(self, f"arti_name_{alfa}").itemText(indx) for indx in range(getattr(self, f"arti_name_{alfa}").count())]:
+            if item.stat_name.value in [
+                getattr(self, f"arti_name_{alfa}").itemText(indx)
+                for indx in range(getattr(self, f"arti_name_{alfa}").count())
+            ]:
                 getattr(self, f"arti_name_{alfa}").setCurrentText(item.stat_name.value)
                 getattr(self, f"arti_data_{alfa}").setText(str(item.stat_data))
 
@@ -263,7 +328,7 @@ class Rule(QDialog, Ui_scan, Dialog):
             self.show_dialog(
                 QMessageBox.Information,
                 "Faulty scanning",
-                f"Please consider checking your input after ensuring that the proper Tesseract OCR executable has been selected.\n\n{expt}"
+                f"Please consider checking your input after ensuring that the proper Tesseract OCR executable has been selected.\n\n{expt}",
             )
 
     def insert_data_from_file(self) -> None:
@@ -273,7 +338,9 @@ class Rule(QDialog, Ui_scan, Dialog):
         :return:
         """
         try:
-            status, self.shot, self.snap = file.load_screenshot_with_picker(self, "Select location to load artifact screenshot")
+            status, self.shot, self.snap = file.load_screenshot_with_picker(
+                self, "Select location to load artifact screenshot"
+            )
             if not status:
                 return
             self.load_reader()
@@ -281,7 +348,7 @@ class Rule(QDialog, Ui_scan, Dialog):
             self.show_dialog(
                 QMessageBox.Information,
                 "Faulty scanning",
-                f"Please consider checking your input after ensuring that the proper Tesseract OCR executable has been selected.\n\n{expt}"
+                f"Please consider checking your input after ensuring that the proper Tesseract OCR executable has been selected.\n\n{expt}",
             )
 
     def transfer_to_processing(self, data: QMimeData) -> None:
@@ -330,7 +397,7 @@ class Rule(QDialog, Ui_scan, Dialog):
             self.show_dialog(
                 QMessageBox.Information,
                 "Faulty scanning",
-                f"Please consider checking your input after ensuring that the proper Tesseract OCR executable has been selected.\n\n{expt}"
+                f"Please consider checking your input after ensuring that the proper Tesseract OCR executable has been selected.\n\n{expt}",
             )
 
     def insert_data_from_shortcut(self) -> None:
@@ -340,7 +407,6 @@ class Rule(QDialog, Ui_scan, Dialog):
         :return:
         """
         self.transfer_to_processing(QApplication.clipboard().mimeData())
-
 
     def dragEnterEvent(self, incident: QDragEnterEvent) -> None:  # pragma: no cover
         """
@@ -381,14 +447,16 @@ class Rule(QDialog, Ui_scan, Dialog):
         :return:
         """
         try:
-            status, tessexec = file.load_tessexec_with_picker(self, "Select location of the Tesseract OCR executable")
+            status, tessexec = file.load_tessexec_with_picker(
+                self, "Select location of the Tesseract OCR executable"
+            )
             if status:
                 conf.tessexec = tessexec
         except Exception as expt:
             self.show_dialog(
                 QMessageBox.Information,
                 "Faulty scanning",
-                f"Please consider checking your input after ensuring that the proper Tesseract OCR executable has been selected.\n\n{expt}"
+                f"Please consider checking your input after ensuring that the proper Tesseract OCR executable has been selected.\n\n{expt}",
             )
 
     def keep_info(self) -> dict:
@@ -405,27 +473,27 @@ class Rule(QDialog, Ui_scan, Dialog):
             "stat": {
                 "main": ATTR(
                     stat_name=__revmap__[self.arti_name_main.currentText().strip()],
-                    stat_data=modify_datatype_to_transfer(self.arti_data_main.text())
+                    stat_data=modify_datatype_to_transfer(self.arti_data_main.text()),
                 ),
                 "seco": {
                     "a": ATTR(
                         stat_name=__revmap__[self.arti_name_a.currentText().strip()],
-                        stat_data=modify_datatype_to_transfer(self.arti_data_a.text())
+                        stat_data=modify_datatype_to_transfer(self.arti_data_a.text()),
                     ),
                     "b": ATTR(
                         stat_name=__revmap__[self.arti_name_b.currentText().strip()],
-                        stat_data=modify_datatype_to_transfer(self.arti_data_b.text())
+                        stat_data=modify_datatype_to_transfer(self.arti_data_b.text()),
                     ),
                     "c": ATTR(
                         stat_name=__revmap__[self.arti_name_c.currentText().strip()],
-                        stat_data=modify_datatype_to_transfer(self.arti_data_c.text())
+                        stat_data=modify_datatype_to_transfer(self.arti_data_c.text()),
                     ),
                     "d": ATTR(
                         stat_name=__revmap__[self.arti_name_d.currentText().strip()],
-                        stat_data=modify_datatype_to_transfer(self.arti_data_d.text())
-                    )
-                }
-            }
+                        stat_data=modify_datatype_to_transfer(self.arti_data_d.text()),
+                    ),
+                },
+            },
         }
         return rtrn
 
@@ -435,7 +503,9 @@ class Rule(QDialog, Ui_scan, Dialog):
 
         :return:
         """
-        self.arti_shot.setText("<html><head/><body><p align=\"center\"><span style=\" font-size:16pt;\">YOUR ARTIFACT SCREENSHOT WILL SHOW UP HERE</span></p><p align=\"center\">INSERT AN ARTIFACT SCREENSHOT HERE BY EITHER PRESSING<span style=\" font-weight:700;\"> CTRL + V</span> OR USING <span style=\" font-weight:700;\">DRAG AND DROP</span></p></body></html>")
+        self.arti_shot.setText(
+            '<html><head/><body><p align="center"><span style=" font-size:16pt;">YOUR ARTIFACT SCREENSHOT WILL SHOW UP HERE</span></p><p align="center">INSERT AN ARTIFACT SCREENSHOT HERE BY EITHER PRESSING<span style=" font-weight:700;"> CTRL + V</span> OR USING <span style=" font-weight:700;">DRAG AND DROP</span></p></body></html>'
+        )
 
     def regulate_taborder(self) -> None:
         """
@@ -444,4 +514,4 @@ class Rule(QDialog, Ui_scan, Dialog):
         :return:
         """
         for current_widget, next_widget in zip(tab_order_scan, tab_order_scan[1:]):
-             self.setTabOrder(getattr(self, current_widget), getattr(self, next_widget))
+            self.setTabOrder(getattr(self, current_widget), getattr(self, next_widget))

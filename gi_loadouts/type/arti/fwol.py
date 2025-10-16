@@ -8,6 +8,7 @@ class FWOL(Artifact):
     """
     Artifact primitive for a "Flower of Life" artifact
     """
+
     stat_name: Optional[MainStatType_FWOL] = MainStatType_FWOL.health_points
     secostat_a: Optional[SecoStat] = SecoStat()
     secostat_b: Optional[SecoStat] = SecoStat()
@@ -21,8 +22,9 @@ class FWOL(Artifact):
 
         :return:
         """
-        return health_points[self.rare]["init"] + sum(health_points[self.rare]["diff"][0:self.levl+1])  # noqa : E501
+        return health_points[self.rare]["init"] + sum(
+            health_points[self.rare]["diff"][0 : self.levl + 1]
+        )  # noqa : E501
 
-__revmap__ = {
-    "HP": MainStatType_FWOL.health_points
-}
+
+__revmap__ = {"HP": MainStatType_FWOL.health_points}

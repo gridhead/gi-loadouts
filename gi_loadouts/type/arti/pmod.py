@@ -8,6 +8,7 @@ class PMOD(Artifact):
     """
     Artifact primitive for a "Plume of Death" artifact
     """
+
     stat_name: Optional[MainStatType_PMOD] = MainStatType_PMOD.attack
     secostat_a: Optional[SecoStat] = SecoStat()
     secostat_b: Optional[SecoStat] = SecoStat()
@@ -21,9 +22,7 @@ class PMOD(Artifact):
 
         :return:
         """
-        return attack[self.rare]["init"] + sum(attack[self.rare]["diff"][0:self.levl+1])  # noqa : E501
+        return attack[self.rare]["init"] + sum(attack[self.rare]["diff"][0 : self.levl + 1])  # noqa : E501
 
 
-__revmap__ = {
-    "ATK": MainStatType_PMOD.attack
-}
+__revmap__ = {"ATK": MainStatType_PMOD.attack}

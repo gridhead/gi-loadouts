@@ -8,7 +8,9 @@ class team(BaseModel):
     __pairdata__ = []
     __pairtext__ = "Increases Normal Attack and Charged Attack DMG by 15%."
     __quaddata__ = []
-    __quadtext__ = "After using Elemental Skill, increases Normal Attack and Charged Attack DMG by 25% for 8s."
+    __quadtext__ = (
+        "After using Elemental Skill, increases Normal Attack and Charged Attack DMG by 25% for 8s."
+    )
 
 
 class fwol(team, FWOL):

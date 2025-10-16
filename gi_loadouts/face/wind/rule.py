@@ -56,13 +56,29 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         self.head_char_name.addItems([item.value for item in CharName])
         self.head_char_cons.addItems([item.value.name for item in Cons])
         self.head_char_levl.addItems([item.value.name for item in Level])
-        self.arti_fwol_name_main.addItems([item.value.value for item in MainStatType_FWOL if item != MainStatType_FWOL.none])
-        self.arti_pmod_name_main.addItems([item.value.value for item in MainStatType_PMOD if item != MainStatType_PMOD.none])
-        self.arti_sdoe_name_main.addItems([item.value.value for item in MainStatType_SDOE if item != MainStatType_SDOE.none])
-        self.arti_gboe_name_main.addItems([item.value.value for item in MainStatType_GBOE if item != MainStatType_GBOE.none])
-        self.arti_ccol_name_main.addItems([item.value.value for item in MainStatType_CCOL if item != MainStatType_CCOL.none])
+        self.arti_fwol_name_main.addItems(
+            [item.value.value for item in MainStatType_FWOL if item != MainStatType_FWOL.none]
+        )
+        self.arti_pmod_name_main.addItems(
+            [item.value.value for item in MainStatType_PMOD if item != MainStatType_PMOD.none]
+        )
+        self.arti_sdoe_name_main.addItems(
+            [item.value.value for item in MainStatType_SDOE if item != MainStatType_SDOE.none]
+        )
+        self.arti_gboe_name_main.addItems(
+            [item.value.value for item in MainStatType_GBOE if item != MainStatType_GBOE.none]
+        )
+        self.arti_ccol_name_main.addItems(
+            [item.value.value for item in MainStatType_CCOL if item != MainStatType_CCOL.none]
+        )
         self.weap_area_type.addItems([item.value for item in WeaponType if item != WeaponType.none])
-        for item in [self.arti_fwol_type, self.arti_pmod_type, self.arti_sdoe_type, self.arti_gboe_type, self.arti_ccol_type]:
+        for item in [
+            self.arti_fwol_type,
+            self.arti_pmod_type,
+            self.arti_sdoe_type,
+            self.arti_gboe_type,
+            self.arti_ccol_type,
+        ]:
             item.addItems([item.value.name for item in ArtiList])
 
     def handle_elem_data(self, _: str = "") -> None:
@@ -75,7 +91,13 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         if self.head_char_elem.currentText().strip() != "":
             self.head_char_name.clear()
             if self.head_char_elem.currentText().strip() != "All":
-                self.head_char_name.addItems([item for item, data in __charmaps__.items() if data().vision.value.name == self.head_char_elem.currentText().strip()])
+                self.head_char_name.addItems(
+                    [
+                        item
+                        for item, data in __charmaps__.items()
+                        if data().vision.value.name == self.head_char_elem.currentText().strip()
+                    ]
+                )
             else:
                 self.head_char_name.addItems([item for item, data in __charmaps__.items()])
 
@@ -86,13 +108,27 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         :param colour: Colour intended for theming associated with the character vision
         :return:
         """
-        self.side_back.setStyleSheet(f"#side_back {{border: 1px solid {colour}; border-radius: 5px; background-color: rgba(128, 128, 128, 64);}}")
-        self.head_back.setStyleSheet(f"#head_back {{border: 1px solid {colour}; border-radius: 5px;}}")
-        self.head_area.setStyleSheet(f"#head_area {{border: 1px solid {colour}; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 110px; border-bottom-right-radius: 110px; background-color: rgba(128, 128, 128, 64);}}")
-        self.bone_area.setStyleSheet(f"#bone_area {{border: 1px solid {colour}; border-radius: 5px;}}")
-        self.arti_area.setStyleSheet(f"#arti_area {{border: 1px solid {colour}; border-radius: 5px;}}")
-        self.weap_area.setStyleSheet(f"#weap_area {{border: 1px solid {colour}; border-radius: 5px;}}")
-        self.defn_area.setStyleSheet(f"#defn_area {{border: 1px solid {colour}; border-radius: 5px;}}")
+        self.side_back.setStyleSheet(
+            f"#side_back {{border: 1px solid {colour}; border-radius: 5px; background-color: rgba(128, 128, 128, 64);}}"
+        )
+        self.head_back.setStyleSheet(
+            f"#head_back {{border: 1px solid {colour}; border-radius: 5px;}}"
+        )
+        self.head_area.setStyleSheet(
+            f"#head_area {{border: 1px solid {colour}; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 110px; border-bottom-right-radius: 110px; background-color: rgba(128, 128, 128, 64);}}"
+        )
+        self.bone_area.setStyleSheet(
+            f"#bone_area {{border: 1px solid {colour}; border-radius: 5px;}}"
+        )
+        self.arti_area.setStyleSheet(
+            f"#arti_area {{border: 1px solid {colour}; border-radius: 5px;}}"
+        )
+        self.weap_area.setStyleSheet(
+            f"#weap_area {{border: 1px solid {colour}; border-radius: 5px;}}"
+        )
+        self.defn_area.setStyleSheet(
+            f"#defn_area {{border: 1px solid {colour}; border-radius: 5px;}}"
+        )
 
     def handle_char_data(self, _: str = "") -> None:
         """
@@ -101,12 +137,34 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         :param _: Element selected from the combobox to compute selected character
         :return:
         """
-        if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
+        if (
+            self.head_char_name.currentText().strip() != ""
+            and self.head_char_levl.currentText().strip() != ""
+        ):
             char = __charmaps__[self.head_char_name.currentText()]()
-            char.levl = getattr(Level, self.head_char_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
-            self.head_vson.setPixmap(QPixmap(f":vson/imgs/vson/{char.vision.value.name.lower()}.webp"))
-            self.head_area_back.setPixmap(modify_graphics_resource(f":name/imgs/char/name/{self.head_char_name.currentText().replace(" ", "_").lower()}.webp", 1.0, 0.75))
-            self.char_inpt_icon.setPixmap(QPixmap(f":face/imgs/char/face/{self.head_char_name.currentText().replace(" ", "_").lower()}.webp"))
+            char.levl = getattr(
+                Level,
+                self.head_char_levl.currentText()
+                .replace(" ", "_")
+                .replace("(", "")
+                .replace(")", "")
+                .replace("/", "_"),
+            )
+            self.head_vson.setPixmap(
+                QPixmap(f":vson/imgs/vson/{char.vision.value.name.lower()}.webp")
+            )
+            self.head_area_back.setPixmap(
+                modify_graphics_resource(
+                    f":name/imgs/char/name/{self.head_char_name.currentText().replace(' ', '_').lower()}.webp",
+                    1.0,
+                    0.75,
+                )
+            )
+            self.char_inpt_icon.setPixmap(
+                QPixmap(
+                    f":face/imgs/char/face/{self.head_char_name.currentText().replace(' ', '_').lower()}.webp"
+                )
+            )
             self.char_inpt_area.setPixmap(QPixmap(char.rare.value.back))
             self.char_area_rare.setText(" ".join(["STAR"] * char.rare.value.qant))
             self.head_char_data_attk.setText(f"{round(char.attack.stat_data)}")
@@ -117,8 +175,14 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.head_area_line_prim.setText(f"{char.name.value}")
             self.head_area_line_seco.setText(f"{char.cons_name}")
             self.head_area_line_tert.setText(f"{char.weapon.value}")
-            self.head_area_line_quat.setText(f"<i>{char.name.value} is a {char.weapon.value.lower()}-wielding{f" {char.vision.value.name} " if char.vision != Vision.none else " "}character of {char.rare.value.qant}-star quality.</i>")
-            self.head_area_line_quin.setText(f"<i>{char.name.value} is affiliated with {char.afln}.</i>" if char.afln != "" else f"<i>{char.name.value} is not affiliated with any association.</i>")
+            self.head_area_line_quat.setText(
+                f"<i>{char.name.value} is a {char.weapon.value.lower()}-wielding{f' {char.vision.value.name} ' if char.vision != Vision.none else ' '}character of {char.rare.value.qant}-star quality.</i>"
+            )
+            self.head_area_line_quin.setText(
+                f"<i>{char.name.value} is affiliated with {char.afln}.</i>"
+                if char.afln != ""
+                else f"<i>{char.name.value} is not affiliated with any association.</i>"
+            )
             self.manage_changing_appearance(char.vision.value.colour)
 
     def format_weapon_by_char_change(self, _: str = "") -> None:
@@ -128,9 +192,19 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         :param _: Element selected from the combobox to compute selected character
         :return:
         """
-        if self.head_char_name.currentText().strip() != "" and self.head_char_levl.currentText().strip() != "":
+        if (
+            self.head_char_name.currentText().strip() != ""
+            and self.head_char_levl.currentText().strip() != ""
+        ):
             char = __charmaps__[self.head_char_name.currentText()]()
-            char.levl = getattr(Level, self.head_char_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
+            char.levl = getattr(
+                Level,
+                self.head_char_levl.currentText()
+                .replace(" ", "_")
+                .replace("(", "")
+                .replace(")", "")
+                .replace("/", "_"),
+            )
             self.weap_area_type.clear()
             self.weap_area_type.addItem(f"{char.weapon.value}")
 
@@ -143,7 +217,9 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         """
         if self.weap_area_type.currentText().strip() != "":
             self.weap_area_name.clear()
-            self.weap_area_name.addItems([item for item in Family[self.weap_area_type.currentText()]])
+            self.weap_area_name.addItems(
+                [item for item in Family[self.weap_area_type.currentText()]]
+            )
 
     def convey_weapon_name_change(self, _: str = "") -> None:
         """
@@ -152,7 +228,10 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         :param _: Element selected from the combobox to compute selected weapon
         :return:
         """
-        if self.weap_area_name.currentText().strip() != "" and self.weap_area_type.currentText().strip() != "":
+        if (
+            self.weap_area_name.currentText().strip() != ""
+            and self.weap_area_type.currentText().strip() != ""
+        ):
             kind = self.weap_area_type.currentText().strip()
             name = self.weap_area_name.currentText().strip()
             self.weap_area_levl.clear()
@@ -173,18 +252,35 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         :param _: Element selected from the combobox to compute selected weapon level
         :return:
         """
-        if self.weap_area_type.currentText().strip() != "" and self.weap_area_name.currentText().strip() != "" and self.weap_area_levl.currentText().strip() != "":
+        if (
+            self.weap_area_type.currentText().strip() != ""
+            and self.weap_area_name.currentText().strip() != ""
+            and self.weap_area_levl.currentText().strip() != ""
+        ):
             name = self.weap_area_name.currentText()
             kind = self.weap_area_type.currentText().strip()
             weap = Family[kind][name]()
-            weap.levl = getattr(Level, self.weap_area_levl.currentText().replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"))
+            weap.levl = getattr(
+                Level,
+                self.weap_area_levl.currentText()
+                .replace(" ", "_")
+                .replace("(", "")
+                .replace(")", "")
+                .replace("/", "_"),
+            )
             self.weap_area_batk.setText(f"ATK {round(weap.main_stat.stat_data)}")
             if weap.levl.value.rank.value <= 1:
-                self.weap_port_icon.setPixmap(QPixmap(f":weap/imgs/weap/{kind.lower()}s/{weap.file}_a.webp"))
+                self.weap_port_icon.setPixmap(
+                    QPixmap(f":weap/imgs/weap/{kind.lower()}s/{weap.file}_a.webp")
+                )
             else:
-                self.weap_port_icon.setPixmap(QPixmap(f":weap/imgs/weap/{kind.lower()}s/{weap.file}_b.webp"))
+                self.weap_port_icon.setPixmap(
+                    QPixmap(f":weap/imgs/weap/{kind.lower()}s/{weap.file}_b.webp")
+                )
             if weap.seco_stat.stat_name != WeaponStatType.none:
-                self.weap_area_stat.setText(f"{weap.seco_stat_calc.stat_name.value.value} {round(weap.seco_stat_calc.stat_data, 1)}")
+                self.weap_area_stat.setText(
+                    f"{weap.seco_stat_calc.stat_name.value.value} {round(weap.seco_stat_calc.stat_data, 1)}"
+                )
 
     def convey_refinement_change(self, _: str = "") -> None:
         """
@@ -193,14 +289,27 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         :param _: Element selected from the combobox to compute selected weapon refinement
         :return:
         """
-        if self.weap_area_type.currentText().strip() != "" and self.weap_area_name.currentText().strip() != "" and self.weap_area_refn.currentText().strip() != "":
+        if (
+            self.weap_area_type.currentText().strip() != ""
+            and self.weap_area_name.currentText().strip() != ""
+            and self.weap_area_refn.currentText().strip() != ""
+        ):
             name = self.weap_area_name.currentText()
             kind = self.weap_area_type.currentText().strip()
             weap = Family[kind][name]()
             self.weap_area_refn_head.setText(f"<b>{weap.refi_name}</b>")
-            self.weap_area_refn_body.setText(f"{weap.refinement[self.weap_area_refn.currentText().strip()].data}")
+            self.weap_area_refn_body.setText(
+                f"{weap.refinement[self.weap_area_refn.currentText().strip()].data}"
+            )
 
-    def change_rarity_backdrop_by_changing_type(self, droptype: QComboBox, droprare: QComboBox, artiname: QLabel, headicon: QLabel, part: str) -> None:
+    def change_rarity_backdrop_by_changing_type(
+        self,
+        droptype: QComboBox,
+        droprare: QComboBox,
+        artiname: QLabel,
+        headicon: QLabel,
+        part: str,
+    ) -> None:
         """
         Change the artifact qualities, artifact name, artifact icon based on the compatibility of the currently selected artifact type
 
@@ -212,7 +321,10 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         :return:
         """
         if droptype.currentText().strip() != "":
-            kind = getattr(ArtiList, droptype.currentText().replace(" ", "_").replace("'", "").replace("-", "_"))
+            kind = getattr(
+                ArtiList,
+                droptype.currentText().replace(" ", "_").replace("'", "").replace("-", "_"),
+            )
             droprare.clear()
             droprare.addItems([indx.value.name for indx in kind.value.rare])
             artiname.setText(truncate_text(getattr(kind.value, part).__name__, 32))
@@ -220,7 +332,15 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             if droptype.currentText().strip() == "None":
                 headicon.setPixmap(QPixmap(f":arti/imgs/arti/main/{part}.webp"))
 
-    def change_data_by_changing_level_or_stat(self, droplevl: QComboBox, droptype: QComboBox, droprare: QComboBox, dropstat: QComboBox, statdata: QLineEdit, part: str) -> None:
+    def change_data_by_changing_level_or_stat(
+        self,
+        droplevl: QComboBox,
+        droptype: QComboBox,
+        droprare: QComboBox,
+        dropstat: QComboBox,
+        statdata: QLineEdit,
+        part: str,
+    ) -> None:
         """
         Change the associated statistics of the mainstat after a certain artifact level or artifact mainstat is selected from the combobox
 
@@ -232,13 +352,24 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         :param part: Kind of artifact fixtures (i.e. ``FWOL``, ``PMOD``, ``SDOE``, ``GBOE`` or ``CCOL``)
         :return:
         """
-        if droplevl.currentText().strip() != "" and droptype.currentText().strip() != "" and droprare.currentText().strip() != "" and dropstat.currentText().strip() != "":
+        if (
+            droplevl.currentText().strip() != ""
+            and droptype.currentText().strip() != ""
+            and droprare.currentText().strip() != ""
+            and dropstat.currentText().strip() != ""
+        ):
             """
             Checking if no artifact is selected
             """
-            if droptype.currentText().strip() != "None" and dropstat.currentText().strip() != "None":
+            if (
+                droptype.currentText().strip() != "None"
+                and dropstat.currentText().strip() != "None"
+            ):
                 levl = getattr(ArtiLevl, droplevl.currentText().replace(" ", "_"))
-                team = getattr(ArtiList, droptype.currentText().replace(" ", "_").replace("'", "").replace("-", "_"))
+                team = getattr(
+                    ArtiList,
+                    droptype.currentText().replace(" ", "_").replace("'", "").replace("-", "_"),
+                )
                 rare = getattr(Rare, droprare.currentText().replace(" ", "_"))
                 stat = getattr(arti, f"revmap_{part}")[dropstat.currentText().strip()]
                 item = getattr(team.value, part)
@@ -254,28 +385,64 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         :return:
         """
         if droptype.currentText().strip() != "":
-            kind = getattr(ArtiList, droptype.currentText().replace(" ", "_").replace("'", "").replace("-", "_"))
+            kind = getattr(
+                ArtiList,
+                droptype.currentText().replace(" ", "_").replace("'", "").replace("-", "_"),
+            )
             item = getattr(kind.value, part)
             setattr(self.collection, part, item)
-            _ = [indx.setText("No artifact set.") for indx in [self.pair_area_head, self.quad_area_head]]
-            _ = [indx.setText("No artifact set bonus.") for indx in [self.pair_area_desc, self.quad_area_desc]]
+            _ = [
+                indx.setText("No artifact set.")
+                for indx in [self.pair_area_head, self.quad_area_head]
+            ]
+            _ = [
+                indx.setText("No artifact set bonus.")
+                for indx in [self.pair_area_desc, self.quad_area_desc]
+            ]
             if self.collection.quad != "":
-                pack = getattr(ArtiList, self.collection.quad.replace(" ", "_").replace("'", "").replace("-", "_"))
+                pack = getattr(
+                    ArtiList,
+                    self.collection.quad.replace(" ", "_").replace("'", "").replace("-", "_"),
+                )
                 self.pair_area_head.setText(f"<b>{truncate_text(pack.value.name, 26)}</b> (2)")
                 self.pair_area_desc.setText(f"{pack.value.pairtext}")
                 self.quad_area_head.setText(f"<b>{truncate_text(pack.value.name, 26)}</b> (4)")
                 self.quad_area_desc.setText(f"{pack.value.quadtext}")
             elif self.collection.pair != []:
                 if len(self.collection.pair) == 1:
-                    pair_a = getattr(ArtiList, self.collection.pair[0].replace(" ", "_").replace("'", "").replace("-", "_"))
-                    self.pair_area_head.setText(f"<b>{truncate_text(pair_a.value.name, 26)}</b> (2)")
+                    pair_a = getattr(
+                        ArtiList,
+                        self.collection.pair[0]
+                        .replace(" ", "_")
+                        .replace("'", "")
+                        .replace("-", "_"),
+                    )
+                    self.pair_area_head.setText(
+                        f"<b>{truncate_text(pair_a.value.name, 26)}</b> (2)"
+                    )
                     self.pair_area_desc.setText(f"{pair_a.value.pairtext}")
                 elif len(self.collection.pair) == 2:
-                    pair_a = getattr(ArtiList, self.collection.pair[0].replace(" ", "_").replace("'", "").replace("-", "_"))
-                    self.pair_area_head.setText(f"<b>{truncate_text(pair_a.value.name, 26)}</b> (2)")
+                    pair_a = getattr(
+                        ArtiList,
+                        self.collection.pair[0]
+                        .replace(" ", "_")
+                        .replace("'", "")
+                        .replace("-", "_"),
+                    )
+                    self.pair_area_head.setText(
+                        f"<b>{truncate_text(pair_a.value.name, 26)}</b> (2)"
+                    )
                     self.pair_area_desc.setText(f"{pair_a.value.pairtext}")
-                    pair_b = getattr(ArtiList, self.collection.pair[1].replace(" ", "_").replace("'", "").replace("-", "_"))
-                    self.quad_area_head.setText(f"<b>{truncate_text(pair_b.value.name, 26)}</b> (2)")
+                    pair_b = getattr(
+                        ArtiList,
+                        self.collection.pair[1]
+                        .replace(" ", "_")
+                        .replace("'", "")
+                        .replace("-", "_"),
+                    )
+                    self.quad_area_head.setText(
+                        f"<b>{truncate_text(pair_b.value.name, 26)}</b> (2)"
+                    )
                     self.quad_area_desc.setText(f"{pair_b.value.pairtext}")
 
     def remove_artifact(self, droptype: QComboBox, part: str) -> None:
@@ -302,21 +469,53 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
                 getattr(self, f"arti_{part}_name_main").setDisabled(False)
                 if part == "fwol":
                     self.arti_fwol_name_main.clear()
-                    self.arti_fwol_name_main.addItems([item.value.value for item in MainStatType_FWOL if item != MainStatType_FWOL.none])
+                    self.arti_fwol_name_main.addItems(
+                        [
+                            item.value.value
+                            for item in MainStatType_FWOL
+                            if item != MainStatType_FWOL.none
+                        ]
+                    )
                 elif part == "pmod":
                     self.arti_pmod_name_main.clear()
-                    self.arti_pmod_name_main.addItems([item.value.value for item in MainStatType_PMOD if item != MainStatType_PMOD.none])
+                    self.arti_pmod_name_main.addItems(
+                        [
+                            item.value.value
+                            for item in MainStatType_PMOD
+                            if item != MainStatType_PMOD.none
+                        ]
+                    )
                 elif part == "sdoe":
                     self.arti_sdoe_name_main.clear()
-                    self.arti_sdoe_name_main.addItems([item.value.value for item in MainStatType_SDOE if item != MainStatType_SDOE.none])
+                    self.arti_sdoe_name_main.addItems(
+                        [
+                            item.value.value
+                            for item in MainStatType_SDOE
+                            if item != MainStatType_SDOE.none
+                        ]
+                    )
                 elif part == "gboe":
                     self.arti_gboe_name_main.clear()
-                    self.arti_gboe_name_main.addItems([item.value.value for item in MainStatType_GBOE if item != MainStatType_GBOE.none])
+                    self.arti_gboe_name_main.addItems(
+                        [
+                            item.value.value
+                            for item in MainStatType_GBOE
+                            if item != MainStatType_GBOE.none
+                        ]
+                    )
                 elif part == "ccol":
                     self.arti_ccol_name_main.clear()
-                    self.arti_ccol_name_main.addItems([item.value.value for item in MainStatType_CCOL if item != MainStatType_CCOL.none])
+                    self.arti_ccol_name_main.addItems(
+                        [
+                            item.value.value
+                            for item in MainStatType_CCOL
+                            if item != MainStatType_CCOL.none
+                        ]
+                    )
 
-    def change_artifact_substats_by_changing_rarity_or_mainstat(self, droprare: QComboBox, dropstat: QComboBox, part: str) -> None:
+    def change_artifact_substats_by_changing_rarity_or_mainstat(
+        self, droprare: QComboBox, dropstat: QComboBox, part: str
+    ) -> None:
         """
         Change the associated substats of the selected artifact after the artifact qualities or artifact mainstat is selected from the combobox
 
@@ -330,12 +529,16 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             stat = dropstat.currentText().strip()
             for indx in __artistat__[rare.value.qant]["active"]:
                 getattr(self, f"arti_{part}_name_{indx}").clear()
-                getattr(self, f"arti_{part}_name_{indx}").addItems([item.value.value for item in SecoStatType if item.value.value != stat])
+                getattr(self, f"arti_{part}_name_{indx}").addItems(
+                    [item.value.value for item in SecoStatType if item.value.value != stat]
+                )
             for alfa in __artistat__[rare.value.qant]["inactive"]:
                 getattr(self, f"arti_{part}_name_{alfa}").clear()
                 getattr(self, f"arti_{part}_name_{alfa}").addItems(["None"])
 
-    def change_levels_backdrop_by_changing_rarity(self, droplevl: QComboBox, backdrop: QLabel, droprare: QComboBox) -> None:
+    def change_levels_backdrop_by_changing_rarity(
+        self, droplevl: QComboBox, backdrop: QLabel, droprare: QComboBox
+    ) -> None:
         """
         Change the associated levels and qualities backdrop of the selected artifact after the artifact qualities is selected from the combobox
 
@@ -395,7 +598,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.show_dialog(
                 QMessageBox.Information,
                 "Inaccuracy detected",
-                f"Please consider checking your input.\n\n{expt}"
+                f"Please consider checking your input.\n\n{expt}",
             )
 
     def validate_lineedit_userdata(self, text: str) -> None:
@@ -472,27 +675,29 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         if self.scanobjc.exec() == QDialog.Accepted:
             info = self.scanobjc.keep_info()
 
-            droptype = getattr(self, f"arti_{info["part"]}_type")
+            droptype = getattr(self, f"arti_{info['part']}_type")
             if info["team"] in [droptype.itemText(indx) for indx in range(droptype.count())]:
                 droptype.setCurrentText(info["team"])
 
-            droprare = getattr(self, f"arti_{info["part"]}_rare")
+            droprare = getattr(self, f"arti_{info['part']}_rare")
             if info["rare"] in [droprare.itemText(indx) for indx in range(droprare.count())]:
                 droprare.setCurrentText(info["rare"])
 
-            droplevl = getattr(self, f"arti_{info["part"]}_levl")
+            droplevl = getattr(self, f"arti_{info['part']}_levl")
             if info["levl"] in [droplevl.itemText(indx) for indx in range(droplevl.count())]:
                 droplevl.setCurrentText(info["levl"])
 
-            dropmain = getattr(self, f"arti_{info["part"]}_name_main")
-            datamain = getattr(self, f"arti_{info["part"]}_data_main")
-            if info["stat"]["main"].stat_name in [dropmain.itemText(indx) for indx in range(dropmain.count())]:
+            dropmain = getattr(self, f"arti_{info['part']}_name_main")
+            datamain = getattr(self, f"arti_{info['part']}_data_main")
+            if info["stat"]["main"].stat_name in [
+                dropmain.itemText(indx) for indx in range(dropmain.count())
+            ]:
                 dropmain.setCurrentText(info["stat"]["main"].stat_name)
                 datamain.setText(str(info["stat"]["main"].stat_data))
 
             for alfa, item in info["stat"]["seco"].items():
-                dropseco = getattr(self, f"arti_{info["part"]}_name_{alfa}")
-                dataseco = getattr(self, f"arti_{info["part"]}_data_{alfa}")
+                dropseco = getattr(self, f"arti_{info['part']}_name_{alfa}")
+                dataseco = getattr(self, f"arti_{info['part']}_data_{alfa}")
                 if item.stat_name in [dropseco.itemText(indx) for indx in range(dropseco.count())]:
                     dropseco.setCurrentText(item.stat_name)
                     dataseco.setText(str(item.stat_data))
@@ -512,4 +717,4 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         :return:
         """
         for current_widget, next_widget in zip(tab_order_wind, tab_order_wind[1:]):
-             self.setTabOrder(getattr(self, current_widget), getattr(self, next_widget))
+            self.setTabOrder(getattr(self, current_widget), getattr(self, next_widget))

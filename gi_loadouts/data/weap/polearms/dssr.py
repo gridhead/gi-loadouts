@@ -5,7 +5,9 @@ from ....type.weap.tier import Tier
 
 class DragonspineSpear(Polearm):
     name: str = "Dragonspine Spear"
-    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.damage_bonus_physical_perc, stat_data=15.0)
+    seco_stat: WeaponStat = WeaponStat(
+        stat_name=WeaponStatType.damage_bonus_physical_perc, stat_data=15.0
+    )
     tier: Tier = Tier.Tier_1
     rare: Rare = Rare.Star_4
     refi_name: str = "Frost Burial"

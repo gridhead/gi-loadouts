@@ -5,7 +5,9 @@ from ....type.weap.tier import Tier
 
 class SkyriderGreatsword(Claymore):
     name: str = "Skyrider Greatsword"
-    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.damage_bonus_physical_perc, stat_data=9.6)
+    seco_stat: WeaponStat = WeaponStat(
+        stat_name=WeaponStatType.damage_bonus_physical_perc, stat_data=9.6
+    )
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_3
     refi_name: str = "Courage"

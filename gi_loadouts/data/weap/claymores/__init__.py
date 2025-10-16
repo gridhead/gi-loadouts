@@ -78,7 +78,7 @@ ClaymoresDict = {
     "The Bell": tbll.TheBell,
     "The Unforged": tufg.TheUnforged,
     "Tidal Shadow": tdsd.TidalShadow,
-    "\"Ultimate Overlord's Mega Magic Sword\"": uoms.UltimateOverlordsMegaMagicSword,
+    '"Ultimate Overlord\'s Mega Magic Sword"': uoms.UltimateOverlordsMegaMagicSword,
     "Verdict": vrdt.Verdict,
     "Waster Greatsword": wrgs.WasterGreatsword,
     "Whiteblind": wtbd.Whiteblind,

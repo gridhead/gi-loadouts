@@ -1,4 +1,3 @@
-
 ################################################################################
 ## Form generated from reading UI file 'lcns.ui'
 ##
@@ -65,7 +64,9 @@ class Ui_lcns:
         self.body.setSizePolicy(sizePolicy)
         self.body.setMinimumSize(QSize(500, 160))
         self.body.setMaximumSize(QSize(500, 160))
-        self.body.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignTop)
+        self.body.setAlignment(
+            Qt.AlignmentFlag.AlignLeading | Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignTop
+        )
         self.body.setWordWrap(True)
         self.comp = QLabel(lcns)
         self.comp.setObjectName("comp")
@@ -79,15 +80,32 @@ class Ui_lcns:
         self.retranslateUi(lcns)
 
         QMetaObject.connectSlotsByName(lcns)
+
     # setupUi
 
     def retranslateUi(self, lcns):
         lcns.setWindowTitle(QCoreApplication.translate("lcns", "Dialog", None))
         self.icon.setText("")
-        self.head.setText(QCoreApplication.translate("lcns", "<html><head/><body><p><span style=\" font-weight:700;\">Loadouts for Genshin Impact</span></p></body></html>", None))
+        self.head.setText(
+            QCoreApplication.translate(
+                "lcns",
+                '<html><head/><body><p><span style=" font-weight:700;">Loadouts for Genshin Impact</span></p></body></html>',
+                None,
+            )
+        )
         self.vers.setText(QCoreApplication.translate("lcns", "Version v0.0.0", None))
-        self.body.setText(QCoreApplication.translate("lcns", "<html><head/><body><p align=\"justify\">This program is free software: you can redistribute it and/or modify it under the terms of the <span style=\" font-weight:700;\">GNU General Public License</span> as published by the <a href=\"https://www.fsf.org/\"><span style=\" font-weight:700; text-decoration: underline; color:#498058;\">Free Software Foundation</span></a><span style=\" font-weight:700;\">,</span> either <span style=\" font-weight:700;\">version 3</span> of the License, or (at your option) any <span style=\" font-weight:700;\">later version</span>.</p><p align=\"justify\">This program is distributed in the hope that it will be useful, but <span style=\" font-weight:700;\">without any warranty</span>; without even the implied warranty of <span style=\" font-weight:700;\">merchantability</span> or <span style=\" font-weight:700;\">fitness for a particular purpose</span>. See the <a href=\"https://github.com/gridhead/gi-loadouts/blob/main/LICENSE\"><span style=\" font-weight:700; text-decoration: underl"
-                        "ine; color:#498058;\">GNU General Public License</span></a> for more details.</p><p align=\"justify\">\u00a9 All rights to <a href=\"https://genshin.hoyoverse.com/\"><span style=\" font-weight:700; text-decoration: underline; color:#498058;\">Genshin Impact</span></a> assets used in this project are reserved by <a href=\"https://www.mihoyo.com/\"><span style=\" font-weight:700; text-decoration: underline; color:#498058;\">miHoYo Ltd.</span></a> and <span style=\" font-weight:700;\">Cognosphere Pte</span>., Ltd. Other properties belong to their respective owners.</p></body></html>", None))
-        self.comp.setText(QCoreApplication.translate("lcns", "This version is compatible with Genshin Impact 5.0", None))
-    # retranslateUi
+        self.body.setText(
+            QCoreApplication.translate(
+                "lcns",
+                '<html><head/><body><p align="justify">This program is free software: you can redistribute it and/or modify it under the terms of the <span style=" font-weight:700;">GNU General Public License</span> as published by the <a href="https://www.fsf.org/"><span style=" font-weight:700; text-decoration: underline; color:#498058;">Free Software Foundation</span></a><span style=" font-weight:700;">,</span> either <span style=" font-weight:700;">version 3</span> of the License, or (at your option) any <span style=" font-weight:700;">later version</span>.</p><p align="justify">This program is distributed in the hope that it will be useful, but <span style=" font-weight:700;">without any warranty</span>; without even the implied warranty of <span style=" font-weight:700;">merchantability</span> or <span style=" font-weight:700;">fitness for a particular purpose</span>. See the <a href="https://github.com/gridhead/gi-loadouts/blob/main/LICENSE"><span style=" font-weight:700; text-decoration: underl'
+                'ine; color:#498058;">GNU General Public License</span></a> for more details.</p><p align="justify">\u00a9 All rights to <a href="https://genshin.hoyoverse.com/"><span style=" font-weight:700; text-decoration: underline; color:#498058;">Genshin Impact</span></a> assets used in this project are reserved by <a href="https://www.mihoyo.com/"><span style=" font-weight:700; text-decoration: underline; color:#498058;">miHoYo Ltd.</span></a> and <span style=" font-weight:700;">Cognosphere Pte</span>., Ltd. Other properties belong to their respective owners.</p></body></html>',
+                None,
+            )
+        )
+        self.comp.setText(
+            QCoreApplication.translate(
+                "lcns", "This version is compatible with Genshin Impact 5.0", None
+            )
+        )
 
+    # retranslateUi

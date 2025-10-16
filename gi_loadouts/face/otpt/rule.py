@@ -50,7 +50,7 @@ class Rule(QMainWindow, Ui_otptwind):
             self.area_geox_resi_data: f"{str(round(self.tyvt.resistance_geo_perc.stat_data, 1))}%",
             self.area_phys_perc_data: f"{str(round(self.tyvt.damage_bonus_physical_perc.stat_data, 1))}%",
             self.area_phys_resi_data: f"{str(round(self.tyvt.resistance_physical_perc.stat_data, 1))}%",
-            self.area_crvl_data: f"{str(round(self.tyvt.critical_damage_perc.stat_data + 2*(self.tyvt.critical_rate_perc.stat_data), 1))}"
+            self.area_crvl_data: f"{str(round(self.tyvt.critical_damage_perc.stat_data + 2 * (self.tyvt.critical_rate_perc.stat_data), 1))}",
         }
         for item in assignment:
             item.setText(assignment[item])
@@ -61,15 +61,19 @@ class Rule(QMainWindow, Ui_otptwind):
 
         :return:
         """
-        self.head_area_line_prim.setText(f"<b>{self.char["char"].name.value}</b> - {self.char["levl"]} ({self.char["cons"]})")
-        weaprefn = f"({self.weap["refn"]})" if self.weap["refn"] != "" else ""
+        self.head_area_line_prim.setText(
+            f"<b>{self.char['char'].name.value}</b> - {self.char['levl']} ({self.char['cons']})"
+        )
+        weaprefn = f"({self.weap['refn']})" if self.weap["refn"] != "" else ""
         if self.arti["quad"] != "":
-            artiline = f"4 x <b>{self.arti["quad"]}</b>"
+            artiline = f"4 x <b>{self.arti['quad']}</b>"
         elif len(self.arti["pair"]) >= 1:
             artiline = ", ".join([f"2 x <b>{item}</b>" for item in self.arti["pair"]])
         else:
             artiline = "No artifact set bonus."
-        secotext = f"<b>{self.weap["name"]}</b> - {self.weap["levl"]} {weaprefn}" + "<br/>" + f"{artiline}"
+        secotext = (
+            f"<b>{self.weap['name']}</b> - {self.weap['levl']} {weaprefn}" + "<br/>" + f"{artiline}"
+        )
         self.head_area_line_seco.setText(secotext)
 
     def manage_assets(self) -> None:
@@ -78,6 +82,14 @@ class Rule(QMainWindow, Ui_otptwind):
 
         :return:
         """
-        self.head_vson.setPixmap(QPixmap(f":vson/imgs/vson/{self.char["char"].vision.value.name.lower()}.webp"))
-        self.char_back.setPixmap(modify_graphics_resource(f":back/imgs/char/back/{self.char["char"].name.lower().replace(" ", "_")}.webp"))
-        self.char_wish.setPixmap(QPixmap(f":wish/imgs/char/wish/{self.char["char"].name.lower().replace(" ", "_")}.webp"))
+        self.head_vson.setPixmap(
+            QPixmap(f":vson/imgs/vson/{self.char['char'].vision.value.name.lower()}.webp")
+        )
+        self.char_back.setPixmap(
+            modify_graphics_resource(
+                f":back/imgs/char/back/{self.char['char'].name.lower().replace(' ', '_')}.webp"
+            )
+        )
+        self.char_wish.setPixmap(
+            QPixmap(f":wish/imgs/char/wish/{self.char['char'].name.lower().replace(' ', '_')}.webp")
+        )

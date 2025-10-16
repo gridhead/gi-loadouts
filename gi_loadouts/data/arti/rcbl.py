@@ -9,7 +9,9 @@ class team(BaseModel):
     __pairdata__ = [ATTR(stat_name=STAT.shield_strength_perc, stat_data=35)]
     __pairtext__ = "Increases Shield Strength by 35%."
     __quaddata__ = []
-    __quadtext__ = "While protected by a shield, gain an additional 40% Normal and Charged Attack DMG."
+    __quadtext__ = (
+        "While protected by a shield, gain an additional 40% Normal and Charged Attack DMG."
+    )
 
 
 class fwol(team, FWOL):

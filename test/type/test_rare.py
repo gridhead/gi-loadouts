@@ -12,7 +12,7 @@ from gi_loadouts.type.rare import Rare
         pytest.param("Star_3", "Star 3", 3, ":rare/imgs/rare/star_3.webp", id="type.rare: Star 3"),
         pytest.param("Star_4", "Star 4", 4, ":rare/imgs/rare/star_4.webp", id="type.rare: Star 4"),
         pytest.param("Star_5", "Star 5", 5, ":rare/imgs/rare/star_5.webp", id="type.rare: Star 5"),
-    ]
+    ],
 )
 def test_rare(indx: str, name: str, qant: int, back: str) -> None:
     """

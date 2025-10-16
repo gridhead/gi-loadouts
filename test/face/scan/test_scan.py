@@ -32,12 +32,7 @@ from test.face.scan import (
 )
 
 
-@pytest.mark.parametrize(
-    "_",
-    [
-        pytest.param(None, id="face.scan: Testing ScanWindow")
-    ]
-)
+@pytest.mark.parametrize("_", [pytest.param(None, id="face.scan: Testing ScanWindow")])
 def test_scan_window(scantest: ScanDialog, _: None) -> None:
     """
     Test spawning of an instance of ScanWindow class
@@ -56,31 +51,58 @@ def test_scan_window(scantest: ScanDialog, _: None) -> None:
     "name, rare, part, part_type",
     [
         pytest.param(
-            name, team.rare, team.fwol, "Flower of Life", id=f"face.scan.rule: Configuring Flower of Life artifact - {name}"
-        ) for name, team in __artilist__.items()
-    ] +
-    [
-        pytest.param(
-            name, team.rare, team.pmod, "Plume of Death", id=f"face.scan.rule: Configuring Plume of Death artifact - {name}"
-        ) for name, team in __artilist__.items()
-    ] +
-    [
-        pytest.param(
-            name, team.rare, team.sdoe, "Sands of Eon", id=f"face.scan.rule: Configuring Sands of Eon artifact - {name}"
-        ) for name, team in __artilist__.items()
-    ] +
-    [
-        pytest.param(
-            name, team.rare, team.gboe, "Goblet of Eonothem", id=f"face.scan.rule: Configuring Goblet of Eonothem artifact - {name}"
-        ) for name, team in __artilist__.items()
-    ] +
-    [
-        pytest.param(
-            name, team.rare, team.ccol, "Circlet of Logos", id=f"face.scan.rule: Configuring Circlet of Logos artifact - {name}"
-        ) for name, team in __artilist__.items()
+            name,
+            team.rare,
+            team.fwol,
+            "Flower of Life",
+            id=f"face.scan.rule: Configuring Flower of Life artifact - {name}",
+        )
+        for name, team in __artilist__.items()
     ]
+    + [
+        pytest.param(
+            name,
+            team.rare,
+            team.pmod,
+            "Plume of Death",
+            id=f"face.scan.rule: Configuring Plume of Death artifact - {name}",
+        )
+        for name, team in __artilist__.items()
+    ]
+    + [
+        pytest.param(
+            name,
+            team.rare,
+            team.sdoe,
+            "Sands of Eon",
+            id=f"face.scan.rule: Configuring Sands of Eon artifact - {name}",
+        )
+        for name, team in __artilist__.items()
+    ]
+    + [
+        pytest.param(
+            name,
+            team.rare,
+            team.gboe,
+            "Goblet of Eonothem",
+            id=f"face.scan.rule: Configuring Goblet of Eonothem artifact - {name}",
+        )
+        for name, team in __artilist__.items()
+    ]
+    + [
+        pytest.param(
+            name,
+            team.rare,
+            team.ccol,
+            "Circlet of Logos",
+            id=f"face.scan.rule: Configuring Circlet of Logos artifact - {name}",
+        )
+        for name, team in __artilist__.items()
+    ],
 )
-def test_scan_arti_drop(scantest: ScanDialog, name: str, rare: list, part: str, part_type: str) -> None:
+def test_scan_arti_drop(
+    scantest: ScanDialog, name: str, rare: list, part: str, part_type: str
+) -> None:
     """
     Test configuring artifact on the user interface
 
@@ -100,7 +122,13 @@ def test_scan_arti_drop(scantest: ScanDialog, name: str, rare: list, part: str, 
     scantest.arti_rare.setCurrentText(conf["rare"].value.name)
     conf["levl"] = choice([item for item in ArtiLevl if conf["rare"] in item.value.rare])
     scantest.arti_levl.setCurrentText(conf["levl"].value.name)
-    conf["stat"] = choice([item for item in getattr(base, __dist__[conf["dist"]]["list"].__name__) if item.value != STAT.none])
+    conf["stat"] = choice(
+        [
+            item
+            for item in getattr(base, __dist__[conf["dist"]]["list"].__name__)
+            if item.value != STAT.none
+        ]
+    )
     scantest.arti_name_main.setCurrentText(conf["stat"].value.value)
 
     """
@@ -113,12 +141,7 @@ def test_scan_arti_drop(scantest: ScanDialog, name: str, rare: list, part: str, 
     assert scantest.arti_data_main.text() == str(round(part.stat_data, 1))
 
 
-@pytest.mark.parametrize(
-    "_",
-    [
-        pytest.param(None, id="face.scan.rule: Clearing artifact")
-    ]
-)
+@pytest.mark.parametrize("_", [pytest.param(None, id="face.scan.rule: Clearing artifact")])
 def test_scan_arti_wipe(scantest: ScanDialog, qtbot: QtBot, _: None) -> None:
     """
     Test clearing of the artifact from the user interface
@@ -148,9 +171,11 @@ def test_scan_arti_wipe(scantest: ScanDialog, qtbot: QtBot, _: None) -> None:
     [
         pytest.param(item, id=f"face.scan.rule: Test OCR functionality - {item}")
         for item in __dist__.keys()
-    ]
+    ],
 )
-def test_scan_arti_load(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, dist: str) -> None:
+def test_scan_arti_load(
+    scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, dist: str
+) -> None:
     """
     Test initial OCR functionality
 
@@ -166,8 +191,13 @@ def test_scan_arti_load(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixtur
     """
     Perform the action of loading the artifact information
     """
-    tempfile = f"test/static/gi-loadouts-ocr-test-{__dist__[dist]["part"]}.png"
-    savefile = NamedTemporaryFile(prefix=f"gi-loadouts-ocr-test-{__dist__[dist]["part"]}-", suffix=".png", delete=False, mode="wb")
+    tempfile = f"test/static/gi-loadouts-ocr-test-{__dist__[dist]['part']}.png"
+    savefile = NamedTemporaryFile(
+        prefix=f"gi-loadouts-ocr-test-{__dist__[dist]['part']}-",
+        suffix=".png",
+        delete=False,
+        mode="wb",
+    )
     with open(tempfile, "rb") as src_file:
         savefile.write(src_file.read())
     savefile.close()
@@ -178,24 +208,42 @@ def test_scan_arti_load(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixtur
     """
     Confirm if the user interface elements change accordingly
     """
+
     def check_label():
         """
         Checking the interface elements change asynchronously
         """
-        assert scantest.arti_text.text() == "Browse your local storage to load a high quality screenshot of your artifact and the statistics will automatically be computed from there."
+        assert (
+            scantest.arti_text.text()
+            == "Browse your local storage to load a high quality screenshot of your artifact and the statistics will automatically be computed from there."
+        )
         assert scantest.arti_type.currentText() == __rtrn__[dist]["team"]
         assert scantest.arti_levl.currentText() == __rtrn__[dist]["levl"]
         assert scantest.arti_rare.currentText() == __rtrn__[dist]["rare"]
         assert scantest.arti_type_name.text() in __text__[dist]
-        assert scantest.arti_name_main.currentText() == __rtrn__[dist]["stat"]["main"].stat_name.value
+        assert (
+            scantest.arti_name_main.currentText() == __rtrn__[dist]["stat"]["main"].stat_name.value
+        )
         assert float(scantest.arti_data_main.text()) == __rtrn__[dist]["stat"]["main"].stat_data
-        assert scantest.arti_name_a.currentText() == __rtrn__[dist]["stat"]["seco"]["a"].stat_name.value
+        assert (
+            scantest.arti_name_a.currentText()
+            == __rtrn__[dist]["stat"]["seco"]["a"].stat_name.value
+        )
         assert float(scantest.arti_data_a.text()) == __rtrn__[dist]["stat"]["seco"]["a"].stat_data
-        assert scantest.arti_name_b.currentText() == __rtrn__[dist]["stat"]["seco"]["b"].stat_name.value
+        assert (
+            scantest.arti_name_b.currentText()
+            == __rtrn__[dist]["stat"]["seco"]["b"].stat_name.value
+        )
         assert float(scantest.arti_data_b.text()) == __rtrn__[dist]["stat"]["seco"]["b"].stat_data
-        assert scantest.arti_name_c.currentText() == __rtrn__[dist]["stat"]["seco"]["c"].stat_name.value
+        assert (
+            scantest.arti_name_c.currentText()
+            == __rtrn__[dist]["stat"]["seco"]["c"].stat_name.value
+        )
         assert float(scantest.arti_data_c.text()) == __rtrn__[dist]["stat"]["seco"]["c"].stat_data
-        assert scantest.arti_name_d.currentText() == __rtrn__[dist]["stat"]["seco"]["d"].stat_name.value
+        assert (
+            scantest.arti_name_d.currentText()
+            == __rtrn__[dist]["stat"]["seco"]["d"].stat_name.value
+        )
         assert float(scantest.arti_data_d.text()) == __rtrn__[dist]["stat"]["seco"]["d"].stat_data
 
     qtbot.waitUntil(check_label, timeout=1000)
@@ -208,12 +256,11 @@ def test_scan_arti_load(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixtur
 
 
 @pytest.mark.parametrize(
-    "_",
-    [
-        pytest.param(None, id="face.scan.rule: Failing to scan the artifact snapshot")
-    ]
+    "_", [pytest.param(None, id="face.scan.rule: Failing to scan the artifact snapshot")]
 )
-def test_scan_arti_scan_fail(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
+def test_scan_arti_scan_fail(
+    scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, _: None
+) -> None:
     """
     Test failing to scanning the artifact snapshot
 
@@ -230,7 +277,9 @@ def test_scan_arti_scan_fail(scantest: ScanDialog, qtbot: QtBot, mocker: MockerF
     Perform the action of loading the artifact information
     """
     tempfile = "test/static/gi-loadouts-ocr-test-sdoe.png"
-    savefile = NamedTemporaryFile(prefix="gi-loadouts-ocr-test-sdoe-", suffix=".png", delete=False, mode="wb")
+    savefile = NamedTemporaryFile(
+        prefix="gi-loadouts-ocr-test-sdoe-", suffix=".png", delete=False, mode="wb"
+    )
     with open(tempfile, "rb") as src_file:
         savefile.write(src_file.read())
     savefile.close()
@@ -244,7 +293,10 @@ def test_scan_arti_scan_fail(scantest: ScanDialog, qtbot: QtBot, mocker: MockerF
     assert isinstance(scantest.dialog, QMessageBox)
     assert scantest.dialog.icon() == QMessageBox.Information
     assert scantest.dialog.windowTitle() == "Faulty scanning"
-    assert "Please consider checking your input after ensuring that the proper Tesseract OCR executable has been selected." in scantest.dialog.text()
+    assert (
+        "Please consider checking your input after ensuring that the proper Tesseract OCR executable has been selected."
+        in scantest.dialog.text()
+    )
     assert "Please select an accurate screenshot." in scantest.dialog.text()
     assert scantest.dialog.isVisible()
 
@@ -256,12 +308,11 @@ def test_scan_arti_scan_fail(scantest: ScanDialog, qtbot: QtBot, mocker: MockerF
 
 
 @pytest.mark.parametrize(
-    "_",
-    [
-        pytest.param(None, id="face.scan.rule: Cancelling loading an artifact snapshot")
-    ]
+    "_", [pytest.param(None, id="face.scan.rule: Cancelling loading an artifact snapshot")]
 )
-def test_scan_arti_load_nope(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
+def test_scan_arti_load_nope(
+    scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, _: None
+) -> None:
     """
     Test cancelling loading an artifact snapshot
 
@@ -314,13 +365,30 @@ def test_scan_arti_load_nope(scantest: ScanDialog, qtbot: QtBot, mocker: MockerF
 @pytest.mark.parametrize(
     "platform, which_result, expected",
     [
-        pytest.param("Linux", "/usr/bin/tesseract", "/usr/bin/tesseract", id="conf: Tesseract found in PATH on Linux"),
-        pytest.param("Windows", "C:\\Program Files\\Tesseract-OCR\\tesseract.exe", "C:\\Program Files\\Tesseract-OCR\\tesseract.exe", id="conf: Tesseract found in PATH on Windows"),
+        pytest.param(
+            "Linux",
+            "/usr/bin/tesseract",
+            "/usr/bin/tesseract",
+            id="conf: Tesseract found in PATH on Linux",
+        ),
+        pytest.param(
+            "Windows",
+            "C:\\Program Files\\Tesseract-OCR\\tesseract.exe",
+            "C:\\Program Files\\Tesseract-OCR\\tesseract.exe",
+            id="conf: Tesseract found in PATH on Windows",
+        ),
         pytest.param("Linux", None, None, id="conf: Tesseract not found in PATH on Linux"),
-        pytest.param("Windows", None, "C:\\Program Files\\Tesseract-OCR\\tesseract.exe", id="conf: Tesseract not found in PATH on Windows - fallback to default path"),
-    ]
+        pytest.param(
+            "Windows",
+            None,
+            "C:\\Program Files\\Tesseract-OCR\\tesseract.exe",
+            id="conf: Tesseract not found in PATH on Windows - fallback to default path",
+        ),
+    ],
 )
-def test_get_tessexec_path(mocker: MockerFixture, platform: str, which_result: str | None, expected: str | None) -> None:
+def test_get_tessexec_path(
+    mocker: MockerFixture, platform: str, which_result: str | None, expected: str | None
+) -> None:
     """
     Test getting Tesseract executable path on different platforms
 
@@ -343,11 +411,19 @@ def test_get_tessexec_path(mocker: MockerFixture, platform: str, which_result: s
 @pytest.mark.parametrize(
     "tempexec",
     [
-        pytest.param("/usr/bin/tesseract", id="face.scan.rule: Actual loading of Tesseract OCR executable in Linux"),
-        pytest.param("C:\\Program Files\\Tesseract-OCR\\tesseract.exe", id="face.scan.rule: Actual loading of Tesseract OCR executable in Windows")
-    ]
+        pytest.param(
+            "/usr/bin/tesseract",
+            id="face.scan.rule: Actual loading of Tesseract OCR executable in Linux",
+        ),
+        pytest.param(
+            "C:\\Program Files\\Tesseract-OCR\\tesseract.exe",
+            id="face.scan.rule: Actual loading of Tesseract OCR executable in Windows",
+        ),
+    ],
 )
-def test_scan_tessexec_load(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, tempexec: str) -> None:
+def test_scan_tessexec_load(
+    scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, tempexec: str
+) -> None:
     """
     Test actual loading of Tesseract OCR executable
 
@@ -383,12 +459,11 @@ def test_scan_tessexec_load(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFi
 
 
 @pytest.mark.parametrize(
-    "_",
-    [
-        pytest.param(None, id="face.scan.rule: Failing to load the Tesseract OCR executable")
-    ]
+    "_", [pytest.param(None, id="face.scan.rule: Failing to load the Tesseract OCR executable")]
 )
-def test_scan_tessexec_load_fail(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
+def test_scan_tessexec_load_fail(
+    scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, _: None
+) -> None:
     """
     Test failing to load the Tesseract OCR executable
 
@@ -407,7 +482,10 @@ def test_scan_tessexec_load_fail(scantest: ScanDialog, qtbot: QtBot, mocker: Moc
     assert isinstance(scantest.dialog, QMessageBox)
     assert scantest.dialog.icon() == QMessageBox.Information
     assert scantest.dialog.windowTitle() == "Faulty scanning"
-    assert "Please consider checking your input after ensuring that the proper Tesseract OCR executable has been selected." in scantest.dialog.text()
+    assert (
+        "Please consider checking your input after ensuring that the proper Tesseract OCR executable has been selected."
+        in scantest.dialog.text()
+    )
     assert scantest.dialog.isVisible()
 
 
@@ -415,11 +493,16 @@ def test_scan_tessexec_load_fail(scantest: ScanDialog, qtbot: QtBot, mocker: Moc
     "expt",
     [
         pytest.param(OSError(), id="face.scan.rule: Failing of register function with OSError"),
-        pytest.param(TesseractError("abc", "xyz"), id="face.scan.rule: Failing of register function with TesseractError"),
+        pytest.param(
+            TesseractError("abc", "xyz"),
+            id="face.scan.rule: Failing of register function with TesseractError",
+        ),
         pytest.param(TypeError(), id="face.scan.rule: Failing of register function with TypeError"),
-    ]
+    ],
 )
-def test_scan_register_fail(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, expt: Exception) -> None:
+def test_scan_register_fail(
+    scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, expt: Exception
+) -> None:
     """
     Test failing the register function with `OSError`, `TesseractError` and `TypeError`
 
@@ -439,7 +522,9 @@ def test_scan_register_fail(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFi
     Perform the action of loading the artifact information
     """
     tempfile = "test/static/gi-loadouts-ocr-test-sdoe.png"
-    savefile = NamedTemporaryFile(prefix="gi-loadouts-ocr-test-sdoe-", suffix=".png", delete=False, mode="wb")
+    savefile = NamedTemporaryFile(
+        prefix="gi-loadouts-ocr-test-sdoe-", suffix=".png", delete=False, mode="wb"
+    )
     with open(tempfile, "rb") as src_file:
         savefile.write(src_file.read())
     savefile.close()
@@ -450,6 +535,7 @@ def test_scan_register_fail(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFi
     """
     Confirm if the user interface elements change accordingly
     """
+
     def check_label():
         """
         Checking the interface elements change asynchronously
@@ -460,7 +546,10 @@ def test_scan_register_fail(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFi
         if isinstance(expt, OSError):
             assert "Selected executable of Tesseract OCR is unfunctional." in scantest.dialog.text()
         elif isinstance(expt, TesseractError) or isinstance(expt, TypeError):
-            assert "Processing failed as either Tesseract OCR executable ceased to function or training data was tampered with." in scantest.dialog.text()
+            assert (
+                "Processing failed as either Tesseract OCR executable ceased to function or training data was tampered with."
+                in scantest.dialog.text()
+            )
         assert scantest.dialog.isVisible()
 
     qtbot.waitUntil(check_label, timeout=1000)
@@ -472,12 +561,7 @@ def test_scan_register_fail(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFi
     remove(savefile.name)
 
 
-@pytest.mark.parametrize(
-    "_",
-    [
-        pytest.param(None, id="face.scan.rule: Clearing snapshot")
-    ]
-)
+@pytest.mark.parametrize("_", [pytest.param(None, id="face.scan.rule: Clearing snapshot")])
 def test_scan_snapshot_wipe(scantest: ScanDialog, qtbot: QtBot, _: None) -> None:
     """
     Test clearing of the snapshot from the user interface
@@ -493,18 +577,28 @@ def test_scan_snapshot_wipe(scantest: ScanDialog, qtbot: QtBot, _: None) -> None
     """
     Confirm if the user interface elements change accordingly
     """
-    for indx in ["YOUR ARTIFACT SCREENSHOT WILL SHOW UP HERE", "INSERT AN ARTIFACT SCREENSHOT HERE BY EITHER PRESSING", "CTRL + V", "OR USING", "DRAG AND DROP"]:
+    for indx in [
+        "YOUR ARTIFACT SCREENSHOT WILL SHOW UP HERE",
+        "INSERT AN ARTIFACT SCREENSHOT HERE BY EITHER PRESSING",
+        "CTRL + V",
+        "OR USING",
+        "DRAG AND DROP",
+    ]:
         assert indx in scantest.arti_shot.text()
 
 
 @pytest.mark.parametrize(
     "dist",
     [
-        pytest.param(item, id=f"face.scan.rule: Importing {item} artifact information in MainWindow")
+        pytest.param(
+            item, id=f"face.scan.rule: Importing {item} artifact information in MainWindow"
+        )
         for item in __dist__.keys()
-    ]
+    ],
 )
-def test_scan_import_arti(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, dist: str) -> None:
+def test_scan_import_arti(
+    scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, dist: str
+) -> None:
     """
     Test importing artifact information in MainWindow
 
@@ -520,8 +614,13 @@ def test_scan_import_arti(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixt
     """
     Perform the action of loading the artifact information
     """
-    tempfile = f"test/static/gi-loadouts-ocr-test-{__dist__[dist]["part"]}.png"
-    savefile = NamedTemporaryFile(prefix=f"gi-loadouts-ocr-test-{__dist__[dist]["part"]}", suffix=".png", delete=False, mode="wb")
+    tempfile = f"test/static/gi-loadouts-ocr-test-{__dist__[dist]['part']}.png"
+    savefile = NamedTemporaryFile(
+        prefix=f"gi-loadouts-ocr-test-{__dist__[dist]['part']}",
+        suffix=".png",
+        delete=False,
+        mode="wb",
+    )
     with open(tempfile, "rb") as src_file:
         savefile.write(src_file.read())
     savefile.close()
@@ -551,9 +650,7 @@ def test_scan_import_arti(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixt
 
 @pytest.mark.parametrize(
     "_",
-    [
-        pytest.param(None, id="face.scan.rule: Importing faulty artifact information in MainWindow")
-    ]
+    [pytest.param(None, id="face.scan.rule: Importing faulty artifact information in MainWindow")],
 )
 def test_scan_import_arti_flty(scantest: ScanDialog, qtbot: QtBot, _: None) -> None:
     """
@@ -593,11 +690,16 @@ def test_scan_import_arti_flty(scantest: ScanDialog, qtbot: QtBot, _: None) -> N
 @pytest.mark.parametrize(
     "dist",
     [
-        pytest.param(item, id=f"face.scan.rule: Processing {item} artifact information from the keyboard shortcut")
+        pytest.param(
+            item,
+            id=f"face.scan.rule: Processing {item} artifact information from the keyboard shortcut",
+        )
         for item in __dist__.keys()
-    ]
+    ],
 )
-def test_scan_contents_keyboard_shortcut(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, dist: str) -> None:
+def test_scan_contents_keyboard_shortcut(
+    scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, dist: str
+) -> None:
     """
     Test processing of contents from the keyboard shortcut
 
@@ -614,7 +716,7 @@ def test_scan_contents_keyboard_shortcut(scantest: ScanDialog, qtbot: QtBot, moc
     Perform the action of loading the artifact information
     """
     mimedata = QMimeData()
-    mimedata.setImageData(QImage(f"test/static/gi-loadouts-ocr-test-{__dist__[dist]["part"]}.png"))
+    mimedata.setImageData(QImage(f"test/static/gi-loadouts-ocr-test-{__dist__[dist]['part']}.png"))
     QApplication.clipboard().clear()
     QApplication.clipboard().setMimeData(mimedata)
     mocker.patch("gi_loadouts.face.scan.work.image_to_string", return_value=__text__[dist])
@@ -623,6 +725,7 @@ def test_scan_contents_keyboard_shortcut(scantest: ScanDialog, qtbot: QtBot, moc
     """
     Confirm if the user interface elements change accordingly
     """
+
     def check_label() -> None:
         assert scantest.arti_dist.currentText() == dist
         assert scantest.arti_type.currentText() == __rtrn__[dist]["team"]
@@ -638,11 +741,16 @@ def test_scan_contents_keyboard_shortcut(scantest: ScanDialog, qtbot: QtBot, moc
 @pytest.mark.parametrize(
     "dist",
     [
-        pytest.param(item, id=f"face.scan.rule: Processing {item} artifact information from the drag-and-drop action")
+        pytest.param(
+            item,
+            id=f"face.scan.rule: Processing {item} artifact information from the drag-and-drop action",
+        )
         for item in __dist__.keys()
-    ]
+    ],
 )
-def test_scan_contents_dasd_action(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, dist: str) -> None:
+def test_scan_contents_dasd_action(
+    scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, dist: str
+) -> None:
     """
     Test processing of contents from the drag-and-drop action
 
@@ -658,13 +766,14 @@ def test_scan_contents_dasd_action(scantest: ScanDialog, qtbot: QtBot, mocker: M
     """
     Perform the action of loading the artifact information
     """
-    test_incident = MockIncident(f"test/static/gi-loadouts-ocr-test-{__dist__[dist]["part"]}.png")
+    test_incident = MockIncident(f"test/static/gi-loadouts-ocr-test-{__dist__[dist]['part']}.png")
     mocker.patch("gi_loadouts.face.scan.work.image_to_string", return_value=__text__[dist])
     scantest.arti_shot.dropEvent(test_incident)
 
     """
     Confirm if the user interface elements change accordingly
     """
+
     def check_label() -> None:
         assert scantest.arti_dist.currentText() == dist
         assert scantest.arti_type.currentText() == __rtrn__[dist]["team"]
@@ -680,8 +789,10 @@ def test_scan_contents_dasd_action(scantest: ScanDialog, qtbot: QtBot, mocker: M
 @pytest.mark.parametrize(
     "_",
     [
-        pytest.param(None, id="face.scan.rule: Failing to load the artifact snapshot due to invalid contents")
-    ]
+        pytest.param(
+            None, id="face.scan.rule: Failing to load the artifact snapshot due to invalid contents"
+        )
+    ],
 )
 def test_scan_arti_load_fail_ic(scantest: ScanDialog, _: None) -> None:
     """
@@ -695,7 +806,7 @@ def test_scan_arti_load_fail_ic(scantest: ScanDialog, _: None) -> None:
     image using PIL.Image.open().
     """
     savefile = NamedTemporaryFile(prefix="gi-loadouts-", suffix=".exe", delete=False, mode="wb")
-    savefile.write(randbytes(512*1024))
+    savefile.write(randbytes(512 * 1024))
     savefile.close()
 
     """
@@ -710,7 +821,10 @@ def test_scan_arti_load_fail_ic(scantest: ScanDialog, _: None) -> None:
     assert isinstance(scantest.dialog, QMessageBox)
     assert scantest.dialog.icon() == QMessageBox.Information
     assert scantest.dialog.windowTitle() == "Faulty scanning"
-    assert "Please consider checking your input after ensuring that the proper Tesseract OCR executable has been selected." in scantest.dialog.text()
+    assert (
+        "Please consider checking your input after ensuring that the proper Tesseract OCR executable has been selected."
+        in scantest.dialog.text()
+    )
     assert "Please select an accurate screenshot." in scantest.dialog.text()
     assert scantest.dialog.isVisible()
 
@@ -723,8 +837,10 @@ def test_scan_arti_load_fail_ic(scantest: ScanDialog, _: None) -> None:
 @pytest.mark.parametrize(
     "_",
     [
-        pytest.param(None, id="face.scan.rule: Failing to scan the artifact snapshot due to invalid contents")
-    ]
+        pytest.param(
+            None, id="face.scan.rule: Failing to scan the artifact snapshot due to invalid contents"
+        )
+    ],
 )
 def test_scan_arti_scan_fail_ic(scantest: ScanDialog, _: None) -> None:
     """
@@ -745,18 +861,20 @@ def test_scan_arti_scan_fail_ic(scantest: ScanDialog, _: None) -> None:
     assert isinstance(scantest.dialog, QMessageBox)
     assert scantest.dialog.icon() == QMessageBox.Information
     assert scantest.dialog.windowTitle() == "Faulty scanning"
-    assert "Please consider checking your input after ensuring that the proper Tesseract OCR executable has been selected." in scantest.dialog.text()
+    assert (
+        "Please consider checking your input after ensuring that the proper Tesseract OCR executable has been selected."
+        in scantest.dialog.text()
+    )
     assert "Please select an accurate screenshot." in scantest.dialog.text()
     assert scantest.dialog.isVisible()
 
 
 @pytest.mark.parametrize(
-    "_",
-    [
-        pytest.param(None, id="face.scan.rule: Failing to load the artifact snapshot")
-    ]
+    "_", [pytest.param(None, id="face.scan.rule: Failing to load the artifact snapshot")]
 )
-def test_scan_arti_load_fail(scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
+def test_scan_arti_load_fail(
+    scantest: ScanDialog, qtbot: QtBot, mocker: MockerFixture, _: None
+) -> None:
     """
     Test failing to loading the artifact snapshot
 
@@ -768,7 +886,7 @@ def test_scan_arti_load_fail(scantest: ScanDialog, qtbot: QtBot, mocker: MockerF
     image using PIL.Image.open().
     """
     savefile = NamedTemporaryFile(prefix="gi-loadouts-", suffix=".webp", delete=False, mode="wb")
-    savefile.write(randbytes(512*1024))
+    savefile.write(randbytes(512 * 1024))
     savefile.close()
 
     """
@@ -783,7 +901,10 @@ def test_scan_arti_load_fail(scantest: ScanDialog, qtbot: QtBot, mocker: MockerF
     assert isinstance(scantest.dialog, QMessageBox)
     assert scantest.dialog.icon() == QMessageBox.Information
     assert scantest.dialog.windowTitle() == "Faulty scanning"
-    assert "Please consider checking your input after ensuring that the proper Tesseract OCR executable has been selected." in scantest.dialog.text()
+    assert (
+        "Please consider checking your input after ensuring that the proper Tesseract OCR executable has been selected."
+        in scantest.dialog.text()
+    )
     assert scantest.dialog.isVisible()
 
     """
@@ -795,11 +916,17 @@ def test_scan_arti_load_fail(scantest: ScanDialog, qtbot: QtBot, mocker: MockerF
 @pytest.mark.parametrize(
     "dist, mockscan",
     [
-        pytest.param(item, lambda part, item=item: MockScanDialog(__dist__[item]["part"]), id=f"face.scan.rule: Importing {item} artifact information in MainWindow")
+        pytest.param(
+            item,
+            lambda part, item=item: MockScanDialog(__dist__[item]["part"]),
+            id=f"face.scan.rule: Importing {item} artifact information in MainWindow",
+        )
         for item in __dist__.keys()
-    ]
+    ],
 )
-def test_wind_import_arti(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, dist: str, mockscan: str) -> None:
+def test_wind_import_arti(
+    runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, dist: str, mockscan: str
+) -> None:
     """
     Test actually importing artifact information in MainWindow
 
@@ -814,18 +941,37 @@ def test_wind_import_arti(runner: MainWindow, qtbot: QtBot, mocker: MockerFixtur
     """
     Perform the action of importing artifact info in MainWindow
     """
-    qtbot.mouseClick(getattr(runner, f"arti_{__dist__[dist]["part"]}_scan"), Qt.LeftButton)
+    qtbot.mouseClick(getattr(runner, f"arti_{__dist__[dist]['part']}_scan"), Qt.LeftButton)
 
     """
     Confirm if the user interface elements change accordingly
     """
     assert runner.scanobjc.exec() == QDialog.Accepted
     assert isinstance(runner.scanobjc.keep_info(), dict)
-    assert getattr(runner, f"arti_{__dist__[dist]["part"]}_type").currentText() == __rtrn__[dist]["team"]
-    assert getattr(runner, f"arti_{__dist__[dist]["part"]}_rare").currentText() == __rtrn__[dist]["rare"]
-    assert getattr(runner, f"arti_{__dist__[dist]["part"]}_levl").currentText() == __rtrn__[dist]["levl"]
-    assert getattr(runner, f"arti_{__dist__[dist]["part"]}_name_main").currentText() == __rtrn__[dist]["stat"]["main"].stat_name
-    assert getattr(runner, f"arti_{__dist__[dist]["part"]}_data_main").text() == str(__rtrn__[dist]["stat"]["main"].stat_data)
+    assert (
+        getattr(runner, f"arti_{__dist__[dist]['part']}_type").currentText()
+        == __rtrn__[dist]["team"]
+    )
+    assert (
+        getattr(runner, f"arti_{__dist__[dist]['part']}_rare").currentText()
+        == __rtrn__[dist]["rare"]
+    )
+    assert (
+        getattr(runner, f"arti_{__dist__[dist]['part']}_levl").currentText()
+        == __rtrn__[dist]["levl"]
+    )
+    assert (
+        getattr(runner, f"arti_{__dist__[dist]['part']}_name_main").currentText()
+        == __rtrn__[dist]["stat"]["main"].stat_name
+    )
+    assert getattr(runner, f"arti_{__dist__[dist]['part']}_data_main").text() == str(
+        __rtrn__[dist]["stat"]["main"].stat_data
+    )
     for sbst in ["a", "b", "c", "d"]:
-        assert getattr(runner, f"arti_{__dist__[dist]["part"]}_name_{sbst}").currentText() == __rtrn__[dist]["stat"]["seco"][f"{sbst}"].stat_name
-        assert getattr(runner, f"arti_{__dist__[dist]["part"]}_data_{sbst}").text() == str(__rtrn__[dist]["stat"]["seco"][f"{sbst}"].stat_data)
+        assert (
+            getattr(runner, f"arti_{__dist__[dist]['part']}_name_{sbst}").currentText()
+            == __rtrn__[dist]["stat"]["seco"][f"{sbst}"].stat_name
+        )
+        assert getattr(runner, f"arti_{__dist__[dist]['part']}_data_{sbst}").text() == str(
+            __rtrn__[dist]["stat"]["seco"][f"{sbst}"].stat_data
+        )

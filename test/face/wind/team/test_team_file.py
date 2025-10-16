@@ -17,13 +17,7 @@ from . import actual, json_sample, yaml_sample
 
 
 @pytest.mark.parametrize(
-    "_",
-    [
-        pytest.param(
-            None,
-            id="face.wind.rule: Saving a 'None' artifact collection"
-        )
-    ]
+    "_", [pytest.param(None, id="face.wind.rule: Saving a 'None' artifact collection")]
 )
 def test_team_save_none(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
     """
@@ -50,13 +44,7 @@ def test_team_save_none(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
 
 
 @pytest.mark.parametrize(
-    "_",
-    [
-        pytest.param(
-            None,
-            id="face.wind.rule: Saving an artifact collection"
-        )
-    ]
+    "_", [pytest.param(None, id="face.wind.rule: Saving an artifact collection")]
 )
 def test_team_save_name(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
     """
@@ -90,13 +78,7 @@ def test_team_save_name(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
 
 
 @pytest.mark.parametrize(
-    "_",
-    [
-        pytest.param(
-            None,
-            id="face.wind.rule: Failing to save the artifact collection"
-        )
-    ]
+    "_", [pytest.param(None, id="face.wind.rule: Failing to save the artifact collection")]
 )
 def test_team_save_fail(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
     """
@@ -117,18 +99,15 @@ def test_team_save_fail(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
     assert isinstance(runner.dialog, QMessageBox)
     assert runner.dialog.icon() == QMessageBox.Information
     assert runner.dialog.windowTitle() == "Save failed"
-    assert "Please confirm that the input is valid (eg. 69, 42.0 etc.) before saving the artifact set in a location that is accessible." in runner.dialog.text()
+    assert (
+        "Please confirm that the input is valid (eg. 69, 42.0 etc.) before saving the artifact set in a location that is accessible."
+        in runner.dialog.text()
+    )
     assert runner.dialog.isVisible()
 
 
 @pytest.mark.parametrize(
-    "_",
-    [
-        pytest.param(
-            None,
-            id="face.wind.rule: Loading the artifact collection from YAML data"
-        )
-    ]
+    "_", [pytest.param(None, id="face.wind.rule: Loading the artifact collection from YAML data")]
 )
 def test_team_load_yaml(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
     """
@@ -162,13 +141,7 @@ def test_team_load_yaml(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
 
 
 @pytest.mark.parametrize(
-    "_",
-    [
-        pytest.param(
-            None,
-            id="face.wind.rule: Loading the artifact collection from JSON data"
-        )
-    ]
+    "_", [pytest.param(None, id="face.wind.rule: Loading the artifact collection from JSON data")]
 )
 def test_team_load_json(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
     """
@@ -202,13 +175,7 @@ def test_team_load_json(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
 
 
 @pytest.mark.parametrize(
-    "_",
-    [
-        pytest.param(
-            None,
-            id="face.wind.rule: Cancelling loading the artifact collection"
-        )
-    ]
+    "_", [pytest.param(None, id="face.wind.rule: Cancelling loading the artifact collection")]
 )
 def test_team_load_nope(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
     """
@@ -234,12 +201,7 @@ def test_team_load_nope(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
 
 @pytest.mark.parametrize(
     "_",
-    [
-        pytest.param(
-            None,
-            id="face.wind.rule: Loading the artifact collection from an empty file"
-        )
-    ]
+    [pytest.param(None, id="face.wind.rule: Loading the artifact collection from an empty file")],
 )
 def test_team_load_void(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
     """
@@ -260,7 +222,10 @@ def test_team_load_void(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
     assert isinstance(runner.dialog, QMessageBox)
     assert runner.dialog.icon() == QMessageBox.Information
     assert runner.dialog.windowTitle() == "Load failed"
-    assert "Please confirm that the artifact set follows the valid format before loading it from a location that is accessible." in runner.dialog.text()
+    assert (
+        "Please confirm that the artifact set follows the valid format before loading it from a location that is accessible."
+        in runner.dialog.text()
+    )
     assert "Selected file cannot be read." in runner.dialog.text()
     assert runner.dialog.isVisible()
 
@@ -269,18 +234,28 @@ def test_team_load_void(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
     "sample, type",
     [
         pytest.param(
-            yaml_sample.replace("fwol", "AWRY").replace("pmod", "AWRY").replace("sdoe", "AWRY").replace("gboe", "AWRY").replace("ccol", "AWRY"),
+            yaml_sample.replace("fwol", "AWRY")
+            .replace("pmod", "AWRY")
+            .replace("sdoe", "AWRY")
+            .replace("gboe", "AWRY")
+            .replace("ccol", "AWRY"),
             "YAML Files (*.yaml)",
-            id="face.wind.rule: Loading the artifact collection with incorrect areas from YAML data"
+            id="face.wind.rule: Loading the artifact collection with incorrect areas from YAML data",
         ),
         pytest.param(
-            json_sample.replace("flower", "AWRY").replace("plume", "AWRY").replace("sands", "AWRY").replace("goblet", "AWRY").replace("circlet", "AWRY"),
+            json_sample.replace("flower", "AWRY")
+            .replace("plume", "AWRY")
+            .replace("sands", "AWRY")
+            .replace("goblet", "AWRY")
+            .replace("circlet", "AWRY"),
             "GOOD Files (*.json)",
-            id="face.wind.rule: Loading the artifact collection with incorrect areas from JSON data"
+            id="face.wind.rule: Loading the artifact collection with incorrect areas from JSON data",
         ),
-    ]
+    ],
 )
-def test_team_load_awry(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, sample: str, type: str) -> None:
+def test_team_load_awry(
+    runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, sample: str, type: str
+) -> None:
     """
     Test loading an artifact collection with incorrect areas from data
 
@@ -299,7 +274,10 @@ def test_team_load_awry(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
     assert isinstance(runner.dialog, QMessageBox)
     assert runner.dialog.icon() == QMessageBox.Information
     assert runner.dialog.windowTitle() == "Load failed"
-    assert "Please confirm that the artifact set follows the valid format before loading it from a location that is accessible." in runner.dialog.text()
+    assert (
+        "Please confirm that the artifact set follows the valid format before loading it from a location that is accessible."
+        in runner.dialog.text()
+    )
     assert "Artifact set data cannot be parsed." in runner.dialog.text()
     assert runner.dialog.isVisible()
 
@@ -308,28 +286,28 @@ def test_team_load_awry(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
     "sample, type",
     [
         pytest.param(
-            yaml_sample.
-            replace("name: Crit Rate\n", "name: Foo Bar\n").
-            replace("name: DEF\n", "name: Foo Bar\n").
-            replace("name: ATK\n", "name: Foo Bar\n").
-            replace("name: Elemental Mastery\n", "name: Foo Bar\n").
-            replace("name: ATK\n", "name: Foo Bar\n"),
+            yaml_sample.replace("name: Crit Rate\n", "name: Foo Bar\n")
+            .replace("name: DEF\n", "name: Foo Bar\n")
+            .replace("name: ATK\n", "name: Foo Bar\n")
+            .replace("name: Elemental Mastery\n", "name: Foo Bar\n")
+            .replace("name: ATK\n", "name: Foo Bar\n"),
             yaml_type,
-            id="face.wind.rule: Loading an artifact with incorrect substats from YAML data"
+            id="face.wind.rule: Loading an artifact with incorrect substats from YAML data",
         ),
         pytest.param(
-            json_sample.
-            replace("\"key\": \"critRate_\",\n", "\"key\": \"foobar\",\n").
-            replace("\"key\": \"def\",\n", "\"key\": \"foobar\",\n").
-            replace("\"key\": \"atk\",\n", "\"key\": \"foobar\",\n").
-            replace("\"key\": \"eleMas\",\n", "\"key\": \"foobar\",\n").
-            replace("\"key\": \"atk\",\n", "\"key\": \"foobar\",\n"),
+            json_sample.replace('"key": "critRate_",\n', '"key": "foobar",\n')
+            .replace('"key": "def",\n', '"key": "foobar",\n')
+            .replace('"key": "atk",\n', '"key": "foobar",\n')
+            .replace('"key": "eleMas",\n', '"key": "foobar",\n')
+            .replace('"key": "atk",\n', '"key": "foobar",\n'),
             json_type,
-            id="face.wind.rule: Loading an artifact with incorrect substats from JSON data"
+            id="face.wind.rule: Loading an artifact with incorrect substats from JSON data",
         ),
-    ]
+    ],
 )
-def test_team_load_name(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, sample: str, type: str) -> None:
+def test_team_load_name(
+    runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, sample: str, type: str
+) -> None:
     """
     Test loading an artifact collection with incorrect substats from data
 
@@ -348,18 +326,20 @@ def test_team_load_name(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
     assert isinstance(runner.dialog, QMessageBox)
     assert runner.dialog.icon() == QMessageBox.Information
     assert runner.dialog.windowTitle() == "Load failed"
-    assert "Please confirm that the artifact set follows the valid format before loading it from a location that is accessible." in runner.dialog.text()
+    assert (
+        "Please confirm that the artifact set follows the valid format before loading it from a location that is accessible."
+        in runner.dialog.text()
+    )
     assert "Artifact set data cannot be parsed." in runner.dialog.text()
     assert runner.dialog.isVisible()
 
 
 @pytest.mark.parametrize(
-    "_",
-    [
-        pytest.param(None, id="face.wind.rule: Saving an artifact collection as a YAML file")
-    ]
+    "_", [pytest.param(None, id="face.wind.rule: Saving an artifact collection as a YAML file")]
 )
-def test_team_save_yaml_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
+def test_team_save_yaml_actual(
+    runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, _: None
+) -> None:
     """
     Test saving an artifact across five areas as a YAML file
 
@@ -413,12 +393,11 @@ def test_team_save_yaml_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerF
 
 
 @pytest.mark.parametrize(
-    "_",
-    [
-        pytest.param(None, id="face.wind.rule: Saving an artifact collection as a JSON file")
-    ]
+    "_", [pytest.param(None, id="face.wind.rule: Saving an artifact collection as a JSON file")]
 )
-def test_team_save_json_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
+def test_team_save_json_actual(
+    runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, _: None
+) -> None:
     """
     Test saving an artifact across five areas as a JSON file
 
@@ -474,10 +453,14 @@ def test_team_save_json_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerF
 @pytest.mark.parametrize(
     "sample",
     [
-        pytest.param(yaml_sample, id="face.wind.rule: Loading the actual artifact collection from YAML data")
-    ]
+        pytest.param(
+            yaml_sample, id="face.wind.rule: Loading the actual artifact collection from YAML data"
+        )
+    ],
 )
-def test_team_load_yaml_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, sample: str) -> None:
+def test_team_load_yaml_actual(
+    runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, sample: str
+) -> None:
     """
     Test loading an artifact collection from YAML data
 
@@ -521,10 +504,14 @@ def test_team_load_yaml_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerF
 @pytest.mark.parametrize(
     "sample",
     [
-        pytest.param(json_sample, id="face.wind.rule: Loading the actual artifact collection from JSON data")
-    ]
+        pytest.param(
+            json_sample, id="face.wind.rule: Loading the actual artifact collection from JSON data"
+        )
+    ],
 )
-def test_team_load_json_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, sample: str) -> None:
+def test_team_load_json_actual(
+    runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, sample: str
+) -> None:
     """
     Test loading an artifact collection from JSON data
 
@@ -569,10 +556,9 @@ def test_team_load_json_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerF
     "_",
     [
         pytest.param(
-            None,
-            id="face.wind.rule: Cancelling the save process for an artifact collection"
+            None, id="face.wind.rule: Cancelling the save process for an artifact collection"
         )
-    ]
+    ],
 )
 def test_team_save_nope(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
     """

@@ -5,7 +5,9 @@ from ....type.weap.tier import Tier
 
 class RedhornStonethresher(Claymore):
     name: str = "Redhorn Stonethresher"
-    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_damage_perc, stat_data=19.2)
+    seco_stat: WeaponStat = WeaponStat(
+        stat_name=WeaponStatType.critical_damage_perc, stat_data=19.2
+    )
     tier: Tier = Tier.Tier_1
     rare: Rare = Rare.Star_5
     refi_name: str = "Gokadaiou Otogibanashi"

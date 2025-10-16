@@ -11,7 +11,9 @@ class Navia(Char):
     name: CharName = CharName.navia
     rare: Rare = Rare.Star_5
     base: BaseStat = BaseStat(attack=27.3714, defense=61.74456, health_points=984.78)
-    ascn: BaseStat = BaseStat(attack=112.3935546875, defense=253.56239318848, health_points=4044.0373535156)
+    ascn: BaseStat = BaseStat(
+        attack=112.3935546875, defense=253.56239318848, health_points=4044.0373535156
+    )
     weapon: WeaponType = WeaponType.claymore
     vision: Vision = Vision.geo
     cons_name: str = "Rosa Multiflora"

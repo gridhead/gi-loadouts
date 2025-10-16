@@ -4,8 +4,9 @@ from ....type.weap.tier import Tier
 
 # Please consider the completion of the world quest for an increase in attack statistics.
 
+
 class UltimateOverlordsMegaMagicSword(Claymore):
-    name: str = "\"Ultimate Overlord's Mega Magic Sword\""
+    name: str = '"Ultimate Overlord\'s Mega Magic Sword"'
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.energy_recharge_perc, stat_data=6.7)
     tier: Tier = Tier.Tier_3
     rare: Rare = Rare.Star_4
@@ -25,4 +26,3 @@ class UltimateOverlordsMegaMagicSword(Claymore):
         [WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=24.0)],
     ]
     file: str = "uoms"
-

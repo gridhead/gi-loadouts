@@ -5,7 +5,9 @@ from ....type.weap.tier import Tier
 
 class SkywardBlade(Sword):
     name: str = "Skyward Blade"
-    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.energy_recharge_perc, stat_data=12.0)
+    seco_stat: WeaponStat = WeaponStat(
+        stat_name=WeaponStatType.energy_recharge_perc, stat_data=12.0
+    )
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_5
     refi_name: str = "Sky-Piercing Fang"

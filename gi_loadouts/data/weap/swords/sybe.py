@@ -1,4 +1,3 @@
-
 from ....type.rare import Rare
 from ....type.weap import Sword, WeaponStat, WeaponStatType
 from ....type.weap.tier import Tier

@@ -3,11 +3,11 @@ from ..rare import Rare
 
 Secs = {
     Rank.Rank_0: 0,
-    Rank.Rank_1: 38/182,
-    Rank.Rank_2: 65/182,
-    Rank.Rank_3: 101/182,
-    Rank.Rank_4: 128/182,
-    Rank.Rank_5: 155/182,
+    Rank.Rank_1: 38 / 182,
+    Rank.Rank_2: 65 / 182,
+    Rank.Rank_3: 101 / 182,
+    Rank.Rank_4: 128 / 182,
+    Rank.Rank_5: 155 / 182,
     Rank.Rank_6: 1,
 }
 

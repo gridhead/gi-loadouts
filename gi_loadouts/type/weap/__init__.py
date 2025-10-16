@@ -15,6 +15,7 @@ class WeaponStatType(Enum):
     """
     Set of possible statistics associated with a weapon
     """
+
     attack = STAT.attack
     attack_perc = STAT.attack_perc
     defense_perc = STAT.defense_perc
@@ -40,6 +41,7 @@ class WeaponStat(BaseModel):
     """
     Data class for statistics of a weapon
     """
+
     stat_name: Optional[WeaponStatType] = WeaponStatType.none
     stat_data: Optional[float] = 0
 
@@ -48,6 +50,7 @@ class WeaponType(str, Enum):
     """
     Set of weapon types
     """
+
     bow = "Bow"
     catalyst = "Catalyst"
     claymore = "Claymore"
@@ -60,6 +63,7 @@ class Refinement(BaseModel):
     """
     Refinement primitive
     """
+
     qant: int = 1
     stat: list[WeaponStat] = []
     data: str = ""
@@ -69,6 +73,7 @@ class Weapon(BaseModel):
     """
     Weapon primitive
     """
+
     name: str = ""
     type: Optional[WeaponType] = WeaponType.none
     levl: Optional[Level] = Level.Level_01_20_Rank_0
@@ -84,7 +89,7 @@ class Weapon(BaseModel):
         refiobjc = dict()
         for indx in range(len(self.refi_list)):
             refiobjc[f"Refinement {indx + 1}"] = Refinement(
-                qant=indx+1,
+                qant=indx + 1,
                 data=self.refi_list[indx],
                 stat=self.refi_stat[indx] if len(self.refi_stat) > 0 else [],
             )
@@ -155,6 +160,7 @@ class Bow(Weapon):
     """
     Weapon directive of "Bow" type
     """
+
     type: str = WeaponType.bow
 
 
@@ -162,6 +168,7 @@ class Catalyst(Weapon):
     """
     Weapon directive of "Catalyst" type
     """
+
     type: str = WeaponType.catalyst
 
 
@@ -169,6 +176,7 @@ class Claymore(Weapon):
     """
     Weapon directive of "Claymore" type
     """
+
     type: str = WeaponType.claymore
 
 
@@ -176,6 +184,7 @@ class Polearm(Weapon):
     """
     Weapon directive of "Polearm" type
     """
+
     type: str = WeaponType.polearm
 
 
@@ -183,4 +192,5 @@ class Sword(Weapon):
     """
     Weapon directive of "Sword" type
     """
+
     type: str = WeaponType.sword

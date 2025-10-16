@@ -38,7 +38,14 @@ class ScanWorker(QObject):
 
         strttime = time()
 
-        area, main, seco, team, levl, rare = "", ATTR(), {"a": ATTR(), "b": ATTR(), "c": ATTR(), "d": ATTR()}, "", "Level 00", "Star 0"
+        area, main, seco, team, levl, rare = (
+            "",
+            ATTR(),
+            {"a": ATTR(), "b": ATTR(), "c": ATTR(), "d": ATTR()},
+            "",
+            "Level 00",
+            "Star 0",
+        )
 
         w, h = self.snap.size
         l, t, r, b = w // 2, 0, w, h  # noqa: E741
@@ -47,7 +54,9 @@ class ScanWorker(QObject):
 
         try:
             pytesseract.tesseract_cmd = conf.tessexec
-            text = image_to_string(self.snap, lang=conf.tempname, config=f"--tessdata-dir {location}")
+            text = image_to_string(
+                self.snap, lang=conf.tempname, config=f"--tessdata-dir {location}"
+            )
         except (OSError, TesseractError, TypeError) as expt:
             if isinstance(expt, OSError):
                 expt = "Selected executable of Tesseract OCR is unfunctional."
@@ -81,7 +90,11 @@ class ScanWorker(QObject):
 
             For eg. "Scrolls of the Hero of Cinder City"
             """
-            calclist = {*coll["name"], *coll["dist"][area]} if area != "" else {*coll["name"], *[item for data in coll["dist"].values() for item in data]}
+            calclist = (
+                {*coll["name"], *coll["dist"][area]}
+                if area != ""
+                else {*coll["name"], *[item for data in coll["dist"].values() for item in data]}
+            )
 
             for sbst in calclist:
                 if sbst in text:
@@ -137,7 +150,7 @@ class ScanWorker(QObject):
         mtch = search(levliden, text)
         if mtch:
             data = int(search(r"\b\d+\b", mtch.group()).group())
-            levl = f"Level {f"0{data}" if data < 10 else data}"
+            levl = f"Level {f'0{data}' if data < 10 else data}"
 
         rare_from_team, rare_from_levl = Rare.Star_0, Rare.Star_0
 

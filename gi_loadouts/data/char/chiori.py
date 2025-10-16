@@ -11,7 +11,9 @@ class Chiori(Char):
     name: CharName = CharName.chiori
     rare: Rare = Rare.Star_5
     base: BaseStat = BaseStat(attack=25.137, defense=74.19, health_points=890.4)
-    ascn: BaseStat = BaseStat(attack=103.21856689453, defense=304.66799926758, health_points=3656.4672851562)
+    ascn: BaseStat = BaseStat(
+        attack=103.21856689453, defense=304.66799926758, health_points=3656.4672851562
+    )
     weapon: WeaponType = WeaponType.sword
     vision: Vision = Vision.geo
     cons_name: str = "Cisoria"

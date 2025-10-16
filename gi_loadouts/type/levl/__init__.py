@@ -9,6 +9,7 @@ class LevelType(BaseModel):
     """
     Data class for level specification of weapons and characters
     """
+
     name: str
     qant: int
     rank: Rank
@@ -115,7 +116,9 @@ __level__ = {
 
 
 Level = Enum(
-    "Level", {
-        item.replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"): data for item, data in __level__.items()
-    }
+    "Level",
+    {
+        item.replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"): data
+        for item, data in __level__.items()
+    },
 )

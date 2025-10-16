@@ -14,6 +14,6 @@ class MoonweaversDawn(Sword):
         "Increases Elemental Burst DMG by 25%. When the character's Energy Capacity does not exceed 60, Elemental Burst DMG increases by an additional 20%. When the character's Energy Capacity does not exceed 40, Elemental Burst DMG increases by an additional 35%.",
         "Increases Elemental Burst DMG by 30%. When the character's Energy Capacity does not exceed 60, Elemental Burst DMG increases by an additional 24%. When the character's Energy Capacity does not exceed 40, Elemental Burst DMG increases by an additional 42%.",
         "Increases Elemental Burst DMG by 35%. When the character's Energy Capacity does not exceed 60, Elemental Burst DMG increases by an additional 28%. When the character's Energy Capacity does not exceed 40, Elemental Burst DMG increases by an additional 49%.",
-        "Increases Elemental Burst DMG by 40%. When the character's Energy Capacity does not exceed 60, Elemental Burst DMG increases by an additional 32%. When the character's Energy Capacity does not exceed 40, Elemental Burst DMG increases by an additional 56%."
+        "Increases Elemental Burst DMG by 40%. When the character's Energy Capacity does not exceed 60, Elemental Burst DMG increases by an additional 32%. When the character's Energy Capacity does not exceed 40, Elemental Burst DMG increases by an additional 56%.",
     ]
     file: str = "mwdn"

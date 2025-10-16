@@ -9,12 +9,25 @@ from gi_loadouts.type.rank import Rank
     [
         pytest.param(
             item.replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"),
-            int(item.replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_").split("_")[1]),
-            int(item.replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_").split("_")[4]),
+            int(
+                item.replace(" ", "_")
+                .replace("(", "")
+                .replace(")", "")
+                .replace("/", "_")
+                .split("_")[1]
+            ),
+            int(
+                item.replace(" ", "_")
+                .replace("(", "")
+                .replace(")", "")
+                .replace("/", "_")
+                .split("_")[4]
+            ),
             item,
-            id=f"type.levl: {item}"
-        ) for item in __level__.keys()
-    ]
+            id=f"type.levl: {item}",
+        )
+        for item in __level__.keys()
+    ],
 )
 def test_levl(text: str, qant: int, rank: int, name: str) -> None:
     """
@@ -22,10 +35,6 @@ def test_levl(text: str, qant: int, rank: int, name: str) -> None:
 
     :return:
     """
-    unit = LevelType(
-        qant = qant,
-        rank = getattr(Rank, f"Rank_{rank}"),
-        name = name
-    )
+    unit = LevelType(qant=qant, rank=getattr(Rank, f"Rank_{rank}"), name=name)
     lvut = getattr(Level, text)
     assert unit == lvut.value

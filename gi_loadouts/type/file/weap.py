@@ -11,6 +11,7 @@ class WeapFile(BaseModel):
     """
     Weapon storage primitive
     """
+
     name: str = ""
     type: WeaponType = WeaponType.none
     levl: Level = Level.Level_01_20_Rank_0
@@ -46,7 +47,7 @@ class WeapFile(BaseModel):
             "level": self.levl.value.qant,
             "ascension": self.levl.value.rank.value,
             "refinement": int(self.refn.split(" ")[1]) if self.refn != "" else self.refn,
-            "type": self.type.name
+            "type": self.type.name,
         }
         return data
 
@@ -62,7 +63,10 @@ def make_weapfile_from_yaml(objc: dict) -> WeapFile:
         weapobjc = WeapFile(
             name=objc["name"],
             type=getattr(WeaponType, objc["type"]),
-            levl=getattr(Level, objc["levl"].replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_")),
+            levl=getattr(
+                Level,
+                objc["levl"].replace(" ", "_").replace("(", "").replace(")", "").replace("/", "_"),
+            ),
             refn=objc["refn"],
         )
     except Exception as expt:
@@ -81,8 +85,15 @@ def make_weapfile_from_good(objc: dict) -> WeapFile:
         weapobjc = WeapFile(
             name=__weaplist_good_revmap__[objc["key"]],
             type=getattr(WeaponType, objc["type"]),
-            levl=getattr(Level, f"Level_0{objc["level"]}_{__ascn_bond__[objc["ascension"]]}_Rank_{objc["ascension"]}" if objc["level"] < 10 else f"Level_{objc["level"]}_{__ascn_bond__[objc["ascension"]]}_Rank_{objc["ascension"]}"),
-            refn=f"Refinement {objc["refinement"]}" if objc["refinement"] != "" else objc["refinement"],
+            levl=getattr(
+                Level,
+                f"Level_0{objc['level']}_{__ascn_bond__[objc['ascension']]}_Rank_{objc['ascension']}"
+                if objc["level"] < 10
+                else f"Level_{objc['level']}_{__ascn_bond__[objc['ascension']]}_Rank_{objc['ascension']}",
+            ),
+            refn=f"Refinement {objc['refinement']}"
+            if objc["refinement"] != ""
+            else objc["refinement"],
         )
     except Exception as expt:
         raise ValueError("Weapon data cannot be parsed.") from expt

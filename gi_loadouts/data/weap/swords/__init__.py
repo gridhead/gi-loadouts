@@ -101,5 +101,5 @@ SwordsDict = {
     "Traveler's Handy Sword": tvhs.TravelersHandySword,
     "Uraku Misugiri": urmg.UrakuMisugiri,
     "Wolf-Fang": wffg.WolfFang,
-    "Xiphos' Moonlight": xpml.XiphosMoonlight
+    "Xiphos' Moonlight": xpml.XiphosMoonlight,
 }

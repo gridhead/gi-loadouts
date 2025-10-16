@@ -8,6 +8,7 @@ class STAT(str, Enum):
     """
     Set of statistics possible
     """
+
     attack = "ATK"
     attack_perc = "ATK %"
     defense = "DEF"
@@ -45,6 +46,7 @@ class ATTR(BaseModel):
     """
     Attribute primitive
     """
+
     stat_name: Optional[STAT] = STAT.none
     stat_data: Optional[float] = 0.0
 
@@ -80,5 +82,5 @@ __revmap__ = {
     "Healing Bonus": STAT.healing_bonus_perc,
     "Shield Strength": STAT.shield_strength_perc,
     "CD Reduction": STAT.cooldown_reduction_perc,
-    "None": STAT.none
+    "None": STAT.none,
 }

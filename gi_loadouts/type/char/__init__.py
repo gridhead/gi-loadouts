@@ -15,6 +15,7 @@ class CharName(str, Enum):
     """
     Set of characters possible
     """
+
     aether = "Aether"
     aino = "Aino"
     albedo = "Albedo"
@@ -115,7 +116,7 @@ class CharName(str, Enum):
     xinyan = "Xinyan"
     yae_miko = "Yae Miko"
     yanfei = "Yanfei"
-    yaoyao  = "Yaoyao"
+    yaoyao = "Yaoyao"
     yelan = "Yelan"
     yoimiya = "Yoimiya"
     yumemizuki_mizuki = "Yumemizuki Mizuki"
@@ -127,6 +128,7 @@ class SecoStat(BaseModel):
     """
     Data class for secondary stat of a character
     """
+
     stat_name: STAT = STAT.none
     stat_data: float = 0.0
 
@@ -135,6 +137,7 @@ class Char(BaseModel):
     """
     Character primitive
     """
+
     __statname__: STAT = STAT.none
     __statdata__: dict = {}
     rare: Rare = Rare.Star_4
@@ -156,7 +159,10 @@ class Char(BaseModel):
         :param stat_type: Type of the stat (STAT.attack, STAT.defense, or STAT.health_points).
         :return: ATTR instance with calculated stat value.
         """
-        stat_data = base_stat * Mult[self.levl.value.qant][self.rare] + Secs[self.levl.value.rank] * ascension_stat
+        stat_data = (
+            base_stat * Mult[self.levl.value.qant][self.rare]
+            + Secs[self.levl.value.rank] * ascension_stat
+        )
 
         return ATTR(stat_name=stat_type, stat_data=stat_data)
 
@@ -195,8 +201,7 @@ class Char(BaseModel):
         :return: Secondary statistics associated with the character
         """
         return SecoStat(
-            stat_name=self.__statname__,
-            stat_data=self.__statdata__[self.levl.value.rank.value]
+            stat_name=self.__statname__, stat_data=self.__statdata__[self.levl.value.rank.value]
         )
 
 
@@ -218,7 +223,10 @@ class MainChar(Char):
         :param stat_type: Type of the stat (STAT.attack, STAT.defense, or STAT.health_points).
         :return: ATTR instance with calculated stat value.
         """
-        stat_data = base_stat * Mult[self.levl.value.qant][Rare.Star_4] + Secs[self.levl.value.rank] * ascension_stat
+        stat_data = (
+            base_stat * Mult[self.levl.value.qant][Rare.Star_4]
+            + Secs[self.levl.value.rank] * ascension_stat
+        )
 
         return ATTR(stat_name=stat_type, stat_data=stat_data)
 
@@ -227,6 +235,7 @@ class BaseStat(BaseModel):
     """
     Base stats of a character
     """
+
     attack: float = 0.0
     defense: float = 0.0
     health_points: float = 0.0

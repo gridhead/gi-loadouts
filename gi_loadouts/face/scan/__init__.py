@@ -19,8 +19,9 @@ teamiden = {
             "Sands of Eon": item.value.sdoe.__name__.split(" "),
             "Goblet of Eonothem": item.value.gboe.__name__.split(" "),
             "Circlet of Logos": item.value.ccol.__name__.split(" "),
-        }
-    } for item in ArtiList
+        },
+    }
+    for item in ArtiList
 }
 
 """
@@ -47,9 +48,7 @@ substats = {
 }
 
 mainstat = {
-    "Flower of Life": {
-        r".*HP.*": STAT.health_points
-    },
+    "Flower of Life": {r".*HP.*": STAT.health_points},
     "Plume of Death": {
         r".*ATK.*": STAT.attack,
     },
@@ -82,7 +81,7 @@ mainstat = {
         r".*HP.*": STAT.health_points_perc,
         r".*DEF.*": STAT.defense_perc,
         r".*ATK.*": STAT.attack_perc,
-    }
+    },
 }
 
 levliden = r"\+([0-9]|1[0-9]|20)\b"
@@ -102,25 +101,14 @@ info_arti_widget = [
     "arti_name_c",
     "arti_data_c",
     "arti_name_d",
-    "arti_data_d"
+    "arti_data_d",
 ]
 
 # List of widgets present in return back panel
-back_arti_widget = [
-    "arti_back_done",
-    "arti_back_wipe"
-]
+back_arti_widget = ["arti_back_done", "arti_back_wipe"]
 
 # List of widgets present in right sidebar
-right_sidebar_widget = [
-    "arti_cnvs_load",
-    "arti_cnvs_conf",
-    "arti_cnvs_wipe"
-]
+right_sidebar_widget = ["arti_cnvs_load", "arti_cnvs_conf", "arti_cnvs_wipe"]
 
 # List of unpacked widgets arranged as per chronological `TAB` order
-tab_order_scan = [
-    *info_arti_widget,
-    *back_arti_widget,
-    *right_sidebar_widget
-]
+tab_order_scan = [*info_arti_widget, *back_arti_widget, *right_sidebar_widget]

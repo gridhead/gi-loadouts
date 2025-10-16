@@ -4,9 +4,12 @@ from ....type.weap.tier import Tier
 
 # Dynamic calculation has not been implemented
 
+
 class StaffOfHoma(Polearm):
     name: str = "Staff of Homa"
-    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_damage_perc, stat_data=14.4)
+    seco_stat: WeaponStat = WeaponStat(
+        stat_name=WeaponStatType.critical_damage_perc, stat_data=14.4
+    )
     tier: Tier = Tier.Tier_2
     rare: Rare = Rare.Star_5
     refi_name: str = "Reckless Cinnabar"

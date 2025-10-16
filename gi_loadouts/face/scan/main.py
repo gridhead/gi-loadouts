@@ -29,17 +29,29 @@ class ScanDialog(Rule):
         :return:
         """
         self.arti_dist.currentTextChanged.connect(self.change_mainstat_by_changing_artifact_area)
-        self.arti_dist.currentTextChanged.connect(self.change_artifact_name_by_changing_artifact_area_or_type)
-        self.arti_type.currentTextChanged.connect(self.change_artifact_name_by_changing_artifact_area_or_type)
+        self.arti_dist.currentTextChanged.connect(
+            self.change_artifact_name_by_changing_artifact_area_or_type
+        )
+        self.arti_type.currentTextChanged.connect(
+            self.change_artifact_name_by_changing_artifact_area_or_type
+        )
         self.arti_type.currentTextChanged.connect(self.remove_artifact)
         self.arti_rare.currentTextChanged.connect(self.change_levels_backdrop_by_changing_rarity)
-        self.arti_rare.currentTextChanged.connect(self.change_artifact_substats_by_changing_rarity_or_mainstat)
-        self.arti_name_main.currentTextChanged.connect(self.change_artifact_substats_by_changing_rarity_or_mainstat)
+        self.arti_rare.currentTextChanged.connect(
+            self.change_artifact_substats_by_changing_rarity_or_mainstat
+        )
+        self.arti_name_main.currentTextChanged.connect(
+            self.change_artifact_substats_by_changing_rarity_or_mainstat
+        )
         self.arti_levl.currentTextChanged.connect(self.change_data_by_changing_level_or_stat)
         self.arti_name_main.currentTextChanged.connect(self.change_data_by_changing_level_or_stat)
         for alfa in ["a", "b", "c", "d"]:
             drop, text = getattr(self, f"arti_name_{alfa}"), getattr(self, f"arti_data_{alfa}")
-            drop.currentTextChanged.connect(lambda _, a_drop=drop, a_text=text: self.render_lineedit_readonly_when_none(a_drop, a_text))
+            drop.currentTextChanged.connect(
+                lambda _, a_drop=drop, a_text=text: self.render_lineedit_readonly_when_none(
+                    a_drop, a_text
+                )
+            )
         self.arti_back_wipe.clicked.connect(self.wipe_artifact)
         self.arti_cnvs_load.clicked.connect(self.insert_data_from_file)
         self.clip_shortcut = QShortcut(QKeySequence("Ctrl+V"), self)

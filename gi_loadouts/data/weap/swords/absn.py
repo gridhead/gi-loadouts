@@ -14,7 +14,7 @@ class Absolution(Sword):
         "CRIT DMG increased by 25%. Increasing the value of a Bond of Life increases the DMG the equipping character deals by 20% for 6s. Max 3 stacks.",
         "CRIT DMG increased by 30%. Increasing the value of a Bond of Life increases the DMG the equipping character deals by 24% for 6s. Max 3 stacks.",
         "CRIT DMG increased by 35%. Increasing the value of a Bond of Life increases the DMG the equipping character deals by 28% for 6s. Max 3 stacks.",
-        "CRIT DMG increased by 40%. Increasing the value of a Bond of Life increases the DMG the equipping character deals by 32% for 6s. Max 3 stacks."
+        "CRIT DMG increased by 40%. Increasing the value of a Bond of Life increases the DMG the equipping character deals by 32% for 6s. Max 3 stacks.",
     ]
     refi_stat: list[WeaponStat] = [
         [WeaponStat(stat_name=WeaponStatType.critical_damage_perc, stat_data=20.0)],

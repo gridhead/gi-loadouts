@@ -8,6 +8,7 @@ class AscnType(BaseModel):
     """
     Data class for mapping between quality and multiplier
     """
+
     rare: Rare = Rare.Star_1
     data: dict
 
@@ -22,7 +23,7 @@ Ascn = {
             Rank.Rank_3: 35.0,
             Rank.Rank_4: 46.7,
             Rank.Rank_5: 0.0,
-            Rank.Rank_6: 0.0
+            Rank.Rank_6: 0.0,
         },
     ),
     Rare.Star_2: AscnType(
@@ -34,7 +35,7 @@ Ascn = {
             Rank.Rank_3: 35.0,
             Rank.Rank_4: 46.7,
             Rank.Rank_5: 0.0,
-            Rank.Rank_6: 0.0
+            Rank.Rank_6: 0.0,
         },
     ),
     Rare.Star_3: AscnType(
@@ -46,7 +47,7 @@ Ascn = {
             Rank.Rank_3: 58.4,
             Rank.Rank_4: 77.8,
             Rank.Rank_5: 97.3,
-            Rank.Rank_6: 116.7
+            Rank.Rank_6: 116.7,
         },
     ),
     Rare.Star_4: AscnType(
@@ -58,7 +59,7 @@ Ascn = {
             Rank.Rank_3: 77.8,
             Rank.Rank_4: 103.7,
             Rank.Rank_5: 129.7,
-            Rank.Rank_6: 155.6
+            Rank.Rank_6: 155.6,
         },
     ),
     Rare.Star_5: AscnType(
@@ -70,7 +71,7 @@ Ascn = {
             Rank.Rank_3: 93.4,
             Rank.Rank_4: 124.5,
             Rank.Rank_5: 155.6,
-            Rank.Rank_6: 186.7
-        }
+            Rank.Rank_6: 186.7,
+        },
     ),
 }

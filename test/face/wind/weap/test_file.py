@@ -38,13 +38,21 @@ from . import (
     "type, char",
     [
         pytest.param("Bow", "Venti", id="face.wind.rule: Saving a random weapon of bow type"),
-        pytest.param("Catalyst", "Nahida", id="face.wind.rule: Saving a random weapon of catalyst type"),
-        pytest.param("Claymore", "Navia", id="face.wind.rule: Saving a random weapon of claymore type"),
-        pytest.param("Polearm", "Raiden Shogun", id="face.wind.rule: Saving a random weapon of polearm type"),
+        pytest.param(
+            "Catalyst", "Nahida", id="face.wind.rule: Saving a random weapon of catalyst type"
+        ),
+        pytest.param(
+            "Claymore", "Navia", id="face.wind.rule: Saving a random weapon of claymore type"
+        ),
+        pytest.param(
+            "Polearm", "Raiden Shogun", id="face.wind.rule: Saving a random weapon of polearm type"
+        ),
         pytest.param("Sword", "Furina", id="face.wind.rule: Saving a random weapon of sword type"),
-    ]
+    ],
 )
-def test_weap_save(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, type: str, char: str) -> None:
+def test_weap_save(
+    runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, type: str, char: str
+) -> None:
     """
     Test saving a random weapon of a certain type
 
@@ -78,14 +86,32 @@ def test_weap_save(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, type
 @pytest.mark.parametrize(
     "type, char",
     [
-        pytest.param("Bow", "Venti", id="face.wind.rule: Failing to save a random weapon of bow type"),
-        pytest.param("Catalyst", "Nahida", id="face.wind.rule: Failing to save a random weapon of catalyst type"),
-        pytest.param("Claymore", "Navia", id="face.wind.rule: Failing to save a random weapon of claymore type"),
-        pytest.param("Polearm", "Raiden Shogun", id="face.wind.rule: Failing to save a random weapon of polearm type"),
-        pytest.param("Sword", "Furina", id="face.wind.rule: Failing to save a random weapon of sword type"),
-    ]
+        pytest.param(
+            "Bow", "Venti", id="face.wind.rule: Failing to save a random weapon of bow type"
+        ),
+        pytest.param(
+            "Catalyst",
+            "Nahida",
+            id="face.wind.rule: Failing to save a random weapon of catalyst type",
+        ),
+        pytest.param(
+            "Claymore",
+            "Navia",
+            id="face.wind.rule: Failing to save a random weapon of claymore type",
+        ),
+        pytest.param(
+            "Polearm",
+            "Raiden Shogun",
+            id="face.wind.rule: Failing to save a random weapon of polearm type",
+        ),
+        pytest.param(
+            "Sword", "Furina", id="face.wind.rule: Failing to save a random weapon of sword type"
+        ),
+    ],
 )
-def test_weap_save_fail(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, type: str, char: str) -> None:
+def test_weap_save_fail(
+    runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, type: str, char: str
+) -> None:
     """
     Test failing to save a random weapon of a certain type
 
@@ -116,7 +142,10 @@ def test_weap_save_fail(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
     assert isinstance(runner.dialog, QMessageBox)
     assert runner.dialog.icon() == QMessageBox.Information
     assert runner.dialog.windowTitle() == "Save failed"
-    assert "Please confirm that the location that is accessible before saving the weapon data." in runner.dialog.text()
+    assert (
+        "Please confirm that the location that is accessible before saving the weapon data."
+        in runner.dialog.text()
+    )
     assert "Mocked mismatch." in runner.dialog.text()
     assert runner.dialog.isVisible()
 
@@ -124,14 +153,41 @@ def test_weap_save_fail(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
 @pytest.mark.parametrize(
     "char, sample, data",
     [
-        pytest.param("Venti", yaml_bow_sample, actual_bow, id="face.wind.rule: Loading a weapon of bow type from YAML data"),
-        pytest.param("Nahida", yaml_catalyst_sample, actual_catalyst, id="face.wind.rule: Loading a weapon of catalyst type from YAML data"),
-        pytest.param("Navia", yaml_claymore_sample, actual_claymore, id="face.wind.rule: Loading a weapon of claymore type from YAML data"),
-        pytest.param("Raiden Shogun", yaml_polearm_sample, actual_polearm, id="face.wind.rule: Loading a weapon of polearm type from YAML data"),
-        pytest.param("Furina", yaml_sword_sample, actual_sword, id="face.wind.rule: Loading a weapon of sword type from YAML data"),
-    ]
+        pytest.param(
+            "Venti",
+            yaml_bow_sample,
+            actual_bow,
+            id="face.wind.rule: Loading a weapon of bow type from YAML data",
+        ),
+        pytest.param(
+            "Nahida",
+            yaml_catalyst_sample,
+            actual_catalyst,
+            id="face.wind.rule: Loading a weapon of catalyst type from YAML data",
+        ),
+        pytest.param(
+            "Navia",
+            yaml_claymore_sample,
+            actual_claymore,
+            id="face.wind.rule: Loading a weapon of claymore type from YAML data",
+        ),
+        pytest.param(
+            "Raiden Shogun",
+            yaml_polearm_sample,
+            actual_polearm,
+            id="face.wind.rule: Loading a weapon of polearm type from YAML data",
+        ),
+        pytest.param(
+            "Furina",
+            yaml_sword_sample,
+            actual_sword,
+            id="face.wind.rule: Loading a weapon of sword type from YAML data",
+        ),
+    ],
 )
-def test_weap_load_yaml(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, char: str, sample: str, data: dict) -> None:
+def test_weap_load_yaml(
+    runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, char: str, sample: str, data: dict
+) -> None:
     """
     Test loading a weapon of a certain type from YAML data
 
@@ -161,14 +217,41 @@ def test_weap_load_yaml(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
 @pytest.mark.parametrize(
     "char, sample, data",
     [
-        pytest.param("Venti", json_bow_sample, actual_bow, id="face.wind.rule: Loading a weapon of bow type from JSON data"),
-        pytest.param("Nahida", json_catalyst_sample, actual_catalyst, id="face.wind.rule: Loading a weapon of catalyst type from JSON data"),
-        pytest.param("Navia", json_claymore_sample, actual_claymore, id="face.wind.rule: Loading a weapon of claymore type from JSON data"),
-        pytest.param("Raiden Shogun", json_polearm_sample, actual_polearm, id="face.wind.rule: Loading a weapon of polearm type from JSON data"),
-        pytest.param("Furina", json_sword_sample, actual_sword, id="face.wind.rule: Loading a weapon of sword type from JSON data"),
-    ]
+        pytest.param(
+            "Venti",
+            json_bow_sample,
+            actual_bow,
+            id="face.wind.rule: Loading a weapon of bow type from JSON data",
+        ),
+        pytest.param(
+            "Nahida",
+            json_catalyst_sample,
+            actual_catalyst,
+            id="face.wind.rule: Loading a weapon of catalyst type from JSON data",
+        ),
+        pytest.param(
+            "Navia",
+            json_claymore_sample,
+            actual_claymore,
+            id="face.wind.rule: Loading a weapon of claymore type from JSON data",
+        ),
+        pytest.param(
+            "Raiden Shogun",
+            json_polearm_sample,
+            actual_polearm,
+            id="face.wind.rule: Loading a weapon of polearm type from JSON data",
+        ),
+        pytest.param(
+            "Furina",
+            json_sword_sample,
+            actual_sword,
+            id="face.wind.rule: Loading a weapon of sword type from JSON data",
+        ),
+    ],
 )
-def test_weap_load_json(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, char: str, sample: str, data: dict) -> None:
+def test_weap_load_json(
+    runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, char: str, sample: str, data: dict
+) -> None:
     """
     Test loading a weapon of a certain type from JSON data
 
@@ -198,14 +281,36 @@ def test_weap_load_json(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
 @pytest.mark.parametrize(
     "char, name",
     [
-        pytest.param("Venti", "Alley Hunter", id="face.wind.rule: Cancelling loading a weapon of bow type from YAML data"),
-        pytest.param("Nahida", "Apprentice's Notes", id="face.wind.rule: Cancelling loading a weapon of catalyst type from YAML data"),
-        pytest.param("Navia", "Akuoumaru", id="face.wind.rule: Cancelling loading a weapon of claymore type from YAML data"),
-        pytest.param("Raiden Shogun", "Ballad of the Fjords", id="face.wind.rule: Cancelling loading a weapon of polearm type from YAML data"),
-        pytest.param("Furina", "Absolution", id="face.wind.rule: Cancelling loading a weapon of sword type from YAML data"),
-    ]
+        pytest.param(
+            "Venti",
+            "Alley Hunter",
+            id="face.wind.rule: Cancelling loading a weapon of bow type from YAML data",
+        ),
+        pytest.param(
+            "Nahida",
+            "Apprentice's Notes",
+            id="face.wind.rule: Cancelling loading a weapon of catalyst type from YAML data",
+        ),
+        pytest.param(
+            "Navia",
+            "Akuoumaru",
+            id="face.wind.rule: Cancelling loading a weapon of claymore type from YAML data",
+        ),
+        pytest.param(
+            "Raiden Shogun",
+            "Ballad of the Fjords",
+            id="face.wind.rule: Cancelling loading a weapon of polearm type from YAML data",
+        ),
+        pytest.param(
+            "Furina",
+            "Absolution",
+            id="face.wind.rule: Cancelling loading a weapon of sword type from YAML data",
+        ),
+    ],
 )
-def test_weap_load_nope(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, char: str, name: str) -> None:
+def test_weap_load_nope(
+    runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, char: str, name: str
+) -> None:
     """
     Test cancelling loading a weapon of a certain type
 
@@ -233,11 +338,20 @@ def test_weap_load_nope(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
     "char",
     [
         pytest.param("Venti", id="face.wind.rule: Loading a weapon of bow type from an empty file"),
-        pytest.param("Nahida", id="face.wind.rule: Loading a weapon of catalyst type from an empty file"),
-        pytest.param("Navia", id="face.wind.rule: Loading a weapon of claymore type from an empty file"),
-        pytest.param("Raiden Shogun", id="face.wind.rule: Loading a weapon of polearm type from an empty file"),
-        pytest.param("Furina", id="face.wind.rule: Loading a weapon of sword type from an empty file"),
-    ]
+        pytest.param(
+            "Nahida", id="face.wind.rule: Loading a weapon of catalyst type from an empty file"
+        ),
+        pytest.param(
+            "Navia", id="face.wind.rule: Loading a weapon of claymore type from an empty file"
+        ),
+        pytest.param(
+            "Raiden Shogun",
+            id="face.wind.rule: Loading a weapon of polearm type from an empty file",
+        ),
+        pytest.param(
+            "Furina", id="face.wind.rule: Loading a weapon of sword type from an empty file"
+        ),
+    ],
 )
 def test_team_load_void(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, char: str) -> None:
     """
@@ -258,7 +372,10 @@ def test_team_load_void(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
     assert isinstance(runner.dialog, QMessageBox)
     assert runner.dialog.icon() == QMessageBox.Information
     assert runner.dialog.windowTitle() == "Load failed"
-    assert "Please confirm that the location that is accessible before loading the weapon data." in runner.dialog.text()
+    assert (
+        "Please confirm that the location that is accessible before loading the weapon data."
+        in runner.dialog.text()
+    )
     assert "Selected file cannot be read." in runner.dialog.text()
     assert runner.dialog.isVisible()
 
@@ -266,19 +383,71 @@ def test_team_load_void(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
 @pytest.mark.parametrize(
     "char, sample, type",
     [
-        pytest.param("Nahida", yaml_bow_sample, yaml_type, id="face.wind.rule: Failing to load a weapon of bow type from YAML data due to type mismatch"),
-        pytest.param("Navia", yaml_catalyst_sample, yaml_type, id="face.wind.rule: Failing to load a weapon of catalyst type from YAML data due to type mismatch"),
-        pytest.param("Raiden Shogun", yaml_claymore_sample, yaml_type, id="face.wind.rule: Failing to load a weapon of claymore type from YAML data due to type mismatch"),
-        pytest.param("Furina", yaml_polearm_sample, yaml_type, id="face.wind.rule: Failing to load a weapon of polearm type from YAML data due to type mismatch"),
-        pytest.param("Venti", yaml_sword_sample, yaml_type, id="face.wind.rule: Failing to load a weapon of sword type from YAML data due to type mismatch"),
-        pytest.param("Nahida", json_bow_sample, json_type, id="face.wind.rule: Failing to load a weapon of bow type from JSON data due to type mismatch"),
-        pytest.param("Navia", json_catalyst_sample, json_type, id="face.wind.rule: Failing to load a weapon of catalyst type from JSON data due to type mismatch"),
-        pytest.param("Raiden Shogun", json_claymore_sample, json_type, id="face.wind.rule: Failing to load a weapon of claymore type from JSON data due to type mismatch"),
-        pytest.param("Furina", json_polearm_sample, json_type, id="face.wind.rule: Failing to load a weapon of polearm type from JSON data due to type mismatch"),
-        pytest.param("Venti", json_sword_sample, json_type, id="face.wind.rule: Failing to load a weapon of sword type from JSON data due to type mismatch"),
-    ]
+        pytest.param(
+            "Nahida",
+            yaml_bow_sample,
+            yaml_type,
+            id="face.wind.rule: Failing to load a weapon of bow type from YAML data due to type mismatch",
+        ),
+        pytest.param(
+            "Navia",
+            yaml_catalyst_sample,
+            yaml_type,
+            id="face.wind.rule: Failing to load a weapon of catalyst type from YAML data due to type mismatch",
+        ),
+        pytest.param(
+            "Raiden Shogun",
+            yaml_claymore_sample,
+            yaml_type,
+            id="face.wind.rule: Failing to load a weapon of claymore type from YAML data due to type mismatch",
+        ),
+        pytest.param(
+            "Furina",
+            yaml_polearm_sample,
+            yaml_type,
+            id="face.wind.rule: Failing to load a weapon of polearm type from YAML data due to type mismatch",
+        ),
+        pytest.param(
+            "Venti",
+            yaml_sword_sample,
+            yaml_type,
+            id="face.wind.rule: Failing to load a weapon of sword type from YAML data due to type mismatch",
+        ),
+        pytest.param(
+            "Nahida",
+            json_bow_sample,
+            json_type,
+            id="face.wind.rule: Failing to load a weapon of bow type from JSON data due to type mismatch",
+        ),
+        pytest.param(
+            "Navia",
+            json_catalyst_sample,
+            json_type,
+            id="face.wind.rule: Failing to load a weapon of catalyst type from JSON data due to type mismatch",
+        ),
+        pytest.param(
+            "Raiden Shogun",
+            json_claymore_sample,
+            json_type,
+            id="face.wind.rule: Failing to load a weapon of claymore type from JSON data due to type mismatch",
+        ),
+        pytest.param(
+            "Furina",
+            json_polearm_sample,
+            json_type,
+            id="face.wind.rule: Failing to load a weapon of polearm type from JSON data due to type mismatch",
+        ),
+        pytest.param(
+            "Venti",
+            json_sword_sample,
+            json_type,
+            id="face.wind.rule: Failing to load a weapon of sword type from JSON data due to type mismatch",
+        ),
+    ],
 )
-def test_weap_load_fail_type(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, char: str, sample: str, type: str) -> None:
+def test_weap_load_fail_type(
+    runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, char: str, sample: str, type: str
+) -> None:
     """
     Test failing to load a weapon of a certain type from data due to type mismatch
 
@@ -302,7 +471,10 @@ def test_weap_load_fail_type(runner: MainWindow, qtbot: QtBot, mocker: MockerFix
     assert isinstance(runner.dialog, QMessageBox)
     assert runner.dialog.icon() == QMessageBox.Information
     assert runner.dialog.windowTitle() == "Load failed"
-    assert "Please confirm that the location that is accessible before loading the weapon data." in runner.dialog.text()
+    assert (
+        "Please confirm that the location that is accessible before loading the weapon data."
+        in runner.dialog.text()
+    )
     assert "Weapon type cannot be identified." in runner.dialog.text()
     assert runner.dialog.isVisible()
 
@@ -310,19 +482,87 @@ def test_weap_load_fail_type(runner: MainWindow, qtbot: QtBot, mocker: MockerFix
 @pytest.mark.parametrize(
     "char, sample, type, data",
     [
-        pytest.param("Venti", yaml_bow_sample, yaml_type, actual_bow, id="face.wind.rule: Failing to load a weapon of bow type from YAML data due to incorrect name"),
-        pytest.param("Nahida", yaml_catalyst_sample, yaml_type, actual_catalyst, id="face.wind.rule: Failing to load a weapon of catalyst type from YAML data due to incorrect name"),
-        pytest.param("Navia", yaml_claymore_sample, yaml_type, actual_claymore, id="face.wind.rule: Failing to load a weapon of claymore type from YAML data due to incorrect name"),
-        pytest.param("Raiden Shogun", yaml_polearm_sample, yaml_type, actual_polearm, id="face.wind.rule: Failing to load a weapon of polearm type from YAML data due to incorrect name"),
-        pytest.param("Furina", yaml_sword_sample, yaml_type, actual_sword, id="face.wind.rule: Failing to load a weapon of sword type from YAML data due to incorrect name"),
-        pytest.param("Venti", json_bow_sample, json_type, actual_bow, id="face.wind.rule: Failing to load a weapon of bow type from JSON data due to incorrect name"),
-        pytest.param("Nahida", json_catalyst_sample, json_type, actual_catalyst, id="face.wind.rule: Failing to load a weapon of catalyst type from JSON data due to incorrect name"),
-        pytest.param("Navia", json_claymore_sample, json_type, actual_claymore, id="face.wind.rule: Failing to load a weapon of claymore type from JSON data due to incorrect name"),
-        pytest.param("Raiden Shogun", json_polearm_sample, json_type, actual_polearm, id="face.wind.rule: Failing to load a weapon of polearm type from JSON data due to incorrect name"),
-        pytest.param("Furina", json_sword_sample, json_type, actual_sword, id="face.wind.rule: Failing to load a weapon of sword type from JSON data due to incorrect name"),
-    ]
+        pytest.param(
+            "Venti",
+            yaml_bow_sample,
+            yaml_type,
+            actual_bow,
+            id="face.wind.rule: Failing to load a weapon of bow type from YAML data due to incorrect name",
+        ),
+        pytest.param(
+            "Nahida",
+            yaml_catalyst_sample,
+            yaml_type,
+            actual_catalyst,
+            id="face.wind.rule: Failing to load a weapon of catalyst type from YAML data due to incorrect name",
+        ),
+        pytest.param(
+            "Navia",
+            yaml_claymore_sample,
+            yaml_type,
+            actual_claymore,
+            id="face.wind.rule: Failing to load a weapon of claymore type from YAML data due to incorrect name",
+        ),
+        pytest.param(
+            "Raiden Shogun",
+            yaml_polearm_sample,
+            yaml_type,
+            actual_polearm,
+            id="face.wind.rule: Failing to load a weapon of polearm type from YAML data due to incorrect name",
+        ),
+        pytest.param(
+            "Furina",
+            yaml_sword_sample,
+            yaml_type,
+            actual_sword,
+            id="face.wind.rule: Failing to load a weapon of sword type from YAML data due to incorrect name",
+        ),
+        pytest.param(
+            "Venti",
+            json_bow_sample,
+            json_type,
+            actual_bow,
+            id="face.wind.rule: Failing to load a weapon of bow type from JSON data due to incorrect name",
+        ),
+        pytest.param(
+            "Nahida",
+            json_catalyst_sample,
+            json_type,
+            actual_catalyst,
+            id="face.wind.rule: Failing to load a weapon of catalyst type from JSON data due to incorrect name",
+        ),
+        pytest.param(
+            "Navia",
+            json_claymore_sample,
+            json_type,
+            actual_claymore,
+            id="face.wind.rule: Failing to load a weapon of claymore type from JSON data due to incorrect name",
+        ),
+        pytest.param(
+            "Raiden Shogun",
+            json_polearm_sample,
+            json_type,
+            actual_polearm,
+            id="face.wind.rule: Failing to load a weapon of polearm type from JSON data due to incorrect name",
+        ),
+        pytest.param(
+            "Furina",
+            json_sword_sample,
+            json_type,
+            actual_sword,
+            id="face.wind.rule: Failing to load a weapon of sword type from JSON data due to incorrect name",
+        ),
+    ],
 )
-def test_weap_load_fail_name(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, char: str, sample: str, type: str, data: dict) -> None:
+def test_weap_load_fail_name(
+    runner: MainWindow,
+    qtbot: QtBot,
+    mocker: MockerFixture,
+    char: str,
+    sample: str,
+    type: str,
+    data: dict,
+) -> None:
     """
     Test failing to load a weapon of a certain type from data due to incorrect name
 
@@ -340,7 +580,16 @@ def test_weap_load_fail_name(runner: MainWindow, qtbot: QtBot, mocker: MockerFix
     if type == yaml_type:
         name = data["name"]
     else:
-        name = "".join([word.title() for word in data["name"].replace("'", "").replace("\"", "").replace("-", " ").split(" ")])
+        name = "".join(
+            [
+                word.title()
+                for word in data["name"]
+                .replace("'", "")
+                .replace('"', "")
+                .replace("-", " ")
+                .split(" ")
+            ]
+        )
 
     sample = sample.replace(name, "AWRY")
     mocker.patch.object(file.FileHandling, "load", return_value=(True, sample, type))
@@ -352,7 +601,10 @@ def test_weap_load_fail_name(runner: MainWindow, qtbot: QtBot, mocker: MockerFix
     assert isinstance(runner.dialog, QMessageBox)
     assert runner.dialog.icon() == QMessageBox.Information
     assert runner.dialog.windowTitle() == "Load failed"
-    assert "Please confirm that the location that is accessible before loading the weapon data." in runner.dialog.text()
+    assert (
+        "Please confirm that the location that is accessible before loading the weapon data."
+        in runner.dialog.text()
+    )
     assert runner.dialog.isVisible()
     if type == yaml_type:
         assert "Weapon name cannot be identified." in runner.dialog.text()
@@ -363,19 +615,87 @@ def test_weap_load_fail_name(runner: MainWindow, qtbot: QtBot, mocker: MockerFix
 @pytest.mark.parametrize(
     "char, sample, type, data",
     [
-        pytest.param("Venti", yaml_bow_sample, yaml_type, actual_bow, id="face.wind.rule: Failing to load a weapon of bow type from YAML data due to incorrect level"),
-        pytest.param("Nahida", yaml_catalyst_sample, yaml_type, actual_catalyst, id="face.wind.rule: Failing to load a weapon of catalyst type from YAML data due to incorrect level"),
-        pytest.param("Navia", yaml_claymore_sample, yaml_type, actual_claymore, id="face.wind.rule: Failing to load a weapon of claymore type from YAML data due to incorrect level"),
-        pytest.param("Raiden Shogun", yaml_polearm_sample, yaml_type, actual_polearm, id="face.wind.rule: Failing to load a weapon of polearm type from YAML data due to incorrect level"),
-        pytest.param("Furina", yaml_sword_sample, yaml_type, actual_sword, id="face.wind.rule: Failing to load a weapon of sword type from YAML data due to incorrect level"),
-        pytest.param("Venti", json_bow_sample, json_type, actual_bow, id="face.wind.rule: Failing to load a weapon of bow type from JSON data due to incorrect level"),
-        pytest.param("Nahida", json_catalyst_sample, json_type, actual_catalyst, id="face.wind.rule: Failing to load a weapon of catalyst type from JSON data due to incorrect level"),
-        pytest.param("Navia", json_claymore_sample, json_type, actual_claymore, id="face.wind.rule: Failing to load a weapon of claymore type from JSON data due to incorrect level"),
-        pytest.param("Raiden Shogun", json_polearm_sample, json_type, actual_polearm, id="face.wind.rule: Failing to load a weapon of polearm type from JSON data due to incorrect level"),
-        pytest.param("Furina", json_sword_sample, json_type, actual_sword, id="face.wind.rule: Failing to load a weapon of sword type from JSON data due to incorrect level"),
-    ]
+        pytest.param(
+            "Venti",
+            yaml_bow_sample,
+            yaml_type,
+            actual_bow,
+            id="face.wind.rule: Failing to load a weapon of bow type from YAML data due to incorrect level",
+        ),
+        pytest.param(
+            "Nahida",
+            yaml_catalyst_sample,
+            yaml_type,
+            actual_catalyst,
+            id="face.wind.rule: Failing to load a weapon of catalyst type from YAML data due to incorrect level",
+        ),
+        pytest.param(
+            "Navia",
+            yaml_claymore_sample,
+            yaml_type,
+            actual_claymore,
+            id="face.wind.rule: Failing to load a weapon of claymore type from YAML data due to incorrect level",
+        ),
+        pytest.param(
+            "Raiden Shogun",
+            yaml_polearm_sample,
+            yaml_type,
+            actual_polearm,
+            id="face.wind.rule: Failing to load a weapon of polearm type from YAML data due to incorrect level",
+        ),
+        pytest.param(
+            "Furina",
+            yaml_sword_sample,
+            yaml_type,
+            actual_sword,
+            id="face.wind.rule: Failing to load a weapon of sword type from YAML data due to incorrect level",
+        ),
+        pytest.param(
+            "Venti",
+            json_bow_sample,
+            json_type,
+            actual_bow,
+            id="face.wind.rule: Failing to load a weapon of bow type from JSON data due to incorrect level",
+        ),
+        pytest.param(
+            "Nahida",
+            json_catalyst_sample,
+            json_type,
+            actual_catalyst,
+            id="face.wind.rule: Failing to load a weapon of catalyst type from JSON data due to incorrect level",
+        ),
+        pytest.param(
+            "Navia",
+            json_claymore_sample,
+            json_type,
+            actual_claymore,
+            id="face.wind.rule: Failing to load a weapon of claymore type from JSON data due to incorrect level",
+        ),
+        pytest.param(
+            "Raiden Shogun",
+            json_polearm_sample,
+            json_type,
+            actual_polearm,
+            id="face.wind.rule: Failing to load a weapon of polearm type from JSON data due to incorrect level",
+        ),
+        pytest.param(
+            "Furina",
+            json_sword_sample,
+            json_type,
+            actual_sword,
+            id="face.wind.rule: Failing to load a weapon of sword type from JSON data due to incorrect level",
+        ),
+    ],
 )
-def test_weap_load_fail_levl(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, char: str, sample: str, type: str, data: dict) -> None:
+def test_weap_load_fail_levl(
+    runner: MainWindow,
+    qtbot: QtBot,
+    mocker: MockerFixture,
+    char: str,
+    sample: str,
+    type: str,
+    data: dict,
+) -> None:
     """
     Test failing to load a weapon of a certain type from data due to incorrect level
 
@@ -400,7 +720,10 @@ def test_weap_load_fail_levl(runner: MainWindow, qtbot: QtBot, mocker: MockerFix
     assert isinstance(runner.dialog, QMessageBox)
     assert runner.dialog.icon() == QMessageBox.Information
     assert runner.dialog.windowTitle() == "Load failed"
-    assert "Please confirm that the location that is accessible before loading the weapon data." in runner.dialog.text()
+    assert (
+        "Please confirm that the location that is accessible before loading the weapon data."
+        in runner.dialog.text()
+    )
     assert "Weapon data cannot be parsed." in runner.dialog.text()
     assert runner.dialog.isVisible()
 
@@ -408,19 +731,87 @@ def test_weap_load_fail_levl(runner: MainWindow, qtbot: QtBot, mocker: MockerFix
 @pytest.mark.parametrize(
     "char, sample, type, data",
     [
-        pytest.param("Venti", yaml_bow_sample, yaml_type, actual_bow, id="face.wind.rule: Failing to load a weapon of bow type from YAML data due to incorrect refinement"),
-        pytest.param("Nahida", yaml_catalyst_sample, yaml_type, actual_catalyst, id="face.wind.rule: Failing to load a weapon of catalyst type from YAML data due to incorrect refinement"),
-        pytest.param("Navia", yaml_claymore_sample, yaml_type, actual_claymore, id="face.wind.rule: Failing to load a weapon of claymore type from YAML data due to incorrect refinement"),
-        pytest.param("Raiden Shogun", yaml_polearm_sample, yaml_type, actual_polearm, id="face.wind.rule: Failing to load a weapon of polearm type from YAML data due to incorrect refinement"),
-        pytest.param("Furina", yaml_sword_sample, yaml_type, actual_sword, id="face.wind.rule: Failing to load a weapon of sword type from YAML data due to incorrect refinement"),
-        pytest.param("Venti", json_bow_sample, json_type, actual_bow, id="face.wind.rule: Failing to load a weapon of bow type from JSON data due to incorrect refinement"),
-        pytest.param("Nahida", json_catalyst_sample, json_type, actual_catalyst, id="face.wind.rule: Failing to load a weapon of catalyst type from JSON data due to incorrect refinement"),
-        pytest.param("Navia", json_claymore_sample, json_type, actual_claymore, id="face.wind.rule: Failing to load a weapon of claymore type from JSON data due to incorrect refinement"),
-        pytest.param("Raiden Shogun", json_polearm_sample, json_type, actual_polearm, id="face.wind.rule: Failing to load a weapon of polearm type from JSON data due to incorrect refinement"),
-        pytest.param("Furina", json_sword_sample, json_type, actual_sword, id="face.wind.rule: Failing to load a weapon of sword type from JSON data due to incorrect refinement"),
-    ]
+        pytest.param(
+            "Venti",
+            yaml_bow_sample,
+            yaml_type,
+            actual_bow,
+            id="face.wind.rule: Failing to load a weapon of bow type from YAML data due to incorrect refinement",
+        ),
+        pytest.param(
+            "Nahida",
+            yaml_catalyst_sample,
+            yaml_type,
+            actual_catalyst,
+            id="face.wind.rule: Failing to load a weapon of catalyst type from YAML data due to incorrect refinement",
+        ),
+        pytest.param(
+            "Navia",
+            yaml_claymore_sample,
+            yaml_type,
+            actual_claymore,
+            id="face.wind.rule: Failing to load a weapon of claymore type from YAML data due to incorrect refinement",
+        ),
+        pytest.param(
+            "Raiden Shogun",
+            yaml_polearm_sample,
+            yaml_type,
+            actual_polearm,
+            id="face.wind.rule: Failing to load a weapon of polearm type from YAML data due to incorrect refinement",
+        ),
+        pytest.param(
+            "Furina",
+            yaml_sword_sample,
+            yaml_type,
+            actual_sword,
+            id="face.wind.rule: Failing to load a weapon of sword type from YAML data due to incorrect refinement",
+        ),
+        pytest.param(
+            "Venti",
+            json_bow_sample,
+            json_type,
+            actual_bow,
+            id="face.wind.rule: Failing to load a weapon of bow type from JSON data due to incorrect refinement",
+        ),
+        pytest.param(
+            "Nahida",
+            json_catalyst_sample,
+            json_type,
+            actual_catalyst,
+            id="face.wind.rule: Failing to load a weapon of catalyst type from JSON data due to incorrect refinement",
+        ),
+        pytest.param(
+            "Navia",
+            json_claymore_sample,
+            json_type,
+            actual_claymore,
+            id="face.wind.rule: Failing to load a weapon of claymore type from JSON data due to incorrect refinement",
+        ),
+        pytest.param(
+            "Raiden Shogun",
+            json_polearm_sample,
+            json_type,
+            actual_polearm,
+            id="face.wind.rule: Failing to load a weapon of polearm type from JSON data due to incorrect refinement",
+        ),
+        pytest.param(
+            "Furina",
+            json_sword_sample,
+            json_type,
+            actual_sword,
+            id="face.wind.rule: Failing to load a weapon of sword type from JSON data due to incorrect refinement",
+        ),
+    ],
 )
-def test_weap_load_fail_refn(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, char: str, sample: str, type: str, data: dict) -> None:
+def test_weap_load_fail_refn(
+    runner: MainWindow,
+    qtbot: QtBot,
+    mocker: MockerFixture,
+    char: str,
+    sample: str,
+    type: str,
+    data: dict,
+) -> None:
     """
     Test failing to load a weapon of a certain type from data due to incorrect refinement
 
@@ -438,7 +829,7 @@ def test_weap_load_fail_refn(runner: MainWindow, qtbot: QtBot, mocker: MockerFix
     if type == yaml_type:
         sample = sample.replace("refn: Refinement 5", "refn: Refinement 0")
     else:
-        sample = sample.replace("\"refinement\": 5,", "\"refinement\": 0,")
+        sample = sample.replace('"refinement": 5,', '"refinement": 0,')
     mocker.patch.object(file.FileHandling, "load", return_value=(True, sample, type))
     qtbot.mouseClick(runner.weap_head_load, Qt.LeftButton)
 
@@ -448,7 +839,10 @@ def test_weap_load_fail_refn(runner: MainWindow, qtbot: QtBot, mocker: MockerFix
     assert isinstance(runner.dialog, QMessageBox)
     assert runner.dialog.icon() == QMessageBox.Information
     assert runner.dialog.windowTitle() == "Load failed"
-    assert "Please confirm that the location that is accessible before loading the weapon data." in runner.dialog.text()
+    assert (
+        "Please confirm that the location that is accessible before loading the weapon data."
+        in runner.dialog.text()
+    )
     assert "Weapon refinement cannot be parsed." in runner.dialog.text()
     assert runner.dialog.isVisible()
 
@@ -456,14 +850,36 @@ def test_weap_load_fail_refn(runner: MainWindow, qtbot: QtBot, mocker: MockerFix
 @pytest.mark.parametrize(
     "type, char",
     [
-        pytest.param("Bow", "Venti", id="face.wind.rule: Saving a random weapon of bow type actually as a YAML file"),
-        pytest.param("Catalyst", "Nahida", id="face.wind.rule: Saving a random weapon of catalyst type actually as a YAML file"),
-        pytest.param("Claymore", "Navia", id="face.wind.rule: Saving a random weapon of claymore type actually as a YAML file"),
-        pytest.param("Polearm", "Raiden Shogun", id="face.wind.rule: Saving a random weapon of polearm type actually as a YAML file"),
-        pytest.param("Sword", "Furina", id="face.wind.rule: Saving a random weapon of sword type actually as a YAML file"),
-    ]
+        pytest.param(
+            "Bow",
+            "Venti",
+            id="face.wind.rule: Saving a random weapon of bow type actually as a YAML file",
+        ),
+        pytest.param(
+            "Catalyst",
+            "Nahida",
+            id="face.wind.rule: Saving a random weapon of catalyst type actually as a YAML file",
+        ),
+        pytest.param(
+            "Claymore",
+            "Navia",
+            id="face.wind.rule: Saving a random weapon of claymore type actually as a YAML file",
+        ),
+        pytest.param(
+            "Polearm",
+            "Raiden Shogun",
+            id="face.wind.rule: Saving a random weapon of polearm type actually as a YAML file",
+        ),
+        pytest.param(
+            "Sword",
+            "Furina",
+            id="face.wind.rule: Saving a random weapon of sword type actually as a YAML file",
+        ),
+    ],
 )
-def test_weap_save_yaml_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, type: str, char: str) -> None:
+def test_weap_save_yaml_actual(
+    runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, type: str, char: str
+) -> None:
     """
     Test saving a random weapon of a certain type as a YAML file
 
@@ -518,14 +934,36 @@ def test_weap_save_yaml_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerF
 @pytest.mark.parametrize(
     "type, char",
     [
-        pytest.param("Bow", "Venti", id="face.wind.rule: Saving a random weapon of bow type actually as a JSON file"),
-        pytest.param("Catalyst", "Nahida", id="face.wind.rule: Saving a random weapon of catalyst type actually as a JSON file"),
-        pytest.param("Claymore", "Navia", id="face.wind.rule: Saving a random weapon of claymore type actually as a JSON file"),
-        pytest.param("Polearm", "Raiden Shogun", id="face.wind.rule: Saving a random weapon of polearm type actually as a JSON file"),
-        pytest.param("Sword", "Furina", id="face.wind.rule: Saving a random weapon of sword type actually as a JSON file"),
-    ]
+        pytest.param(
+            "Bow",
+            "Venti",
+            id="face.wind.rule: Saving a random weapon of bow type actually as a JSON file",
+        ),
+        pytest.param(
+            "Catalyst",
+            "Nahida",
+            id="face.wind.rule: Saving a random weapon of catalyst type actually as a JSON file",
+        ),
+        pytest.param(
+            "Claymore",
+            "Navia",
+            id="face.wind.rule: Saving a random weapon of claymore type actually as a JSON file",
+        ),
+        pytest.param(
+            "Polearm",
+            "Raiden Shogun",
+            id="face.wind.rule: Saving a random weapon of polearm type actually as a JSON file",
+        ),
+        pytest.param(
+            "Sword",
+            "Furina",
+            id="face.wind.rule: Saving a random weapon of sword type actually as a JSON file",
+        ),
+    ],
 )
-def test_weap_save_json_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, type: str, char: str) -> None:
+def test_weap_save_json_actual(
+    runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, type: str, char: str
+) -> None:
     """
     Test saving a random weapon of a certain type as a JSON file
 
@@ -582,9 +1020,11 @@ def test_weap_save_json_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerF
         pytest.param("Venti", id="face.wind.rule: Cancelling saving a weapon of bow type"),
         pytest.param("Nahida", id="face.wind.rule: Cancelling saving a weapon of catalyst type"),
         pytest.param("Navia", id="face.wind.rule: Cancelling saving a weapon of claymore type"),
-        pytest.param("Raiden Shogun", id="face.wind.rule: Cancelling saving a weapon of polearm type"),
+        pytest.param(
+            "Raiden Shogun", id="face.wind.rule: Cancelling saving a weapon of polearm type"
+        ),
         pytest.param("Furina", id="face.wind.rule: Cancelling saving a weapon of sword type"),
-    ]
+    ],
 )
 def test_weap_save_nope(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, char: str) -> None:
     """
@@ -614,14 +1054,36 @@ def test_weap_save_nope(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
 @pytest.mark.parametrize(
     "char, sample",
     [
-        pytest.param("Venti", yaml_bow_sample, id="face.wind.rule: Loading a weapon of bow type actually from YAML file"),
-        pytest.param("Nahida", yaml_catalyst_sample, id="face.wind.rule: Loading a weapon of catalyst type actually from YAML file"),
-        pytest.param("Navia", yaml_claymore_sample, id="face.wind.rule: Loading a weapon of claymore type actually from YAML file"),
-        pytest.param("Raiden Shogun", yaml_polearm_sample, id="face.wind.rule: Loading a weapon of polearm type actually from YAML file"),
-        pytest.param("Furina", yaml_sword_sample, id="face.wind.rule: Loading a weapon of sword type actually from YAML file"),
-    ]
+        pytest.param(
+            "Venti",
+            yaml_bow_sample,
+            id="face.wind.rule: Loading a weapon of bow type actually from YAML file",
+        ),
+        pytest.param(
+            "Nahida",
+            yaml_catalyst_sample,
+            id="face.wind.rule: Loading a weapon of catalyst type actually from YAML file",
+        ),
+        pytest.param(
+            "Navia",
+            yaml_claymore_sample,
+            id="face.wind.rule: Loading a weapon of claymore type actually from YAML file",
+        ),
+        pytest.param(
+            "Raiden Shogun",
+            yaml_polearm_sample,
+            id="face.wind.rule: Loading a weapon of polearm type actually from YAML file",
+        ),
+        pytest.param(
+            "Furina",
+            yaml_sword_sample,
+            id="face.wind.rule: Loading a weapon of sword type actually from YAML file",
+        ),
+    ],
 )
-def test_weap_load_yaml_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, char: str, sample: str) -> None:
+def test_weap_load_yaml_actual(
+    runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, char: str, sample: str
+) -> None:
     """
     Test loading a weapon of a certain type from YAML file
 
@@ -658,14 +1120,36 @@ def test_weap_load_yaml_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerF
 @pytest.mark.parametrize(
     "char, sample",
     [
-        pytest.param("Venti", json_bow_sample, id="face.wind.rule: Loading a weapon of bow type actually from JSON file"),
-        pytest.param("Nahida", json_catalyst_sample, id="face.wind.rule: Loading a weapon of catalyst type actually from JSON file"),
-        pytest.param("Navia", json_claymore_sample, id="face.wind.rule: Loading a weapon of claymore type actually from JSON file"),
-        pytest.param("Raiden Shogun", json_polearm_sample, id="face.wind.rule: Loading a weapon of polearm type actually from JSON file"),
-        pytest.param("Furina", json_sword_sample, id="face.wind.rule: Loading a weapon of sword type actually from JSON file"),
-    ]
+        pytest.param(
+            "Venti",
+            json_bow_sample,
+            id="face.wind.rule: Loading a weapon of bow type actually from JSON file",
+        ),
+        pytest.param(
+            "Nahida",
+            json_catalyst_sample,
+            id="face.wind.rule: Loading a weapon of catalyst type actually from JSON file",
+        ),
+        pytest.param(
+            "Navia",
+            json_claymore_sample,
+            id="face.wind.rule: Loading a weapon of claymore type actually from JSON file",
+        ),
+        pytest.param(
+            "Raiden Shogun",
+            json_polearm_sample,
+            id="face.wind.rule: Loading a weapon of polearm type actually from JSON file",
+        ),
+        pytest.param(
+            "Furina",
+            json_sword_sample,
+            id="face.wind.rule: Loading a weapon of sword type actually from JSON file",
+        ),
+    ],
 )
-def test_weap_load_json_actual(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, char: str, sample: str) -> None:
+def test_weap_load_json_actual(
+    runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, char: str, sample: str
+) -> None:
     """
     Test loading a weapon of a certain type from JSON file
 

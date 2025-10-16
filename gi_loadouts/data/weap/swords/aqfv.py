@@ -5,7 +5,9 @@ from ....type.weap.tier import Tier
 
 class AquilaFavonia(Sword):
     name: str = "Aquila Favonia"
-    seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.damage_bonus_physical_perc, stat_data=9.0)
+    seco_stat: WeaponStat = WeaponStat(
+        stat_name=WeaponStatType.damage_bonus_physical_perc, stat_data=9.0
+    )
     tier: Tier = Tier.Tier_3
     rare: Rare = Rare.Star_5
     refi_name: str = "Falcon's Defiance"

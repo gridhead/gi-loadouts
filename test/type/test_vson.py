@@ -14,7 +14,7 @@ from gi_loadouts.type.vson import Vision
         pytest.param("hydro", "Hydro", "rgba(0, 190, 254, 254)", id="type.vson: Hydro"),
         pytest.param("pyro", "Pyro", "rgba(240, 122, 52, 254)", id="type.vson: Pyro"),
         pytest.param("none", "None", "rgba(128, 128, 128, 254)", id="type.vson: None"),
-    ]
+    ],
 )
 def test_vson(indx: str, name: str, colour: str) -> None:
     """

@@ -22,7 +22,7 @@ actual_bow = {
     "name": "Skyward Harp",
     "levl": "Level 80/90 (Rank 6)",
     "refn": "Refinement 5",
-    "type": "Bow"
+    "type": "Bow",
 }
 
 yaml_catalyst_sample = """
@@ -49,7 +49,7 @@ actual_catalyst = {
     "name": "A Thousand Floating Dreams",
     "levl": "Level 80/90 (Rank 6)",
     "refn": "Refinement 5",
-    "type": "Catalyst"
+    "type": "Catalyst",
 }
 
 yaml_claymore_sample = """
@@ -76,7 +76,7 @@ actual_claymore = {
     "name": "Verdict",
     "levl": "Level 80/90 (Rank 6)",
     "refn": "Refinement 5",
-    "type": "Claymore"
+    "type": "Claymore",
 }
 
 yaml_polearm_sample = """
@@ -103,7 +103,7 @@ actual_polearm = {
     "name": "Engulfing Lightning",
     "levl": "Level 80/90 (Rank 6)",
     "refn": "Refinement 5",
-    "type": "Polearm"
+    "type": "Polearm",
 }
 
 yaml_sword_sample = """
@@ -130,5 +130,5 @@ actual_sword = {
     "name": "Splendor of Tranquil Waters",
     "levl": "Level 80/90 (Rank 6)",
     "refn": "Refinement 5",
-    "type": "Sword"
+    "type": "Sword",
 }

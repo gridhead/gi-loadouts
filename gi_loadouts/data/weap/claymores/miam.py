@@ -4,6 +4,7 @@ from ....type.weap.tier import Tier
 
 # Dynamic calculation has not been implemented
 
+
 class MakhairaAquamarine(Claymore):
     name: str = "Makhaira Aquamarine"
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.elemental_mastery, stat_data=36.0)
