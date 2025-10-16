@@ -312,6 +312,35 @@ def test_scan_arti_load_nope(scantest: ScanDialog, qtbot: QtBot, mocker: MockerF
 
 
 @pytest.mark.parametrize(
+    "platform, which_result, expected",
+    [
+        pytest.param("Linux", "/usr/bin/tesseract", "/usr/bin/tesseract", id="conf: Tesseract found in PATH on Linux"),
+        pytest.param("Windows", "C:\\Program Files\\Tesseract-OCR\\tesseract.exe", "C:\\Program Files\\Tesseract-OCR\\tesseract.exe", id="conf: Tesseract found in PATH on Windows"),
+        pytest.param("Linux", None, None, id="conf: Tesseract not found in PATH on Linux"),
+        pytest.param("Windows", None, "C:\\Program Files\\Tesseract-OCR\\tesseract.exe", id="conf: Tesseract not found in PATH on Windows - fallback to default path"),
+    ]
+)
+def test_get_tessexec_path(mocker: MockerFixture, platform: str, which_result: str | None, expected: str | None) -> None:
+    """
+    Test getting Tesseract executable path on different platforms
+
+    :return:
+    """
+
+    """
+    Mock the platform and which function
+    """
+    mocker.patch("gi_loadouts.conf.system", return_value=platform)
+    mocker.patch("gi_loadouts.conf.which", return_value=which_result)
+
+    """
+    Call the function and verify the result
+    """
+    result = conf.get_tessexec_path()
+    assert result == expected
+
+
+@pytest.mark.parametrize(
     "tempexec",
     [
         pytest.param("/usr/bin/tesseract", id="face.scan.rule: Actual loading of Tesseract OCR executable in Linux"),
