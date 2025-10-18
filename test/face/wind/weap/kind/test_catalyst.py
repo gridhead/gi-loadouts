@@ -231,6 +231,16 @@ from test import verify_accuracy
             id="face.wind.rule: Configuring weapon - Catalyst - Prototype Amber",
         ),
         pytest.param(
+            "Reliquary of Truth",
+            5,
+            "Level 80/90 (Rank 6)",
+            506,
+            WeaponStatType.critical_damage_perc,
+            80.4,
+            5,
+            id="face.wind.rule: Configuring weapon - Catalyst - Reliquary of Truth",
+        ),
+        pytest.param(
             "Ring of Yaxche",
             4,
             "Level 80/90 (Rank 6)",
