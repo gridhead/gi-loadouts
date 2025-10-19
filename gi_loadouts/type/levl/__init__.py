@@ -112,6 +112,8 @@ __level__ = {
     "Level 88/90 (Rank 6)": LevelType(qant=88, rank=Rank.Rank_6, name="Level 88/90 (Rank 6)"),
     "Level 89/90 (Rank 6)": LevelType(qant=89, rank=Rank.Rank_6, name="Level 89/90 (Rank 6)"),
     "Level 90/90 (Rank 6)": LevelType(qant=90, rank=Rank.Rank_6, name="Level 90/90 (Rank 6)"),
+    "Level 95/95 (Rank 6)": LevelType(qant=95, rank=Rank.Rank_6, name="Level 95/95 (Rank 6)"),
+    "Level 100/100 (Rank 6)": LevelType(qant=100, rank=Rank.Rank_6, name="Level 100/100 (Rank 6)"),
 }
 
 

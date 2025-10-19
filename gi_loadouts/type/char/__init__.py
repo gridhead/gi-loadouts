@@ -160,7 +160,7 @@ class Char(BaseModel):
         :return: ATTR instance with calculated stat value.
         """
         stat_data = (
-            base_stat * Mult[self.levl.value.qant][self.rare]
+            base_stat * Mult[self.levl.value.qant][self.rare][stat_type]
             + Secs[self.levl.value.rank] * ascension_stat
         )
 
@@ -224,7 +224,7 @@ class MainChar(Char):
         :return: ATTR instance with calculated stat value.
         """
         stat_data = (
-            base_stat * Mult[self.levl.value.qant][Rare.Star_4]
+            base_stat * Mult[self.levl.value.qant][Rare.Star_4][stat_type]
             + Secs[self.levl.value.rank] * ascension_stat
         )
 
