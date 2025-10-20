@@ -7518,13 +7518,13 @@
       </size>
      </property>
      <property name="toolTip">
-      <string>Info</string>
+      <string>Help</string>
      </property>
      <property name="styleSheet">
       <string notr="true">#side_info {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
      </property>
      <property name="text">
-      <string>info-circle</string>
+      <string>circle-user</string>
      </property>
     </widget>
     <widget class="QPushButton" name="side_lcns">
@@ -7555,13 +7555,13 @@
       </size>
      </property>
      <property name="toolTip">
-      <string>Help</string>
+      <string>Info</string>
      </property>
      <property name="styleSheet">
       <string notr="true">#side_lcns {font: 87 10pt &quot;Font Awesome 6 Free Solid&quot;;}</string>
      </property>
      <property name="text">
-      <string>circle-user</string>
+      <string>info-circle</string>
      </property>
     </widget>
     <widget class="QPushButton" name="side_cash">
