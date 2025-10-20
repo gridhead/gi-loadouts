@@ -9,16 +9,16 @@ from gi_loadouts import __gicompat_part__, __gicompat_vers__, __releases__, __ve
 from gi_loadouts.face.wind.main import MainWindow
 
 
-@pytest.mark.parametrize("_", [pytest.param(None, id="face.info: Clicking the info button")])
+@pytest.mark.parametrize("_", [pytest.param(None, id="face.info: Clicking the help button")])
 def test_info(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, _: None) -> None:
     """
-    Test clicking the info button on side of UI
+    Test clicking the help button on side of UI
 
     :return:
     """
 
     """
-    Perform the action of clicking the info button
+    Perform the action of clicking the help button
     """
     qtbot.mouseClick(runner.side_info, Qt.LeftButton)
     mock_open_url = mocker.patch.object(QDesktopServices, "openUrl")
@@ -27,7 +27,7 @@ def test_info(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, _: None) 
     """
     Confirm if the user interface elements change accordingly
     """
-    assert runner.side_info.toolTip() == "Info"
+    assert runner.side_info.toolTip() == "Help"
     assert isinstance(runner.infoobjc, QDialog)
     assert runner.infoobjc.windowTitle() == f"Loadouts for Genshin Impact v{__versdata__}"
     assert runner.infoobjc.vers.text() == f"Version v{__versdata__}"
