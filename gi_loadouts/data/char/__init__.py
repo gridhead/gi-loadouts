@@ -66,6 +66,7 @@ from .mona import Mona
 from .mualani import Mualani
 from .nahida import Nahida
 from .navia import Navia
+from .nefer import Nefer
 from .neuvillette import Neuvillette
 from .nilou import Nilou
 from .ningguang import Ningguang
@@ -174,6 +175,7 @@ __charmaps__ = {
     "Mualani": Mualani,
     "Nahida": Nahida,
     "Navia": Navia,
+    "Nefer": Nefer,
     "Neuvillette": Neuvillette,
     "Nilou": Nilou,
     "Ningguang": Ningguang,

@@ -966,6 +966,25 @@ from test import verify_accuracy
             id="data.char: Navia",
         ),
         pytest.param(
+            "Nefer",
+            "catalyst",
+            5,
+            "dendro",
+            STAT.critical_damage_perc,
+            {
+                "Level 40/50 (Rank 2)": (
+                    5709.962843685715,
+                    154.80409031428573,
+                    359.2553224,
+                    9.6,
+                ),
+                "Level 80/90 (Rank 6)": (11810.8645312, 320.2049108, 743.1089952, 38.4),
+                "Level 95/95 (Rank 6)": (13154.880469, 383.1613652, 827.670324, 38.4),
+                "Level 100/100 (Rank 6)": (13606.8416784, 421.90586119999995, 856.1063264, 38.4),
+            },
+            id="data.char: Nefer",
+        ),
+        pytest.param(
             "Neuvillette",
             "catalyst",
             5,
@@ -1520,3 +1539,26 @@ def test_char(name: str, weap: str, rare: int, vson: int, seco: STAT, data: dict
         assert verify_accuracy(qant[1], unit.attack.stat_data)
         assert verify_accuracy(qant[2], unit.defense.stat_data)
         assert qant[3] == unit.seco.stat_data
+
+
+@pytest.mark.parametrize(
+    "char_name, stat_name, expected",
+    [
+        pytest.param(
+            "Nefer",
+            STAT.elemental_mastery,
+            100.0,
+            id="data.char: Nefer's base 100 Elemental Mastery",
+        ),
+    ],
+)
+def test_character_base_stat_bonuses(char_name: str, stat_name: STAT, expected: float) -> None:
+    """
+    Test characters with unique base stat addition
+
+    :return:
+    """
+    character = __charmaps__[char_name]()
+    stat_attr = getattr(character, stat_name.name.lower())
+    assert stat_attr.stat_data == expected
+    assert stat_attr.stat_name == stat_name

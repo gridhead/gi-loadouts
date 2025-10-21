@@ -37,10 +37,11 @@ class Assess:
                 .replace("/", "_"),
             )
 
-            # BASE
-            self.c_char.attack = char.attack
-            self.c_char.defense = char.defense
-            self.c_char.health_points = char.health_points
+            # BASE - dynamically set all properties using CHAR's revmap
+            for stat_enum, property_name in self.c_char.revmap.items():
+                if stat_enum != STAT.none:  # Skip none - characters don't have this property
+                    char_data = getattr(char, stat_enum.name)
+                    setattr(self.c_char, property_name, char_data)
 
             # SUBSTATS
             prev_stat_data = getattr(self.c_char, self.c_char.revmap[char.seco.stat_name]).stat_data
@@ -95,27 +96,29 @@ class Assess:
             )
 
             # BASE
-            self.c_tyvt.attack = ATTR(
-                stat_name=STAT.attack,
-                stat_data=(self.c_char.attack.stat_data + self.c_weap.base.stat_data)
-                * (100 + self.c_tyvt.attack_perc.stat_data)
-                / 100.0
-                + self.c_tyvt.attack.stat_data,
-            )
-            self.c_tyvt.health_points = ATTR(
-                stat_name=STAT.health_points,
-                stat_data=self.c_char.health_points.stat_data
-                * (100 + self.c_tyvt.health_points_perc.stat_data)
-                / 100.0
-                + self.c_tyvt.health_points.stat_data,
-            )
-            self.c_tyvt.defense = ATTR(
-                stat_name=STAT.defense,
-                stat_data=self.c_char.defense.stat_data
-                * (100 + self.c_tyvt.defense_perc.stat_data)
-                / 100.0
-                + self.c_tyvt.defense.stat_data,
-            )
+            relative_statlist = {STAT.attack, STAT.defense, STAT.health_points}
+            for stat_enum, property_name in self.c_tyvt.revmap.items():
+                # DONT ASSESS IF EITHER IS NONE OR MATCHING SUBSTATS
+                if stat_enum == STAT.none or stat_enum == char.__statname__:
+                    continue
+
+                char_base = getattr(self.c_char, property_name).stat_data
+                tyvt_flat = getattr(self.c_tyvt, property_name).stat_data
+
+                if stat_enum in relative_statlist:
+                    # RELATIVE STATS
+                    tyvt_perc = getattr(self.c_tyvt, f"{property_name}_perc").stat_data
+                    weap_base = self.c_weap.base.stat_data if stat_enum == STAT.attack else 0.0
+                    last_data = (char_base + weap_base) * (100 + tyvt_perc) / 100.0 + tyvt_flat
+                else:
+                    # ABSOLUTE STATS
+                    last_data = char_base + tyvt_flat
+
+                setattr(
+                    self.c_tyvt,
+                    property_name,
+                    ATTR(stat_name=stat_enum, stat_data=last_data),
+                )
 
             # ADDENDUM
             self.c_tyvt.addendum_base_attack = ATTR(
@@ -322,11 +325,7 @@ class Assess:
         self.c_weap = WEAP()
         self.c_team = TEAM()
         self.c_tyvt = CHAR()
-        self.c_char = CHAR(
-            critical_rate_perc=ATTR(stat_name=STAT.critical_rate_perc, stat_data=0.0),
-            critical_damage_perc=ATTR(stat_name=STAT.critical_damage_perc, stat_data=0.0),
-            energy_recharge_perc=ATTR(stat_name=STAT.energy_recharge_perc, stat_data=0.0),
-        )
+        self.c_char = CHAR()
         self.char_keep()
         self.weap_keep()
         self.arti_keep()

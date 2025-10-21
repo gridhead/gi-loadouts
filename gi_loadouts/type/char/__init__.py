@@ -84,6 +84,7 @@ class CharName(str, Enum):
     mualani = "Mualani"
     nahida = "Nahida"
     navia = "Navia"
+    nefer = "Nefer"
     neuvillette = "Neuvillette"
     nilou = "Nilou"
     ningguang = "Ningguang"
@@ -149,6 +150,23 @@ class Char(BaseModel):
     cons_name: str = ""
     afln: str = ""
     head: str = ""
+
+    def __init_subclass__(cls, **kwargs):
+        """
+        Generate properties for all STAT enum values (except core values)
+        """
+        super().__init_subclass__(**kwargs)
+        excluded = {"attack", "defense", "health_points", "none"}
+        for stat in STAT:
+            if stat.name not in excluded and not hasattr(cls, stat.name):
+
+                def make_property(stat_enum):
+                    def prop(self) -> ATTR:
+                        return ATTR(stat_name=stat_enum, stat_data=0.0)
+
+                    return property(prop)
+
+                setattr(cls, stat.name, make_property(stat))
 
     def _calc_stat(self, base_stat: float, ascension_stat: float, stat_type: STAT) -> ATTR:
         """
