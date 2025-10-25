@@ -331,6 +331,16 @@ from test import verify_accuracy
             id="face.wind.rule: Configuring weapon - Polearm - Royal Spear",
         ),
         pytest.param(
+            "Sacrificer's Staff",
+            4,
+            "Level 80/90 (Rank 6)",
+            571,
+            WeaponStatType.critical_rate_perc,
+            8.4,
+            5,
+            id="face.wind.rule: Configuring weapon - Polearm - Sacrificer's Staff",
+        ),
+        pytest.param(
             "Tamayuratei no Ohanashi",
             4,
             "Level 80/90 (Rank 6)",
