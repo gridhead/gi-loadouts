@@ -231,6 +231,16 @@ from test import verify_accuracy
             id="data.weap.catalysts: Prototype Amber",
         ),
         pytest.param(
+            "Reliquary of Truth",
+            5,
+            1,
+            "Level 80/90 (Rank 6)",
+            506,
+            WeaponStatType.critical_damage_perc,
+            80.4,
+            id="data.weap.catalysts: Reliquary of Truth",
+        ),
+        pytest.param(
             "Ring of Yaxche",
             4,
             2,
