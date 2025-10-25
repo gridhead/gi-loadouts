@@ -461,6 +461,16 @@ from test import verify_accuracy
             id="data.weap.catalysts: Crane's Echoing Call",
         ),
         pytest.param(
+            "Dawning Frost",
+            4,
+            2,
+            "Level 80/90 (Rank 6)",
+            475,
+            WeaponStatType.critical_damage_perc,
+            50.3,
+            id="data.weap.catalysts: Dawning Frost",
+        ),
+        pytest.param(
             "Etherlight Spindlelute",
             4,
             2,

@@ -461,6 +461,16 @@ from test import verify_accuracy
             id="face.wind.rule: Configuring weapon - Catalyst - Crane's Echoing Call",
         ),
         pytest.param(
+            "Dawning Frost",
+            4,
+            "Level 80/90 (Rank 6)",
+            475,
+            WeaponStatType.critical_damage_perc,
+            50.3,
+            5,
+            id="face.wind.rule: Configuring weapon - Catalyst - Dawning Frost",
+        ),
+        pytest.param(
             "Etherlight Spindlelute",
             4,
             "Level 80/90 (Rank 6)",
