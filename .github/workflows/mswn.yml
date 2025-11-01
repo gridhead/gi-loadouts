@@ -45,7 +45,7 @@ jobs:
           GITHUB_HASH: ${{ github.sha }}
 
       - name: Upload the project binaries for "Loadouts for Genshin Impact"
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: gi-loadouts.mswn
           path: dist/gi-loadouts-*.exe
