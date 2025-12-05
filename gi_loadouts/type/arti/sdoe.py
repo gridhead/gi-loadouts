@@ -1,5 +1,3 @@
-from typing import Optional
-
 from .base import Artifact, MainStatType_SDOE, SecoStat
 from .stat import (
     attack_perc,
@@ -15,11 +13,11 @@ class SDOE(Artifact):
     Artifact primitive for a "Sands of Eon" artifact
     """
 
-    stat_name: Optional[MainStatType_SDOE] = MainStatType_SDOE.none
-    secostat_a: Optional[SecoStat] = SecoStat()
-    secostat_b: Optional[SecoStat] = SecoStat()
-    secostat_c: Optional[SecoStat] = SecoStat()
-    secostat_d: Optional[SecoStat] = SecoStat()
+    stat_name: MainStatType_SDOE | None = MainStatType_SDOE.none
+    secostat_a: SecoStat | None = SecoStat()
+    secostat_b: SecoStat | None = SecoStat()
+    secostat_c: SecoStat | None = SecoStat()
+    secostat_d: SecoStat | None = SecoStat()
 
     @property
     def stat_data(self) -> float:
