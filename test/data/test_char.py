@@ -396,6 +396,20 @@ from test import verify_accuracy
             id="data.char: Dori",
         ),
         pytest.param(
+            "Durin",
+            "sword",
+            5,
+            "pyro",
+            STAT.critical_damage_perc,
+            {
+                "Level 40/50 (Rank 2)": (5586.67, 155.88, 369.62, 9.6),
+                "Level 80/90 (Rank 6)": (11555.84, 322.43, 764.54, 38.4),
+                "Level 95/95 (Rank 6)": (12870.83, 385.82, 851.55, 38.4),
+                "Level 100/100 (Rank 6)": (13313.04, 424.84, 880.80, 38.4),
+            },
+            id="data.char: Durin",
+        ),
+        pytest.param(
             "Emilie",
             "polearm",
             5,
