@@ -468,7 +468,6 @@ ensure that the Tesseract OCR application is installed and configured properly.
     ```
     pip install --upgrade gi-loadouts
     ```
-
     We recommend installing the project inside a Python virtual environment
 
 ### From Source
@@ -481,7 +480,7 @@ ensure that the Tesseract OCR application is installed and configured properly.
     $ sudo dnf install git tesseract
     ```
     ```
-    $ sudo dnf install python3 python3-pip python3-virtualenv poetry
+    $ sudo dnf install python3 python3-pip python3-virtualenv uv
     ```
 2.  Clone your fork to the local storage and make it your current working 
     directory.
@@ -499,21 +498,13 @@ ensure that the Tesseract OCR application is installed and configured properly.
     ```
     $ source venv/bin/activate
     ```
-4.  Install the project dependencies after verifying the correctness of the 
-    configuration.
+4.  Install the project dependencies using UV and start the application 
+    software.
     ```
-    (venv) $ poetry check
-    ```
-    ```
-    (venv) $ poetry install
-    ```
-5.  Start the application after verifying that the dependencies have been 
-    installed.
-    ```
-    (venv) $ poetry show
+    (venv) $ uv sync --extra dev
     ```
     ```
-    (venv) $ gi-loadouts
+    (venv) $ uv run gi-loadouts
     ```
 
 #### On Microsoft Windows
@@ -526,7 +517,7 @@ ensure that the Tesseract OCR application is installed and configured properly.
     ```
     ```
     Python 3 - https://www.python.org/downloads/
-    Poetry - https://python-poetry.org/
+    UV - https://docs.astral.sh/uv/
     ```
 2.  Clone your fork to the local storage and make it your current working 
     directory.
@@ -544,21 +535,13 @@ ensure that the Tesseract OCR application is installed and configured properly.
     ```
     PS > .\venv\Scripts\activate
     ```
-4.  Install the project dependencies after installing the dependency management
-    tools.
+4.  Install the project dependencies using UV and start the application 
+    software.
     ```
-    (venv) PS > py -m pip install poetry
-    ```
-    ```
-    (venv) PS > poetry install
-    ```
-5.  Start the application after verifying that the dependencies have been 
-    installed.
-    ```
-    (venv) PS > poetry show
+    (venv) PS > uv sync --extra dev
     ```
     ```
-    (venv) PS > gi-loadouts.cmd
+    (venv) PS > uv run gi-loadouts
     ```
 
 ## Contribution
