@@ -25,6 +25,7 @@ from .dehya import Dehya
 from .diluc import Diluc
 from .diona import Diona
 from .dori import Dori
+from .durin import Durin
 from .emilie import Emilie
 from .escoffier import Escoffier
 from .eula import Eula
@@ -134,6 +135,7 @@ __charmaps__ = {
     "Diluc": Diluc,
     "Diona": Diona,
     "Dori": Dori,
+    "Durin": Durin,
     "Emilie": Emilie,
     "Escoffier": Escoffier,
     "Eula": Eula,
