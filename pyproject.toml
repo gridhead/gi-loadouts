@@ -1,51 +1,67 @@
-[tool.poetry]
+[project]
 name = "gi-loadouts"
 version = "0.1.12"
 description = "Loadouts for Genshin Impact"
-authors = ["Akashdeep Dhar <akashdeep.dhar@gmail.com>", "Avadhoot Dhere <avadhootd99@gmail.com>", "Dhruv Bhirud <bhiruddhruv@gmail.com>", "Prithviraj Chavan <prithvichavan56110@gmail.com>", "Shounak Dey <shounakdey@ymail.com>"]
+authors = [
+    {name = "Akashdeep Dhar", email = "akashdeep.dhar@gmail.com"},
+    {name = "Avadhoot Dhere", email = "avadhootd99@gmail.com"},
+    {name = "Dhruv Bhirud", email = "bhiruddhruv@gmail.com"},
+    {name = "Prithviraj Chavan", email = "prithvichavan56110@gmail.com"},
+    {name = "Shounak Dey", email = "shounakdey@ymail.com"}
+]
+maintainers = [
+    {name = "Akashdeep Dhar", email = "akashdeep.dhar@gmail.com"}
+]
 license = "GPL-3.0-or-later"
-maintainers = ["Akashdeep Dhar <akashdeep.dhar@gmail.com>"]
 readme = "README.md"
-homepage = "https://github.com/gridhead/gi-loadouts"
-repository = "https://github.com/gridhead/gi-loadouts"
-documentation = "https://github.com/gridhead/gi-loadouts/blob/main/README.md"
+requires-python = ">=3.12,<3.15"
 keywords = []
-classifiers= [
+classifiers = [
     "Development Status :: 4 - Beta",
     "Environment :: X11 Applications :: Qt",
     "Framework :: Pydantic :: 2",
     "Intended Audience :: Developers",
     "Intended Audience :: End Users/Desktop",
-    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
-    "License :: OSI Approved :: SIL Open Font License 1.1 (OFL-1.1)",
     "Operating System :: Microsoft :: Windows",
     "Operating System :: POSIX :: Linux",
     "Natural Language :: English",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
     "Topic :: Database :: Front-Ends",
     "Topic :: Games/Entertainment",
     "Topic :: Utilities",
     "Typing :: Typed"
 ]
+dependencies = [
+    "pillow>=10.4.0,<13.0.0",
+    "pydantic>=2.8.2,<3.0.0",
+    "pyside6-essentials>=6.10.0,<7.0.0",
+    "pytesseract>=0.3.13,<1.0.0",
+    "pyyaml>=6.0.2,<7.0.0"
+]
 
-[tool.poetry.dependencies]
-python = ">=3.12,<3.14"
-pillow = "^10.4.0 || ^11.0.0 || ^12.0.0"
-pydantic = "^2.8.2"
-pyside6-essentials = "^6.8.1,<6.8.1.1"
-pytesseract = "^0.3.13"
-pyyaml = "^6.0.2"
+[project.optional-dependencies]
+dev = [
+    "pyinstaller>=6.0.0,<7.0.0",
+    "pytest>=8.3.3,<10.0.0",
+    "pytest-cov>=4.1.0,<8.0.0",
+    "pytest-mock>=3.14.0,<4.0.0",
+    "pytest-qt>=4.4.0,<5.0.0",
+    "pytest-xdist>=3.6.1,<4.0.0",
+    "pytest-xvfb>=3.0.0,<4.0.0",
+    "ruff>=0.2.0,<1.0.0",
+    "tox>=4.0.0,<5.0.0"
+]
 
-[tool.poetry.group.dev.dependencies]
-pyinstaller = "^6.0.0"
-pytest = "^8.3.3 || ^9.0.0"
-pytest-cov = "^4.1.0 || ^5.0.0 || ^6.0.0 || ^7.0.0"
-pytest-mock = "^3.14.0"
-pytest-qt = "^4.4.0"
-pytest-xdist = "^3.6.1"
-pytest-xvfb = "^3.0.0"
-ruff = "^0.2.0 || ^0.3.0 || ^0.6.0 || ^0.7.0 || ^0.11.0 || ^0.12.0 || ^0.13.0"
-tox = "^4.0.0"
+[project.urls]
+Homepage = "https://github.com/gridhead/gi-loadouts"
+Repository = "https://github.com/gridhead/gi-loadouts"
+Documentation = "https://github.com/gridhead/gi-loadouts/blob/main/README.md"
+
+[project.scripts]
+gi-loadouts = "gi_loadouts.main:main"
 
 [tool.ruff]
 line-length = 100
@@ -69,11 +85,11 @@ select = ["E", "F", "W", "I", "S", "B", "UP"]
 "test/*" = ["S101", "E501", "S311"]
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
 
-[tool.poetry.scripts]
-gi-loadouts = "gi_loadouts.main:main"
+[tool.setuptools.packages.find]
+include = ["gi_loadouts*"]
 
 [tool.coverage]
 report = { show_missing = true }

@@ -12,7 +12,7 @@ Before contributing, ensure you have:
 
 - **Python 3.12** or greater version
 
-- **Poetry** for dependency management
+- **UV** for dependency management
 
 - **Git** for version control
 
@@ -354,7 +354,7 @@ user experience.
 While informing the maintainers of unintended observations, please include the 
 following information
 
-- **Environment information** like the operating system, Python version, Poetry
+- **Environment information** like the operating system, Python version, UV
   version, Tesseract version etc
 
 - **Reproducible steps** to help the maintainers encounter the same unintended

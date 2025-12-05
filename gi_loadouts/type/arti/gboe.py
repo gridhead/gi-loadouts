@@ -1,5 +1,3 @@
-from typing import Optional
-
 from .base import Artifact, MainStatType_GBOE, SecoStat
 from .stat import (
     attack_perc,
@@ -16,11 +14,11 @@ class GBOE(Artifact):
     Artifact primitive for a "Goblet of Eonothem" artifact
     """
 
-    stat_name: Optional[MainStatType_GBOE] = MainStatType_GBOE.none
-    secostat_a: Optional[SecoStat] = SecoStat()
-    secostat_b: Optional[SecoStat] = SecoStat()
-    secostat_c: Optional[SecoStat] = SecoStat()
-    secostat_d: Optional[SecoStat] = SecoStat()
+    stat_name: MainStatType_GBOE | None = MainStatType_GBOE.none
+    secostat_a: SecoStat | None = SecoStat()
+    secostat_b: SecoStat | None = SecoStat()
+    secostat_c: SecoStat | None = SecoStat()
+    secostat_d: SecoStat | None = SecoStat()
 
     @property
     def stat_data(self) -> float:

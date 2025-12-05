@@ -25,10 +25,7 @@ jobs:
           python-version: 3.12 || 3.13
 
       - name: Install the base dependencies of the project
-        run: python3 -m pip install --upgrade poetry pyinstaller
-
-      - name: Disable using virtual environments with Poetry
-        run: poetry config virtualenvs.create false
+        run: python3 -m pip install --upgrade uv pyinstaller
 
       - name: Ignore warnings about dubious repository ownership
         run: git config --global --add safe.directory .
@@ -37,10 +34,10 @@ jobs:
         run: (Get-Content -Raw pyproject.toml) -replace 'version\s*=\s*"([^"]*)"', ('version = "$1+' + (git rev-parse --short=8 HEAD) + '"') | Set-Content pyproject.toml
 
       - name: Install the runtime dependencies of the project
-        run: python3 -m poetry install
+        run: uv sync --extra dev
 
       - name: Build the project binary for "Loadouts for Genshin Impact"
-        run: pyinstaller gi_loadouts/main.py --clean --onefile --name gi-loadouts-$("$env:GITHUB_HASH".SubString(0, 8)) --windowed --icon assets/icon/icon.ico
+        run: uv run pyinstaller gi_loadouts/main.py --clean --onefile --name gi-loadouts-$("$env:GITHUB_HASH".SubString(0, 8)) --windowed --icon assets/icon/icon.ico
         env:
           GITHUB_HASH: ${{ github.sha }}
 

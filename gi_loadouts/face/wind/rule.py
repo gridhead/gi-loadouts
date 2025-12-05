@@ -716,5 +716,5 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
 
         :return:
         """
-        for current_widget, next_widget in zip(tab_order_wind, tab_order_wind[1:]):
+        for current_widget, next_widget in zip(tab_order_wind, tab_order_wind[1:], strict=False):
             self.setTabOrder(getattr(self, current_widget), getattr(self, next_widget))

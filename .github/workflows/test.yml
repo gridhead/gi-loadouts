@@ -52,7 +52,7 @@ jobs:
 
       - name: Install the base dependencies
         run: |
-             python3 -m pip install --upgrade poetry tox
+             python3 -m pip install --upgrade uv tox
 
       - name: Check the functionality of the code
         run: |

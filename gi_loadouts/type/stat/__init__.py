@@ -1,5 +1,4 @@
 from enum import Enum
-from typing import Optional
 
 from pydantic import BaseModel
 
@@ -47,8 +46,8 @@ class ATTR(BaseModel):
     Attribute primitive
     """
 
-    stat_name: Optional[STAT] = STAT.none
-    stat_data: Optional[float] = 0.0
+    stat_name: STAT | None = STAT.none
+    stat_data: float | None = 0.0
 
 
 __revmap__ = {
