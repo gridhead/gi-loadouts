@@ -59,6 +59,7 @@ class CharName(str, Enum):
     iansan = "Iansan"
     ifa = "Ifa"
     ineffa = "Ineffa"
+    jahoda = "Jahoda"
     jean = "Jean"
     kachina = "Kachina"
     kaedehara_kazuha = "Kaedehara Kazuha"

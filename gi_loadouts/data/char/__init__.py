@@ -41,6 +41,7 @@ from .hu_tao import HuTao
 from .iansan import Iansan
 from .ifa import Ifa
 from .ineffa import Ineffa
+from .jahoda import Jahoda
 from .jean import Jean
 from .kachina import Kachina
 from .kaedehara_kazuha import KaedeharaKazuha
@@ -151,6 +152,7 @@ __charmaps__ = {
     "Iansan": Iansan,
     "Ifa": Ifa,
     "Ineffa": Ineffa,
+    "Jahoda": Jahoda,
     "Jean": Jean,
     "Kachina": Kachina,
     "Kaedehara Kazuha": KaedeharaKazuha,
