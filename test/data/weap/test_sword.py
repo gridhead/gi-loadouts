@@ -510,6 +510,16 @@ from test import verify_accuracy
             32.1,
             id="data.weap.swords: Sword of Descension",
         ),
+        pytest.param(
+            "Athame Artis",
+            5,
+            2,
+            "Level 80/90 (Rank 6)",
+            563,
+            WeaponStatType.critical_rate_perc,
+            30.2,
+            id="data.weap.swords: Athame Artis",
+        ),
     ],
 )
 def test_sword(
