@@ -401,6 +401,16 @@ from test import verify_accuracy
             id="data.weap.bows: Range Gauge",
         ),
         pytest.param(
+            "Rainbow Serpent's Rain Bow",
+            4,
+            2,
+            "Level 80/90 (Rank 6)",
+            475,
+            WeaponStatType.energy_recharge_perc,
+            41.9,
+            id="data.weap.bows: Rainbow Serpent's Rain Bow",
+        ),
+        pytest.param(
             "Sacrificial Bow",
             4,
             3,
