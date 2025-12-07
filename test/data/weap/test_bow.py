@@ -430,6 +430,16 @@ from test import verify_accuracy
             20.1,
             id="data.weap.bows: Skyward Harp",
         ),
+        pytest.param(
+            "The Daybreak Chronicles",
+            5,
+            3,
+            "Level 80/90 (Rank 6)",
+            621,
+            WeaponStatType.critical_damage_perc,
+            40.2,
+            id="data.weap.bows: The Daybreak Chronicles",
+        ),
     ],
 )
 def test_bow(
