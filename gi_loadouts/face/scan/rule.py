@@ -513,5 +513,5 @@ class Rule(QDialog, Ui_scan, Dialog):
 
         :return:
         """
-        for current_widget, next_widget in zip(tab_order_scan, tab_order_scan[1:]):
+        for current_widget, next_widget in zip(tab_order_scan, tab_order_scan[1:], strict=False):
             self.setTabOrder(getattr(self, current_widget), getattr(self, next_widget))

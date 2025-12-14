@@ -1,5 +1,3 @@
-from typing import Optional
-
 from .base import Artifact, MainStatType_PMOD, SecoStat
 from .stat import attack
 
@@ -9,11 +7,11 @@ class PMOD(Artifact):
     Artifact primitive for a "Plume of Death" artifact
     """
 
-    stat_name: Optional[MainStatType_PMOD] = MainStatType_PMOD.attack
-    secostat_a: Optional[SecoStat] = SecoStat()
-    secostat_b: Optional[SecoStat] = SecoStat()
-    secostat_c: Optional[SecoStat] = SecoStat()
-    secostat_d: Optional[SecoStat] = SecoStat()
+    stat_name: MainStatType_PMOD | None = MainStatType_PMOD.attack
+    secostat_a: SecoStat | None = SecoStat()
+    secostat_b: SecoStat | None = SecoStat()
+    secostat_c: SecoStat | None = SecoStat()
+    secostat_d: SecoStat | None = SecoStat()
 
     @property
     def stat_data(self) -> float:

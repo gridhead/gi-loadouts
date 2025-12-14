@@ -1,5 +1,4 @@
 from enum import Enum
-from typing import Optional
 
 from pydantic import BaseModel
 
@@ -42,8 +41,8 @@ class WeaponStat(BaseModel):
     Data class for statistics of a weapon
     """
 
-    stat_name: Optional[WeaponStatType] = WeaponStatType.none
-    stat_data: Optional[float] = 0
+    stat_name: WeaponStatType | None = WeaponStatType.none
+    stat_data: float | None = 0
 
 
 class WeaponType(str, Enum):
@@ -75,10 +74,10 @@ class Weapon(BaseModel):
     """
 
     name: str = ""
-    type: Optional[WeaponType] = WeaponType.none
-    levl: Optional[Level] = Level.Level_01_20_Rank_0
-    tier: Optional[Tier] = Tier.Tier_1
-    rare: Optional[Rare] = Rare.Star_1
+    type: WeaponType | None = WeaponType.none
+    levl: Level | None = Level.Level_01_20_Rank_0
+    tier: Tier | None = Tier.Tier_1
+    rare: Rare | None = Rare.Star_1
     stat_list: list[WeaponStat] = []
     refi_list: list[str] = []
     refi_stat: list[WeaponStat] = []

@@ -1,5 +1,3 @@
-from typing import Optional
-
 from .base import Artifact, MainStatType_FWOL, SecoStat
 from .stat import health_points
 
@@ -9,11 +7,11 @@ class FWOL(Artifact):
     Artifact primitive for a "Flower of Life" artifact
     """
 
-    stat_name: Optional[MainStatType_FWOL] = MainStatType_FWOL.health_points
-    secostat_a: Optional[SecoStat] = SecoStat()
-    secostat_b: Optional[SecoStat] = SecoStat()
-    secostat_c: Optional[SecoStat] = SecoStat()
-    secostat_d: Optional[SecoStat] = SecoStat()
+    stat_name: MainStatType_FWOL | None = MainStatType_FWOL.health_points
+    secostat_a: SecoStat | None = SecoStat()
+    secostat_b: SecoStat | None = SecoStat()
+    secostat_c: SecoStat | None = SecoStat()
+    secostat_d: SecoStat | None = SecoStat()
 
     @property
     def stat_data(self) -> float:

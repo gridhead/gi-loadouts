@@ -1,5 +1,4 @@
 from enum import Enum
-from typing import Optional
 
 from pydantic import BaseModel
 
@@ -95,8 +94,8 @@ class SecoStat(BaseModel):
     Data class for secondary stat of an artifact
     """
 
-    stat_name: Optional[SecoStatType] = SecoStatType.none
-    stat_data: Optional[float] = 0
+    stat_name: SecoStatType | None = SecoStatType.none
+    stat_data: float | None = 0
 
 
 class Artifact(BaseModel):
@@ -109,5 +108,5 @@ class Artifact(BaseModel):
     __pairtext__: str = ""
     __quaddata__: list[ATTR] = []
     __quadtext__: str = ""
-    levl: Optional[int] = 0
-    rare: Optional[int] = 1
+    levl: int | None = 0
+    rare: int | None = 1

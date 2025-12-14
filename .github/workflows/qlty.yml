@@ -21,11 +21,11 @@ jobs:
 
       - name: Install the base dependencies
         run: |
-             python3 -m pip install --upgrade poetry tox
+             python3 -m pip install --upgrade uv tox
 
       - name: Check the correctness of the project config
         run: |
-             poetry check
+             uv sync --extra dev
 
       - name: Check the quality of the code
         run: |
