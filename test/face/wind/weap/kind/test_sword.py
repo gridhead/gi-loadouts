@@ -371,6 +371,16 @@ from test import verify_accuracy
             id="face.wind.rule: Configuring weapon - Sword - Summit Shaper",
         ),
         pytest.param(
+            "Athame Artis",
+            5,
+            "Level 80/90 (Rank 6)",
+            563,
+            WeaponStatType.critical_rate_perc,
+            30.2,
+            5,
+            id="face.wind.rule: Configuring weapon - Sword - Athame Artis",
+        ),
+        pytest.param(
             "Traveler's Handy Sword",
             3,
             "Level 80/90 (Rank 6)",

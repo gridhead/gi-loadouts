@@ -1,5 +1,6 @@
 from . import (
     absn,
+    aeas,
     ankg,
     aqfv,
     azlt,
@@ -55,6 +56,7 @@ SwordsDict = {
     "Absolution": absn.Absolution,
     "Amenoma Kageuchi": ankg.AmenomaKageuchi,
     "Aquila Favonia": aqfv.AquilaFavonia,
+    "Athame Artis": aeas.AthameArtis,
     "Azurelight": azlt.Azurelight,
     "Blackcliff Longsword": bcls.BlackcliffLongsword,
     "Calamity of Eshu": cmoe.CalamityOfEshu,
