@@ -33,6 +33,11 @@ classifiers = [
     "Topic :: Games/Entertainment",
     "Topic :: Utilities",
     "Typing :: Typed"
+
+]
+include = [
+    { path = "test", format = "sdist" },
+    { path = "tox.ini", format = "sdist" },
 ]
 dependencies = [
     "pillow>=10.4.0,<13.0.0",
