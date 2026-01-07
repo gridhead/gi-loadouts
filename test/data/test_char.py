@@ -625,6 +625,25 @@ from test import verify_accuracy
             id="data.char: Ineffa",
         ),
         pytest.param(
+            "Jahoda",
+            "bow",
+            4,
+            "anemo",
+            STAT.healing_bonus_perc,
+            {
+                "Level 40/50 (Rank 2)": (4446.434113428571, 102.80157299999999, 267.422325, 4.6),
+                "Level 80/90 (Rank 6)": (
+                    8978.014847800001,
+                    207.57217319999998,
+                    539.96562375,
+                    18.5,
+                ),
+                "Level 95/95 (Rank 6)": (9979.2579946, 251.457318, 600.18349125, 18.5),
+                "Level 100/100 (Rank 6)": (10313.2752964, 279.9162828, 620.2723275, 18.5),
+            },
+            id="data.char: Jahoda",
+        ),
+        pytest.param(
             "Jean",
             "sword",
             5,
