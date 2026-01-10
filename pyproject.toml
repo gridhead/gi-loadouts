@@ -1,6 +1,6 @@
 [project]
 name = "gi-loadouts"
-version = "0.1.12"
+version = "0.1.13"
 description = "Loadouts for Genshin Impact"
 authors = [
     {name = "Akashdeep Dhar", email = "akashdeep.dhar@gmail.com"},
