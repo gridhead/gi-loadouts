@@ -501,10 +501,10 @@ ensure that the Tesseract OCR application is installed and configured properly.
 4.  Install the project dependencies using UV and start the application 
     software.
     ```
-    (venv) $ uv sync --extra dev
+    (venv) $ uv sync --active --extra dev
     ```
     ```
-    (venv) $ uv run gi-loadouts
+    (venv) $ uv run --active gi-loadouts
     ```
 
 #### On Microsoft Windows
@@ -538,10 +538,10 @@ ensure that the Tesseract OCR application is installed and configured properly.
 4.  Install the project dependencies using UV and start the application 
     software.
     ```
-    (venv) PS > uv sync --extra dev
+    (venv) PS > uv sync --active --extra dev
     ```
     ```
-    (venv) PS > uv run gi-loadouts
+    (venv) PS > uv run --active gi-loadouts
     ```
 
 ## Contribution
