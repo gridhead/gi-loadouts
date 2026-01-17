@@ -10,6 +10,7 @@ from . import (
     bvht,
     bzst,
     cwof,
+    dcrw,
     dfwl,
     dspc,
     dwmm,
@@ -60,6 +61,20 @@ from . import (
 )
 
 __artilist__ = {
+    dcrw.team.__teamname__: ArtifactTeam(
+        name=dcrw.team.__teamname__,
+        fwol=dcrw.fwol(),
+        pmod=dcrw.pmod(),
+        sdoe=dcrw.sdoe(),
+        gboe=dcrw.gboe(),
+        ccol=dcrw.ccol(),
+        pairdata=dcrw.team.__pairdata__,
+        pairtext=dcrw.team.__pairtext__,
+        quaddata=dcrw.team.__quaddata__,
+        quadtext=dcrw.team.__quadtext__,
+        rare=[Rare.Star_4, Rare.Star_5],
+        file=dcrw.__name__.split(".")[-1],
+    ),
     advn.team.__teamname__: ArtifactTeam(
         name=advn.team.__teamname__,
         fwol=advn.fwol(),
