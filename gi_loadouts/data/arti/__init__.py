@@ -5,6 +5,7 @@ from ...type.rare import Rare
 from . import (
     acpt,
     advn,
+    amam,
     bscv,
     bskr,
     bvht,
@@ -102,6 +103,20 @@ __artilist__ = {
         quadtext=acpt.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
         file=acpt.__name__.split(".")[-1],
+    ),
+    amam.team.__teamname__: ArtifactTeam(
+        name=amam.team.__teamname__,
+        fwol=amam.fwol(),
+        pmod=amam.pmod(),
+        sdoe=amam.sdoe(),
+        gboe=amam.gboe(),
+        ccol=amam.ccol(),
+        pairdata=amam.team.__pairdata__,
+        pairtext=amam.team.__pairtext__,
+        quaddata=amam.team.__quaddata__,
+        quadtext=amam.team.__quadtext__,
+        rare=[Rare.Star_4, Rare.Star_5],
+        file=amam.__name__.split(".")[-1],
     ),
     bskr.team.__teamname__: ArtifactTeam(
         name=bskr.team.__teamname__,
