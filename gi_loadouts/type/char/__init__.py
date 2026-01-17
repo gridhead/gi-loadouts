@@ -37,6 +37,7 @@ class CharName(str, Enum):
     citlali = "Citlali"
     clorinde = "Clorinde"
     collei = "Collei"
+    columbina = "Columbina"
     cyno = "Cyno"
     dahlia = "Dahlia"
     dehya = "Dehya"
