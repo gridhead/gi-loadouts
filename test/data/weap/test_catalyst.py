@@ -500,6 +500,16 @@ from test import verify_accuracy
             241,
             id="data.weap.catalysts: Nightweaver's Looking Glass",
         ),
+        pytest.param(
+            "Nocturne's Curtain Call",
+            5,
+            1,
+            "Level 80/90 (Rank 6)",
+            506,
+            WeaponStatType.critical_damage_perc,
+            80.4,
+            id="data.weap.catalysts: Nocturne's Curtain Call",
+        ),
     ],
 )
 def test_catalyst(
