@@ -312,6 +312,20 @@ from test import verify_accuracy
             id="data.char: Collei",
         ),
         pytest.param(
+            "Columbina",
+            "catalyst",
+            5,
+            "hydro",
+            STAT.critical_rate_perc,
+            {
+                "Level 40/50 (Rank 2)": (6604.93, 43.00, 231.44, 4.8),
+                "Level 80/90 (Rank 6)": (13662.08, 88.95, 478.73, 19.2),
+                "Level 95/95 (Rank 6)": (15216.75, 106.43, 533.21, 19.2),
+                "Level 100/100 (Rank 6)": (15739.55, 117.20, 551.53, 19.2),
+            },
+            id="data.char: Columbina",
+        ),
+        pytest.param(
             "Cyno",
             "polearm",
             5,
