@@ -9,6 +9,20 @@ from gi_loadouts.type.stat import ATTR, STAT
     "name, pair, quad, rare, team",
     [
         pytest.param(
+            "A Day Carved From Rising Winds",
+            [ATTR(stat_name=STAT.attack_perc, stat_data=18)],
+            [],
+            [4, 5],
+            (
+                "Windborne Flower's Spruchdichtung",
+                "Dawn's Brilliant Oath",
+                "A Note in Spring's Leich",
+                "Heldenepos's Unspoken Tale",
+                "Minnesang of Love and Lament",
+            ),
+            id="data.arti: A Day Carved From Rising Winds",
+        ),
+        pytest.param(
             "Adventurer",
             [ATTR(stat_name=STAT.health_points, stat_data=1000)],
             [],

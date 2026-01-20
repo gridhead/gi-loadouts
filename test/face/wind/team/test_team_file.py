@@ -194,8 +194,10 @@ def test_team_load_nope(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
     Confirm if the user interface elements change accordingly
     """
     for area in actual.keys():
-        assert getattr(runner, f"arti_{area}_type").currentText() == "Adventurer"
-        assert getattr(runner, f"arti_{area}_rare").currentText() == "Star 1"
+        assert (
+            getattr(runner, f"arti_{area}_type").currentText() == "A Day Carved From Rising Winds"
+        )
+        assert getattr(runner, f"arti_{area}_rare").currentText() == "Star 4"
         assert getattr(runner, f"arti_{area}_levl").currentText() == "Level 00"
 
 
