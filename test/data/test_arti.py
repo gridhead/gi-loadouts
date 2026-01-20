@@ -51,6 +51,20 @@ from gi_loadouts.type.stat import ATTR, STAT
             id="data.arti: Archaic Petra",
         ),
         pytest.param(
+            "Aubade of Morningstar and Moon",
+            [ATTR(stat_name=STAT.elemental_mastery, stat_data=80)],
+            [],
+            [4, 5],
+            (
+                "Moonlit Offering's Opulent Dream",
+                "Moonlit Offering's Parting Light",
+                "Moonlit Offering's Final Hour",
+                "Moonlit Offering's Libation",
+                "Moonlit Offering's Silver Crown",
+            ),
+            id="data.arti: Aubade of Morningstar and Moon",
+        ),
+        pytest.param(
             "Berserker",
             [ATTR(stat_name=STAT.critical_rate_perc, stat_data=12)],
             [],
