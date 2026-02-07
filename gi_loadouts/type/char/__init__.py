@@ -126,6 +126,7 @@ class CharName(str, Enum):
     yumemizuki_mizuki = "Yumemizuki Mizuki"
     yun_jin = "Yun Jin"
     zhongli = "Zhongli"
+    zibai = "Zibai"
 
 
 class SecoStat(BaseModel):
