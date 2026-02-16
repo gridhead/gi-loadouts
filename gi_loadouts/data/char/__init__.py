@@ -41,6 +41,7 @@ from .gorou import Gorou
 from .hu_tao import HuTao
 from .iansan import Iansan
 from .ifa import Ifa
+from .illuga import Illuga
 from .ineffa import Ineffa
 from .jahoda import Jahoda
 from .jean import Jean
@@ -154,6 +155,7 @@ __charmaps__ = {
     "Hu Tao": HuTao,
     "Iansan": Iansan,
     "Ifa": Ifa,
+    "Illuga": Illuga,
     "Ineffa": Ineffa,
     "Jahoda": Jahoda,
     "Jean": Jean,
