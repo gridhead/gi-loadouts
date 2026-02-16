@@ -91,6 +91,16 @@ from test import verify_accuracy
             id="face.wind.rule: Configuring weapon - Sword - Key of Khaj-Nisut",
         ),
         pytest.param(
+            "Lightbearing Moonshard",
+            5,
+            "Level 80/90 (Rank 6)",
+            506,
+            WeaponStatType.critical_damage_perc,
+            80.4,
+            5,
+            id="face.wind.rule: Configuring weapon - Sword - Lightbearing Moonshard",
+        ),
+        pytest.param(
             "Light of Foliar Incision",
             5,
             "Level 80/90 (Rank 6)",
