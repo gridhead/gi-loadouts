@@ -1563,6 +1563,20 @@ from test import verify_accuracy
             },
             id="data.char: Zhongli",
         ),
+        pytest.param(
+            "Zibai",
+            "sword",
+            5,
+            "geo",
+            STAT.critical_damage_perc,
+            {
+                "Level 40/50 (Rank 2)": (5806.84, 101.05, 430.07, 9.6),
+                "Level 80/90 (Rank 6)": (12011.24, 209.02, 889.59, 38.4),
+                "Level 95/95 (Rank 6)": (13378.06, 250.12, 990.82, 38.4),
+                "Level 100/100 (Rank 6)": (13837.69, 275.41, 1024.86, 38.4),
+            },
+            id="data.char: Zibai",
+        ),
     ],
 )
 def test_char(name: str, weap: str, rare: int, vson: int, seco: STAT, data: dict) -> None:

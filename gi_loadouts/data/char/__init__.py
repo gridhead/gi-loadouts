@@ -108,6 +108,7 @@ from .yoimiya import Yoimiya
 from .yumemizuki_mizuki import YumemizukiMizuki
 from .yun_jin import YunJin
 from .zhongli import Zhongli
+from .zibai import Zibai
 
 __charmaps__ = {
     "Aether": Aether,
@@ -220,4 +221,5 @@ __charmaps__ = {
     "Yumemizuki Mizuki": YumemizukiMizuki,
     "Yun Jin": YunJin,
     "Zhongli": Zhongli,
+    "Zibai": Zibai,
 }
