@@ -91,6 +91,16 @@ from test import verify_accuracy
             id="data.weap.swords: Key of Khaj-Nisut",
         ),
         pytest.param(
+            "Lightbearing Moonshard",
+            5,
+            1,
+            "Level 80/90 (Rank 6)",
+            506,
+            WeaponStatType.critical_damage_perc,
+            80.4,
+            id="data.weap.swords: Lightbearing Moonshard",
+        ),
+        pytest.param(
             "Light of Foliar Incision",
             5,
             1,
