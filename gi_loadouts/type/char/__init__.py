@@ -59,6 +59,7 @@ class CharName(str, Enum):
     hu_tao = "Hu Tao"
     iansan = "Iansan"
     ifa = "Ifa"
+    illuga = "Illuga"
     ineffa = "Ineffa"
     jahoda = "Jahoda"
     jean = "Jean"

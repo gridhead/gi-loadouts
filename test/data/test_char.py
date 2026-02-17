@@ -625,6 +625,20 @@ from test import verify_accuracy
             id="data.char: Ifa",
         ),
         pytest.param(
+            "Illuga",
+            "polearm",
+            4,
+            "geo",
+            STAT.elemental_mastery,
+            {
+                "Level 40/50 (Rank 2)": (5514.18, 88.12, 375.02, 24.0),
+                "Level 80/90 (Rank 6)": (11133.95, 177.92, 757.22, 96.0),
+                "Level 95/95 (Rank 6)": (12375.63, 215.53, 841.67, 96.0),
+                "Level 100/100 (Rank 6)": (12789.86, 239.93, 869.84, 96.0),
+            },
+            id="data.char: Illuga",
+        ),
+        pytest.param(
             "Ineffa",
             "polearm",
             5,
