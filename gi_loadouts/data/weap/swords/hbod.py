@@ -18,11 +18,4 @@ class HarbingerofDawn(Sword):
         "When HP is above 90%, increases CRIT Rate by 24.5%.",
         "When HP is above 90%, increases CRIT Rate by 28%.",
     ]
-    refi_stat: list[WeaponStat] = [
-        [WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=14.0)],
-        [WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=17.5)],
-        [WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=21.0)],
-        [WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=24.5)],
-        [WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=28.0)],
-    ]
     file: str = "hbod"
