@@ -132,7 +132,7 @@ including but not limited to those outlined below.
     its intended functionality to work.
 
 With an extensive suite of 
-[**over 1420 diverse functionality tests**](https://github.com/gridhead/gi-loadouts/tree/main/test)
+[**over 1500 diverse functionality tests**](https://github.com/gridhead/gi-loadouts/tree/main/test)
 and
 [**impeccable 100% source code coverage**](https://github.com/gridhead/gi-loadouts/blob/main/.github/workflows/test.yml),
 we proudly invite auditors and analysts from 
