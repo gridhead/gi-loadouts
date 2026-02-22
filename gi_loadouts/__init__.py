@@ -3,7 +3,7 @@ from importlib.metadata import metadata
 __metadict__ = metadata("gi-loadouts").json
 __versdata__ = __metadict__.get("version")
 
-__gicompat_vers__ = "6.2"
+__gicompat_vers__ = "6.3"
 __gicompat_part__ = "2"
 
 __donation__ = "https://github.com/sponsors/gridhead"
