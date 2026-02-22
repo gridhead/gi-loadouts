@@ -1,4 +1,4 @@
-from enum import Enum
+from enum import Enum, StrEnum
 from uuid import uuid4
 
 from pydantic import BaseModel
@@ -18,7 +18,7 @@ from ..rare import Rare
 from ..stat import ATTR, __revmap__
 
 
-class ArtiArea(str, Enum):
+class ArtiArea(StrEnum):
     """
     Set of possible artifact areas
     """

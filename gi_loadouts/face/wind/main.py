@@ -187,13 +187,10 @@ class MainWindow(Rule):
             ),
         ]:
             item[1].currentTextChanged.connect(
-                lambda _,
-                a_type=item[1],
-                a_rare=item[2],
-                a_name=item[6],
-                a_back=item[8],
-                a_id=item[5]: self.change_rarity_backdrop_by_changing_type(
-                    a_type, a_rare, a_name, a_back, a_id
+                lambda _, a_type=item[1], a_rare=item[2], a_name=item[6], a_back=item[8], a_id=item[5]: (
+                    self.change_rarity_backdrop_by_changing_type(
+                        a_type, a_rare, a_name, a_back, a_id
+                    )
                 )
             )
             item[1].currentTextChanged.connect(
@@ -205,49 +202,36 @@ class MainWindow(Rule):
                 lambda _, a_type=item[1], a_id=item[5]: self.remove_artifact(a_type, a_id)
             )
             item[0].currentTextChanged.connect(
-                lambda _,
-                a_levl=item[0],
-                a_type=item[1],
-                a_rare=item[2],
-                a_name=item[3],
-                a_data=item[4],
-                a_id=item[5]: self.change_data_by_changing_level_or_stat(
-                    a_levl, a_type, a_rare, a_name, a_data, a_id
+                lambda _, a_levl=item[0], a_type=item[1], a_rare=item[2], a_name=item[3], a_data=item[4], a_id=item[5]: (
+                    self.change_data_by_changing_level_or_stat(
+                        a_levl, a_type, a_rare, a_name, a_data, a_id
+                    )
                 )
             )
             item[3].currentTextChanged.connect(
-                lambda _,
-                a_levl=item[0],
-                a_type=item[1],
-                a_rare=item[2],
-                a_name=item[3],
-                a_data=item[4],
-                a_id=item[5]: self.change_data_by_changing_level_or_stat(
-                    a_levl, a_type, a_rare, a_name, a_data, a_id
+                lambda _, a_levl=item[0], a_type=item[1], a_rare=item[2], a_name=item[3], a_data=item[4], a_id=item[5]: (
+                    self.change_data_by_changing_level_or_stat(
+                        a_levl, a_type, a_rare, a_name, a_data, a_id
+                    )
                 )
             )
             item[2].currentTextChanged.connect(
-                lambda _,
-                a_rare=item[2],
-                a_name=item[3],
-                a_id=item[5]: self.change_artifact_substats_by_changing_rarity_or_mainstat(
-                    a_rare, a_name, a_id
+                lambda _, a_rare=item[2], a_name=item[3], a_id=item[5]: (
+                    self.change_artifact_substats_by_changing_rarity_or_mainstat(
+                        a_rare, a_name, a_id
+                    )
                 )
             )
             item[3].currentTextChanged.connect(
-                lambda _,
-                a_rare=item[2],
-                a_name=item[3],
-                a_id=item[5]: self.change_artifact_substats_by_changing_rarity_or_mainstat(
-                    a_rare, a_name, a_id
+                lambda _, a_rare=item[2], a_name=item[3], a_id=item[5]: (
+                    self.change_artifact_substats_by_changing_rarity_or_mainstat(
+                        a_rare, a_name, a_id
+                    )
                 )
             )
             item[2].currentTextChanged.connect(
-                lambda _,
-                a_levl=item[0],
-                a_back=item[7],
-                a_rare=item[2]: self.change_levels_backdrop_by_changing_rarity(
-                    a_levl, a_back, a_rare
+                lambda _, a_levl=item[0], a_back=item[7], a_rare=item[2]: (
+                    self.change_levels_backdrop_by_changing_rarity(a_levl, a_back, a_rare)
                 )
             )
         for part in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:

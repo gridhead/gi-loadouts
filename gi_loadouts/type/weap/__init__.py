@@ -1,4 +1,4 @@
-from enum import Enum
+from enum import Enum, StrEnum
 
 from pydantic import BaseModel
 
@@ -45,7 +45,7 @@ class WeaponStat(BaseModel):
     stat_data: float | None = 0
 
 
-class WeaponType(str, Enum):
+class WeaponType(StrEnum):
     """
     Set of weapon types
     """
