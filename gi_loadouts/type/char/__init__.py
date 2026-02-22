@@ -1,4 +1,4 @@
-from enum import Enum
+from enum import StrEnum
 
 from pydantic import BaseModel
 
@@ -11,7 +11,7 @@ from .cons import Cons
 from .mult import Mult, Secs
 
 
-class CharName(str, Enum):
+class CharName(StrEnum):
     """
     Set of characters possible
     """
