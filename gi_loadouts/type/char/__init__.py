@@ -110,6 +110,7 @@ class CharName(StrEnum):
     thoma = "Thoma"
     tighnari = "Tighnari"
     varesa = "Varesa"
+    varka = "Varka"
     venti = "Venti"
     wanderer = "Wanderer"
     wriothesley = "Wriothesley"
