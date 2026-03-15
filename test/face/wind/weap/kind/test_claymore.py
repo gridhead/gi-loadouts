@@ -271,6 +271,16 @@ from test import verify_accuracy
             id="face.wind.rule: Configuring weapon - Claymore - The Unforged",
         ),
         pytest.param(
+            "Gest of the Mighty Wolf",
+            5,
+            "Level 80/90 (Rank 6)",
+            563,
+            WeaponStatType.critical_rate_perc,
+            30.2,
+            5,
+            id="face.wind.rule: Configuring weapon - Claymore - Gest of the Mighty Wolf",
+        ),
+        pytest.param(
             "Talking Stick",
             4,
             "Level 80/90 (Rank 6)",
