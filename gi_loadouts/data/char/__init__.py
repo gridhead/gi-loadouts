@@ -92,6 +92,7 @@ from .tartaglia import Tartaglia
 from .thoma import Thoma
 from .tighnari import Tighnari
 from .varesa import Varesa
+from .varka import Varka
 from .venti import Venti
 from .wanderer import Wanderer
 from .wriothesley import Wriothesley
@@ -206,6 +207,7 @@ __charmaps__ = {
     "Thoma": Thoma,
     "Tighnari": Tighnari,
     "Varesa": Varesa,
+    "Varka": Varka,
     "Venti": Venti,
     "Wanderer": Wanderer,
     "Wriothesley": Wriothesley,
