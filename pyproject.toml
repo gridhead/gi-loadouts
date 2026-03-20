@@ -91,6 +91,9 @@ build-backend = "setuptools.build_meta"
 [tool.setuptools.packages.find]
 include = ["gi_loadouts*"]
 
+[tool.setuptools.package-data]
+gi_loadouts = ["pack/*"]
+
 [tool.coverage]
 report = { show_missing = true }
 
