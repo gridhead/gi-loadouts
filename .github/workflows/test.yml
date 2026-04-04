@@ -1,7 +1,7 @@
 ---
 name: Checking code functionality
 
-on: [push, pull_request]
+on: push
 
 jobs:
 
@@ -18,6 +18,8 @@ jobs:
             container: "fedora:40"
           - tox-env: "py313-dist"
             container: "fedora:42"
+          - tox-env: "py314-dist"
+            container: "fedora:43"
 
     container: ${{ matrix.container }}
 
