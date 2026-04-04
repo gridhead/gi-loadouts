@@ -24,7 +24,12 @@ class MainWindow(Rule):
             )
 
     def __del__(self) -> None:
-        kill_temp_file()
+        try:
+            kill_temp_file()
+        except Exception:  # pragma: nocover
+            # Special exception for executable binaries generated from Nuitka
+            # Module-level references can be None during interpreter shutdown
+            pass
 
     def initialize_elements(self) -> None:
         """
