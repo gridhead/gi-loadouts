@@ -48,7 +48,6 @@ class MainWindow(Rule):
                 self.arti_fwol_name_main,
                 self.arti_fwol_data_main,
                 "fwol",
-                self.arti_fwol_data_main,
                 self.arti_fwol_type_name,
                 self.arti_fwol_head_area,
                 self.arti_fwol_head_icon,
@@ -60,7 +59,6 @@ class MainWindow(Rule):
                 self.arti_pmod_name_main,
                 self.arti_pmod_data_main,
                 "pmod",
-                self.arti_pmod_data_main,
                 self.arti_pmod_type_name,
                 self.arti_pmod_head_area,
                 self.arti_pmod_head_icon,
@@ -72,7 +70,6 @@ class MainWindow(Rule):
                 self.arti_sdoe_name_main,
                 self.arti_sdoe_data_main,
                 "sdoe",
-                self.arti_sdoe_data_main,
                 self.arti_sdoe_type_name,
                 self.arti_sdoe_head_area,
                 self.arti_sdoe_head_icon,
@@ -84,7 +81,6 @@ class MainWindow(Rule):
                 self.arti_gboe_name_main,
                 self.arti_gboe_data_main,
                 "gboe",
-                self.arti_gboe_data_main,
                 self.arti_gboe_type_name,
                 self.arti_gboe_head_area,
                 self.arti_gboe_head_icon,
@@ -96,21 +92,20 @@ class MainWindow(Rule):
                 self.arti_ccol_name_main,
                 self.arti_ccol_data_main,
                 "ccol",
-                self.arti_ccol_data_main,
                 self.arti_ccol_type_name,
                 self.arti_ccol_head_area,
                 self.arti_ccol_head_icon,
             ),
         ]:
             self.change_rarity_backdrop_by_changing_type(
-                item[1], item[2], item[6], item[9], item[5]
+                item[1], item[2], item[6], item[8], item[5]
             )
             self.change_artifact_team_by_changing_type(item[1], item[5])
             self.change_data_by_changing_level_or_stat(
                 item[0], item[1], item[2], item[3], item[4], item[5]
             )
             self.change_artifact_substats_by_changing_rarity_or_mainstat(item[2], item[3], item[5])
-            self.change_levels_backdrop_by_changing_rarity(item[0], item[8], item[2])
+            self.change_levels_backdrop_by_changing_rarity(item[0], item[7], item[2])
         self.regulate_taborder()
         self.statarea.showMessage("Ready.")
 

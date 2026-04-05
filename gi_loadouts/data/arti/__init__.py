@@ -62,6 +62,20 @@ from . import (
 )
 
 __artilist__ = {
+    none.team.__teamname__: ArtifactTeam(
+        name=none.team.__teamname__,
+        fwol=none.fwol(),
+        pmod=none.pmod(),
+        sdoe=none.sdoe(),
+        gboe=none.gboe(),
+        ccol=none.ccol(),
+        pairdata=none.team.__pairdata__,
+        pairtext=none.team.__pairtext__,
+        quaddata=none.team.__quaddata__,
+        quadtext=none.team.__quadtext__,
+        rare=[Rare.Star_0],
+        file=none.__name__.split(".")[-1],
+    ),
     dcrw.team.__teamname__: ArtifactTeam(
         name=dcrw.team.__teamname__,
         fwol=dcrw.fwol(),
@@ -831,20 +845,6 @@ __artilist__ = {
         quadtext=wdtp.team.__quadtext__,
         rare=[Rare.Star_4, Rare.Star_5],
         file=wdtp.__name__.split(".")[-1],
-    ),
-    none.team.__teamname__: ArtifactTeam(
-        name=none.team.__teamname__,
-        fwol=none.fwol(),
-        pmod=none.pmod(),
-        sdoe=none.sdoe(),
-        gboe=none.gboe(),
-        ccol=none.ccol(),
-        pairdata=none.team.__pairdata__,
-        pairtext=none.team.__pairtext__,
-        quaddata=none.team.__quaddata__,
-        quadtext=none.team.__quadtext__,
-        rare=[Rare.Star_0],
-        file=none.__name__.split(".")[-1],
     ),
 }
 
