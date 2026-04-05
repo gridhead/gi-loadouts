@@ -910,6 +910,35 @@ from test import verify_accuracy
             id="data.char: Lisa",
         ),
         pytest.param(
+            "Linnea",
+            "bow",
+            5,
+            "geo",
+            STAT.critical_rate_perc,
+            {
+                "Level 40/50 (Rank 2)": (
+                    4447.319892424286,
+                    64.501704,
+                    407.61661580000003,
+                    4.8,
+                ),
+                "Level 80/90 (Rank 6)": (
+                    9199.130405079999,
+                    133.41871200000003,
+                    843.1428983999999,
+                    19.2,
+                ),
+                "Level 95/95 (Rank 6)": (
+                    10245.94436335,
+                    159.65056800000002,
+                    939.087483,
+                    19.2,
+                ),
+                "Level 100/100 (Rank 6)": (10597.96347956, 175.794108, 971.3514088, 19.2),
+            },
+            id="data.char: Linnea",
+        ),
+        pytest.param(
             "Lumine",
             "sword",
             5,

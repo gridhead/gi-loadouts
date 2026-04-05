@@ -60,6 +60,7 @@ from .kuki_shinobu import KukiShinobu
 from .lan_yan import LanYan
 from .lauma import Lauma
 from .layla import Layla
+from .linnea import Linnea
 from .lisa import Lisa
 from .lumine import Lumine
 from .lynette import Lynette
@@ -175,6 +176,7 @@ __charmaps__ = {
     "Lan Yan": LanYan,
     "Lauma": Lauma,
     "Layla": Layla,
+    "Linnea": Linnea,
     "Lisa": Lisa,
     "Lumine": Lumine,
     "Lynette": Lynette,
