@@ -6,6 +6,7 @@ from PySide6.QtWidgets import QMainWindow, QMessageBox
 from pytestqt.qtbot import QtBot
 
 from gi_loadouts import __versdata__
+from gi_loadouts.data.arti import __artilist__
 from gi_loadouts.data.char import __charmaps__
 from gi_loadouts.data.weap import Family
 from gi_loadouts.face.wind.main import MainWindow
@@ -359,7 +360,7 @@ def test_otpt(runner: MainWindow, qtbot: QtBot, type: str, cond: str) -> None:
 )
 def test_otpt_fail(runner: MainWindow, qtbot: QtBot, subdata: str) -> None:
     """
-    Test failing to generate final calculation based on character, weapon and default artifact
+    Test failing to generate the final calculation based on character, weapon and default artifact
 
     :return:
     """
@@ -367,6 +368,9 @@ def test_otpt_fail(runner: MainWindow, qtbot: QtBot, subdata: str) -> None:
     """
     Set the user interface elements as intended
     """
+    name = choice([item for item in __artilist__ if item != "None"])
+    for area in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
+        getattr(runner, f"arti_{area}_type").setCurrentText(name)
     if subdata == "invalid":
         runner.arti_fwol_data_a.setText("abc")
 

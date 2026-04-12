@@ -104,7 +104,7 @@ def test_arti_save_name(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
     """
     Set the user interface elements as intended
     """
-    name = choice([item for item in __artilist__.keys() if item != "None"])
+    name = choice([item for item in __artilist__ if item != "None"])
     getattr(runner, f"arti_{area}_type").setCurrentText(name)
     conf["rare"] = choice([item for item in __artilist__[name].rare])
     getattr(runner, f"arti_{area}_rare").setCurrentText(conf["rare"].value.name)
@@ -155,6 +155,12 @@ def test_arti_save_fail(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
 
     :return:
     """
+
+    """
+    Set the user interface elements as intended
+    """
+    name = choice([item for item in __artilist__ if item != "None"])
+    getattr(runner, f"arti_{area}_type").setCurrentText(name)
 
     """
     Perform the action of saving the artifact information
@@ -350,9 +356,9 @@ def test_arti_load_nope(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
     """
     Confirm if the user interface elements change accordingly
     """
-    assert getattr(runner, f"arti_{area}_type").currentText() == "A Day Carved From Rising Winds"
-    assert getattr(runner, f"arti_{area}_rare").currentText() == "Star 4"
-    assert getattr(runner, f"arti_{area}_levl").currentText() == "Level 00"
+    assert getattr(runner, f"arti_{area}_type").currentText() == "None"
+    assert getattr(runner, f"arti_{area}_rare").currentText() == "Star 0"
+    assert getattr(runner, f"arti_{area}_levl").currentText() == "None"
 
 
 @pytest.mark.parametrize(
@@ -843,7 +849,7 @@ def test_arti_save_yaml_actual(
     """
     Set the user interface elements as intended
     """
-    name = choice([item for item in __artilist__.keys() if item != "None"])
+    name = choice([item for item in __artilist__ if item != "None"])
     getattr(runner, f"arti_{area}_type").setCurrentText(name)
     conf["rare"] = choice([item for item in __artilist__[name].rare])
     getattr(runner, f"arti_{area}_rare").setCurrentText(conf["rare"].value.name)
@@ -928,7 +934,7 @@ def test_arti_save_json_actual(
     """
     Set the user interface elements as intended
     """
-    name = choice([item for item in __artilist__.keys() if item != "None"])
+    name = choice([item for item in __artilist__ if item != "None"])
     getattr(runner, f"arti_{area}_type").setCurrentText(name)
     conf["rare"] = choice([item for item in __artilist__[name].rare])
     getattr(runner, f"arti_{area}_rare").setCurrentText(conf["rare"].value.name)
@@ -1134,7 +1140,7 @@ def test_arti_save_nope(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
     """
     Set the user interface elements as intended
     """
-    name = choice([item for item in __artilist__.keys() if item != "None"])
+    name = choice([item for item in __artilist__ if item != "None"])
     getattr(runner, f"arti_{area}_type").setCurrentText(name)
     conf["rare"] = choice([item for item in __artilist__[name].rare])
     getattr(runner, f"arti_{area}_rare").setCurrentText(conf["rare"].value.name)
