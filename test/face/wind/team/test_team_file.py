@@ -88,6 +88,12 @@ def test_team_save_fail(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
     """
 
     """
+    Set the user interface elements as intended
+    """
+    for area in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
+        getattr(runner, f"arti_{area}_type").setCurrentText(actual[area]["type"])
+
+    """
     Perform the action of saving the artifact collection information
     """
     mocker.patch.object(file.FileHandling, "save", return_value=True)
@@ -194,11 +200,9 @@ def test_team_load_nope(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
     Confirm if the user interface elements change accordingly
     """
     for area in actual.keys():
-        assert (
-            getattr(runner, f"arti_{area}_type").currentText() == "A Day Carved From Rising Winds"
-        )
-        assert getattr(runner, f"arti_{area}_rare").currentText() == "Star 4"
-        assert getattr(runner, f"arti_{area}_levl").currentText() == "Level 00"
+        assert getattr(runner, f"arti_{area}_type").currentText() == "None"
+        assert getattr(runner, f"arti_{area}_rare").currentText() == "Star 0"
+        assert getattr(runner, f"arti_{area}_levl").currentText() == "None"
 
 
 @pytest.mark.parametrize(
