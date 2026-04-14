@@ -44,7 +44,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
-    "pyinstaller>=6.0.0,<7.0.0",
+    "nuitka>=2.0.0,<3.0.0",
     "pytest>=8.3.3,<10.0.0",
     "pytest-cov>=4.1.0,<8.0.0",
     "pytest-mock>=3.14.0,<4.0.0",

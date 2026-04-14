@@ -1,5 +1,5 @@
 ---
-name: Building the project binary for Microsoft Windows
+name: Compiling the project binary for Microsoft Windows
 
 on:
   schedule:
@@ -22,10 +22,10 @@ jobs:
       - name: Setup a functioning local Python 3 installation
         uses: actions/setup-python@v6
         with:
-          python-version: 3.12 || 3.13 || 3.14
+          python-version: 3.13
 
       - name: Install the base dependencies of the project
-        run: python3 -m pip install --upgrade uv pyinstaller
+        run: python3 -m pip install --upgrade uv nuitka
 
       - name: Ignore warnings about dubious repository ownership
         run: git config --global --add safe.directory .
@@ -37,11 +37,11 @@ jobs:
         run: uv sync --extra dev
 
       - name: Build the project binary for "Loadouts for Genshin Impact"
-        run: uv run pyinstaller gi_loadouts/main.py --clean --onefile --name gi-loadouts-$("$env:GITHUB_HASH".SubString(0, 8)) --windowed --icon assets/icon/icon.ico
+        run: uv run python -m nuitka gi_loadouts/main.py --onefile --assume-yes-for-downloads --enable-plugin=pyside6 --output-dir=dist --output-filename=gi-loadouts-$("$env:GITHUB_HASH".SubString(0, 8)).exe --windows-console-mode=disable --windows-icon-from-ico=assets/icon/icon.ico --remove-output
         env:
           GITHUB_HASH: ${{ github.sha }}
 
-      - name: Upload the project binaries for "Loadouts for Genshin Impact"
+      - name: Upload the compiled binaries for "Loadouts for Genshin Impact"
         uses: actions/upload-artifact@v7
         with:
           name: gi-loadouts.mswn
