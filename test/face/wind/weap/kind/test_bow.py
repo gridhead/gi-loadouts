@@ -111,6 +111,16 @@ from test import verify_accuracy
             id="face.wind.rule: Configuring weapon - Bow - Aqua Simulacra",
         ),
         pytest.param(
+            "Golden Frostbound Oath",
+            5,
+            "Level 80/90 (Rank 6)",
+            506,
+            WeaponStatType.critical_damage_perc,
+            80.4,
+            5,
+            id="face.wind.rule: Configuring weapon - Bow - Golden Frostbound Oath",
+        ),
+        pytest.param(
             "Hunter's Path",
             5,
             "Level 80/90 (Rank 6)",
