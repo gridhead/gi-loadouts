@@ -78,6 +78,7 @@ class CharName(StrEnum):
     lan_yan = "Lan Yan"
     lauma = "Lauma"
     layla = "Layla"
+    linnea = "Linnea"
     lisa = "Lisa"
     lumine = "Lumine"
     lynette = "Lynette"
