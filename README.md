@@ -194,6 +194,26 @@ ensure that the Tesseract OCR application is installed and configured properly.
 
 **Releases** that _automatically update_ can be found [here](https://pypi.org/project/gi-loadouts/).
 
+### Warning
+
+Since we moved from [PyInstaller](https://www.pyinstaller.org/) to
+[Nuitka](https://nuitka.net/) for building application executable binaries,
+we have noticed frequent
+[Microsoft SmartScreen](https://en.wikipedia.org/wiki/Microsoft_SmartScreen)
+errors on Microsoft Windows. These false positive appear only because the
+executable binaries are not code signed. The protection system flags them as
+potentially unsafe due to the absence of an active code signing certificate,
+but that does not mean that the codebase is malicious.
+
+To proceed past these frivolous warnings, simply click on **"More Info"** and
+then **"Run anyway"** to start the executable binary. As this project is free
+and open source software, we cannot afford to make additional expenses to
+subscribe to various
+[code signing](https://en.wikipedia.org/wiki/Code_signing) services. Not only
+are the executable binaries transparently built on
+[GitHub Actions](https://github.com/gridhead/gi-loadouts/actions), but folks are
+invited to verify the project's integrity by compiling things locally.
+
 ## Usage
 
 1.  Select the [*vision*](https://genshin-impact.fandom.com/wiki/Vision) from 
