@@ -1,5 +1,5 @@
 ---
-name: Compiling the project binary for Microsoft Windows
+name: Compiling the nightly project executable binary for Microsoft Windows
 
 on:
   schedule:
@@ -16,32 +16,37 @@ jobs:
 
     steps:
 
-      - name: Checkout the codebase in local working directory
+      - name: Checkout the codebase in a local working directory
         uses: actions/checkout@v6
 
-      - name: Setup a functioning local Python 3 installation
+      - name: Establish a functioning Python development environment
         uses: actions/setup-python@v6
         with:
-          python-version: 3.13
+          python-version: 3.13 || 3.14
 
-      - name: Install the base dependencies of the project
-        run: python3 -m pip install --upgrade uv 'nuitka[onefile]'
+      - name: Evaluate the revision identifier for versioning
+        id: hash
+        shell: bash
+        run: echo "code=$(echo ${{ github.sha }} | cut -c1-8)" >> $GITHUB_OUTPUT
 
-      - name: Ignore warnings about dubious repository ownership
-        run: git config --global --add safe.directory .
+      - name: Update the interstitial identifier for versioning
+        run: (Get-Content -Raw pyproject.toml) -replace 'version\s*=\s*"([^"]*)"', ('version = "$1+${{ steps.hash.outputs.code }}"') | Set-Content pyproject.toml
 
-      - name: Update the interstitial versioning identifier
-        run: (Get-Content -Raw pyproject.toml) -replace 'version\s*=\s*"([^"]*)"', ('version = "$1+' + (git rev-parse --short=8 HEAD) + '"') | Set-Content pyproject.toml
+      - name: Install the project's required runtime dependencies
+        run: pip install .
 
-      - name: Install the runtime dependencies of the project
-        run: uv sync --extra dev
+      - name: Build the executable binary for the specified platform
+        uses: Nuitka/Nuitka-Action@main
+        with:
+          script-name: gi_loadouts/main.py
+          mode: onefile
+          enable-plugins: pyside6
+          output-dir: dist
+          output-file: gi-loadouts-${{ steps.hash.outputs.code }}.exe
+          windows-console-mode: disable
+          windows-icon-from-ico: assets/icon/icon.ico
 
-      - name: Build the project binary for "Loadouts for Genshin Impact"
-        run: uv run python -m nuitka gi_loadouts/main.py --onefile --assume-yes-for-downloads --enable-plugin=pyside6 --output-dir=dist --output-filename=gi-loadouts-$("$env:GITHUB_HASH".SubString(0, 8)).exe --windows-console-mode=disable --windows-icon-from-ico=assets/icon/icon.ico --remove-output
-        env:
-          GITHUB_HASH: ${{ github.sha }}
-
-      - name: Upload the compiled binaries for "Loadouts for Genshin Impact"
+      - name: Upload the compiled binaries to the GitHub Artifacts
         uses: actions/upload-artifact@v7
         with:
           name: gi-loadouts.mswn
