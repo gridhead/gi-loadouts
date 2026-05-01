@@ -25,7 +25,7 @@ jobs:
           python-version: 3.13
 
       - name: Install the base dependencies of the project
-        run: python3 -m pip install --upgrade uv nuitka
+        run: python3 -m pip install --upgrade uv 'nuitka[onefile]'
 
       - name: Ignore warnings about dubious repository ownership
         run: git config --global --add safe.directory .

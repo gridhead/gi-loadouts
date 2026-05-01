@@ -27,7 +27,7 @@ jobs:
           python-version: 3.13
 
       - name: Install the base dependencies of the project
-        run: python3 -m pip install --upgrade uv nuitka
+        run: python3 -m pip install --upgrade uv 'nuitka[onefile]'
 
       - name: Install the system dependencies for compilation
         run: dnf install --assumeyes patchelf ccache gcc python-devel
