@@ -18,7 +18,7 @@ class AquaSimulacra(Bow):
         "HP is increased by 28%. When there are opponents nearby, the DMG dealt by the wielder of this weapon is increased by 35%. This will take effect whether the character is on-field or not.",
         "HP is increased by 32%. When there are opponents nearby, the DMG dealt by the wielder of this weapon is increased by 40%. This will take effect whether the character is on-field or not.",
     ]
-    refi_stat: list[WeaponStat] = [
+    refi_stat: list[list[WeaponStat]] = [
         [WeaponStat(stat_name=WeaponStatType.health_points_perc, stat_data=16.0)],
         [WeaponStat(stat_name=WeaponStatType.health_points_perc, stat_data=20.0)],
         [WeaponStat(stat_name=WeaponStatType.health_points_perc, stat_data=24.0)],

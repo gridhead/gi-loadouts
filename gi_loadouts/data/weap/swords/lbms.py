@@ -18,7 +18,7 @@ class LightbearingMoonshard(Sword):
         "Increases DEF by 35%. DMG inflicted by Lunar-Crystallize reactions increases by 112% for 5s after the equipping character uses an Elemental Skill.",
         "Increases DEF by 40%. DMG inflicted by Lunar-Crystallize reactions increases by 128% for 5s after the equipping character uses an Elemental Skill.",
     ]
-    refi_stat: list[WeaponStat] = [
+    refi_stat: list[list[WeaponStat]] = [
         [WeaponStat(stat_name=WeaponStatType.defense_perc, stat_data=20.0)],
         [WeaponStat(stat_name=WeaponStatType.defense_perc, stat_data=25.0)],
         [WeaponStat(stat_name=WeaponStatType.defense_perc, stat_data=30.0)],

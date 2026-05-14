@@ -16,7 +16,7 @@ class VividNotions(Catalyst):
         'ATK is increased by 49%. When you use a Plunging Attack, you will gain the "Dawn\'s First Hue" effect: Plunging Attack CRIT DMG is increased by 49%. When you use an Elemental Skill or Burst, you will gain the "Twilight\'s Splendor" effect: Plunging Attack CRIT DMG is increased by 70%. The two effects above each last for 15s, and will be canceled 0.1s after the ground impact hits a target.',
         'ATK is increased by 56%. When you use a Plunging Attack, you will gain the "Dawn\'s First Hue" effect: Plunging Attack CRIT DMG is increased by 56%. When you use an Elemental Skill or Burst, you will gain the "Twilight\'s Splendor" effect: Plunging Attack CRIT DMG is increased by 80%. The two effects above each last for 15s, and will be canceled 0.1s after the ground impact hits a target.',
     ]
-    refi_stat: list[WeaponStat] = [
+    refi_stat: list[list[WeaponStat]] = [
         [WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=28.0)],
         [WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=35.0)],
         [WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=42.0)],

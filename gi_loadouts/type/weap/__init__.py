@@ -80,7 +80,7 @@ class Weapon(BaseModel):
     rare: Rare | None = Rare.Star_1
     stat_list: list[WeaponStat] = []
     refi_list: list[str] = []
-    refi_stat: list[WeaponStat] = []
+    refi_stat: list[list[WeaponStat]] = []
     file: str = ""
 
     @property

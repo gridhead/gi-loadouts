@@ -16,7 +16,7 @@ class SkywardHarp(Bow):
         "Increases CRIT DMG by 35%. Hits have a 90% chance to inflict a small AoE attack, dealing 125% Physical ATK DMG. Can only occur once every 2.5s.",
         "Increases CRIT DMG by 40%. Hits have a 100% chance to inflict a small AoE attack, dealing 125% Physical ATK DMG. Can only occur once every 2s.",
     ]
-    refi_stat: list[WeaponStat] = [
+    refi_stat: list[list[WeaponStat]] = [
         [WeaponStat(stat_name=WeaponStatType.critical_damage_perc, stat_data=20.0)],
         [WeaponStat(stat_name=WeaponStatType.critical_damage_perc, stat_data=25.0)],
         [WeaponStat(stat_name=WeaponStatType.critical_damage_perc, stat_data=30.0)],

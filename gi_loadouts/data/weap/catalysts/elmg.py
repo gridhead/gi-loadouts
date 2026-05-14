@@ -16,7 +16,7 @@ class EverlastingMoonglow(Catalyst):
         "Healing Bonus increased by 17.5%, Normal Attack DMG is increased by 2.5% of the Max HP of the character equipping this weapon. For 12s after using an Elemental Burst, Normal Attacks that hit opponents will restore 0.6 Energy. Energy can be restored this way once every 0.1s.",
         "Healing Bonus increased by 20%, Normal Attack DMG is increased by 3.0% of the Max HP of the character equipping this weapon. For 12s after using an Elemental Burst, Normal Attacks that hit opponents will restore 0.6 Energy. Energy can be restored this way once every 0.1s.",
     ]
-    refi_stat: list[WeaponStat] = [
+    refi_stat: list[list[WeaponStat]] = [
         [WeaponStat(stat_name=WeaponStatType.healing_bonus_perc, stat_data=10.0)],
         [WeaponStat(stat_name=WeaponStatType.healing_bonus_perc, stat_data=12.5)],
         [WeaponStat(stat_name=WeaponStatType.healing_bonus_perc, stat_data=15.0)],

@@ -18,7 +18,7 @@ class UltimateOverlordsMegaMagicSword(Claymore):
         "ATK increased by 21%. That's not all! The support from all Melusines you've helped in Merusea Village fills you with strength! Based on the number of them you've helped, your ATK is increased by up to an additional 21%.",
         "ATK increased by 24%. That's not all! The support from all Melusines you've helped in Merusea Village fills you with strength! Based on the number of them you've helped, your ATK is increased by up to an additional 24%.",
     ]
-    refi_stat: list[WeaponStat] = [
+    refi_stat: list[list[WeaponStat]] = [
         [WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=12.0)],
         [WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=15.0)],
         [WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=18.0)],

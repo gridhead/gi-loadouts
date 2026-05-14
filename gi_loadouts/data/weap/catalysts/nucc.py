@@ -18,7 +18,7 @@ class NocturnesCurtainCall(Catalyst):
         "Max HP increases by 16%. When triggering Lunar reactions or inflicting Lunar Reaction DMG on opponents, the equipping character will recover 17 Energy, and receive the Bountiful Sea's Sacred Wine effect for 12s: Max HP increases by an additional 20%, CRIT DMG from Lunar Reaction DMG increases by 120%. The Energy recovery effect can be triggered at most once every 18s, and can be triggered even when the equipping character is off-field.",
         "Max HP increases by 18%. When triggering Lunar reactions or inflicting Lunar Reaction DMG on opponents, the equipping character will recover 18 Energy, and receive the Bountiful Sea's Sacred Wine effect for 12s: Max HP increases by an additional 22%, CRIT DMG from Lunar Reaction DMG increases by 140%. The Energy recovery effect can be triggered at most once every 18s, and can be triggered even when the equipping character is off-field.",
     ]
-    refi_stat: list[WeaponStat] = [
+    refi_stat: list[list[WeaponStat]] = [
         [WeaponStat(stat_name=WeaponStatType.health_points_perc, stat_data=10.0)],
         [WeaponStat(stat_name=WeaponStatType.health_points_perc, stat_data=12.0)],
         [WeaponStat(stat_name=WeaponStatType.health_points_perc, stat_data=14.0)],

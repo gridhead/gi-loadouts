@@ -16,7 +16,7 @@ class SkywardAtlas(Catalyst):
         "Increases Elemental DMG Bonus by 21%. Normal Attack hits have a 50% chance to earn the favor of the clouds which actively seek out nearby opponents to attack for 15s, dealing 280% ATK DMG. Can only occur once every 30s.",
         "Increases Elemental DMG Bonus by 24%. Normal Attack hits have a 50% chance to earn the favor of the clouds which actively seek out nearby opponents to attack for 15s, dealing 320% ATK DMG. Can only occur once every 30s.",
     ]
-    refi_stat: list[WeaponStat] = [
+    refi_stat: list[list[WeaponStat]] = [
         [
             WeaponStat(stat_name=WeaponStatType.damage_bonus_anemo_perc, stat_data=12.0),
             WeaponStat(stat_name=WeaponStatType.damage_bonus_cryo_perc, stat_data=12.0),

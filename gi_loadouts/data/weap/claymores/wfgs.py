@@ -16,7 +16,7 @@ class WolfsGravestone(Claymore):
         "Increases ATK by 35%. On hit, attacks against opponents with less than 30% HP increase all party members' ATK by 70% for 12s. Can only occur once every 30s.",
         "Increases ATK by 40%. On hit, attacks against opponents with less than 30% HP increase all party members' ATK by 80% for 12s. Can only occur once every 30s.",
     ]
-    refi_stat: list[WeaponStat] = [
+    refi_stat: list[list[WeaponStat]] = [
         [WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=20.0)],
         [WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=25.0)],
         [WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=30.0)],
