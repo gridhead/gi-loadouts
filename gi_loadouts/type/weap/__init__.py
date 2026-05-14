@@ -78,7 +78,6 @@ class Weapon(BaseModel):
     levl: Level | None = Level.Level_01_20_Rank_0
     tier: Tier | None = Tier.Tier_1
     rare: Rare | None = Rare.Star_1
-    stat_list: list[WeaponStat] = []
     refi_list: list[str] = []
     refi_stat: list[WeaponStat] = []
     file: str = ""
