@@ -16,7 +16,7 @@ class CalamityQueller(Polearm):
         "Gain 21% All Elemental DMG Bonus. Obtain Consummation for 20s after using an Elemental Skill, causing ATK to increase by 5.6% per second. This ATK increase has a maximum of 6 stacks. When the character equipped with this weapon is not on the field, Consummation's ATK increase is doubled.",
         "Gain 24% All Elemental DMG Bonus. Obtain Consummation for 20s after using an Elemental Skill, causing ATK to increase by 6.4% per second. This ATK increase has a maximum of 6 stacks. When the character equipped with this weapon is not on the field, Consummation's ATK increase is doubled.",
     ]
-    refi_stat: list[WeaponStat] = [
+    refi_stat: list[list[WeaponStat]] = [
         [
             WeaponStat(stat_name=WeaponStatType.damage_bonus_anemo_perc, stat_data=12.0),
             WeaponStat(stat_name=WeaponStatType.damage_bonus_cryo_perc, stat_data=12.0),

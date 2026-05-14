@@ -16,7 +16,7 @@ class KeyofKhajNisut(Sword):
         "HP increased by 35%. When an Elemental Skill hits opponents, you gain the Grand Hymn effect for 20s. This effect increases the equipping character's Elemental Mastery by 0.21% of their Max HP. This effect can trigger once every 0.3s. Max 3 stacks. When this effect gains 3 stacks, or when the third stack's duration is refreshed, the Elemental Mastery of all nearby party members will be increased by 0.35% of the equipping character's max HP for 20s.",
         "HP increased by 40%. When an Elemental Skill hits opponents, you gain the Grand Hymn effect for 20s. This effect increases the equipping character's Elemental Mastery by 0.24% of their Max HP. This effect can trigger once every 0.3s. Max 3 stacks. When this effect gains 3 stacks, or when the third stack's duration is refreshed, the Elemental Mastery of all nearby party members will be increased by 0.4% of the equipping character's max HP for 20s.",
     ]
-    refi_stat: list[WeaponStat] = [
+    refi_stat: list[list[WeaponStat]] = [
         [WeaponStat(stat_name=WeaponStatType.health_points_perc, stat_data=20.0)],
         [WeaponStat(stat_name=WeaponStatType.health_points_perc, stat_data=25.0)],
         [WeaponStat(stat_name=WeaponStatType.health_points_perc, stat_data=30.0)],

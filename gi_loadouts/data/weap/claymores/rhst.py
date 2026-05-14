@@ -18,7 +18,7 @@ class RedhornStonethresher(Claymore):
         "DEF is increased by 49%. Normal and Charged Attack DMG is increased by 70% of DEF.",
         "DEF is increased by 56%. Normal and Charged Attack DMG is increased by 80% of DEF.",
     ]
-    refi_stat: list[WeaponStat] = [
+    refi_stat: list[list[WeaponStat]] = [
         [WeaponStat(stat_name=WeaponStatType.defense_perc, stat_data=28.0)],
         [WeaponStat(stat_name=WeaponStatType.defense_perc, stat_data=35.0)],
         [WeaponStat(stat_name=WeaponStatType.defense_perc, stat_data=42.0)],

@@ -16,7 +16,7 @@ class HuntersPath(Bow):
         "Gain 21% All Elemental DMG Bonus. Obtain the Tireless Hunt effect after hitting an opponent with a Charged Attack. This effect increases Charged Attack DMG by 280% of Elemental Mastery. This effect will be removed after 12 Charged Attacks or 10s. Only 1 instance of Tireless Hunt can be gained every 12s.",
         "Gain 24% All Elemental DMG Bonus. Obtain the Tireless Hunt effect after hitting an opponent with a Charged Attack. This effect increases Charged Attack DMG by 320% of Elemental Mastery. This effect will be removed after 12 Charged Attacks or 10s. Only 1 instance of Tireless Hunt can be gained every 12s.",
     ]
-    refi_stat: list[WeaponStat] = [
+    refi_stat: list[list[WeaponStat]] = [
         [
             WeaponStat(stat_name=WeaponStatType.damage_bonus_anemo_perc, stat_data=12.0),
             WeaponStat(stat_name=WeaponStatType.damage_bonus_cryo_perc, stat_data=12.0),

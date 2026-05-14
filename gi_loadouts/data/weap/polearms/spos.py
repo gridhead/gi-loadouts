@@ -18,7 +18,7 @@ class SymphonistofScents(Polearm):
         'ATK is increased by 21%. When the equipping character is off-field, ATK is increased by an additional 21%. After initiating healing, the equipping character and the character(s) they have healed will obtain the "Sweet Echoes" effect, increasing their ATK by 56% for 3s. This effect can be triggered even if the equipping character is off-field.',
         'ATK is increased by 24%. When the equipping character is off-field, ATK is increased by an additional 24%. After initiating healing, the equipping character and the character(s) they have healed will obtain the "Sweet Echoes" effect, increasing their ATK by 64% for 3s. This effect can be triggered even if the equipping character is off-field.',
     ]
-    refi_stat: list[WeaponStat] = [
+    refi_stat: list[list[WeaponStat]] = [
         [WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=12.0)],
         [WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=15.0)],
         [WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=18.0)],

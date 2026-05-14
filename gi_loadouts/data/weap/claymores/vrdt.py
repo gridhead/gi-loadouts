@@ -16,7 +16,7 @@ class Verdict(Claymore):
         "Increases ATK by 35%. When characters in your party obtain Elemental Shards from Crystallize reactions, the equipping character will gain 1 Seal, increasing Elemental Skill DMG by 31.5%. The Seal lasts for 15s, and the equipped may have up to 2 Seals at once. All of the equipper's Seals will disappear 0.2s after their Elemental Skill deals DMG.",
         "Increases ATK by 40%. When characters in your party obtain Elemental Shards from Crystallize reactions, the equipping character will gain 1 Seal, increasing Elemental Skill DMG by 36%. The Seal lasts for 15s, and the equipped may have up to 2 Seals at once. All of the equipper's Seals will disappear 0.2s after their Elemental Skill deals DMG.",
     ]
-    refi_stat: list[WeaponStat] = [
+    refi_stat: list[list[WeaponStat]] = [
         [WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=20.0)],
         [WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=25.0)],
         [WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=30.0)],

@@ -18,7 +18,7 @@ class ReliquaryofTruth(Catalyst):
         "CRIT Rate is increased by 14%. When the equipping character unleashes an Elemental Skill, they gain the Secret of Lies effect: Elemental Mastery is increased by 140 for 12s. When the equipping character deals Lunar-Bloom DMG to an opponent, they gain the Moon of Truth effect: CRIT DMG is increased by 42% for 4s. When both the Secret of Lies and Moon of Truth effects are active at the same time, the results of both effects will be increased by 50%.",
         "CRIT Rate is increased by 16%. When the equipping character unleashes an Elemental Skill, they gain the Secret of Lies effect: Elemental Mastery is increased by 160 for 12s. When the equipping character deals Lunar-Bloom DMG to an opponent, they gain the Moon of Truth effect: CRIT DMG is increased by 48% for 4s. When both the Secret of Lies and Moon of Truth effects are active at the same time, the results of both effects will be increased by 50%.",
     ]
-    refi_stat: list[WeaponStat] = [
+    refi_stat: list[list[WeaponStat]] = [
         [WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=8.0)],
         [WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=10.0)],
         [WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=12.0)],
