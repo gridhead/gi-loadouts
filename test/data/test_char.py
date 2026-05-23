@@ -1145,6 +1145,20 @@ from test import verify_accuracy
             id="data.char: Ororon",
         ),
         pytest.param(
+            "Prune",
+            "catalyst",
+            4,
+            "anemo",
+            STAT.attack_perc,
+            {
+                "Level 40/50 (Rank 2)": (4461.47, 101.82, 267.42, 6.0),
+                "Level 80/90 (Rank 6)": (9008.38, 205.60, 539.97, 24.0),
+                "Level 95/95 (Rank 6)": (10013.01, 249.06, 600.18, 24.0),
+                "Level 100/100 (Rank 6)": (10348.16, 277.25, 620.27, 24.0),
+            },
+            id="data.char: Prune",
+        ),
+        pytest.param(
             "Qiqi",
             "sword",
             5,
