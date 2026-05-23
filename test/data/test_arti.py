@@ -121,6 +121,20 @@ from gi_loadouts.type.stat import ATTR, STAT
             id="data.arti: Brave Heart",
         ),
         pytest.param(
+            "Celestial Gift",
+            [ATTR(stat_name=STAT.energy_recharge_perc, stat_data=20)],
+            [],
+            [4, 5],
+            (
+                "Heavensent Fragrance",
+                "Heavensent Demise",
+                "Heavensent Decree",
+                "Heavensent Reward",
+                "Heavensent Crown",
+            ),
+            id="data.arti: Celestial Gift",
+        ),
+        pytest.param(
             "Crimson Witch of Flames",
             [ATTR(stat_name=STAT.damage_bonus_pyro_perc, stat_data=15)],
             [],
