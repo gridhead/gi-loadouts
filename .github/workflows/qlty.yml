@@ -1,7 +1,7 @@
 ---
 name: Checking code quality
 
-on: push
+on: pull_request
 
 jobs:
 
