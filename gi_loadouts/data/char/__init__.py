@@ -77,6 +77,7 @@ from .nilou import Nilou
 from .ningguang import Ningguang
 from .noelle import Noelle
 from .ororon import Ororon
+from .prune import Prune
 from .qiqi import Qiqi
 from .raiden_shogun import RaidenShogun
 from .razor import Razor
@@ -193,6 +194,7 @@ __charmaps__ = {
     "Ningguang": Ningguang,
     "Noelle": Noelle,
     "Ororon": Ororon,
+    "Prune": Prune,
     "Qiqi": Qiqi,
     "Raiden Shogun": RaidenShogun,
     "Razor": Razor,

@@ -95,6 +95,7 @@ class CharName(StrEnum):
     ningguang = "Ningguang"
     noelle = "Noelle"
     ororon = "Ororon"
+    prune = "Prune"
     qiqi = "Qiqi"
     raiden_shogun = "Raiden Shogun"
     razor = "Razor"
