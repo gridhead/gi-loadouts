@@ -288,7 +288,7 @@ def test_weap_load_json(
         ),
         pytest.param(
             "Nahida",
-            "Apprentice's Notes",
+            "Angelos' Heptades",
             id="face.wind.rule: Cancelling loading a weapon of catalyst type from YAML data",
         ),
         pytest.param(
