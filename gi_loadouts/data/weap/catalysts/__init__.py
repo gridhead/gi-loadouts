@@ -1,6 +1,7 @@
 from . import (
     agdh,
     aptn,
+    ashs,
     atfd,
     bcag,
     bmln,
@@ -52,6 +53,7 @@ from . import (
 )
 
 CatalystsDict = {
+    "Angelos' Heptades": ashs.AngelosHeptades,
     "Apprentice's Notes": aptn.ApprenticesNotes,
     "Ash-Graven Drinking Horn": agdh.AshGravenDrinkingHorn,
     "A Thousand Floating Dreams": atfd.AThousandFloatingDreams,

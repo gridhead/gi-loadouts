@@ -461,6 +461,16 @@ from test import verify_accuracy
             id="data.weap.catalysts: Vivid Notions",
         ),
         pytest.param(
+            "Angelos' Heptades",
+            5,
+            4,
+            "Level 80/90 (Rank 6)",
+            679,
+            WeaponStatType.attack_perc,
+            15.1,
+            id="data.weap.catalysts: Angelos' Heptades",
+        ),
+        pytest.param(
             "Crane's Echoing Call",
             5,
             4,
