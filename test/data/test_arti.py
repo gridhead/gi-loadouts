@@ -191,6 +191,20 @@ from gi_loadouts.type.stat import ATTR, STAT
             id="data.arti: Desert Pavilion Chronicle",
         ),
         pytest.param(
+            "Disenchantment in Deep Shadow",
+            [ATTR(stat_name=STAT.attack_perc, stat_data=18)],
+            [],
+            [4, 5],
+            (
+                "Iridescence That Ceased Amidst Glory",
+                "Sharpness That Ceased Upon Wondrous Creation",
+                "Moment That Ceased Upon Waking From Grand Dreams",
+                "Ovations That Ceased Upon Festivity",
+                "Pendulum That Ceased Amidst a Great Fall",
+            ),
+            id="data.arti: Disenchantment in Deep Shadow",
+        ),
+        pytest.param(
             "Echoes of an Offering",
             [ATTR(stat_name=STAT.attack_perc, stat_data=18)],
             [],
