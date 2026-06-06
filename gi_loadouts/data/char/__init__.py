@@ -62,6 +62,7 @@ from .lauma import Lauma
 from .layla import Layla
 from .linnea import Linnea
 from .lisa import Lisa
+from .lohen import Lohen
 from .lumine import Lumine
 from .lynette import Lynette
 from .lyney import Lyney
@@ -180,6 +181,7 @@ __charmaps__ = {
     "Layla": Layla,
     "Linnea": Linnea,
     "Lisa": Lisa,
+    "Lohen": Lohen,
     "Lumine": Lumine,
     "Lynette": Lynette,
     "Lyney": Lyney,

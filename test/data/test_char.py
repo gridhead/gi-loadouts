@@ -939,6 +939,40 @@ from test import verify_accuracy
             id="data.char: Linnea",
         ),
         pytest.param(
+            "Lohen",
+            "polearm",
+            5,
+            "cryo",
+            STAT.critical_damage_perc,
+            {
+                "Level 40/50 (Rank 2)": (
+                    5779.31,
+                    154.80,
+                    352.35,
+                    9.6,
+                ),
+                "Level 80/90 (Rank 6)": (
+                    11954.32,
+                    320.20,
+                    728.82,
+                    38.4,
+                ),
+                "Level 95/95 (Rank 6)": (
+                    13314.66,
+                    383.16,
+                    811.75,
+                    38.4,
+                ),
+                "Level 100/100 (Rank 6)": (
+                    13772.11,
+                    421.91,
+                    839.64,
+                    38.4,
+                ),
+            },
+            id="data.char: Lohen",
+        ),
+        pytest.param(
             "Lumine",
             "sword",
             5,
