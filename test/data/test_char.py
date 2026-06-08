@@ -1093,7 +1093,7 @@ from test import verify_accuracy
             "catalyst",
             5,
             "pyro",
-            STAT.health_points_perc,
+            STAT.attack_perc,
             {
                 "Level 40/50 (Rank 2)": (4678.49, 153.73, 252.86, 7.2),
                 "Level 80/90 (Rank 6)": (9677.30, 317.98, 523.03, 28.8),
