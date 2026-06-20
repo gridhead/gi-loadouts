@@ -73,6 +73,7 @@ from .nahida import Nahida
 from .navia import Navia
 from .nefer import Nefer
 from .neuvillette import Neuvillette
+from .nicole import Nicole
 from .nilou import Nilou
 from .ningguang import Ningguang
 from .noelle import Noelle
@@ -190,6 +191,7 @@ __charmaps__ = {
     "Navia": Navia,
     "Nefer": Nefer,
     "Neuvillette": Neuvillette,
+    "Nicole": Nicole,
     "Nilou": Nilou,
     "Ningguang": Ningguang,
     "Noelle": Noelle,

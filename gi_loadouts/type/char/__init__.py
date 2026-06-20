@@ -91,6 +91,7 @@ class CharName(StrEnum):
     navia = "Navia"
     nefer = "Nefer"
     neuvillette = "Neuvillette"
+    nicole = "Nicole"
     nilou = "Nilou"
     ningguang = "Ningguang"
     noelle = "Noelle"

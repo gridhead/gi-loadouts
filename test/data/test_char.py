@@ -1089,6 +1089,20 @@ from test import verify_accuracy
             id="data.char: Neuvillette",
         ),
         pytest.param(
+            "Nicole",
+            "catalyst",
+            5,
+            "pyro",
+            STAT.attack_perc,
+            {
+                "Level 40/50 (Rank 2)": (4678.49, 153.73, 252.86, 7.2),
+                "Level 80/90 (Rank 6)": (9677.30, 317.98, 523.03, 28.8),
+                "Level 95/95 (Rank 6)": (10778.53, 380.50, 582.55, 28.8),
+                "Level 100/100 (Rank 6)": (11148.85, 418.98, 602.57, 28.8),
+            },
+            id="data.char: Nicole",
+        ),
+        pytest.param(
             "Nilou",
             "sword",
             5,
