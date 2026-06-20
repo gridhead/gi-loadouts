@@ -80,6 +80,7 @@ class CharName(StrEnum):
     layla = "Layla"
     linnea = "Linnea"
     lisa = "Lisa"
+    lohen = "Lohen"
     lumine = "Lumine"
     lynette = "Lynette"
     lyney = "Lyney"
