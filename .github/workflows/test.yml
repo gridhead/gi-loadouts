@@ -26,7 +26,7 @@ jobs:
     steps:
 
       - name: Checkout the codebase current state
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Update the existing packages
         run: |
