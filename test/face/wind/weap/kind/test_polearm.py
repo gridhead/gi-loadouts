@@ -51,6 +51,16 @@ from test import verify_accuracy
             id="face.wind.rule: Configuring weapon - Polearm - Deathmatch",
         ),
         pytest.param(
+            "Disaster and Remorse",
+            5,
+            "Level 80/90 (Rank 6)",
+            621,
+            WeaponStatType.critical_rate_perc,
+            20.1,
+            5,
+            id="face.wind.rule: Configuring weapon - Polearm - Disaster and Remorse",
+        ),
+        pytest.param(
             "Dragon's Bane",
             4,
             "Level 80/90 (Rank 6)",
