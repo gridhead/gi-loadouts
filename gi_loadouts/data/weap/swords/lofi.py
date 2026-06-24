@@ -3,7 +3,7 @@ from ....type.weap import Sword, WeaponStat, WeaponStatType
 from ....type.weap.tier import Tier
 
 
-class LightofFoliarIncision(Sword):
+class LightOfFoliarIncision(Sword):
     name: str = "Light of Foliar Incision"
     seco_stat: WeaponStat = WeaponStat(
         stat_name=WeaponStatType.critical_damage_perc, stat_data=19.2

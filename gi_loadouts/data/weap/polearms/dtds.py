@@ -3,7 +3,7 @@ from ....type.weap import Polearm, WeaponStat, WeaponStatType
 from ....type.weap.tier import Tier
 
 
-class DialoguesoftheDesertSages(Polearm):
+class DialoguesOfTheDesertSages(Polearm):
     name: str = "Dialogues of the Desert Sages"
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.health_points_perc, stat_data=9.0)
     tier: Tier = Tier.Tier_2

@@ -3,7 +3,7 @@ from ....type.weap import Bow, WeaponStat, WeaponStatType
 from ....type.weap.tier import Tier
 
 
-class EndoftheLine(Bow):
+class EndOfTheLine(Bow):
     name: str = "End of the Line"
     seco_stat: WeaponStat = WeaponStat(
         stat_name=WeaponStatType.energy_recharge_perc, stat_data=10.0

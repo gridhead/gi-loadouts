@@ -3,7 +3,7 @@ from ....type.weap import Bow, WeaponStat, WeaponStatType
 from ....type.weap.tier import Tier
 
 
-class SequenceofSolitude(Bow):
+class SequenceOfSolitude(Bow):
     name: str = "Sequence of Solitude"
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.health_points_perc, stat_data=9.0)
     tier: Tier = Tier.Tier_2

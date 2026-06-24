@@ -3,7 +3,7 @@ from ....type.weap import Catalyst, WeaponStat, WeaponStatType
 from ....type.weap.tier import Tier
 
 
-class TomeoftheEternalFlow(Catalyst):
+class TomeOfTheEternalFlow(Catalyst):
     name: str = "Tome of the Eternal Flow"
     seco_stat: WeaponStat = WeaponStat(
         stat_name=WeaponStatType.critical_damage_perc, stat_data=19.2

@@ -3,7 +3,7 @@ from ....type.weap import Catalyst, WeaponStat, WeaponStatType
 from ....type.weap.tier import Tier
 
 
-class RingofYaxche(Catalyst):
+class RingOfYaxche(Catalyst):
     name: str = "Ring of Yaxche"
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.health_points_perc, stat_data=9.0)
     tier: Tier = Tier.Tier_2

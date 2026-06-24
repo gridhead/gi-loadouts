@@ -3,7 +3,7 @@ from ....type.weap import Claymore, WeaponStat, WeaponStatType
 from ....type.weap.tier import Tier
 
 
-class GestoftheMightyWolf(Claymore):
+class GestOfTheMightyWolf(Claymore):
     name: str = "Gest of the Mighty Wolf"
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=7.2)
     tier: Tier = Tier.Tier_2

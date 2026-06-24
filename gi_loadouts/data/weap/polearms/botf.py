@@ -3,7 +3,7 @@ from ....type.weap import Polearm, WeaponStat, WeaponStatType
 from ....type.weap.tier import Tier
 
 
-class BalladoftheFjords(Polearm):
+class BalladOfTheFjords(Polearm):
     name: str = "Ballad of the Fjords"
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=6.0)
     tier: Tier = Tier.Tier_2

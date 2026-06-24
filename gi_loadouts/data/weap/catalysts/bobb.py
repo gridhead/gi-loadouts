@@ -3,7 +3,7 @@ from ....type.weap import Catalyst, WeaponStat, WeaponStatType
 from ....type.weap.tier import Tier
 
 
-class BalladoftheBoundlessBlue(Catalyst):
+class BalladOfTheBoundlessBlue(Catalyst):
     name: str = "Ballad of the Boundless Blue"
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.energy_recharge_perc, stat_data=6.7)
     tier: Tier = Tier.Tier_3

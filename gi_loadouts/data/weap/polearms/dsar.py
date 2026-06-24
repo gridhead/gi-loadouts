@@ -3,7 +3,7 @@ from ....type.weap import Polearm, WeaponStat, WeaponStatType
 from ....type.weap.tier import Tier
 
 
-class DisasterandRemorse(Polearm):
+class DisasterAndRemorse(Polearm):
     name: str = "Disaster and Remorse"
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=4.8)
     tier: Tier = Tier.Tier_3

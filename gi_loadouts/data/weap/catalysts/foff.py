@@ -3,7 +3,7 @@ from ....type.weap import Catalyst, WeaponStat, WeaponStatType
 from ....type.weap.tier import Tier
 
 
-class FruitofFulfillment(Catalyst):
+class FruitOfFulfillment(Catalyst):
     name: str = "Fruit of Fulfillment"
     seco_stat: WeaponStat = WeaponStat(
         stat_name=WeaponStatType.energy_recharge_perc, stat_data=10.0

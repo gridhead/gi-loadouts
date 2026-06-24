@@ -3,7 +3,7 @@ from ....type.weap import Catalyst, WeaponStat, WeaponStatType
 from ....type.weap.tier import Tier
 
 
-class MemoryofDust(Catalyst):
+class MemoryOfDust(Catalyst):
     name: str = "Memory of Dust"
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=10.8)
     tier: Tier = Tier.Tier_2

@@ -3,7 +3,7 @@ from ....type.weap import Bow, WeaponStat, WeaponStatType
 from ....type.weap.tier import Tier
 
 
-class ScionoftheBlazingSun(Bow):
+class ScionOfTheBlazingSun(Bow):
     name: str = "Scion of the Blazing Sun"
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=4.0)
     tier: Tier = Tier.Tier_3
