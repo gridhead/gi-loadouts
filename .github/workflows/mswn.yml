@@ -1,9 +1,14 @@
 ---
-name: Compiling the nightly project executable binary for Microsoft Windows
+name: Compiling the unique project executable binary for Microsoft Windows
 
 on:
   schedule:
     - cron: 0 0 * * *
+  workflow_call:
+    inputs:
+      identifier:
+        required: true
+        type: string
 
 jobs:
 
@@ -25,12 +30,18 @@ jobs:
           python-version: 3.13 || 3.14
 
       - name: Evaluate the revision identifier for versioning
-        id: hash
+        id: identifier
         shell: bash
-        run: echo "code=$(echo ${{ github.sha }} | cut -c1-8)" >> $GITHUB_OUTPUT
+        run: |
+             if [ "${{ github.event_name }}" = "schedule" ]; then
+               echo "code=$(echo ${{ github.sha }} | cut -c1-8)" >> $GITHUB_OUTPUT
+             else
+               echo "code=${{ inputs.identifier }}" >> $GITHUB_OUTPUT
+             fi
 
       - name: Update the interstitial identifier for versioning
-        run: (Get-Content -Raw pyproject.toml) -replace 'version\s*=\s*"([^"]*)"', ('version = "$1+${{ steps.hash.outputs.code }}"') | Set-Content pyproject.toml
+        if: github.event_name == 'schedule'
+        run: (Get-Content -Raw pyproject.toml) -replace 'version\s*=\s*"([^"]*)"', ('version = "$1+${{ steps.identifier.outputs.code }}"') | Set-Content pyproject.toml
 
       - name: Install the project's required runtime dependencies
         run: pip install .
@@ -42,7 +53,7 @@ jobs:
           mode: onefile
           enable-plugins: pyside6
           output-dir: dist
-          output-file: gi-loadouts-${{ steps.hash.outputs.code }}.exe
+          output-file: gi-loadouts-${{ steps.identifier.outputs.code }}.exe
           windows-console-mode: disable
           windows-icon-from-ico: assets/icon/icon.ico
 
