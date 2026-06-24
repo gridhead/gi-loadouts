@@ -1,0 +1,99 @@
+---
+name: Creating the point release
+
+on:
+  push:
+    tags:
+      - "*.*.*"
+
+jobs:
+
+  ci-make-gnul:
+    uses: ./.github/workflows/gnul.yml
+    with:
+      identifier: ${{ github.ref_name }}
+
+  ci-make-mswn:
+    uses: ./.github/workflows/mswn.yml
+    with:
+      identifier: ${{ github.ref_name }}
+
+  ci-make-pypi:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+
+    steps:
+
+      - name: Checkout the codebase in a local working directory
+        uses: actions/checkout@v7
+
+      - name: Establish a functioning Python development environment
+        uses: actions/setup-python@v6
+        with:
+          python-version: 3.13 || 3.14
+
+      - name: Install the build dependencies
+        run: pip install build
+
+      - name: Build the source distribution and wheel
+        run: python -m build
+
+      - name: Upload the distribution packages to the GitHub Artifacts
+        uses: actions/upload-artifact@v7
+        with:
+          name: gi-loadouts.pypi
+          path: dist/*
+          compression-level: 9
+
+  ci-rlse:
+
+    needs: [ci-make-gnul, ci-make-mswn, ci-make-pypi]
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      id-token: write
+
+    strategy:
+      fail-fast: false
+
+    steps:
+
+      - name: Download the GNU/Linux executable binary
+        uses: actions/download-artifact@v7
+        with:
+          name: gi-loadouts.gnul
+          path: dist/gnul
+
+      - name: Download the Microsoft Windows executable binary
+        uses: actions/download-artifact@v7
+        with:
+          name: gi-loadouts.mswn
+          path: dist/mswn
+
+      - name: Download the Python distribution packages
+        uses: actions/download-artifact@v7
+        with:
+          name: gi-loadouts.pypi
+          path: dist/pypi
+
+      - name: Create the draft release on GitHub
+        run: |
+             gh release create ${{ github.ref_name }} \
+               dist/gnul/* \
+               dist/mswn/* \
+               --repo ${{ github.repository }} \
+               --title "${{ github.ref_name }}" \
+               --draft \
+               --generate-notes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish the distribution packages to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: dist/pypi
