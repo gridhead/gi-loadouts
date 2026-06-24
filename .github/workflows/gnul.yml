@@ -17,7 +17,7 @@ jobs:
     steps:
 
       - name: Checkout the codebase in a local working directory
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Establish a functioning Python development environment
         uses: actions/setup-python@v6
