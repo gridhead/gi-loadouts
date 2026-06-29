@@ -3,7 +3,7 @@ from ....type.weap import Claymore, WeaponStat, WeaponStatType
 from ....type.weap.tier import Tier
 
 
-class FangoftheMountainKing(Claymore):
+class FangOfTheMountainKing(Claymore):
     name: str = "Fang of the Mountain King"
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=2.4)
     tier: Tier = Tier.Tier_4

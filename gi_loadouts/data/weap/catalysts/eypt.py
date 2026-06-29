@@ -3,7 +3,7 @@ from ....type.weap import Catalyst, WeaponStat, WeaponStatType
 from ....type.weap.tier import Tier
 
 
-class EyeofPerception(Catalyst):
+class EyeOfPerception(Catalyst):
     name: str = "Eye of Perception"
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=12.0)
     tier: Tier = Tier.Tier_1

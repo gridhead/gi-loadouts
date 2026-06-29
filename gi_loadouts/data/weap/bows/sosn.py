@@ -3,7 +3,7 @@ from ....type.weap import Bow, WeaponStat, WeaponStatType
 from ....type.weap.tier import Tier
 
 
-class SongofStillness(Bow):
+class SongOfStillness(Bow):
     name: str = "Song of Stillness"
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=9.0)
     tier: Tier = Tier.Tier_2

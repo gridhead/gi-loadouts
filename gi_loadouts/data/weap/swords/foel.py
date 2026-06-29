@@ -3,7 +3,7 @@ from ....type.weap import Sword, WeaponStat, WeaponStatType
 from ....type.weap.tier import Tier
 
 
-class FluteofEzpitzal(Sword):
+class FluteOfEzpitzal(Sword):
     name: str = "Flute of Ezpitzal"
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.defense_perc, stat_data=15.0)
     tier: Tier = Tier.Tier_1

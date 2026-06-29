@@ -3,7 +3,7 @@ from ....type.weap import Claymore, WeaponStat, WeaponStatType
 from ....type.weap.tier import Tier
 
 
-class SongofBrokenPines(Claymore):
+class SongOfBrokenPines(Claymore):
     name: str = "Song of Broken Pines"
     seco_stat: WeaponStat = WeaponStat(
         stat_name=WeaponStatType.damage_bonus_physical_perc, stat_data=4.5

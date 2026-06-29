@@ -3,7 +3,7 @@ from ....type.weap import Sword, WeaponStat, WeaponStatType
 from ....type.weap.tier import Tier
 
 
-class HarbingerofDawn(Sword):
+class HarbingerOfDawn(Sword):
     name: str = "Harbinger of Dawn"
     seco_stat: WeaponStat = WeaponStat(
         stat_name=WeaponStatType.critical_damage_perc, stat_data=10.2

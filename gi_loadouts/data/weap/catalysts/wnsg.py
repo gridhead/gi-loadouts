@@ -3,7 +3,7 @@ from ....type.weap import Catalyst, WeaponStat, WeaponStatType
 from ....type.weap.tier import Tier
 
 
-class WineandSong(Catalyst):
+class WineAndSong(Catalyst):
     name: str = "Wine and Song"
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.energy_recharge_perc, stat_data=6.7)
     tier: Tier = Tier.Tier_3

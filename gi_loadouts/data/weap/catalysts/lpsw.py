@@ -3,7 +3,7 @@ from ....type.weap import Catalyst, WeaponStat, WeaponStatType
 from ....type.weap.tier import Tier
 
 
-class LostPrayertotheSacredWinds(Catalyst):
+class LostPrayerToTheSacredWinds(Catalyst):
     name: str = "Lost Prayer to the Sacred Winds"
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_rate_perc, stat_data=7.2)
     tier: Tier = Tier.Tier_2

@@ -3,7 +3,7 @@ from ....type.weap import Sword, WeaponStat, WeaponStatType
 from ....type.weap.tier import Tier
 
 
-class SplendorofTranquilWaters(Sword):
+class SplendorOfTranquilWaters(Sword):
     name: str = "Splendor of Tranquil Waters"
     seco_stat: WeaponStat = WeaponStat(
         stat_name=WeaponStatType.critical_damage_perc, stat_data=19.2

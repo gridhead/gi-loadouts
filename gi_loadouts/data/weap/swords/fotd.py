@@ -3,7 +3,7 @@ from ....type.weap import Sword, WeaponStat, WeaponStatType
 from ....type.weap.tier import Tier
 
 
-class FinaleoftheDeep(Sword):
+class FinaleOfTheDeep(Sword):
     name: str = "Finale of the Deep"
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=6.0)
     tier: Tier = Tier.Tier_3

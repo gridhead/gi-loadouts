@@ -3,7 +3,7 @@ from ....type.weap import Sword, WeaponStat, WeaponStatType
 from ....type.weap.tier import Tier
 
 
-class KeyofKhajNisut(Sword):
+class KeyOfKhajNisut(Sword):
     name: str = "Key of Khaj-Nisut"
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.health_points_perc, stat_data=14.4)
     tier: Tier = Tier.Tier_1

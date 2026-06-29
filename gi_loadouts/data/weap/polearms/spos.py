@@ -3,7 +3,7 @@ from ....type.weap import Polearm, WeaponStat, WeaponStatType
 from ....type.weap.tier import Tier
 
 
-class SymphonistofScents(Polearm):
+class SymphonistOfScents(Polearm):
     name: str = "Symphonist of Scents"
     seco_stat: WeaponStat = WeaponStat(
         stat_name=WeaponStatType.critical_damage_perc, stat_data=14.4

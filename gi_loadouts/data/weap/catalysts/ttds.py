@@ -3,7 +3,7 @@ from ....type.weap import Catalyst, WeaponStat, WeaponStatType
 from ....type.weap.tier import Tier
 
 
-class ThrillingTalesofDragonSlayers(Catalyst):
+class ThrillingTalesOfDragonSlayers(Catalyst):
     name: str = "Thrilling Tales of Dragon Slayers"
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.health_points_perc, stat_data=7.7)
     tier: Tier = Tier.Tier_2

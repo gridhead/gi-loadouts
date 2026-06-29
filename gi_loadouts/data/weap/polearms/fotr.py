@@ -3,7 +3,7 @@ from ....type.weap import Polearm, WeaponStat, WeaponStatType
 from ....type.weap.tier import Tier
 
 
-class FootprintoftheRainbow(Polearm):
+class FootprintOfTheRainbow(Polearm):
     name: str = "Footprint of the Rainbow"
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.defense_perc, stat_data=11.3)
     tier: Tier = Tier.Tier_2
