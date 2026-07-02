@@ -1263,6 +1263,20 @@ from test import verify_accuracy
             id="data.char: Rosaria",
         ),
         pytest.param(
+            "Sandrone",
+            "claymore",
+            5,
+            "cryo",
+            STAT.critical_rate_perc,
+            {
+                "Level 40/50 (Rank 2)": (5944.44, 153.73, 338.18, 4.8),
+                "Level 80/90 (Rank 6)": (12295.87, 317.98, 699.52, 19.2),
+                "Level 95/95 (Rank 6)": (13695.07, 380.50, 779.12, 19.2),
+                "Level 100/100 (Rank 6)": (14165.60, 418.98, 805.89, 19.2),
+            },
+            id="data.char: Sandrone",
+        ),
+        pytest.param(
             "Sangonomiya Kokomi",
             "catalyst",
             5,

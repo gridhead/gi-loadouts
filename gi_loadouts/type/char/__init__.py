@@ -102,6 +102,7 @@ class CharName(StrEnum):
     raiden_shogun = "Raiden Shogun"
     razor = "Razor"
     rosaria = "Rosaria"
+    sandrone = "Sandrone"
     sangonomiya_kokomi = "Sangonomiya Kokomi"
     sayu = "Sayu"
     sethos = "Sethos"

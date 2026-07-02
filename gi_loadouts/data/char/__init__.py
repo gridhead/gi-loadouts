@@ -84,6 +84,7 @@ from .qiqi import Qiqi
 from .raiden_shogun import RaidenShogun
 from .razor import Razor
 from .rosaria import Rosaria
+from .sandrone import Sandrone
 from .sangonomiya_kokomi import SangonomiyaKokomi
 from .sayu import Sayu
 from .sethos import Sethos
@@ -203,6 +204,7 @@ __charmaps__ = {
     "Raiden Shogun": RaidenShogun,
     "Razor": Razor,
     "Rosaria": Rosaria,
+    "Sandrone": Sandrone,
     "Sangonomiya Kokomi": SangonomiyaKokomi,
     "Sayu": Sayu,
     "Sethos": Sethos,
