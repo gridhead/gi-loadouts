@@ -34,6 +34,7 @@ from . import (
     tbll,
     tdsd,
     tgsk,
+    toft,
     tufg,
     uoms,
     vrdt,
@@ -45,6 +46,7 @@ from . import (
 
 ClaymoresDict = {
     "Akuoumaru": akmr.Akuoumaru,
+    "A Teaspoon of Transcendence": toft.TeaspoonOfTranscendence,
     "A Thousand Blazing Suns": atbs.AThousandBlazingSuns,
     "Beacon of the Reed Sea": bors.BeaconOfTheReedSea,
     "Blackcliff Slasher": bcsh.BlackcliffSlasher,

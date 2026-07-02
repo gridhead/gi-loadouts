@@ -430,6 +430,16 @@ from test import verify_accuracy
             10.1,
             id="data.weap.claymores: A Thousand Blazing Suns",
         ),
+        pytest.param(
+            "A Teaspoon of Transcendence",
+            5,
+            3,
+            "Level 80/90 (Rank 6)",
+            621,
+            WeaponStatType.critical_damage_perc,
+            40.2,
+            id="data.weap.claymores: A Teaspoon of Transcendence",
+        ),
     ],
 )
 def test_claymore(
