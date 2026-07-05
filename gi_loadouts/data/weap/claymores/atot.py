@@ -3,7 +3,7 @@ from ....type.weap import Claymore, WeaponStat, WeaponStatType
 from ....type.weap.tier import Tier
 
 
-class TeaspoonOfTranscendence(Claymore):
+class ATeaspoonOfTranscendence(Claymore):
     name: str = "A Teaspoon of Transcendence"
     seco_stat: WeaponStat = WeaponStat(stat_name=WeaponStatType.critical_damage_perc, stat_data=9.6)
     tier: Tier = Tier.Tier_3
@@ -23,4 +23,4 @@ class TeaspoonOfTranscendence(Claymore):
         [WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=49.0)],
         [WeaponStat(stat_name=WeaponStatType.attack_perc, stat_data=56.0)],
     ]
-    file: str = "toft"
+    file: str = "atot"
