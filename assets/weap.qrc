@@ -201,6 +201,8 @@
     <file>imgs/weap/claymores/akmr_b.webp</file>
     <file>imgs/weap/claymores/atbs_a.webp</file>
     <file>imgs/weap/claymores/atbs_b.webp</file>
+    <file>imgs/weap/claymores/atot_a.webp</file>
+    <file>imgs/weap/claymores/atot_b.webp</file>
     <file>imgs/weap/claymores/bcsh_a.webp</file>
     <file>imgs/weap/claymores/bcsh_b.webp</file>
     <file>imgs/weap/claymores/bors_a.webp</file>
@@ -267,8 +269,6 @@
     <file>imgs/weap/claymores/tdsd_b.webp</file>
     <file>imgs/weap/claymores/tgsk_a.webp</file>
     <file>imgs/weap/claymores/tgsk_b.webp</file>
-    <file>imgs/weap/claymores/toft_a.webp</file>
-    <file>imgs/weap/claymores/toft_b.webp</file>
     <file>imgs/weap/claymores/tufg_a.webp</file>
     <file>imgs/weap/claymores/tufg_b.webp</file>
     <file>imgs/weap/claymores/uoms_a.webp</file>
