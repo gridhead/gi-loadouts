@@ -65,19 +65,19 @@ jobs:
     steps:
 
       - name: Download the GNU/Linux executable binary
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: gi-loadouts.gnul
           path: dist/gnul
 
       - name: Download the Microsoft Windows executable binary
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: gi-loadouts.mswn
           path: dist/mswn
 
       - name: Download the Python distribution packages
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: gi-loadouts.pypi
           path: dist/pypi
