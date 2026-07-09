@@ -1,9 +1,14 @@
 ---
-name: Compiling the nightly project executable binary for GNU/Linux OSes
+name: Compiling the unique project executable binary for GNU/Linux OSes
 
 on:
   schedule:
     - cron: 0 0 * * *
+  workflow_call:
+    inputs:
+      identifier:
+        required: true
+        type: string
 
 jobs:
 
@@ -25,12 +30,18 @@ jobs:
           python-version: 3.13 || 3.14
 
       - name: Evaluate the revision identifier for versioning
-        id: hash
+        id: identifier
         shell: bash
-        run: echo "code=$(echo ${{ github.sha }} | cut -c1-8)" >> $GITHUB_OUTPUT
+        run: |
+             if [ "${{ github.event_name }}" = "schedule" ]; then
+               echo "code=$(echo ${{ github.sha }} | cut -c1-8)" >> $GITHUB_OUTPUT
+             else
+               echo "code=${{ inputs.identifier }}" >> $GITHUB_OUTPUT
+             fi
 
       - name: Update the interstitial identifier for versioning
-        run: sed --in-place "s/^version = \"\(.*\)\"/version = \"\1+${{ steps.hash.outputs.code }}\"/" pyproject.toml
+        if: github.event_name == 'schedule'
+        run: sed --in-place "s/^version = \"\(.*\)\"/version = \"\1+${{ steps.identifier.outputs.code }}\"/" pyproject.toml
 
       - name: Install the project's required runtime dependencies
         run: pip install .
@@ -42,7 +53,7 @@ jobs:
           mode: onefile
           enable-plugins: pyside6
           output-dir: dist
-          output-file: gi-loadouts-${{ steps.hash.outputs.code }}
+          output-file: gi-loadouts-${{ steps.identifier.outputs.code }}
           linux-icon: assets/icon/icon.ico
 
       - name: Upload the compiled binaries to the GitHub Artifacts
