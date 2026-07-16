@@ -82,11 +82,21 @@ jobs:
           name: gi-loadouts.pypi
           path: dist/pypi
 
+      - name: Sign the release artifacts with Sigstore
+        uses: sigstore/gh-action-sigstore-python@v3
+        with:
+          inputs: >-
+            ./dist/gnul/*
+            ./dist/mswn/*
+            ./dist/pypi/*.tar.gz
+            ./dist/pypi/*.whl
+
       - name: Create the draft release on GitHub
         run: |
              gh release create ${{ github.ref_name }} \
                dist/gnul/* \
                dist/mswn/* \
+               dist/pypi/* \
                --repo ${{ github.repository }} \
                --title "${{ github.ref_name }}" \
                --draft \
