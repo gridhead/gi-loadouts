@@ -82,6 +82,11 @@ jobs:
           name: gi-loadouts.pypi
           path: dist/pypi
 
+      - name: Publish the distribution packages to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: dist/pypi
+
       - name: Sign the release artifacts with Sigstore
         uses: sigstore/gh-action-sigstore-python@v3.4.0
         with:
@@ -103,8 +108,3 @@ jobs:
                --generate-notes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Publish the distribution packages to PyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          packages-dir: dist/pypi

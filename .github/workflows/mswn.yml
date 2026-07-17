@@ -57,7 +57,6 @@ jobs:
           windows-console-mode: disable
           windows-icon-from-ico: assets/icon/icon.ico
           disable-cache: true
-          jobs: 4
 
       - name: Upload the compiled binaries to the GitHub Artifacts
         uses: actions/upload-artifact@v7
