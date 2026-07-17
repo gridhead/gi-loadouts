@@ -21,7 +21,6 @@
   },
   "automergeStrategy": "rebase",
   "rangeStrategy": "widen",
-  "stabilityDays": 4,
   "labels": ["dependencies"],
   "packageRules": [
     {
