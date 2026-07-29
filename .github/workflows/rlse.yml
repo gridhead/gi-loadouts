@@ -88,7 +88,7 @@ jobs:
           packages-dir: dist/pypi
 
       - name: Sign the release artifacts with Sigstore
-        uses: sigstore/gh-action-sigstore-python@v3.4.0
+        uses: sigstore/gh-action-sigstore-python@v3.5.0
         with:
           inputs: >-
             ./dist/gnul/*
