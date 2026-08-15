@@ -21,6 +21,7 @@ class CharName(StrEnum):
     albedo = "Albedo"
     alhaitham = "Alhaitham"
     aloy = "Aloy"
+    alyosha = "Alyosha"
     amber = "Amber"
     arataki_itto = "Arataki Itto"
     arlecchino = "Arlecchino"

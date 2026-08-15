@@ -3,6 +3,7 @@ from .aino import Aino
 from .albedo import Albedo
 from .alhaitham import Alhaitham
 from .aloy import Aloy
+from .alyosha import Alyosha
 from .amber import Amber
 from .arataki_itto import AratakiItto
 from .arlecchino import Arlecchino
@@ -123,6 +124,7 @@ __charmaps__ = {
     "Albedo": Albedo,
     "Alhaitham": Alhaitham,
     "Aloy": Aloy,
+    "Alyosha": Alyosha,
     "Amber": Amber,
     "Arataki Itto": AratakiItto,
     "Arlecchino": Arlecchino,

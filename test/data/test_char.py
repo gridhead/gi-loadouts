@@ -83,6 +83,20 @@ from test import verify_accuracy
             id="data.char: Aloy",
         ),
         pytest.param(
+            "Alyosha",
+            "polearm",
+            4,
+            "electro",
+            STAT.energy_recharge_perc,
+            {
+                "Level 40/50 (Rank 2)": (5514.18, 122.38, 324.05, 6.7),
+                "Level 80/90 (Rank 6)": (11133.95, 247.11, 654.31, 26.8),
+                "Level 95/95 (Rank 6)": (12375.63, 299.35, 727.28, 26.8),
+                "Level 100/100 (Rank 6)": (12789.86, 333.23, 751.62, 26.8),
+            },
+            id="data.char: Alyosha",
+        ),
+        pytest.param(
             "Amber",
             "bow",
             4,
