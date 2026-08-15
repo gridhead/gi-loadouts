@@ -1,0 +1,30 @@
+name: "Weapon Addition"
+description: "Request adding a new weapon to the GI Loadouts roster"
+title: "Add the recently added weapon `{name}` to the GI Loadouts roster"
+labels:
+  - "enhancement"
+  - "good first issue"
+body:
+  - type: "input"
+    id: "name"
+    attributes:
+      label: "Name"
+      description: "Name of the weapon page on the Genshin Impact wiki"
+      placeholder: "e.g. Dull Blade"
+    validations:
+      required: true
+  - type: "input"
+    id: "wiki"
+    attributes:
+      label: "Page"
+      description: "Link to the weapon page on the Genshin Impact wiki"
+      placeholder: "e.g. https://genshin-impact.fandom.com/wiki/Dull_Blade"
+    validations:
+      required: true
+  - type: "textarea"
+    id: "shot"
+    attributes:
+      label: "Portrait"
+      description: "Screenshot of the weapon details from the Genshin Impact wiki"
+    validations:
+      required: false
