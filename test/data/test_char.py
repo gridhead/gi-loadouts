@@ -1193,6 +1193,20 @@ from test import verify_accuracy
             id="data.char: Noelle",
         ),
         pytest.param(
+            "Odette",
+            "sword",
+            5,
+            "cryo",
+            STAT.critical_damage_perc,
+            {
+                "Level 40/50 (Rank 2)": (5834.36, 150.50, 353.73, 9.6),
+                "Level 80/90 (Rank 6)": (12068.17, 311.31, 731.68, 38.4),
+                "Level 95/95 (Rank 6)": (13441.46, 372.52, 814.94, 38.4),
+                "Level 100/100 (Rank 6)": (13903.27, 410.19, 842.94, 38.4),
+            },
+            id="data.char: Odette",
+        ),
+        pytest.param(
             "Ororon",
             "bow",
             4,
