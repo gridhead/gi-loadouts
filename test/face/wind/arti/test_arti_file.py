@@ -157,6 +157,11 @@ def test_arti_save_fail(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
     """
 
     """
+    Set the user interface elements to a known state
+    """
+    qtbot.mouseClick(getattr(runner, f"arti_{area}_wipe"), Qt.LeftButton)
+
+    """
     Set the user interface elements as intended
     """
     name = choice([item for item in __artilist__ if item != "None"])
@@ -346,6 +351,11 @@ def test_arti_load_nope(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
 
     :return:
     """
+
+    """
+    Set the user interface elements to a known state
+    """
+    qtbot.mouseClick(getattr(runner, f"arti_{area}_wipe"), Qt.LeftButton)
 
     """
     Perform the action of saving the artifact information

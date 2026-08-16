@@ -1,29 +1,31 @@
+from collections.abc import Generator
+
 import pytest
-from pytestqt.qtbot import QtBot
+from PySide6.QtWidgets import QApplication
 
 from gi_loadouts.face.scan.main import ScanDialog
 from gi_loadouts.face.wind.main import MainWindow
 
 
-@pytest.fixture
-def runner(qtbot: QtBot) -> MainWindow:
+@pytest.fixture(scope="session")
+def runner(qapp: QApplication) -> Generator[MainWindow, None, None]:
     """
     Fixture for MainWindow class
 
     :return: Instance of MainWindow
     """
     testwind = MainWindow()
-    qtbot.addWidget(testwind)
-    return testwind
+    yield testwind
+    testwind.close()
 
 
-@pytest.fixture
-def scantest(qtbot: QtBot) -> ScanDialog:
+@pytest.fixture(scope="session")
+def scantest(qapp: QApplication) -> Generator[ScanDialog, None, None]:
     """
     Fixture for ScanDialog class
 
     :return: Instance of ScanDialog
     """
     testscan = ScanDialog("fwol")
-    qtbot.addWidget(testscan)
-    return testscan
+    yield testscan
+    testscan.close()

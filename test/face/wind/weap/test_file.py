@@ -15,6 +15,14 @@ from gi_loadouts.face.wind import file
 from gi_loadouts.face.wind.main import MainWindow
 from test import json_type, yaml_type
 
+__charelem__ = {
+    "Venti": "Anemo",
+    "Nahida": "Dendro",
+    "Navia": "Geo",
+    "Raiden Shogun": "Electro",
+    "Furina": "Hydro",
+}
+
 from . import (
     actual_bow,
     actual_catalyst,
@@ -66,6 +74,7 @@ def test_weap_save(
     objc = Family[type][name]()
     levl = choice(objc.levl_bind).value.name
 
+    runner.head_char_elem.setCurrentText(__charelem__[char])
     runner.head_char_name.setCurrentText(char)
     runner.weap_area_name.setCurrentText(name)
     runner.weap_area_levl.setCurrentText(levl)
@@ -125,6 +134,7 @@ def test_weap_save_fail(
     objc = Family[type][name]()
     levl = choice(objc.levl_bind).value.name
 
+    runner.head_char_elem.setCurrentText(__charelem__[char])
     runner.head_char_name.setCurrentText(char)
     runner.weap_area_name.setCurrentText(name)
     runner.weap_area_levl.setCurrentText(levl)
@@ -197,6 +207,7 @@ def test_weap_load_yaml(
     """
     Set the user interface elements as intended
     """
+    runner.head_char_elem.setCurrentText(__charelem__[char])
     runner.head_char_name.setCurrentText(char)
 
     """
@@ -261,6 +272,7 @@ def test_weap_load_json(
     """
     Set the user interface elements as intended
     """
+    runner.head_char_elem.setCurrentText(__charelem__[char])
     runner.head_char_name.setCurrentText(char)
 
     """
@@ -320,6 +332,7 @@ def test_weap_load_nope(
     """
     Set the user interface elements as intended
     """
+    runner.head_char_elem.setCurrentText(__charelem__[char])
     runner.head_char_name.setCurrentText(char)
 
     """
@@ -457,6 +470,7 @@ def test_weap_load_fail_type(
     """
     Set the user interface elements as intended
     """
+    runner.head_char_elem.setCurrentText(__charelem__[char])
     runner.head_char_name.setCurrentText(char)
 
     """
@@ -572,6 +586,7 @@ def test_weap_load_fail_name(
     """
     Set the user interface elements as intended
     """
+    runner.head_char_elem.setCurrentText(__charelem__[char])
     runner.head_char_name.setCurrentText(char)
 
     """
@@ -705,6 +720,7 @@ def test_weap_load_fail_levl(
     """
     Set the user interface elements as intended
     """
+    runner.head_char_elem.setCurrentText(__charelem__[char])
     runner.head_char_name.setCurrentText(char)
 
     """
@@ -821,6 +837,7 @@ def test_weap_load_fail_refn(
     """
     Set the user interface elements as intended
     """
+    runner.head_char_elem.setCurrentText(__charelem__[char])
     runner.head_char_name.setCurrentText(char)
 
     """
@@ -893,6 +910,7 @@ def test_weap_save_yaml_actual(
     objc = Family[type][name]()
     levl = choice(objc.levl_bind).value.name
 
+    runner.head_char_elem.setCurrentText(__charelem__[char])
     runner.head_char_name.setCurrentText(char)
     runner.weap_area_name.setCurrentText(name)
     runner.weap_area_levl.setCurrentText(levl)
@@ -977,6 +995,7 @@ def test_weap_save_json_actual(
     objc = Family[type][name]()
     levl = choice(objc.levl_bind).value.name
 
+    runner.head_char_elem.setCurrentText(__charelem__[char])
     runner.head_char_name.setCurrentText(char)
     runner.weap_area_name.setCurrentText(name)
     runner.weap_area_levl.setCurrentText(levl)
@@ -1037,6 +1056,7 @@ def test_weap_save_nope(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
     Set the user interface elements as intended
     """
 
+    runner.head_char_elem.setCurrentText(__charelem__[char])
     runner.head_char_name.setCurrentText(char)
 
     """
@@ -1093,6 +1113,7 @@ def test_weap_load_yaml_actual(
     """
     Set the user interface elements as intended
     """
+    runner.head_char_elem.setCurrentText(__charelem__[char])
     runner.head_char_name.setCurrentText(char)
 
     """
@@ -1159,6 +1180,7 @@ def test_weap_load_json_actual(
     """
     Set the user interface elements as intended
     """
+    runner.head_char_elem.setCurrentText(__charelem__[char])
     runner.head_char_name.setCurrentText(char)
 
     """

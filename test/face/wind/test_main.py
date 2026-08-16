@@ -98,10 +98,22 @@ def test_wind_main_fail_continue(runner: MainWindow, mocker: MockerFixture, _: N
     """
 
     """
+    Create a residual temp file matching the cleanup pattern so the loop body executes
+    """
+    residual = NamedTemporaryFile(prefix=conf.data_prefix, suffix=conf.data_suffix, delete=False)
+    residual.close()
+
+    """
     Mock remove function in rsrc.py for excepting FileNotFoundError
     """
     mocker.patch("gi_loadouts.face.rsrc.remove", side_effect=FileNotFoundError)
     make_temp_file()
+
+    """
+    Wipe before moving on
+    """
+    if path.exists(residual.name):
+        remove(residual.name)
 
 
 @pytest.mark.parametrize("_", [pytest.param(None, id="face.wind: Manually invoke __del__")])
