@@ -33,7 +33,7 @@
   </property>
   <property name="font">
    <font>
-    <family>IBM Plex Sans</family>
+    <family>Inter</family>
     <pointsize>10</pointsize>
    </font>
   </property>
@@ -106,7 +106,7 @@
    </property>
    <property name="font">
     <font>
-     <family>IBM Plex Sans</family>
+     <family>Inter</family>
      <pointsize>20</pointsize>
     </font>
    </property>
@@ -154,10 +154,10 @@
   <widget class="QLabel" name="body">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>350</y>
-     <width>500</width>
-     <height>285</height>
+     <x>75</x>
+     <y>340</y>
+     <width>450</width>
+     <height>300</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -168,14 +168,14 @@
    </property>
    <property name="minimumSize">
     <size>
-     <width>500</width>
-     <height>285</height>
+     <width>450</width>
+     <height>300</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
-     <width>500</width>
-     <height>285</height>
+     <width>450</width>
+     <height>300</height>
     </size>
    </property>
    <property name="text">

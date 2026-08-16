@@ -1,13 +1,22 @@
 ################################################################################
 ## Form generated from reading UI file 'info.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.8.1
+## Created by: Qt User Interface Compiler version 6.11.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import QCoreApplication, QMetaObject, QRect, QSize, Qt
-from PySide6.QtGui import QFont, QPixmap
+from PySide6.QtCore import (
+    QCoreApplication,
+    QMetaObject,
+    QRect,
+    QSize,
+    Qt,
+)
+from PySide6.QtGui import (
+    QFont,
+    QPixmap,
+)
 from PySide6.QtWidgets import QLabel, QPushButton, QSizePolicy
 
 
@@ -25,7 +34,7 @@ class Ui_info:
         info.setMinimumSize(QSize(600, 800))
         info.setMaximumSize(QSize(600, 800))
         font = QFont()
-        font.setFamilies(["IBM Plex Sans"])
+        font.setFamilies(["Inter"])
         font.setPointSize(10)
         info.setFont(font)
         self.icon = QLabel(info)
@@ -45,7 +54,7 @@ class Ui_info:
         self.head.setMinimumSize(QSize(500, 30))
         self.head.setMaximumSize(QSize(500, 30))
         font1 = QFont()
-        font1.setFamilies(["IBM Plex Sans"])
+        font1.setFamilies(["Inter"])
         font1.setPointSize(20)
         self.head.setFont(font1)
         self.head.setAlignment(Qt.AlignmentFlag.AlignCenter)
@@ -59,11 +68,11 @@ class Ui_info:
         self.vers.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.body = QLabel(info)
         self.body.setObjectName("body")
-        self.body.setGeometry(QRect(50, 350, 500, 285))
+        self.body.setGeometry(QRect(75, 340, 450, 300))
         sizePolicy.setHeightForWidth(self.body.sizePolicy().hasHeightForWidth())
         self.body.setSizePolicy(sizePolicy)
-        self.body.setMinimumSize(QSize(500, 285))
-        self.body.setMaximumSize(QSize(500, 285))
+        self.body.setMinimumSize(QSize(450, 300))
+        self.body.setMaximumSize(QSize(450, 300))
         self.body.setAlignment(
             Qt.AlignmentFlag.AlignLeading | Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignTop
         )

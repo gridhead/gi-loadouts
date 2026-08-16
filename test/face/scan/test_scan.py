@@ -137,7 +137,7 @@ def test_scan_arti_drop(
     if name == "None":
         return
 
-    assert scantest.arti_type_name.text() == truncate_text(part.__name__, 34)
+    assert scantest.arti_type_name.text() == truncate_text(part.__name__, 30)
     assert scantest.arti_data_main.text() == str(round(part.stat_data, 1))
 
 

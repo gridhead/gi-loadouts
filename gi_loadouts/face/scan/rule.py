@@ -110,7 +110,7 @@ class Rule(QDialog, Ui_scan, Dialog):
                     getattr(
                         kind.value, self.dist[self.arti_dist.currentText().strip()]["part"]
                     ).__name__,
-                    34,
+                    30,
                 )
             )
             self.arti_head_icon.setPixmap(
