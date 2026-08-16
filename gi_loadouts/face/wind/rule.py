@@ -592,8 +592,9 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
                     "pair": self.collection.pair,
                 },
                 self.c_tyvt,
+                parent=self,
             )
-            self.otptobjc.show()
+            self.otptobjc.exec()
         except Exception as expt:
             self.show_dialog(
                 QMessageBox.Information,
@@ -653,8 +654,8 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
 
         :return:
         """
-        self.infoobjc = InfoDialog()
-        self.infoobjc.show()
+        self.infoobjc = InfoDialog(parent=self)
+        self.infoobjc.exec()
 
     def show_lcns_dialog(self) -> None:
         """
@@ -662,8 +663,8 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
 
         :return:
         """
-        self.lcnsobjc = LcnsDialog()
-        self.lcnsobjc.show()
+        self.lcnsobjc = LcnsDialog(parent=self)
+        self.lcnsobjc.exec()
 
     def show_scan_dialog(self, part: str) -> None:
         """
@@ -671,7 +672,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
 
         :return:
         """
-        self.scanobjc = ScanDialog(part)
+        self.scanobjc = ScanDialog(part, parent=self)
         if self.scanobjc.exec() == QDialog.Accepted:
             info = self.scanobjc.keep_info()
 

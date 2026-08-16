@@ -1,13 +1,13 @@
 from PySide6.QtGui import QPixmap
-from PySide6.QtWidgets import QMainWindow
+from PySide6.QtWidgets import QDialog
 
 from ...face.util import modify_graphics_resource
 from .otpt import Ui_otptwind
 
 
-class Rule(QMainWindow, Ui_otptwind):
-    def __init__(self) -> None:
-        super().__init__()
+class Rule(QDialog, Ui_otptwind):
+    def __init__(self, **kwargs) -> None:
+        super().__init__(**kwargs)
         self.arti = None
         self.char = None
         self.weap = None
