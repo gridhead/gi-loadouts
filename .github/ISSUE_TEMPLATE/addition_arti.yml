@@ -1,0 +1,23 @@
+name: "Artifact Addition"
+description: "Request adding a new artifact set to the GI Loadouts roster"
+title: "Add the recently added artifact set `{name}` to the GI Loadouts roster"
+labels:
+  - "enhancement"
+  - "good first issue"
+body:
+  - type: "input"
+    id: "name"
+    attributes:
+      label: "Name"
+      description: "Name of the artifact set page on the Genshin Impact wiki"
+      placeholder: "e.g. Adventurer"
+    validations:
+      required: true
+  - type: "input"
+    id: "wiki"
+    attributes:
+      label: "Page"
+      description: "Link to the artifact set page on the Genshin Impact wiki"
+      placeholder: "e.g. https://genshin-impact.fandom.com/wiki/Adventurer"
+    validations:
+      required: true
