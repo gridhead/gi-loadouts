@@ -1,5 +1,5 @@
 import pytest
-from PySide6.QtCore import Qt, QUrl
+from PySide6.QtCore import Qt, QTimer, QUrl
 from PySide6.QtGui import QDesktopServices
 from PySide6.QtWidgets import QDialog
 from pytest_mock.plugin import MockerFixture
@@ -20,10 +20,15 @@ def test_info(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, _: None) 
     """
     Perform the action of clicking the help button
     """
+
+    def handle_dialog() -> None:
+        qtbot.mouseClick(runner.infoobjc.updt, Qt.LeftButton)
+        runner.infoobjc.close()
+
+    mock_open_link = mocker.patch.object(QDesktopServices, "openUrl")
+    QTimer.singleShot(0, handle_dialog)
     qtbot.mouseClick(runner.side_info, Qt.LeftButton)
-    mock_open_url = mocker.patch.object(QDesktopServices, "openUrl")
-    qtbot.mouseClick(runner.infoobjc.updt, Qt.LeftButton)
-    expected_url = QUrl(__releases__)
+    expected_link = QUrl(__releases__)
     """
     Confirm if the user interface elements change accordingly
     """
@@ -35,4 +40,4 @@ def test_info(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture, _: None) 
         runner.infoobjc.comp.text()
         == f"This version is compatible with Genshin Impact {__gicompat_vers__} Phase {__gicompat_part__}"
     )
-    mock_open_url.assert_called_once_with(expected_url)
+    mock_open_link.assert_called_once_with(expected_link)

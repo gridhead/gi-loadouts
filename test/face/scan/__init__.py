@@ -196,7 +196,7 @@ __rtrn_flty__ = {
 
 
 class MockScanDialog:
-    def __init__(self, part: str):
+    def __init__(self, part: str, parent=None):
         self.part = part
         self.pair = {
             "fwol": "Flower of Life",

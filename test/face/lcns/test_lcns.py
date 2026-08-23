@@ -1,5 +1,5 @@
 import pytest
-from PySide6.QtCore import Qt
+from PySide6.QtCore import Qt, QTimer
 from PySide6.QtWidgets import QDialog
 from pytestqt.qtbot import QtBot
 
@@ -18,6 +18,8 @@ def test_lcns(runner: MainWindow, qtbot: QtBot, _: None) -> None:
     """
     Perform the action of clicking the info button
     """
+
+    QTimer.singleShot(0, lambda: runner.lcnsobjc.close())
     qtbot.mouseClick(runner.side_lcns, Qt.LeftButton)
     """
     Confirm if the user interface elements change accordingly

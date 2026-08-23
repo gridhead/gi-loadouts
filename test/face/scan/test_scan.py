@@ -923,7 +923,7 @@ def test_scan_arti_load_fail(
     [
         pytest.param(
             item,
-            lambda part, item=item: MockScanDialog(__dist__[item]["part"]),
+            lambda part, item=item, **kwargs: MockScanDialog(__dist__[item]["part"]),
             id=f"face.scan.rule: Importing {item} artifact information in MainWindow",
         )
         for item in __dist__.keys()
