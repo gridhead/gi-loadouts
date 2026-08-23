@@ -1,0 +1,30 @@
+name: "Character Addition"
+description: "Request adding a new character to the GI Loadouts roster"
+title: "Add the recently added character `{name}` to the GI Loadouts roster"
+labels:
+  - "enhancement"
+  - "good first issue"
+body:
+  - type: "input"
+    id: "name"
+    attributes:
+      label: "Name"
+      description: "Name of the character page on the Genshin Impact wiki"
+      placeholder: "e.g. Traveler"
+    validations:
+      required: true
+  - type: "input"
+    id: "wiki"
+    attributes:
+      label: "Page"
+      description: "Link to the character page on the Genshin Impact wiki"
+      placeholder: "e.g. https://genshin-impact.fandom.com/wiki/Traveler"
+    validations:
+      required: true
+  - type: "textarea"
+    id: "shot"
+    attributes:
+      label: "Portrait"
+      description: "Screenshot of the character details from the Genshin Impact wiki"
+    validations:
+      required: false
