@@ -1,8 +1,8 @@
 from random import choice
 
 import pytest
-from PySide6.QtCore import Qt
-from PySide6.QtWidgets import QMainWindow, QMessageBox
+from PySide6.QtCore import Qt, QTimer
+from PySide6.QtWidgets import QDialog, QMessageBox
 from pytestqt.qtbot import QtBot
 
 from gi_loadouts import __versdata__
@@ -208,18 +208,19 @@ def test_otpt(runner: MainWindow, qtbot: QtBot, type: str, cond: str) -> None:
     """
     Perform the action of clicking the help button
     """
+
+    QTimer.singleShot(0, lambda: runner.otptobjc.close())
     qtbot.mouseClick(runner.head_scan, Qt.LeftButton)
 
     """
     Confirm if the user interface elements change accordingly
     """
     assert runner.head_scan.toolTip() == "Generate"
-    assert isinstance(runner.otptobjc, QMainWindow)
+    assert isinstance(runner.otptobjc, QDialog)
     assert (
         runner.otptobjc.windowTitle()
         == f"Loadouts for Genshin Impact v{__versdata__} - {runner.head_char_name.currentText()}"
     )
-    assert runner.otptobjc.windowModality() == Qt.ApplicationModal
     assert runner.otptobjc.head_area_line_prim.text() == f"<b>{c_name}</b> - {c_levl} ({c_cons})"
     assert (
         runner.otptobjc.head_area_line_seco.text()
