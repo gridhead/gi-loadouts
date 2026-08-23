@@ -9,8 +9,8 @@ from .info import Ui_info
 
 
 class InfoDialog(QDialog, Ui_info):
-    def __init__(self) -> None:
-        super().__init__()
+    def __init__(self, parent=None) -> None:
+        super().__init__(parent=parent)
         self.setupUi(self)
         self.setWindowTitle(f"Loadouts for Genshin Impact v{__versdata__}")
         self.icon.setPixmap(QPixmap(f":pmon/imgs/pmon/{int(time() % 10)}.webp"))

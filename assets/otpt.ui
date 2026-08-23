@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>otptwind</class>
- <widget class="QMainWindow" name="otptwind">
+ <widget class="QDialog" name="otptwind">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -35,6 +35,14 @@
    <string notr="true">font: 10pt &quot;Inter&quot;;</string>
   </property>
   <widget class="QWidget" name="centwdgt">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1260</width>
+     <height>600</height>
+    </rect>
+   </property>
    <widget class="QFrame" name="head_area">
     <property name="geometry">
      <rect>

@@ -26,6 +26,7 @@ class Ui_otptwind:
         otptwind.setStyleSheet('font: 10pt "Inter";')
         self.centwdgt = QWidget(otptwind)
         self.centwdgt.setObjectName("centwdgt")
+        self.centwdgt.setGeometry(QRect(0, 0, 1260, 600))
         self.head_area = QFrame(self.centwdgt)
         self.head_area.setObjectName("head_area")
         self.head_area.setGeometry(QRect(200, 5, 1055, 75))
@@ -1872,7 +1873,6 @@ class Ui_otptwind:
             'font: 87 10pt "Font Awesome 6 Free Solid"; color: rgba(255, 255, 255, 255);'
         )
         self.area_crvl_icon.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        otptwind.setCentralWidget(self.centwdgt)
         self.char_back.raise_()
         self.head_area.raise_()
         self.char_area.raise_()
