@@ -48,6 +48,7 @@ class Ui_lcns:
         font1.setFamilies(["Inter"])
         font1.setPointSize(20)
         self.head.setFont(font1)
+        self.head.setStyleSheet('font: 20pt "Inter";')
         self.head.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.vers = QLabel(lcns)
         self.vers.setObjectName("vers")

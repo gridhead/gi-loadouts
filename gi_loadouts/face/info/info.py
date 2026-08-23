@@ -6,17 +6,8 @@
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import (
-    QCoreApplication,
-    QMetaObject,
-    QRect,
-    QSize,
-    Qt,
-)
-from PySide6.QtGui import (
-    QFont,
-    QPixmap,
-)
+from PySide6.QtCore import QCoreApplication, QMetaObject, QRect, QSize, Qt
+from PySide6.QtGui import QFont, QPixmap
 from PySide6.QtWidgets import QLabel, QPushButton, QSizePolicy
 
 
@@ -57,6 +48,7 @@ class Ui_info:
         font1.setFamilies(["Inter"])
         font1.setPointSize(20)
         self.head.setFont(font1)
+        self.head.setStyleSheet('font: 20pt "Inter";')
         self.head.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.vers = QLabel(info)
         self.vers.setObjectName("vers")
