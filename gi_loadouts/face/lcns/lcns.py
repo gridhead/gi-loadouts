@@ -1,7 +1,7 @@
 ################################################################################
 ## Form generated from reading UI file 'lcns.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.8.1
+## Created by: Qt User Interface Compiler version 6.11.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -25,7 +25,7 @@ class Ui_lcns:
         lcns.setMinimumSize(QSize(600, 630))
         lcns.setMaximumSize(QSize(600, 630))
         font = QFont()
-        font.setFamilies(["IBM Plex Sans"])
+        font.setFamilies(["Inter"])
         font.setPointSize(10)
         lcns.setFont(font)
         self.icon = QLabel(lcns)
@@ -45,7 +45,7 @@ class Ui_lcns:
         self.head.setMinimumSize(QSize(500, 30))
         self.head.setMaximumSize(QSize(500, 30))
         font1 = QFont()
-        font1.setFamilies(["IBM Plex Sans"])
+        font1.setFamilies(["Inter"])
         font1.setPointSize(20)
         self.head.setFont(font1)
         self.head.setAlignment(Qt.AlignmentFlag.AlignCenter)
@@ -59,11 +59,11 @@ class Ui_lcns:
         self.vers.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.body = QLabel(lcns)
         self.body.setObjectName("body")
-        self.body.setGeometry(QRect(50, 350, 500, 160))
+        self.body.setGeometry(QRect(50, 350, 500, 170))
         sizePolicy.setHeightForWidth(self.body.sizePolicy().hasHeightForWidth())
         self.body.setSizePolicy(sizePolicy)
-        self.body.setMinimumSize(QSize(500, 160))
-        self.body.setMaximumSize(QSize(500, 160))
+        self.body.setMinimumSize(QSize(500, 170))
+        self.body.setMaximumSize(QSize(500, 170))
         self.body.setAlignment(
             Qt.AlignmentFlag.AlignLeading | Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignTop
         )

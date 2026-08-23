@@ -32,7 +32,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">* {font: 10pt &quot;IBM Plex Sans&quot;;} QToolTip {font: 10pt &quot;IBM Plex Sans&quot;;}</string>
+   <string notr="true">* {font: 10pt &quot;Inter&quot;;} QToolTip {font: 10pt &quot;Inter&quot;;}</string>
   </property>
   <widget class="QWidget" name="centwdgt">
    <property name="sizePolicy">
@@ -192,7 +192,7 @@
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+        <string notr="true">font: 10pt &quot;Inter&quot;;</string>
        </property>
        <property name="text">
         <string>UNASSIGNED</string>
@@ -227,7 +227,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QComboBox" name="arti_fwol_name_c">
@@ -258,7 +258,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="arti_fwol_data_b">
@@ -289,7 +289,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
@@ -329,7 +329,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
@@ -369,7 +369,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="arti_fwol_data_c">
@@ -400,7 +400,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
@@ -479,7 +479,7 @@
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+        <string notr="true">font: 10pt &quot;Inter&quot;;</string>
        </property>
       </widget>
       <widget class="QLineEdit" name="arti_fwol_data_main">
@@ -510,7 +510,7 @@
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+        <string notr="true">font: 10pt &quot;Inter&quot;;</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
@@ -551,7 +551,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
@@ -591,7 +591,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QComboBox" name="arti_fwol_type">
@@ -622,7 +622,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QComboBox" name="arti_fwol_levl">
@@ -653,7 +653,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QComboBox" name="arti_fwol_rare">
@@ -684,7 +684,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QLabel" name="arti_fwol_head_area">
@@ -838,7 +838,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QFrame" name="arti_pmod_main">
@@ -908,7 +908,7 @@
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+        <string notr="true">font: 10pt &quot;Inter&quot;;</string>
        </property>
       </widget>
       <widget class="QLineEdit" name="arti_pmod_data_main">
@@ -939,7 +939,7 @@
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+        <string notr="true">font: 10pt &quot;Inter&quot;;</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
@@ -1019,7 +1019,7 @@
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+        <string notr="true">font: 10pt &quot;Inter&quot;;</string>
        </property>
        <property name="text">
         <string>UNASSIGNED</string>
@@ -1054,7 +1054,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
@@ -1094,7 +1094,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QComboBox" name="arti_pmod_name_c">
@@ -1125,7 +1125,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QComboBox" name="arti_pmod_name_a">
@@ -1156,7 +1156,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="arti_pmod_data_a">
@@ -1187,7 +1187,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
@@ -1227,7 +1227,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
@@ -1267,7 +1267,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
@@ -1307,7 +1307,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QComboBox" name="arti_pmod_type">
@@ -1338,7 +1338,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QComboBox" name="arti_pmod_rare">
@@ -1369,7 +1369,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QLabel" name="arti_pmod_head_area">
@@ -1523,7 +1523,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="arti_sdoe_data_d">
@@ -1554,7 +1554,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
@@ -1633,7 +1633,7 @@
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+        <string notr="true">font: 10pt &quot;Inter&quot;;</string>
        </property>
       </widget>
       <widget class="QLineEdit" name="arti_sdoe_data_main">
@@ -1664,7 +1664,7 @@
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+        <string notr="true">font: 10pt &quot;Inter&quot;;</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
@@ -1705,7 +1705,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="arti_sdoe_data_b">
@@ -1736,7 +1736,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
@@ -1776,7 +1776,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
@@ -1816,7 +1816,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
@@ -1895,7 +1895,7 @@
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+        <string notr="true">font: 10pt &quot;Inter&quot;;</string>
        </property>
        <property name="text">
         <string>UNASSIGNED</string>
@@ -1930,7 +1930,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QComboBox" name="arti_sdoe_name_b">
@@ -1961,7 +1961,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QComboBox" name="arti_sdoe_levl">
@@ -1992,7 +1992,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QComboBox" name="arti_sdoe_rare">
@@ -2023,7 +2023,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QComboBox" name="arti_sdoe_type">
@@ -2054,7 +2054,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QLabel" name="arti_sdoe_head_area">
@@ -2208,7 +2208,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="arti_gboe_data_d">
@@ -2239,7 +2239,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
@@ -2279,7 +2279,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="arti_gboe_data_c">
@@ -2310,7 +2310,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
@@ -2350,7 +2350,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
@@ -2429,7 +2429,7 @@
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+        <string notr="true">font: 10pt &quot;Inter&quot;;</string>
        </property>
        <property name="text">
         <string>UNASSIGNED</string>
@@ -2503,7 +2503,7 @@
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+        <string notr="true">font: 10pt &quot;Inter&quot;;</string>
        </property>
       </widget>
       <widget class="QLineEdit" name="arti_gboe_data_main">
@@ -2534,7 +2534,7 @@
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+        <string notr="true">font: 10pt &quot;Inter&quot;;</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
@@ -2575,7 +2575,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
@@ -2615,7 +2615,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QComboBox" name="arti_gboe_name_b">
@@ -2646,7 +2646,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QComboBox" name="arti_gboe_levl">
@@ -2677,7 +2677,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QComboBox" name="arti_gboe_type">
@@ -2708,7 +2708,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QComboBox" name="arti_gboe_rare">
@@ -2739,7 +2739,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QLabel" name="arti_gboe_head_area">
@@ -3078,7 +3078,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QComboBox" name="arti_ccol_name_d">
@@ -3109,7 +3109,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="arti_ccol_data_d">
@@ -3140,7 +3140,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
       <property name="frame">
        <bool>true</bool>
@@ -3183,7 +3183,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QFrame" name="arti_ccol_main">
@@ -3253,7 +3253,7 @@
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+        <string notr="true">font: 10pt &quot;Inter&quot;;</string>
        </property>
       </widget>
       <widget class="QLineEdit" name="arti_ccol_data_main">
@@ -3284,7 +3284,7 @@
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+        <string notr="true">font: 10pt &quot;Inter&quot;;</string>
        </property>
        <property name="frame">
         <bool>true</bool>
@@ -3328,7 +3328,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="arti_ccol_data_b">
@@ -3359,7 +3359,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
       <property name="frame">
        <bool>true</bool>
@@ -3441,7 +3441,7 @@
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+        <string notr="true">font: 10pt &quot;Inter&quot;;</string>
        </property>
        <property name="text">
         <string>UNASSIGNED</string>
@@ -3476,7 +3476,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
       <property name="frame">
        <bool>true</bool>
@@ -3519,7 +3519,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
       <property name="frame">
        <bool>true</bool>
@@ -3562,7 +3562,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QComboBox" name="arti_ccol_levl">
@@ -3593,7 +3593,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QComboBox" name="arti_ccol_rare">
@@ -3624,7 +3624,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QLabel" name="arti_ccol_head_area">
@@ -4970,7 +4970,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">#pair_area_desc {font: 10pt &quot;IBM Plex Sans&quot;; background-color: rgba(192, 192, 192, 128);}</string>
+       <string notr="true">#pair_area_desc {font: 10pt &quot;Inter&quot;; background-color: rgba(192, 192, 192, 128);}</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::Shape::NoFrame</enum>
@@ -5022,7 +5022,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 75 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 75 10pt &quot;Inter&quot;;</string>
       </property>
       <property name="text">
        <string>No artifact set.</string>
@@ -5062,7 +5062,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 75 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 75 10pt &quot;Inter&quot;;</string>
       </property>
       <property name="text">
        <string>No artifact set.</string>
@@ -5102,7 +5102,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">#quad_area_desc {font: 10pt &quot;IBM Plex Sans&quot;; background-color: rgba(192, 192, 192, 128);}</string>
+       <string notr="true">#quad_area_desc {font: 10pt &quot;Inter&quot;; background-color: rgba(192, 192, 192, 128);}</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::Shape::NoFrame</enum>
@@ -5497,7 +5497,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QComboBox" name="weap_area_type">
@@ -5528,7 +5528,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QComboBox" name="weap_area_refn">
@@ -5559,7 +5559,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QComboBox" name="weap_area_name">
@@ -5590,7 +5590,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QLabel" name="weap_area_rare">
@@ -5661,7 +5661,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
@@ -5698,7 +5698,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
@@ -6209,7 +6209,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">#weap_area_refn_body {font: 10pt &quot;IBM Plex Sans&quot;; background-color: rgba(192, 192, 192, 128);}</string>
+       <string notr="true">#weap_area_refn_body {font: 10pt &quot;Inter&quot;; background-color: rgba(192, 192, 192, 128);}</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::Shape::NoFrame</enum>
@@ -6258,7 +6258,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
       <property name="text">
        <string>No refinements available.</string>
@@ -6372,7 +6372,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QComboBox" name="head_char_cons">
@@ -6403,7 +6403,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QComboBox" name="head_char_levl">
@@ -6434,7 +6434,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="head_char_data_dfns">
@@ -6465,7 +6465,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
@@ -6591,7 +6591,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
@@ -6631,7 +6631,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
@@ -6671,7 +6671,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
@@ -6794,7 +6794,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
+       <string notr="true">font: 10pt &quot;Inter&quot;;</string>
       </property>
      </widget>
      <widget class="QLabel" name="char_area_rare">
@@ -7304,7 +7304,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
+      <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
      </property>
      <property name="text">
       <string>Head area line QUAT</string>
@@ -7338,7 +7338,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 75 15pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
+      <string notr="true">font: 75 15pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
      </property>
      <property name="text">
       <string>Head area line PRIM</string>
@@ -7372,7 +7372,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 75 15pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
+      <string notr="true">font: 75 15pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
      </property>
      <property name="text">
       <string>Head area line PRIM</string>
@@ -7406,7 +7406,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 75 15pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
+      <string notr="true">font: 75 15pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
      </property>
      <property name="text">
       <string>Head area line PRIM</string>
@@ -7440,7 +7440,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
+      <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
      </property>
      <property name="text">
       <string>Head area line QUAT</string>
