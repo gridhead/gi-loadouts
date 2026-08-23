@@ -88,6 +88,11 @@ def test_team_save_fail(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
     """
 
     """
+    Set the user interface elements to a known state
+    """
+    qtbot.mouseClick(runner.head_wipe, Qt.LeftButton)
+
+    """
     Set the user interface elements as intended
     """
     for area in ["fwol", "pmod", "sdoe", "gboe", "ccol"]:
@@ -189,6 +194,11 @@ def test_team_load_nope(runner: MainWindow, qtbot: QtBot, mocker: MockerFixture,
 
     :return:
     """
+
+    """
+    Set the user interface elements to a known state
+    """
+    qtbot.mouseClick(runner.head_wipe, Qt.LeftButton)
 
     """
     Perform the action of saving the artifact information

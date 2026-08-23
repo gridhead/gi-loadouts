@@ -5,7 +5,7 @@ from uuid import uuid4
 
 import pytest
 from PIL.ImageQt import QImage
-from PySide6.QtCore import QMimeData, Qt
+from PySide6.QtCore import QMimeData, Qt, QThread
 from PySide6.QtWidgets import QApplication, QDialog, QFileDialog, QMessageBox
 from pytesseract import TesseractError
 from pytest_mock import MockerFixture
@@ -606,6 +606,11 @@ def test_scan_import_arti(
     """
 
     """
+    Set the user interface elements to a known state
+    """
+    qtbot.mouseClick(scantest.arti_back_wipe, Qt.LeftButton)
+
+    """
     Create the Tesseract training data
     """
     mocker.patch("gi_loadouts.conf.data_prefix", f"{uuid4().hex.upper()[0:8]}-")
@@ -975,3 +980,54 @@ def test_wind_import_arti(
         assert getattr(runner, f"arti_{__dist__[dist]['part']}_data_{sbst}").text() == str(
             __rtrn__[dist]["stat"]["seco"][f"{sbst}"].stat_data
         )
+
+
+@pytest.mark.parametrize("_", [pytest.param(None, id="face.scan: Manually invoke __del__")])
+def test_scan_delete_pass(scantest: ScanDialog, mocker: MockerFixture, _: None) -> None:
+    """
+    Test manually invoking __del__ on ScanDialog
+
+    :return:
+    """
+
+    """
+    pytest-qt does not invoke __del__ automatically.
+    Refer https://github.com/gridhead/gi-loadouts/issues/165
+    for more details.
+    """
+    mock_thread = mocker.MagicMock(spec=QThread)
+    scantest.thread = mock_thread
+    scantest.__del__()
+
+    """
+    Confirm if the thread termination is called
+    """
+    mock_thread.terminate.assert_called_once()
+    scantest.thread = None
+
+
+@pytest.mark.parametrize(
+    "_", [pytest.param(None, id="face.scan: Manually invoke __del__ with RuntimeError")]
+)
+def test_scan_delete_fail(scantest: ScanDialog, mocker: MockerFixture, _: None) -> None:
+    """
+    Test manually invoking __del__ on ScanDialog when thread termination raises RuntimeError
+
+    :return:
+    """
+
+    """
+    pytest-qt does not invoke __del__ automatically.
+    Refer https://github.com/gridhead/gi-loadouts/issues/165
+    for more details.
+    """
+    mock_thread = mocker.MagicMock(spec=QThread)
+    mock_thread.terminate.side_effect = RuntimeError
+    scantest.thread = mock_thread
+    scantest.__del__()
+
+    """
+    Confirm if the thread termination is called
+    """
+    mock_thread.terminate.assert_called_once()
+    scantest.thread = None
