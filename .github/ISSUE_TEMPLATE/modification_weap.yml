@@ -1,0 +1,31 @@
+name: "Weapon Modification"
+description: "Request modifying an existing weapon in the GI Loadouts roster"
+title: "Add additional description in weapon `{name}`"
+labels:
+  - "enhancement"
+  - "good first issue"
+body:
+  - type: "input"
+    id: "name"
+    attributes:
+      label: "Name"
+      description: "Name of the weapon page on the Genshin Impact wiki"
+      placeholder: "e.g. Dull Blade"
+    validations:
+      required: true
+  - type: "input"
+    id: "release"
+    attributes:
+      label: "Update"
+      description: "Release version after which the modification is needed"
+      placeholder: "e.g. v7.0"
+    validations:
+      required: true
+  - type: "input"
+    id: "wiki"
+    attributes:
+      label: "Page"
+      description: "Link to the weapon page on the Genshin Impact wiki"
+      placeholder: "e.g. https://genshin-impact.fandom.com/wiki/Dull_Blade"
+    validations:
+      required: true
