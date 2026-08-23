@@ -1,0 +1,31 @@
+name: "Artifact Modification"
+description: "Request modifying an existing artifact set in the GI Loadouts roster"
+title: "Add additional description in artifact `{name}`"
+labels:
+  - "enhancement"
+  - "good first issue"
+body:
+  - type: "input"
+    id: "name"
+    attributes:
+      label: "Name"
+      description: "Name of the artifact set page on the Genshin Impact wiki"
+      placeholder: "e.g. Adventurer"
+    validations:
+      required: true
+  - type: "input"
+    id: "release"
+    attributes:
+      label: "Release"
+      description: "Game release version after which the modification is needed"
+      placeholder: "e.g. 7.0"
+    validations:
+      required: true
+  - type: "input"
+    id: "wiki"
+    attributes:
+      label: "Page"
+      description: "Link to the artifact set page on the Genshin Impact wiki"
+      placeholder: "e.g. https://genshin-impact.fandom.com/wiki/Adventurer"
+    validations:
+      required: true
