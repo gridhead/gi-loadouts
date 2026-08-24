@@ -97,6 +97,7 @@ class CharName(StrEnum):
     nilou = "Nilou"
     ningguang = "Ningguang"
     noelle = "Noelle"
+    odette = "Odette"
     ororon = "Ororon"
     prune = "Prune"
     qiqi = "Qiqi"

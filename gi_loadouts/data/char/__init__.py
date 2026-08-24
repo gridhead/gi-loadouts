@@ -79,6 +79,7 @@ from .nicole import Nicole
 from .nilou import Nilou
 from .ningguang import Ningguang
 from .noelle import Noelle
+from .odette import Odette
 from .ororon import Ororon
 from .prune import Prune
 from .qiqi import Qiqi
@@ -200,6 +201,7 @@ __charmaps__ = {
     "Nilou": Nilou,
     "Ningguang": Ningguang,
     "Noelle": Noelle,
+    "Odette": Odette,
     "Ororon": Ororon,
     "Prune": Prune,
     "Qiqi": Qiqi,
