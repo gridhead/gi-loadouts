@@ -33,7 +33,7 @@
   </property>
   <property name="font">
    <font>
-    <family>Inter</family>
+    <family>IBM Plex Sans</family>
     <pointsize>10</pointsize>
    </font>
   </property>
@@ -106,12 +106,12 @@
    </property>
    <property name="font">
     <font>
-     <family>Inter</family>
+     <family>IBM Plex Sans</family>
      <pointsize>20</pointsize>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 20pt &quot;Inter&quot;;</string>
+    <string notr="true">font: 20pt &quot;IBM Plex Sans&quot;;</string>
    </property>
    <property name="text">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Loadouts for Genshin Impact&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -157,10 +157,10 @@
   <widget class="QLabel" name="body">
    <property name="geometry">
     <rect>
-     <x>75</x>
-     <y>340</y>
-     <width>450</width>
-     <height>300</height>
+     <x>50</x>
+     <y>350</y>
+     <width>500</width>
+     <height>285</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -171,14 +171,14 @@
    </property>
    <property name="minimumSize">
     <size>
-     <width>450</width>
-     <height>300</height>
+     <width>500</width>
+     <height>285</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
-     <width>450</width>
-     <height>300</height>
+     <width>500</width>
+     <height>285</height>
     </size>
    </property>
    <property name="text">

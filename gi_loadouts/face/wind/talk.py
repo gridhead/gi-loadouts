@@ -17,5 +17,5 @@ class Dialog:
         self.dialog.setIcon(icon)
         self.dialog.setWindowTitle(f"{head}")
         self.dialog.setText(text)
-        self.dialog.setFont("Inter")
+        self.dialog.setFont("IBM Plex Sans")
         self.dialog.show()

@@ -23,7 +23,7 @@ class Ui_otptwind:
         otptwind.setSizePolicy(sizePolicy)
         otptwind.setMinimumSize(QSize(1260, 600))
         otptwind.setMaximumSize(QSize(1260, 600))
-        otptwind.setStyleSheet('font: 10pt "Inter";')
+        otptwind.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.centwdgt = QWidget(otptwind)
         self.centwdgt.setObjectName("centwdgt")
         self.centwdgt.setGeometry(QRect(0, 0, 1260, 600))
@@ -47,7 +47,7 @@ class Ui_otptwind:
         self.head_area_line_prim.setMinimumSize(QSize(975, 25))
         self.head_area_line_prim.setMaximumSize(QSize(975, 25))
         self.head_area_line_prim.setStyleSheet(
-            'font: 75 15pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 75 15pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.head_area_line_seco = QLabel(self.head_area)
         self.head_area_line_seco.setObjectName("head_area_line_seco")
@@ -57,7 +57,7 @@ class Ui_otptwind:
         self.head_area_line_seco.setMinimumSize(QSize(975, 35))
         self.head_area_line_seco.setMaximumSize(QSize(975, 35))
         self.head_area_line_seco.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.head_vson = QLabel(self.head_area)
         self.head_vson.setObjectName("head_vson")
@@ -130,7 +130,9 @@ class Ui_otptwind:
         self.advc_desc_text.setSizePolicy(sizePolicy)
         self.advc_desc_text.setMinimumSize(QSize(370, 15))
         self.advc_desc_text.setMaximumSize(QSize(370, 15))
-        self.advc_desc_text.setStyleSheet('font: 10pt "Inter"; color: rgba(255, 255, 255, 255);')
+        self.advc_desc_text.setStyleSheet(
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
+        )
         self.area_crit_base = QFrame(self.advc_area)
         self.area_crit_base.setObjectName("area_crit_base")
         self.area_crit_base.setGeometry(QRect(5, 30, 120, 25))
@@ -151,7 +153,7 @@ class Ui_otptwind:
         self.area_crit_base_text.setMinimumSize(QSize(90, 15))
         self.area_crit_base_text.setMaximumSize(QSize(90, 15))
         self.area_crit_base_text.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_crit_base_icon = QLabel(self.area_crit_base)
         self.area_crit_base_icon.setObjectName("area_crit_base_icon")
@@ -184,7 +186,7 @@ class Ui_otptwind:
         self.area_crit_dmge_text.setMinimumSize(QSize(90, 15))
         self.area_crit_dmge_text.setMaximumSize(QSize(90, 15))
         self.area_crit_dmge_text.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_crit_dmge_icon = QLabel(self.area_crit_dmge_head)
         self.area_crit_dmge_icon.setObjectName("area_crit_dmge_icon")
@@ -217,7 +219,7 @@ class Ui_otptwind:
         self.area_crit_rate_text.setMinimumSize(QSize(90, 15))
         self.area_crit_rate_text.setMaximumSize(QSize(90, 15))
         self.area_crit_rate_text.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_crit_rate_icon = QLabel(self.area_crit_rate_head)
         self.area_crit_rate_icon.setObjectName("area_crit_rate_icon")
@@ -250,7 +252,7 @@ class Ui_otptwind:
         self.area_heal_incm_text.setMinimumSize(QSize(90, 15))
         self.area_heal_incm_text.setMaximumSize(QSize(90, 15))
         self.area_heal_incm_text.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_heal_incm_icon = QLabel(self.area_heal_incm_head)
         self.area_heal_incm_icon.setObjectName("area_heal_incm_icon")
@@ -283,7 +285,7 @@ class Ui_otptwind:
         self.area_heal_perc_text.setMinimumSize(QSize(90, 15))
         self.area_heal_perc_text.setMaximumSize(QSize(90, 15))
         self.area_heal_perc_text.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_heal_perc_icon = QLabel(self.area_heal_perc_head)
         self.area_heal_perc_icon.setObjectName("area_heal_perc_icon")
@@ -316,7 +318,7 @@ class Ui_otptwind:
         self.area_heal_base_text.setMinimumSize(QSize(90, 15))
         self.area_heal_base_text.setMaximumSize(QSize(90, 15))
         self.area_heal_base_text.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_heal_base_icon = QLabel(self.area_heal_base)
         self.area_heal_base_icon.setObjectName("area_heal_base_icon")
@@ -348,7 +350,9 @@ class Ui_otptwind:
         self.area_enrc_data.setSizePolicy(sizePolicy)
         self.area_enrc_data.setMinimumSize(QSize(110, 15))
         self.area_enrc_data.setMaximumSize(QSize(110, 15))
-        self.area_enrc_data.setStyleSheet('font: 10pt "Inter"; color: rgba(255, 255, 255, 255);')
+        self.area_enrc_data.setStyleSheet(
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
+        )
         self.area_cldn = QFrame(self.advc_area)
         self.area_cldn.setObjectName("area_cldn")
         self.area_cldn.setGeometry(QRect(255, 180, 120, 25))
@@ -368,7 +372,9 @@ class Ui_otptwind:
         self.area_cldn_data.setSizePolicy(sizePolicy)
         self.area_cldn_data.setMinimumSize(QSize(110, 15))
         self.area_cldn_data.setMaximumSize(QSize(110, 15))
-        self.area_cldn_data.setStyleSheet('font: 10pt "Inter"; color: rgba(255, 255, 255, 255);')
+        self.area_cldn_data.setStyleSheet(
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
+        )
         self.area_sdsh = QFrame(self.advc_area)
         self.area_sdsh.setObjectName("area_sdsh")
         self.area_sdsh.setGeometry(QRect(255, 210, 120, 25))
@@ -388,7 +394,9 @@ class Ui_otptwind:
         self.area_sdsh_data.setSizePolicy(sizePolicy)
         self.area_sdsh_data.setMinimumSize(QSize(110, 15))
         self.area_sdsh_data.setMaximumSize(QSize(110, 15))
-        self.area_sdsh_data.setStyleSheet('font: 10pt "Inter"; color: rgba(255, 255, 255, 255);')
+        self.area_sdsh_data.setStyleSheet(
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
+        )
         self.area_crit_rate = QFrame(self.advc_area)
         self.area_crit_rate.setObjectName("area_crit_rate")
         self.area_crit_rate.setGeometry(QRect(130, 60, 120, 25))
@@ -409,7 +417,7 @@ class Ui_otptwind:
         self.area_crit_rate_data.setMinimumSize(QSize(110, 15))
         self.area_crit_rate_data.setMaximumSize(QSize(110, 15))
         self.area_crit_rate_data.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_crit_dmge = QFrame(self.advc_area)
         self.area_crit_dmge.setObjectName("area_crit_dmge")
@@ -431,7 +439,7 @@ class Ui_otptwind:
         self.area_crit_dmge_data.setMinimumSize(QSize(110, 15))
         self.area_crit_dmge_data.setMaximumSize(QSize(110, 15))
         self.area_crit_dmge_data.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_heal_perc = QFrame(self.advc_area)
         self.area_heal_perc.setObjectName("area_heal_perc")
@@ -453,7 +461,7 @@ class Ui_otptwind:
         self.area_heal_perc_data.setMinimumSize(QSize(110, 15))
         self.area_heal_perc_data.setMaximumSize(QSize(110, 15))
         self.area_heal_perc_data.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_heal_incm = QFrame(self.advc_area)
         self.area_heal_incm.setObjectName("area_heal_incm")
@@ -475,7 +483,7 @@ class Ui_otptwind:
         self.area_heal_incm_data.setMinimumSize(QSize(110, 15))
         self.area_heal_incm_data.setMaximumSize(QSize(110, 15))
         self.area_heal_incm_data.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_enrc_head = QFrame(self.advc_area)
         self.area_enrc_head.setObjectName("area_enrc_head")
@@ -496,7 +504,9 @@ class Ui_otptwind:
         self.area_enrc_text.setSizePolicy(sizePolicy)
         self.area_enrc_text.setMinimumSize(QSize(215, 15))
         self.area_enrc_text.setMaximumSize(QSize(215, 15))
-        self.area_enrc_text.setStyleSheet('font: 10pt "Inter"; color: rgba(255, 255, 255, 255);')
+        self.area_enrc_text.setStyleSheet(
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
+        )
         self.area_enrc_icon = QLabel(self.area_enrc_head)
         self.area_enrc_icon.setObjectName("area_enrc_icon")
         self.area_enrc_icon.setGeometry(QRect(225, 5, 15, 15))
@@ -527,7 +537,9 @@ class Ui_otptwind:
         self.area_cldn_text.setSizePolicy(sizePolicy)
         self.area_cldn_text.setMinimumSize(QSize(215, 15))
         self.area_cldn_text.setMaximumSize(QSize(215, 15))
-        self.area_cldn_text.setStyleSheet('font: 10pt "Inter"; color: rgba(255, 255, 255, 255);')
+        self.area_cldn_text.setStyleSheet(
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
+        )
         self.area_cldn_icon = QLabel(self.area_cldn_head)
         self.area_cldn_icon.setObjectName("area_cldn_icon")
         self.area_cldn_icon.setGeometry(QRect(225, 5, 15, 15))
@@ -558,7 +570,9 @@ class Ui_otptwind:
         self.area_sdsh_text.setSizePolicy(sizePolicy)
         self.area_sdsh_text.setMinimumSize(QSize(215, 15))
         self.area_sdsh_text.setMaximumSize(QSize(215, 15))
-        self.area_sdsh_text.setStyleSheet('font: 10pt "Inter"; color: rgba(255, 255, 255, 255);')
+        self.area_sdsh_text.setStyleSheet(
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
+        )
         self.area_sdsh_icon = QLabel(self.area_sdsh_head)
         self.area_sdsh_icon.setObjectName("area_sdsh_icon")
         self.area_sdsh_icon.setGeometry(QRect(225, 5, 15, 15))
@@ -601,7 +615,9 @@ class Ui_otptwind:
         self.elem_desc_text.setSizePolicy(sizePolicy)
         self.elem_desc_text.setMinimumSize(QSize(370, 15))
         self.elem_desc_text.setMaximumSize(QSize(370, 15))
-        self.elem_desc_text.setStyleSheet('font: 10pt "Inter"; color: rgba(255, 255, 255, 255);')
+        self.elem_desc_text.setStyleSheet(
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
+        )
         self.area_pyro_base = QFrame(self.elem_area)
         self.area_pyro_base.setObjectName("area_pyro_base")
         self.area_pyro_base.setGeometry(QRect(5, 30, 120, 25))
@@ -621,7 +637,9 @@ class Ui_otptwind:
         self.area_pyro_text.setSizePolicy(sizePolicy)
         self.area_pyro_text.setMinimumSize(QSize(90, 15))
         self.area_pyro_text.setMaximumSize(QSize(90, 15))
-        self.area_pyro_text.setStyleSheet('font: 10pt "Inter"; color: rgba(255, 255, 255, 255);')
+        self.area_pyro_text.setStyleSheet(
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
+        )
         self.area_pyro_icon = QLabel(self.area_pyro_base)
         self.area_pyro_icon.setObjectName("area_pyro_icon")
         self.area_pyro_icon.setGeometry(QRect(100, 5, 15, 15))
@@ -653,7 +671,7 @@ class Ui_otptwind:
         self.area_pyro_resi_data.setMinimumSize(QSize(110, 15))
         self.area_pyro_resi_data.setMaximumSize(QSize(110, 15))
         self.area_pyro_resi_data.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_pyro_perc = QFrame(self.elem_area)
         self.area_pyro_perc.setObjectName("area_pyro_perc")
@@ -675,7 +693,7 @@ class Ui_otptwind:
         self.area_pyro_perc_data.setMinimumSize(QSize(110, 15))
         self.area_pyro_perc_data.setMaximumSize(QSize(110, 15))
         self.area_pyro_perc_data.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_pyro_perc_head = QFrame(self.elem_area)
         self.area_pyro_perc_head.setObjectName("area_pyro_perc_head")
@@ -697,7 +715,7 @@ class Ui_otptwind:
         self.area_pyro_perc_text.setMinimumSize(QSize(110, 15))
         self.area_pyro_perc_text.setMaximumSize(QSize(110, 15))
         self.area_pyro_perc_text.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_pyro_resi_head = QFrame(self.elem_area)
         self.area_pyro_resi_head.setObjectName("area_pyro_resi_head")
@@ -719,7 +737,7 @@ class Ui_otptwind:
         self.area_pyro_resi_text.setMinimumSize(QSize(110, 15))
         self.area_pyro_resi_text.setMaximumSize(QSize(110, 15))
         self.area_pyro_resi_text.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_hydo_perc = QFrame(self.elem_area)
         self.area_hydo_perc.setObjectName("area_hydo_perc")
@@ -741,7 +759,7 @@ class Ui_otptwind:
         self.area_hydo_perc_data.setMinimumSize(QSize(110, 15))
         self.area_hydo_perc_data.setMaximumSize(QSize(110, 15))
         self.area_hydo_perc_data.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_hydo_perc_head = QFrame(self.elem_area)
         self.area_hydo_perc_head.setObjectName("area_hydo_perc_head")
@@ -763,7 +781,7 @@ class Ui_otptwind:
         self.area_hydo_perc_text.setMinimumSize(QSize(110, 15))
         self.area_hydo_perc_text.setMaximumSize(QSize(110, 15))
         self.area_hydo_perc_text.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_hydo_resi_head = QFrame(self.elem_area)
         self.area_hydo_resi_head.setObjectName("area_hydo_resi_head")
@@ -785,7 +803,7 @@ class Ui_otptwind:
         self.area_hydo_resi_text.setMinimumSize(QSize(110, 15))
         self.area_hydo_resi_text.setMaximumSize(QSize(110, 15))
         self.area_hydo_resi_text.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_hydo_base = QFrame(self.elem_area)
         self.area_hydo_base.setObjectName("area_hydo_base")
@@ -806,7 +824,9 @@ class Ui_otptwind:
         self.area_hydo_text.setSizePolicy(sizePolicy)
         self.area_hydo_text.setMinimumSize(QSize(90, 15))
         self.area_hydo_text.setMaximumSize(QSize(90, 15))
-        self.area_hydo_text.setStyleSheet('font: 10pt "Inter"; color: rgba(255, 255, 255, 255);')
+        self.area_hydo_text.setStyleSheet(
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
+        )
         self.area_hydo_icon = QLabel(self.area_hydo_base)
         self.area_hydo_icon.setObjectName("area_hydo_icon")
         self.area_hydo_icon.setGeometry(QRect(100, 5, 15, 15))
@@ -838,7 +858,7 @@ class Ui_otptwind:
         self.area_hydo_resi_data.setMinimumSize(QSize(110, 15))
         self.area_hydo_resi_data.setMaximumSize(QSize(110, 15))
         self.area_hydo_resi_data.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_dend_resi_head = QFrame(self.elem_area)
         self.area_dend_resi_head.setObjectName("area_dend_resi_head")
@@ -860,7 +880,7 @@ class Ui_otptwind:
         self.area_dend_resi_text.setMinimumSize(QSize(110, 15))
         self.area_dend_resi_text.setMaximumSize(QSize(110, 15))
         self.area_dend_resi_text.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_dend_resi = QFrame(self.elem_area)
         self.area_dend_resi.setObjectName("area_dend_resi")
@@ -882,7 +902,7 @@ class Ui_otptwind:
         self.area_dend_resi_data.setMinimumSize(QSize(110, 15))
         self.area_dend_resi_data.setMaximumSize(QSize(110, 15))
         self.area_dend_resi_data.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_dend_base = QFrame(self.elem_area)
         self.area_dend_base.setObjectName("area_dend_base")
@@ -903,7 +923,9 @@ class Ui_otptwind:
         self.area_dend_text.setSizePolicy(sizePolicy)
         self.area_dend_text.setMinimumSize(QSize(90, 15))
         self.area_dend_text.setMaximumSize(QSize(90, 15))
-        self.area_dend_text.setStyleSheet('font: 10pt "Inter"; color: rgba(255, 255, 255, 255);')
+        self.area_dend_text.setStyleSheet(
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
+        )
         self.area_dend_icon = QLabel(self.area_dend_base)
         self.area_dend_icon.setObjectName("area_dend_icon")
         self.area_dend_icon.setGeometry(QRect(100, 5, 15, 15))
@@ -935,7 +957,7 @@ class Ui_otptwind:
         self.area_dend_perc_data.setMinimumSize(QSize(110, 15))
         self.area_dend_perc_data.setMaximumSize(QSize(110, 15))
         self.area_dend_perc_data.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_dend_perc_head = QFrame(self.elem_area)
         self.area_dend_perc_head.setObjectName("area_dend_perc_head")
@@ -957,7 +979,7 @@ class Ui_otptwind:
         self.area_dend_perc_text.setMinimumSize(QSize(110, 15))
         self.area_dend_perc_text.setMaximumSize(QSize(110, 15))
         self.area_dend_perc_text.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_elec_resi_head = QFrame(self.elem_area)
         self.area_elec_resi_head.setObjectName("area_elec_resi_head")
@@ -979,7 +1001,7 @@ class Ui_otptwind:
         self.area_elec_resi_text.setMinimumSize(QSize(110, 15))
         self.area_elec_resi_text.setMaximumSize(QSize(110, 15))
         self.area_elec_resi_text.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_elec_base = QFrame(self.elem_area)
         self.area_elec_base.setObjectName("area_elec_base")
@@ -1000,7 +1022,9 @@ class Ui_otptwind:
         self.area_elec_text.setSizePolicy(sizePolicy)
         self.area_elec_text.setMinimumSize(QSize(90, 15))
         self.area_elec_text.setMaximumSize(QSize(90, 15))
-        self.area_elec_text.setStyleSheet('font: 10pt "Inter"; color: rgba(255, 255, 255, 255);')
+        self.area_elec_text.setStyleSheet(
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
+        )
         self.area_elec_icon = QLabel(self.area_elec_base)
         self.area_elec_icon.setObjectName("area_elec_icon")
         self.area_elec_icon.setGeometry(QRect(100, 5, 15, 15))
@@ -1032,7 +1056,7 @@ class Ui_otptwind:
         self.area_elec_perc_data.setMinimumSize(QSize(110, 15))
         self.area_elec_perc_data.setMaximumSize(QSize(110, 15))
         self.area_elec_perc_data.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_elec_resi = QFrame(self.elem_area)
         self.area_elec_resi.setObjectName("area_elec_resi")
@@ -1054,7 +1078,7 @@ class Ui_otptwind:
         self.area_elec_resi_data.setMinimumSize(QSize(110, 15))
         self.area_elec_resi_data.setMaximumSize(QSize(110, 15))
         self.area_elec_resi_data.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_elec_perc_head = QFrame(self.elem_area)
         self.area_elec_perc_head.setObjectName("area_elec_perc_head")
@@ -1076,7 +1100,7 @@ class Ui_otptwind:
         self.area_elec_perc_text.setMinimumSize(QSize(110, 15))
         self.area_elec_perc_text.setMaximumSize(QSize(110, 15))
         self.area_elec_perc_text.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_anem_resi = QFrame(self.elem_area)
         self.area_anem_resi.setObjectName("area_anem_resi")
@@ -1098,7 +1122,7 @@ class Ui_otptwind:
         self.area_anem_resi_data.setMinimumSize(QSize(110, 15))
         self.area_anem_resi_data.setMaximumSize(QSize(110, 15))
         self.area_anem_resi_data.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_anem_base = QFrame(self.elem_area)
         self.area_anem_base.setObjectName("area_anem_base")
@@ -1119,7 +1143,9 @@ class Ui_otptwind:
         self.area_anem_text.setSizePolicy(sizePolicy)
         self.area_anem_text.setMinimumSize(QSize(90, 15))
         self.area_anem_text.setMaximumSize(QSize(90, 15))
-        self.area_anem_text.setStyleSheet('font: 10pt "Inter"; color: rgba(255, 255, 255, 255);')
+        self.area_anem_text.setStyleSheet(
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
+        )
         self.area_anem_icon = QLabel(self.area_anem_base)
         self.area_anem_icon.setObjectName("area_anem_icon")
         self.area_anem_icon.setGeometry(QRect(100, 5, 15, 15))
@@ -1151,7 +1177,7 @@ class Ui_otptwind:
         self.area_anem_resi_text.setMinimumSize(QSize(110, 15))
         self.area_anem_resi_text.setMaximumSize(QSize(110, 15))
         self.area_anem_resi_text.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_anem_perc_head = QFrame(self.elem_area)
         self.area_anem_perc_head.setObjectName("area_anem_perc_head")
@@ -1173,7 +1199,7 @@ class Ui_otptwind:
         self.area_anem_perc_text.setMinimumSize(QSize(110, 15))
         self.area_anem_perc_text.setMaximumSize(QSize(110, 15))
         self.area_anem_perc_text.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_anem_perc = QFrame(self.elem_area)
         self.area_anem_perc.setObjectName("area_anem_perc")
@@ -1195,7 +1221,7 @@ class Ui_otptwind:
         self.area_anem_perc_data.setMinimumSize(QSize(110, 15))
         self.area_anem_perc_data.setMaximumSize(QSize(110, 15))
         self.area_anem_perc_data.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_cryo_perc_head = QFrame(self.elem_area)
         self.area_cryo_perc_head.setObjectName("area_cryo_perc_head")
@@ -1217,7 +1243,7 @@ class Ui_otptwind:
         self.area_cryo_perc_text.setMinimumSize(QSize(110, 15))
         self.area_cryo_perc_text.setMaximumSize(QSize(110, 15))
         self.area_cryo_perc_text.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_cryo_resi_head = QFrame(self.elem_area)
         self.area_cryo_resi_head.setObjectName("area_cryo_resi_head")
@@ -1239,7 +1265,7 @@ class Ui_otptwind:
         self.area_cryo_resi_text.setMinimumSize(QSize(110, 15))
         self.area_cryo_resi_text.setMaximumSize(QSize(110, 15))
         self.area_cryo_resi_text.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_cryo_perc = QFrame(self.elem_area)
         self.area_cryo_perc.setObjectName("area_cryo_perc")
@@ -1261,7 +1287,7 @@ class Ui_otptwind:
         self.area_cryo_perc_data.setMinimumSize(QSize(110, 15))
         self.area_cryo_perc_data.setMaximumSize(QSize(110, 15))
         self.area_cryo_perc_data.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_cryo_base = QFrame(self.elem_area)
         self.area_cryo_base.setObjectName("area_cryo_base")
@@ -1282,7 +1308,9 @@ class Ui_otptwind:
         self.area_cryo_text.setSizePolicy(sizePolicy)
         self.area_cryo_text.setMinimumSize(QSize(90, 15))
         self.area_cryo_text.setMaximumSize(QSize(90, 15))
-        self.area_cryo_text.setStyleSheet('font: 10pt "Inter"; color: rgba(255, 255, 255, 255);')
+        self.area_cryo_text.setStyleSheet(
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
+        )
         self.area_cryo_icon = QLabel(self.area_cryo_base)
         self.area_cryo_icon.setObjectName("area_cryo_icon")
         self.area_cryo_icon.setGeometry(QRect(100, 5, 15, 15))
@@ -1314,7 +1342,7 @@ class Ui_otptwind:
         self.area_cryo_resi_data.setMinimumSize(QSize(110, 15))
         self.area_cryo_resi_data.setMaximumSize(QSize(110, 15))
         self.area_cryo_resi_data.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_geox_perc = QFrame(self.elem_area)
         self.area_geox_perc.setObjectName("area_geox_perc")
@@ -1336,7 +1364,7 @@ class Ui_otptwind:
         self.area_geox_perc_data.setMinimumSize(QSize(110, 15))
         self.area_geox_perc_data.setMaximumSize(QSize(110, 15))
         self.area_geox_perc_data.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_geox_resi_head = QFrame(self.elem_area)
         self.area_geox_resi_head.setObjectName("area_geox_resi_head")
@@ -1358,7 +1386,7 @@ class Ui_otptwind:
         self.area_geox_resi_text.setMinimumSize(QSize(110, 15))
         self.area_geox_resi_text.setMaximumSize(QSize(110, 15))
         self.area_geox_resi_text.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_geox_base = QFrame(self.elem_area)
         self.area_geox_base.setObjectName("area_geox_base")
@@ -1379,7 +1407,9 @@ class Ui_otptwind:
         self.area_geox_text.setSizePolicy(sizePolicy)
         self.area_geox_text.setMinimumSize(QSize(90, 15))
         self.area_geox_text.setMaximumSize(QSize(90, 15))
-        self.area_geox_text.setStyleSheet('font: 10pt "Inter"; color: rgba(255, 255, 255, 255);')
+        self.area_geox_text.setStyleSheet(
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
+        )
         self.area_geox_icon = QLabel(self.area_geox_base)
         self.area_geox_icon.setObjectName("area_geox_icon")
         self.area_geox_icon.setGeometry(QRect(100, 5, 15, 15))
@@ -1411,7 +1441,7 @@ class Ui_otptwind:
         self.area_geox_perc_text.setMinimumSize(QSize(110, 15))
         self.area_geox_perc_text.setMaximumSize(QSize(110, 15))
         self.area_geox_perc_text.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_geox_resi = QFrame(self.elem_area)
         self.area_geox_resi.setObjectName("area_geox_resi")
@@ -1433,7 +1463,7 @@ class Ui_otptwind:
         self.area_geox_resi_data.setMinimumSize(QSize(110, 15))
         self.area_geox_resi_data.setMaximumSize(QSize(110, 15))
         self.area_geox_resi_data.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_phys_perc_head = QFrame(self.elem_area)
         self.area_phys_perc_head.setObjectName("area_phys_perc_head")
@@ -1455,7 +1485,7 @@ class Ui_otptwind:
         self.area_phys_perc_text.setMinimumSize(QSize(110, 15))
         self.area_phys_perc_text.setMaximumSize(QSize(110, 15))
         self.area_phys_perc_text.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_phys_resi = QFrame(self.elem_area)
         self.area_phys_resi.setObjectName("area_phys_resi")
@@ -1477,7 +1507,7 @@ class Ui_otptwind:
         self.area_phys_resi_data.setMinimumSize(QSize(110, 15))
         self.area_phys_resi_data.setMaximumSize(QSize(110, 15))
         self.area_phys_resi_data.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_phys_perc = QFrame(self.elem_area)
         self.area_phys_perc.setObjectName("area_phys_perc")
@@ -1499,7 +1529,7 @@ class Ui_otptwind:
         self.area_phys_perc_data.setMinimumSize(QSize(110, 15))
         self.area_phys_perc_data.setMaximumSize(QSize(110, 15))
         self.area_phys_perc_data.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_phys_resi_head = QFrame(self.elem_area)
         self.area_phys_resi_head.setObjectName("area_phys_resi_head")
@@ -1521,7 +1551,7 @@ class Ui_otptwind:
         self.area_phys_resi_text.setMinimumSize(QSize(110, 15))
         self.area_phys_resi_text.setMaximumSize(QSize(110, 15))
         self.area_phys_resi_text.setStyleSheet(
-            'font: 10pt "Inter"; color: rgba(255, 255, 255, 255);'
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
         )
         self.area_phys_base = QFrame(self.elem_area)
         self.area_phys_base.setObjectName("area_phys_base")
@@ -1542,7 +1572,9 @@ class Ui_otptwind:
         self.area_phys_text.setSizePolicy(sizePolicy)
         self.area_phys_text.setMinimumSize(QSize(90, 15))
         self.area_phys_text.setMaximumSize(QSize(90, 15))
-        self.area_phys_text.setStyleSheet('font: 10pt "Inter"; color: rgba(255, 255, 255, 255);')
+        self.area_phys_text.setStyleSheet(
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
+        )
         self.area_phys_icon = QLabel(self.area_phys_base)
         self.area_phys_icon.setObjectName("area_phys_icon")
         self.area_phys_icon.setGeometry(QRect(100, 5, 15, 15))
@@ -1585,7 +1617,9 @@ class Ui_otptwind:
         self.base_desc_text.setSizePolicy(sizePolicy)
         self.base_desc_text.setMinimumSize(QSize(275, 15))
         self.base_desc_text.setMaximumSize(QSize(275, 15))
-        self.base_desc_text.setStyleSheet('font: 10pt "Inter"; color: rgba(255, 255, 255, 255);')
+        self.base_desc_text.setStyleSheet(
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
+        )
         self.area_hlpt_head = QFrame(self.base_area)
         self.area_hlpt_head.setObjectName("area_hlpt_head")
         self.area_hlpt_head.setGeometry(QRect(5, 30, 135, 25))
@@ -1605,7 +1639,9 @@ class Ui_otptwind:
         self.area_hlpt_text.setSizePolicy(sizePolicy)
         self.area_hlpt_text.setMinimumSize(QSize(105, 15))
         self.area_hlpt_text.setMaximumSize(QSize(105, 15))
-        self.area_hlpt_text.setStyleSheet('font: 10pt "Inter"; color: rgba(255, 255, 255, 255);')
+        self.area_hlpt_text.setStyleSheet(
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
+        )
         self.area_hlpt_icon = QLabel(self.area_hlpt_head)
         self.area_hlpt_icon.setObjectName("area_hlpt_icon")
         self.area_hlpt_icon.setGeometry(QRect(115, 5, 15, 15))
@@ -1636,7 +1672,9 @@ class Ui_otptwind:
         self.area_attk_text.setSizePolicy(sizePolicy)
         self.area_attk_text.setMinimumSize(QSize(105, 15))
         self.area_attk_text.setMaximumSize(QSize(105, 15))
-        self.area_attk_text.setStyleSheet('font: 10pt "Inter"; color: rgba(255, 255, 255, 255);')
+        self.area_attk_text.setStyleSheet(
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
+        )
         self.area_attk_icon = QLabel(self.area_attk_head)
         self.area_attk_icon.setObjectName("area_attk_icon")
         self.area_attk_icon.setGeometry(QRect(115, 5, 15, 15))
@@ -1667,7 +1705,9 @@ class Ui_otptwind:
         self.area_dfns_text.setSizePolicy(sizePolicy)
         self.area_dfns_text.setMinimumSize(QSize(105, 15))
         self.area_dfns_text.setMaximumSize(QSize(105, 15))
-        self.area_dfns_text.setStyleSheet('font: 10pt "Inter"; color: rgba(255, 255, 255, 255);')
+        self.area_dfns_text.setStyleSheet(
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
+        )
         self.area_dfns_icon = QLabel(self.area_dfns_head)
         self.area_dfns_icon.setObjectName("area_dfns_icon")
         self.area_dfns_icon.setGeometry(QRect(115, 5, 15, 15))
@@ -1698,7 +1738,9 @@ class Ui_otptwind:
         self.area_elma_text.setSizePolicy(sizePolicy)
         self.area_elma_text.setMinimumSize(QSize(105, 15))
         self.area_elma_text.setMaximumSize(QSize(105, 15))
-        self.area_elma_text.setStyleSheet('font: 10pt "Inter"; color: rgba(255, 255, 255, 255);')
+        self.area_elma_text.setStyleSheet(
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
+        )
         self.area_elma_icon = QLabel(self.area_elma_head)
         self.area_elma_icon.setObjectName("area_elma_icon")
         self.area_elma_icon.setGeometry(QRect(115, 5, 15, 15))
@@ -1729,7 +1771,9 @@ class Ui_otptwind:
         self.area_hlpt_calc.setSizePolicy(sizePolicy)
         self.area_hlpt_calc.setMinimumSize(QSize(125, 15))
         self.area_hlpt_calc.setMaximumSize(QSize(125, 15))
-        self.area_hlpt_calc.setStyleSheet('font: 10pt "Inter"; color: rgba(32, 255, 32, 255);')
+        self.area_hlpt_calc.setStyleSheet(
+            'font: 10pt "IBM Plex Sans"; color: rgba(32, 255, 32, 255);'
+        )
         self.area_hlpt_data = QLabel(self.area_hlpt)
         self.area_hlpt_data.setObjectName("area_hlpt_data")
         self.area_hlpt_data.setGeometry(QRect(5, 5, 125, 25))
@@ -1738,12 +1782,14 @@ class Ui_otptwind:
         self.area_hlpt_data.setMinimumSize(QSize(125, 25))
         self.area_hlpt_data.setMaximumSize(QSize(125, 25))
         font = QFont()
-        font.setFamilies(["Inter"])
+        font.setFamilies(["IBM Plex Sans"])
         font.setPointSize(15)
         font.setBold(False)
         font.setItalic(False)
         self.area_hlpt_data.setFont(font)
-        self.area_hlpt_data.setStyleSheet('font: 15pt "Inter"; color: rgba(255, 255, 255, 255);')
+        self.area_hlpt_data.setStyleSheet(
+            'font: 15pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
+        )
         self.area_attk = QFrame(self.base_area)
         self.area_attk.setObjectName("area_attk")
         self.area_attk.setGeometry(QRect(145, 90, 135, 55))
@@ -1763,7 +1809,9 @@ class Ui_otptwind:
         self.area_attk_calc.setSizePolicy(sizePolicy)
         self.area_attk_calc.setMinimumSize(QSize(125, 15))
         self.area_attk_calc.setMaximumSize(QSize(125, 15))
-        self.area_attk_calc.setStyleSheet('font: 10pt "Inter"; color: rgba(32, 255, 32, 255);')
+        self.area_attk_calc.setStyleSheet(
+            'font: 10pt "IBM Plex Sans"; color: rgba(32, 255, 32, 255);'
+        )
         self.area_attk_data = QLabel(self.area_attk)
         self.area_attk_data.setObjectName("area_attk_data")
         self.area_attk_data.setGeometry(QRect(5, 5, 125, 25))
@@ -1772,7 +1820,9 @@ class Ui_otptwind:
         self.area_attk_data.setMinimumSize(QSize(125, 25))
         self.area_attk_data.setMaximumSize(QSize(125, 25))
         self.area_attk_data.setFont(font)
-        self.area_attk_data.setStyleSheet('font: 15pt "Inter"; color: rgba(255, 255, 255, 255);')
+        self.area_attk_data.setStyleSheet(
+            'font: 15pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
+        )
         self.area_dfns = QFrame(self.base_area)
         self.area_dfns.setObjectName("area_dfns")
         self.area_dfns.setGeometry(QRect(145, 150, 135, 55))
@@ -1792,7 +1842,9 @@ class Ui_otptwind:
         self.area_dfns_calc.setSizePolicy(sizePolicy)
         self.area_dfns_calc.setMinimumSize(QSize(125, 15))
         self.area_dfns_calc.setMaximumSize(QSize(125, 15))
-        self.area_dfns_calc.setStyleSheet('font: 10pt "Inter"; color: rgba(32, 255, 32, 255);')
+        self.area_dfns_calc.setStyleSheet(
+            'font: 10pt "IBM Plex Sans"; color: rgba(32, 255, 32, 255);'
+        )
         self.area_dfns_data = QLabel(self.area_dfns)
         self.area_dfns_data.setObjectName("area_dfns_data")
         self.area_dfns_data.setGeometry(QRect(5, 5, 125, 25))
@@ -1801,7 +1853,9 @@ class Ui_otptwind:
         self.area_dfns_data.setMinimumSize(QSize(125, 25))
         self.area_dfns_data.setMaximumSize(QSize(125, 25))
         self.area_dfns_data.setFont(font)
-        self.area_dfns_data.setStyleSheet('font: 15pt "Inter"; color: rgba(255, 255, 255, 255);')
+        self.area_dfns_data.setStyleSheet(
+            'font: 15pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
+        )
         self.area_elma = QFrame(self.base_area)
         self.area_elma.setObjectName("area_elma")
         self.area_elma.setGeometry(QRect(145, 210, 135, 25))
@@ -1821,7 +1875,9 @@ class Ui_otptwind:
         self.area_elma_data.setSizePolicy(sizePolicy)
         self.area_elma_data.setMinimumSize(QSize(125, 15))
         self.area_elma_data.setMaximumSize(QSize(125, 15))
-        self.area_elma_data.setStyleSheet('font: 10pt "Inter"; color: rgba(255, 255, 255, 255);')
+        self.area_elma_data.setStyleSheet(
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
+        )
         self.area_crvl = QFrame(self.centwdgt)
         self.area_crvl.setObjectName("area_crvl")
         self.area_crvl.setGeometry(QRect(745, 325, 120, 25))
@@ -1841,7 +1897,9 @@ class Ui_otptwind:
         self.area_crvl_data.setSizePolicy(sizePolicy)
         self.area_crvl_data.setMinimumSize(QSize(110, 15))
         self.area_crvl_data.setMaximumSize(QSize(110, 15))
-        self.area_crvl_data.setStyleSheet('font: 10pt "Inter"; color: rgba(255, 255, 255, 255);')
+        self.area_crvl_data.setStyleSheet(
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
+        )
         self.area_crvl_head = QFrame(self.centwdgt)
         self.area_crvl_head.setObjectName("area_crvl_head")
         self.area_crvl_head.setGeometry(QRect(495, 325, 245, 25))
@@ -1861,7 +1919,9 @@ class Ui_otptwind:
         self.area_crvl_text.setSizePolicy(sizePolicy)
         self.area_crvl_text.setMinimumSize(QSize(215, 15))
         self.area_crvl_text.setMaximumSize(QSize(215, 15))
-        self.area_crvl_text.setStyleSheet('font: 10pt "Inter"; color: rgba(255, 255, 255, 255);')
+        self.area_crvl_text.setStyleSheet(
+            'font: 10pt "IBM Plex Sans"; color: rgba(255, 255, 255, 255);'
+        )
         self.area_crvl_icon = QLabel(self.area_crvl_head)
         self.area_crvl_icon.setObjectName("area_crvl_icon")
         self.area_crvl_icon.setGeometry(QRect(225, 5, 15, 15))

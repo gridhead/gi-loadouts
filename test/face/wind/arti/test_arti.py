@@ -66,7 +66,7 @@ def test_arti_drop(
     for indx, area in enumerate(["fwol", "pmod", "sdoe", "gboe", "ccol"]):
         item = coll[indx]
         assert getattr(runner, f"arti_{area}_type_name").text() == truncate_text(
-            coll[indx].__name__, 30
+            coll[indx].__name__, 32
         )
         item.rare, item.levl, item.stat_name = (
             conf[area]["rare"].value.qant,

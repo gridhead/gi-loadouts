@@ -33,7 +33,7 @@
   </property>
   <property name="font">
    <font>
-    <family>Inter</family>
+    <family>IBM Plex Sans</family>
     <pointsize>10</pointsize>
    </font>
   </property>
@@ -106,12 +106,12 @@
    </property>
    <property name="font">
     <font>
-     <family>Inter</family>
+     <family>IBM Plex Sans</family>
      <pointsize>20</pointsize>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 20pt &quot;Inter&quot;;</string>
+    <string notr="true">font: 20pt &quot;IBM Plex Sans&quot;;</string>
    </property>
    <property name="text">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Loadouts for Genshin Impact&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -160,7 +160,7 @@
      <x>50</x>
      <y>350</y>
      <width>500</width>
-     <height>170</height>
+     <height>160</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -172,13 +172,13 @@
    <property name="minimumSize">
     <size>
      <width>500</width>
-     <height>170</height>
+     <height>160</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
      <width>500</width>
-     <height>170</height>
+     <height>160</height>
     </size>
    </property>
    <property name="text">

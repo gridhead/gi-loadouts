@@ -32,7 +32,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">font: 10pt &quot;Inter&quot;;</string>
+   <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;;</string>
   </property>
   <widget class="QWidget" name="centwdgt">
    <property name="geometry">
@@ -107,7 +107,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 75 15pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+      <string notr="true">font: 75 15pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
      </property>
      <property name="text">
       <string>Head area line PRIM</string>
@@ -141,7 +141,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+      <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
      </property>
      <property name="text">
       <string>Head area line SECO
@@ -394,7 +394,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ADVANCED STATS&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -465,7 +465,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Critical</string>
@@ -573,7 +573,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Damage</string>
@@ -681,7 +681,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Rate</string>
@@ -789,7 +789,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Incoming</string>
@@ -897,7 +897,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Current</string>
@@ -1005,7 +1005,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Healing</string>
@@ -1113,7 +1113,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>100.0%</string>
@@ -1184,7 +1184,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -1255,7 +1255,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -1326,7 +1326,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>5.0%</string>
@@ -1397,7 +1397,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>50.0%</string>
@@ -1468,7 +1468,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -1539,7 +1539,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -1610,7 +1610,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Energy recharge</string>
@@ -1718,7 +1718,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Cooldown reduction</string>
@@ -1826,7 +1826,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Shield strength</string>
@@ -1971,7 +1971,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>ELEMENTAL STATS</string>
@@ -2042,7 +2042,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Pyro</string>
@@ -2150,7 +2150,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -2221,7 +2221,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -2292,7 +2292,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>DMG Bonus</string>
@@ -2363,7 +2363,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Resistance</string>
@@ -2434,7 +2434,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -2505,7 +2505,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>DMG Bonus</string>
@@ -2576,7 +2576,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Resistance</string>
@@ -2647,7 +2647,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Hydro</string>
@@ -2755,7 +2755,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -2826,7 +2826,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Resistance</string>
@@ -2897,7 +2897,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -2968,7 +2968,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Dendro</string>
@@ -3076,7 +3076,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -3147,7 +3147,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>DMG Bonus</string>
@@ -3218,7 +3218,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Resistance</string>
@@ -3289,7 +3289,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Electro</string>
@@ -3397,7 +3397,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -3468,7 +3468,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -3539,7 +3539,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>DMG Bonus</string>
@@ -3610,7 +3610,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -3681,7 +3681,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Anemo</string>
@@ -3789,7 +3789,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Resistance</string>
@@ -3860,7 +3860,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>DMG Bonus</string>
@@ -3931,7 +3931,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -4002,7 +4002,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>DMG Bonus</string>
@@ -4073,7 +4073,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Resistance</string>
@@ -4144,7 +4144,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -4215,7 +4215,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Cryo</string>
@@ -4323,7 +4323,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -4394,7 +4394,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -4465,7 +4465,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Resistance</string>
@@ -4536,7 +4536,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Geo</string>
@@ -4644,7 +4644,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>DMG Bonus</string>
@@ -4715,7 +4715,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -4786,7 +4786,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>DMG Bonus</string>
@@ -4857,7 +4857,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -4928,7 +4928,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0%</string>
@@ -4999,7 +4999,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Resistance</string>
@@ -5070,7 +5070,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Physical</string>
@@ -5215,7 +5215,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;BASE STATS&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -5286,7 +5286,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>HP</string>
@@ -5394,7 +5394,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>ATK</string>
@@ -5502,7 +5502,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>DEF</string>
@@ -5610,7 +5610,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>EM</string>
@@ -5718,7 +5718,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(32, 255, 32, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(32, 255, 32, 255);</string>
       </property>
       <property name="text">
        <string>+ 0.0</string>
@@ -5753,14 +5753,14 @@ Head area line SECO</string>
       </property>
       <property name="font">
        <font>
-        <family>Inter</family>
+        <family>IBM Plex Sans</family>
         <pointsize>15</pointsize>
         <italic>false</italic>
         <bold>false</bold>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 15pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 15pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0</string>
@@ -5831,7 +5831,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(32, 255, 32, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(32, 255, 32, 255);</string>
       </property>
       <property name="text">
        <string>+ 0.0</string>
@@ -5866,14 +5866,14 @@ Head area line SECO</string>
       </property>
       <property name="font">
        <font>
-        <family>Inter</family>
+        <family>IBM Plex Sans</family>
         <pointsize>15</pointsize>
         <italic>false</italic>
         <bold>false</bold>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 15pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 15pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0</string>
@@ -5944,7 +5944,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(32, 255, 32, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(32, 255, 32, 255);</string>
       </property>
       <property name="text">
        <string>+ 0.0</string>
@@ -5979,14 +5979,14 @@ Head area line SECO</string>
       </property>
       <property name="font">
        <font>
-        <family>Inter</family>
+        <family>IBM Plex Sans</family>
         <pointsize>15</pointsize>
         <italic>false</italic>
         <bold>false</bold>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 15pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 15pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0.0</string>
@@ -6057,7 +6057,7 @@ Head area line SECO</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+       <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
       </property>
       <property name="text">
        <string>0</string>
@@ -6129,7 +6129,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+      <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
      </property>
      <property name="text">
       <string>60.0</string>
@@ -6200,7 +6200,7 @@ Head area line SECO</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 10pt &quot;Inter&quot;; color: rgba(255, 255, 255, 255);</string>
+      <string notr="true">font: 10pt &quot;IBM Plex Sans&quot;; color: rgba(255, 255, 255, 255);</string>
      </property>
      <property name="text">
       <string>Critical value</string>

@@ -327,7 +327,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             )
             droprare.clear()
             droprare.addItems([indx.value.name for indx in kind.value.rare])
-            artiname.setText(truncate_text(getattr(kind.value, part).__name__, 30))
+            artiname.setText(truncate_text(getattr(kind.value, part).__name__, 32))
             headicon.setPixmap(QPixmap(f":arti/imgs/arti/{kind.value.file}/{part}.webp"))
             if droptype.currentText().strip() == "None":
                 headicon.setPixmap(QPixmap(f":arti/imgs/arti/main/{part}.webp"))
