@@ -23,7 +23,7 @@ class Ui_scan:
         scan.setSizePolicy(sizePolicy)
         scan.setMinimumSize(QSize(1180, 535))
         scan.setMaximumSize(QSize(1180, 535))
-        scan.setStyleSheet('font: 10pt "Inter";')
+        scan.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_area = QFrame(scan)
         self.arti_area.setObjectName("arti_area")
         self.arti_area.setGeometry(QRect(5, 35, 210, 495))
@@ -56,7 +56,7 @@ class Ui_scan:
         self.arti_type_name.setSizePolicy(sizePolicy)
         self.arti_type_name.setMinimumSize(QSize(200, 25))
         self.arti_type_name.setMaximumSize(QSize(200, 25))
-        self.arti_type_name.setStyleSheet('font: 10pt "Inter";')
+        self.arti_type_name.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_name_d = QComboBox(self.arti_area)
         self.arti_name_d.setObjectName("arti_name_d")
         self.arti_name_d.setGeometry(QRect(5, 465, 145, 25))
@@ -64,7 +64,7 @@ class Ui_scan:
         self.arti_name_d.setSizePolicy(sizePolicy)
         self.arti_name_d.setMinimumSize(QSize(145, 25))
         self.arti_name_d.setMaximumSize(QSize(145, 25))
-        self.arti_name_d.setStyleSheet('font: 10pt "Inter";')
+        self.arti_name_d.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_name_c = QComboBox(self.arti_area)
         self.arti_name_c.setObjectName("arti_name_c")
         self.arti_name_c.setGeometry(QRect(5, 435, 145, 25))
@@ -72,7 +72,7 @@ class Ui_scan:
         self.arti_name_c.setSizePolicy(sizePolicy)
         self.arti_name_c.setMinimumSize(QSize(145, 25))
         self.arti_name_c.setMaximumSize(QSize(145, 25))
-        self.arti_name_c.setStyleSheet('font: 10pt "Inter";')
+        self.arti_name_c.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_data_b = QLineEdit(self.arti_area)
         self.arti_data_b.setObjectName("arti_data_b")
         self.arti_data_b.setGeometry(QRect(155, 405, 50, 25))
@@ -80,7 +80,7 @@ class Ui_scan:
         self.arti_data_b.setSizePolicy(sizePolicy)
         self.arti_data_b.setMinimumSize(QSize(50, 25))
         self.arti_data_b.setMaximumSize(QSize(50, 25))
-        self.arti_data_b.setStyleSheet('font: 10pt "Inter";')
+        self.arti_data_b.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_data_b.setAlignment(
             Qt.AlignmentFlag.AlignRight
             | Qt.AlignmentFlag.AlignTrailing
@@ -94,7 +94,7 @@ class Ui_scan:
         self.arti_data_a.setSizePolicy(sizePolicy)
         self.arti_data_a.setMinimumSize(QSize(50, 25))
         self.arti_data_a.setMaximumSize(QSize(50, 25))
-        self.arti_data_a.setStyleSheet('font: 10pt "Inter";')
+        self.arti_data_a.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_data_a.setAlignment(
             Qt.AlignmentFlag.AlignRight
             | Qt.AlignmentFlag.AlignTrailing
@@ -108,7 +108,7 @@ class Ui_scan:
         self.arti_name_a.setSizePolicy(sizePolicy)
         self.arti_name_a.setMinimumSize(QSize(145, 25))
         self.arti_name_a.setMaximumSize(QSize(145, 25))
-        self.arti_name_a.setStyleSheet('font: 10pt "Inter";')
+        self.arti_name_a.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_data_c = QLineEdit(self.arti_area)
         self.arti_data_c.setObjectName("arti_data_c")
         self.arti_data_c.setGeometry(QRect(155, 435, 50, 25))
@@ -116,7 +116,7 @@ class Ui_scan:
         self.arti_data_c.setSizePolicy(sizePolicy)
         self.arti_data_c.setMinimumSize(QSize(50, 25))
         self.arti_data_c.setMaximumSize(QSize(50, 25))
-        self.arti_data_c.setStyleSheet('font: 10pt "Inter";')
+        self.arti_data_c.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_data_c.setAlignment(
             Qt.AlignmentFlag.AlignRight
             | Qt.AlignmentFlag.AlignTrailing
@@ -141,7 +141,7 @@ class Ui_scan:
         self.arti_name_main.setSizePolicy(sizePolicy)
         self.arti_name_main.setMinimumSize(QSize(145, 25))
         self.arti_name_main.setMaximumSize(QSize(145, 25))
-        self.arti_name_main.setStyleSheet('font: 10pt "Inter";')
+        self.arti_name_main.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_data_main = QLineEdit(self.arti_main)
         self.arti_data_main.setObjectName("arti_data_main")
         self.arti_data_main.setGeometry(QRect(155, 5, 50, 25))
@@ -149,7 +149,7 @@ class Ui_scan:
         self.arti_data_main.setSizePolicy(sizePolicy)
         self.arti_data_main.setMinimumSize(QSize(50, 25))
         self.arti_data_main.setMaximumSize(QSize(50, 25))
-        self.arti_data_main.setStyleSheet('font: 10pt "Inter";')
+        self.arti_data_main.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_data_main.setAlignment(
             Qt.AlignmentFlag.AlignRight
             | Qt.AlignmentFlag.AlignTrailing
@@ -163,7 +163,7 @@ class Ui_scan:
         self.arti_data_d.setSizePolicy(sizePolicy)
         self.arti_data_d.setMinimumSize(QSize(50, 25))
         self.arti_data_d.setMaximumSize(QSize(50, 25))
-        self.arti_data_d.setStyleSheet('font: 10pt "Inter";')
+        self.arti_data_d.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_data_d.setAlignment(
             Qt.AlignmentFlag.AlignRight
             | Qt.AlignmentFlag.AlignTrailing
@@ -177,7 +177,7 @@ class Ui_scan:
         self.arti_name_b.setSizePolicy(sizePolicy)
         self.arti_name_b.setMinimumSize(QSize(145, 25))
         self.arti_name_b.setMaximumSize(QSize(145, 25))
-        self.arti_name_b.setStyleSheet('font: 10pt "Inter";')
+        self.arti_name_b.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_type = QComboBox(self.arti_area)
         self.arti_type.setObjectName("arti_type")
         self.arti_type.setGeometry(QRect(5, 240, 200, 25))
@@ -185,7 +185,7 @@ class Ui_scan:
         self.arti_type.setSizePolicy(sizePolicy)
         self.arti_type.setMinimumSize(QSize(200, 25))
         self.arti_type.setMaximumSize(QSize(200, 25))
-        self.arti_type.setStyleSheet('font: 10pt "Inter";')
+        self.arti_type.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_levl = QComboBox(self.arti_area)
         self.arti_levl.setObjectName("arti_levl")
         self.arti_levl.setGeometry(QRect(110, 270, 95, 25))
@@ -193,7 +193,7 @@ class Ui_scan:
         self.arti_levl.setSizePolicy(sizePolicy)
         self.arti_levl.setMinimumSize(QSize(95, 25))
         self.arti_levl.setMaximumSize(QSize(95, 25))
-        self.arti_levl.setStyleSheet('font: 10pt "Inter";')
+        self.arti_levl.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_rare = QComboBox(self.arti_area)
         self.arti_rare.setObjectName("arti_rare")
         self.arti_rare.setGeometry(QRect(5, 270, 95, 25))
@@ -201,7 +201,7 @@ class Ui_scan:
         self.arti_rare.setSizePolicy(sizePolicy)
         self.arti_rare.setMinimumSize(QSize(95, 25))
         self.arti_rare.setMaximumSize(QSize(95, 25))
-        self.arti_rare.setStyleSheet('font: 10pt "Inter";')
+        self.arti_rare.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_head_area = QLabel(self.arti_area)
         self.arti_head_area.setObjectName("arti_head_area")
         self.arti_head_area.setGeometry(QRect(5, 35, 200, 200))
@@ -231,7 +231,7 @@ class Ui_scan:
         self.arti_dist.setSizePolicy(sizePolicy)
         self.arti_dist.setMinimumSize(QSize(200, 25))
         self.arti_dist.setMaximumSize(QSize(200, 25))
-        self.arti_dist.setStyleSheet('font: 10pt "Inter";')
+        self.arti_dist.setStyleSheet('font: 10pt "IBM Plex Sans";')
         self.arti_back_area = QFrame(scan)
         self.arti_back_area.setObjectName("arti_back_area")
         self.arti_back_area.setGeometry(QRect(215, 35, 40, 40))
@@ -275,7 +275,7 @@ class Ui_scan:
         self.arti_shot.setMinimumSize(QSize(865, 485))
         self.arti_shot.setMaximumSize(QSize(865, 485))
         self.arti_shot.setStyleSheet(
-            '#arti_shot {font: 10pt "Inter"; background-color: rgba(128, 128, 128, 128);}'
+            '#arti_shot {font: 10pt "IBM Plex Sans"; background-color: rgba(128, 128, 128, 128);}'
         )
         self.arti_shot.setScaledContents(True)
         self.arti_shot.setAlignment(Qt.AlignmentFlag.AlignCenter)
@@ -395,7 +395,7 @@ class Ui_scan:
         self.arti_text.setSizePolicy(sizePolicy)
         self.arti_text.setMinimumSize(QSize(1160, 15))
         self.arti_text.setMaximumSize(QSize(1160, 15))
-        self.arti_text.setStyleSheet('font: 10pt "Inter";')
+        self.arti_text.setStyleSheet('font: 10pt "IBM Plex Sans";')
 
         self.retranslateUi(scan)
 
