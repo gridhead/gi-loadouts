@@ -29,8 +29,8 @@ from .work import ScanWorker
 
 
 class Rule(QDialog, Ui_scan, Dialog):
-    def __init__(self) -> None:
-        super().__init__()
+    def __init__(self, **kwargs) -> None:
+        super().__init__(**kwargs)
         self.shot = None
         self.snap = None
         self.part = ""
