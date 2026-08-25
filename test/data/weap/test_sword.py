@@ -530,6 +530,16 @@ from test import verify_accuracy
             30.2,
             id="data.weap.swords: Athame Artis",
         ),
+        pytest.param(
+            "Exaiphanes Blade",
+            5,
+            2,
+            "Level 90/90 (Rank 6)",
+            608,
+            WeaponStatType.critical_rate_perc,
+            33.1,
+            id="data.weap.swords: Exaiphanes Blade",
+        ),
     ],
 )
 def test_sword(

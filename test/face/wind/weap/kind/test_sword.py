@@ -391,6 +391,16 @@ from test import verify_accuracy
             id="face.wind.rule: Configuring weapon - Sword - Athame Artis",
         ),
         pytest.param(
+            "Exaiphanes Blade",
+            5,
+            "Level 90/90 (Rank 6)",
+            608,
+            WeaponStatType.critical_rate_perc,
+            33.1,
+            4,
+            id="face.wind.rule: Configuring weapon - Sword - Exaiphanes Blade",
+        ),
+        pytest.param(
             "Traveler's Handy Sword",
             3,
             "Level 80/90 (Rank 6)",
