@@ -460,6 +460,16 @@ from test import verify_accuracy
             40.2,
             id="data.weap.bows: The Daybreak Chronicles",
         ),
+        pytest.param(
+            "Covenant of Frost and Snow",
+            4,
+            2,
+            "Level 80/90 (Rank 6)",
+            475,
+            WeaponStatType.defense_perc,
+            47.2,
+            id="data.weap.bows: Covenant of Frost and Snow",
+        ),
     ],
 )
 def test_bow(
