@@ -6,8 +6,7 @@ from .rule import Rule
 
 class ScanDialog(Rule):
     def __init__(self, part: str = "", parent=None) -> None:
-        super().__init__()
-        self.setParent(parent, self.windowFlags())
+        super().__init__(parent=parent)
         self.part = part
         self.setupUi(self)
         self.setWindowTitle(f"Loadouts for Genshin Impact v{__versdata__}")

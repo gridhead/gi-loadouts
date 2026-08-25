@@ -3,7 +3,7 @@ import io
 from PIL import Image
 from PIL.ImageQt import QBuffer
 from PySide6.QtCore import QByteArray, QMimeData, QThread
-from PySide6.QtGui import QDragEnterEvent, QDropEvent, QPixmap
+from PySide6.QtGui import QDragEnterEvent, QDropEvent, QMoveEvent, QPixmap, QShowEvent
 from PySide6.QtWidgets import QApplication, QComboBox, QDialog, QLineEdit, QMessageBox
 
 from ... import conf
@@ -29,8 +29,8 @@ from .work import ScanWorker
 
 
 class Rule(QDialog, Ui_scan, Dialog):
-    def __init__(self) -> None:
-        super().__init__()
+    def __init__(self, **kwargs) -> None:
+        super().__init__(**kwargs)
         self.shot = None
         self.snap = None
         self.part = ""
@@ -44,6 +44,36 @@ class Rule(QDialog, Ui_scan, Dialog):
             "Goblet of Eonothem": {"list": MainStatType_GBOE, "part": "gboe"},
             "Circlet of Logos": {"list": MainStatType_CCOL, "part": "ccol"},
         }
+
+    def showEvent(self, event: QShowEvent) -> None:
+        """
+        Center the dialog box over the parent window
+        GNOME/Wayland does not need but Windows does
+
+        :param event:
+        :return:
+        """
+        if self.parent():
+            self.tocenter = True
+            geo = self.parent().geometry()
+            self.move(
+                geo.center().x() - self.width() // 2,
+                geo.center().y() - self.height() // 2,
+            )
+            self.tocenter = False
+        super().showEvent(event)
+
+    def moveEvent(self, event: QMoveEvent) -> None:
+        """
+        Move the parent window along with the dialog
+        GNOME/Wayland does not need but Windows does
+
+        :param event:
+        :return:
+        """
+        if self.parent() and not getattr(self, "tocenter", False):
+            self.parent().move(self.parent().pos() + event.pos() - event.oldPos())
+        super().moveEvent(event)
 
     def __del__(self):
         """

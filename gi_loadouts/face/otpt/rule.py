@@ -1,4 +1,4 @@
-from PySide6.QtGui import QPixmap
+from PySide6.QtGui import QMoveEvent, QPixmap, QShowEvent
 from PySide6.QtWidgets import QDialog
 
 from ...face.util import modify_graphics_resource
@@ -12,6 +12,36 @@ class Rule(QDialog, Ui_otptwind):
         self.char = None
         self.weap = None
         self.tyvt = None
+
+    def showEvent(self, event: QShowEvent) -> None:
+        """
+        Center the dialog box over the parent window
+        GNOME/Wayland does not need but Windows does
+
+        :param event:
+        :return:
+        """
+        if self.parent():
+            self.tocenter = True
+            geo = self.parent().geometry()
+            self.move(
+                geo.center().x() - self.width() // 2,
+                geo.center().y() - self.height() // 2,
+            )
+            self.tocenter = False
+        super().showEvent(event)
+
+    def moveEvent(self, event: QMoveEvent) -> None:
+        """
+        Move the parent window along with the dialog
+        GNOME/Wayland does not need but Windows does
+
+        :param event:
+        :return:
+        """
+        if self.parent() and not getattr(self, "tocenter", False):
+            self.parent().move(self.parent().pos() + event.pos() - event.oldPos())
+        super().moveEvent(event)
 
     def populate_blanks(self) -> None:
         """
