@@ -440,6 +440,16 @@ from test import verify_accuracy
             40.2,
             id="data.weap.claymores: A Teaspoon of Transcendence",
         ),
+        pytest.param(
+            "Blade of Atonement",
+            4,
+            3,
+            "Level 80/90 (Rank 6)",
+            523,
+            WeaponStatType.attack_perc,
+            25.1,
+            id="data.weap.claymores: Blade of Atonement",
+        ),
     ],
 )
 def test_claymore(
