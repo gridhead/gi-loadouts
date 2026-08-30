@@ -410,6 +410,16 @@ from test import verify_accuracy
             20.1,
             id="data.weap.polearms: Bloodsoaked Ruins",
         ),
+        pytest.param(
+            "Song of the Vigil",
+            4,
+            3,
+            "Level 80/90 (Rank 6)",
+            523,
+            WeaponStatType.elemental_mastery,
+            101,
+            id="data.weap.polearms: Song of the Vigil",
+        ),
     ],
 )
 def test_polearm(
