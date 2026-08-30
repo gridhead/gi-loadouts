@@ -597,6 +597,20 @@ from gi_loadouts.type.stat import ATTR, STAT
             id="data.arti: Retracing Bolide",
         ),
         pytest.param(
+            "Scarlet Proof",
+            [ATTR(stat_name=STAT.attack_perc, stat_data=18)],
+            [],
+            [4, 5],
+            (
+                "Honor to Your Devotion",
+                "Glory to Your Legacy",
+                "Time Gifted Unto You",
+                "Chalice of Your Blood and Sorrow",
+                "Testament to Your Faith",
+            ),
+            id="data.arti: Scarlet Proof",
+        ),
+        pytest.param(
             "Scholar",
             [ATTR(stat_name=STAT.energy_recharge_perc, stat_data=20)],
             [],
