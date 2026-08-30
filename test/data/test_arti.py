@@ -345,6 +345,20 @@ from gi_loadouts.type.stat import ATTR, STAT
             id="data.arti: Heart of Depth",
         ),
         pytest.param(
+            "Heart of the Furnace",
+            [ATTR(stat_name=STAT.attack_perc, stat_data=18)],
+            [],
+            [4, 5],
+            (
+                "Foundryman's Conjecture",
+                "Foundryman's Observation",
+                "Foundryman's Calculus",
+                "Foundryman's Magnanimity",
+                "Foundryman's Legacy",
+            ),
+            id="data.arti: Heart of the Furnace",
+        ),
+        pytest.param(
             "Husk of Opulent Dreams",
             [ATTR(stat_name=STAT.defense_perc, stat_data=30)],
             [],
