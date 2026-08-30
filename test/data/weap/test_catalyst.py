@@ -520,6 +520,16 @@ from test import verify_accuracy
             80.4,
             id="data.weap.catalysts: Nocturne's Curtain Call",
         ),
+        pytest.param(
+            "Echoes of the Heart",
+            4,
+            3,
+            "Level 80/90 (Rank 6)",
+            523,
+            WeaponStatType.attack_perc,
+            25.1,
+            id="data.weap.catalysts: Echoes of the Heart",
+        ),
     ],
 )
 def test_catalyst(
