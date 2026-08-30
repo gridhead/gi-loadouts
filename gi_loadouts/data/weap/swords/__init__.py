@@ -50,6 +50,7 @@ from . import (
     tvhs,
     urmg,
     wffg,
+    wlff,
     xpml,
 )
 
@@ -105,5 +106,6 @@ SwordsDict = {
     "Traveler's Handy Sword": tvhs.TravelersHandySword,
     "Uraku Misugiri": urmg.UrakuMisugiri,
     "Wolf-Fang": wffg.WolfFang,
+    "Whitelake Frostfeather": wlff.WhitelakeFrostfeather,
     "Xiphos' Moonlight": xpml.XiphosMoonlight,
 }

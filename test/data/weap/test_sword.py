@@ -530,6 +530,16 @@ from test import verify_accuracy
             30.2,
             id="data.weap.swords: Athame Artis",
         ),
+        pytest.param(
+            "Whitelake Frostfeather",
+            5,
+            3,
+            "Level 80/90 (Rank 6)",
+            621,
+            WeaponStatType.critical_rate_perc,
+            20.1,
+            id="data.weap.swords: Whitelake Frostfeather",
+        ),
     ],
 )
 def test_sword(
