@@ -334,6 +334,7 @@ def test_weap_load_nope(
     """
     runner.head_char_elem.setCurrentText(__charelem__[char])
     runner.head_char_name.setCurrentText(char)
+    runner.format_weapon_by_char_change()
 
     """
     Perform the action of saving the weapon information

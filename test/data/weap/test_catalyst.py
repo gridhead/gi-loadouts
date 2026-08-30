@@ -530,6 +530,16 @@ from test import verify_accuracy
             25.1,
             id="data.weap.catalysts: Echoes of the Heart",
         ),
+        pytest.param(
+            "Clash of Kings",
+            4,
+            2,
+            "Level 80/90 (Rank 6)",
+            475,
+            WeaponStatType.critical_rate_perc,
+            25.1,
+            id="data.weap.catalysts: Clash of Kings",
+        ),
     ],
 )
 def test_catalyst(
