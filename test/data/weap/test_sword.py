@@ -531,6 +531,16 @@ from test import verify_accuracy
             id="data.weap.swords: Athame Artis",
         ),
         pytest.param(
+            "Emberwell",
+            4,
+            2,
+            "Level 80/90 (Rank 6)",
+            475,
+            WeaponStatType.elemental_mastery,
+            151,
+            id="data.weap.swords: Emberwell",
+        ),
+        pytest.param(
             "Whitelake Frostfeather",
             5,
             3,
