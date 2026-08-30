@@ -12,10 +12,10 @@ class KagurasVerity(Catalyst):
     rare: Rare = Rare.Star_5
     refi_name: str = "Kagura Dance of the Sacred Sakura"
     refi_list: list[str] = [
-        "Gains the Kagura Dance effect when using an Elemental Skill, causing the Elemental Skill DMG of the character wielding this weapon to increase by 12% for 16s. Max 3 stacks. This character will gain 12% All Elemental DMG Bonus when they possess 3 stacks.",
-        "Gains the Kagura Dance effect when using an Elemental Skill, causing the Elemental Skill DMG of the character wielding this weapon to increase by 15% for 16s. Max 3 stacks. This character will gain 15% All Elemental DMG Bonus when they possess 3 stacks.",
-        "Gains the Kagura Dance effect when using an Elemental Skill, causing the Elemental Skill DMG of the character wielding this weapon to increase by 18% for 16s. Max 3 stacks. This character will gain 18% All Elemental DMG Bonus when they possess 3 stacks.",
-        "Gains the Kagura Dance effect when using an Elemental Skill, causing the Elemental Skill DMG of the character wielding this weapon to increase by 21% for 16s. Max 3 stacks. This character will gain 21% All Elemental DMG Bonus when they possess 3 stacks.",
-        "Gains the Kagura Dance effect when using an Elemental Skill, causing the Elemental Skill DMG of the character wielding this weapon to increase by 24% for 16s. Max 3 stacks. This character will gain 24% All Elemental DMG Bonus when they possess 3 stacks.",
+        "Using an Elemental Skill grants the Kagura Dance effect, increasing the wielding character's Elemental Skill DMG by 12% as well as their Stellar-Conduct DMG by 12% for 24s. Max 3 stacks. This character will gain a 12% All Elemental DMG Bonus when they possess 3 stacks.",
+        "Using an Elemental Skill grants the Kagura Dance effect, increasing the wielding character's Elemental Skill DMG by 15% as well as their Stellar-Conduct DMG by 15% for 24s. Max 3 stacks. This character will gain a 15% All Elemental DMG Bonus when they possess 3 stacks.",
+        "Using an Elemental Skill grants the Kagura Dance effect, increasing the wielding character's Elemental Skill DMG by 18% as well as their Stellar-Conduct DMG by 18% for 24s. Max 3 stacks. This character will gain a 18% All Elemental DMG Bonus when they possess 3 stacks.",
+        "Using an Elemental Skill grants the Kagura Dance effect, increasing the wielding character's Elemental Skill DMG by 21% as well as their Stellar-Conduct DMG by 21% for 24s. Max 3 stacks. This character will gain a 21% All Elemental DMG Bonus when they possess 3 stacks.",
+        "Using an Elemental Skill grants the Kagura Dance effect, increasing the wielding character's Elemental Skill DMG by 24% as well as their Stellar-Conduct DMG by 24% for 24s. Max 3 stacks. This character will gain a 24% All Elemental DMG Bonus when they possess 3 stacks.",
     ]
     file: str = "kgvy"
