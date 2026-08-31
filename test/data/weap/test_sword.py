@@ -550,6 +550,16 @@ from test import verify_accuracy
             20.1,
             id="data.weap.swords: Whitelake Frostfeather",
         ),
+        pytest.param(
+            "Exaiphanes Blade",
+            5,
+            2,
+            "Level 80/90 (Rank 6)",
+            563,
+            WeaponStatType.critical_rate_perc,
+            30.2,
+            id="data.weap.swords: Exaiphanes Blade",
+        ),
     ],
 )
 def test_sword(
@@ -573,3 +583,17 @@ def test_sword(
     assert unit.seco_stat.stat_name == seco
     if unit.seco_stat.stat_name != WeaponStatType.none:
         assert verify_accuracy(unit.seco_stat_calc.stat_data, valu, 1.5)
+
+
+def test_exaiphanes_blade_refinement_progression() -> None:
+    """Test the Traveler-only passive progression for Exaiphanes Blade."""
+    unit = SwordsDict["Exaiphanes Blade"]()
+
+    assert unit.refi_name == "Traveler's Path"
+    assert unit.refi_list == [
+        "When the Traveler equips this, their ATK will increase by 16% for 8s after they hit an opponent. At the same time, they will also regenerate 3 Elemental Energy. This effect can trigger once every 5s. This can be triggered even when the character is not on the field.",
+        "When the Traveler equips this, their CRIT DMG increases by 6% for every Element they have resonated with. Additionally, the Traveler's ATK will also increase by 20% for 8s, and regenerate 3 Elemental Energy, after they attack and hit an opponent. This effect can trigger once every 5s. This can be triggered even when the character is not on the field.",
+        "When the Traveler equips this, their CRIT DMG increases by 6% for every Element they have resonated with. Additionally, the Traveler's ATK will also increase by 24% for 8s, and regenerate 5 Elemental Energy, after they attack and hit an opponent. This effect can trigger once every 5s. This can be triggered even when the character is not on the field.",
+        "When the Traveler equips this, their CRIT DMG increases by 6% for every Element they have resonated with. Additionally, the Traveler's ATK will also increase by 32% for 8s, and regenerate 5 Elemental Energy, after they attack and hit an opponent. This effect can trigger once every 5s. This can be triggered even when the character is not on the field.",
+        "When the Traveler equips this, their CRIT DMG increases by 6% for every Element they have resonated with. Additionally, the Traveler's ATK will also increase by 40% for 8s, and regenerate 5 Elemental Energy, after they attack and hit an opponent. This effect can trigger once every 5s. This can be triggered even when the character is not on the field.",
+    ]
