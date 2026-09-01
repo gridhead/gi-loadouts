@@ -470,6 +470,16 @@ from test import verify_accuracy
             47.2,
             id="data.weap.bows: Covenant of Frost and Snow",
         ),
+        pytest.param(
+            "Jade Vista",
+            4,
+            2,
+            "Level 80/90 (Rank 6)",
+            475,
+            WeaponStatType.critical_rate_perc,
+            25.1,
+            id="data.weap.bows: Jade Vista",
+        ),
     ],
 )
 def test_bow(
