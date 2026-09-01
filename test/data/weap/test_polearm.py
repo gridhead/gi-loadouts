@@ -420,6 +420,16 @@ from test import verify_accuracy
             101,
             id="data.weap.polearms: Song of the Vigil",
         ),
+        pytest.param(
+            "Frostbreath",
+            4,
+            2,
+            "Level 80/90 (Rank 6)",
+            475,
+            WeaponStatType.energy_recharge_perc,
+            41.9,
+            id="data.weap.polearms: Frostbreath",
+        ),
     ],
 )
 def test_polearm(
