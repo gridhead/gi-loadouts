@@ -560,6 +560,16 @@ from test import verify_accuracy
             25.1,
             id="data.weap.swords: Heretic's Molten Blade",
         ),
+        pytest.param(
+            "Exaiphanes Blade",
+            5,
+            2,
+            "Level 80/90 (Rank 6)",
+            563,
+            WeaponStatType.critical_rate_perc,
+            30.2,
+            id="data.weap.swords: Exaiphanes Blade",
+        ),
     ],
 )
 def test_sword(
