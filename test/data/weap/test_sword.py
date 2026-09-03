@@ -550,6 +550,16 @@ from test import verify_accuracy
             20.1,
             id="data.weap.swords: Whitelake Frostfeather",
         ),
+        pytest.param(
+            "Heretic's Molten Blade",
+            4,
+            2,
+            "Level 80/90 (Rank 6)",
+            475,
+            WeaponStatType.critical_rate_perc,
+            25.1,
+            id="data.weap.swords: Heretic's Molten Blade",
+        ),
     ],
 )
 def test_sword(
