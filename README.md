@@ -132,7 +132,7 @@ including but not limited to those outlined below.
     its intended functionality to work.
 
 With an extensive suite of 
-[**over 1584 diverse functionality tests**](https://github.com/gridhead/gi-loadouts/tree/main/test)
+[**over 1616 diverse functionality tests**](https://github.com/gridhead/gi-loadouts/tree/main/test)
 and
 [**impeccable 100% source code coverage**](https://github.com/gridhead/gi-loadouts/blob/main/.github/workflows/test.yml),
 we proudly invite auditors and analysts from 
@@ -603,6 +603,6 @@ Check out CONTRIBUTING.md for more details.
 ## Disclaimer
 
 All rights to Genshin Impact assets used in this project are reserved by 
-miHoYo Ltd. and Cognosphere Pte., Ltd.
+MiHoYo Ltd. and Cognosphere Pte., Ltd.
 
 Other properties belong to their respective owners.
