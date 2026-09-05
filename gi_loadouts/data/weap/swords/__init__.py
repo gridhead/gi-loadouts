@@ -111,7 +111,7 @@ SwordsDict = {
     "Toukabou Shigure": tksg.ToukabouShigure,
     "Traveler's Handy Sword": tvhs.TravelersHandySword,
     "Uraku Misugiri": urmg.UrakuMisugiri,
-    "Wolf-Fang": wffg.WolfFang,
     "Whitelake Frostfeather": wlff.WhitelakeFrostfeather,
+    "Wolf-Fang": wffg.WolfFang,
     "Xiphos' Moonlight": xpml.XiphosMoonlight,
 }
