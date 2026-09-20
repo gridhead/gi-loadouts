@@ -1515,6 +1515,20 @@ from test import verify_accuracy
             id="data.char: Vesna",
         ),
         pytest.param(
+            "Vodyanitsa",
+            "catalyst",
+            5,
+            "hydro",
+            STAT.health_points_perc,
+            {
+                "Level 40/50 (Rank 2)": (6659.97, 48.38, 217.63, 7.2),
+                "Level 80/90 (Rank 6)": (13775.93, 100.06, 450.15, 28.8),
+                "Level 95/95 (Rank 6)": (15343.56, 119.74, 501.38, 28.8),
+                "Level 100/100 (Rank 6)": (15870.71, 131.85, 518.60, 28.8),
+            },
+            id="data.char: Vodyanitsa",
+        ),
+        pytest.param(
             "Wanderer",
             "catalyst",
             5,
