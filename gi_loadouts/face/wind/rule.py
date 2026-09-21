@@ -15,7 +15,6 @@ from ...type.arti.base import (
     MainStatType_SDOE,
     SecoStatType,
 )
-from ...type.char import CharName
 from ...type.char.cons import Cons
 from ...type.levl import Level
 from ...type.rare import Rare
@@ -53,7 +52,7 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
         :return:
         """
         self.head_char_elem.addItems(["All"] + [item.value.name for item in Vision])
-        self.head_char_name.addItems([item.value for item in CharName])
+        self.head_char_name.addItems(list(__charmaps__.keys()))
         self.head_char_cons.addItems([item.value.name for item in Cons])
         self.head_char_levl.addItems([item.value.name for item in Level])
         self.arti_fwol_name_main.addItems(
@@ -172,16 +171,16 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             self.head_char_data_hlpt.setText(f"{round(char.health_points.stat_data)}")
             self.head_char_icon_subs.setToolTip(f"{char.seco.stat_name.value}")
             self.head_char_data_subs.setText(f"{round(char.seco.stat_data, 1)}")
-            self.head_area_line_prim.setText(f"{char.name.value}")
+            self.head_area_line_prim.setText(f"{char.name}")
             self.head_area_line_seco.setText(f"{char.cons_name}")
             self.head_area_line_tert.setText(f"{char.weapon.value}")
             self.head_area_line_quat.setText(
-                f"<i>{char.name.value} is a {char.weapon.value.lower()}-wielding{f' {char.vision.value.name} ' if char.vision != Vision.none else ' '}character of {char.rare.value.qant}-star quality.</i>"
+                f"<i>{char.name} is a {char.weapon.value.lower()}-wielding{f' {char.vision.value.name} ' if char.vision != Vision.none else ' '}character of {char.rare.value.qant}-star quality.</i>"
             )
             self.head_area_line_quin.setText(
-                f"<i>{char.name.value} is affiliated with {char.afln}.</i>"
+                f"<i>{char.name} is affiliated with {char.afln}.</i>"
                 if char.afln != ""
-                else f"<i>{char.name.value} is not affiliated with any association.</i>"
+                else f"<i>{char.name} is not affiliated with any association.</i>"
             )
             self.manage_changing_appearance(char.vision.value.colour)
 
@@ -639,14 +638,14 @@ class Rule(QMainWindow, Ui_mainwind, Facility, Assess):
             droptype = getattr(self, f"arti_{item}_type")
             droptype.setCurrentText("None")
 
-    def select_char_from_dropdown(self, char: CharName) -> None:
+    def select_char_from_dropdown(self, char: str) -> None:
         """
         Quickly select the male traveler or female traveler from the character selector
 
         :return:
         """
         self.head_char_elem.setCurrentText(Vision.none.value.name)
-        self.head_char_name.setCurrentText(char.value)
+        self.head_char_name.setCurrentText(char)
 
     def show_info_dialog(self) -> None:
         """
