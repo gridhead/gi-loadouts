@@ -1,7 +1,6 @@
 from PySide6.QtWidgets import QMessageBox
 
 from ... import __donation__, __homepage__, __issutckt__, __versdata__
-from ...type.char import CharName
 from ..rsrc import kill_temp_file, make_temp_file
 from ..wind.rule import Rule
 
@@ -264,10 +263,10 @@ class MainWindow(Rule):
         self.weap_head_load.clicked.connect(self.weap_load)
         self.weap_head_save.clicked.connect(self.weap_save)
         self.char_head_lumi.clicked.connect(
-            lambda _, a_char=CharName.lumine: self.select_char_from_dropdown(a_char)
+            lambda _, a_char="Lumine": self.select_char_from_dropdown(a_char)
         )
         self.char_head_aeth.clicked.connect(
-            lambda _, a_char=CharName.aether: self.select_char_from_dropdown(a_char)
+            lambda _, a_char="Aether": self.select_char_from_dropdown(a_char)
         )
         self.side_head.clicked.connect(lambda _, a_link=__homepage__: self.open_link(a_link))
         self.side_tckt.clicked.connect(lambda _, a_link=__issutckt__: self.open_link(a_link))

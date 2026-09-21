@@ -1,4 +1,4 @@
-from ...type.char import BaseStat, Char, CharName
+from ...type.char import BaseStat, Char
 from ...type.rare import Rare
 from ...type.stat import STAT
 from ...type.vson import Vision
@@ -8,7 +8,7 @@ from ...type.weap import WeaponType
 class Navia(Char):
     __statdata__: dict = {0: 0.0, 1: 0.0, 2: 9.6, 3: 19.2, 4: 19.2, 5: 28.8, 6: 38.4}
     __statname__: STAT = STAT.critical_damage_perc
-    name: CharName = CharName.navia
+    name: str = "Navia"
     rare: Rare = Rare.Star_5
     base: BaseStat = BaseStat(attack=27.3714, defense=61.74456, health_points=984.78)
     ascn: BaseStat = BaseStat(

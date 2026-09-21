@@ -12,7 +12,7 @@ class OtptWindow(Rule):
         self.tyvt = tyvt
         self.setupUi(self)
         self.setWindowTitle(
-            f"Loadouts for Genshin Impact v{__versdata__} - {self.char['char'].name.value}"
+            f"Loadouts for Genshin Impact v{__versdata__} - {self.char['char'].name}"
         )
         self.manage_assets()
         self.populate_header()
