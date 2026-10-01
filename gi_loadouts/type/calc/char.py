@@ -1,6 +1,5 @@
 from pydantic import BaseModel
 
-from ..char import CharName
 from ..char.cons import Cons
 from ..levl import Level
 from ..stat import ATTR, STAT
@@ -87,7 +86,7 @@ class CHAR(BaseStats, AdvancedStats, ElementalStats, Counting, Addendum):
     Character primitive for computational purposes
     """
 
-    name: CharName = ""
+    name: str = ""
     levl: Level = Level.Level_01_20_Rank_0
     cons: Cons = Cons.Constellation_0
     revmap: dict = {

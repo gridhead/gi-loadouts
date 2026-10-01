@@ -187,8 +187,6 @@ releases of characters, weapons and artifacts
    ```
 
 4. Include statistical information using the following steps
-   - Add character name in ENUM `CharName` in 
-     `gi_loadouts/type/char/__init__.py`
    - Create character data in the
      `gi_loadouts/data/char/<char_name>.py` file
    - Fetch character related statistical details from the corresponding

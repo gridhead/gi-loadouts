@@ -62,7 +62,7 @@ class Rule(QDialog, Ui_otptwind):
         :return:
         """
         self.head_area_line_prim.setText(
-            f"<b>{self.char['char'].name.value}</b> - {self.char['levl']} ({self.char['cons']})"
+            f"<b>{self.char['char'].name}</b> - {self.char['levl']} ({self.char['cons']})"
         )
         weaprefn = f"({self.weap['refn']})" if self.weap["refn"] != "" else ""
         if self.arti["quad"] != "":
