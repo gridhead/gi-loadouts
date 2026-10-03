@@ -1501,6 +1501,20 @@ from test import verify_accuracy
             id="data.char: Venti",
         ),
         pytest.param(
+            "Vesna",
+            "sword",
+            5,
+            "anemo",
+            STAT.critical_rate_perc,
+            {
+                "Level 40/50 (Rank 2)": (5960.95, 159.10, 328.17, 4.8),
+                "Level 80/90 (Rank 6)": (12330.02, 329.10, 678.80, 19.2),
+                "Level 95/95 (Rank 6)": (13733.12, 393.80, 756.05, 19.2),
+                "Level 100/100 (Rank 6)": (14204.94, 433.63, 782.02, 19.2),
+            },
+            id="data.char: Vesna",
+        ),
+        pytest.param(
             "Wanderer",
             "catalyst",
             5,

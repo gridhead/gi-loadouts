@@ -119,6 +119,7 @@ class CharName(StrEnum):
     varesa = "Varesa"
     varka = "Varka"
     venti = "Venti"
+    vesna = "Vesna"
     wanderer = "Wanderer"
     wriothesley = "Wriothesley"
     xiangling = "Xiangling"
