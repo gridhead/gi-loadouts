@@ -102,6 +102,7 @@ from .varesa import Varesa
 from .varka import Varka
 from .venti import Venti
 from .vesna import Vesna
+from .vodyanitsa import Vodyanitsa
 from .wanderer import Wanderer
 from .wriothesley import Wriothesley
 from .xiangling import Xiangling
@@ -225,6 +226,7 @@ __charmaps__ = {
     "Varka": Varka,
     "Venti": Venti,
     "Vesna": Vesna,
+    "Vodyanitsa": Vodyanitsa,
     "Wanderer": Wanderer,
     "Wriothesley": Wriothesley,
     "Xiangling": Xiangling,

@@ -120,6 +120,7 @@ class CharName(StrEnum):
     varka = "Varka"
     venti = "Venti"
     vesna = "Vesna"
+    vodyanitsa = "Vodyanitsa"
     wanderer = "Wanderer"
     wriothesley = "Wriothesley"
     xiangling = "Xiangling"
