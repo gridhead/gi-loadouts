@@ -261,6 +261,16 @@ from test import verify_accuracy
             id="data.weap.swords: Lion's Roar",
         ),
         pytest.param(
+            "New Bough",
+            4,
+            2,
+            "Level 80/90 (Rank 6)",
+            475,
+            WeaponStatType.critical_damage_perc,
+            50.3,
+            id="data.weap.swords: New Bough",
+        ),
+        pytest.param(
             "Royal Longsword",
             4,
             2,
