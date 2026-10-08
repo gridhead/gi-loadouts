@@ -231,6 +231,16 @@ from test import verify_accuracy
             id="data.weap.catalysts: Prototype Amber",
         ),
         pytest.param(
+            "Winter's Heavy Heart",
+            4,
+            2,
+            "Level 80/90 (Rank 6)",
+            475,
+            WeaponStatType.critical_damage_perc,
+            50.3,
+            id="data.weap.catalysts: Winter's Heavy Heart",
+        ),
+        pytest.param(
             "Reliquary of Truth",
             5,
             1,
