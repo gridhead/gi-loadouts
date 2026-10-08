@@ -271,6 +271,16 @@ from test import verify_accuracy
             id="data.weap.swords: Royal Longsword",
         ),
         pytest.param(
+            "Silver Light",
+            4,
+            2,
+            "Level 80/90 (Rank 6)",
+            475,
+            WeaponStatType.attack_perc,
+            37.7,
+            id="data.weap.swords: Silver Light",
+        ),
+        pytest.param(
             "Sword of Narzissenkreuz",
             4,
             2,
