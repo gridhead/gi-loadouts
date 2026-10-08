@@ -52,6 +52,7 @@ from . import (
     wdes,
     wnsg,
     wrwl,
+    wshh,
 )
 
 CatalystsDict = {
@@ -108,4 +109,5 @@ CatalystsDict = {
     "Wandering Evenstar": wdes.WanderingEvenstar,
     "Waveriding Whirl": wrwl.WaveridingWhirl,
     "Wine and Song": wnsg.WineAndSong,
+    "Winter's Heavy Heart": wshh.WintersHeavyHeart,
 }
