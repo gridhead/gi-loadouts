@@ -481,6 +481,16 @@ from test import verify_accuracy
             id="data.weap.swords: Azurelight",
         ),
         pytest.param(
+            "Beyond the Chrysalis",
+            5,
+            3,
+            "Level 80/90 (Rank 6)",
+            621,
+            WeaponStatType.critical_damage_perc,
+            40.2,
+            id="data.weap.swords: Beyond the Chrysalis",
+        ),
+        pytest.param(
             "Mistsplitter Reforged",
             5,
             3,
