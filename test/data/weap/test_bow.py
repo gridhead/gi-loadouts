@@ -151,6 +151,16 @@ from test import verify_accuracy
             id="data.weap.bows: Sharpshooter's Oath",
         ),
         pytest.param(
+            "Breezeborne Refrain",
+            4,
+            2,
+            "Level 80/90 (Rank 6)",
+            475,
+            WeaponStatType.critical_rate_perc,
+            25.1,
+            id="data.weap.bows: Breezeborne Refrain",
+        ),
+        pytest.param(
             "Cloudforged",
             4,
             2,
