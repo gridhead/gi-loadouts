@@ -91,6 +91,16 @@ from test import verify_accuracy
             id="data.weap.catalysts: A Thousand Floating Dreams",
         ),
         pytest.param(
+            "Hymn of the Maelstrom",
+            5,
+            1,
+            "Level 80/90 (Rank 6)",
+            506,
+            WeaponStatType.health_points_perc,
+            60.3,
+            id="data.weap.catalysts: Hymn of the Maelstrom",
+        ),
+        pytest.param(
             "Starcaller's Watch",
             5,
             1,
