@@ -35,7 +35,7 @@ classifiers = [
     "Typing :: Typed"
 ]
 dependencies = [
-    "pillow>=10.4.0,<13.0.0",
+    "pillow>=10.4.0,<13.1.0",
     "pydantic>=2.8.2,<3.0.0",
     "pyside6-essentials>=6.10.0,<7.0.0",
     "pytesseract>=0.3.13,<1.0.0",
