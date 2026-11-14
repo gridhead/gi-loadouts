@@ -98,6 +98,7 @@ from .sucrose import Sucrose
 from .tartaglia import Tartaglia
 from .thoma import Thoma
 from .tighnari import Tighnari
+from .valeriy import Valeriy
 from .varesa import Varesa
 from .varka import Varka
 from .venti import Venti
@@ -222,6 +223,7 @@ __charmaps__ = {
     "Tartaglia": Tartaglia,
     "Thoma": Thoma,
     "Tighnari": Tighnari,
+    "Valeriy": Valeriy,
     "Varesa": Varesa,
     "Varka": Varka,
     "Venti": Venti,
