@@ -69,6 +69,7 @@ from .lynette import Lynette
 from .lyney import Lyney
 from .mavuika import Mavuika
 from .mika import Mika
+from .mitya import Mitya
 from .mona import Mona
 from .mualani import Mualani
 from .nahida import Nahida
@@ -193,6 +194,7 @@ __charmaps__ = {
     "Lyney": Lyney,
     "Mavuika": Mavuika,
     "Mika": Mika,
+    "Mitya": Mitya,
     "Mona": Mona,
     "Mualani": Mualani,
     "Nahida": Nahida,

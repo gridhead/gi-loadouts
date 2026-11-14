@@ -1062,6 +1062,20 @@ from test import verify_accuracy
             id="data.char: Mika",
         ),
         pytest.param(
+            "Mitya",
+            "catalyst",
+            5,
+            "electro",
+            STAT.critical_damage_perc,
+            {
+                "Level 40/50 (Rank 2)": (5228.903564, 118.253124, 355.800944, 9.6),
+                "Level 80/90 (Rank 6)": (10815.809744, 244.600972, 735.963716, 38.4),
+                "Level 95/95 (Rank 6)": (12046.593535, 292.692708, 819.711955, 38.4),
+                "Level 100/100 (Rank 6)": (12460.477408, 322.289198, 847.874535, 38.4),
+            },
+            id="data.char: Mitya",
+        ),
+        pytest.param(
             "Mona",
             "catalyst",
             5,
@@ -1799,6 +1813,12 @@ def test_char(name: str, weap: str, rare: int, vson: int, seco: STAT, data: dict
             STAT.elemental_mastery,
             100.0,
             id="data.char: Nefer's base 100 Elemental Mastery",
+        ),
+        pytest.param(
+            "Mitya",
+            STAT.elemental_mastery,
+            100.0,
+            id="data.char: Mitya's base 100 Elemental Mastery",
         ),
     ],
 )
