@@ -560,6 +560,16 @@ from test import verify_accuracy
             25.1,
             id="data.weap.catalysts: Clash of Kings",
         ),
+        pytest.param(
+            "Starsealed Edict",
+            5,
+            1,
+            "Level 80/90 (Rank 6)",
+            506,
+            WeaponStatType.critical_damage_perc,
+            80.4,
+            id="data.weap.catalysts: Starsealed Edict",
+        ),
     ],
 )
 def test_catalyst(
