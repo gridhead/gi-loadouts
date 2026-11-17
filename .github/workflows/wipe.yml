@@ -4,7 +4,7 @@ name: Managing artifacts to retain four recent artifacts
 on:
   schedule:
     - cron: 0 0 * * *
-    
+
 jobs:
 
   ci-wipe:
