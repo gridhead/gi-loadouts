@@ -8,7 +8,7 @@ from gi_loadouts.face.wind.main import MainWindow
 
 
 @pytest.fixture(scope="session")
-def runner(qapp: QApplication) -> Generator[MainWindow, None, None]:
+def runner(qapp: QApplication) -> Generator[MainWindow]:
     """
     Fixture for MainWindow class
 
@@ -20,7 +20,7 @@ def runner(qapp: QApplication) -> Generator[MainWindow, None, None]:
 
 
 @pytest.fixture(scope="session")
-def scantest(qapp: QApplication) -> Generator[ScanDialog, None, None]:
+def scantest(qapp: QApplication) -> Generator[ScanDialog]:
     """
     Fixture for ScanDialog class
 

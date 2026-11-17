@@ -14,12 +14,12 @@ jobs:
 
       matrix:
         include:
-          - tox-env: "py312-dist"
-            container: "fedora:40"
           - tox-env: "py313-dist"
             container: "fedora:42"
           - tox-env: "py314-dist"
-            container: "fedora:43"
+            container: "fedora:44"
+          - tox-env: "py315-dist"
+            container: "fedora:45"
 
     container: ${{ matrix.container }}
 
@@ -35,6 +35,8 @@ jobs:
       - name: Install the supporting dependencies
         run: |
              dnf install \
+                 gcc \
+                 python3-devel \
                  libglvnd-egl \
                  dbus-libs \
                  libxkbcommon-x11 \
