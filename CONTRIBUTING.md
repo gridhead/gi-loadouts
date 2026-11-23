@@ -10,7 +10,7 @@ calculate statistics for characters, artifacts, and weapons.
 
 Before contributing, ensure you have:
 
-- **Python 3.12** or greater version
+- **Python 3.13** or greater version
 
 - **UV** for dependency management
 
