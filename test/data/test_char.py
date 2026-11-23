@@ -1473,6 +1473,20 @@ from test import verify_accuracy
             id="data.char: Tighnari",
         ),
         pytest.param(
+            "Valeriy",
+            "sword",
+            4,
+            "electro",
+            STAT.attack_perc,
+            {
+                "Level 40/50 (Rank 2)": (4611.8594, 117.4875, 324.0527, 6.0),
+                "Level 80/90 (Rank 6)": (9312.0332, 237.2253, 654.3109, 24.0),
+                "Level 95/95 (Rank 6)": (10350.5267, 287.3797, 727.2807, 24.0),
+                "Level 100/100 (Rank 6)": (10696.9707, 319.9043, 751.6236, 24.0),
+            },
+            id="data.char: Valeriy",
+        ),
+        pytest.param(
             "Varesa",
             "catalyst",
             5,
